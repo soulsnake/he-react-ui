@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectGroup /> rendered correctly with fixture 1`] = `
+<SelectGroup
+  onClickOption={[Function]}
+  options={
+    Array [
+      Object {
+        "label": "General Exam and Clean",
+        "value": 1,
+      },
+      Object {
+        "label": "Toothache",
+        "value": 2,
+      },
+      Object {
+        "label": "Loose Filling",
+        "value": 3,
+      },
+      Object {
+        "label": "Loose Crown",
+        "value": 4,
+      },
+      Object {
+        "label": "Teeth Whitening",
+        "value": 5,
+      },
+    ]
+  }
+  vertical={false}
+>
+  <styled.div
+    className="select-group"
+  >
+    <div
+      className="select-group sc-bdVaJa iCFXPW"
+    >
+      <div
+        className="select-group-btn"
+        key="0"
+        onClick={[Function]}
+      >
+        General Exam and Clean
+      </div>
+      <div
+        className="select-group-btn"
+        key="1"
+        onClick={[Function]}
+      >
+        Toothache
+      </div>
+      <div
+        className="select-group-btn"
+        key="2"
+        onClick={[Function]}
+      >
+        Loose Filling
+      </div>
+      <div
+        className="select-group-btn"
+        key="3"
+        onClick={[Function]}
+      >
+        Loose Crown
+      </div>
+      <div
+        className="select-group-btn"
+        key="4"
+        onClick={[Function]}
+      >
+        Teeth Whitening
+      </div>
+    </div>
+  </styled.div>
+</SelectGroup>
+`;
