@@ -19,7 +19,7 @@ class InlineSelector extends React.Component { // eslint-disable-line react/pref
 
   static defaultProps = {
     vertical: false,
-    disabled: true,
+    disabled: false,
     options: [],
     onClickOption: () => null
   }

@@ -10,21 +10,23 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
+var _propTypes = require('prop-types');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames2 = require('classnames');
+
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -32,84 +34,75 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * InlineSelector
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * Input
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
-var InlineSelector = function (_React$Component) {
-  _inherits(InlineSelector, _React$Component);
+var List = function (_React$Component) {
+  _inherits(List, _React$Component);
 
-  function InlineSelector() {
-    var _ref;
+  function List() {
+    _classCallCheck(this, List);
 
-    var _temp, _this, _ret;
+    return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
+  }
 
-    _classCallCheck(this, InlineSelector);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InlineSelector.__proto__ || Object.getPrototypeOf(InlineSelector)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      selected: null
-    }, _this.onClickOption = function (opt) {
-      _this.props.onClickOption(opt);
-      _this.setState({
-        selected: opt.value
-      });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  } // eslint-disable-line react/prefer-stateless-function
-
-
-  _createClass(InlineSelector, [{
+  _createClass(List, [{
     key: 'render',
+    // eslint-disable-line react/prefer-stateless-function
     value: function render() {
-      var _classes,
-          _this2 = this;
-
       var _props = this.props,
-          vertical = _props.vertical,
           className = _props.className,
-          options = _props.options,
-          disabled = _props.disabled;
-      var selected = this.state.selected;
+          data = _props.data,
+          restProps = _objectWithoutProperties(_props, ['className', 'data']);
 
-      var classes = (_classes = {}, _defineProperty(_classes, className, className), _defineProperty(_classes, 'vertical', vertical), _classes);
-
+      var colWidth = 100 / data.headers.length + '%';
       return _react2.default.createElement(
         _styles2.default,
-        { className: (0, _classnames2.default)('select-group', classes) },
-        options.map(function (opt, index) {
-          return _react2.default.createElement(
-            'div',
-            {
-              key: index,
-              className: (0, _classnames2.default)('select-group-btn', { 'selected': opt.value === selected, 'disabled': disabled }),
-              onClick: function onClick() {
-                return _this2.onClickOption(opt);
-              } },
-            opt.label
-          );
-        })
+        { className: (0, _classnames3.default)('list-container', _defineProperty({}, className, className)) },
+        _react2.default.createElement(
+          _styles.Grid,
+          null,
+          _react2.default.createElement(
+            _styles.Row,
+            { className: 'list-header' },
+            data.headers.map(function (header, index) {
+              return _react2.default.createElement(
+                _styles.Col,
+                { key: index, width: colWidth, className: 'list-header-cell' },
+                header
+              );
+            })
+          ),
+          data.rows.map(function (row, rIndex) {
+            return _react2.default.createElement(
+              _styles.Row,
+              { key: rIndex, className: 'list-row' },
+              row.map(function (col, cIndex) {
+                return _react2.default.createElement(
+                  _styles.Col,
+                  { key: cIndex, width: colWidth, className: 'list-row-cell' },
+                  col
+                );
+              })
+            );
+          })
+        )
       );
     }
   }]);
 
-  return InlineSelector;
+  return List;
 }(_react2.default.Component);
 
-InlineSelector.propTypes = {
-  vertical: _propTypes2.default.bool,
-  options: _propTypes2.default.array,
-  disabled: _propTypes2.default.bool,
-  onClickOption: _propTypes2.default.func
+List.propTypes = {
+  className: _propTypes2.default.string,
+  data: _propTypes2.default.object
 };
-InlineSelector.defaultProps = {
-  vertical: false,
-  disabled: false,
-  options: [],
-  onClickOption: function onClickOption() {
-    return null;
+List.defaultProps = {
+  data: {
+    headers: ['Col 1', 'Col 2', 'Col 3'],
+    rows: [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
   }
 };
-exports.default = InlineSelector;
+exports.default = List;
