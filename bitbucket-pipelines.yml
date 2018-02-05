@@ -15,5 +15,3 @@ pipelines:
           - export PATH=$HOME/.yarn/bin:$PATH
           - yarn
           - yarn build
-          - npm version patch
-          - npm publish
