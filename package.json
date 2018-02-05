@@ -2,10 +2,10 @@
   "name": "he-react-ui",
   "version": "0.0.16",
   "description": "Common UI elements for HealthEngine",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist",
+    "build": "yarn run clean && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist",
     "test": "NODE_ENV=test jest --env=jsdom",
     "test:watch": "yarn test -- --watch",
     "cosmos": "cosmos"
