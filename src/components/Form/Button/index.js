@@ -13,7 +13,8 @@ class Button extends React.Component {
   static propTypes = {
     submit: PropTypes.bool,
     color: PropTypes.string,
-    lg: PropTypes.bool,
+    link: PropTypes.bool,
+    small: PropTypes.bool,
     onClick: PropTypes.func,
     children: PropTypes.any,
     disabled: PropTypes.bool,
@@ -22,14 +23,15 @@ class Button extends React.Component {
 
   static defaultProps = {
     submit: false,
-    color: 'green',
+    link: false,
+    color: '',
     children: <div> Button</div>,
     lg: true,
     disabled: false
   }
   render () {
-    const { lg, color, className, submit, ...fieldProps } = this.props
-    const btnClass = classnames('btn', { 'btn-lg': lg, [`btn-${color}`]: color, [className]: className })
+    const { small, link, color, className, submit, ...fieldProps } = this.props
+    const btnClass = classnames('btn', { 'btn-link': link, 'btn-small': small, [`btn-${color}`]: color, [className]: className })
     return (
       <StyledButton
         className={btnClass}

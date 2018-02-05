@@ -1,9 +1,11 @@
 import Button from './Button'
 import Input from './Input'
-import SelectGroup from './SelectGroup'
+import TextField from './TextField'
+import InlineSelector from './InlineSelector'
 
 export {
   Button,
   Input,
-  SelectGroup
+  TextField,
+  InlineSelector
 }

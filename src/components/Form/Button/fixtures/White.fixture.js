@@ -1,13 +1,13 @@
 import React from 'react'
-import Button from './'
+import Button from '../'
 
 export default {
   component: Button,
   props: {
     submit: false,
-    color: 'green',
+    color: 'white',
     children: <div> Button</div>,
-    lg: true,
+    small: true,
     disabled: false
   }
 }

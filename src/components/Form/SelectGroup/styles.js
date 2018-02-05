@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import * as colors from '../../../styles/colors'
 
-const StyledSelectGroup = styled.div`
+const StyledInlineSelector = styled.div`
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -11,7 +11,7 @@ const StyledSelectGroup = styled.div`
         justify-content: center;
         cursor: pointer;
         background-image: none;
-        border: 1px solid #ccc;
+        border: 1px solid ${colors.n_grey_2};
         white-space: nowrap;
         padding: 10px 20px;
         font-size: 14px;
@@ -20,8 +20,8 @@ const StyledSelectGroup = styled.div`
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        color: #333;
-        background-color: #fff;
+        color: ${colors.navy_1};
+        background-color: ${colors.white};
         margin-left: -1px;
         &:first-child{
             border-radius: 4px 0 0 4px;
@@ -29,10 +29,18 @@ const StyledSelectGroup = styled.div`
         &:last-child{
             border-radius: 0 4px 4px 0;
         }
-        &.selected{
-            background-color: #008ec8;
-            border: 1px solid #008ec8;
-            color: #fff;
+        &:not(.disabled):hover{
+            border: 1px solid ${colors.teal_1};
+            z-index: 1;
+        }
+        &:not(.disabled).selected{
+            background-color: ${colors.teal_1};
+            border: 1px solid ${colors.teal_1};
+            color: ${colors.white};
+            &:hover{
+                background-color: ${colors.teal_2};
+                border: 1px solid ${colors.teal_2};
+            }
         }
     }
 
@@ -51,4 +59,4 @@ const StyledSelectGroup = styled.div`
     }
 `;
 
-export default StyledSelectGroup
+export default StyledInlineSelector

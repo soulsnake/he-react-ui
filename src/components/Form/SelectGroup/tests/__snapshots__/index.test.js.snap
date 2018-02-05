@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SelectGroup /> rendered correctly with fixture 1`] = `
-<SelectGroup
+exports[`<InlineSelector /> rendered correctly with fixture 1`] = `
+<InlineSelector
   onClickOption={[Function]}
   options={
     Array [
@@ -72,5 +72,5 @@ exports[`<SelectGroup /> rendered correctly with fixture 1`] = `
       </div>
     </div>
   </styled.div>
-</SelectGroup>
+</InlineSelector>
 `;

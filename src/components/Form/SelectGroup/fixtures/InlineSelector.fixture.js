@@ -1,7 +1,7 @@
-import ButtonGroup from './'
+import InlineSelector from '../'
 
 export default {
-  component: ButtonGroup,
+  component: InlineSelector,
   props: {
     vertical: false,
     onClickOption: (opt) => console.log(opt),

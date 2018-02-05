@@ -1,23 +1,25 @@
 /**
 *
-* SelectGroup
+* InlineSelector
 *
 */
 
 import React from 'react'
 import classnames from 'classnames'
-import StyledSelectGroup from './styles'
+import StyledInlineSelector from './styles'
 import PropTypes from 'prop-types'
 
-class SelectGroup extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class InlineSelector extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     vertical: PropTypes.bool,
     options: PropTypes.array,
+    disabled: PropTypes.bool,
     onClickOption: PropTypes.func
   }
 
   static defaultProps = {
     vertical: false,
+    disabled: true,
     options: [],
     onClickOption: () => null
   }
@@ -31,7 +33,7 @@ class SelectGroup extends React.Component { // eslint-disable-line react/prefer-
     })
   }
   render () {
-    const { vertical, className, options } = this.props
+    const { vertical, className, options, disabled } = this.props
     const { selected } = this.state
     const classes = {
       [className]: className,
@@ -39,16 +41,16 @@ class SelectGroup extends React.Component { // eslint-disable-line react/prefer-
     }
 
     return (
-      <StyledSelectGroup className={classnames('select-group', classes)}>
+      <StyledInlineSelector className={classnames('select-group', classes)}>
         {options.map((opt, index) =>
           <div
             key={index}
-            className={classnames('select-group-btn', {'selected': opt.value === selected})}
+            className={classnames('select-group-btn', {'selected': opt.value === selected, 'disabled': disabled})}
             onClick={() => this.onClickOption(opt)}>{opt.label}</div>
         )}
-      </StyledSelectGroup>
+      </StyledInlineSelector>
     )
   }
 }
 
-export default SelectGroup
+export default InlineSelector

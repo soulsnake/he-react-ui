@@ -1,80 +1,55 @@
 import styled from 'styled-components'
 import * as colors from '../../../styles/colors'
+import * as sizes from '../../../styles/sizes'
 
 const StyledButton = styled.button`
   cursor: pointer;
-  color: #fff;
-  padding: 0px 20px 0px 20px;
-  display: block;
+  color: ${colors.white};
+  padding: 0px ${sizes.padding_small} 0px ${sizes.padding_small};
   border: none;
-  border-radius: 5px;
+  border-radius: ${sizes.btn_height};
   text-align: left;
-  height: 36px;
+  height: ${sizes.btn_height};
   margin: auto;
   position: relative;
-  font-size: 14px;
+  font-size: ${sizes.fontsize_body};
   display: flex;
   align-items: center;
   justify-content: space-between;
   outline: none;
+  background: ${colors.teal_1};
   div{
     display: flex;
     justify-content: center;
     align-items: center;
     svg{
-      margin-right: 10px;
+      margin-right: ${sizes.padding_extra_small};
     }
   }
   &:hover{
-    filter: brightness(90%);
+    filter: brightness(92%);
+  }
+  &:active{
+    filter: brightness(84%);
+  }
+  &.btn-small{
+    height: ${colors.btn_height_small};
+  }
+  &.btn-red{
+    background: ${colors.sp_red};
   }
   &.btn-white{
     background: ${colors.white};
-    color: ${colors.he_black};
-    border: thin solid ${colors.border_grey};
-    svg{
-      fill: ${colors.he_black};
-    }
+    border: solid ${sizes.border_width} ${colors.teal_1};
+    color: ${colors.navy_2};
   }
-  &.btn-default{
-    background: ${colors.he_teal};
+  &.btn-grey{
+    background: ${colors.n_grey_3};
+    color: ${colors.navy_2};
   }
-  &.btn-green{
-    background: ${colors.he_green};
-  }
-  &.btn-red{
-    background: ${colors.secondary_red};
-  }
-  &.btn-teal{
-    background: ${colors.new_teal};
-  }
-  &.btn-small{
-    max-width: 130px;
-    height: 24px;
-    font-size: 12px;
-  }
-  &.btn-disabled{
-    background: ${colors.disabled_grey};
-    color: ${colors.label_grey};
-    cursor: default;
-    &:hover{
-      filter: brightness(100%);
-    }
-  }
-  &.btn-back-nav{
-    background: transparent;
-    max-width: 570px;
-    font-size: 30px;
-    float: left;
-    justify-content: left;
-    padding: 0;
-    svg{
-      margin-top: 2px;
-      margin-right: 15px;
-    }
-    &:hover{
-      filter: brightness(100%);
-    }
+  &.btn-link{
+    background: none;
+    border: none;
   }
 `;
 
