@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Col = exports.Row = exports.Grid = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n    position: relative;\n    width: 100%;\n    .list-header{\n        background-color: ', ';\n        padding: 10px;\n    }\n'], ['\n    position: relative;\n    width: 100%;\n    .list-header{\n        background-color: ', ';\n        padding: 10px;\n    }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n    width: 100%;\n    .list-header{\n        background-color: ', ';\n        padding: 10px;\n    }\n'], ['\n    width: 100%;\n    .list-header{\n        background-color: ', ';\n        padding: 10px;\n    }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    width: 100%;\n'], ['\n    width: 100%;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n    padding: 10px;\n    background-color: ', ';\n    border-bottom: thin solid ', ';\n'], ['\n    padding: 10px;\n    background-color: ', ';\n    border-bottom: thin solid ', ';\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n    width: ', ';\n'], ['\n    width: ', ';\n']);

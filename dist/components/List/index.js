@@ -18,6 +18,10 @@ var _classnames2 = require('classnames');
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
+var _time = require('../../utils/time');
+
+var _time2 = _interopRequireDefault(_time);
+
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
@@ -42,15 +46,45 @@ var List = function (_React$Component) {
   _inherits(List, _React$Component);
 
   function List() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, List);
 
-    return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
-  }
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = List.__proto__ || Object.getPrototypeOf(List)).call.apply(_ref, [this].concat(args))), _this), _this.columnRender = function (col) {
+      switch (col.type) {
+        case 'text':
+          return col.data;
+          break;
+        case 'action':
+          return _react2.default.createElement(
+            'a',
+            { href: '#' },
+            col.data
+          );
+          break;
+        case 'date':
+          return (0, _time2.default)(new Date(col.data));
+          break;
+
+        default:
+          return col.data;
+          break;
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  } // eslint-disable-line react/prefer-stateless-function
+
 
   _createClass(List, [{
     key: 'render',
-    // eslint-disable-line react/prefer-stateless-function
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           className = _props.className,
           data = _props.data,
@@ -82,7 +116,7 @@ var List = function (_React$Component) {
                 return _react2.default.createElement(
                   _styles.Col,
                   { key: cIndex, width: colWidth, className: 'list-row-cell' },
-                  col
+                  _this2.columnRender(col)
                 );
               })
             );
@@ -100,9 +134,6 @@ List.propTypes = {
   data: _propTypes2.default.object
 };
 List.defaultProps = {
-  data: {
-    headers: ['Col 1', 'Col 2', 'Col 3'],
-    rows: [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
-  }
+  data: {}
 };
 exports.default = List;
