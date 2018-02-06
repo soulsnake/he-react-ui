@@ -1,2 +1,6 @@
+import List from './List'
+
 export * from './Form'
-export * from './List'
+export {
+    List
+}

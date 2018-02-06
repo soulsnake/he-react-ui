@@ -4,7 +4,6 @@ import * as colors from '../../styles/colors'
 import { Grid as stockGrid, Col as stockCol, Row as stockRow} from 'react-styled-flexboxgrid'
 
 const InputGroup = styled.div`
-    position: relative;
     width: 100%;
     .list-header{
         background-color: ${colors.n_grey_1};

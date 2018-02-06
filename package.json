@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.5",
+    "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-loadable": "^5.3.1",

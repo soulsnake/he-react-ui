@@ -7,6 +7,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import timeSince from '../../utils/time'
 import StyledListContainer, { Grid, Col, Row } from './styles'
 
 class List extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -16,15 +17,30 @@ class List extends React.Component { // eslint-disable-line react/prefer-statele
   }
 
   static defaultProps = {
-    data: {
-      headers: ['Col 1', 'Col 2', 'Col 3'],
-      rows: [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
+    data: {}
+  }
+  columnRender = (col) => {
+    switch (col.type) {
+      case 'text':
+        return col.data
+        break
+      case 'action':
+        return (
+          <a href="#">{col.data}</a>
+        )
+        break
+      case 'date':
+        return timeSince(new Date(col.data))
+        break
+
+      default:
+        return col.data
+        break
     }
   }
-
   render() {
     const { className, data, ...restProps } = this.props
-    let colWidth = `${(100/data.headers.length)}%`
+    let colWidth = `${(100 / data.headers.length)}%`
     return (
       <StyledListContainer className={classnames('list-container', { [className]: className })}>
         <Grid>
@@ -36,7 +52,7 @@ class List extends React.Component { // eslint-disable-line react/prefer-statele
           {data.rows.map((row, rIndex) =>
             <Row key={rIndex} className='list-row'>
               {row.map((col, cIndex) =>
-                <Col key={cIndex} width={colWidth} className='list-row-cell'>{col}</Col>
+                <Col key={cIndex} width={colWidth} className='list-row-cell'>{this.columnRender(col)}</Col>
               )}
             </Row>
           )}
