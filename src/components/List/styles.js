@@ -15,6 +15,8 @@ export const Grid = styled(stockGrid)`
 `;
 export const Row = styled(stockRow)`
     padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     background-color: ${colors.white};
     border-bottom: thin solid ${colors.n_grey_2};
 `;
