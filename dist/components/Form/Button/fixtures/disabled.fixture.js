@@ -18,12 +18,12 @@ exports.default = {
   component: _2.default,
   props: {
     submit: false,
-    color: 'white',
+    color: 'grey',
     children: _react2.default.createElement(
       'div',
       null,
       ' Button'
     ),
-    disabled: false
+    disabled: true
   }
 };

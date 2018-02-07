@@ -26,14 +26,14 @@ const StyledButton = styled.button`
       margin-right: ${sizes.padding_extra_small};
     }
   }
-  &:hover{
+  &:not(.disabled):hover{
     filter: brightness(92%);
   }
-  &:active{
+  &:not(.disabled):active{
     filter: brightness(84%);
   }
   &.btn-small{
-    height: ${colors.btn_height_small};
+    height: ${sizes.btn_height_small};
   }
   &.btn-red{
     background: ${colors.sp_red};
@@ -41,11 +41,11 @@ const StyledButton = styled.button`
   &.btn-white{
     background: ${colors.white};
     border: solid ${sizes.border_width} ${colors.teal_1};
-    color: ${colors.navy_2};
+    color: ${colors.teal_1};
   }
   &.btn-grey{
     background: ${colors.n_grey_3};
-    color: ${colors.navy_2};
+    color: ${colors.n_grey_1};
   }
   &.btn-link{
     background: none;

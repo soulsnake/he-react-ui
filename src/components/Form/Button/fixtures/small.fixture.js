@@ -5,7 +5,7 @@ export default {
   component: Button,
   props: {
     submit: false,
-    color: 'grey',
+    color: 'white',
     children: <div> Button</div>,
     small: true,
     disabled: false

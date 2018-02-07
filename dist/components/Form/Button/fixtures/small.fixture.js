@@ -18,7 +18,7 @@ exports.default = {
   component: _2.default,
   props: {
     submit: false,
-    color: 'grey',
+    color: 'white',
     children: _react2.default.createElement(
       'div',
       null,

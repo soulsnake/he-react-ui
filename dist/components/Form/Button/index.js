@@ -60,15 +60,16 @@ var Button = function (_React$Component) {
           color = _props.color,
           className = _props.className,
           submit = _props.submit,
-          fieldProps = _objectWithoutProperties(_props, ['small', 'link', 'color', 'className', 'submit']);
+          disabled = _props.disabled,
+          rest = _objectWithoutProperties(_props, ['small', 'link', 'color', 'className', 'submit', 'disabled']);
 
-      var btnClass = (0, _classnames3.default)('btn', (_classnames = { 'btn-link': link, 'btn-small': small }, _defineProperty(_classnames, 'btn-' + color, color), _defineProperty(_classnames, className, className), _classnames));
+      var btnClass = (0, _classnames3.default)('btn', (_classnames = { 'btn-link': link, 'btn-small': small }, _defineProperty(_classnames, 'btn-' + color, color), _defineProperty(_classnames, 'disabled', disabled), _defineProperty(_classnames, className, className), _classnames));
       return _react2.default.createElement(
         _styles2.default,
         _extends({
           className: btnClass,
           type: submit ? 'submit' : 'button'
-        }, fieldProps),
+        }, rest),
         this.props.children
       );
     }

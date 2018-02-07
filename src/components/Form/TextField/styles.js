@@ -9,16 +9,17 @@ const StyledTextField = styled.div`
     background-color: transparent;
     cursor: auto;
     color: ${colors.navy_2};
-    
+
     .input-floating-label{
         position: absolute;
         top: 25px;
-        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        transition: transform 250ms ease;
         z-index: 1;
         transform: scale(1) translate(0px, 0px);
         transform-origin: left top 0px;
         pointer-events: none;
         user-select: none;
+        color: ${colors.navy_2};
         &.focused{
             position: absolute;
             top: 28px;
@@ -46,6 +47,9 @@ const StyledTextField = styled.div`
             margin-top: 10px;
         }
     }
+    .input-invalid-text{
+        color: ${colors.sp_red};
+    }
 `;
 
 export const StyledTextFieldBlock = styled.div`
@@ -56,14 +60,23 @@ export const StyledTextFieldBlock = styled.div`
     height: 64px;
     &.focused{
         border-color: ${colors.teal_1};
+        .input-floating-label{
+            color: ${colors.teal_1};
+        }
     }
     &.invalid{
         border-color: ${colors.sp_red};
         background-color: ${colors.sp_light_red};
+        .input-floating-label{
+            color: ${colors.sp_red};
+        }
     }
     &.disabled{
         border-color: ${colors.n_grey_3};
         background-color: ${colors.n_grey_4};
+        .input-floating-label{
+            color: ${colors.n_grey_1};
+        }
     }
 `
 export default StyledTextField

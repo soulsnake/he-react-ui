@@ -7,7 +7,6 @@ export default {
     submit: false,
     color: 'red',
     children: <div> Button</div>,
-    small: true,
     disabled: false
   }
 }

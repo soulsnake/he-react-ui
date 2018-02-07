@@ -5,9 +5,8 @@ export default {
   component: Button,
   props: {
     submit: false,
-    link: true,
-    color: 'white',
+    color: 'grey',
     children: <div> Button</div>,
-    disabled: false
+    disabled: true
   }
 }

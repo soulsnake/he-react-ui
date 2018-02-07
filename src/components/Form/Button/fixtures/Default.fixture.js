@@ -6,7 +6,6 @@ export default {
   props: {
     submit: false,
     children: <div> Button</div>,
-    small: true,
     disabled: false
   }
 }

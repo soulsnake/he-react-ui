@@ -25,7 +25,6 @@ exports.default = {
       null,
       ' Button'
     ),
-    small: true,
     disabled: false
   }
 };

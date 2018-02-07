@@ -30,13 +30,13 @@ class Button extends React.Component {
     disabled: false
   }
   render () {
-    const { small, link, color, className, submit, ...fieldProps } = this.props
-    const btnClass = classnames('btn', { 'btn-link': link, 'btn-small': small, [`btn-${color}`]: color, [className]: className })
+    const { small, link, color, className, submit, disabled, ...rest } = this.props
+    const btnClass = classnames('btn', { 'btn-link': link, 'btn-small': small, [`btn-${color}`]: color, 'disabled': disabled, [className]: className })
     return (
       <StyledButton
         className={btnClass}
         type={submit ? 'submit' : 'button'}
-        {...fieldProps}>
+        {...rest}>
         {this.props.children}
       </StyledButton>
     )
