@@ -21,40 +21,40 @@ class List extends React.Component { // eslint-disable-line react/prefer-statele
   }
   columnRender = (col) => {
     switch (col.type) {
-      case 'text':
-        return col.data
-        break
-      case 'action':
-        return (
-          <a href="#">{col.data}</a>
-        )
-        break
-      case 'date':
-        return timeSince(new Date(col.data))
-        break
+    case 'text':
+      return col.data
+      break
+    case 'action':
+      return (
+        <a href="#">{col.data}</a>
+      )
+      break
+    case 'date':
+      return timeSince(new Date(col.data))
+      break
 
-      default:
-        return col.data
-        break
+    default:
+      return col.data
+      break
     }
   }
-  render() {
+  render () {
     const { className, data, ...restProps } = this.props
     let colWidth = `${(100 / data.headers.length)}%`
     return (
       <StyledListContainer className={classnames('list-container', { [className]: className })}>
         <Grid>
-          <Row className='list-header'>
+          <Row className="list-header">
             {data.headers.map((header, index) =>
-              <Col key={index} width={colWidth} className='list-header-cell'>{header}</Col>
+              <Col key={index} width={colWidth} className="list-header-cell">{header}</Col>
             )}
           </Row>
           {data.rows.map((row, rIndex) =>
-            <Row key={rIndex} className='list-row'>
+            (<Row key={rIndex} className="list-row">
               {row.map((col, cIndex) =>
-                <Col key={cIndex} width={colWidth} className='list-row-cell'>{this.columnRender(col)}</Col>
+                <Col key={cIndex} width={colWidth} className="list-row-cell">{this.columnRender(col)}</Col>
               )}
-            </Row>
+            </Row>)
           )}
         </Grid>
       </StyledListContainer>

@@ -43,10 +43,10 @@ class InlineSelector extends React.Component { // eslint-disable-line react/pref
     return (
       <StyledInlineSelector className={classnames('select-group', classes)}>
         {options.map((opt, index) =>
-          <div
+          (<div
             key={index}
             className={classnames('select-group-btn', {'selected': opt.value === selected, 'disabled': disabled})}
-            onClick={() => this.onClickOption(opt)}>{opt.label}</div>
+            onClick={() => this.onClickOption(opt)}>{opt.label}</div>)
         )}
       </StyledInlineSelector>
     )

@@ -194,6 +194,6 @@ const StyledSmartSearch = styled.div`
         }
         }
     }    
-`;
+`
 
 export default StyledSmartSearch

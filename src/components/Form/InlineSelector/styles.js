@@ -57,6 +57,6 @@ const StyledInlineSelector = styled.div`
             }
         }
     }
-`;
+`
 
 export default StyledInlineSelector

@@ -29,14 +29,14 @@ class Input extends React.Component { // eslint-disable-line react/prefer-statel
     return (
       <InputGroup className={classnames('input-group', { [className]: className })}>
         <input
-          className='form-control'
-          type='text'
+          className="form-control"
+          type="text"
           value={value}
           onChange={onChange}
           {...restProps} />
         {buttonLabel &&
-          <span className='input-group-btn'>
-            <button className='btn search-btn' type='button' onClick={onClick}>{buttonLabel}</button>
+          <span className="input-group-btn">
+            <button className="btn search-btn" type="button" onClick={onClick}>{buttonLabel}</button>
           </span>
         }
       </InputGroup>

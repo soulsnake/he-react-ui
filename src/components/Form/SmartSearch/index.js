@@ -9,28 +9,28 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import StyledSmartSearch, { StyledSmartSearchBlock } from './styles'
 import { setCursor, KEYS, tokenize, prepareConfig, sanitizeToken, deserializeQueryString } from './util'
-import Token from './token';
+import Token from './token'
 
 const configHash = {
-  "@": {
+  '@': {
     type: 'list',
     defaultHint: 'any user',
     sectionTitle: 'Users',
     content: [
       { value: 'abrahm', label: 'Abrahm Micanski' },
       { value: 'lilly', label: 'Lilly Richards' },
-      { value: 'emma', label: 'Emma Roberts' },
+      { value: 'emma', label: 'Emma Roberts' }
     ]
   },
 
-  "before:": {
+  'before:': {
     type: 'date',
-    defaultHint: 'a date',
+    defaultHint: 'a date'
   },
 
-  "after:": {
+  'after:': {
     type: 'date',
-    defaultHint: 'a date',
+    defaultHint: 'a date'
   }
 }
 class SmartSearch extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -48,27 +48,27 @@ class SmartSearch extends React.Component { // eslint-disable-line react/prefer-
   activeToken = null
   tokens = []
   getTokens = (value) => {
-    return tokenize(value, this.tokenConfig);
+    return tokenize(value, this.tokenConfig)
   }
   getActiveToken = (activeTokenIndex, tokens) => {
-    return tokens[activeTokenIndex];
+    return tokens[activeTokenIndex]
   }
-  getTokenEndCursorPos(token, tokens) {
-    let sum = 0;
-    let t;
+  getTokenEndCursorPos (token, tokens) {
+    let sum = 0
+    let t
     for (var i = 0; i < tokens.length; i++) {
-      t = tokens[i];
+      t = tokens[i]
       sum += t.value.length
-      if (t === token) { break; }
+      if (t === token) { break }
     }
-    return sum;
+    return sum
   }
-  getTokensString(tokens) {
+  getTokensString (tokens) {
     return tokens
       .reduce(function (sum, token) {
-        sum += token.value;
-        return sum;
-      }, '');
+        sum += token.value
+        return sum
+      }, '')
   }
   isLastTokenSelected = (activeTokenIndex, tokens) => {
     let tokensCount = tokens.length
@@ -80,19 +80,19 @@ class SmartSearch extends React.Component { // eslint-disable-line react/prefer-
     })
   }
   activeTokenIndex = (tokens, cursorLocation) => {
-    let sumIndex = 0;
+    let sumIndex = 0
     let token, startIndex, endIndex
     let length = tokens.length
     for (var i = 0; i < length; i++) {
-      token = tokens[i];
-      startIndex = sumIndex;
-      endIndex = token.fullText().length + startIndex;
-      sumIndex = endIndex;
+      token = tokens[i]
+      startIndex = sumIndex
+      endIndex = token.fullText().length + startIndex
+      sumIndex = endIndex
       if (startIndex < cursorLocation && cursorLocation <= endIndex) {
-        return i;
+        return i
       }
     }
-    return -1;
+    return -1
   }
   onFocusIn = () => {
     this.setState({
@@ -101,31 +101,31 @@ class SmartSearch extends React.Component { // eslint-disable-line react/prefer-
     this.props.focusIn()
   }
 
-  onFocusOut() {
+  onFocusOut () {
     this.setState({
       cursorLocation: -1
     })
     // TODO: scrollBackground
-    this.scrollBackground(0);
+    this.scrollBackground(0)
     this.props.focusOut()
   }
 
   onKeyDown = (e) => {
-    const { target, keyCode } = e;
+    const { target, keyCode } = e
     if (keyCode === KEYS.ENTER) {
-      e.preventDefault();
+      e.preventDefault()
       this.setState({ enterClicked: !this.state.enterClicked })
     } else if (keyCode === KEYS.ESC) {
-      e.preventDefault();
+      e.preventDefault()
     } else if (keyCode === KEYS.UP) {
-      e.preventDefault();
+      e.preventDefault()
       this.setState({ upClicked: !this.state.upClicked })
     } else if (keyCode === KEYS.DOWN) {
-      e.preventDefault();
+      e.preventDefault()
       this.setState({ downClicked: !this.state.downClicked })
     } else {
       if (keyCode === KEYS.TAB) {
-        e.preventDefault();
+        e.preventDefault()
       }
       this.tokens = this.getTokens(target.value)
       let activeTokenIndex = this.activeTokenIndex(this.tokens, target.selectionStart)
@@ -135,19 +135,19 @@ class SmartSearch extends React.Component { // eslint-disable-line react/prefer-
         if (this.activeToken.autoComplete()) {
           let hasVal = this.activeToken.value
           let isLastTokenSelected = this.isLastTokenSelected(activeTokenIndex, this.tokens)
-          let cursorLocation = this.getTokenEndCursorPos(this.activeToken, this.tokens);
+          let cursorLocation = this.getTokenEndCursorPos(this.activeToken, this.tokens)
           if (hasVal) {
             if (isLastTokenSelected) {
-              this.tokens.push(new Token({ fullText: ' ' }));
+              this.tokens.push(new Token({ fullText: ' ' }))
             }
-            cursorLocation += 1;
+            cursorLocation += 1
           }
 
-          let tokensString = this.getTokensString(this.tokens);
+          let tokensString = this.getTokensString(this.tokens)
           this.setState({
             proxyValue: tokensString
           })
-          this.setCursor(cursorLocation);
+          this.setCursor(cursorLocation)
           if (tokenType !== 'default') {
 
           }
@@ -164,21 +164,21 @@ class SmartSearch extends React.Component { // eslint-disable-line react/prefer-
       })
     }
 
-    let queryString = target.value;
-    let modifiers = deserializeQueryString(queryString, this.tokenConfig);
+    let queryString = target.value
+    let modifiers = deserializeQueryString(queryString, this.tokenConfig)
   }
-  renderRows(list) {
+  renderRows (list) {
     return list.map((item, index) =>
-      <li key={index} className="">
+      (<li key={index} className="">
         <b>{item.label}</b> <span className="modifier-value">{item.value}</span>
-      </li>
+      </li>)
     )
   }
-  renderHintList(hintValues) {
-    let list = _.values(_.groupBy(hintValues, 'section'));
+  renderHintList (hintValues) {
+    let list = _.values(_.groupBy(hintValues, 'section'))
     let current = null
     return list.map((item, index) =>
-      <div key={index} >
+      (<div key={index} >
         <div className="section-header">
           <hr />
           <span className="header-label">{item[0].section}</span>
@@ -186,10 +186,10 @@ class SmartSearch extends React.Component { // eslint-disable-line react/prefer-
         <ul className="slack-search-input-list">
           {this.renderRows(item)}
         </ul>
-      </div>
+      </div>)
     )
   }
-  render() {
+  render () {
     const { className, ...restProps } = this.props
     let hintValue = ''
     let hintValues = []
@@ -204,21 +204,21 @@ class SmartSearch extends React.Component { // eslint-disable-line react/prefer-
           autoComplete="off"
           spellCheck={false}
           onKeyDown={this.onKeyDown}
-          className='main-input' />
+          className="main-input" />
         <div className="background-container">
           {this.tokens.map((token, index) =>
-            <div key={index}>
-              <span className='modifier'>
+            (<div key={index}>
+              <span className="modifier">
                 {token.modifier}{token.value}
               </span>
-            </div>
+            </div>)
           )}
           <span className="hint-value">{hintValue}</span>
         </div>
         {hintValues.length > 0 &&
           <div className="hint-menu-container">
-            <span className="arrow"></span>
-            <span className="arrow-border"></span>
+            <span className="arrow" />
+            <span className="arrow-border" />
             <div className="hint-menu with-help">
               {this.renderHintList(hintValues)}
             </div>

@@ -1,7 +1,7 @@
-import Ember from 'ember';
-import layout from './template';
+import Ember from 'ember'
+import layout from './template'
 
-const { get, set, observer, computed, run } = Ember;
+const { get, set, observer, computed, run } = Ember
 
 export default Ember.Component.extend({
   layout: layout,
@@ -9,111 +9,111 @@ export default Ember.Component.extend({
   classNames: ['hint-menu-container'],
   isVisible: computed.bool('token.hints.length'),
 
-  correctScroll: observer('currentIndex', function() {
-    run.scheduleOnce('afterRender', this, function() {
-      let currentIndex = get(this, 'currentIndex');
-      if (currentIndex === -1 || !this.element) { return; }
-      let $listItem = this.$('li').eq(currentIndex);
-      let $list = $listItem.parent('.slack-search-input-list');
+  correctScroll: observer('currentIndex', function () {
+    run.scheduleOnce('afterRender', this, function () {
+      let currentIndex = get(this, 'currentIndex')
+      if (currentIndex === -1 || !this.element) { return }
+      let $listItem = this.$('li').eq(currentIndex)
+      let $list = $listItem.parent('.slack-search-input-list')
 
-      let scroll = $list.scrollTop();
-      let listHeight = $list.height();
+      let scroll = $list.scrollTop()
+      let listHeight = $list.height()
 
-      let itemHeight = $listItem.outerHeight();
-      let top = $listItem.position().top;
-      let bottom = top + itemHeight;
+      let itemHeight = $listItem.outerHeight()
+      let top = $listItem.position().top
+      let bottom = top + itemHeight
 
       if (top < 0) {
-        $list.scrollTop(scroll + top);
+        $list.scrollTop(scroll + top)
       } else if (listHeight < bottom) {
-        $list.scrollTop(scroll + top - listHeight + itemHeight);
+        $list.scrollTop(scroll + top - listHeight + itemHeight)
       }
-    });
+    })
   }),
 
-  select: observer('enterClicked', function() {
-    let list = get(this, 'flatList');
-    let currentIndex = get(this, 'currentIndex');
+  select: observer('enterClicked', function () {
+    let list = get(this, 'flatList')
+    let currentIndex = get(this, 'currentIndex')
     if (currentIndex !== -1) {
-      let item = list.objectAt(currentIndex);
-      let token = get(this, 'token');
-      run.schedule('sync', this, function() {
-        this.attrs.changeTokenModel(token, item, true);
-      });
+      let item = list.objectAt(currentIndex)
+      let token = get(this, 'token')
+      run.schedule('sync', this, function () {
+        this.attrs.changeTokenModel(token, item, true)
+      })
     }
   }),
 
-  goUp: observer('upClicked', function() {
-    let len = get(this, 'flatList.length');
-    if (!len) { return; }
-    let currentIndex = get(this, 'currentIndex') % len;
+  goUp: observer('upClicked', function () {
+    let len = get(this, 'flatList.length')
+    if (!len) { return }
+    let currentIndex = get(this, 'currentIndex') % len
     if (currentIndex <= 0) {
-      set(this, 'currentIndex', len - 1);
+      set(this, 'currentIndex', len - 1)
     } else {
-      set(this, 'currentIndex', currentIndex - 1);
+      set(this, 'currentIndex', currentIndex - 1)
     }
-    this.attrs['on-focus']();
+    this.attrs['on-focus']()
   }),
 
-  goDown: observer('downClicked', function() {
-    let len = get(this, 'flatList.length');
-    if (!len) { return; }
-    let currentIndex = get(this, 'currentIndex');
+  goDown: observer('downClicked', function () {
+    let len = get(this, 'flatList.length')
+    if (!len) { return }
+    let currentIndex = get(this, 'currentIndex')
     if (currentIndex >= (len - 1)) {
-      set(this, 'currentIndex', 0);
+      set(this, 'currentIndex', 0)
     } else {
-      set(this, 'currentIndex', currentIndex + 1);
+      set(this, 'currentIndex', currentIndex + 1)
     }
-    this.attrs['on-focus']();
+    this.attrs['on-focus']()
   }),
 
-  flatList: computed('listGrouped', function() {
-    return get(this, 'listGrouped').reduce(function(sum, item) {
-      return sum.concat(item.list);
-    }, []);
+  flatList: computed('listGrouped', function () {
+    return get(this, 'listGrouped').reduce(function (sum, item) {
+      return sum.concat(item.list)
+    }, [])
   }),
 
-  listGrouped: computed('token.hints', function() {
-    let hints = get(this, 'token.hints');
-    if (!hints) { return []; }
+  listGrouped: computed('token.hints', function () {
+    let hints = get(this, 'token.hints')
+    if (!hints) { return [] }
     let list = hints
       .reduce(function (sum, listItem) {
-        let section = listItem.section;
+        let section = listItem.section
         if (section) {
           if (sum[section]) {
-            sum[section].push(listItem);
+            sum[section].push(listItem)
           } else {
-            sum[section] = [listItem];
+            sum[section] = [listItem]
           }
         } else {
-          sum['untitled'].push(listItem);
+          sum['untitled'].push(listItem)
         }
-        return sum;
-      }, { 'untitled': [] });
+        return sum
+      }, { 'untitled': [] })
 
-    let listArray = [];
+    let listArray = []
     for (let key in list) {
-      listArray.push({ section: key, list: list[key] });
+      listArray.push({ section: key, list: list[key] })
     }
-    listArray.findBy('section', 'untitled').section = '';
-    let t = 0;
+    listArray.findBy('section', 'untitled').section = ''
+    let t = 0
     let array = listArray.sortBy('section').reverse()
-      .map(function(section) {
-        section.list = section.list.map(function(list) {
-          set(list, 'index', t++);
-          return list;
-        });
-        return section;
-      });
-    return array;
+      .map(function (section) {
+        section.list = section.list.map(function (list) {
+          set(list, 'index', t++)
+          return list
+        })
+        return section
+      })
+    return array
   }),
 
   actions: {
-    selectItem(index) {
-      set(this, 'currentIndex', index);
-      this.select();
-      return false;
+    selectItem (index) {
+      set(this, 'currentIndex', index)
+      this.select()
+      return false
     }
   }
 
-});
+})

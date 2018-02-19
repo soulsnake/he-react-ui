@@ -57,6 +57,6 @@ const StyledButton = styled.button`
     background: none;
     border: none;
   }
-`;
+`
 
 export default StyledButton

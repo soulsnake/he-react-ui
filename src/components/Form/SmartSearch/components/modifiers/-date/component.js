@@ -1,7 +1,7 @@
-import Ember from 'ember';
-import layout from './template';
+import Ember from 'ember'
+import layout from './template'
 
-const { get, observer, on, run, computed } = Ember;
+const { get, observer, on, run, computed } = Ember
 
 export default Ember.Component.extend({
   classNames: ['hint-menu-container'],
@@ -9,8 +9,8 @@ export default Ember.Component.extend({
 
   cursor: -1,
 
-  initComponent: on('didInsertElement', function() {
-    run.schedule('afterRender', this, function() {
+  initComponent: on('didInsertElement', function () {
+    run.schedule('afterRender', this, function () {
       let el = this.$('.datetimepicker-container')
         .datetimepicker({
           inline: true,
@@ -18,74 +18,74 @@ export default Ember.Component.extend({
           useCurrent: false,
           date: get(this, 'token.model')
         })
-        .on('dp.change', run.bind(this, 'onDateChange'));
-        this._picker = el.data("DateTimePicker");
-    });
+        .on('dp.change', run.bind(this, 'onDateChange'))
+      this._picker = el.data('DateTimePicker')
+    })
   }),
 
-  setPickerDate: observer('token.model', function() {
-    run.schedule('afterRender', this, function() {
+  setPickerDate: observer('token.model', function () {
+    run.schedule('afterRender', this, function () {
       if (this._picker) {
-        this._picker.date(get(this, 'token.model'));
+        this._picker.date(get(this, 'token.model'))
       }
-    });
+    })
   }),
 
-  cursorLocationType: computed('cursor', 'token.length', function() {
-    let cursor = get(this, 'cursor');
-    let keyLength = get(this, 'token.modifier.length');
+  cursorLocationType: computed('cursor', 'token.length', function () {
+    let cursor = get(this, 'cursor')
+    let keyLength = get(this, 'token.modifier.length')
     if (cursor >= keyLength) {
       if (cursor < (keyLength + 5)) {
-        return 'year';
+        return 'year'
       } else if (cursor < (keyLength + 8)) {
-        return 'month';
+        return 'month'
       } else if (cursor < (keyLength + 11)) {
-        return 'day';
+        return 'day'
       } else if (cursor < (keyLength + 14)) {
-        return 'hour';
+        return 'hour'
       } else if (cursor < (keyLength + 17)) {
-        return 'minute';
+        return 'minute'
       }
     }
   }),
 
-  goUp: observer('upClicked', function() {
-    let date = get(this, 'token.model');
-    let cursorLocationType = get(this, 'cursorLocationType');
+  goUp: observer('upClicked', function () {
+    let date = get(this, 'token.model')
+    let cursorLocationType = get(this, 'cursorLocationType')
     if (date && cursorLocationType) {
-      date.add(1, cursorLocationType);
-      run.once(this, function() {
-        this.attrs.changeTokenModel(get(this, 'token'), date);
-        this.propertyDidChange('token.model');
-      });
+      date.add(1, cursorLocationType)
+      run.once(this, function () {
+        this.attrs.changeTokenModel(get(this, 'token'), date)
+        this.propertyDidChange('token.model')
+      })
     }
   }),
 
-  goDown: observer('downClicked', function() {
-    let date = get(this, 'token.model');
-    let cursorLocationType = get(this, 'cursorLocationType');
+  goDown: observer('downClicked', function () {
+    let date = get(this, 'token.model')
+    let cursorLocationType = get(this, 'cursorLocationType')
     if (date && cursorLocationType) {
-      date.subtract(1, cursorLocationType);
-      run.once(this, function() {
-        this.attrs.changeTokenModel(get(this, 'token'), date);
-        this.propertyDidChange('token.model');
-      });
+      date.subtract(1, cursorLocationType)
+      run.once(this, function () {
+        this.attrs.changeTokenModel(get(this, 'token'), date)
+        this.propertyDidChange('token.model')
+      })
     }
   }),
 
-  onDateChange({date}) {
-    let tokenDate = get(this, 'token.model');
+  onDateChange ({date}) {
+    let tokenDate = get(this, 'token.model')
     if (date && !date.isSame(tokenDate)) {
-      let isTimeChanged = !tokenDate ?
-        false : (date.hours() !== tokenDate.hours()) || (date.minutes() !== tokenDate.minutes());
-      this.attrs.changeTokenModel(get(this, 'token'), date, !isTimeChanged);
+      let isTimeChanged = !tokenDate
+        ? false : (date.hours() !== tokenDate.hours()) || (date.minutes() !== tokenDate.minutes())
+      this.attrs.changeTokenModel(get(this, 'token'), date, !isTimeChanged)
     }
   },
 
-  tearDown: on('willDestroyElement', function() {
+  tearDown: on('willDestroyElement', function () {
     if (this._picker) {
-      this._picker.destroy();
+      this._picker.destroy()
     }
   })
 
-});
+})

@@ -51,7 +51,7 @@ class TextField extends React.Component { // eslint-disable-line react/prefer-st
       isValid: this.props.validateFunc(e.target.value)
     })
   }
-  render() {
+  render () {
     const { className, label, descriptiveText, invalidText, value, disabled, ...restProps } = this.props
     const { focused, inputEmpty, isValid } = this.state
     let isFocusedAndNotEmpty = { 'focused': focused || !inputEmpty }
@@ -70,10 +70,10 @@ class TextField extends React.Component { // eslint-disable-line react/prefer-st
             disabled={disabled} />
         </StyledTextFieldBlock>
         {disabled
-          ? <div className='input-disabled-text'>You don't need to fill this one in</div>
+          ? <div className="input-disabled-text">You don't need to fill this one in</div>
           : isValid
-            ? <div className='input-help-text'>{descriptiveText}</div>
-            : <div className='input-invalid-text'>{invalidText}</div>
+            ? <div className="input-help-text">{descriptiveText}</div>
+            : <div className="input-invalid-text">{invalidText}</div>
         }
       </StyledTextField>
     )

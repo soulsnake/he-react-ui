@@ -50,7 +50,7 @@ const StyledTextField = styled.div`
     .input-invalid-text{
         color: ${colors.sp_red};
     }
-`;
+`
 
 export const StyledTextFieldBlock = styled.div`
     border: thin solid ${colors.n_grey_3};

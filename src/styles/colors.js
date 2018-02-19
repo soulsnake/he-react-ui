@@ -10,7 +10,7 @@ export const teal_tint_1 = '#015057'
 export const teal_tint_2 = '#5BC0C9'
 export const teal_tint_3 = '#D5F0F3'
 
-//support colors
+// support colors
 export const sp_blue = '#008EC8'
 export const sp_pink = '#E3166F'
 export const sp_yellow = '#FFB700'
