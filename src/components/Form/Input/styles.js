@@ -18,7 +18,7 @@ const InputGroup = styled.div`
       background-color: #fff;
       background-image: none;
       background-clip: padding-box;
-      border: 1px solid ${colors.he_grey_4};
+      border: 1px solid ${colors.n_grey_1};
       border-radius: .25rem;
       transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
       outline: none;
@@ -27,7 +27,7 @@ const InputGroup = styled.div`
           border-bottom-right-radius: 0;
       }
       &:focus{
-          border: 1px solid ${colors.he_blue};
+          border: 1px solid ${colors.sp_blue};
       }
   }
   .input-group-btn {

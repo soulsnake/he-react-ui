@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.InlineSelector = exports.TextField = exports.Input = exports.Button = undefined;
+exports.SmartSearch = exports.InlineSelector = exports.TextField = exports.Input = exports.Button = undefined;
 
 var _Button = require('./Button');
 
@@ -27,3 +27,4 @@ exports.Button = _Button2.default;
 exports.Input = _Input2.default;
 exports.TextField = _TextField2.default;
 exports.InlineSelector = _InlineSelector2.default;
+exports.SmartSearch = _InlineSelector2.default;

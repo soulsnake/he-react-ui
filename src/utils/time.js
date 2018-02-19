@@ -1,3 +1,4 @@
+import moment from 'moment'
 const intervals = [
     { label: 'year', seconds: 31536000 },
     { label: 'month', seconds: 2592000 },
@@ -7,8 +8,8 @@ const intervals = [
     { label: 'second', seconds: 0 }
   ]
   
-  export default function timeSince (date) {
-    const seconds = Math.floor((Date.now() - date.getTime()) / 1000)
+  export default function timeSince (dateStr) {
+    const seconds = Math.floor((moment.utc().format('x') - moment.utc(dateStr).format('x')) / 1000)
     const interval = intervals.find(i => i.seconds < seconds)
     if (!interval || interval.seconds === 0) { return 'Just now' } else {
       const count = Math.floor(seconds / interval.seconds)

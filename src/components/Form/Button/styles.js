@@ -38,6 +38,12 @@ const StyledButton = styled.button`
   &.btn-red{
     background: ${colors.sp_red};
   }
+  &.btn-green{
+    background: ${colors.sp_green};
+  }
+  &.btn-blue{
+    background: ${colors.sp_blue};
+  }
   &.btn-white{
     background: ${colors.white};
     border: solid ${sizes.border_width} ${colors.teal_1};

@@ -20,6 +20,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var InputGroup = _styledComponents2.default.div(_templateObject, colors.he_grey_4, colors.he_blue);
+var InputGroup = _styledComponents2.default.div(_templateObject, colors.n_grey_1, colors.sp_blue);
 
 exports.default = InputGroup;

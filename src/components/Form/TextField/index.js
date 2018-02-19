@@ -12,7 +12,7 @@ import StyledTextField, { StyledTextFieldBlock } from './styles'
 class TextField extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     className: PropTypes.string,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     descriptiveText: PropTypes.string,
     invalidText: PropTypes.string,
     value: PropTypes.string,
@@ -27,7 +27,7 @@ class TextField extends React.Component { // eslint-disable-line react/prefer-st
     descriptiveText: '',
     invalidText: 'Please enter a valid response',
     onChange: () => null,
-    validateFunc: (value) => value !== ''
+    validateFunc: (value) => true
   }
   state = {
     focused: false,
