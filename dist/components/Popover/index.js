@@ -4,7 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _react = require('react');
 
@@ -13,14 +19,6 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _classnames2 = require('classnames');
-
-var _classnames3 = _interopRequireDefault(_classnames2);
-
-var _time = require('../../utils/time');
-
-var _time2 = _interopRequireDefault(_time);
 
 var _styles = require('./styles');
 
@@ -38,102 +36,82 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * List
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * Popover
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
-var List = function (_React$Component) {
-  _inherits(List, _React$Component);
 
-  function List() {
-    var _ref;
+var Popover = function (_React$Component) {
+  _inherits(Popover, _React$Component);
 
-    var _temp, _this, _ret;
+  function Popover() {
+    _classCallCheck(this, Popover);
 
-    _classCallCheck(this, List);
+    return _possibleConstructorReturn(this, (Popover.__proto__ || Object.getPrototypeOf(Popover)).apply(this, arguments));
+  }
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = List.__proto__ || Object.getPrototypeOf(List)).call.apply(_ref, [this].concat(args))), _this), _this.columnRender = function (col) {
-      switch (col.type) {
-        case 'text':
-          return col.data;
-          break;
-        case 'action':
-          return _react2.default.createElement(
-            'a',
-            { href: '#' },
-            col.data
-          );
-          break;
-        case 'date':
-          return (0, _time2.default)(new Date(col.data));
-          break;
-
-        default:
-          return col.data;
-          break;
-      }
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  } // eslint-disable-line react/prefer-stateless-function
-
-
-  _createClass(List, [{
+  _createClass(Popover, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var _props = this.props,
+          placement = _props.placement,
+          positionTop = _props.positionTop,
+          positionLeft = _props.positionLeft,
+          arrowOffsetTop = _props.arrowOffsetTop,
+          arrowOffsetLeft = _props.arrowOffsetLeft,
+          title = _props.title,
           className = _props.className,
-          data = _props.data,
-          restProps = _objectWithoutProperties(_props, ['className', 'data']);
+          style = _props.style,
+          children = _props.children,
+          props = _objectWithoutProperties(_props, ['placement', 'positionTop', 'positionLeft', 'arrowOffsetTop', 'arrowOffsetLeft', 'title', 'className', 'style', 'children']);
 
-      var colWidth = 100 / data.headers.length + '%';
+      var classes = _defineProperty({}, placement, true);
+
+      var outerStyle = _extends({
+        display: 'block',
+        top: positionTop,
+        left: positionLeft
+      }, style);
+
+      var arrowStyle = {
+        top: arrowOffsetTop,
+        left: arrowOffsetLeft
+      };
+
       return _react2.default.createElement(
         _styles2.default,
-        { className: (0, _classnames3.default)('list-container', _defineProperty({}, className, className)) },
+        {
+          role: 'tooltip',
+          className: (0, _classnames2.default)(className, classes),
+          style: outerStyle
+        },
+        _react2.default.createElement('div', { className: 'arrow', style: arrowStyle }),
+        title && _react2.default.createElement(
+          'h3',
+          { className: 'title' },
+          title
+        ),
         _react2.default.createElement(
-          _styles.Grid,
-          null,
-          _react2.default.createElement(
-            _styles.Row,
-            { className: 'list-header' },
-            data.headers.map(function (header, index) {
-              return _react2.default.createElement(
-                _styles.Col,
-                { key: index, width: colWidth, className: 'list-header-cell' },
-                header
-              );
-            })
-          ),
-          data.rows.map(function (row, rIndex) {
-            return _react2.default.createElement(
-              _styles.Row,
-              { key: rIndex, className: 'list-row' },
-              row.map(function (col, cIndex) {
-                return _react2.default.createElement(
-                  _styles.Col,
-                  { key: cIndex, width: colWidth, className: 'list-row-cell' },
-                  _this2.columnRender(col)
-                );
-              })
-            );
-          })
+          'div',
+          { className: 'content' },
+          children
         )
       );
     }
   }]);
 
-  return List;
+  return Popover;
 }(_react2.default.Component);
 
-List.propTypes = {
-  className: _propTypes2.default.string,
-  data: _propTypes2.default.object
+Popover.propTypes = {
+  placement: _propTypes2.default.oneOf(['top', 'right', 'bottom', 'left']),
+  positionTop: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+  positionLeft: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+  arrowOffsetTop: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+  arrowOffsetLeft: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+  title: _propTypes2.default.node
 };
-List.defaultProps = {
-  data: {}
+Popover.defaultProps = {
+  placement: 'right'
 };
-exports.default = List;
+exports.default = Popover;

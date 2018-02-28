@@ -3,7 +3,7 @@ import * as colors from '../../styles/colors'
 
 import { Grid as stockGrid, Col as stockCol, Row as stockRow} from 'react-styled-flexboxgrid'
 
-const InputGroup = styled.div`
+const StyledListContainer = styled.div`
     width: 100%;
     .list-header{
         background-color: ${colors.n_grey_1};
@@ -23,4 +23,4 @@ export const Row = styled(stockRow)`
 export const Col = styled(stockCol)`
     width: ${props => props.width ? props.width : 'auto'};
 `
-export default InputGroup
+export default StyledListContainer
