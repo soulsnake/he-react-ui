@@ -53,6 +53,20 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.scss$/,
+        use: [{
+            loader: require.resolve('style-loader')
+          }, {
+            loader: require.resolve('css-loader'),
+            options: {
+              modules: true,
+              localIdentName: "[name]__[local]___[hash:base64:5]"
+            }
+          }, {
+            loader: require.resolve('sass-loader')
+          }]
+      },
       { test: /\.svg$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
     ]
   },
