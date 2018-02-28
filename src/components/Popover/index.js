@@ -7,6 +7,7 @@ import classnames from 'classnames'
 import React from 'react'
 import PropTypes from 'prop-types'
 import PopoverWrap from './styles'
+import styles from './index.css'
 
 class Popover extends React.Component {
   static propTypes = {
@@ -35,8 +36,8 @@ class Popover extends React.Component {
       ...props
     } = this.props
 
-    
     const classes = {
+      [styles.popover]: true,
       [placement]: true
     }
 
