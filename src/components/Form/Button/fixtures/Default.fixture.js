@@ -4,8 +4,6 @@ import Button from '../'
 export default {
   component: Button,
   props: {
-    submit: false,
-    children: <div> Button</div>,
-    disabled: false
+    submit: false
   }
 }

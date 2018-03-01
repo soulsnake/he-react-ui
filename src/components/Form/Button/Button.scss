@@ -1,0 +1,109 @@
+@import '../../../styles/_breakpoints.scss';
+@import '../../../styles/_colours.scss';
+@import '../../../styles/_font.scss';
+
+.button {
+  cursor: pointer;
+  color: $white;
+  padding: 0px 24px;
+  border: none;
+  border-radius: 48px;
+  text-align: left;
+  height: 48px;
+  margin: auto;
+  position: relative;
+  font-size: $input-size;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  user-select: none;
+  &:not(.disabled):hover {
+    filter: brightness(92%);
+  }
+  &:not(.disabled):active {
+    filter: brightness(84%);
+  }
+}
+
+.teal {
+  background: $teal_1;
+}
+
+.blue {
+  background: $sp_blue;
+}
+
+.green {
+  background: $sp_green;
+}
+
+.red {
+  background: $sp_red;
+}
+
+.white {
+  background: $white;
+  color: $teal_2;
+}
+
+.keyline {
+  &:not(:hover):not(:active) {
+    border: solid 1px;
+    background: none;
+  }
+}
+
+.link {
+  background: none;
+  border: none;
+}
+
+.link, .keyline:not(:hover):not(:active) {
+  &.teal {
+    color: $teal_1;
+    border-color: $teal_1;
+  }
+
+  &.blue {
+    color: $sp_blue;
+    border-color: $sp_blue;
+  }
+
+  &.green {
+    color: $sp_green;
+    border-color: $sp_green;
+  }
+
+  &.red {
+    color: $sp_red;
+    border-color: $sp_red;
+  }
+
+  &.white {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.squared {
+  border-radius: 2px;
+}
+
+.small {
+  height: 40px;
+}
+
+.icon {
+  margin-left: 12px;
+  margin-right: -8px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  &:not(.link) {
+    background: $n_grey_3 !important;
+  }
+  color: $n_grey_1 !important;
+  border: none !important;
+}

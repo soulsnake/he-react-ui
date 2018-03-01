@@ -4,10 +4,6 @@ import Button from '../'
 export default {
   component: Button,
   props: {
-    submit: false,
-    link: true,
-    color: 'white',
-    children: <div> Button</div>,
-    disabled: false
+    link: true
   }
 }
