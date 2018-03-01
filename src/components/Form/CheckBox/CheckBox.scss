@@ -27,6 +27,9 @@
   font-weight: $regular;
   user-select: none;
   padding-left: 10px;
+  &:hover {
+    color: $navy_2;
+  }
 }
 
 .warning {
