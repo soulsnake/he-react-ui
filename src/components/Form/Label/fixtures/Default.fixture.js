@@ -3,7 +3,7 @@ import Label from '../'
 export default {
   component: Label,
   props: {
-    text: 'Label',
+    label: 'Label',
     htmlFor: 'demo'
   }
 }
