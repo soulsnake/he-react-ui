@@ -1,4 +1,5 @@
 import Button from './Button'
+import CheckBox from './CheckBox'
 import InlineSelector from './InlineSelector'
 import Input from './Input'
 import Label from './Label'
@@ -8,6 +9,7 @@ import TextField from './TextField'
 
 export {
   Button,
+  CheckBox,
   InlineSelector,
   Input,
   Label,
