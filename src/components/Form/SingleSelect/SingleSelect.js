@@ -28,9 +28,9 @@ class SingleSelect extends React.Component {
 
   static defaultProps = {
     disabled: false,
-    error: false,
+    error: '',
     required: false,
-    onChange: () => null
+    onChange: () => {}
   }
 
   constructor(props) {
@@ -52,14 +52,14 @@ class SingleSelect extends React.Component {
   }
 
   render () {
-    const { id, name, className, required, disabled, error, label, placeholder, ...restProps } = this.props
+    const { id, name, className, required, disabled, error, label, placeholder, onChange, ...restProps } = this.props
     return (
       <div className={style.outer}>
-        {label && <Label className={style.label} htmlFor={id} text={label} />}
+        {label && <Label className={style.label} htmlFor={id} label={label} />}
         <select
           id={id}
           name={name}
-          className={classnames(style.select, { [style.error]: error, [style.disabled]: disabled, [className]: className})}
+          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled, [className]: className})}
           disabled={disabled}
           required={required}
           onChange={this.onChange}
@@ -69,7 +69,7 @@ class SingleSelect extends React.Component {
           {this.generateOptions()}
         </select>
         <Icon className={style.caret} name="DropDown" color={disabled ? navy_tint_2 : navy_2 } />
-        {error && <Label className={style.errorMessage} htmlFor={id} text={error} error />}
+        {error && <Label className={style.errorMessage} htmlFor={id} label={error} error />}
       </div>
     )
   }

@@ -16,7 +16,7 @@ class Label extends React.Component {
     className: PropTypes.string,
     error: PropTypes.bool,
     htmlFor: PropTypes.string.isRequired,
-    text: PropTypes.string
+    label: PropTypes.string
   }
 
   static defaultProps = {
@@ -27,11 +27,11 @@ class Label extends React.Component {
   }
 
   render () {
-    const { id, className, error, htmlFor, text, ...restProps } = this.props
+    const { className, error, htmlFor, label, ...restProps } = this.props
     return (
       <div className={classnames(style.label, {[style.error]: error, [className]: className})}>
         {error && <Icon className={style.icon} name="Alert" color={sp_red} width="22" height="22"/>}
-        <label htmlFor={htmlFor}>{text}</label>
+        <label htmlFor={htmlFor}>{label}</label>
       </div>
     )
   }

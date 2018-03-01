@@ -5,8 +5,8 @@
 .label {
   color: $navy_1;
   font-family: $font-stack;
-  font-size: $input-size;
-  font-weight: $regular;
+  font-size: $label-size;
+  font-weight: $semi-bold;
 
   label {
     cursor: pointer;
@@ -16,10 +16,12 @@
 
 .error {
   color: $sp_red;
+  font-weight: $regular;
 }
 
 .icon {
   float: left;
   margin-right: 8px;
+  margin-top: 0;
   pointer-events: none;
 }

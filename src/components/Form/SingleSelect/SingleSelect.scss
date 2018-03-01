@@ -15,6 +15,7 @@
 }
 
 .select {
+  background-color: $white;
   border: solid 1px $n_grey_2;
   border-radius: 2px;
   color: $navy_1;
@@ -38,6 +39,9 @@
     outline: none;
     border-color: $n_grey_2;
   }
+  option {
+    background-color: $white;
+  }
 }
 
 .disabled {
@@ -50,8 +54,9 @@
 }
 
 .error {
+  background-color: $sp_light_red;
   border-color: $sp_red;
-  &:hover {
+  &:hover, &:focus {
     border-color: $sp_red;
   }
 }
