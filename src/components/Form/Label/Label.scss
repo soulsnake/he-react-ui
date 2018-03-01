@@ -1,0 +1,25 @@
+@import '../../../styles/_breakpoints.scss';
+@import '../../../styles/_colours.scss';
+@import '../../../styles/_font.scss';
+
+.label {
+  color: $navy_1;
+  font-family: $font-stack;
+  font-size: $input-size;
+  font-weight: $regular;
+
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.error {
+  color: $sp_red;
+}
+
+.icon {
+  float: left;
+  margin-right: 8px;
+  pointer-events: none;
+}

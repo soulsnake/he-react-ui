@@ -1,0 +1,91 @@
+@import '../../../styles/_breakpoints.scss';
+@import '../../../styles/_colours.scss';
+@import '../../../styles/_font.scss';
+
+.outer {
+  position: relative;
+  width: 280px;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+}
+
+.label {
+  margin-bottom: 12px;
+}
+
+.select {
+  border: solid 1px $n_grey_2;
+  border-radius: 2px;
+  color: $navy_1;
+  cursor: pointer;
+  font-family: $font-stack;
+  font-size: $input-size;
+  font-weight: $regular;
+  height: 44px;
+  padding: 12px;
+  padding-right: 42px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+  &:hover {
+    border-color: $teal_2;
+  }
+  &:focus {
+    outline: none;
+    border-color: $n_grey_2;
+  }
+}
+
+.disabled {
+  border-color: $n_grey_2;
+  cursor: not-allowed;
+  color: $navy_tint_1;
+  &:hover {
+    border-color: $n_grey_2;
+  }
+}
+
+.error {
+  border-color: $sp_red;
+  &:hover {
+    border-color: $sp_red;
+  }
+}
+
+.caret {
+  position: absolute;
+  pointer-events: none;
+  margin-top: 8px;
+  right: 8px;
+}
+
+.errorMessage {
+  margin-top: 8px;
+}
+
+.options {
+  background-color: $white;
+  border: solid 1px $n_grey_2;
+  border-radius: 2px;
+  box-shadow: 0 2px 12px $n_grey_1;
+  cursor: pointer;
+  font-family: $font-stack;
+  font-size: $input-size;
+  font-weight: $regular;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.option {
+  color: $navy_1;
+  padding: 12px;
+  &:hover {
+    background-color: $n_grey_4;
+    color: $navy_2;
+  }
+}
