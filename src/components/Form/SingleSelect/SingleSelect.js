@@ -36,7 +36,9 @@ class SingleSelect extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      value: props.placeholder ? undefined : props.options[0].value
+      value: props.placeholder ? undefined : props.options[0].value,
+      display: props.placeholder ? props.placeholder : props.options[0].label,
+      expanded: false
     }
   }
 
@@ -45,9 +47,31 @@ class SingleSelect extends React.Component {
     this.props.onChange(event)
   }
 
+  toggleExpand = (event) => {
+    this.setState({expanded: this.props.disabled ? false : !this.state.expanded})
+  }
+
+  hideExpand = (event) => {
+    this.setState({expanded: false})
+  }
+
   generateOptions = () => {
     return this.props.options.map((option) =>
       <option key={option.value} value={option.value}>{option.label}</option>
+    )
+  }
+
+  selectOption = (option) => {
+    this.setState({
+      value: option.value,
+      display: option.label,
+      expanded: false
+    })
+  }
+
+  generateList = () => {
+    return this.props.options.map((option) =>
+      <li className={style.option} key={option.value} onClick={() => this.selectOption(option)}>{option.label}</li>
     )
   }
 
@@ -59,7 +83,7 @@ class SingleSelect extends React.Component {
         <select
           id={id}
           name={name}
-          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled, [className]: className})}
+          className={style.input}
           disabled={disabled}
           required={required}
           onChange={this.onChange}
@@ -68,7 +92,18 @@ class SingleSelect extends React.Component {
           {placeholder && <option hidden>{placeholder}</option>}
           {this.generateOptions()}
         </select>
-        <Icon className={style.caret} name="DropDown" color={disabled ? navy_tint_2 : navy_2 } />
+        <div
+          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled, [className]: className})}
+          onClick={this.toggleExpand}>
+          <span>{this.state.display}</span>
+          <Icon
+            className={style.caret}
+            name="DropDown"
+            color={disabled ? navy_tint_2 : navy_2 } />
+        </div>
+        {this.state.expanded && <ul className={style.options} onMouseLeave={this.hideExpand}>
+          {this.generateList()}
+        </ul>}
         {error && <Label className={style.errorMessage} htmlFor={id} label={error} error />}
       </div>
     )

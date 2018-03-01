@@ -14,6 +14,10 @@
   margin-bottom: 12px;
 }
 
+.input {
+  display: none;
+}
+
 .select {
   background-color: $white;
   border: solid 1px $n_grey_2;
@@ -23,15 +27,9 @@
   font-family: $font-stack;
   font-size: $input-size;
   font-weight: $regular;
-  height: 44px;
-  padding: 12px;
-  padding-right: 42px;
+  position: relative;
+  user-select: none;
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  &::-ms-expand {
-    display: none;
-  }
   &:hover {
     border-color: $teal_2;
   }
@@ -39,8 +37,16 @@
     outline: none;
     border-color: $n_grey_2;
   }
-  option {
-    background-color: $white;
+  span {
+    display: block;
+    padding: 12px;
+    padding-right: 42px;
+  }
+  .caret {
+    position: absolute;
+    pointer-events: none;
+    top: 8px;
+    right: 8px;
   }
 }
 
@@ -61,13 +67,6 @@
   }
 }
 
-.caret {
-  position: absolute;
-  pointer-events: none;
-  margin-top: 8px;
-  right: 8px;
-}
-
 .errorMessage {
   margin-top: 8px;
 }
@@ -83,7 +82,10 @@
   font-weight: $regular;
   list-style: none;
   margin: 0;
+  margin-top: 8px;
   padding: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .option {
