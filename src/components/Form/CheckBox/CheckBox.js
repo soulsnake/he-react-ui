@@ -9,7 +9,6 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Icon from '../../Icon'
 import style from './CheckBox.scss'
-import {n_grey_1, sp_dark_green, teal_1, sp_orange} from '../../../styles/colors.js'
 
 class CheckBox extends React.Component {
   static propTypes = {
@@ -39,20 +38,8 @@ class CheckBox extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      checked: false,
-      hover: false
+      checked: false
     }
-  }
-
-  onMouseEnter = (event) => {
-    if (this.props.disabled) {
-      return
-    }
-    this.setState({hover: true})
-  }
-
-  onMouseLeave = (event) => {
-    this.setState({hover: false})
   }
 
   onClick = (event) => {
@@ -82,22 +69,18 @@ class CheckBox extends React.Component {
           value={this.state.checked ? 'on' : 'off'}
           onClick={this.onClick}
           {...restProps} />
-        <label
-          htmlFor={id}
-          onMouseEnter={this.onMouseEnter}
-          onMouseLeave={this.onMouseLeave}>
+        <label className={style.label}
+          htmlFor={id}>
           <Icon
-            className={style.checkbox}
+            className={classnames(style.checkbox, {[style.checked]: this.state.checked, [style.special]: special})}
             name={this.state.checked ? 'CheckBoxChecked' : 'CheckBoxUnchecked'}
-            color={!this.state.checked && !this.state.hover ? n_grey_1 : (special ? sp_dark_green : teal_1)}
             width={20}
             height={20} />
-          <span className={style.label}>{label}</span>
+          <span className={style.text}>{label}</span>
         </label>
         {warning && <Icon
           className={style.warning}
           name="Alert"
-          color={sp_orange}
           width={20}
           height={20} />}
       </div>

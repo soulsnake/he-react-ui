@@ -62,7 +62,6 @@ createIcon.propTypes = {
 
 export default class Icon extends React.Component {
   static defaultProps = {
-    color: '#444',
     width: 32,
     height: 32,
     name: 'Cross'

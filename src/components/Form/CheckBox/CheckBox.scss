@@ -7,43 +7,70 @@
   @include breakpoint(small) {
     width: 100%;
   }
+  &:not(.disabled) {
+    label {
+      &:hover {
+        .text {
+          color: $navy_2;
+        }
+        .checkbox {
+          color: $teal_1;
+          &.special {
+            color: $sp_dark_green;
+          }
+        }
+      }
+    }
+  }
 }
 
 .input {
   display: none;
 }
 
-.checkbox {
+.label {
   cursor: pointer;
-  float: left;
 }
 
-.label {
+.checkbox {
+  color: $n_grey_1;
+  fill: currentColor;
+  float: left;
+  &:hover {
+    color: $teal_1;
+    &.special {
+      color: $sp_dark_green;
+    }
+  }
+}
+
+.checked {
+  color: $teal_1;
+  &.special {
+    color: $sp_dark_green;
+  }
+}
+
+.text {
   color: $navy_1;
-  cursor: pointer;
   float: left;
   font-family: $font-stack;
   font-size: $checkbox-size;
   font-weight: $regular;
-  user-select: none;
   padding-left: 10px;
-  &:hover {
-    color: $navy_2;
-  }
+  user-select: none;
 }
 
 .warning {
   float: left;
   padding-left: 10px;
+  color: $sp_orange;
+  fill: currentColor;
 }
 
 .disabled {
   opacity: .6;
-
   .label {
-    cursor: not-allowed;
-  }
-  .checkbox {
     cursor: not-allowed;
   }
 }
