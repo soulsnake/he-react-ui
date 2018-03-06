@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function ArrowRight (props) {
   return (
@@ -8,4 +9,11 @@ export default function ArrowRight (props) {
       </g>
     </svg>
   )
+}
+
+ArrowRight.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  color: PropTypes.string,
+  className: PropTypes.string
 }

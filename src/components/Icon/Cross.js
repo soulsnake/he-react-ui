@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Cross (props) {
   return (
@@ -8,4 +9,11 @@ export default function Cross (props) {
       </g>
     </svg>
   )
+}
+
+Cross.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  color: PropTypes.string,
+  className: PropTypes.string
 }

@@ -35,7 +35,7 @@ class CheckBox extends React.Component {
     onClick: () => {}
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       checked: false

@@ -32,9 +32,9 @@ function createIcon (props) {
   case 'ArrowDown':
     return <ArrowDown {...props} />
   case 'CheckBoxChecked':
-      return <CheckBoxChecked {...props} />
+    return <CheckBoxChecked {...props} />
   case 'CheckBoxUnchecked':
-      return <CheckBoxUnchecked {...props} />
+    return <CheckBoxUnchecked {...props} />
   case 'Cross':
     return <Cross {...props} />
   case 'DropDown':
@@ -57,7 +57,11 @@ function createIcon (props) {
 }
 
 createIcon.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  color: PropTypes.string,
+  className: PropTypes.string
 }
 
 export default class Icon extends React.Component {

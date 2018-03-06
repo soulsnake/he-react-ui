@@ -11,7 +11,6 @@ import Icon from '../../Icon'
 import style from './Button.scss'
 
 class Button extends React.Component {
-
   static propTypes = {
     submit: PropTypes.bool,
     color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
@@ -57,8 +56,8 @@ class Button extends React.Component {
         {icon && <Icon
           className={style.icon}
           name={icon}
-          width="24"
-          height="24" />}
+          width={24}
+          height={24} />}
       </button>
     )
   }

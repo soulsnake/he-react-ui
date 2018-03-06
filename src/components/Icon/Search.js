@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Search (props) {
   return (
@@ -8,4 +9,11 @@ export default function Search (props) {
       </g>
     </svg>
   )
+}
+
+Search.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  color: PropTypes.string,
+  className: PropTypes.string
 }

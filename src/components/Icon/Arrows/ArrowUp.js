@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function ArrowUp (props) {
   return (
@@ -8,4 +9,11 @@ export default function ArrowUp (props) {
       </g>
     </svg>
   )
+}
+
+ArrowUp.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  color: PropTypes.string,
+  className: PropTypes.string
 }

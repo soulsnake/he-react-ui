@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function DropDown (props) {
   return (
@@ -8,4 +9,11 @@ export default function DropDown (props) {
       </g>
     </svg>
   )
+}
+
+DropDown.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  color: PropTypes.string,
+  className: PropTypes.string
 }

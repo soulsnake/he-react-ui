@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Alarm (props) {
   return (
@@ -8,4 +9,11 @@ export default function Alarm (props) {
       </g>
     </svg>
   )
+}
+
+Alarm.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.number,
+  color: PropTypes.number,
+  className: PropTypes.string
 }

@@ -29,8 +29,10 @@ class Label extends React.Component {
   render () {
     const { className, error, htmlFor, label, ...restProps } = this.props
     return (
-      <div className={classnames(style.label, {[style.error]: error, [className]: className})}>
-        {error && <Icon className={style.icon} name="Alert" color={sp_red} width="22" height="22"/>}
+      <div
+        className={classnames(style.label, {[style.error]: error, [className]: className})}
+        {...restProps}>
+        {error && <Icon className={style.icon} name="Alert" color={sp_red} width="22" height="22" />}
         <label htmlFor={htmlFor}>{label}</label>
       </div>
     )

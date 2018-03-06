@@ -33,7 +33,7 @@ class SingleSelect extends React.Component {
     onChange: () => {}
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       value: props.placeholder ? undefined : props.options[0].value,
@@ -99,7 +99,7 @@ class SingleSelect extends React.Component {
           <Icon
             className={style.caret}
             name="DropDown"
-            color={disabled ? navy_tint_2 : navy_2 } />
+            color={disabled ? navy_tint_2 : navy_2} />
         </div>
         {this.state.expanded && <ul className={style.options} onMouseLeave={this.hideExpand}>
           {this.generateList()}
