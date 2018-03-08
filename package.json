@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "yarn run clean && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist",
+    "build": "yarn run clean && webpack --config ./config/webpack.prod.js -p",
     "test": "NODE_ENV=test jest --env=jsdom",
     "test:watch": "yarn test -- --watch",
     "lint": "eslint . --fix --env jest",
