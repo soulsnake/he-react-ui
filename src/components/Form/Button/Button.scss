@@ -28,23 +28,38 @@
 
 .teal {
   background: $teal_1;
+  &:active, &:hover, &:focus {
+    background: $teal_1;
+  }
 }
 
 .blue {
   background: $sp_blue;
+  &:active, &:hover, &:focus {
+    background: $sp_blue;
+  }
 }
 
 .green {
   background: $sp_green;
+  &:active, &:hover, &:focus {
+    background: $sp_green;
+  }
 }
 
 .red {
   background: $sp_red;
+  &:active, &:hover, &:focus {
+    background: $sp_red;
+  }
 }
 
 .white {
   background: $white;
   color: $teal_2;
+  &:active, &:hover, &:focus {
+    background: $white;
+  }
 }
 
 .keyline {
@@ -59,6 +74,9 @@
   border: none;
   padding: 0;
   height: auto;
+  &:active, &:hover, &:focus {
+    background: none;
+  }
 }
 
 .link, .keyline:not(:hover):not(:active) {
@@ -106,6 +124,9 @@
   cursor: not-allowed;
   &:not(.link) {
     background: $n_grey_3 !important;
+    &:active, &:hover, &:focus {
+      background: $n_grey_3 !important;
+    }
   }
   color: $n_grey_1 !important;
   border: none !important;
