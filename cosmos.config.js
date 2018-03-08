@@ -1,4 +1,5 @@
 module.exports = {
 
-  exclude: [/dist/]
+  exclude: [/dist/],
+  webpackConfigPath: './config/webpack.dev'
 }

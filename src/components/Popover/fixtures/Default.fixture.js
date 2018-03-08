@@ -27,14 +27,14 @@ const MenuWrapper = styled.div`
 export default {
   component: Popover,
   props: {
-    placement:"bottom",
-    positionLeft:200,
+    placement: 'bottom',
+    positionLeft: 200,
     positionTop: 50
   },
   children: <MenuWrapper>
-    <a class="menu-link"><span>Settings</span></a>
-    <a class="menu-link"><span>Feedback</span></a>
-    <a class="menu-link"><span>Help</span></a>
-    <a class="menu-link"><span>Logout</span></a>
-    </MenuWrapper>
+    <a className="menu-link"><span>Settings</span></a>
+    <a className="menu-link"><span>Feedback</span></a>
+    <a className="menu-link"><span>Help</span></a>
+    <a className="menu-link"><span>Logout</span></a>
+  </MenuWrapper>
 }
