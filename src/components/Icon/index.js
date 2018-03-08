@@ -5,6 +5,7 @@ import Add from './Add'
 import Alarm from './Alarm'
 import Alert from './Alert'
 import {ArrowLeft, ArrowRight, ArrowUp, ArrowDown} from './Arrows'
+import CaretRight from './CaretRight'
 import {CheckBoxChecked, CheckBoxUnchecked} from './CheckBoxes'
 import Cross from './Cross'
 import DropDown from './DropDown'
@@ -31,6 +32,8 @@ function createIcon (props) {
     return <ArrowUp {...props} />
   case 'ArrowDown':
     return <ArrowDown {...props} />
+  case 'CaretRight':
+    return <CaretRight {...props} />
   case 'CheckBoxChecked':
     return <CheckBoxChecked {...props} />
   case 'CheckBoxUnchecked':
