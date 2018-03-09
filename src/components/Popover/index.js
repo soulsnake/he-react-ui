@@ -7,7 +7,7 @@ import classnames from 'classnames'
 import React from 'react'
 import PropTypes from 'prop-types'
 import PopoverWrap from './styles'
-import styles from './index.css'
+import styles from './index.scss'
 
 class Popover extends React.Component {
   static propTypes = {
@@ -16,7 +16,10 @@ class Popover extends React.Component {
     positionLeft: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     arrowOffsetTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     arrowOffsetLeft: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    title: PropTypes.node
+    title: PropTypes.node,
+    className: PropTypes.string,
+    style: PropTypes.object,
+    children: PropTypes.array
   }
 
   static defaultProps = {
@@ -38,7 +41,7 @@ class Popover extends React.Component {
 
     const classes = {
       [styles.popover]: true,
-      [placement]: true
+      [styles[placement]]: true
     }
 
     const outerStyle = {
@@ -54,17 +57,18 @@ class Popover extends React.Component {
     }
 
     return (
-      <PopoverWrap
+      <div
+        {...props}
         role="tooltip"
         className={classnames(className, classes)}
         style={outerStyle}
       >
-        <div className="arrow" style={arrowStyle} />
+        <div className={styles.arrow} style={arrowStyle} />
 
-        {title && <h3 className={'title'}>{title}</h3>}
+        {title && <h3 className={styles.title}>{title}</h3>}
 
-        <div className={'content'}>{children}</div>
-      </PopoverWrap>
+        <div className={styles.content}>{children}</div>
+      </div>
     )
   }
 }
