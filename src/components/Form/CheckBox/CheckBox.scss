@@ -28,7 +28,7 @@
 .label {
   cursor: pointer;
   &:before {
-    content: none;
+    content: none !important;
   }
 }
 
