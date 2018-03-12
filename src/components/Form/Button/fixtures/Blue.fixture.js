@@ -4,5 +4,6 @@ export default {
   component: Button,
   props: {
     color: 'blue'
-  }
+  },
+  children: 'Button'
 }

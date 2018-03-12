@@ -18,7 +18,7 @@ class Button extends React.Component {
     small: PropTypes.bool,
     onClick: PropTypes.func,
     keyline: PropTypes.bool,
-    label: PropTypes.string,
+    children: PropTypes.array,
     disabled: PropTypes.bool,
     icon: PropTypes.string,
     squared: PropTypes.bool,
@@ -31,13 +31,12 @@ class Button extends React.Component {
     color: 'teal',
     icon: '',
     keyline: false,
-    label: 'Button',
     disabled: false,
     squared: false
   }
 
   render () {
-    const { color, className, disabled, icon, keyline, label, link, small, squared, submit, ...rest } = this.props
+    const { children, className, color, disabled, icon, keyline, link, small, squared, submit, ...rest } = this.props
     const btnClass = classnames(style.button, {
       [style[color]]: color,
       [style.small]: small,
@@ -52,7 +51,7 @@ class Button extends React.Component {
         className={btnClass}
         type={submit ? 'submit' : 'button'}
         {...rest}>
-        {label}
+        {children}
         {icon && <Icon
           className={style.icon}
           name={icon}
