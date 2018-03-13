@@ -77,7 +77,7 @@ class SingleSelect extends React.Component {
   render () {
     const { id, name, className, required, disabled, error, label, placeholder, onChange, ...restProps } = this.props
     return (
-      <div className={style.outer} {...restProps}>
+      <div className={style.outer} {...restProps} onMouseLeave={this.hideExpand}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <select
           id={id}
@@ -96,7 +96,7 @@ class SingleSelect extends React.Component {
           <span>{this.state.display}</span>
           <Icon className={style.caret} name="DropDown" />
         </div>
-        {this.state.expanded && <ul className={style.options} onMouseLeave={this.hideExpand}>
+        {this.state.expanded && <ul className={style.options}>
           {this.generateList()}
         </ul>}
         {error && <Label className={style.errorMessage} htmlFor={id} error>{error}</Label>}
