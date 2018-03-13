@@ -32,10 +32,7 @@
   width: 100%;
   &:hover {
     border-color: $teal_2;
-  }
-  &:focus {
-    outline: none;
-    border-color: $n_grey_2;
+    color: $navy_2;
   }
   span {
     display: block;
@@ -43,12 +40,25 @@
     padding-right: 42px;
     user-select: none;
   }
-  .caret {
-    position: absolute;
-    pointer-events: none;
-    top: 8px;
-    right: 8px;
+}
+
+.expanded {
+  color: $navy_2;
+  &:hover {
+    border-color: $n_grey_2;
   }
+  .caret {
+    color: $teal_1;
+  }
+}
+
+.caret {
+  color: $navy_2;
+  fill: currentColor;
+  position: absolute;
+  pointer-events: none;
+  top: 8px;
+  right: 8px;
 }
 
 .disabled {
@@ -57,6 +67,10 @@
   color: $navy_tint_1;
   &:hover {
     border-color: $n_grey_2;
+    color: $navy_tint_1;
+  }
+  .caret {
+    color: $navy_tint_2;
   }
 }
 
@@ -65,6 +79,11 @@
   border-color: $sp_red;
   &:hover, &:focus {
     border-color: $sp_red;
+  }
+  &.expanded {
+    .caret {
+      color: $navy_2;
+    }
   }
 }
 
@@ -78,11 +97,13 @@
   font-size: $input-size;
   font-weight: $regular;
   list-style: none;
-  margin: 0;
-  margin-top: -4px;
+  margin: -4px 0 0;
+  max-height: 240px;
+  overflow-y: auto;
   padding: 0;
-  position: fixed;
+  position: absolute;
   width: inherit;
+  z-index: 1;
 }
 
 .option {

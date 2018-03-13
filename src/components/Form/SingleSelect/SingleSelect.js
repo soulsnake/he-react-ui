@@ -10,7 +10,6 @@ import classnames from 'classnames'
 import Icon from '../../Icon'
 import Label from '../Label'
 import style from './SingleSelect.scss'
-import {navy_tint_2, navy_2} from '../../../styles/colors.js'
 
 class SingleSelect extends React.Component {
   static propTypes = {
@@ -78,7 +77,7 @@ class SingleSelect extends React.Component {
   render () {
     const { id, name, className, required, disabled, error, label, placeholder, onChange, ...restProps } = this.props
     return (
-      <div className={style.outer}>
+      <div className={style.outer} {...restProps}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <select
           id={id}
@@ -87,19 +86,15 @@ class SingleSelect extends React.Component {
           disabled={disabled}
           required={required}
           onChange={this.onChange}
-          value={this.state.value}
-          {...restProps}>
+          value={this.state.value}>
           {placeholder && <option hidden>{placeholder}</option>}
           {this.generateOptions()}
         </select>
         <div
-          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled, [className]: className})}
+          className={classnames(style.select, {[style.expanded]: this.state.expanded,[style.error]: error, [style.disabled]: disabled, [className]: className})}
           onClick={this.toggleExpand}>
           <span>{this.state.display}</span>
-          <Icon
-            className={style.caret}
-            name="DropDown"
-            color={disabled ? navy_tint_2 : navy_2} />
+          <Icon className={style.caret} name="DropDown" />
         </div>
         {this.state.expanded && <ul className={style.options} onMouseLeave={this.hideExpand}>
           {this.generateList()}
