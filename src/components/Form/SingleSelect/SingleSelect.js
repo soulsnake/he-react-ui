@@ -21,7 +21,8 @@ class SingleSelect extends React.Component {
     error: PropTypes.string,
     label: PropTypes.string,
     placeholder: PropTypes.string,
-    options: PropTypes.array,
+    options: PropTypes.array.isRequired,
+    value: PropTypes.string,
     onChange: PropTypes.func
   }
 
@@ -34,9 +35,12 @@ class SingleSelect extends React.Component {
 
   constructor (props) {
     super(props)
+    let value = props.value || (props.placeholder ? undefined : props.options[0].value)
+    let option = props.options.find(option => option.value === value)
+    let display = option ? option.label : (props.placeholder || props.options[0].label)
     this.state = {
-      value: props.placeholder ? undefined : props.options[0].value,
-      display: props.placeholder ? props.placeholder : props.options[0].label,
+      value: value,
+      display: display,
       expanded: false
     }
   }
@@ -75,7 +79,7 @@ class SingleSelect extends React.Component {
   }
 
   render () {
-    const { id, name, className, required, disabled, error, label, placeholder, onChange, ...restProps } = this.props
+    const { id, name, className, required, disabled, error, label, placeholder, onChange, value, ...restProps } = this.props
     return (
       <div className={style.outer} {...restProps} onMouseLeave={this.hideExpand}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
