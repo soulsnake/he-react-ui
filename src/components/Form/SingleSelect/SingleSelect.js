@@ -45,11 +45,6 @@ class SingleSelect extends React.Component {
     }
   }
 
-  onChange = (event) => {
-    this.setState({value: event.target.value})
-    this.props.onChange(event)
-  }
-
   toggleExpand = (event) => {
     this.setState({expanded: this.props.disabled ? false : !this.state.expanded})
   }
@@ -65,11 +60,15 @@ class SingleSelect extends React.Component {
   }
 
   selectOption = (option) => {
+    const oldValue = this.state.value
     this.setState({
       value: option.value,
       display: option.label,
       expanded: false
     })
+    if (oldValue !== option.value) {
+      this.props.onChange(event)
+    }
   }
 
   generateList = () => {
@@ -89,7 +88,6 @@ class SingleSelect extends React.Component {
           className={style.input}
           disabled={disabled}
           required={required}
-          onChange={this.onChange}
           value={this.state.value}>
           {placeholder && <option hidden>{placeholder}</option>}
           {this.generateOptions()}
