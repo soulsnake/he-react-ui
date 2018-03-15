@@ -31,9 +31,9 @@ class CheckBox extends React.Component {
     error: '',
     required: false,
     special: false,
+    onChange: () => {},
     onCheck: () => {},
-    onUncheck: () => {},
-    onClick: () => {}
+    onUncheck: () => {}
   }
 
   constructor (props) {
