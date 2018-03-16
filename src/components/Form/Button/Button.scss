@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   outline: none;
+  font-weight: $bold;
   user-select: none;
   &:not(.disabled):hover {
     filter: brightness(92%);
@@ -123,11 +124,11 @@
 .disabled {
   cursor: not-allowed;
   &:not(.link) {
-    background: $n_grey_3 !important;
+    background: $n_grey_1 !important;
     &:active, &:hover, &:focus {
-      background: $n_grey_3 !important;
+      background: $n_grey_1 !important;
     }
   }
-  color: $n_grey_1 !important;
+  color: $white !important;
   border: none !important;
 }
