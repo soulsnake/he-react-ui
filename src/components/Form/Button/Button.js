@@ -35,8 +35,14 @@ class Button extends React.Component {
     squared: false
   }
 
+  handleClick = (event) => {
+    if (!this.props.disabled) {
+      this.props.onClick(event)
+    }
+  }
+
   render () {
-    const { children, className, color, disabled, icon, keyline, link, small, squared, submit, ...rest } = this.props
+    const { children, className, color, disabled, icon, keyline, link, onClick, small, squared, submit, ...rest } = this.props
     const btnClass = classnames(style.button, {
       [style[color]]: color,
       [style.small]: small,
@@ -50,6 +56,7 @@ class Button extends React.Component {
       <button
         className={btnClass}
         type={submit ? 'submit' : 'button'}
+        onClick={this.handleClick}
         {...rest}>
         {children}
         {icon && <Icon
