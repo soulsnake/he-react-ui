@@ -19,7 +19,7 @@ class Popover extends React.Component {
     title: PropTypes.node,
     className: PropTypes.string,
     style: PropTypes.object,
-    children: PropTypes.array
+    children: PropTypes.any
   }
 
   static defaultProps = {

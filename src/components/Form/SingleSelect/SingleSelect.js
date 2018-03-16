@@ -67,6 +67,11 @@ class SingleSelect extends React.Component {
       expanded: false
     })
     if (oldValue !== option.value) {
+      const event = {
+        value: option.value,
+        props: this.props
+      }
+
       this.props.onChange(event)
     }
   }
@@ -88,7 +93,8 @@ class SingleSelect extends React.Component {
           className={style.input}
           disabled={disabled}
           required={required}
-          value={this.state.value}>
+          value={this.state.value}
+          onChange={() => {}}>
           {placeholder && <option hidden>{placeholder}</option>}
           {this.generateOptions()}
         </select>

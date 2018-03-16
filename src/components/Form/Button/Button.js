@@ -22,7 +22,7 @@ class Button extends React.Component {
     disabled: PropTypes.bool,
     icon: PropTypes.string,
     squared: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.array
   }
 
   static defaultProps = {
