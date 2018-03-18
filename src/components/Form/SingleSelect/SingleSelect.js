@@ -36,13 +36,15 @@ class SingleSelect extends React.Component {
   constructor (props) {
     super(props)
     let value = props.value || (props.placeholder ? undefined : props.options[0].value)
-    let option = props.options.find(option => option.value === value)
-    let display = option ? option.label : (props.placeholder || props.options[0].label)
     this.state = {
       value: value,
-      display: display,
       expanded: false
     }
+  }
+
+  getDisplay = () => {
+    let option = this.props.options.find(option => option.value === this.state.value)
+    return option ? option.label : (this.props.placeholder || this.props.options[0].label)
   }
 
   toggleExpand = (event) => {
@@ -63,7 +65,6 @@ class SingleSelect extends React.Component {
     const oldValue = this.state.value
     this.setState({
       value: option.value,
-      display: option.label,
       expanded: false
     })
     if (oldValue !== option.value) {
@@ -77,15 +78,22 @@ class SingleSelect extends React.Component {
   }
 
   generateList = () => {
-    return this.props.options.map((option) =>
-      <li className={style.option} key={option.value} onClick={() => this.selectOption(option)}>{option.label}</li>
-    )
+    return this.props.options.map((option) => {
+      const selected = this.state.value == option.value
+      let ref = null
+      if (this.state.value == option.value) {
+        ref = (item) => { if (item) setTimeout(() => { item.scrollIntoView() }, 200)}
+      }
+      return (<li className={classnames(style.option, {[style.selected]: selected})} key={option.value} onClick={() => this.selectOption(option)} ref={ref}>
+        {option.label}
+      </li>)
+    })
   }
 
   render () {
     const { id, name, className, required, disabled, error, label, placeholder, onChange, value, ...restProps } = this.props
     return (
-      <div className={style.outer} {...restProps} onMouseLeave={this.hideExpand}>
+      <div className={classnames(style.outer, {[style.expanded]: this.state.expanded})} {...restProps} onMouseLeave={this.hideExpand}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <select
           id={id}
@@ -99,14 +107,14 @@ class SingleSelect extends React.Component {
           {this.generateOptions()}
         </select>
         <div
-          className={classnames(style.select, {[style.expanded]: this.state.expanded,[style.error]: error, [style.disabled]: disabled, [className]: className})}
+          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled, [className]: className})}
           onClick={this.toggleExpand}>
-          <span>{this.state.display}</span>
+          <span>{this.getDisplay()}</span>
           <Icon className={style.caret} name="DropDown" />
         </div>
-        {this.state.expanded && <ul className={style.options}>
+        <ul className={style.options}>
           {this.generateList()}
-        </ul>}
+        </ul>
         {error && <Label className={style.errorMessage} htmlFor={id} error>{error}</Label>}
       </div>
     )

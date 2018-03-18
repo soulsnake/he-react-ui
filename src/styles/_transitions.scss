@@ -1,0 +1,19 @@
+@mixin transition($transition...) {
+  transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+  transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+  transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+  transition-delay: $delay;
+}

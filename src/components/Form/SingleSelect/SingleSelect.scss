@@ -1,6 +1,4 @@
-@import '../../../styles/_breakpoints.scss';
-@import '../../../styles/_colours.scss';
-@import '../../../styles/_font.scss';
+@import '../../../styles/_base.scss';
 
 .outer {
   padding-bottom: 12px;
@@ -44,12 +42,20 @@
 }
 
 .expanded {
-  color: $navy_2;
-  &:hover {
-    border-color: $n_grey_2;
+  .select {
+    color: $navy_2;
+    &:hover {
+      border-color: $n_grey_2;
+    }
+    .caret {
+      color: $teal_1;
+    }
   }
-  .caret {
-    color: $teal_1;
+  .options {
+    opacity: 1;
+    width: 100%;
+    margin-left: 0;
+    @include transition(opacity 0.2s, width 0.2s, margin-left, 0.2s);
   }
 }
 
@@ -103,13 +109,15 @@
   font-size: $input-size;
   font-weight: $regular;
   list-style: none;
-  margin: -4px 0 0;
+  margin: -4px 0 0 4%;
   max-height: 240px;
+  opacity: 0;
   overflow-y: auto;
   padding: 0;
   position: absolute;
-  width: inherit;
+  width: 80%;
   z-index: 1;
+  @include transition(margin-left 0.2s, opacity 0.2s, width 0.2s);
 }
 
 .option {
@@ -120,4 +128,8 @@
     background-color: $n_grey_4;
     color: $navy_2;
   }
+}
+
+.selected {
+  background-color: $n_grey_3;
 }

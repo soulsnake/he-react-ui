@@ -73,8 +73,13 @@ class CheckBox extends React.Component {
         <label className={style.label}
           htmlFor={id}>
           <Icon
-            className={classnames(style.checkbox, {[style.checked]: this.state.checked, [style.special]: special})}
-            name={this.state.checked ? 'CheckBoxChecked' : 'CheckBoxUnchecked'}
+            className={classnames(style.checkbox, style.empty, {[style.special]: special})}
+            name="CheckBoxUnchecked"
+            width={20}
+            height={20} />
+          <Icon
+            className={classnames(style.checkbox, style.full, {[style.checked]: this.state.checked, [style.special]: special})}
+            name="CheckBoxChecked"
             width={20}
             height={20} />
           <span className={style.text}>{label}</span>

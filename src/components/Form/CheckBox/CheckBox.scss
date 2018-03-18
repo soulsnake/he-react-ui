@@ -1,6 +1,4 @@
-@import '../../../styles/_breakpoints.scss';
-@import '../../../styles/_colours.scss';
-@import '../../../styles/_font.scss';
+@import '../../../styles/_base.scss';
 
 .outer {
   margin-bottom: 12px;
@@ -27,28 +25,40 @@
 
 .label {
   cursor: pointer;
+  position: relative;
   &:before {
     content: none !important;
   }
 }
 
 .checkbox {
-  color: $n_grey_1;
   fill: currentColor;
   float: left;
+  position: absolute;
+  left: 0;
+}
+
+.empty {
+  color: $n_grey_1;
   &:hover {
     color: $teal_1;
     &.special {
       color: $sp_dark_green;
     }
   }
+  @include transition(color 0.2s);
 }
 
-.checked {
+.full {
   color: $teal_1;
+  opacity: 0;
   &.special {
     color: $sp_dark_green;
   }
+  &.checked {
+    opacity: 1;
+  }
+  @include transition(opacity 0.2s);
 }
 
 .text {
@@ -57,7 +67,7 @@
   font-family: $font-stack;
   font-size: $checkbox-size;
   font-weight: $regular;
-  padding-left: 10px;
+  padding-left: 30px;
   user-select: none;
 }
 
