@@ -3,7 +3,9 @@ import Input from '../'
 export default {
   component: Input,
   props: {
+    id: 'demo',
+    name: 'demo',
     label: 'First Name',
-    descriptiveText: 'Optional descriptive label'
+    description: 'Optional descriptive label'
   }
 }

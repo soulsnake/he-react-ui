@@ -7,6 +7,9 @@ export default {
     name: 'demo',
     label: 'First Name',
     description: 'Optional descriptive label',
-    disabled: true
+    marker: true
+  },
+  state: {
+    value: 'Bruce'
   }
 }

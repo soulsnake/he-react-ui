@@ -1,0 +1,119 @@
+@import '../../../styles/_base.scss';
+
+.outer {
+    font-family: $font-stack;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    cursor: auto;
+    color: $navy_2;
+    width: 280px;
+    @include breakpoint(small) {
+        width: 100%;
+    }
+}
+
+.label {
+    left: 16px;
+    position: absolute;
+    top: 22px;
+    transition: transform 250ms ease;
+    z-index: 1;
+    transform: scale(1) translate(0px, 0px);
+    transform-origin: left top 0px;
+    pointer-events: none;
+    user-select: none;
+    color: $navy_tint_1;
+    user-select: none;
+    &.floating {
+        position: absolute;
+        top: 32px;
+        transform: scale(0.875) translate(0px, -25px);
+        transform-origin: left top 0px;
+        pointer-events: none;
+    }
+}
+
+.input {
+    border: thin solid $n_grey_3;
+    border-radius: 5px;
+    color: $navy_2;
+    height: 64px;
+    position: relative;
+    width: 100%;
+    outline: none;
+    background-color: $white;
+    padding: 30px 16px 10px;
+    opacity: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    box-sizing: border-box;
+    margin-top: 0px;
+    font-size: $input-size;
+    &:hover {
+        border-color: $teal_1;
+    }
+}
+
+.disabled {
+    .label {
+        color: $navy_tint_2;
+    }
+    .input {
+        background-color: $n_grey_4;
+        border-color: $n_grey_2;
+        cursor: not-allowed;
+        .label {
+            color: $navy_tint_2;
+        }
+    }
+    .description {
+        color: $navy_tint_2;
+    }
+}
+
+
+.focused {
+    .input {
+        border-color: $teal_1;
+    }
+    .label {
+        color: $teal_1;
+    }
+    .marker {
+        color: $sp_green;
+    }
+}
+
+.invalid {
+    .input {
+        background-color: $sp_light_red;
+        border-color: $sp_red;
+    }
+    .label {
+        color: $sp_red;
+    }
+    .description {
+        color: $sp_red;
+    }
+    .marker {
+        color: $sp_red;
+    }
+}
+
+.marker {
+    color: $navy_tint_2;
+    fill: currentColor;
+    pointer-events: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.description {
+    color: $navy_tint_1;
+    cursor: pointer;
+    font-size: 14px;
+    padding-top: 4px;
+    user-select: none;
+}

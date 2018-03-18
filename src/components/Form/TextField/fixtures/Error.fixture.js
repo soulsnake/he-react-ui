@@ -7,6 +7,10 @@ export default {
     name: 'demo',
     label: 'First Name',
     description: 'Optional descriptive label',
-    disabled: true
+    error: 'Something isn\'t right',
+    validateFunc: () => false
+  },
+  state: {
+    isValid: false
   }
 }
