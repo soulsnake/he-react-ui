@@ -37,7 +37,9 @@ class SingleSelect extends React.Component {
 
   constructor (props) {
     super(props)
-    let value = props.value || (props.placeholder ? undefined : props.options[0].value)
+    const firstValue = (props.options && props.options[0] && props.options[0].value) || undefined
+    const value = props.value || (props.placeholder ? undefined : firstValue)
+
     this.state = {
       value: value,
       expanded: false
@@ -45,8 +47,11 @@ class SingleSelect extends React.Component {
   }
 
   getDisplay = () => {
-    let option = this.props.options.find(option => option.value === this.state.value)
-    return option ? option.label : (this.props.placeholder || this.props.options[0].label)
+    const { options } = this.props
+    const option = options.find(option => option.value === this.state.value)
+    const firstLabel = (options && options[0] && options[0].label) || ''
+
+    return option ? option.label : (this.props.placeholder || firstLabel)
   }
 
   toggleExpand = (event) => {

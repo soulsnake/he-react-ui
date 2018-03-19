@@ -15,7 +15,7 @@ class Label extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     error: PropTypes.bool,
-    htmlFor: PropTypes.string.isRequired,
+    htmlFor: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
   }
 

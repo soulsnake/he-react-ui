@@ -30,9 +30,8 @@ class Radio extends React.Component {
 
   constructor (props) {
     super(props)
-    let value = props.value || props.options[0].value
     this.state = {
-      value: value
+      value: props.value
     }
   }
 
