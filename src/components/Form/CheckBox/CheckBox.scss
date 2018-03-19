@@ -1,7 +1,10 @@
 @import '../../../styles/_base.scss';
 
 .outer {
+  font-family: $font-stack;
+  height: 20px;
   margin-bottom: 12px;
+  user-select: none;
   &:not(.disabled) {
     label {
       &:hover {
@@ -64,9 +67,9 @@
 .text {
   color: $navy_1;
   float: left;
-  font-family: $font-stack;
   font-size: $checkbox-size;
   font-weight: $regular;
+  margin-top: 2px;
   padding-left: 30px;
   user-select: none;
 }

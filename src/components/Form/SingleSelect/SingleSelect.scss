@@ -1,8 +1,10 @@
 @import '../../../styles/_base.scss';
 
 .outer {
+  font-family: $font-stack;
   padding-bottom: 12px;
   position: relative;
+  user-select: none;
   width: 280px;
   @include breakpoint(small) {
     width: 100%;
@@ -23,7 +25,6 @@
   border-radius: 2px;
   color: $navy_1;
   cursor: pointer;
-  font-family: $font-stack;
   font-size: $input-size;
   font-weight: $regular;
   margin-bottom: 12px;
@@ -106,7 +107,6 @@
   border-radius: 2px;
   box-shadow: 0 2px 12px $n_grey_1;
   cursor: pointer;
-  font-family: $font-stack;
   font-size: $input-size;
   font-weight: $regular;
   list-style: none;
@@ -133,5 +133,5 @@
 }
 
 .selected {
-  background-color: $n_grey_3;
+  background-color: $teal_tint_3;
 }

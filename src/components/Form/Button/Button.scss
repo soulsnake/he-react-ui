@@ -13,11 +13,12 @@
   margin: auto;
   position: relative;
   font-size: $input-size;
+  font-family: $font-stack;
   display: flex;
   align-items: center;
   justify-content: space-between;
   outline: none;
-  font-weight: $bold;
+  font-weight: $semi-bold;
   user-select: none;
   &:not(.disabled):hover {
     filter: brightness(92%);

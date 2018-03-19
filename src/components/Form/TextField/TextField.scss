@@ -8,6 +8,7 @@
     cursor: auto;
     color: $navy_2;
     margin-bottom: 12px;
+    user-select: none;
     width: 280px;
     @include breakpoint(small) {
         width: 100%;
@@ -114,7 +115,8 @@
 .description {
     color: $navy_tint_1;
     cursor: pointer;
+    display: block;
     font-size: 14px;
-    padding-top: 4px;
+    padding-top: 8px;
     user-select: none;
 }
