@@ -34,7 +34,7 @@ class TextField extends React.Component {
     validateFunc: () => true
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       focused: false,
@@ -94,7 +94,7 @@ class TextField extends React.Component {
             onChange={this.onChange}
             disabled={disabled}
             value={this.state.value} />
-          {(marker && this.state.value !== '') && <Icon name={isValid ? "Tick" : "Cross"} className={style.marker} />}
+          {(marker && this.state.value !== '') && <Icon name={isValid ? 'Tick' : 'Cross'} className={style.marker} />}
         </div>
         { (description || error) &&
           <label

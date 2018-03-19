@@ -46,14 +46,14 @@ class InlineSelector extends React.Component { // eslint-disable-line react/pref
   }
 
   render () {
-    const { vertical, className, onChange, options, value } = this.props
+    const { vertical, className, onChange, options, value, ...restProps } = this.props
     const classes = classnames(style.outer, {
       [style.vertical]: vertical,
       [style[className]]: className
     })
 
     return (
-      <div className={classes}>
+      <div className={classes} {...restProps}>
         {options.map((option, index) =>
           (<div
             key={index}
