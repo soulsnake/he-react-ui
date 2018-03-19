@@ -85,9 +85,9 @@ class SingleSelect extends React.Component {
 
   generateList = () => {
     return this.props.options.map((option) => {
-      const selected = this.state.value == option.value
+      const selected = this.state.value === option.value
       let ref = null
-      if (this.state.value == option.value) {
+      if (this.state.value === option.value) {
         ref = (item) => {
           if (item) {
             setTimeout(() => {

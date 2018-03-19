@@ -6,7 +6,7 @@ import Alarm from './Alarm'
 import Alert from './Alert'
 import {ArrowLeft, ArrowRight, ArrowUp, ArrowDown} from './Arrows'
 import CaretRight from './CaretRight'
-import {CheckBoxChecked, CheckBoxUnchecked} from './CheckBoxes'
+import {CheckBoxChecked, CheckBoxUnchecked, RadioChecked, RadioUnchecked} from './CheckBoxes'
 import Cross from './Cross'
 import DropDown from './DropDown'
 import Edit from './Edit'
@@ -44,6 +44,10 @@ function createIcon (props) {
     return <DropDown {...props} />
   case 'Edit':
     return <Edit {...props} />
+  case 'RadioChecked':
+    return <RadioChecked {...props} />
+  case 'RadioUnchecked':
+    return <RadioUnchecked {...props} />
   case 'Search':
     return <Search {...props} />
   case 'Settings':

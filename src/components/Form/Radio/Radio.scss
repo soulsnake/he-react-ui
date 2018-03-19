@@ -1,0 +1,74 @@
+@import '../../../styles/_base.scss';
+
+.outer {
+  font-family: $font-stack;
+  padding-bottom: 12px;
+  position: relative;
+  user-select: none;
+  width: 280px;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+}
+
+.label {
+  margin-bottom: 12px;
+}
+
+.error {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.options {
+  margin-bottom: 12px;
+}
+
+.option {
+  cursor: pointer;
+  margin-bottom: 12px;
+  position: relative;
+  width: fit-content;
+  &:hover {
+    .empty {
+      color: $teal_1;
+    }
+    .tag {
+      color: $navy_2;
+    }
+  }
+}
+
+.input {
+  display: none;
+}
+
+.tag {
+  color: $navy_1;
+  cursor: pointer;
+  font-size: $checkbox-size;
+  padding-left: 32px;
+  @include transition(all 0.2s ease);
+}
+
+.icon {
+  fill: currentColor;
+  position: absolute;
+  left: 0;
+  @include transition(all 0.2s ease);
+}
+
+.empty {
+  color: $n_grey_1;
+}
+
+.full {
+  color: $teal_1;
+  opacity: 0;
+}
+
+.selected {
+  .full {
+    opacity: 1;
+  }
+}
