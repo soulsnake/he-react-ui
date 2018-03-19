@@ -1,0 +1,61 @@
+@import '../../../styles/base';
+
+.outer {
+    display: flex;
+    font-family: $font-stack;
+    flex: 1;
+    flex-direction: row;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid $n_grey_2;
+    white-space: nowrap;
+    padding: 10px 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $navy_1;
+    background-color: $white;
+    margin-left: -1px;
+    min-width: 44px;
+    &:first-child{
+        border-radius: 4px 0 0 4px;
+    }
+    &:last-child{
+        border-radius: 0 4px 4px 0;
+    }
+    &:not(.disabled):hover{
+        border: 1px solid $teal_1;
+        z-index: 1;
+    }
+    &:not(.disabled).selected{
+        background-color: $teal_1;
+        border: 1px solid $teal_1;
+        color: $white;
+        &:hover{
+            background-color: $teal_2;
+            border: 1px solid $teal_2;
+        }
+    }
+}
+
+.vertical{
+    flex-direction: column;
+    .select-group-btn{
+        margin-left: 0;
+        margin-top: -1px;
+        &:first-child{
+            border-radius: 4px 4px 0 0;
+        }
+        &:last-child{
+            border-radius: 0 0 4px 4px;
+        }
+    }
+}

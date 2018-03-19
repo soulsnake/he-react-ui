@@ -22,7 +22,7 @@ class Button extends React.Component {
     disabled: PropTypes.bool,
     icon: PropTypes.string,
     squared: PropTypes.bool,
-    className: PropTypes.array
+    className: PropTypes.string
   }
 
   static defaultProps = {
@@ -43,18 +43,18 @@ class Button extends React.Component {
 
   render () {
     const { children, className, color, disabled, icon, keyline, link, onClick, small, squared, submit, ...rest } = this.props
-    const btnClass = classnames(style.button, {
+    const classes = classnames(style.button, {
       [style[color]]: color,
       [style.small]: small,
       [style.disabled]: disabled,
       [style.keyline]: keyline,
       [style.link]: link,
       [style.squared]: squared,
-      [className]: className})
+      [style[className]]: className})
 
     return (
       <button
-        className={btnClass}
+        className={classes}
         type={submit ? 'submit' : 'button'}
         onClick={this.handleClick}
         {...rest}>

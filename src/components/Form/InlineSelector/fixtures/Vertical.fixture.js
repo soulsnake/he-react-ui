@@ -3,8 +3,7 @@ import InlineSelector from '../'
 export default {
   component: InlineSelector,
   props: {
-    vertical: false,
-    onClickOption: (opt) => console.log(opt),
+    vertical: true,
     options: [
       {label: 'General Exam and Clean', value: 1},
       {label: 'Toothache', value: 2},

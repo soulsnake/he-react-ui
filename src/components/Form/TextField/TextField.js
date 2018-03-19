@@ -67,10 +67,16 @@ class TextField extends React.Component {
     const { className, id, name, label, description, disabled, error, marker, onChange, validateFunc, value, ...restProps } = this.props
     const { focused, isValid } = this.state
     const floating = focused || this.state.value !== ''
+    const classes = classnames(style.outer, {
+      [style.invalid]: !isValid,
+      [style.disabled]: disabled,
+      [style.focused]: focused,
+      [style[className]]: className
+    })
 
     return (
       <div
-        className={classnames(style.outer, { [className]: className, [style.invalid]: !isValid, [style.disabled]: disabled, [style.focused]: focused })}
+        className={classes}
         {...restProps}>
         <div
           className={style.block}>
@@ -93,7 +99,7 @@ class TextField extends React.Component {
         { (description || error) &&
           <label
             htmlFor={id}
-            className={classnames(style.description)}>
+            className={style.description}>
             {error || description}
           </label>
         }

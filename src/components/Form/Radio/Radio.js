@@ -42,7 +42,7 @@ class Radio extends React.Component {
 
     return options.map((option) => (
       <div key={option.value} className={classnames(style.option, {[style.selected]: value === option.value})}
-        onClick={() => this.onClick(option.value)}>
+        onClick={() => this.handleClick(option.value)}>
         <input
           className={style.input}
           value={option.value}
@@ -56,20 +56,28 @@ class Radio extends React.Component {
     ))
   }
 
-  onClick = (value) => {
+  handleClick = (value) => {
+    const oldValue = this.state.value
+
     this.setState({
       value: value
     })
-    this.props.onChange({
-      value: value,
-      props: this.props
-    })
+    if (oldValue !== value) {
+      this.props.onChange({
+        value: value,
+        props: this.props
+      })
+    }
   }
 
   render () {
     const { name, className, error, label, onChange, value, ...restProps } = this.props
+    const classes = classnames(style.outer, {
+      [style[className]]: className
+    })
+
     return (
-      <div className={classnames(style.outer, {[className]: className})} {...restProps}>
+      <div className={classes} {...restProps}>
         {label && <Label className={style.label}>{label}</Label>}
         <div className={style.options}>
           {this.generateOptions()}

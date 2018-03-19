@@ -58,8 +58,13 @@ class CheckBox extends React.Component {
 
   render () {
     const { id, name, className, disabled, label, required, special, warning, onChange, onCheck, onUncheck, ...restProps } = this.props
+    const classes = {
+      [style.disabled]: disabled,
+      [style[className]]: className
+    }
+
     return (
-      <div className={classnames(style.outer, {[style.disabled]: disabled, [className]: className})}>
+      <div className={classnames(style.outer, classes)}>
         <input
           id={id}
           name={name}
