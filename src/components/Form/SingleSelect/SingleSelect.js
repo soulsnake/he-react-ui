@@ -82,7 +82,13 @@ class SingleSelect extends React.Component {
       const selected = this.state.value == option.value
       let ref = null
       if (this.state.value == option.value) {
-        ref = (item) => { if (item) setTimeout(() => { item.scrollIntoView() }, 200)}
+        ref = (item) => {
+          if (item) {
+            setTimeout(() => {
+              item.parentNode.scrollTop = item.offsetTop - item.parentNode.offsetTop
+            }, 200)
+          }
+        }
       }
       return (<li className={classnames(style.option, {[style.selected]: selected})} key={option.value} onClick={() => this.selectOption(option)} ref={ref}>
         {option.label}
