@@ -7,6 +7,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import onClickOutside from 'react-onclickoutside'
+
 import Icon from '../../Icon'
 import Label from '../Label'
 import style from './SingleSelect.scss'
@@ -55,6 +57,10 @@ class SingleSelect extends React.Component {
     this.setState({expanded: false})
   }
 
+  handleClickOutside = () => {
+    this.hideExpand()
+  }
+
   generateOptions = () => {
     return this.props.options.map((option) =>
       <option key={option.value} value={option.value}>{option.label}</option>
@@ -99,7 +105,7 @@ class SingleSelect extends React.Component {
   render () {
     const { id, name, className, required, disabled, error, label, placeholder, onChange, value, ...restProps } = this.props
     return (
-      <div className={classnames(style.outer, {[style.expanded]: this.state.expanded})} {...restProps} onMouseLeave={this.hideExpand}>
+      <div className={classnames(style.outer, {[style.expanded]: this.state.expanded})} {...restProps}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <select
           id={id}
@@ -127,4 +133,4 @@ class SingleSelect extends React.Component {
   }
 }
 
-export default SingleSelect
+export default onClickOutside(SingleSelect)
