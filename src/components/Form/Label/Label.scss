@@ -3,10 +3,10 @@
 @import '../../../styles/_font.scss';
 
 .label {
-  color: $navy_1;
+  color: $navy_2;
   font-family: $font-stack;
   font-size: $label-size;
-  font-weight: $semi-bold;
+  font-weight: $regular;
   margin-bottom: 12px;
 
   label {
@@ -17,7 +17,6 @@
 
 .error {
   color: $sp_red;
-  font-weight: $regular;
 }
 
 .icon {
