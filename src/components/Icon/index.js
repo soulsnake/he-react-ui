@@ -8,6 +8,7 @@ import {ArrowLeft, ArrowRight, ArrowUp, ArrowDown} from './Arrows'
 import CaretRight from './CaretRight'
 import {CheckBoxChecked, CheckBoxUnchecked, RadioChecked, RadioUnchecked} from './CheckBoxes'
 import Cross from './Cross'
+import Delete from './Delete'
 import DropDown from './DropDown'
 import Edit from './Edit'
 import Search from './Search'
@@ -40,6 +41,8 @@ function createIcon (props) {
     return <CheckBoxUnchecked {...props} />
   case 'Cross':
     return <Cross {...props} />
+  case 'Delete':
+    return <Delete {...props} />
   case 'DropDown':
     return <DropDown {...props} />
   case 'Edit':

@@ -1,3 +1,4 @@
+import ActionIcon from './ActionIcon'
 import Button from './Button'
 import CheckBox from './CheckBox'
 import InlineSelector from './InlineSelector'
@@ -9,6 +10,7 @@ import SmartSearch from './SmartSearch'
 import TextField from './TextField'
 
 export {
+  ActionIcon,
   Button,
   CheckBox,
   InlineSelector,
