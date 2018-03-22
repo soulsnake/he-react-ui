@@ -3,6 +3,7 @@ import ActionIcon from '../'
 export default {
   component: ActionIcon,
   props: {
-    icon: 'Edit'
+    icon: 'Edit',
+    title: 'Edit'
   }
 }

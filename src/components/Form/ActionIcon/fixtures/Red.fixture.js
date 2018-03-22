@@ -4,6 +4,7 @@ export default {
   component: ActionIcon,
   props: {
     icon: 'Delete',
-    color: 'red'
+    color: 'red',
+    title: 'Delete'
   }
 }

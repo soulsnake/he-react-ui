@@ -26,7 +26,7 @@ class ActionIcon extends React.Component {
   }
 
   render () {
-    const { className, color, icon, onClick, ...rest } = this.props
+    const { className, color, icon, onClick, title, ...rest } = this.props
     const classes = classnames(style.button, {
       [style[color]]: color,
       [style[className]]: className})
@@ -36,6 +36,7 @@ class ActionIcon extends React.Component {
         className={classes}
         type="button"
         onClick={onClick}
+        title={title}
         {...rest}>
         <Icon
           className={style.icon}
