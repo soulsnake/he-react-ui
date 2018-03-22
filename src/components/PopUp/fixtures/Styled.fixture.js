@@ -13,12 +13,17 @@ export default {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
-      color: 'white',
-      height: '400px'
+      borderRadius: '100%',
+      color: '#00F9',
+      width: '200px',
+      height: '200px',
+      padding: '10%',
+      fontSize: '22px',
+      fontWeight: 'bolder'
     }
   },
   children: <div>
-    <h1>Wow!</h1>
+    <p>Wow!</p>
     <p>Look how versatile you can make the pop-up window.</p>
   </div>
 }
