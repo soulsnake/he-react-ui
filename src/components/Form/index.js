@@ -1,4 +1,5 @@
 import ActionIcon from './ActionIcon'
+import ActionSet from './ActionSet'
 import Button from './Button'
 import CheckBox from './CheckBox'
 import InlineSelector from './InlineSelector'
@@ -11,6 +12,7 @@ import TextField from './TextField'
 
 export {
   ActionIcon,
+  ActionSet,
   Button,
   CheckBox,
   InlineSelector,

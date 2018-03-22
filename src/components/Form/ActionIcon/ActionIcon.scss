@@ -1,6 +1,4 @@
-@import '../../../styles/_breakpoints.scss';
-@import '../../../styles/_colours.scss';
-@import '../../../styles/_font.scss';
+@import '../../../styles/_base.scss';
 
 .button {
   background-color: $n_grey_3;
@@ -21,18 +19,19 @@
   outline: none;
   width: 36px;
   user-select: none;
-  &:hover {
-    filter: brightness(92%);
-  }
-  &:active {
-    filter: brightness(84%);
-  }
-  &:active, &:hover {
-   color: $white;
-  }
-  &:focus:not(:hover) {
-    background-color: $n_grey_3;
-    color: $navy_2;
+  &:not(.disabled) {
+    &:hover {
+      color: $white;
+      filter: brightness(92%);
+    }
+    &:active {
+      color: $white;
+      filter: brightness(84%);
+    }
+    &:focus:not(:hover) {
+      background-color: $n_grey_3;
+      color: $navy_2;
+    }
   }
 }
 
@@ -69,4 +68,14 @@
 .icon {
   margin: auto;
   fill: currentColor;
+
+}
+
+.disabled {
+  cursor: not-allowed;
+  background: none !important;
+  &:active, &:hover, &:focus {
+    background: none !important;
+  }
+  color: $n_grey_1 !important;
 }

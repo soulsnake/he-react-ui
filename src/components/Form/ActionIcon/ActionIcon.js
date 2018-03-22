@@ -13,6 +13,7 @@ import style from './ActionIcon.scss'
 class ActionIcon extends React.Component {
   static propTypes = {
     color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
+    disabled: PropTypes.bool,
     onClick: PropTypes.func,
     icon: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -22,20 +23,29 @@ class ActionIcon extends React.Component {
   static defaultProps = {
     className: '',
     color: 'teal',
+    disabled: false,
     onClick: () => null
   }
 
+  handleClick = (event) => {
+    if (!this.props.disabled) {
+      this.props.onClick(event)
+    }
+  }
+
   render () {
-    const { className, color, icon, onClick, title, ...rest } = this.props
+    const { className, color, disabled, icon, onClick, title, ...rest } = this.props
     const classes = classnames(style.button, {
       [style[color]]: color,
-      [style[className]]: className})
+      [style.disabled]: disabled,
+      [className]: className
+    })
 
     return (
       <button
         className={classes}
         type="button"
-        onClick={onClick}
+        onClick={this.handleClick}
         title={title}
         {...rest}>
         <Icon
