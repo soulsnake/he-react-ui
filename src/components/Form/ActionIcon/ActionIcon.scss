@@ -73,9 +73,9 @@
 
 .disabled {
   cursor: not-allowed;
-  background: none !important;
+  background: $white !important;
   &:active, &:hover, &:focus {
-    background: none !important;
+    background: $white !important;
   }
   color: $n_grey_1 !important;
 }
