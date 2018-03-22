@@ -11,8 +11,10 @@
   }
   &.expandable:hover {
     .ellipsis {
+      color: $n_grey_3;
       opacity: 0;
-      @include transition(all 0.1s);
+      transform: scale(3) translate(-9px, 1.67px);
+      @include transition(all 0.2s);
     }
     .actions {
       opacity: 1;
@@ -22,6 +24,7 @@
     .action {
       margin-left: 16px;
       margin-right: 0px;
+      transform: scale(1);
       @include transition(all 0.3s);
     }
   }
@@ -29,10 +32,12 @@
 
 .expandable {
   .ellipsis {
+    color: $navy_1;
     cursor: pointer;
+    fill: currentColor;
     margin-top: 3px;
     opacity: 1;
-    @include transition(all 0.3s);
+    @include transition(all 0.2s);
   }
 
   .actions {
@@ -46,8 +51,9 @@
   }
 
   .action {
-    margin-left: 0;
+    margin-left: -12px;
     margin-right: -12px;
+    transform: scale(0.1);
     @include transition(all 0.3s);
   }
 }
