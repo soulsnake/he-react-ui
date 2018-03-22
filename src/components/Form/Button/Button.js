@@ -32,7 +32,8 @@ class Button extends React.Component {
     icon: '',
     keyline: false,
     disabled: false,
-    squared: false
+    squared: false,
+    onClick: () => null
   }
 
   handleClick = (event) => {
