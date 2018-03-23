@@ -1,0 +1,71 @@
+@import '../../../styles/_base.scss';
+
+.outer {
+  height: 32px;
+  margin: auto;
+  position: relative;
+  user-select: none;
+  width: fit-content;
+  &.expandable {
+    width: 32px;
+  }
+  &.expandable:hover {
+    .ellipsis {
+      color: $n_grey_3;
+      opacity: 0;
+      transform: scale(3) translate(-9px, 1.67px);
+      @include transition(all 0.2s);
+    }
+    .actions {
+      opacity: 1;
+      pointer-events: auto;
+      @include transition(all 0.3s);
+    }
+    .action {
+      margin-left: 16px;
+      margin-right: 0px;
+      transform: scale(1);
+      @include transition(all 0.3s);
+    }
+  }
+}
+
+.expandable {
+  .ellipsis {
+    color: $navy_1;
+    cursor: pointer;
+    fill: currentColor;
+    margin-top: 3px;
+    opacity: 1;
+    @include transition(all 0.2s);
+  }
+
+  .actions {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    @include transition(all 0.3s);
+  }
+
+  .action {
+    margin-left: -12px;
+    margin-right: -12px;
+    transform: scale(0.1);
+    @include transition(all 0.3s);
+  }
+}
+
+.actions {
+  display: inline-flex;
+  position: relative;
+}
+
+.action {
+  margin-left: 16px;
+  &:first-child {
+    margin-left: 0;
+  }
+}

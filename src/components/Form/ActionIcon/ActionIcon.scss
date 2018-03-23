@@ -1,0 +1,81 @@
+@import '../../../styles/_base.scss';
+
+.button {
+  background-color: $n_grey_3;
+  cursor: pointer;
+  color: $navy_2;
+  border: none;
+  border-radius: 100%;
+  text-align: center;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: $input-size;
+  font-family: $font-stack;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  width: 36px;
+  user-select: none;
+  &:not(.disabled) {
+    &:hover {
+      color: $white;
+      filter: brightness(92%);
+    }
+    &:active {
+      color: $white;
+      filter: brightness(84%);
+    }
+    &:focus:not(:hover) {
+      background-color: $n_grey_3;
+      color: $navy_2;
+    }
+  }
+}
+
+.teal {
+  &:active, &:hover {
+    background: $teal_1;
+  }
+}
+
+.blue {
+  &:active, &:hover {
+    background: $sp_blue;
+  }
+}
+
+.green {
+  &:active, &:hover {
+    background: $sp_green;
+  }
+}
+
+.red {
+  &:active, &:hover {
+    background: $sp_red;
+  }
+}
+
+.white {
+  &:active, &:hover {
+    background: $white;
+  }
+}
+
+.icon {
+  margin: auto;
+  fill: currentColor;
+
+}
+
+.disabled {
+  cursor: not-allowed;
+  background: $white !important;
+  &:active, &:hover, &:focus {
+    background: $white !important;
+  }
+  color: $n_grey_1 !important;
+}
