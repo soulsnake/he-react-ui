@@ -1,6 +1,7 @@
-@import '../../../styles/_base.scss';
+@import '../../../styles/base';
 
 .heading {
+  color: $navy_2;
   display: block;
   font-family: $font-stack;
   font-weight: $regular;
