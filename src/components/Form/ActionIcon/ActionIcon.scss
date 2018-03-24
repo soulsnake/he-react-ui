@@ -1,7 +1,7 @@
 @import '../../../styles/_base.scss';
 
 .button {
-  background-color: $n_grey_3;
+  background-color: $white;
   cursor: pointer;
   color: $navy_2;
   border: none;
@@ -29,7 +29,7 @@
       filter: brightness(84%);
     }
     &:focus:not(:hover) {
-      background-color: $n_grey_3;
+      background-color: $white;
       color: $navy_2;
     }
   }

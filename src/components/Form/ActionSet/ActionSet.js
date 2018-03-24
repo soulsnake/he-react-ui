@@ -7,21 +7,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import onClickOutside from 'react-onclickoutside'
+
 import style from './ActionSet.scss'
-import ActionIcon from '../ActionIcon/ActionIcon';
-import Icon from '../../Icon';
+import Icon from '../../Icon'
 
 class ActionSet extends React.Component {
   static propTypes = {
-    actions: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
-      disabled: PropTypes.bool,
-      expanded: PropTypes.bool,
-      onClick: PropTypes.func,
-      icon: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      className: PropTypes.string
-    })),
+    children: PropTypes.any.isRequired,
+    expanded: PropTypes.bool,
     className: PropTypes.string
   }
 
@@ -30,30 +24,48 @@ class ActionSet extends React.Component {
     expanded: false
   }
 
+  constructor (props) {
+    super(props)
+    this.state = {
+      open: false
+    }
+  }
+
+  close = () => {
+    this.setState({open: false})
+  }
+
+  open = () => {
+    this.setState({open: true})
+  }
+
+  handleClickOutside = () => {
+    this.close()
+  }
+
   render () {
-    const { actions, className, expanded, ...rest } = this.props
-    const expandable = actions.length > 2 && !expanded
+    const { children, className, expanded, ...rest } = this.props
+    const { open } = this.state
+    const expandable = children.length > 2 && !expanded
     const classes = classnames(style.outer, {
       [style[className]]: className,
-      [style.expandable]: expandable
+      [style.expandable]: expandable,
+      [style.open]: open
     })
 
     return (
       <div
         className={classes}
+        onMouseEnter={this.open}
+        onMouseLeave={this.close}
         {...rest}>
-        {expandable && <Icon className={style.ellipsis} name="Ellipsis" width={36} height={36} />}
+        {expandable && <Icon className={style.ellipsis} name="Ellipsis" width={36} height={36} onClick={this.open} />}
         <div className={style.actions}>
-          { actions.map((action) => {
-            const { icon, title, ...restProps } = action
-            return (
-              <ActionIcon icon={icon} title={title} className={style.action} {...restProps} />
-            )
-          })}
+          { children.map((child, i) => <div key={i} className={style.action} onClick={this.close}>{child}</div>) }
         </div>
       </div>
     )
   }
 }
 
-export default ActionSet
+export default onClickOutside(ActionSet)

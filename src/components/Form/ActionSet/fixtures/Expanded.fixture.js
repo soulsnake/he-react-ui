@@ -1,13 +1,17 @@
+import React from 'react'
 import ActionSet from '../'
+import ActionIcon from '../../ActionIcon';
+
+const actions = [
+  <ActionIcon icon="Delete" title="Delete" color="red" />,
+  <ActionIcon icon="Edit" title="Edit" />,
+  <ActionIcon icon="Sync" title="Sync" color="green" />
+]
 
 export default {
   component: ActionSet,
   props: {
-    actions: [
-      {title:'Delete', icon:'Delete', disabled: true},
-      {title:'Edit', icon:'Edit'},
-      {title:'Sync', icon:'Sync', color: 'green'}
-    ],
     expanded: true
-  }
+  },
+  children: actions
 }
