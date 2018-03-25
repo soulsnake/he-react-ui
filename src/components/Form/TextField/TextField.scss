@@ -57,6 +57,12 @@
     }
 }
 
+.hasMarker {
+    .input {
+        padding-right: 40px;
+    }
+}
+
 .disabled {
     .label {
         color: $navy_tint_2;
