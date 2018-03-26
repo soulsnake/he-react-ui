@@ -31,6 +31,14 @@ class PopUp extends React.Component {
     }
   }
 
+  componentWillUpdate (nextProps) {
+    if (nextProps.showing !== this.state.showing) {
+      this.setState({
+        showing: nextProps.showing
+      })
+    }
+  }
+
   handleClose = () => {
     if (!this.props.modal) {
       this.setState({
