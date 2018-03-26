@@ -40,6 +40,7 @@
     padding-right: 42px;
     user-select: none;
   }
+  @include transition(all 0.2s);
 }
 
 .expanded {
@@ -50,6 +51,7 @@
     }
     .caret {
       color: $teal_1;
+      transform: scaleY(-1);
     }
   }
   .options {
@@ -68,6 +70,7 @@
   pointer-events: none;
   top: 8px;
   right: 8px;
+  @include transition(all 0.2s);
 }
 
 .disabled {
@@ -130,6 +133,7 @@
     background-color: $n_grey_4;
     color: $navy_2;
   }
+  @include transition(all 0.2s);
 }
 
 .selected {

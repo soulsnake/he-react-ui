@@ -1,0 +1,24 @@
+@import '../../../styles/base';
+
+.outer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.child {
+  display: inline-block;
+  width: 20%;
+  @include breakpoint(large) {
+    width: 25%;
+  }
+  @include breakpoint(medium) {
+    width: 33%;
+  }
+  @include breakpoint(small) {
+    width: 50%;
+  }
+  @include breakpoint(x-small) {
+    width: 100%;
+  }
+}

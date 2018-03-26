@@ -71,6 +71,7 @@ class TextField extends React.Component {
       [style.invalid]: !isValid,
       [style.disabled]: disabled,
       [style.focused]: focused,
+      [style.hasMarker]: marker,
       [style[className]]: className
     })
 

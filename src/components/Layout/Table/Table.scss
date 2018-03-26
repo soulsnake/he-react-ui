@@ -1,0 +1,101 @@
+@import '../../../styles/base';
+
+.table {
+  font-family: $font-stack;
+  cursor: default;
+  display: block;
+  background-color: $white;
+  margin-bottom: 48px;
+  width: 100%;
+  @include breakpoint(small) {
+    overflow-x: auto;
+  }
+}
+
+.header {
+  display: flex;
+  margin: 0 44px;
+  @include breakpoint(small) {
+    margin: 0 20px;
+    min-width: 767px;
+  }
+}
+
+.heading {
+  color: $navy_2;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+  min-height: 70px;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: 24px;
+  &:first-child {
+    padding-left: 0;
+  }
+  @include breakpoint(small) {
+    min-height: 50px;
+  }
+}
+
+.body {
+  display: block;
+}
+
+.row {
+  display: flex;
+  padding: 0 44px;
+  &:hover {
+    background-color: $n_grey_4;
+    .cell {
+      border-top-color: transparent;
+    }
+    + .row {
+      .cell {
+        border-top-color: transparent;
+      }
+    }
+  }
+  transition: 0.5s ease all;
+  @include breakpoint(small) {
+    padding: 0 20px;
+    min-width: 767px;
+  }
+}
+
+.cell {
+  border-top: solid 1px $n_grey_2;
+  color: $navy_1;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  flex-basis: 0;
+  flex-grow: 1;
+  min-height: 70px;
+  justify-content: center;
+  padding-left: 24px;
+  &:first-child {
+    padding-left: 0;
+  }
+  transition: 0.5s ease all;
+  @include breakpoint(small) {
+    min-height: 60px;
+  }
+}
+
+.extraWide {
+  flex-grow: 4;
+}
+
+.wide {
+  flex-grow: 2;
+}
+
+.narrow {
+  flex-grow: 0.5;
+}
+
+.extraNarrow {
+  flex-grow: 0.25;
+}

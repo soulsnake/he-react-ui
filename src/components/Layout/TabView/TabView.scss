@@ -1,0 +1,66 @@
+@import '../../../styles/base';
+
+.barOuter {
+  background-color: $navy_2;
+  font-family: $font-stack;
+  height: fit-content;
+  overflow-y: hidden;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-top: -40px;
+}
+
+.barInner {
+  margin: 0 auto;
+  color: $white;
+  height: 132px;
+  position: relative;
+  width: 1200px;
+  @include breakpoint(large) { width: 960px; }
+  @include breakpoint(medium) { width: 768px; }
+  @include breakpoint(small) { width: 100%; }
+}
+
+.heading {
+  color: $white;
+  margin-top: 52px;
+  margin-bottom: 40px;
+}
+
+.tabs {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.tab {
+  color: $n_grey_1;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 20px 20px;
+  text-decoration: none;
+  user-select: none;
+  position: relative;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:hover {
+    color: $white;
+  }
+  span {
+    padding-bottom: 16px;
+    border-bottom: solid 6px transparent;
+  }
+}
+
+.selected {
+  color: $white;
+  span {
+    border-bottom-color: $teal_1;
+  }
+}
+
+.contentPusher {
+  height: 188px;
+}
