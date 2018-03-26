@@ -1,6 +1,7 @@
 import React from 'react'
 import PopUp from '../'
 import { Button } from '../..'
+import { Heading, Paragraph } from '../..'
 
 export default {
   component: PopUp,
@@ -8,9 +9,9 @@ export default {
     showing: true
   },
   children: <div>
-    <h1>Wow!</h1>
-    <p>What a story, Mark!</p>
-    <p>I can't wait to hear more about all of it later.</p>
+    <Heading h3>Wow!</Heading>
+    <Paragraph>What a story, Mark!</Paragraph>
+    <Paragraph>I can't wait to hear more about all of it later.</Paragraph>
     <Button>Useless button</Button>
   </div>
 }

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import style from './FormSection.scss'
+
 import Heading from '../Heading'
+import Paragraph from '../Paragraph'
 
 class FormSection extends Component {
   static propTypes = {
@@ -19,7 +21,7 @@ class FormSection extends Component {
         {...restProps}>
         <div className={style.left}>
           <Heading h3>{heading}</Heading>
-          <span className={style.description}>{description}</span>
+          <Paragraph>{description}</Paragraph>
         </div>
         <div className={style.right}>
           {children}

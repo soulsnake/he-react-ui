@@ -42,6 +42,9 @@
   text-decoration: none;
   user-select: none;
   position: relative;
+  @include breakpoint(small) {
+    padding: 0 12px 20px;
+  }
   &:first-child {
     padding-left: 0;
   }

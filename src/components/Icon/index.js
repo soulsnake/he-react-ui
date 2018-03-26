@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import Add from './Add'
 import Alarm from './Alarm'
@@ -18,8 +19,22 @@ import Sync from './Sync'
 import Tick from './Tick'
 import View from './View'
 
-function createIcon (props) {
-  switch (props.name) {
+import style from './Icon.scss'
+
+function createIcon (iconProps) {
+  const { width, height, color, className, name, ...restProps } = iconProps
+  const classes = classnames(style.icon, {
+    [style[color]]: color,
+    [className]: className
+  })
+  const props = {
+    width: width,
+    height: height,
+    className: classes,
+    ...restProps
+  }
+
+  switch (name) {
   case 'Add':
     return <Add {...props} />
   case 'Alarm':
@@ -73,7 +88,7 @@ createIcon.propTypes = {
   name: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  color: PropTypes.string,
+  color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
   className: PropTypes.string
 }
 
@@ -85,7 +100,6 @@ export default class Icon extends React.Component {
   }
 
   render () {
-    const icon = createIcon(this.props)
-    return icon
+    return createIcon(this.props)
   }
 }

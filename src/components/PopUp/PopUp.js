@@ -14,13 +14,14 @@ class PopUp extends React.Component {
     children: PropTypes.any.isRequired,
     className: PropTypes.string,
     modal: PropTypes.bool,
-    onClose: () => null,
+    onClose: PropTypes.func,
     showing: PropTypes.bool,
     style: PropTypes.object
   }
 
   static defaultProps = {
     modal: false,
+    onClose: () => null,
     showing: false
   }
 

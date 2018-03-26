@@ -1,0 +1,11 @@
+@import '../../../styles/base';
+
+.paragraph {
+  color: $navy_1;
+  display: block;
+  font-family: $font-stack;
+  font-weight: $regular;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0 0 14px;
+}

@@ -1,0 +1,30 @@
+@import '../../styles/base';
+
+.icon {
+  fill: currentColor;
+}
+
+.teal {
+  border-color: $teal_1;
+  color: $teal_1;
+}
+
+.blue {
+  border-color: $sp_blue;
+  color: $sp_blue;
+}
+
+.green {
+  border-color: $sp_green;
+  color: $sp_green;
+}
+
+.red {
+  border-color: $sp_red;
+  color: $sp_red;
+}
+
+.white {
+  border-color: $white;
+  color: $white;
+}
