@@ -1,6 +1,6 @@
 import React from 'react'
 import ActionSet from '../'
-import ActionIcon from '../../ActionIcon';
+import ActionIcon from '../../ActionIcon'
 
 const actions = [
   <ActionIcon icon="Delete" title="Delete" color="red" />,
