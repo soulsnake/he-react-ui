@@ -11,13 +11,23 @@ class Heading extends React.Component {
     h2: PropTypes.bool,
     h3: PropTypes.bool,
     h4: PropTypes.bool,
+    nav: PropTypes.bool,
     children: PropTypes.any,
     className: PropTypes.string
   }
 
+  static defaultProps = {
+    h1: false,
+    h2: false,
+    h3: false,
+    h4: false,
+    nav: false
+  }
+
   render () {
-    const {h1, h2, h3, h4, className, children, ...restProps} = this.props
+    const { className, children, h1, h2, h3, h4, nav, ...restProps } = this.props
     const classes = classnames(style.heading, {
+      [style.nav]: nav,
       [className]: className
     })
 
