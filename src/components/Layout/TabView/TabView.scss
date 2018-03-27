@@ -19,7 +19,10 @@
   width: 1200px;
   @include breakpoint(large) { width: 960px; }
   @include breakpoint(medium) { width: 768px; }
-  @include breakpoint(small) { width: 100%; }
+  @include breakpoint(small) {
+    margin-left: 12px;
+    width: 100%;
+  }
 }
 
 .heading {

@@ -51,8 +51,8 @@ class ActionIcon extends React.Component {
         <Icon
           className={style.icon}
           name={icon}
-          width={24}
-          height={24} />
+          width={20}
+          height={20} />
       </button>
     )
   }

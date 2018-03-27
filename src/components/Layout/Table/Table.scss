@@ -34,9 +34,6 @@
   &:first-child {
     padding-left: 0;
   }
-  @include breakpoint(small) {
-    min-height: 50px;
-  }
 }
 
 .body {
@@ -79,9 +76,6 @@
     padding-left: 0;
   }
   transition: 0.5s ease all;
-  @include breakpoint(small) {
-    min-height: 60px;
-  }
 }
 
 .extraWide {

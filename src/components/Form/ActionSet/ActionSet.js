@@ -16,7 +16,16 @@ class ActionSet extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
     expanded: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    eventTypes: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string)
+    ]),
+    outsideClickIgnoreClass: PropTypes.string,
+    preventDefault: PropTypes.bool,
+    stopPropagation: PropTypes.bool,
+    disableOnClickOutside: PropTypes.func,
+    enableOnClickOutside: PropTypes.func
   }
 
   static defaultProps = {
@@ -44,7 +53,9 @@ class ActionSet extends React.Component {
   }
 
   render () {
-    const { children, className, expanded, ...rest } = this.props
+    const { children, className, expanded,
+      eventTypes, outsideClickIgnoreClass, preventDefault, stopPropagation, disableOnClickOutside, enableOnClickOutside,
+      ...rest } = this.props
     const { open } = this.state
     const expandable = children.length > 2 && !expanded
     const classes = classnames(style.outer, {
