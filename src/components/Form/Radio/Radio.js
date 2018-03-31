@@ -35,6 +35,14 @@ class Radio extends React.Component {
     }
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.value !== this.state.value) {
+      this.setState({
+        value: nextProps.value
+      })
+    }
+  }
+
   generateOptions = () => {
     const { name, options } = this.props
     const { value } = this.state
@@ -47,7 +55,8 @@ class Radio extends React.Component {
           value={option.value}
           type="radio"
           name={name}
-          checked={value === option.value} />
+          checked={value === option.value}
+          onChange={() => null}/>
         <Icon className={classnames(style.icon, style.empty)} name="RadioUnchecked" width={20} height={20} />
         <Icon className={classnames(style.icon, style.full)} name="RadioChecked" width={20} height={20} />
         <label className={style.tag}>{option.label}</label>
@@ -70,6 +79,7 @@ class Radio extends React.Component {
   }
 
   render () {
+    const { generateOptions } = this
     const { name, className, error, label, onChange, value, ...restProps } = this.props
     const classes = classnames(style.outer, {
       [style[className]]: className
@@ -79,7 +89,7 @@ class Radio extends React.Component {
       <div className={classes} {...restProps}>
         {label && <Label className={style.label}>{label}</Label>}
         <div className={style.options}>
-          {this.generateOptions()}
+          {generateOptions()}
         </div>
         {error && <Label className={style.error} error>{error}</Label>}
       </div>

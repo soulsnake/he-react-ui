@@ -15,6 +15,7 @@ class CheckBox extends React.Component {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     className: PropTypes.string,
+    checked: PropTypes.bool,
     disabled: PropTypes.bool,
     label: PropTypes.string,
     required: PropTypes.bool,
@@ -27,6 +28,7 @@ class CheckBox extends React.Component {
   }
 
   static defaultProps = {
+    checked: false,
     disabled: false,
     error: '',
     required: false,
@@ -43,7 +45,15 @@ class CheckBox extends React.Component {
     }
   }
 
-  onChange = (event) => {
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.checked !== this.state.checked) {
+      this.setState({
+        checked: nextProps.checked
+      })
+    }
+  }
+
+  handleChange = (event) => {
     if (this.props.disabled) {
       return
     }
@@ -57,7 +67,8 @@ class CheckBox extends React.Component {
   }
 
   render () {
-    const { id, name, className, disabled, label, required, special, warning, onChange, onCheck, onUncheck, ...restProps } = this.props
+    const { handleChange } = this
+    const { id, name, checked, className, disabled, label, required, special, warning, onChange, onCheck, onUncheck, ...restProps } = this.props
     const classes = {
       [style.disabled]: disabled,
       [style[className]]: className
@@ -73,7 +84,7 @@ class CheckBox extends React.Component {
           disabled={disabled}
           required={required}
           value={this.state.checked ? 'on' : 'off'}
-          onChange={this.onChange}
+          onChange={handleChange}
           {...restProps} />
         <label className={style.label}
           htmlFor={id}>

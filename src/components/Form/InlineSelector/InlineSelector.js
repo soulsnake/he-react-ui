@@ -34,6 +34,14 @@ class InlineSelector extends React.Component { // eslint-disable-line react/pref
     }
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.value !== this.state.value) {
+      this.setState({
+        value: nextProps.value
+      })
+    }
+  }
+
   handleClick = (option) => {
     const oldValue = this.state.value
 

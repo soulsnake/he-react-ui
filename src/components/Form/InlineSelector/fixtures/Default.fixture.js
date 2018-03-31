@@ -6,7 +6,7 @@ export default {
     options: [
       { label: 'Any', value: '1 ' },
       { label: 'AM', value: '2' },
-      { label: 'PM', value: '3 ' },
+      { label: 'PM', value: '3' },
       { label: 'After Hours', value: '4' }
     ]
   }

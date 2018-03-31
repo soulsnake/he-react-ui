@@ -20,9 +20,7 @@ class Label extends React.Component {
   }
 
   static defaultProps = {
-    disabled: false,
     error: false,
-    required: false,
     onChange: () => null
   }
 
