@@ -8,6 +8,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './PopUp.scss'
 import Icon from '../Icon'
+import LoadingSpinner from '../Loading/LoadingSpinner'
 
 class PopUp extends React.Component {
   static propTypes = {
@@ -32,7 +33,7 @@ class PopUp extends React.Component {
     }
   }
 
-  componentWillUpdate (nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (nextProps.showing !== this.state.showing) {
       this.setState({
         showing: nextProps.showing
@@ -64,7 +65,7 @@ class PopUp extends React.Component {
         <div className={styles.overlay} onClick={this.handleClose} />
         <div className={styles.popup} style={style}>
           {!modal && <Icon className={styles.close} name="Cross" width={32} height={32} onClick={this.handleClose} />}
-          {children}
+          {children || <LoadingSpinner />}
         </div>
       </div>
     )
