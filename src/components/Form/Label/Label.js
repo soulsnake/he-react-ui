@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Icon from '../../Icon'
 import style from './Label.scss'
-import {sp_red} from '../../../styles/colors.js'
+import LoadingStrip from '../../Loading/LoadingStrip'
 
 class Label extends React.Component {
   static propTypes = {
@@ -35,8 +35,8 @@ class Label extends React.Component {
       <div
         className={classes}
         {...restProps}>
-        {error && <Icon className={style.icon} name="Alert" color={sp_red} width={22} height={22} />}
-        <label htmlFor={htmlFor}>{children}</label>
+        {error && <Icon className={style.icon} name="Alert" width={22} height={22} />}
+        {children ? <label htmlFor={htmlFor}>{children}</label> : <LoadingStrip className={style.loading} />}
       </div>
     )
   }

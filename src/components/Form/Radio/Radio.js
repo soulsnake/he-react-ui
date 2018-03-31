@@ -56,7 +56,7 @@ class Radio extends React.Component {
           type="radio"
           name={name}
           checked={value === option.value}
-          onChange={() => null}/>
+          onChange={() => null} />
         <Icon className={classnames(style.icon, style.empty)} name="RadioUnchecked" width={20} height={20} />
         <Icon className={classnames(style.icon, style.full)} name="RadioChecked" width={20} height={20} />
         <label className={style.tag}>{option.label}</label>

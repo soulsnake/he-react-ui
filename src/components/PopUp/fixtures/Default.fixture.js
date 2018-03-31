@@ -1,7 +1,6 @@
 import React from 'react'
 import PopUp from '../'
-import { Button } from '../..'
-import { Heading, Paragraph } from '../..'
+import { Button, Heading, Paragraph } from '../..'
 
 export default {
   component: PopUp,

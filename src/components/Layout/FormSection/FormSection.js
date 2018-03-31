@@ -4,12 +4,13 @@ import style from './FormSection.scss'
 
 import Heading from '../Heading'
 import Paragraph from '../Paragraph'
+import LoadingSpinner from '../../Loading/LoadingSpinner'
 
 class FormSection extends Component {
   static propTypes = {
     heading: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    children: PropTypes.array
+    description: PropTypes.string.isRequired,
+    children: PropTypes.array.isRequired
   }
 
   render () {
@@ -24,7 +25,7 @@ class FormSection extends Component {
           <Paragraph>{description}</Paragraph>
         </div>
         <div className={style.right}>
-          {children}
+          {children || <LoadingSpinner />}
         </div>
       </div>
     )

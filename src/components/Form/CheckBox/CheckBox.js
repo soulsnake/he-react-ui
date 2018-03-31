@@ -23,8 +23,7 @@ class CheckBox extends React.Component {
     warning: PropTypes.bool,
     onChange: PropTypes.func,
     onCheck: PropTypes.func,
-    onUncheck: PropTypes.func,
-    checked: PropTypes.bool
+    onUncheck: PropTypes.func
   }
 
   static defaultProps = {

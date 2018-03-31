@@ -9,3 +9,17 @@
   line-height: 1.5em;
   margin: 0 0 14px;
 }
+
+.loading {
+  height: 16px;
+  margin-bottom: 8px;
+  &:nth-child(1) {
+    width: 96%;
+  }
+  &:nth-child(2) {
+    width: 99%;
+  }
+  &:nth-child(3) {
+    width: 60%;
+  }
+}

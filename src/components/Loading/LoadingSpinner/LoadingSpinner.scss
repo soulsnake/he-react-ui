@@ -1,0 +1,50 @@
+@import '../../../styles/base';
+
+.outer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.spinner {
+  animation: spin 1s;
+  animation-iteration-count: infinite;
+  margin: auto auto;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.highlight, .ring {
+  fill: currentColor;
+}
+
+.teal {
+  color: $teal_1;
+}
+
+.blue {
+  color: $sp_blue;
+}
+
+.green {
+  color: $sp_green;
+}
+
+.grey {
+  color: $n_grey_1;
+}
+
+.red {
+  color: $sp_red;
+}
+
+.white {
+  color: $white;
+}

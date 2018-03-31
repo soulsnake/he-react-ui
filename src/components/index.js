@@ -4,6 +4,7 @@ import PopUp from './PopUp'
 
 export * from './Form'
 export * from './Layout'
+export * from './Loading'
 export {
   Icon,
   Popover,

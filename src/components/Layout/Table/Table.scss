@@ -93,3 +93,14 @@
 .extraNarrow {
   flex-grow: 0.25;
 }
+
+.bodyLoading {
+  border-top: solid 1px $n_grey_2;
+  height: 160px;
+  margin: 0 44px;
+  width: auto;
+  @include breakpoint(small) {
+    margin: 0 20px;
+    width: 100%;
+  }
+}

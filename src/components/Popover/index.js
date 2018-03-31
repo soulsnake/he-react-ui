@@ -6,7 +6,6 @@
 import classnames from 'classnames'
 import React from 'react'
 import PropTypes from 'prop-types'
-import PopoverWrap from './styles'
 import styles from './index.scss'
 
 class Popover extends React.Component {
