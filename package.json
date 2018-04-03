@@ -21,13 +21,10 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.5",
-    "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-loadable": "^5.3.1",
-    "react-onclickoutside": "^6.7.1",
-    "react-styled-flexboxgrid": "^2.1.1",
-    "styled-components": "^3.1.4"
+    "react-onclickoutside": "^6.7.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
