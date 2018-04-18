@@ -2,6 +2,7 @@ import ActionIcon from './ActionIcon'
 import ActionSet from './ActionSet'
 import Button from './Button'
 import CheckBox from './CheckBox'
+import DatePicker from './DatePicker'
 import InlineSelector from './InlineSelector'
 import Label from './Label'
 import Radio from './Radio'
@@ -13,6 +14,7 @@ export {
   ActionSet,
   Button,
   CheckBox,
+  DatePicker,
   InlineSelector,
   Label,
   Radio,

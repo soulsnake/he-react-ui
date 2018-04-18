@@ -1,0 +1,33 @@
+@import '../../../styles/base';
+
+.outer {
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+.disabled {
+    .picker {
+        border-color: $n_grey_2;
+        cursor: not-allowed;
+        color: $navy_tint_1;
+        &:hover {
+            border-color: $n_grey_2;
+            color: $navy_tint_1;
+        }
+    }
+}
+
+.error {
+    .picker {
+        background-color: $sp_light_red;
+        border-color: $sp_red;
+        &:hover, &:focus {
+            border-color: $sp_red;
+        }
+    }
+}
+
+.errorMessage {
+    margin-top: 12px;
+    margin-bottom: 0;
+}
