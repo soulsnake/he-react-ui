@@ -7,11 +7,12 @@
 import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import style from './DatePicker.scss'
-
+import style from './Calendar.scss'
 import Label from '../Label'
+import Icon from '../../Icon'
+import DatePicker from 'react-datepicker'
 
-class DatePicker extends React.Component {
+class Calendar extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -43,6 +44,13 @@ class DatePicker extends React.Component {
     }
   }
 
+  handleChange(event) {
+    this.setState({
+      value: event.target.value
+    })
+    this.props.onChange(event)
+  }
+
   render () {
     const { id, className, disabled, error, label, onChange, value, ...restProps } = this.props
     const classes = classnames(style.outer, {
@@ -54,8 +62,16 @@ class DatePicker extends React.Component {
     return (
       <div id={id} className={classes} {...restProps}>
         {label && <Label className={style.label}>{label}</Label>}
-        <div className={style.picker}>
-          Wowie
+        <div className={style.inner}>
+          <DatePicker
+            className={style.picker}
+            disabled={disabled}
+            selected={value}
+            onChange={this.handleChange}
+            calendarClassName={style.calendar}>
+            {this.props.value}
+          </DatePicker>
+          <Icon className={style.icon} name="Calendar" />
         </div>
         {error && <Label className={style.errorMessage} htmlFor={id} error>{error}</Label>}
       </div>
@@ -63,4 +79,4 @@ class DatePicker extends React.Component {
   }
 }
 
-export default DatePicker
+export default Calendar

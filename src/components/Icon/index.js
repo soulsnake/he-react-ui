@@ -6,6 +6,7 @@ import Add from './Add'
 import Alarm from './Alarm'
 import Alert from './Alert'
 import {ArrowLeft, ArrowRight, ArrowUp, ArrowDown} from './Arrows'
+import Calendar from './Calendar'
 import CaretRight from './CaretRight'
 import {CheckBoxChecked, CheckBoxUnchecked, RadioChecked, RadioUnchecked} from './CheckBoxes'
 import Cross from './Cross'
@@ -49,6 +50,8 @@ function createIcon (iconProps) {
     return <ArrowUp {...props} />
   case 'ArrowDown':
     return <ArrowDown {...props} />
+  case 'Calendar':
+    return <Calendar {...props} />
   case 'CaretRight':
     return <CaretRight {...props} />
   case 'CheckBoxChecked':
