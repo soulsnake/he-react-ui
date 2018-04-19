@@ -1,0 +1,149 @@
+@import '../../../styles/_base.scss';
+
+
+.outer {
+  font-family: $font-stack;
+  padding-bottom: 12px;
+  position: relative;
+  user-select: none;
+  width: 280px;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+}
+
+.label {
+  margin-bottom: 12px;
+}
+
+.input {
+  display: none;
+}
+
+.select {
+  background-color: $white;
+  border: solid 1px $n_grey_2;
+  border-radius: 4px;
+  color: $navy_1;
+  cursor: pointer;
+  font-size: $input-size;
+  font-weight: $regular;
+  position: relative;
+  width: 100%;
+  &:hover {
+    border-color: $teal_2;
+    color: $navy_2;
+  }
+  span {
+    display: block;
+    padding: 12px;
+    padding-right: 42px;
+    user-select: none;
+  }
+  @include transition(all 0.2s);
+}
+
+.expanded {
+  .select {
+    border-radius: 4px 4px 0px 0px;
+    color: $navy_2;
+    &:hover {
+      border-color: $n_grey_2;
+    }
+    .caret {
+      color: $teal_1;
+      transform: scaleY(-1);
+    }
+  }
+  .options {
+    border-radius: 0px 0px 4px 4px;
+    margin-left: 0;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    @include transition(opacity 0.2s, width 0.2s, margin-left, 0.2s);
+  }
+}
+
+.caret {
+  color: $navy_2;
+  fill: currentColor;
+  position: absolute;
+  pointer-events: none;
+  top: 8px;
+  right: 8px;
+  @include transition(all 0.2s);
+}
+
+.disabled {
+  border-color: $n_grey_2;
+  cursor: not-allowed;
+  color: $navy_tint_1;
+  &:hover {
+    border-color: $n_grey_2;
+    color: $navy_tint_1;
+  }
+  .caret {
+    color: $navy_tint_2;
+  }
+}
+
+.error {
+  background-color: $sp_light_red;
+  border-color: $sp_red;
+  &:hover, &:focus {
+    border-color: $sp_red;
+  }
+  &.expanded {
+    .caret {
+      color: $navy_2;
+    }
+  }
+}
+
+.errorMessage {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.options {
+  background-color: $white;
+  border: solid 1px $n_grey_2;
+  border-radius: 2px;
+  box-shadow: 0 2px 12px $n_grey_1;
+  cursor: pointer;
+  font-size: $input-size;
+  font-weight: $regular;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    display: inline-block;
+    overflow-y: auto;
+    max-height: 240px;
+  }
+  overflow-y: hidden;
+  margin: 0 0 0 4%;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  width: 80%;
+  z-index: 1;
+  @include transition(margin-left 0.2s, opacity 0.2s, width 0.2s);
+}
+
+.option {
+  color: $navy_1;
+  padding: 12px;
+  user-select: none;
+  &:hover {
+    background-color: $n_grey_4;
+    color: $navy_2;
+  }
+  @include transition(all 0.2s);
+}
+
+.selected {
+  background-color: $teal_tint_3;
+}
