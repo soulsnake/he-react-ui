@@ -9,6 +9,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
+import momentPropTypes from 'react-moment-proptypes'
 import styles from './SingleDatePicker.scss'
 import Label from '../Label'
 import Icon from '../../Icon'
@@ -29,7 +30,7 @@ class SingleDatePicker extends React.Component {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    date: PropTypes.string,
+    date: momentPropTypes.momentObj,
     style: PropTypes.object
   }
 
@@ -59,19 +60,8 @@ class SingleDatePicker extends React.Component {
     }
   }
 
-  handleDateChange (date) {
-    this.setState({ date })
-    //this.props.onChange(event)
-  }
-
-  handleFocusChange (focused) {
-    this.setState({ focused })
-    //this.props.onBlur(event)
-    //this.props.onFocus(event)
-  }
-
   render () {
-    const { id, className, disabled, error, label, onChange, style, ...restProps } = this.props
+    const { id, className, date, disabled, error, label, onChange, style, ...restProps } = this.props
     const classes = classnames(styles.outer, {
       [styles.error]: error,
       [styles.disabled]: disabled,
