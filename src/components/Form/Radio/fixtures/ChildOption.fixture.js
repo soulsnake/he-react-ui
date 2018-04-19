@@ -16,7 +16,7 @@ export default {
       {label: 'Option 1', value: '1'},
       {label: 'Option 2', value: '2'},
       {label: 'Option 3', value: '3'},
-      {value: '4', child: other},
+      {label: 'Other...', value: '4', child: other},
     ]
   }
 }

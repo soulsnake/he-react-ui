@@ -1,6 +1,7 @@
 import React from 'react'
 import FormSection from '../'
-import SingleSelect from '../../../Form/SingleSelect'
+import Radio from '../../../Form/Radio'
+import SingleDatePicker from '../../../Form/SingleDatePicker'
 
 export default {
   component: FormSection,
@@ -8,5 +9,10 @@ export default {
     heading: 'Section Heading',
     description: 'This generally provides some further explanation about what the user can / should do.'
   },
-  children: <SingleSelect id="demo" name="demo" label="Pick one" options={[{value: '1', label: 'One'}]} />
+  children: (
+    <Radio label="Run for how long?" value={false} options={[
+      {label: 'Indefinitely', value: false},
+      {label: 'Specific date...', value: true, child: <SingleDatePicker id="demo2" name="demo2" />, showChild: false}
+    ]} />
+  )
 }

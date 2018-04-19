@@ -1,7 +1,7 @@
 import ActionIcon from './ActionIcon'
 import ActionSet from './ActionSet'
 import Button from './Button'
-import Calendar from './Calendar'
+import SingleDatePicker from './SingleDatePicker'
 import CheckBox from './CheckBox'
 import InlineSelector from './InlineSelector'
 import Label from './Label'
@@ -13,11 +13,11 @@ export {
   ActionIcon,
   ActionSet,
   Button,
-  Calendar,
   CheckBox,
   InlineSelector,
   Label,
   Radio,
+  SingleDatePicker,
   SingleSelect,
   TextField
 }

@@ -22,7 +22,7 @@
 .select {
   background-color: $white;
   border: solid 1px $n_grey_2;
-  border-radius: 2px;
+  border-radius: 4px;
   color: $navy_1;
   cursor: pointer;
   font-size: $input-size;
@@ -74,6 +74,7 @@
 }
 
 .disabled {
+  background-color: $n_grey_4;
   border-color: $n_grey_2;
   cursor: not-allowed;
   color: $navy_tint_1;
@@ -86,16 +87,16 @@
   }
 }
 
-.error {
+.error, .error:active, .error:hover, .error:focus {
   background-color: $sp_light_red;
   border-color: $sp_red;
-  &:hover, &:focus {
-    border-color: $sp_red;
+  color: $sp_red;
+  .caret {
+    color: $sp_red;
   }
   &.expanded {
-    .caret {
-      color: $navy_2;
-    }
+    border-color: $sp_red;
+    color: $sp_red;
   }
 }
 
@@ -107,7 +108,7 @@
 .options {
   background-color: $white;
   border: solid 1px $n_grey_2;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 2px 12px $n_grey_1;
   cursor: pointer;
   font-size: $input-size;
