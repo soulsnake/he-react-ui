@@ -51,7 +51,7 @@
     }
     .caret {
       color: $teal_1;
-      transform: scaleY(-1);
+      transform: rotate(180deg);
     }
   }
   .options {
@@ -68,7 +68,7 @@
   fill: currentColor;
   position: absolute;
   pointer-events: none;
-  top: 8px;
+  top: 5px;
   right: 8px;
   @include transition(all 0.2s);
 }
