@@ -27,6 +27,7 @@ class SingleDatePicker extends React.Component {
     error: PropTypes.string,
     horizontalMargin: PropTypes.number,
     isOutsideRange: PropTypes.func,
+    inline: PropTypes.bool,
     label: PropTypes.string,
     readOnly: PropTypes.bool,
     onBlur: PropTypes.func,
@@ -40,6 +41,7 @@ class SingleDatePicker extends React.Component {
     anchorDirection: 'right',
     disabled: false,
     displayFormat: 'DD/MM/YYYY',
+    inline: false,
     placeholder: 'Select date',
     readOnly: true,
     onBlur: () => null,
@@ -89,12 +91,13 @@ class SingleDatePicker extends React.Component {
   }
 
   render () {
-    const { id, className, date, disabled, error, label, horizontalMargin, onChange, style, ...restProps } = this.props
+    const { id, className, date, disabled, error, inline, label, horizontalMargin, onChange, style, ...restProps } = this.props
     const classes = classnames(styles.outer, {
       [styles.error]: error,
       [styles.disabled]: disabled,
       [styles.focused]: this.state.focused,
-      [styles[className]]: className
+      [style.inline]: inline,
+      [className]: className
     })
 
     return (

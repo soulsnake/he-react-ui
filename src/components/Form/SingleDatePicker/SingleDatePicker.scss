@@ -11,6 +11,15 @@
     }
 }
 
+.inline {
+  display: inline-block;
+  margin-right: 36px;
+  vertical-align: top;
+  @include breakpoint(small) {
+    margin-right: 0;
+  }
+}
+
 .inner {
     margin-bottom: 12px;
     position: relative;

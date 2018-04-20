@@ -60,7 +60,7 @@ class InlineSelector extends React.Component { // eslint-disable-line react/pref
     const { vertical, className, label, onChange, options, value, ...restProps } = this.props
     const classes = classnames(style.outer, {
       [style.vertical]: vertical,
-      [style[className]]: className
+      [className]: className
     })
 
     return (

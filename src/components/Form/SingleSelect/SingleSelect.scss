@@ -1,4 +1,4 @@
-@import '../../../styles/_base.scss';
+@import '../../../styles/base';
 
 .outer {
   font-family: $font-stack;
@@ -8,6 +8,15 @@
   width: 280px;
   @include breakpoint(small) {
     width: 100%;
+  }
+}
+
+.inline {
+  display: inline-block;
+  margin-right: 36px;
+  vertical-align: top;
+  @include breakpoint(small) {
+    margin-right: 0;
   }
 }
 

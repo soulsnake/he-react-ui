@@ -51,7 +51,7 @@ class Button extends React.Component {
       [style.keyline]: keyline,
       [style.link]: link,
       [style.squared]: squared,
-      [style[className]]: className})
+      [className]: className})
 
     return (
       <button

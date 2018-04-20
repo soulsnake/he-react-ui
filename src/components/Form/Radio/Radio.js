@@ -17,6 +17,7 @@ class Radio extends React.Component {
     name: PropTypes.string.isRequired,
     className: PropTypes.string,
     error: PropTypes.string,
+    inline: PropTypes.bool,
     label: PropTypes.string,
     options: PropTypes.arrayOf(
       PropTypes.shape({
@@ -31,6 +32,7 @@ class Radio extends React.Component {
 
   static defaultProps = {
     error: '',
+    inline: false,
     onChange: () => {}
   }
 
@@ -88,9 +90,10 @@ class Radio extends React.Component {
 
   render () {
     const { generateOptions } = this
-    const { name, className, error, label, onChange, value, ...restProps } = this.props
+    const { name, className, error, inline, label, onChange, value, ...restProps } = this.props
     const classes = classnames(style.outer, {
-      [style[className]]: className
+      [style.inline]: inline,
+      [className]: className
     })
 
     return (

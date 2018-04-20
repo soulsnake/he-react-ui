@@ -28,7 +28,7 @@ class Label extends React.Component {
     const { children, className, error, htmlFor, ...restProps } = this.props
     const classes = classnames(style.label, {
       [style.error]: error,
-      [style[className]]: className
+      [className]: className
     })
 
     return (

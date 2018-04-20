@@ -59,9 +59,9 @@ class ActionSet extends React.Component {
     const { open } = this.state
     const expandable = children.length > 2 && !expanded
     const classes = classnames(style.outer, {
-      [style[className]]: className,
       [style.expandable]: expandable,
-      [style.open]: open
+      [style.open]: open,
+      [className]: className
     })
 
     return (

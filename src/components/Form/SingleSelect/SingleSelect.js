@@ -40,6 +40,7 @@ class SingleSelect extends React.Component {
   static defaultProps = {
     disabled: false,
     error: '',
+    inline: false,
     required: false,
     onChange: () => {}
   }
@@ -125,12 +126,13 @@ class SingleSelect extends React.Component {
   }
 
   render () {
-    const { id, name, className, required, disabled, error, label, placeholder, onChange, value,
+    const { id, name, className, required, disabled, error, inline, label, placeholder, onChange, value,
       eventTypes, outsideClickIgnoreClass, preventDefault, stopPropagation, disableOnClickOutside, enableOnClickOutside,
       ...restProps } = this.props
     const classes = classnames(style.outer, {
       [style.expanded]: this.state.expanded,
-      [style[className]]: className
+      [style.inline]: inline,
+      [className]: className
     })
 
     return (

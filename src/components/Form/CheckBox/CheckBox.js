@@ -70,7 +70,7 @@ class CheckBox extends React.Component {
     const { id, name, checked, className, disabled, label, required, special, warning, onChange, onCheck, onUncheck, ...restProps } = this.props
     const classes = {
       [style.disabled]: disabled,
-      [style[className]]: className
+      [className]: className
     }
 
     return (
