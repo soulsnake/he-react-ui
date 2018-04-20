@@ -18,7 +18,13 @@ class Radio extends React.Component {
     className: PropTypes.string,
     error: PropTypes.string,
     label: PropTypes.string,
-    options: PropTypes.array.isRequired,
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        value: PropTypes.string.isRequired,
+        child: PropTypes.any,
+        showChild: PropTypes.bool
+      })).isRequired,
     value: PropTypes.string,
     onChange: PropTypes.func
   }
@@ -59,7 +65,9 @@ class Radio extends React.Component {
           onChange={() => null} />
         <Icon className={classnames(style.icon, style.empty)} name="RadioUnchecked" width={20} height={20} />
         <Icon className={classnames(style.icon, style.full)} name="RadioChecked" width={20} height={20} />
-        <label className={style.tag}>{option.label}</label>
+        {option.label && <label className={style.tag}>{option.label}</label>}
+        {(option.child && (option.showChild || value === option.value)) &&
+          <div className={style.child}>{option.child}</div>}
       </div>
     ))
   }

@@ -39,6 +39,14 @@
   }
 }
 
+.child {
+  padding-left: 32px;
+}
+
+.tag + .child {
+  margin-top: 12px;
+}
+
 .input {
   display: none;
 }

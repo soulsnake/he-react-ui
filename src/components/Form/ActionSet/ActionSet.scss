@@ -1,13 +1,13 @@
 @import '../../../styles/_base.scss';
 
 .outer {
-  height: 32px;
+  height: 36px;
   margin: auto;
   position: relative;
   user-select: none;
   width: fit-content;
   &.expandable {
-    width: 32px;
+    width: 36px;
     &.open {
       .ellipsis {
         color: $n_grey_3;

@@ -1,6 +1,7 @@
 import ActionIcon from './ActionIcon'
 import ActionSet from './ActionSet'
 import Button from './Button'
+import SingleDatePicker from './SingleDatePicker'
 import CheckBox from './CheckBox'
 import InlineSelector from './InlineSelector'
 import Label from './Label'
@@ -16,6 +17,7 @@ export {
   InlineSelector,
   Label,
   Radio,
+  SingleDatePicker,
   SingleSelect,
   TextField
 }

@@ -51,7 +51,7 @@
   &:first-child {
     padding-left: 0;
   }
-  &:hover {
+  &:hover, &:active, &:focus {
     color: $white;
   }
   span {
