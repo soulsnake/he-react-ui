@@ -60,6 +60,31 @@ class SingleDatePicker extends React.Component {
     }
   }
 
+  handleDateChange = (date) => {
+    const oldDate = this.state.date
+    this.setState({ date })
+    if ((oldDate && oldDate.toJSON()) !== (date && date.toJSON())) {
+      const event = {
+        value: date,
+        props: this.props
+      }
+      this.props.onChange(event)
+    }
+  }
+
+  handleFocusChange = ({focused}) => {
+    this.setState({ focused })
+    const event = {
+      focused,
+      props: this.props
+    }
+    if (focused) {
+      this.props.onFocus(event)
+    } else {
+      this.props.onBlur(event)
+    }
+  }
+
   render () {
     const { id, className, date, disabled, error, label, onChange, style, ...restProps } = this.props
     const classes = classnames(styles.outer, {
@@ -82,9 +107,9 @@ class SingleDatePicker extends React.Component {
                 disabled={disabled}
                 id={id}
                 numberOfMonths={matches ? 1 : 2}
-                onDateChange={date => this.setState({ date })}
+                onDateChange={this.handleDateChange}
                 focused={this.state.focused}
-                onFocusChange={({ focused }) => this.setState({ focused })}
+                onFocusChange={this.handleFocusChange}
                 navNext={<Icon width={22} height={22} name="ChevronRight" />}
                 navPrev={<Icon width={22} height={22} name="ChevronLeft" />}
                 {...restProps}
