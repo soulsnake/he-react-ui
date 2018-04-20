@@ -5,6 +5,6 @@ export default {
   props: {
     id: 'demo',
     name: 'demo',
-    disabled: true
+    hourly: true
   }
 }

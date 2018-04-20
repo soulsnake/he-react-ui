@@ -12,6 +12,10 @@
   }
 }
 
+.inline {
+  @include inline-block
+}
+
 .label {
   margin-bottom: 12px;
 }
@@ -50,9 +54,8 @@
     &:hover {
       border-color: $n_grey_2;
     }
-    .caret {
+    .clock {
       color: $teal_1;
-      transform: scaleY(-1);
     }
   }
   .options {
@@ -65,7 +68,7 @@
   }
 }
 
-.caret {
+.clock {
   color: $navy_2;
   fill: currentColor;
   position: absolute;
@@ -83,7 +86,7 @@
     border-color: $n_grey_2;
     color: $navy_tint_1;
   }
-  .caret {
+  .clock {
     color: $navy_tint_2;
   }
 }
@@ -95,7 +98,7 @@
     border-color: $sp_red;
   }
   &.expanded {
-    .caret {
+    .clock {
       color: $navy_2;
     }
   }
@@ -122,6 +125,9 @@
     display: inline-block;
     overflow-y: auto;
     max-height: 240px;
+  }
+  .hourly ul {
+    width: 100%;
   }
   overflow-y: hidden;
   margin: 0 0 0 4%;
