@@ -422,6 +422,7 @@
         .DayPicker__withBorder {
             box-shadow: 0 0 4px rgba(0,0,0,.2);
             border-radius: 4px;
+            margin-top: -14px;
             padding: 16px 24px;
         }
         .DayPicker_portal__horizontal {
@@ -585,7 +586,7 @@
         }
         .DateInput_fang {
             position: absolute;
-            margin-top: 1px;
+            margin-top: -13px;
             width: 20px;
             height: 10px;
             left: 50%;

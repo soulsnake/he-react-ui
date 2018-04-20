@@ -25,6 +25,7 @@ class SingleDatePicker extends React.Component {
     disabled: PropTypes.bool,
     displayFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     error: PropTypes.string,
+    horizontalMargin: PropTypes.number,
     isOutsideRange: PropTypes.func,
     label: PropTypes.string,
     readOnly: PropTypes.bool,
@@ -88,7 +89,7 @@ class SingleDatePicker extends React.Component {
   }
 
   render () {
-    const { id, className, date, disabled, error, label, onChange, style, ...restProps } = this.props
+    const { id, className, date, disabled, error, label, horizontalMargin, onChange, style, ...restProps } = this.props
     const classes = classnames(styles.outer, {
       [styles.error]: error,
       [styles.disabled]: disabled,
@@ -107,6 +108,7 @@ class SingleDatePicker extends React.Component {
                 date={this.state.date}
                 daySize={28}
                 disabled={disabled}
+                horizontalMargin={matches ? 0 : horizontalMargin}
                 id={id}
                 numberOfMonths={matches ? 1 : 2}
                 onDateChange={this.handleDateChange}
