@@ -18,29 +18,39 @@ class TextField extends React.Component {
     label: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     description: PropTypes.string,
     error: PropTypes.string,
+    inline: PropTypes.bool,
     value: PropTypes.string,
     disabled: PropTypes.bool,
     marker: PropTypes.bool,
     validateFunc: PropTypes.func,
-    onChange: PropTypes.func
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func
   }
 
   static defaultProps = {
     label: 'Field',
     disabled: false,
+    inline: false,
     marker: false,
     value: '',
+    onBlur: () => {},
     onChange: () => {},
+    onFocus: () => {},
     validateFunc: () => true
   }
 
   constructor (props) {
     super(props)
+
     this.state = {
       focused: false,
       isValid: true,
       value: props.value
     }
+    this.handleFocus = this.handleFocus.bind(this)
+    this.handleBlur = this.handleBlur.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentWillReceiveProps (nextProps) {
@@ -51,19 +61,19 @@ class TextField extends React.Component {
     }
   }
 
-  onFocus = () => {
+  handleFocus = () => {
     this.setState({
       focused: true
     })
   }
 
-  onBlur = () => {
+  handleBlur = () => {
     this.setState({
       focused: false
     })
   }
 
-  onChange = (event) => {
+  handleChange = (event) => {
     this.setState({
       isValid: this.props.validateFunc(event.target.value),
       value: event.target.value
@@ -72,12 +82,13 @@ class TextField extends React.Component {
   }
 
   render () {
-    const { className, id, name, label, description, disabled, error, marker, onChange, validateFunc, value, ...restProps } = this.props
+    const { className, id, name, label, description, disabled, error, inline, marker, onBlur, onChange, onFocus, validateFunc, value, ...restProps } = this.props
     const { focused, isValid } = this.state
     const floating = focused || this.state.value !== ''
     const classes = classnames(style.outer, {
       [style.invalid]: !isValid,
       [style.disabled]: disabled,
+      [style.inline]: inline,
       [style.focused]: focused,
       [style.hasMarker]: marker,
       [style[className]]: className
@@ -98,9 +109,9 @@ class TextField extends React.Component {
             className={style.input}
             id={id}
             name={name}
-            onFocus={this.onFocus}
-            onBlur={this.onBlur}
-            onChange={this.onChange}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+            onChange={this.handleChange}
             disabled={disabled}
             value={this.state.value} />
           {(marker && this.state.value !== '') && <Icon name={isValid ? 'Tick' : 'Cross'} className={style.marker} />}

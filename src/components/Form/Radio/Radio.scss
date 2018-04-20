@@ -12,12 +12,7 @@
 }
 
 .inline {
-  display: inline-block;
-  margin-right: 36px;
-  vertical-align: top;
-  @include breakpoint(small) {
-    margin-right: 0;
-  }
+  @include inline-block;
 }
 
 .label {

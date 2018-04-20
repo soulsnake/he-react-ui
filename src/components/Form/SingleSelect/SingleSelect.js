@@ -54,6 +54,12 @@ class SingleSelect extends React.Component {
       value: value,
       expanded: false
     }
+    this.getDisplay = this.getDisplay.bind(this)
+    this.toggleExpand = this.toggleExpand.bind(this)
+    this.hideExpand = this.hideExpand.bind(this)
+    this.handleClickOutside = this.handleClickOutside.bind(this)
+    this.selectOption = this.selectOption.bind(this)
+    this.generateOptions = this.generateOptions.bind(this)
   }
 
   componentWillReceiveProps (nextProps) {
@@ -84,12 +90,6 @@ class SingleSelect extends React.Component {
     this.hideExpand()
   }
 
-  generateOptions = () => {
-    return this.props.options.map((option) =>
-      <option key={option.value} value={option.value}>{option.label}</option>
-    )
-  }
-
   selectOption = (option) => {
     const oldValue = this.state.value
     this.setState({
@@ -106,7 +106,7 @@ class SingleSelect extends React.Component {
     }
   }
 
-  generateList = () => {
+  generateOptions = () => {
     return this.props.options.map((option) => {
       const selected = this.state.value === option.value
       let ref = null
@@ -140,17 +140,6 @@ class SingleSelect extends React.Component {
         className={classes}
         {...restProps}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
-        <select
-          id={id}
-          name={name}
-          className={style.input}
-          disabled={disabled}
-          required={required}
-          value={this.state.value}
-          onChange={() => {}}>
-          {placeholder && <option hidden>{placeholder}</option>}
-          {this.generateOptions()}
-        </select>
         <div
           className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled})}
           onClick={this.toggleExpand}>
@@ -158,7 +147,7 @@ class SingleSelect extends React.Component {
           <Icon className={style.caret} name="DropDown" />
         </div>
         <ul className={style.options}>
-          {this.generateList()}
+          {this.generateOptions()}
         </ul>
         {error && <Label className={style.errorMessage} htmlFor={id} error>{error}</Label>}
       </div>

@@ -51,10 +51,13 @@ class SingleDatePicker extends React.Component {
 
   constructor (props) {
     super(props)
+    
     this.state = {
       focused: false,
       date: props.date
     }
+    this.handleDateChange = this.handleDateChange.bind(this)
+    this.handleFocusChange = this.handleFocusChange.bind(this)
   }
 
   componentWillReceiveProps (nextProps) {
@@ -96,7 +99,7 @@ class SingleDatePicker extends React.Component {
       [styles.error]: error,
       [styles.disabled]: disabled,
       [styles.focused]: this.state.focused,
-      [style.inline]: inline,
+      [styles.inline]: inline,
       [className]: className
     })
 
