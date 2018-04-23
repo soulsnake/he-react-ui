@@ -128,7 +128,8 @@ class TimeSelector extends React.Component {
     })
   }
 
-  generateList = function (options, selectOption) {
+  generateList = function (options, selectOption, padding) {
+    const { hourly } = this.props
     return options.map((option) => {
       const selected = this.state.value === option.value
       let ref = null
@@ -142,7 +143,7 @@ class TimeSelector extends React.Component {
         }
       }
       return (<li className={classnames(style.option, {[style.selected]: selected})} key={option.value} onClick={() => selectOption(option)} ref={ref}>
-        {option.label}
+        {`${hourly ? option.label + ':00' : option.label}`}
       </li>)
     })
   }
@@ -154,7 +155,8 @@ class TimeSelector extends React.Component {
     const classes = classnames(style.outer, {
       [style.expanded]: this.state.expanded,
       [style.inline]: inline,
-      [style[className]]: className
+      [style[className]]: className,
+      [style.hourly]: hourly,
     })
 
     return (
@@ -163,16 +165,16 @@ class TimeSelector extends React.Component {
         {...restProps}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <div
-          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled, [style.hourly]: hourly})}
+          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled})}
           onClick={this.toggleExpand}>
           <span>{this.getDisplay()}</span>
           <Icon className={style.clock} name="Clock" />
         </div>
         <div className={style.options}>
           <ul>
-            {this.generateList(hours, this.selectHour)}
+            {this.generateList(hours, this.selectHour, true)}
           </ul>
-          { !hourly && 
+          { !hourly &&
             (<ul>
               {this.generateList(minutes, this.selectMinute)}
             </ul>)

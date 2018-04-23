@@ -49,7 +49,6 @@
 
 .expanded {
   .select {
-    border-radius: 4px 4px 0px 0px;
     color: $navy_2;
     &:hover {
       border-color: $n_grey_2;
@@ -59,7 +58,6 @@
     }
   }
   .options {
-    border-radius: 0px 0px 4px 4px;
     margin-left: 0;
     opacity: 1;
     pointer-events: auto;
@@ -126,9 +124,6 @@
     overflow-y: auto;
     max-height: 240px;
   }
-  .hourly ul {
-    width: 100%;
-  }
   overflow-y: hidden;
   margin: 0 0 0 4%;
   opacity: 0;
@@ -137,6 +132,14 @@
   width: 80%;
   z-index: 1;
   @include transition(margin-left 0.2s, opacity 0.2s, width 0.2s);
+}
+
+.hourly {
+  .options {
+    ul {
+      width: 100%;
+    }
+  }
 }
 
 .option {
