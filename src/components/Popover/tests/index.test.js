@@ -1,14 +1,14 @@
 import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../Input.fixture'
+import fixture from '../fixtures/Default.fixture'
 
 const { mount, getWrapper } = createTestContext({ fixture })
 
 beforeEach(mount)
 
-test('<Input /> rendered correctly with fixture', () => {
+test('<Popover /> rendered correctly with fixture', () => {
   let wrapper = getWrapper()
-  expect(wrapper.find('.input-group').length).toEqual(2)
-  expect(wrapper.find('.input-group-btn').length).toEqual(1)
+  expect(wrapper.find('div[role="tooltip"]').length).toEqual(1)
+  expect(wrapper.find('div[role="tooltip"] div').length).toEqual(3)
 
   expect(wrapper).toMatchSnapshot()
 })

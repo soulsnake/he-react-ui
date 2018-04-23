@@ -1,5 +1,5 @@
 import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../Button.fixture'
+import fixture from '../fixtures/Default.fixture'
 
 const { mount, getWrapper } = createTestContext({ fixture })
 

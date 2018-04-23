@@ -1,36 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Input /> rendered correctly with fixture 1`] = `
-<Input
-  buttonLabel="Enter"
+exports[`<TextField /> rendered correctly with fixture 1`] = `
+<TextField
+  description="Optional descriptive label"
+  disabled={false}
+  id="demo"
+  inline={false}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
   onChange={[Function]}
-  onClick={[Function]}
-  placeholder="Input text here ..."
+  onFocus={[Function]}
+  validateFunc={[Function]}
+  value=""
 >
-  <styled.div
-    className="input-group"
+  <div
+    className=""
   >
-    <div
-      className="input-group sc-bdVaJa bjUrFO"
-    >
-      <input
-        className="form-control"
-        onChange={[Function]}
-        placeholder="Input text here ..."
-        type="text"
-      />
-      <span
-        className="input-group-btn"
+    <div>
+      <label
+        className=""
+        htmlFor="demo"
       >
-        <button
-          className="btn search-btn"
-          onClick={[Function]}
-          type="button"
-        >
-          Enter
-        </button>
-      </span>
+        First Name
+      </label>
+      <input
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
     </div>
-  </styled.div>
-</Input>
+    <label
+      htmlFor="demo"
+    >
+      Optional descriptive label
+    </label>
+  </div>
+</TextField>
 `;

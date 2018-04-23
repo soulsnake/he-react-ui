@@ -2,75 +2,62 @@
 
 exports[`<InlineSelector /> rendered correctly with fixture 1`] = `
 <InlineSelector
-  onClickOption={[Function]}
+  onChange={[Function]}
   options={
     Array [
       Object {
-        "label": "General Exam and Clean",
-        "value": 1,
+        "label": "Any",
+        "value": "1 ",
       },
       Object {
-        "label": "Toothache",
-        "value": 2,
+        "label": "AM",
+        "value": "2",
       },
       Object {
-        "label": "Loose Filling",
-        "value": 3,
+        "label": "PM",
+        "value": "3",
       },
       Object {
-        "label": "Loose Crown",
-        "value": 4,
-      },
-      Object {
-        "label": "Teeth Whitening",
-        "value": 5,
+        "label": "After Hours",
+        "value": "4",
       },
     ]
   }
   vertical={false}
 >
-  <styled.div
-    className="select-group"
+  <div
+    className=""
   >
-    <div
-      className="select-group sc-bdVaJa iCFXPW"
-    >
+    <div>
       <div
-        className="select-group-btn"
+        className=""
         key="0"
         onClick={[Function]}
       >
-        General Exam and Clean
+        Any
       </div>
       <div
-        className="select-group-btn"
+        className=""
         key="1"
         onClick={[Function]}
       >
-        Toothache
+        AM
       </div>
       <div
-        className="select-group-btn"
+        className=""
         key="2"
         onClick={[Function]}
       >
-        Loose Filling
+        PM
       </div>
       <div
-        className="select-group-btn"
+        className=""
         key="3"
         onClick={[Function]}
       >
-        Loose Crown
-      </div>
-      <div
-        className="select-group-btn"
-        key="4"
-        onClick={[Function]}
-      >
-        Teeth Whitening
+        After Hours
       </div>
     </div>
-  </styled.div>
+  </div>
 </InlineSelector>
 `;
