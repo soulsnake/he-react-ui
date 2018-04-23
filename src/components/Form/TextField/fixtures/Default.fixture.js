@@ -5,7 +5,6 @@ export default {
   props: {
     id: 'demo',
     name: 'demo',
-    label: 'First Name',
-    description: 'Optional descriptive label'
+    label: 'First Name'
   }
 }

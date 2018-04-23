@@ -11,8 +11,10 @@ import style from './InlineSelector.scss'
 
 import Label from '../Label'
 
-class InlineSelector extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class InlineSelector extends React.Component {
   static propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     className: PropTypes.string,
     label: PropTypes.string,
     vertical: PropTypes.bool,
@@ -27,27 +29,9 @@ class InlineSelector extends React.Component { // eslint-disable-line react/pref
     onChange: () => null
   }
 
-  constructor (props) {
-    super(props)
-    this.state = {
-      value: props.value
-    }
-  }
-
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.value !== this.state.value) {
-      this.setState({
-        value: nextProps.value
-      })
-    }
-  }
-
   handleClick = (option) => {
-    const oldValue = this.state.value
+    const oldValue = this.props.value
 
-    this.setState({
-      value: option.value
-    })
     if (oldValue !== option.value) {
       this.props.onChange({
         value: option.value,
@@ -57,20 +41,20 @@ class InlineSelector extends React.Component { // eslint-disable-line react/pref
   }
 
   render () {
-    const { vertical, className, label, onChange, options, value, ...restProps } = this.props
+    const { className, id, label, onChange, options, value, vertical, ...restProps } = this.props
     const classes = classnames(style.outer, {
       [style.vertical]: vertical,
       [className]: className
     })
 
     return (
-      <div className={classes} {...restProps}>
-        {label && <Label className={style.label}>{label}</Label>}
+      <div className={classes} id={id} {...restProps}>
+        {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <div className={style.options}>
           {options.map((option, index) =>
             (<div
               key={index}
-              className={classnames(style.option, {[style.selected]: option.value === this.state.value})}
+              className={classnames(style.option, {[style.selected]: option.value === value})}
               onClick={() => this.handleClick(option)}>{option.label}</div>)
           )}
         </div>
