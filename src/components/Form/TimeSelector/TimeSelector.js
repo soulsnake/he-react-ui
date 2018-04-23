@@ -11,7 +11,7 @@ import onClickOutside from 'react-onclickoutside'
 
 import Icon from '../../Icon'
 import Label from '../Label'
-import style from './timeSelector.scss'
+import style from './TimeSelector.scss'
 
 class TimeSelector extends React.Component {
   static propTypes = {
