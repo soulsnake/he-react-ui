@@ -2,7 +2,6 @@
 
 exports[`<TextField /> rendered correctly with fixture 1`] = `
 <TextField
-  description="Optional descriptive label"
   disabled={false}
   id="demo"
   inline={false}
@@ -35,11 +34,6 @@ exports[`<TextField /> rendered correctly with fixture 1`] = `
         value=""
       />
     </div>
-    <label
-      htmlFor="demo"
-    >
-      Optional descriptive label
-    </label>
   </div>
 </TextField>
 `;

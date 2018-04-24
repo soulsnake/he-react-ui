@@ -2,12 +2,14 @@
 
 exports[`<InlineSelector /> rendered correctly with fixture 1`] = `
 <InlineSelector
+  id="demo"
+  name="demo"
   onChange={[Function]}
   options={
     Array [
       Object {
         "label": "Any",
-        "value": "1 ",
+        "value": "1",
       },
       Object {
         "label": "AM",
@@ -27,6 +29,8 @@ exports[`<InlineSelector /> rendered correctly with fixture 1`] = `
 >
   <div
     className=""
+    id="demo"
+    name="demo"
   >
     <div>
       <div

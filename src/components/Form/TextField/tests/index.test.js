@@ -7,7 +7,7 @@ beforeEach(mount)
 
 test('<TextField /> rendered correctly with fixture', () => {
   let wrapper = getWrapper()
-  expect(wrapper.find('label').length).toEqual(2)
+  expect(wrapper.find('label').length).toEqual(1)
   expect(wrapper.find('input').length).toEqual(1)
 
   expect(wrapper).toMatchSnapshot()
