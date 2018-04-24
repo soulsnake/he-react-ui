@@ -37,6 +37,9 @@
   &:hover {
     border-color: $teal_2;
     color: $navy_2;
+    .clock {
+      color: $teal_2;
+    }
   }
   span {
     display: block;
@@ -91,7 +94,9 @@
 
 .error {
   background-color: $sp_light_red;
-  border-color: $sp_red;
+  .clock {
+    color: $sp_red;
+  }
   &:hover, &:focus {
     border-color: $sp_red;
   }
