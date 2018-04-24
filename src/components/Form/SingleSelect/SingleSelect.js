@@ -20,7 +20,6 @@ class SingleSelect extends React.Component {
     className: PropTypes.string,
     required: PropTypes.bool,
     disabled: PropTypes.bool,
-    inline: PropTypes.bool,
     error: PropTypes.string,
     inline: PropTypes.bool,
     label: PropTypes.string,
