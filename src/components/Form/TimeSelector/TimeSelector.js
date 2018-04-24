@@ -63,7 +63,6 @@ class TimeSelector extends React.Component {
     super(props)
 
     this.state = {
-      value: undefined,
       hour: undefined,
       minute: undefined,
       expanded: false
@@ -76,22 +75,13 @@ class TimeSelector extends React.Component {
     this.generateList = this.generateList.bind(this)
     this.selectMinute = this.selectMinute.bind(this)
     this.selectHour = this.selectHour.bind(this)
-  }
-
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.value !== this.state.value) {
-      this.setState({
-        value: nextProps.value
-      })
-    }
+    this.selectTime = this.selectTime.bind(this)
   }
 
   getDisplay = function () {
-    const { value } = this.state
-    const { hours, minutes } = this.props
-    const firstLabel = (hours && hours[0] && hours[0].label) + ':' + (minutes && minutes[0] && minutes[0].label)
+    const { value } = this.props
 
-    return value || this.props.placeholder || firstLabel
+    return value || this.props.placeholder || '0:00'
   }
 
   toggleExpand = function (event) {
@@ -112,23 +102,26 @@ class TimeSelector extends React.Component {
     )
   }
 
+  selectTime = function (hour, minute) {
+    const { onChange } = this.props
+    this.setState({
+      hour,
+      minute
+    })
+    onChange({value: `${hour || 0}:${minute || '00'}`})
+  }
+
   selectMinute = function (option) {
     const { hour } = this.state
-    this.setState({
-      minute: option.value,
-      value: `${hour || '0'}:${option.value}`
-    })
+    this.selectTime(hour, option.value)
   }
 
   selectHour = function (option) {
     const { minute } = this.state
-    this.setState({
-      hour: option.value,
-      value: `${option.value}:${minute || '00'}`
-    })
+    this.selectTime(option.value, minute)
   }
 
-  generateList = function (options, selectOption, padding) {
+  generateList = function (options, selectOption, padding, onChange) {
     const { hourly } = this.props
     return options.map((option) => {
       const selected = this.state.value === option.value
@@ -156,7 +149,7 @@ class TimeSelector extends React.Component {
       [style.expanded]: this.state.expanded,
       [style.inline]: inline,
       [style[className]]: className,
-      [style.hourly]: hourly,
+      [style.hourly]: hourly
     })
 
     return (

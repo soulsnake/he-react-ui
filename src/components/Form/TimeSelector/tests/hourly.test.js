@@ -7,7 +7,7 @@ beforeEach(mount)
 
 test('<TimeSelector /> rendered correctly with fixture', () => {
   let wrapper = getWrapper()
-  
+
   expect(wrapper.find('li')).toHaveLength(24) // 24 hours
 
   expect(wrapper).toMatchSnapshot()
