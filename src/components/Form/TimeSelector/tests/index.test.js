@@ -5,10 +5,10 @@ const { mount, getWrapper } = createTestContext({ fixture })
 
 beforeEach(mount)
 
-test('<Popover /> rendered correctly with fixture', () => {
+test('<TimeSelector /> rendered correctly with fixture', () => {
   let wrapper = getWrapper()
-  expect(wrapper.find('div[role="tooltip"]').length).toEqual(1)
-  expect(wrapper.find('div[role="tooltip"] div').length).toEqual(3)
+
+  expect(wrapper.find('li')).toHaveLength(60 + 24) // 60 minutes and 24 hours
 
   expect(wrapper).toMatchSnapshot()
 })

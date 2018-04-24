@@ -18,7 +18,7 @@ class Button extends React.Component {
     small: PropTypes.bool,
     onClick: PropTypes.func,
     keyline: PropTypes.bool,
-    children: PropTypes.array,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
     disabled: PropTypes.bool,
     icon: PropTypes.string,
     squared: PropTypes.bool,

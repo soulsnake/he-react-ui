@@ -1,5 +1,5 @@
 import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../InlineSelector.fixture'
+import fixture from '../fixtures/Default.fixture'
 
 const { mount, getWrapper } = createTestContext({ fixture })
 
@@ -11,7 +11,7 @@ test('<InlineSelector /> rendered correctly with fixture', () => {
     expect(wrapper.text()).toContain(fixture.props.options[key].label)
   })
 
-  expect(wrapper.find('.select-group-btn')).toHaveLength(Object.keys(fixture.props.options).length)
+  expect(wrapper.find('div')).toHaveLength(Object.keys(fixture.props.options).length + 2)
 
   expect(wrapper).toMatchSnapshot()
 })

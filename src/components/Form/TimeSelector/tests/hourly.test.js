@@ -1,13 +1,14 @@
 import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../fixtures/Default.fixture'
+import fixture from '../fixtures/hourly.fixture'
 
 const { mount, getWrapper } = createTestContext({ fixture })
 
 beforeEach(mount)
 
-test('<Button /> rendered correctly with fixture', () => {
+test('<TimeSelector /> rendered correctly with fixture', () => {
   let wrapper = getWrapper()
-  expect(wrapper.find('button')).toHaveLength(1)
+
+  expect(wrapper.find('li')).toHaveLength(24) // 24 hours
 
   expect(wrapper).toMatchSnapshot()
 })
