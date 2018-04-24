@@ -11,7 +11,7 @@ test('<InlineSelector /> rendered correctly with fixture', () => {
     expect(wrapper.text()).toContain(fixture.props.options[key].label)
   })
 
-  expect(wrapper.find('div')).toHaveLength(Object.keys(fixture.props.options).length+2)
+  expect(wrapper.find('div')).toHaveLength(Object.keys(fixture.props.options).length + 2)
 
   expect(wrapper).toMatchSnapshot()
 })

@@ -51,7 +51,7 @@ class SingleDatePicker extends React.Component {
 
   constructor (props) {
     super(props)
-    
+
     this.state = {
       focused: false,
       date: props.date
