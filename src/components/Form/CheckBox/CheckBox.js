@@ -1,6 +1,6 @@
 /**
 *
-* SingleSelect
+* CheckBox
 *
 */
 
@@ -15,85 +15,56 @@ class CheckBox extends React.Component {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     className: PropTypes.string,
-    checked: PropTypes.bool,
     disabled: PropTypes.bool,
     label: PropTypes.string,
-    required: PropTypes.bool,
     special: PropTypes.bool,
+    value: PropTypes.bool,
     warning: PropTypes.bool,
-    onChange: PropTypes.func,
-    onCheck: PropTypes.func,
-    onUncheck: PropTypes.func
+    onChange: PropTypes.func
   }
 
   static defaultProps = {
     checked: false,
     disabled: false,
     error: '',
-    required: false,
     special: false,
-    onChange: () => {},
-    onCheck: () => {},
-    onUncheck: () => {}
+    onChange: () => {}
   }
 
   constructor (props) {
     super(props)
-    this.state = {
-      checked: props.checked
-    }
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.checked !== this.state.checked) {
-      this.setState({
-        checked: nextProps.checked
-      })
-    }
-  }
-
-  handleChange = (event) => {
+  handleClick = () => {
     if (this.props.disabled) {
       return
     }
-    this.setState({checked: !this.state.checked})
-    this.props.onChange(event)
-    if (this.state.checked) {
-      this.props.onCheck(event)
-    } else {
-      this.props.onUncheck(event)
+    const event = {
+      value: !this.props.value,
+      props: this.props
     }
+    this.props.onChange(event)
   }
 
   render () {
-    const { handleChange } = this
-    const { id, name, checked, className, disabled, label, required, special, warning, onChange, onCheck, onUncheck, ...restProps } = this.props
+    const { handleClick } = this
+    const { id, className, disabled, label, special, value, warning, onChange, ...restProps } = this.props
     const classes = {
       [style.disabled]: disabled,
       [className]: className
     }
 
     return (
-      <div className={classnames(style.outer, classes)}>
-        <input
-          id={id}
-          name={name}
-          type="checkbox"
-          className={style.input}
-          disabled={disabled}
-          required={required}
-          value={this.state.checked ? 'on' : 'off'}
-          onChange={handleChange}
-          {...restProps} />
-        <label className={style.label}
-          htmlFor={id}>
+      <div className={classnames(style.outer, classes)} id={id} {...restProps}>
+        <label className={style.label} htmlFor={id} onClick={handleClick}>
           <Icon
             className={classnames(style.checkbox, style.empty, {[style.special]: special})}
             name="CheckBoxUnchecked"
             width={20}
             height={20} />
           <Icon
-            className={classnames(style.checkbox, style.full, {[style.checked]: this.state.checked, [style.special]: special})}
+            className={classnames(style.checkbox, style.full, {[style.checked]: value, [style.special]: special})}
             name="CheckBoxChecked"
             width={20}
             height={20} />

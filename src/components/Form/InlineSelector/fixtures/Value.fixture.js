@@ -10,6 +10,7 @@ export default {
       { label: 'AM', value: '2' },
       { label: 'PM', value: '3' },
       { label: 'After Hours', value: '4' }
-    ]
+    ],
+    value: '2'
   }
 }

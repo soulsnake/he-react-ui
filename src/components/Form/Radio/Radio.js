@@ -15,6 +15,7 @@ import style from './Radio.scss'
 class Radio extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     className: PropTypes.string,
     error: PropTypes.string,
     inline: PropTypes.bool,
@@ -39,24 +40,12 @@ class Radio extends React.Component {
   constructor (props) {
     super(props)
 
-    this.state = {
-      value: props.value
-    }
     this.generateOptions = this.generateOptions.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.value !== this.state.value) {
-      this.setState({
-        value: nextProps.value
-      })
-    }
-  }
-
   generateOptions = () => {
-    const { name, options } = this.props
-    const { value } = this.state
+    const { name, options, value } = this.props
 
     return options.map((option) => (
       <div key={option.value} className={classnames(style.option, {[style.selected]: value === option.value})}
@@ -78,30 +67,29 @@ class Radio extends React.Component {
   }
 
   handleClick = (value) => {
-    const oldValue = this.state.value
+    const oldValue = this.props.value
 
-    this.setState({
-      value: value
-    })
     if (oldValue !== value) {
-      this.props.onChange({
+      const event = {
         value: value,
         props: this.props
-      })
+      }
+
+      this.props.onChange(event)
     }
   }
 
   render () {
     const { generateOptions } = this
-    const { name, className, error, inline, label, onChange, value, ...restProps } = this.props
+    const { id, className, error, inline, label, onChange, value, ...restProps } = this.props
     const classes = classnames(style.outer, {
       [style.inline]: inline,
       [className]: className
     })
 
     return (
-      <div className={classes} {...restProps}>
-        {label && <Label className={style.label}>{label}</Label>}
+      <div className={classes} id={id} {...restProps}>
+        {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <div className={style.options}>
           {generateOptions()}
         </div>

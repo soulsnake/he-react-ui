@@ -44,47 +44,51 @@ class TextField extends React.Component {
     super(props)
 
     this.state = {
-      focused: false,
-      isValid: true,
-      value: props.value
+      focused: false
     }
-    this.handleFocus = this.handleFocus.bind(this)
     this.handleBlur = this.handleBlur.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleBlur.bind(this)
+    this.handleFocus = this.handleFocus.bind(this)
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.value !== this.state.value) {
-      this.setState({
-        value: nextProps.value
-      })
+  handleFocus = (e) => {
+    const event = {
+      value: e.target.value,
+      props: this.props
     }
-  }
 
-  handleFocus = () => {
     this.setState({
       focused: true
     })
+    this.props.onFocus(event)
   }
 
-  handleBlur = () => {
+  handleBlur = (e) => {
+    const event = {
+      value: e.target.value,
+      props: this.props
+    }
+
     this.setState({
       focused: false
     })
+    this.props.onBlur(event)
   }
 
-  handleChange = (event) => {
-    this.setState({
-      isValid: this.props.validateFunc(event.target.value),
-      value: event.target.value
-    })
+  handleChange = (e) => {
+    const event = {
+      value: e.target.value,
+      props: this.props
+    }
+
     this.props.onChange(event)
   }
 
   render () {
     const { className, id, name, label, description, disabled, error, inline, marker, onBlur, onChange, onFocus, validateFunc, value, ...restProps } = this.props
-    const { focused, isValid } = this.state
-    const floating = focused || this.state.value !== ''
+    const { focused } = this.state
+    const isValid = validateFunc(value)
+    const floating = focused || value !== ''
     const classes = classnames(style.outer, {
       [style.invalid]: !isValid,
       [style.disabled]: disabled,
@@ -113,8 +117,8 @@ class TextField extends React.Component {
             onBlur={this.handleBlur}
             onChange={this.handleChange}
             disabled={disabled}
-            value={this.state.value} />
-          {(marker && this.state.value !== '') && <Icon name={isValid ? 'Tick' : 'Cross'} className={style.marker} />}
+            value={value} />
+          {(marker && value !== '') && <Icon name={isValid ? 'Tick' : 'Cross'} className={style.marker} />}
         </div>
         { (description || error) &&
           <label

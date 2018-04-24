@@ -6,7 +6,6 @@ export default {
     id: 'demo',
     name: 'demo',
     label: 'First Name',
-    description: 'Optional descriptive label',
     disabled: true
   }
 }

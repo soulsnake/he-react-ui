@@ -33,7 +33,7 @@ class SingleDatePicker extends React.Component {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    date: momentPropTypes.momentObj,
+    value: momentPropTypes.momentObj,
     style: PropTypes.object
   }
 
@@ -54,16 +54,16 @@ class SingleDatePicker extends React.Component {
 
     this.state = {
       focused: false,
-      date: props.date
+      date: props.value
     }
     this.handleDateChange = this.handleDateChange.bind(this)
     this.handleFocusChange = this.handleFocusChange.bind(this)
   }
 
   componentWillReceiveProps (nextProps) {
-    if (nextProps.date !== this.state.date) {
+    if (nextProps.value !== this.state.date) {
       this.setState({
-        date: nextProps.date
+        date: nextProps.value
       })
     }
   }
@@ -94,7 +94,7 @@ class SingleDatePicker extends React.Component {
   }
 
   render () {
-    const { id, className, date, disabled, error, inline, label, horizontalMargin, onChange, style, ...restProps } = this.props
+    const { id, className, disabled, error, inline, label, horizontalMargin, onChange, style, value, ...restProps } = this.props
     const classes = classnames(styles.outer, {
       [styles.error]: error,
       [styles.disabled]: disabled,

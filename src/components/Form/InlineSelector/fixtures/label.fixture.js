@@ -3,6 +3,8 @@ import InlineSelector from '../'
 export default {
   component: InlineSelector,
   props: {
+    id: 'demo',
+    name: 'demo',
     label: 'What time of day?',
     options: [
       { label: 'Any', value: '1' },

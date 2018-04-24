@@ -22,6 +22,7 @@ class SingleSelect extends React.Component {
     disabled: PropTypes.bool,
     inline: PropTypes.bool,
     error: PropTypes.string,
+    inline: PropTypes.bool,
     label: PropTypes.string,
     placeholder: PropTypes.string,
     options: PropTypes.array.isRequired,
@@ -42,17 +43,14 @@ class SingleSelect extends React.Component {
     disabled: false,
     error: '',
     inline: false,
-    required: false,
+    value: null,
     onChange: () => {}
   }
 
   constructor (props) {
     super(props)
-    const firstValue = (props.options && props.options[0] && props.options[0].value) || undefined
-    const value = props.value || (props.placeholder ? undefined : firstValue)
 
     this.state = {
-      value: value,
       expanded: false
     }
     this.getDisplay = this.getDisplay.bind(this)
@@ -63,27 +61,19 @@ class SingleSelect extends React.Component {
     this.generateOptions = this.generateOptions.bind(this)
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.value !== this.state.value) {
-      this.setState({
-        value: nextProps.value
-      })
-    }
-  }
-
   getDisplay = () => {
-    const { options } = this.props
-    const option = options.find(option => option.value === this.state.value)
+    const { options, value } = this.props
+    const option = options.find(option => option.value === value)
     const firstLabel = (options && options[0] && options[0].label) || ''
 
     return option ? option.label : (this.props.placeholder || firstLabel)
   }
 
-  toggleExpand = (event) => {
+  toggleExpand = () => {
     this.setState({expanded: this.props.disabled ? false : !this.state.expanded})
   }
 
-  hideExpand = (event) => {
+  hideExpand = () => {
     this.setState({expanded: false})
   }
 
@@ -92,9 +82,8 @@ class SingleSelect extends React.Component {
   }
 
   selectOption = (option) => {
-    const oldValue = this.state.value
+    const oldValue = this.props.value
     this.setState({
-      value: option.value,
       expanded: false
     })
     if (oldValue !== option.value) {
@@ -108,10 +97,13 @@ class SingleSelect extends React.Component {
   }
 
   generateOptions = () => {
+    const firstValue = (this.props.options && this.props.options[0] && this.props.options[0].value) || undefined
+    const value = this.props.value || (this.props.placeholder ? undefined : firstValue)
+
     return this.props.options.map((option) => {
-      const selected = this.state.value === option.value
+      const selected = value === option.value
       let ref = null
-      if (this.state.value === option.value) {
+      if (value === option.value) {
         ref = (item) => {
           if (item) {
             setTimeout(() => {
