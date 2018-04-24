@@ -88,6 +88,9 @@
   &:hover {
     border-color: $n_grey_2;
     color: $navy_tint_1;
+    .clock {
+      color: $navy_tint_2;
+    }
   }
   .clock {
     color: $navy_tint_2;
@@ -101,6 +104,9 @@
   }
   &:hover, &:focus {
     border-color: $sp_red;
+    .clock {
+      color: $sp_red;
+    }
   }
   &.expanded {
     .clock {
