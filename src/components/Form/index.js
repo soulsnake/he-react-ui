@@ -8,6 +8,7 @@ import Label from './Label'
 import Radio from './Radio'
 import SingleSelect from './SingleSelect'
 import TextField from './TextField'
+import TimeSelector from './TimeSelector'
 
 export {
   ActionIcon,
@@ -19,5 +20,6 @@ export {
   Radio,
   SingleDatePicker,
   SingleSelect,
-  TextField
+  TextField,
+  TimeSelector
 }
