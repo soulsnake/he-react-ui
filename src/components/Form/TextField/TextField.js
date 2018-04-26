@@ -95,7 +95,7 @@ class TextField extends React.Component {
       [style.inline]: inline,
       [style.focused]: focused,
       [style.hasMarker]: marker,
-      [style[className]]: className
+      [className]: className
     })
 
     return (

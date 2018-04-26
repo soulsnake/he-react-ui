@@ -54,7 +54,7 @@ class PopUp extends React.Component {
     const { children, className, modal, onClose, showing, style, ...restProps } = this.props
     const classes = classnames(styles.outer, {
       [styles.showing]: this.state.showing,
-      [styles[className]]: className
+      [className]: className
     })
 
     return (

@@ -151,8 +151,8 @@ class TimeSelector extends React.Component {
     const classes = classnames(style.outer, {
       [style.expanded]: this.state.expanded,
       [style.inline]: inline,
-      [style[className]]: className,
-      [style.hourly]: hourly
+      [style.hourly]: hourly,
+      [className]: className
     })
 
     return (
