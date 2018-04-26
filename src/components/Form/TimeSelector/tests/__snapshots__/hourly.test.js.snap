@@ -382,7 +382,7 @@ exports[`<TimeSelector /> rendered correctly with fixture 1`] = `
     stopPropagation={false}
   >
     <div
-      className="undefined"
+      className=""
     >
       <div
         className=""
