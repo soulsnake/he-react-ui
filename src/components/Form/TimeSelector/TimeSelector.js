@@ -103,10 +103,11 @@ class TimeSelector extends React.Component {
   }
 
   selectTime = function (hour, minute) {
-    const { onChange } = this.props
+    const { onChange, hourly } = this.props
     this.setState({
       hour,
-      minute
+      minute,
+      expanded: !hourly // Close if hourly
     })
     onChange({
       value: `${hour || 0}:${minute || '00'}`,
