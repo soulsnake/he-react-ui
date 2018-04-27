@@ -1,8 +1,8 @@
 /**
-*
-* Popup
-*
-*/
+ *
+ * Popup
+ *
+ */
 import classnames from 'classnames'
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -13,9 +13,12 @@ import LoadingSpinner from '../Loading/LoadingSpinner'
 class PopUp extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
-    className: PropTypes.string,
+    containerClass: PropTypes.string,
+    overlayClass: PropTypes.string,
+    popupClass: PropTypes.string,
     modal: PropTypes.bool,
     onClose: PropTypes.func,
+    onOpen: PropTypes.func,
     showing: PropTypes.bool,
     style: PropTypes.object
   }
@@ -23,6 +26,7 @@ class PopUp extends React.Component {
   static defaultProps = {
     modal: false,
     onClose: () => null,
+    onOpen: () => null,
     showing: false
   }
 
@@ -38,6 +42,9 @@ class PopUp extends React.Component {
       this.setState({
         showing: nextProps.showing
       })
+      if (showing) {
+        this.props.onOpen()
+      }
     }
   }
 
@@ -51,20 +58,38 @@ class PopUp extends React.Component {
   }
 
   render () {
-    const { children, className, modal, onClose, showing, style, ...restProps } = this.props
+    const {
+      children,
+      containerClass,
+      popupClass,
+      overlayClass,
+      modal,
+      onClose,
+      showing,
+      style,
+      ...restProps
+    } = this.props
     const classes = classnames(styles.outer, {
       [styles.showing]: this.state.showing,
-      [className]: className
+      [containerClass]: containerClass
     })
 
     return (
-      <div
-        className={classes}
-        {...restProps}
-      >
-        <div className={styles.overlay} onClick={this.handleClose} />
-        <div className={styles.popup} style={style}>
-          {!modal && <Icon className={styles.close} name="Cross" width={32} height={32} onClick={this.handleClose} />}
+      <div className={classes} {...restProps}>
+        <div
+          className={classnames(styles.overlay, overlayClass)}
+          onClick={this.handleClose}
+        />
+        <div className={classnames(styles.popup, popupClass)} style={style}>
+          {!modal && (
+            <Icon
+              className={styles.close}
+              name="Cross"
+              width={32}
+              height={32}
+              onClick={this.handleClose}
+            />
+          )}
           {children || <LoadingSpinner />}
         </div>
       </div>
