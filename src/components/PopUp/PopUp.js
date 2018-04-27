@@ -42,7 +42,7 @@ class PopUp extends React.Component {
       this.setState({
         showing: nextProps.showing
       })
-      if (showing) {
+      if (nextProps.showing) {
         this.props.onOpen()
       }
     }
