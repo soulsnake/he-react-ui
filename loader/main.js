@@ -40679,11 +40679,13 @@ __webpack_require__(436);
 
 __webpack_require__(437);
 
+var isDev = "production" === 'development';
+
 function run() {
   // Module is imported whenever this function is called, making sure the
   // lastest module version is used after a HMR update
   var mount = __webpack_require__(438).default;
-  mount();
+  mount({ isDev: isDev });
 }
 
 run();
@@ -40785,6 +40787,9 @@ var _extends4 = __webpack_require__(31);
 var _extends5 = _interopRequireDefault(_extends4);
 
 exports.default = function () {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      isDev = _ref.isDev;
+
   var _getUserModules = (0, _userModules2.default)(),
       fixtureModules = _getUserModules.fixtureModules,
       fixtureFiles = _getUserModules.fixtureFiles,
@@ -40813,7 +40818,9 @@ exports.default = function () {
     proxies: (0, _reactCosmosShared.importModule)(proxies),
     fixtures: fixtures,
     loaderOpts: loaderOpts,
-    dismissRuntimeErrors: _reactErrorOverlay.dismissRuntimeErrors
+    // Send a noop callback for `dismissRuntimeErrors` when exporting, because
+    // react-error-overlay is only initialized in `development` env
+    dismissRuntimeErrors: isDev ? _reactErrorOverlay.dismissRuntimeErrors : function () {}
   });
 };
 
@@ -40831,7 +40838,6 @@ var _reactErrorOverlay = __webpack_require__(125);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// eslint-disable-next-line no-undef
 var loaderOpts = {};
 
 function getNormalizedFixtureModules(fixtureModules, fixtureFiles, deprecatedComponentModules) {
@@ -40852,9 +40858,18 @@ function getNormalizedFixtureModules(fixtureModules, fixtureFiles, deprecatedCom
       var fixtureFile = fixtureFiles.find(function (f) {
         return f.filePath === next;
       });
+      if (!fixtureFile) {
+        throw new Error('Missing fixture file for path: ' + next);
+      }
+
       var components = fixtureFile.components;
 
-      var componentModule = deprecatedComponentModules[components[0].filePath];
+      var component1 = components[0];
+      if (!component1 || !component1.filePath) {
+        throw new Error('Missing component data for fixture path: ' + next);
+      }
+
+      var componentModule = deprecatedComponentModules[component1.filePath];
       var component = (0, _reactCosmosShared.importModule)(componentModule);
 
       alteredFixtures.add(next);
@@ -88218,20 +88233,16 @@ var PropsProxy = function (_Component) {
           _props$fixture = _props.fixture,
           C = _props$fixture.component,
           props = _props$fixture.props,
-          children = _props$fixture.children,
+          fixtureChildren = _props$fixture.children,
           onComponentRef = _props.onComponentRef;
 
-      // Stateless components can't have refs
+      // Legacy versions of react-cosmos supported specifying children
+      // directly on the fixture, rather than in fixture.props
 
-      return (0, _isComponentClass.isComponentClass)(C) ? _react2.default.createElement(
-        C,
-        (0, _extends3.default)({}, props, { ref: onComponentRef }),
-        children
-      ) : _react2.default.createElement(
-        C,
-        props,
-        children
-      );
+      var finalProps = (0, _extends3.default)({ children: fixtureChildren }, props);
+
+      // Stateless components can't have refs
+      return (0, _isComponentClass.isComponentClass)(C) ? _react2.default.createElement(C, (0, _extends3.default)({}, finalProps, { ref: onComponentRef })) : _react2.default.createElement(C, finalProps);
     }
   }]);
   return PropsProxy;
