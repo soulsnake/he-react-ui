@@ -16,4 +16,4 @@ pipelines:
           - yarn
           - yarn lint
           - yarn build
-          - yarn test
+          - yarn coverage
