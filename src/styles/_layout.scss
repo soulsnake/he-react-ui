@@ -1,8 +1,22 @@
 @mixin inline-block {
- 	display: inline-block;
-	margin-right: 36px;
-  	vertical-align: top;
-  	@include breakpoint(small) {
-    	margin-right: 0;
-  	}
+  display: inline-block;
+  margin-right: 36px;
+  vertical-align: top;
+  @include breakpoint(small) {
+    margin-right: 0;
+  }
+}
+
+@mixin box-sizing($box-model: border-box) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin border-radius($radius: 3px) {
+  -webkit-border-radius: $radius !important;
+  -moz-border-radius: $radius !important;
+  -ms-border-radius: $radius !important;
+  border-radius: $radius !important;
+  background-clip: padding-box;
 }
