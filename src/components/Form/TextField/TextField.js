@@ -1,8 +1,8 @@
 /**
-*
-* TextField
-*
-*/
+ *
+ * TextField
+ *
+ */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -22,7 +22,7 @@ class TextField extends React.Component {
     value: PropTypes.string,
     disabled: PropTypes.bool,
     marker: PropTypes.bool,
-    validateFunc: PropTypes.func,
+    isValid: PropTypes.bool,
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func
@@ -34,24 +34,23 @@ class TextField extends React.Component {
     inline: false,
     marker: false,
     value: '',
+    isValid: true,
     onBlur: () => {},
     onChange: () => {},
-    onFocus: () => {},
-    validateFunc: () => true
+    onFocus: () => {}
   }
 
   constructor (props) {
     super(props)
-
     this.state = {
       focused: false
     }
     this.handleBlur = this.handleBlur.bind(this)
-    this.handleChange = this.handleBlur.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.handleFocus = this.handleFocus.bind(this)
   }
 
-  handleFocus = (e) => {
+  handleFocus = e => {
     const event = {
       value: e.target.value,
       props: this.props
@@ -63,7 +62,7 @@ class TextField extends React.Component {
     this.props.onFocus(event)
   }
 
-  handleBlur = (e) => {
+  handleBlur = e => {
     const event = {
       value: e.target.value,
       props: this.props
@@ -75,19 +74,33 @@ class TextField extends React.Component {
     this.props.onBlur(event)
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     const event = {
       value: e.target.value,
       props: this.props
     }
-
     this.props.onChange(event)
   }
 
   render () {
-    const { className, id, name, label, description, disabled, error, inline, marker, onBlur, onChange, onFocus, validateFunc, value, ...restProps } = this.props
+    const {
+      className,
+      id,
+      name,
+      label,
+      description,
+      value,
+      disabled,
+      error,
+      inline,
+      marker,
+      onBlur,
+      onChange,
+      onFocus,
+      isValid,
+      ...restProps
+    } = this.props
     const { focused } = this.state
-    const isValid = validateFunc(value)
     const floating = focused || value !== ''
     const classes = classnames(style.outer, {
       [style.invalid]: !isValid,
@@ -99,14 +112,12 @@ class TextField extends React.Component {
     })
 
     return (
-      <div
-        className={classes}
-        {...restProps}>
-        <div
-          className={style.block}>
+      <div className={classes} {...restProps}>
+        <div className={style.block}>
           <label
             className={classnames(style.label, { [style.floating]: floating })}
-            htmlFor={id}>
+            htmlFor={id}
+          >
             {label}
           </label>
           <input
@@ -117,16 +128,21 @@ class TextField extends React.Component {
             onBlur={this.handleBlur}
             onChange={this.handleChange}
             disabled={disabled}
-            value={value} />
-          {(marker && value !== '') && <Icon name={isValid ? 'Tick' : 'Cross'} className={style.marker} />}
+            value={value}
+          />
+          {marker &&
+            value !== '' && (
+              <Icon
+                name={isValid ? 'Tick' : 'Cross'}
+                className={style.marker}
+              />
+            )}
         </div>
-        { (description || error) &&
-          <label
-            htmlFor={id}
-            className={style.description}>
+        {(description || error) && (
+          <label htmlFor={id} className={style.description}>
             {error || description}
           </label>
-        }
+        )}
       </div>
     )
   }
