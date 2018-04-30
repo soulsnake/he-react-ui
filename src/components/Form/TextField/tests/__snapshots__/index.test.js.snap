@@ -5,13 +5,13 @@ exports[`<TextField /> rendered correctly with fixture 1`] = `
   disabled={false}
   id="demo"
   inline={false}
+  isValid={true}
   label="First Name"
   marker={false}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  validateFunc={[Function]}
   value=""
 >
   <div

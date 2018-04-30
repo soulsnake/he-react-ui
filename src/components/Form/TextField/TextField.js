@@ -22,7 +22,7 @@ class TextField extends React.Component {
     value: PropTypes.string,
     disabled: PropTypes.bool,
     marker: PropTypes.bool,
-    validateFunc: PropTypes.func,
+    isValid: PropTypes.bool,
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func
@@ -34,29 +34,20 @@ class TextField extends React.Component {
     inline: false,
     marker: false,
     value: '',
+    isValid: true,
     onBlur: () => {},
     onChange: () => {},
-    onFocus: () => {},
-    validateFunc: () => true
+    onFocus: () => {}
   }
 
   constructor (props) {
     super(props)
     this.state = {
-      focused: false,
-      touched: false
+      focused: false
     }
     this.handleBlur = this.handleBlur.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleFocus = this.handleFocus.bind(this)
-  }
-
-  componentWillReceiveProps (nextProps) {
-    const { value } = nextProps
-
-    if (value) {
-      this.setState({ value })
-    }
   }
 
   handleFocus = e => {
@@ -78,8 +69,7 @@ class TextField extends React.Component {
     }
 
     this.setState({
-      focused: false,
-      touched: true
+      focused: false
     })
     this.props.onBlur(event)
   }
@@ -89,10 +79,6 @@ class TextField extends React.Component {
       value: e.target.value,
       props: this.props
     }
-
-    this.setState({
-      touched: true
-    })
     this.props.onChange(event)
   }
 
@@ -111,12 +97,11 @@ class TextField extends React.Component {
       onBlur,
       onChange,
       onFocus,
-      validateFunc,
+      isValid,
       ...restProps
     } = this.props
-    const { focused, touched } = this.state
+    const { focused } = this.state
     const floating = focused || value !== ''
-    const isValid = touched ? validateFunc(value) : true
     const classes = classnames(style.outer, {
       [style.invalid]: !isValid,
       [style.disabled]: disabled,
