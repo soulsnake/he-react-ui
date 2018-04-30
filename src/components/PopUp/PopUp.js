@@ -18,11 +18,13 @@ class PopUp extends React.Component {
     onClose: PropTypes.func,
     onOpen: PropTypes.func,
     showing: PropTypes.bool,
+    noPadding: PropTypes.bool,
     style: PropTypes.object
   }
 
   static defaultProps = {
     modal: false,
+    noPadding: false,
     onClose: () => null,
     onOpen: () => null,
     showing: false
@@ -63,16 +65,20 @@ class PopUp extends React.Component {
       onClose,
       showing,
       style,
+      noPadding,
       ...restProps
     } = this.props
     const classes = classnames(styles.outer, {
       [styles.showing]: this.state.showing
     })
+    const popupClasses = classnames(styles.popup, className, {
+      [styles.popupWithPadding]: !noPadding
+    })
 
     return (
       <div className={classes} {...restProps}>
         <div className={styles.overlay} onClick={this.handleClose} />
-        <div className={classnames(styles.popup, className)} style={style}>
+        <div className={popupClasses} style={style}>
           {!modal && (
             <Icon
               className={styles.close}
