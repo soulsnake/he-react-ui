@@ -4,10 +4,10 @@ export default {
   component: Table,
   props: {
     columns: [
-      {title: 'Name'},
-      {title: 'Specialty'},
+      {title: 'Name', sortable: true},
+      {title: 'Specialty', sortable: true},
       {title: 'Date of Birth', width: 'narrow'},
-      {title: 'Status', width: 'extraNarrow'}
+      {title: 'Status', sortable: true, width: 'extraNarrow'}
     ],
     body: [
       {content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active']},
