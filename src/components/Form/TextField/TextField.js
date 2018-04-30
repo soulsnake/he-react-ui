@@ -42,9 +42,10 @@ class TextField extends React.Component {
 
   constructor (props) {
     super(props)
-
+    const { value } = props
     this.state = {
-      focused: false
+      focused: false,
+      value
     }
     this.handleBlur = this.handleBlur.bind(this)
     this.handleChange = this.handleBlur.bind(this)
@@ -109,6 +110,7 @@ class TextField extends React.Component {
       validateFunc,
       ...restProps
     } = this.props
+    delete restProps.value
     const { focused, value } = this.state
     const isValid = validateFunc(value)
     const floating = focused || value !== ''
