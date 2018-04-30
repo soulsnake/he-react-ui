@@ -42,10 +42,9 @@ class TextField extends React.Component {
 
   constructor (props) {
     super(props)
-    const { value } = props
     this.state = {
       focused: false,
-      value
+      isValid: true
     }
     this.handleBlur = this.handleBlur.bind(this)
     this.handleChange = this.handleBlur.bind(this)
@@ -73,23 +72,29 @@ class TextField extends React.Component {
   }
 
   handleBlur = e => {
+    const value = e.target.value
     const event = {
-      value: e.target.value,
+      value,
       props: this.props
     }
 
     this.setState({
-      focused: false
+      focused: false,
+      isValid: this.props.validateFunc(value)
     })
     this.props.onBlur(event)
   }
 
   handleChange = e => {
+    const value = e.target.value
     const event = {
-      value: e.target.value,
+      value,
       props: this.props
     }
 
+    this.setState({
+      isValid: this.props.validateFunc(value)
+    })
     this.props.onChange(event)
   }
 
@@ -100,6 +105,7 @@ class TextField extends React.Component {
       name,
       label,
       description,
+      value,
       disabled,
       error,
       inline,
@@ -110,9 +116,7 @@ class TextField extends React.Component {
       validateFunc,
       ...restProps
     } = this.props
-    delete restProps.value
-    const { focused, value } = this.state
-    const isValid = validateFunc(value)
+    const { focused, isValid } = this.state
     const floating = focused || value !== ''
     const classes = classnames(style.outer, {
       [style.invalid]: !isValid,
@@ -140,7 +144,7 @@ class TextField extends React.Component {
             onBlur={this.handleBlur}
             onChange={this.handleChange}
             disabled={disabled}
-            value={this.state.value}
+            value={value}
           />
           {marker &&
             value !== '' && (
