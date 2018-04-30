@@ -1,5 +1,7 @@
 ## Explore components
-react-cosmos is used as development environment for UI components. Run
+react-cosmos is used as development environment for UI components. Go to https://healthengineau.github.io/he-react-ui/ to view
+
+Or to use locally, run
 ```Shell
 yarn cosmos
 ```
