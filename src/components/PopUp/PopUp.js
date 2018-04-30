@@ -60,9 +60,7 @@ class PopUp extends React.Component {
   render () {
     const {
       children,
-      containerClass,
-      popupClass,
-      overlayClass,
+      className,
       modal,
       onClose,
       showing,
@@ -70,17 +68,13 @@ class PopUp extends React.Component {
       ...restProps
     } = this.props
     const classes = classnames(styles.outer, {
-      [styles.showing]: this.state.showing,
-      [containerClass]: containerClass
+      [styles.showing]: this.state.showing
     })
 
     return (
       <div className={classes} {...restProps}>
-        <div
-          className={classnames(styles.overlay, overlayClass)}
-          onClick={this.handleClose}
-        />
-        <div className={classnames(styles.popup, popupClass)} style={style}>
+        <div className={styles.overlay} onClick={this.handleClose} />
+        <div className={classnames(styles.popup, className)} style={style}>
           {!modal && (
             <Icon
               className={styles.close}
