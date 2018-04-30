@@ -7,6 +7,8 @@
     "clean": "rm -rf ./dist",
     "build": "yarn run clean && webpack --config ./config/webpack.prod.js -p",
     "test": "NODE_ENV=test jest --env=jsdom",
+    "coverage": "NODE_ENV=test jest --env=jsdom --coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "test:watch": "yarn test -- --watch",
     "lint": "eslint . --fix --env jest",
     "cosmos": "cosmos"
@@ -21,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.5",
+    "coveralls": "^3.0.0",
     "jest": "^22.4.3",
     "moment": "^2.22.1",
     "react": "^16.2.0",

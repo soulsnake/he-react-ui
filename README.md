@@ -1,3 +1,9 @@
+# he-react-ui
+[![Build Status](https://travis-ci.org/HealthEngineAU/he-react-ui.svg?branch=master)](https://travis-ci.org/HealthEngineAU/he-react-ui)
+[![Coverage Status](https://coveralls.io/repos/github/HealthEngineAU/he-react-ui/badge.svg?branch=master)](https://coveralls.io/github/HealthEngineAU/he-react-ui?branch=master)
+
+Clean stateless react UI components built for https://healthengine.com.au
+
 ## Explore components
 react-cosmos is used as development environment for UI components. Go to https://healthengineau.github.io/he-react-ui/ to view
 
