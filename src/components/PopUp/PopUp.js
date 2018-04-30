@@ -13,9 +13,7 @@ import LoadingSpinner from '../Loading/LoadingSpinner'
 class PopUp extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
-    containerClass: PropTypes.string,
-    overlayClass: PropTypes.string,
-    popupClass: PropTypes.string,
+    className: PropTypes.string,
     modal: PropTypes.bool,
     onClose: PropTypes.func,
     onOpen: PropTypes.func,
