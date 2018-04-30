@@ -1,8 +1,8 @@
 /**
-*
-* TextField
-*
-*/
+ *
+ * TextField
+ *
+ */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -51,7 +51,15 @@ class TextField extends React.Component {
     this.handleFocus = this.handleFocus.bind(this)
   }
 
-  handleFocus = (e) => {
+  componentWillReceiveProps (nextProps) {
+    const { value } = nextProps
+
+    if (value) {
+      this.setState({ value })
+    }
+  }
+
+  handleFocus = e => {
     const event = {
       value: e.target.value,
       props: this.props
@@ -63,7 +71,7 @@ class TextField extends React.Component {
     this.props.onFocus(event)
   }
 
-  handleBlur = (e) => {
+  handleBlur = e => {
     const event = {
       value: e.target.value,
       props: this.props
@@ -75,7 +83,7 @@ class TextField extends React.Component {
     this.props.onBlur(event)
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     const event = {
       value: e.target.value,
       props: this.props
@@ -85,8 +93,23 @@ class TextField extends React.Component {
   }
 
   render () {
-    const { className, id, name, label, description, disabled, error, inline, marker, onBlur, onChange, onFocus, validateFunc, value, ...restProps } = this.props
-    const { focused } = this.state
+    const {
+      className,
+      id,
+      name,
+      label,
+      description,
+      disabled,
+      error,
+      inline,
+      marker,
+      onBlur,
+      onChange,
+      onFocus,
+      validateFunc,
+      ...restProps
+    } = this.props
+    const { focused, value } = this.state
     const isValid = validateFunc(value)
     const floating = focused || value !== ''
     const classes = classnames(style.outer, {
@@ -99,14 +122,12 @@ class TextField extends React.Component {
     })
 
     return (
-      <div
-        className={classes}
-        {...restProps}>
-        <div
-          className={style.block}>
+      <div className={classes} {...restProps}>
+        <div className={style.block}>
           <label
             className={classnames(style.label, { [style.floating]: floating })}
-            htmlFor={id}>
+            htmlFor={id}
+          >
             {label}
           </label>
           <input
@@ -117,16 +138,21 @@ class TextField extends React.Component {
             onBlur={this.handleBlur}
             onChange={this.handleChange}
             disabled={disabled}
-            value={value} />
-          {(marker && value !== '') && <Icon name={isValid ? 'Tick' : 'Cross'} className={style.marker} />}
+            value={this.state.value}
+          />
+          {marker &&
+            value !== '' && (
+              <Icon
+                name={isValid ? 'Tick' : 'Cross'}
+                className={style.marker}
+              />
+            )}
         </div>
-        { (description || error) &&
-          <label
-            htmlFor={id}
-            className={style.description}>
+        {(description || error) && (
+          <label htmlFor={id} className={style.description}>
             {error || description}
           </label>
-        }
+        )}
       </div>
     )
   }
