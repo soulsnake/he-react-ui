@@ -44,10 +44,10 @@ class TextField extends React.Component {
     super(props)
     this.state = {
       focused: false,
-      isValid: true
+      touched: false
     }
     this.handleBlur = this.handleBlur.bind(this)
-    this.handleChange = this.handleBlur.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.handleFocus = this.handleFocus.bind(this)
   }
 
@@ -72,28 +72,26 @@ class TextField extends React.Component {
   }
 
   handleBlur = e => {
-    const value = e.target.value
     const event = {
-      value,
+      value: e.target.value,
       props: this.props
     }
 
     this.setState({
       focused: false,
-      isValid: this.props.validateFunc(value)
+      touched: true
     })
     this.props.onBlur(event)
   }
 
   handleChange = e => {
-    const value = e.target.value
     const event = {
-      value,
+      value: e.target.value,
       props: this.props
     }
 
     this.setState({
-      isValid: this.props.validateFunc(value)
+      touched: true
     })
     this.props.onChange(event)
   }
@@ -116,8 +114,9 @@ class TextField extends React.Component {
       validateFunc,
       ...restProps
     } = this.props
-    const { focused, isValid } = this.state
+    const { focused, touched } = this.state
     const floating = focused || value !== ''
+    const isValid = touched ? validateFunc(value) : true
     const classes = classnames(style.outer, {
       [style.invalid]: !isValid,
       [style.disabled]: disabled,
