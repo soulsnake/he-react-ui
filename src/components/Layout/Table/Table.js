@@ -42,11 +42,11 @@ class Table extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    this.state = {
+    this.setState({
       sortAscending: true,
       sortColumn: null,
       sortedBody: nextProps.body
-    }
+    })
   }
 
   renderHeaders () {
