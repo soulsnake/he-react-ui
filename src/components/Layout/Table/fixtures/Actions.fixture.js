@@ -20,11 +20,11 @@ export default {
       {title: '', width: 'extraNarrow'}
     ],
     body: [
-      [{content: 'Barry Fullerman'}, {content: 'Chiropractor'}, {content: '23/11/1991'}, {content: 'Active'}, {content: actions}],
-      [{content: 'Tom Ackerman'}, {content: 'Psychologist'}, {content: '05/04/1975'}, {content: 'Active'}, {content: actions}],
-      [{content: '???'}, {content: '???'}, {content: '23/06/1021'}, {content: 'Immortal'}, {content: actions}],
-      [{content: 'Mary Tillerman'}, {content: 'General Practitioner'}, {content: '15/09/1984'}, {content: 'Inactive'}, {content: actions}],
-      [{content: 'Nick Wickerman'}, {content: 'Investigative Journalist'}, {content: '02/08/1987'}, {content: 'Bees'}, {content: actions}]
+      {content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active', actions]},
+      {content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active', actions]},
+      {content: ['???', '???', '23/06/1021', 'Immortal', actions]},
+      {content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive', actions]},
+      {content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees', actions]}
     ]
   }
 }
