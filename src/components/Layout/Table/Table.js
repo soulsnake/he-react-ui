@@ -27,11 +27,6 @@ class Table extends Component {
     )
   }
 
-  static loadingHeader = ['narrow', 'wide', 'extraNarrow'].map((width, index) => (
-    <div key={index} className={classnames(style.heading, {[style[width]]: width})}>
-      <LoadingStrip />
-    </div>))
-
   constructor (props) {
     super(props)
 
@@ -44,6 +39,14 @@ class Table extends Component {
     this.renderHeaders = this.renderHeaders.bind(this)
     this.renderBody = this.renderBody.bind(this)
     this.sortBody = this.sortBody.bind(this)
+  }
+
+  componentWillReceiveProps (nextProps) {
+    this.state = {
+      sortAscending: true,
+      sortColumn: null,
+      sortedBody: nextProps.body
+    }
   }
 
   renderHeaders () {
@@ -67,7 +70,10 @@ class Table extends Component {
         </div>))
       )
     } else {
-      return this.loadingHeader
+      return ['narrow', 'wide', 'extraNarrow'].map((width, index) => (
+        <div key={index} className={classnames(style.heading, {[style[width]]: width})}>
+          <LoadingStrip />
+        </div>))
     }
   }
 
@@ -94,6 +100,7 @@ class Table extends Component {
   defaultSort (a, b) {
     const stringA = String(a).toLowerCase()
     const stringB = String(b).toLowerCase()
+
     if (stringA < stringB) {
       return -1
     } else if (stringA > stringB) {
