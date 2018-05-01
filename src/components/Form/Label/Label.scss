@@ -8,10 +8,11 @@
   font-size: $label-size;
   font-weight: $regular;
   margin-bottom: 12px;
-
+  
   label {
-    cursor: pointer;
-    user-select: none;
+      cursor: pointer;
+      user-select: none;
+      vertical-align: middle;
   }
 }
 
