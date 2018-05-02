@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Notification /> rendered correctly with fixture 1`] = `
+exports[`<Notification type="confirmation" /> rendered correctly with fixture 1`] = `
 <Notification
   canClose={false}
   type="confirmation"
 >
   <div
-    className="undefined undefined"
+    className="notification confirmation"
   >
     <Tick
+      className="icon confirmation"
       height={16}
       width={16}
     >
       <svg
+        className="icon confirmation"
         height="16px"
         version="1.1"
         viewBox="0 0 24 24"
@@ -28,7 +30,9 @@ exports[`<Notification /> rendered correctly with fixture 1`] = `
         </g>
       </svg>
     </Tick>
-    <div>
+    <div
+      className="message"
+    >
       Confirmation text. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
     </div>
   </div>

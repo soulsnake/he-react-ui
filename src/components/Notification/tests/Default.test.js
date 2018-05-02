@@ -6,7 +6,7 @@ const { mount, getWrapper, unmount } = createTestContext({ fixture })
 beforeEach(mount)
 afterEach(unmount)
 
-test('<Notification /> rendered correctly with fixture', () => {
+test('<Notification type="default" /> rendered correctly with fixture', () => {
   let wrapper = getWrapper()
 
   expect(wrapper.find('div')).toHaveLength(2)

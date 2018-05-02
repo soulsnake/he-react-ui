@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Notification /> rendered correctly with fixture 1`] = `
+exports[`<Notification canClose=true type="default" /> rendered correctly with fixture 1`] = `
 <Notification
   canClose={true}
   type="default"
 >
   <div
-    className="undefined undefined"
+    className="notification default"
   >
-    <div>
+    <div
+      className="message"
+    >
       Practice Admin is getting a style refresh! To get a sneak-peek at the upcoming changes or find out more, 
       <a>
         click here
@@ -16,11 +18,13 @@ exports[`<Notification /> rendered correctly with fixture 1`] = `
       .
     </div>
     <Cross
+      className="closeIcon default"
       height={24}
       onClick={[Function]}
       width={24}
     >
       <svg
+        className="closeIcon default"
         height="24px"
         onClick={[Function]}
         version="1.1"
@@ -47,9 +51,11 @@ exports[`can close 1`] = `
   type="default"
 >
   <div
-    className="undefined undefined"
+    className="notification default"
   >
-    <div>
+    <div
+      className="message"
+    >
       Practice Admin is getting a style refresh! To get a sneak-peek at the upcoming changes or find out more, 
       <a>
         click here
@@ -57,11 +63,13 @@ exports[`can close 1`] = `
       .
     </div>
     <Cross
+      className="closeIcon default"
       height={24}
       onClick={[Function]}
       width={24}
     >
       <svg
+        className="closeIcon default"
         height="24px"
         onClick={[Function]}
         version="1.1"

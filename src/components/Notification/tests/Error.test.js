@@ -6,7 +6,7 @@ const { mount, getWrapper, unmount } = createTestContext({ fixture })
 beforeEach(mount)
 afterEach(unmount)
 
-test('<Notification /> rendered correctly with fixture', () => {
+test('<Notification type="error" /> rendered correctly with fixture', () => {
   const wrapper = getWrapper()
 
   expect(wrapper.find('Cross')).toHaveLength(1)

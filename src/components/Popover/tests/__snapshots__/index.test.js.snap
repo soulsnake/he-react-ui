@@ -7,7 +7,7 @@ exports[`<Popover /> rendered correctly with fixture 1`] = `
   positionTop={50}
 >
   <div
-    className="undefined"
+    className="popover bottom"
     role="tooltip"
     style={
       Object {
@@ -18,6 +18,7 @@ exports[`<Popover /> rendered correctly with fixture 1`] = `
     }
   >
     <div
+      className="arrow"
       style={
         Object {
           "left": undefined,
@@ -25,7 +26,9 @@ exports[`<Popover /> rendered correctly with fixture 1`] = `
         }
       }
     />
-    <div>
+    <div
+      className="content"
+    >
       The patient associated with this recall does not have a valid Australian mobile number.
     </div>
   </div>
