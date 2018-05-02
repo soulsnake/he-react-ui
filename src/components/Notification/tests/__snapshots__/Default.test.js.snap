@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification /> rendered correctly with fixture 1`] = `
+<Notification
+  canClose={false}
+  type="default"
+>
+  <div
+    className="undefined undefined"
+  >
+    <div>
+      Practice Admin is getting a style refresh! To get a sneak-peek at the upcoming changes or find out more, 
+      <a>
+        click here
+      </a>
+      .
+    </div>
+  </div>
+</Notification>
+`;
