@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
+<SubNavigationWrapped
+  item={
+    Object {
+      "badge": "FREE",
+      "items": Array [
+        Object {
+          "key": "SUMMARY",
+          "label": "Summary",
+          "route": "/feedback",
+        },
+        Object {
+          "key": "PREFERENCES",
+          "label": "Preferences",
+          "route": "/feedback/settings",
+        },
+      ],
+      "key": "FEEDBACK",
+      "label": "Patient feedback",
+      "route": "/feedback",
+      "title": "Patient feedback",
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "marginTop": "40px",
+          }
+        }
+      >
+        <SubNavigation
+          item={
+            Object {
+              "badge": "FREE",
+              "items": Array [
+                Object {
+                  "key": "SUMMARY",
+                  "label": "Summary",
+                  "route": "/feedback",
+                },
+                Object {
+                  "key": "PREFERENCES",
+                  "label": "Preferences",
+                  "route": "/feedback/settings",
+                },
+              ],
+              "key": "FEEDBACK",
+              "label": "Patient feedback",
+              "route": "/feedback",
+              "title": "Patient feedback",
+            }
+          }
+        >
+          <div>
+            <div>
+              <div>
+                <Heading
+                  h1={true}
+                  h2={false}
+                  h3={false}
+                  h4={false}
+                  nav={false}
+                >
+                  <h1
+                    className=""
+                  >
+                    Patient feedback
+                  </h1>
+                </Heading>
+                <div>
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    exact={true}
+                    key="0"
+                    title="Summary"
+                    to="/feedback"
+                  >
+                    <Route
+                      exact={true}
+                      path="/feedback"
+                    >
+                      <Link
+                        aria-current={false}
+                        replace={false}
+                        title="Summary"
+                        to="/feedback"
+                      >
+                        <a
+                          aria-current={false}
+                          href="/feedback"
+                          onClick={[Function]}
+                          title="Summary"
+                        >
+                          <span>
+                            Summary
+                          </span>
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    exact={true}
+                    key="1"
+                    title="Preferences"
+                    to="/feedback/settings"
+                  >
+                    <Route
+                      exact={true}
+                      path="/feedback/settings"
+                    >
+                      <Link
+                        aria-current={false}
+                        replace={false}
+                        title="Preferences"
+                        to="/feedback/settings"
+                      >
+                        <a
+                          aria-current={false}
+                          href="/feedback/settings"
+                          onClick={[Function]}
+                          title="Preferences"
+                        >
+                          <span>
+                            Preferences
+                          </span>
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div />
+          </div>
+        </SubNavigation>
+      </div>
+    </Router>
+  </BrowserRouter>
+</SubNavigationWrapped>
+`;

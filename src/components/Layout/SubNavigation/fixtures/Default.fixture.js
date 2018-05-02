@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import SubNavigation from '../'
 
 function SubNavigationWrapped (props) {
@@ -13,15 +12,7 @@ function SubNavigationWrapped (props) {
     </BrowserRouter>)
 }
 
-SubNavigationWrapped.propTypes = {
-  heading: PropTypes.string.isRequired,
-  tabs: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      route: PropTypes.string.isRequired
-    })
-  )
-}
+SubNavigationWrapped.propTypes = SubNavigation.propTypes
 
 export default {
   component: SubNavigationWrapped,
