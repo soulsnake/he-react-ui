@@ -1,0 +1,161 @@
+@import '../../../styles/base';
+
+$bucket-width: 76px;
+$slider-width: 264px;
+
+.outer {
+  font-family: $font-stack;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  user-select: none;
+  z-index: 99;
+}
+
+.buckets {
+  background-color: $navy_1;
+  position: absolute;
+  height: 100%;
+  width: $bucket-width;
+  z-index: 1;
+}
+
+.logoBucket {
+  cursor: pointer;
+  height: $bucket-width;
+  width: $bucket-width;
+  &:hover {
+    background-color: $navy_2_dark_20;
+  }
+  &:active {
+    background-color: $navy_2_dark_40;
+  }
+  @include transition(all 0.2s);
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  padding: 18px;
+}
+
+.topBuckets {
+  width: 100%;
+}
+
+.bottomBuckets {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+}
+
+.bucket {
+  border-left: solid 4px transparent;
+  color: $n_grey_1;
+  cursor: pointer;
+  display: block;
+  height: $bucket-width;
+  max-width: $bucket-width;
+  overflow: hidden;
+  padding-right: 4px;
+  text-decoration: none;
+  &:hover {
+    background-color: $navy_2_dark_20;
+    color: $white;
+  }
+  &:active {
+    background-color: $navy_2_dark_40;
+    color: $white;
+  }
+  &.current {
+    border-left-color: $teal_1;
+    color: $white;
+  }
+  &.bucketOpen {
+    background-color: $navy_2_dark_40;
+    color: $white;
+  }
+  @include transition(all 0.2s);
+}
+
+.bucketIcon {
+  display: block;
+  height: 24px;
+  margin: 16px auto 0;
+  width: 24px;
+}
+
+.bucketLabel {
+  display: block;
+  font-size: 11px;
+  margin: 8px auto 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sliders {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: relative;
+  width: $slider-width;
+}
+
+.slider {
+  background-color: $navy_2;
+  height: 100%;
+  left: -$slider-width;
+  position: absolute;
+  width: $slider-width;
+  &.sliderOpen {
+    background-color: $navy_2_dark_40;
+    left: $bucket-width;
+    pointer-events: auto;
+  }
+  @include transition(all 0.2s);
+  @for $i from 1 through 100 {
+    &:nth-child(#{$i}) {
+      .list {
+        top: 8 + $i * $bucket-width;
+      }
+    }
+  }
+  &.bottomSlider {
+    .list {
+      bottom: 16px;
+      top: unset;
+    }
+  }
+}
+
+.list {
+  left: 24px;
+  right: 16px;
+  position: absolute;
+}
+
+.listHeading {
+  color: $n_grey_1;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.listItem {
+  border-radius: 4px;
+  color: $white;
+  display: block;
+  font-size: 13px;
+  padding: 8px;
+  text-decoration: none;
+  &:hover {
+    background-color: $navy_2;
+  }
+  &:active {
+    background-color: $teal_1;
+  }
+  @include transition(all 0.2s);
+}
