@@ -652,7 +652,7 @@
     .inner, .inner:hover {
         :global {
             .DateInput_input {
-                background-color: $sp_light_red;
+                background-color: $sp_red_light_80;
                 border-color: $sp_red;
                 color: $sp_red;
                 &::placeholder {

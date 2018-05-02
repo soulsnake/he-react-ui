@@ -21,15 +21,15 @@
 }
 
 .confirmation {
-  background-color: $sp_light_green_20;
-  border-color: $sp_dark_green;
-  color: $sp_dark_green_40;
+  background-color: $sp_green_light_80;
+  border-color: $sp_green;
+  color: $sp_green_dark_40;
 }
 
 .error {
-  background-color: $sp_light_red_20;
+  background-color: $sp_red_light_80;
   border-color: $sp_red;
-  color: $sp_dark_red_40;
+  color: $sp_red_dark_40;
 }
 
 .confirmationIcon {
@@ -72,7 +72,7 @@
 }
 
 .warning {
-  background-color: $sp_light_yellow_20;
+  background-color: $sp_yellow_light_80;
   border-color: $sp_yellow;
-  color: $sp_dark_yellow_40;
+  color: $sp_yellow_dark_40;
 }

@@ -14,7 +14,7 @@
         .checkbox {
           color: $teal_1;
           &.special {
-            color: $sp_dark_green;
+            color: $sp_green_dark_40;
           }
         }
       }
@@ -46,7 +46,7 @@
   &:hover {
     color: $teal_1;
     &.special {
-      color: $sp_dark_green;
+      color: $sp_green_dark_40;
     }
   }
   @include transition(color 0.2s);
@@ -56,7 +56,7 @@
   color: $teal_1;
   opacity: 0;
   &.special {
-    color: $sp_dark_green;
+    color: $sp_green_dark_40;
   }
   &.checked {
     opacity: 1;
