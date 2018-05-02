@@ -14,49 +14,48 @@
   vertical-align: middle;
 }
 
-.default {
+.notification.default {
   background-color: $n_grey_4;
   border-color: $n_grey_2;
   color: $navy_1;
 }
 
-.confirmation {
+.notification.confirmation {
   background-color: $sp_green_light_80;
   border-color: $sp_green;
   color: $sp_green_dark_40;
 }
 
-.error {
+.notification.warning {
+  background-color: $sp_yellow_light_80;
+  border-color: $sp_yellow;
+  color: $sp_yellow_dark_40;
+}
+
+.notification.error {
   background-color: $sp_red_light_80;
   border-color: $sp_red;
   color: $sp_red_dark_40;
 }
 
-.confirmationIcon {
+.icon {
+  border-radius: 16px;
+  fill: $white;
+  margin-right: 8px;
+  padding: 4px;
+  vertical-align: middle;
+}
+
+.icon.confirmation {
   background-color: $sp_green;
-  border-radius: 16px;
-  fill: $white;
-  margin-right: 8px;
-  padding: 4px;
-  vertical-align: middle;
 }
 
-.warningIcon {
+.icon.warning {
   background-color: $sp_yellow;
-  border-radius: 16px;
-  fill: $white;
-  margin-right: 8px;
-  padding: 4px;
-  vertical-align: middle;
 }
 
-.errorIcon {
+.icon.error {
   background-color: $sp_red;
-  border-radius: 16px;
-  fill: $white;
-  margin-right: 8px;
-  padding: 4px;
-  vertical-align: middle;
 }
 
 .message {
@@ -71,8 +70,18 @@
   vertical-align: middle;
 }
 
-.warning {
-  background-color: $sp_yellow_light_80;
-  border-color: $sp_yellow;
-  color: $sp_yellow_dark_40;
+.closeIcon.default {
+  fill: $navy_1;
+}
+
+.closeIcon.confirmation {
+  fill: $sp_green_dark_40;
+}
+
+.closeIcon.warning {
+  fill: $sp_yellow_dark_40;
+}
+
+.closeIcon.error {
+  fill: $sp_red_dark_40;
 }

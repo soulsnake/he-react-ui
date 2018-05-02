@@ -41,11 +41,11 @@ export default class Notification extends React.Component {
       <Fragment>
         {!hidden &&
           <div className={`${styles.notification} ${styles[type]}`}>
-            {type === 'confirmation' && <Tick className={styles.confirmationIcon} height={16} width={16} />}
-            {type === 'warning' && <Alert className={styles.warningIcon} height={16} width={16} />}
-            {type === 'error' && <Cross className={styles.errorIcon} height={16} width={16} />}
+            {type === 'confirmation' && <Tick className={`${styles.icon} ${styles[type]}`} height={16} width={16} />}
+            {type === 'warning' && <Alert className={`${styles.icon} ${styles[type]}`} height={16} width={16} />}
+            {type === 'error' && <Cross className={`${styles.icon} ${styles[type]}`} height={16} width={16} />}
             <div className={styles.message}>{children}</div>
-            {canClose && <Cross className={styles.closeIcon} height={24} onClick={this.onClose} width={24} />}
+            {canClose && <Cross className={`${styles.closeIcon} ${styles[type]}`} height={24} onClick={this.onClose} width={24} />}
           </div>
         }
       </Fragment>
