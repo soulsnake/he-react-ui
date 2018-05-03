@@ -74,10 +74,12 @@
 .clock {
   color: $navy_2;
   fill: currentColor;
+  height: 32px;
   position: absolute;
   pointer-events: none;
-  top: 8px;
   right: 8px;
+  top: 8px;
+  width: 32px;
   @include transition(all 0.2s);
 }
 

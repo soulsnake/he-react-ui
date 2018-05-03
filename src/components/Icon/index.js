@@ -119,8 +119,6 @@ function createIcon (iconProps) {
 
 createIcon.propTypes = {
   name: PropTypes.string.isRequired,
-  width: PropTypes.number,
-  height: PropTypes.number,
   color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
   className: PropTypes.string
 }
