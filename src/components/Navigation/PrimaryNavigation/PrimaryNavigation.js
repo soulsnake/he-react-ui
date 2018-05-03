@@ -62,17 +62,25 @@ class PrimaryNavigation extends React.Component {
     this.renderBuckets = this.renderBuckets.bind(this)
     this.renderList = this.renderList.bind(this)
     this.renderSliders = this.renderSliders.bind(this)
+    this.toggleBucket = this.toggleBucket.bind(this)
   }
 
   closeBucket () {
     this.setState({openKey: null})
   }
 
+  toggleBucket (key) {
+    const { openKey } = this.state
+
+    this.setState({openKey: key === openKey ? null : key})
+  }
+
   renderBucket (bucket) {
+    const { closeBucket, toggleBucket } = this
     const { openKey } = this.state
     const external = isExternal(bucket.route)
     const activeChild = bucket.items && bucket.items.find(
-      (child) => matchPath(location.pathname, { path: child.route, exact: false, strict: false }) !== null)
+      (child) => matchPath(location.pathname + location.hash, { path: child.route, exact: false, strict: false }) !== null)
     const notificationChild = bucket.items && bucket.items.find((child) => child.notifications > 0)
     const content = (
       <Fragment>
@@ -88,7 +96,7 @@ class PrimaryNavigation extends React.Component {
         [styles.bucketCurrent]: activeChild
       }),
       title: bucket.label,
-      onClick: () => { this.setState({openKey: bucket.route ? null : bucket.key}) }
+      onClick: () => bucket.route ? closeBucket() : toggleBucket(bucket.key)
     }
 
     if (bucket.route) {
@@ -115,7 +123,7 @@ class PrimaryNavigation extends React.Component {
           <Icon className={styles.logo} name={logo.icon} />
         </NavLink>
         {topItems.map(item => renderBucket(item))}
-        <div className={styles.bucketFiller} />
+        <div className={styles.bucketFiller} onClick={closeBucket} />
         {bottomItems.map(item => renderBucket(item))}
       </div>
     )
@@ -147,7 +155,9 @@ class PrimaryNavigation extends React.Component {
             <span className={styles.listHeading}>{list.title}</span>
             {list.items.map(item => (
               <NavLink
-                className={styles.listItem}
+                className={classnames(styles.listItem, {
+                  [styles.listCurrent]: matchPath(location.pathname + location.hash, { path: item.route, exact: false, strict: false }) !== null
+                })}
                 activeClassName={styles.listCurrent}
                 key={item.key}
                 to={item.route}
