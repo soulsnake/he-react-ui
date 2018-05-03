@@ -16,6 +16,7 @@ import Delete from './Delete'
 import DropDown from './DropDown'
 import Edit from './Edit'
 import Ellipsis from './Ellipsis'
+import Logout from './Logout'
 import Search from './Search'
 import Settings from './Settings'
 import Sync from './Sync'
@@ -80,6 +81,8 @@ function createIcon (iconProps) {
     return <Edit {...props} />
   case 'Ellipsis':
     return <Ellipsis {...props} />
+  case 'Logout':
+    return <Logout {...props} />
   case 'RadioChecked':
     return <RadioChecked {...props} />
   case 'RadioUnchecked':

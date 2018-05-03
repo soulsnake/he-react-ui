@@ -33,6 +33,11 @@ export default {
           'route': '/feedback/settings'
         }
       ]
-    }
+    },
+    practices: [
+      'Location A',
+      'Location B'
+    ].map((practice) => ({value: practice, label: practice})),
+    logoutRoute: '/admin/auth/logout'
   }
 }
