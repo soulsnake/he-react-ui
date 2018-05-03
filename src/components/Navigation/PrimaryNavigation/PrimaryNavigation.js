@@ -55,12 +55,17 @@ class PrimaryNavigation extends React.Component {
       openKey: null
     }
 
+    this.closeBucket = this.closeBucket.bind(this)
     this.handleClickOutside = this.handleClickOutside.bind(this)
     this.renderBadge = this.renderBadge.bind(this)
     this.renderBucket = this.renderBucket.bind(this)
     this.renderBuckets = this.renderBuckets.bind(this)
     this.renderList = this.renderList.bind(this)
     this.renderSliders = this.renderSliders.bind(this)
+  }
+
+  closeBucket () {
+    this.setState({openKey: null})
   }
 
   renderBucket (bucket) {
@@ -82,18 +87,15 @@ class PrimaryNavigation extends React.Component {
         [styles.external]: external,
         [styles.bucketCurrent]: activeChild
       }),
-      activeClassName: styles.bucketCurrent,
-      href: external && bucket.route,
-      to: !external && bucket.route,
       title: bucket.label,
       onClick: () => { this.setState({openKey: bucket.route ? null : bucket.key}) }
     }
 
     if (bucket.route) {
       if (external) {
-        return (<a {...props}>{content}</a>)
+        return (<a target="_blank" href={bucket.route} {...props}>{content}</a>)
       } else {
-        return (<NavLink exact {...props}>{content}</NavLink>)
+        return (<NavLink exact to={bucket.route} activeClassName={styles.bucketCurrent} {...props}>{content}</NavLink>)
       }
     } else {
       return (<div {...props}>{content}</div>)
@@ -101,16 +103,17 @@ class PrimaryNavigation extends React.Component {
   }
 
   renderBuckets () {
-    const { renderBucket } = this
+    const { closeBucket, renderBucket } = this
     const { bottomKeys, items, logo } = this.props
     const topItems = items.filter(item => !bottomKeys.includes(item.key))
     const bottomItems = items.filter(item => bottomKeys.includes(item.key))
 
     return (
       <div className={styles.buckets}>
-        <div className={styles.logoBucket}>
+        <NavLink className={styles.logoBucket} to={logo.route}
+          onClick={closeBucket}>
           <Icon className={styles.logo} name={logo.icon} />
-        </div>
+        </NavLink>
         {topItems.map(item => renderBucket(item))}
         <div className={styles.bucketFiller} />
         {bottomItems.map(item => renderBucket(item))}
@@ -135,7 +138,7 @@ class PrimaryNavigation extends React.Component {
   }
 
   renderList (list) {
-    const { renderBadge } = this
+    const { closeBucket, renderBadge } = this
     return (
       <div className={styles.list}
         key={list.key}>
@@ -147,7 +150,8 @@ class PrimaryNavigation extends React.Component {
                 className={styles.listItem}
                 activeClassName={styles.listCurrent}
                 key={item.key}
-                to={item.route}>
+                to={item.route}
+                onClick={closeBucket}>
                 {item.label}
                 {renderBadge(item)}
               </NavLink>
