@@ -16,23 +16,12 @@ export default {
   component: SubNavigationWrapped,
   props: {
     item: {
-      key: 'FEEDBACK',
-      title: 'Patient feedback',
-      label: 'Patient feedback',
-      route: '/feedback',
-      badge: 'FREE',
-      items: [
-        {
-          'key': 'SUMMARY',
-          'label': 'Summary',
-          'route': '/feedback'
-        },
-        {
-          'key': 'PREFERENCES',
-          'label': 'Preferences',
-          'route': '/feedback/settings'
-        }
-      ]
+      key: 'HOME',
+      label: 'Home',
+      icon: 'Home',
+      title: 'Practice admin',
+      route: '/',
+      items: []
     }
   }
 }

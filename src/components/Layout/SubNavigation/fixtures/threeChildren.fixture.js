@@ -16,21 +16,25 @@ export default {
   component: SubNavigationWrapped,
   props: {
     item: {
-      key: 'FEEDBACK',
-      title: 'Patient feedback',
-      label: 'Patient feedback',
-      route: '/feedback',
-      badge: 'FREE',
+      key: 'RECALLS',
+      title: 'Recalls',
+      label: 'Recalls',
+      route: '/recalls',
       items: [
         {
-          'key': 'SUMMARY',
+          'key': 'ACTIONS',
           'label': 'Summary',
-          'route': '/feedback'
+          'route': '/recalls'
+        },
+        {
+          'key': 'TEMPLATES',
+          'label': 'Templates',
+          'route': '/recalls/templates'
         },
         {
           'key': 'PREFERENCES',
           'label': 'Preferences',
-          'route': '/feedback/settings'
+          'route': '/recalls/settings'
         }
       ]
     }

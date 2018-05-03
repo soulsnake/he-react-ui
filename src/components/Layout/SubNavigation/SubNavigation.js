@@ -3,12 +3,14 @@
  */
 
 // Vendor
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import style from './SubNavigation.scss'
 import Heading from '../Heading'
+
+const SUPPORTED_BADGES = ['NEW', 'FREE']
 
 class SubNavigation extends Component {
   static propTypes = {
@@ -16,7 +18,7 @@ class SubNavigation extends Component {
       key: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       route: PropTypes.string.isRequired,
-      badge: PropTypes.oneOf(['NEW', 'FREE']),
+      badge: PropTypes.oneOf(SUPPORTED_BADGES),
       notifications: PropTypes.number,
       items: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
@@ -26,7 +28,7 @@ class SubNavigation extends Component {
     })
   }
 
-  renderItems = (items) => {
+  renderItems (items) {
     return items.map((item, index) => (
       <NavLink
         key={index}
@@ -45,16 +47,11 @@ class SubNavigation extends Component {
     const { item } = this.props
 
     return (
-      <div>
-        <div className={style.barOuter}>
-          <div className={style.barInner}>
-            <Heading h1 className={style.heading}>{item.title}</Heading>
-            <div className={style.items}>
-              {this.renderItems(item.items)}
-            </div>
-          </div>
-        </div>
-        <div className={style.contentPusher} />
+      <div className={style.bar}>
+        <Heading h1 className={style.heading}>{item.title}</Heading>
+        {item.items && item.items.length > 0 && (<div className={style.items}>
+          {this.renderItems(item.items)}
+        </div>)}
       </div>
     )
   }
