@@ -15,6 +15,10 @@ $slider-width: 264px;
 
 .buckets {
   background-color: $navy_1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: absolute;
   height: 100%;
   width: $bucket-width;
@@ -23,6 +27,7 @@ $slider-width: 264px;
 
 .logoBucket {
   cursor: pointer;
+  flex-shrink: 0;
   height: $bucket-width;
   width: $bucket-width;
   &:hover {
@@ -40,43 +45,43 @@ $slider-width: 264px;
   padding: 18px;
 }
 
-.topBuckets {
-  width: 100%;
-}
-
-.bottomBuckets {
-  position: absolute;
-  bottom: 16px;
-  width: 100%;
+.bucketFiller {
+  flex-grow: 1;
 }
 
 .bucket {
   border-left: solid 4px transparent;
-  color: $n_grey_1;
+  color: $white;
   cursor: pointer;
   display: block;
+  flex-shrink: 0;
   height: $bucket-width;
   max-width: $bucket-width;
+  opacity: .65;
   overflow: hidden;
   padding-right: 4px;
+  position: relative;
   text-decoration: none;
   &:hover {
     background-color: $navy_2_dark_20;
-    color: $white;
+    opacity: 1;
   }
   &:active {
     background-color: $navy_2_dark_40;
-    color: $white;
+    opacity: 1;
   }
-  &.current {
+  &.bucketCurrent {
     border-left-color: $teal_1;
-    color: $white;
+    opacity: 1;
   }
   &.bucketOpen {
     background-color: $navy_2_dark_40;
-    color: $white;
+    opacity: 1;
   }
   @include transition(all 0.2s);
+  &:last-child {
+    margin-bottom: 16px;
+  }
 }
 
 .bucketIcon {
@@ -96,6 +101,31 @@ $slider-width: 264px;
   white-space: nowrap;
 }
 
+.bucketNotification {
+  animation: pulse 1.5s;
+  animation-iteration-count: infinite;
+  background-color: $teal_1;
+  border-radius: 100%;
+  height: 8px;
+  position: absolute;
+  right: 4px;
+  top: 8px;
+  width: 8px;
+
+}
+
+@keyframes pulse {
+  0% {
+     opacity: .5;
+   }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+
 .sliders {
   height: 100%;
   left: 0;
@@ -106,35 +136,36 @@ $slider-width: 264px;
 
 .slider {
   background-color: $navy_2;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   left: -$slider-width;
   position: absolute;
   width: $slider-width;
+  z-index: -99;
   &.sliderOpen {
     background-color: $navy_2_dark_40;
     left: $bucket-width;
     pointer-events: auto;
+    z-index: -1;
   }
-  @include transition(all 0.2s);
+  @include transition(left 0.6s ease, background-color 0.6s);
   @for $i from 1 through 100 {
     &:nth-child(#{$i}) {
-      .list {
-        top: 8 + $i * $bucket-width;
+      .sliderFiller {
+        height: $i * $bucket-width;
       }
     }
   }
   &.bottomSlider {
-    .list {
-      bottom: 16px;
-      top: unset;
+    .sliderFiller {
+      height: 100%;
     }
   }
 }
 
 .list {
-  left: 24px;
-  right: 16px;
-  position: absolute;
+  margin: 8px 16px 16px 24px;
 }
 
 .listHeading {
@@ -149,7 +180,7 @@ $slider-width: 264px;
   color: $white;
   display: block;
   font-size: 13px;
-  padding: 8px;
+  padding: 10px;
   text-decoration: none;
   &:hover {
     background-color: $navy_2;
@@ -157,5 +188,36 @@ $slider-width: 264px;
   &:active {
     background-color: $teal_1;
   }
+  &.listCurrent {
+    background-color: $teal_1;
+  }
   @include transition(all 0.2s);
+}
+
+.badge {
+  border-radius: 4px;
+  display: block;
+  float: right;
+  font-size: 11px;
+  margin-top: -2px;
+  padding: 4px;
+  width: fit-content;
+}
+
+.badgeNotification {
+  background-color: $sp_red;
+  border-radius: 13px;
+  min-width: 13px;
+}
+
+.badgeNew {
+  background-color: $sp_dark_green;
+}
+
+.badgeFree {
+  background-color: $sp_orange;
+}
+
+.external {
+  color: $sp_yellow;
 }

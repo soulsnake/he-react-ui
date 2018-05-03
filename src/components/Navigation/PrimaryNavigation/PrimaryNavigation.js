@@ -7,10 +7,13 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import styles from './PrimaryNavigation.scss'
-import Icon from '../../Icon'
+import isExternal from 'is-url-external'
+import { matchPath } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
+
+import styles from './PrimaryNavigation.scss'
+import Icon from '../../Icon'
 
 class PrimaryNavigation extends React.Component {
   static propTypes = {
@@ -53,6 +56,7 @@ class PrimaryNavigation extends React.Component {
     }
 
     this.handleClickOutside = this.handleClickOutside.bind(this)
+    this.renderBadge = this.renderBadge.bind(this)
     this.renderBucket = this.renderBucket.bind(this)
     this.renderBuckets = this.renderBuckets.bind(this)
     this.renderList = this.renderList.bind(this)
@@ -61,34 +65,38 @@ class PrimaryNavigation extends React.Component {
 
   renderBucket (bucket) {
     const { openKey } = this.state
+    const external = isExternal(bucket.route)
+    const activeChild = bucket.items && bucket.items.find(
+      (child) => matchPath(location.pathname, { path: child.route, exact: false, strict: false }) !== null)
+    const notificationChild = bucket.items && bucket.items.find((child) => child.notifications > 0)
     const content = (
       <Fragment>
         <Icon className={styles.bucketIcon} name={bucket.icon} />
         <span className={styles.bucketLabel}>{bucket.label}</span>
+        {notificationChild && <div className={styles.bucketNotification} />}
       </Fragment>)
+    const props = {
+      key: bucket.key,
+      className: classnames(styles.bucket, {
+        [styles.bucketOpen]: openKey === bucket.key,
+        [styles.external]: external,
+        [styles.bucketCurrent]: activeChild
+      }),
+      activeClassName: styles.bucketCurrent,
+      href: external && bucket.route,
+      to: !external && bucket.route,
+      title: bucket.label,
+      onClick: () => { this.setState({openKey: bucket.route ? null : bucket.key}) }
+    }
 
     if (bucket.route) {
-      return (
-        <NavLink
-          key={bucket.key}
-          className={styles.bucket}
-          activeClassName={styles.current}
-          to={bucket.route}
-          title={bucket.label}
-          onClick={() => { this.setState({openKey: null}) }}>
-          {content}
-        </NavLink>
-      )
+      if (external) {
+        return (<a {...props}>{content}</a>)
+      } else {
+        return (<NavLink exact {...props}>{content}</NavLink>)
+      }
     } else {
-      return (
-        <div
-          key={bucket.key}
-          className={classnames(styles.bucket, {[styles.bucketOpen]: openKey === bucket.key})}
-          title={bucket.label}
-          onClick={() => { this.setState({openKey: bucket.key}) }}>
-          {content}
-        </div>
-      )
+      return (<div {...props}>{content}</div>)
     }
   }
 
@@ -103,17 +111,31 @@ class PrimaryNavigation extends React.Component {
         <div className={styles.logoBucket}>
           <Icon className={styles.logo} name={logo.icon} />
         </div>
-        <div className={styles.topBuckets}>
-          {topItems.map(item => renderBucket(item))}
-        </div>
-        <div className={styles.bottomBuckets}>
-          {bottomItems.map(item => renderBucket(item))}
-        </div>
+        {topItems.map(item => renderBucket(item))}
+        <div className={styles.bucketFiller} />
+        {bottomItems.map(item => renderBucket(item))}
       </div>
     )
   }
 
+  renderBadge (item) {
+    if (item.notifications > 0) {
+      return (<div className={classnames(styles.badge, styles.badgeNotification)}>
+        {item.notifications}
+      </div>)
+    } else if (item.badge) {
+      return (<div className={
+        classnames(styles.badge, {
+          [styles.badgeFree]: item.badge === 'FREE',
+          [styles.badgeNew]: item.badge === 'NEW'
+        })}>
+        {item.badge}
+      </div>)
+    }
+  }
+
   renderList (list) {
+    const { renderBadge } = this
     return (
       <div className={styles.list}
         key={list.key}>
@@ -123,9 +145,11 @@ class PrimaryNavigation extends React.Component {
             {list.items.map(item => (
               <NavLink
                 className={styles.listItem}
+                activeClassName={styles.listCurrent}
                 key={item.key}
                 to={item.route}>
                 {item.label}
+                {renderBadge(item)}
               </NavLink>
             ))}
           </Fragment>)}
@@ -150,6 +174,7 @@ class PrimaryNavigation extends React.Component {
                   [styles.bottomSlider]: !top
                 })}
                 key={item.key}>
+                <div className={styles.sliderFiller} />
                 {renderList(item)}
               </div>
             )
