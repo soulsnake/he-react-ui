@@ -151,6 +151,7 @@ $slider-width: 264px;
     z-index: -1;
     .list {
       opacity: 1;
+      transform: none;
     }
     @include transition(left 0.4s ease-in-out);
   }
@@ -160,7 +161,8 @@ $slider-width: 264px;
 .list {
   margin: 8px 16px 16px 24px;
   opacity: 0;
-  @include transition(opacity 0.3s 0.1s)
+  transform: translate(-40px, -20px) scale(0.6);
+  @include transition(opacity 0.3s 0.1s, transform 0.3s 0.1s);
 }
 
 .listHeading {
