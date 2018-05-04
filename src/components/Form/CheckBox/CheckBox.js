@@ -60,21 +60,15 @@ class CheckBox extends React.Component {
         <label className={style.label} htmlFor={id} onClick={handleClick}>
           <Icon
             className={classnames(style.checkbox, style.empty, {[style.special]: special})}
-            name="CheckBoxUnchecked"
-            width={20}
-            height={20} />
+            name="CheckBoxUnchecked" />
           <Icon
             className={classnames(style.checkbox, style.full, {[style.checked]: value, [style.special]: special})}
-            name="CheckBoxChecked"
-            width={20}
-            height={20} />
+            name="CheckBoxChecked" />
           <span className={style.text}>{label}</span>
         </label>
         {warning && <Icon
           className={style.warning}
-          name="Alert"
-          width={20}
-          height={20} />}
+          name="Alert" />}
       </div>
     )
   }

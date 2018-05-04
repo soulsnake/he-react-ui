@@ -62,9 +62,7 @@ class Button extends React.Component {
         {children}
         {icon && <Icon
           className={style.icon}
-          name={icon}
-          width={24}
-          height={24} />}
+          name={icon} />}
       </button>
     )
   }

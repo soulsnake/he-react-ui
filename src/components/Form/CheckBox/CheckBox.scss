@@ -37,8 +37,10 @@
 .checkbox {
   fill: currentColor;
   float: left;
-  position: absolute;
+  height: 20px;
   left: 0;
+  position: absolute;
+  width: 20px;
 }
 
 .empty {
@@ -75,10 +77,12 @@
 }
 
 .warning {
-  float: left;
-  padding-left: 10px;
   color: $sp_orange;
   fill: currentColor;
+  float: left;
+  height: 20px;
+  padding-left: 10px;
+  width: 20px;
 }
 
 .disabled {

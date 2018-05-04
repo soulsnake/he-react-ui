@@ -115,9 +115,11 @@
 }
 
 .icon {
+  fill: currentColor;
+  height: 24px;
   margin-left: 12px;
   margin-right: -8px;
-  fill: currentColor;
+  width: 24px;
 }
 
 .disabled {

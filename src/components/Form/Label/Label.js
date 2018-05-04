@@ -35,7 +35,7 @@ class Label extends React.Component {
       <div
         className={classes}
         {...restProps}>
-        {error && <Icon className={style.icon} name="Alert" width={22} height={22} />}
+        {error && <Icon className={style.icon} name="Alert" />}
         {children ? <label htmlFor={htmlFor}>{children}</label> : <LoadingStrip className={style.loading} />}
       </div>
     )

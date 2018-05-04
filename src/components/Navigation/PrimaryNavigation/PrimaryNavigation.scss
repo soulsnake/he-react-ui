@@ -29,7 +29,8 @@ $slider-width: 264px;
   cursor: pointer;
   flex-shrink: 0;
   height: $bucket-width;
-  width: $bucket-width;
+  max-width: $bucket-width;
+  text-align: center;
   &:hover {
     background-color: $navy_2_dark_20;
   }
@@ -42,7 +43,7 @@ $slider-width: 264px;
 .logo {
   height: 40px;
   width: 40px;
-  padding: 18px;
+  margin: 18px auto;
 }
 
 .bucketFiller {
