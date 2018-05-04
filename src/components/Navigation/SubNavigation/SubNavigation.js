@@ -70,7 +70,7 @@ class SubNavigation extends Component {
                 title="Logout"
               >
                 <span className={style.rightControlOption}>
-                  <Icon className={style.icon} name="Logout" width={16} height={16} />Logout
+                  <Icon className={style.icon} name="Logout" />Logout
                 </span>
               </NavLink>
             </div>
