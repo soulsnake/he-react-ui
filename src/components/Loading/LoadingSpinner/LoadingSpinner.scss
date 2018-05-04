@@ -10,7 +10,14 @@
 .spinner {
   animation: spin 1.5s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  height: 64px;
   margin: auto auto;
+  width: 64px;
+}
+
+.fidget {
+  animation-timing-function: linear;
 }
 
 @keyframes spin {
