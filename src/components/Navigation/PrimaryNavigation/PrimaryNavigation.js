@@ -207,8 +207,12 @@ class PrimaryNavigation extends React.Component {
     this.setState({openKey: null})
   }
 
+  getCurrentData (items) {
+    return items[1]
+  }
+
   render () {
-    const { renderBuckets, renderSliders } = this
+    const { renderBuckets, renderSliders, getCurrentData } = this
     const { items } = this.props
 
     return (
@@ -219,7 +223,7 @@ class PrimaryNavigation extends React.Component {
         </div>
         <div className={styles.spacer}>&nbsp;</div>
         <div className={styles.content}>
-          <SubNavigation item={items[0]} logoutRoute="/admin/auth/logout" />
+          <SubNavigation item={getCurrentData(items)} logoutRoute="/admin/auth/logout" />
         </div>
       </div>
     )

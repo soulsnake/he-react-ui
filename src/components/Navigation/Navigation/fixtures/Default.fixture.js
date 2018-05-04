@@ -1,16 +1,16 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import SubNavigation from '../'
+import Navigation from '../'
 
 function NavigationWrapped (props) {
   const {...all} = props
   return (
     <BrowserRouter>
-      <SubNavigation {...all} />
+      <Navigation {...all} />
     </BrowserRouter>)
 }
 
-NavigationWrapped.propTypes = SubNavigation.propTypes
+NavigationWrapped.propTypes = Navigation.propTypes
 
 export default {
   component: NavigationWrapped,
