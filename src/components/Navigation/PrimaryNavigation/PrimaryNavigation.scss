@@ -165,6 +165,12 @@ $slider-width: 264px;
   @include transition(opacity 0.3s 0.1s, transform 0.3s 0.1s);
 }
 
+.bottomSlider {
+  .list {
+    transform: translate(-40px, 20px) scale(0.6);
+  }
+}
+
 .listHeading {
   color: $n_grey_1;
   display: block;

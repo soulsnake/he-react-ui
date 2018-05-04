@@ -16,6 +16,7 @@ import Cross from './Cross'
 import Delete from './Delete'
 import DropDown from './DropDown'
 import Edit from './Edit'
+import Engage from './Engage'
 import Ellipsis from './Ellipsis'
 import HealthEngine from './HealthEngine'
 import Help from './Help'
@@ -87,6 +88,8 @@ function createIcon (iconProps) {
     return <DropDown {...props} />
   case 'Edit':
     return <Edit {...props} />
+  case 'Engage':
+    return <Engage {...props} />
   case 'HealthEngine':
     return <HealthEngine {...props} />
   case 'Help':
