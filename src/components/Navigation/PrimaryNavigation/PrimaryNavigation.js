@@ -61,6 +61,7 @@ class PrimaryNavigation extends React.Component {
     this.renderBucket = this.renderBucket.bind(this)
     this.renderBuckets = this.renderBuckets.bind(this)
     this.renderList = this.renderList.bind(this)
+    this.renderSlider = this.renderSlider.bind(this)
     this.renderSliders = this.renderSliders.bind(this)
     this.toggleBucket = this.toggleBucket.bind(this)
   }
@@ -170,30 +171,32 @@ class PrimaryNavigation extends React.Component {
       </div>)
   }
 
-  renderSliders () {
+  renderSlider (item, top) {
     const { renderList } = this
-    const { bottomKeys, items } = this.props
     const { openKey } = this.state
+
+    return (<div
+      className={classnames(styles.slider, {
+        [styles.sliderOpen]: openKey === item.key,
+        [styles.topSlider]: top,
+        [styles.bottomSlider]: !top
+      })}
+      key={item.key}>
+      <div className={styles.sliderFiller} />
+      {renderList(item)}
+    </div>)
+  }
+
+  renderSliders () {
+    const { renderSlider } = this
+    const { bottomKeys, items } = this.props
+    const topItems = items.filter(item => !bottomKeys.includes(item.key))
+    const bottomItems = items.filter(item => bottomKeys.includes(item.key))
 
     return (
       <div className={styles.sliders}>
-        {items.map(
-          item => {
-            const top = !bottomKeys.includes(item.key)
-            return (
-              <div
-                className={classnames(styles.slider, {
-                  [styles.sliderOpen]: openKey === item.key,
-                  [styles.topSlider]: top,
-                  [styles.bottomSlider]: !top
-                })}
-                key={item.key}>
-                <div className={styles.sliderFiller} />
-                {renderList(item)}
-              </div>
-            )
-          }
-        )}
+        {topItems.map(item => renderSlider(item, true))}
+        {bottomItems.map(item => renderSlider(item, false))}
       </div>
     )
   }
