@@ -8,16 +8,14 @@
 }
 
 .spinner {
-  animation: spin 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
+  animation: spin 1.5s infinite ease;
   height: 64px;
   margin: auto auto;
   width: 64px;
 }
 
 .fidget {
-  animation-timing-function: linear;
+  animation: spin 0.5s infinite linear;
 }
 
 @keyframes spin {
