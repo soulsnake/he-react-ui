@@ -10,8 +10,12 @@
   justify-content: space-between;
   letter-spacing: 0;
   line-height: 24px;
-  padding: 12px 12px;
+  padding: 12px;
   vertical-align: middle;
+}
+
+.notification.closed {
+  display: none;
 }
 
 .notification.default {
@@ -41,9 +45,11 @@
 .icon {
   border-radius: 16px;
   fill: $white;
+  height: 16px;
   margin-right: 8px;
   padding: 4px;
   vertical-align: middle;
+  width: 16px;
 }
 
 .icon.confirmation {
@@ -66,8 +72,10 @@
 
 .closeIcon {
   cursor: pointer;
+  height: 24px;
   margin-left: 8px;
   vertical-align: middle;
+  width: 24px;
 }
 
 .closeIcon.default {

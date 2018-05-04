@@ -3,6 +3,8 @@
 exports[`<Notification canClose=true type="default" /> rendered correctly with fixture 1`] = `
 <Notification
   canClose={true}
+  closed={false}
+  onClose={[Function]}
   type="default"
 >
   <div
@@ -12,24 +14,24 @@ exports[`<Notification canClose=true type="default" /> rendered correctly with f
       className="message"
     >
       Practice Admin is getting a style refresh! To get a sneak-peek at the upcoming changes or find out more, 
-      <a>
+      <a
+        key="clickHere"
+      >
         click here
       </a>
       .
     </div>
     <Cross
       className="closeIcon default"
-      height={24}
       onClick={[Function]}
-      width={24}
     >
       <svg
         className="closeIcon default"
-        height="24px"
+        height="undefinedpx"
         onClick={[Function]}
         version="1.1"
         viewBox="0 0 24 24"
-        width="24px"
+        width="undefinedpx"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -48,6 +50,8 @@ exports[`<Notification canClose=true type="default" /> rendered correctly with f
 exports[`can close 1`] = `
 <Notification
   canClose={true}
+  closed={false}
+  onClose={[Function]}
   type="default"
 >
   <div
@@ -57,24 +61,24 @@ exports[`can close 1`] = `
       className="message"
     >
       Practice Admin is getting a style refresh! To get a sneak-peek at the upcoming changes or find out more, 
-      <a>
+      <a
+        key="clickHere"
+      >
         click here
       </a>
       .
     </div>
     <Cross
       className="closeIcon default"
-      height={24}
       onClick={[Function]}
-      width={24}
     >
       <svg
         className="closeIcon default"
-        height="24px"
+        height="undefinedpx"
         onClick={[Function]}
         version="1.1"
         viewBox="0 0 24 24"
-        width="24px"
+        width="undefinedpx"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -93,6 +97,46 @@ exports[`can close 1`] = `
 exports[`can close 2`] = `
 <Notification
   canClose={true}
+  closed={false}
+  onClose={[Function]}
   type="default"
-/>
+>
+  <div
+    className="notification default"
+  >
+    <div
+      className="message"
+    >
+      Practice Admin is getting a style refresh! To get a sneak-peek at the upcoming changes or find out more, 
+      <a
+        key="clickHere"
+      >
+        click here
+      </a>
+      .
+    </div>
+    <Cross
+      className="closeIcon default"
+      onClick={[Function]}
+    >
+      <svg
+        className="closeIcon default"
+        height="undefinedpx"
+        onClick={[Function]}
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="undefinedpx"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          transform="translate(7.000000, 7.000000)"
+        >
+          <path
+            d="M5,3.58578644 L8.29289322,0.292893219 C8.68341751,-0.0976310729 9.31658249,-0.0976310729 9.70710678,0.292893219 C10.0976311,0.683417511 10.0976311,1.31658249 9.70710678,1.70710678 L6.41421356,5 L9.70710678,8.29289322 C10.0976311,8.68341751 10.0976311,9.31658249 9.70710678,9.70710678 C9.31658249,10.0976311 8.68341751,10.0976311 8.29289322,9.70710678 L5,6.41421356 L1.70710678,9.70710678 C1.31658249,10.0976311 0.683417511,10.0976311 0.292893219,9.70710678 C-0.0976310729,9.31658249 -0.0976310729,8.68341751 0.292893219,8.29289322 L3.58578644,5 L0.292893219,1.70710678 C-0.0976310729,1.31658249 -0.0976310729,0.683417511 0.292893219,0.292893219 C0.683417511,-0.0976310729 1.31658249,-0.0976310729 1.70710678,0.292893219 L5,3.58578644 Z"
+          />
+        </g>
+      </svg>
+    </Cross>
+  </div>
+</Notification>
 `;

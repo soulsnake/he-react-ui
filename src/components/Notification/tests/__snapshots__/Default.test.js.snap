@@ -3,6 +3,8 @@
 exports[`<Notification type="default" /> rendered correctly with fixture 1`] = `
 <Notification
   canClose={false}
+  closed={false}
+  onClose={[Function]}
   type="default"
 >
   <div
@@ -12,7 +14,9 @@ exports[`<Notification type="default" /> rendered correctly with fixture 1`] = `
       className="message"
     >
       Practice Admin is getting a style refresh! To get a sneak-peek at the upcoming changes or find out more, 
-      <a>
+      <a
+        key="clickHere"
+      >
         click here
       </a>
       .

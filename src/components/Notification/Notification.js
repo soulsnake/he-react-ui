@@ -1,54 +1,61 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Notification.scss'
 import Alert from '../Icon/Alert'
 import Tick from '../Icon/Tick'
 import Cross from '../Icon/Cross'
+import classnames from 'classnames'
 
-export default class Notification extends React.Component {
+export default class Notification extends React.PureComponent {
   static defaultProps = {
     canClose: false,
+    closed: false,
+    onClose: () => null,
     type: 'default'
   }
 
   static propTypes = {
-    canClose: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired,
-    type: PropTypes.string.isRequired
+    canClose: PropTypes.bool,
+    children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]),
+    className: PropTypes.string,
+    closed: PropTypes.bool,
+    onClose: PropTypes.func,
+    type: PropTypes.oneOf(['confirmation', 'default', 'error', 'warning'])
   }
 
   constructor (props) {
     super(props)
 
-    this.state = {
-      hidden: false
-    }
-
-    this.onClose = this.onClose.bind(this)
+    this.handleClose = this.handleClose.bind(this)
   }
 
-  onClose () {
-    this.setState({
-      hidden: true
-    })
+  handleClose (event) {
+    this.props.onClose(event)
   }
 
   render () {
-    const { canClose, children, type } = this.props
-    const { hidden } = this.state
+    const { canClose, children, className, closed, type } = this.props
+    const notificationClasses = classnames(styles.notification, {
+      [styles[type]]: styles[type],
+      [className]: className,
+      [styles.closed]: closed
+    })
+    const iconClasses = classnames(styles.icon, {
+      [styles[type]]: styles[type]
+    })
+    const messageClasses = styles.message
+    const closeIconClasses = classnames(styles.closeIcon, {
+      [styles[type]]: styles[type]
+    })
 
     return (
-      <Fragment>
-        {!hidden &&
-          <div className={`${styles.notification} ${styles[type]}`}>
-            {type === 'confirmation' && <Tick className={`${styles.icon} ${styles[type]}`} height={16} width={16} />}
-            {type === 'warning' && <Alert className={`${styles.icon} ${styles[type]}`} height={16} width={16} />}
-            {type === 'error' && <Cross className={`${styles.icon} ${styles[type]}`} height={16} width={16} />}
-            <div className={styles.message}>{children}</div>
-            {canClose && <Cross className={`${styles.closeIcon} ${styles[type]}`} height={24} onClick={this.onClose} width={24} />}
-          </div>
-        }
-      </Fragment>
+      <div className={notificationClasses}>
+        {type === 'confirmation' && <Tick className={iconClasses} />}
+        {type === 'warning' && <Alert className={iconClasses} />}
+        {type === 'error' && <Cross className={iconClasses} />}
+        <div className={messageClasses}>{children}</div>
+        {canClose && <Cross className={closeIconClasses} onClick={this.handleClose} />}
+      </div>
     )
   }
 }
