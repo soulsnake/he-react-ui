@@ -3,7 +3,7 @@
 $bucket-width: 76px;
 $slider-width: 264px;
 
-.outer {
+.nav {
   font-family: $font-stack;
   position: fixed;
   top: 0;
@@ -235,4 +235,18 @@ $slider-width: 264px;
   100% {
     opacity: .5;
   }
+}
+
+.outer {
+  display: flex;
+}
+
+.spacer {
+  width: $bucket-width;
+  height: 100%;
+  content: ' ';
+}
+
+.content {
+  flex-grow: 1;
 }
