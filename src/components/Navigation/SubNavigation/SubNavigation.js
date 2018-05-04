@@ -6,7 +6,7 @@
 import React, { Component, Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import Heading from '../Heading'
+import Heading from '../../Layout/Heading'
 import Icon from '../../Icon'
 import SingleSelect from '../../Form/SingleSelect'
 

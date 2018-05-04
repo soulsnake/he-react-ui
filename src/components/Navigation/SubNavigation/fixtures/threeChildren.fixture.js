@@ -37,6 +37,7 @@ export default {
           'route': '/recalls/settings'
         }
       ]
-    }
+    },
+    logoutRoute: '/admin/auth/logout'
   }
 }

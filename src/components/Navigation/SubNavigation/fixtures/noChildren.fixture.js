@@ -22,6 +22,7 @@ export default {
       title: 'Practice admin',
       route: '/',
       items: []
-    }
+    },
+    logoutRoute: '/admin/auth/logout'
   }
 }
