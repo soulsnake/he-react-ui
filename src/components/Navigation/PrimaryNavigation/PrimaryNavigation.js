@@ -11,6 +11,7 @@ import isExternal from 'is-url-external'
 import { matchPath } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
+import SubNavigation from '../SubNavigation';
 
 import styles from './PrimaryNavigation.scss'
 import Icon from '../../Icon'
@@ -40,7 +41,8 @@ class PrimaryNavigation extends React.Component {
           route: PropTypes.string.isRequired
         }))
       }))
-    })).isRequired
+    })).isRequired,
+    subNavigation: PropTypes.Component
   }
 
   static defaultProps = {
@@ -207,11 +209,18 @@ class PrimaryNavigation extends React.Component {
 
   render () {
     const { renderBuckets, renderSliders } = this
+    const { items } = this.props
 
     return (
       <div className={styles.outer}>
-        {renderBuckets()}
-        {renderSliders()}
+        <div className={styles.nav}>
+          {renderBuckets()}
+          {renderSliders()}
+        </div>
+        <div className={styles.spacer}>&nbsp;</div>
+        <div className={styles.content}>
+          <SubNavigation item={items[0]} logoutRoute="/admin/auth/logout" />
+        </div>
       </div>
     )
   }
