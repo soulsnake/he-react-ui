@@ -16,7 +16,9 @@ class TabView extends Component {
     tabs: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
-        route: PropTypes.string.isRequired
+        route: PropTypes.string.isRequired,
+        exact: PropTypes.bool,
+        strict: PropTypes.bool
       })
     )
   }
@@ -28,6 +30,8 @@ class TabView extends Component {
         className={style.tab}
         activeClassName={style.selected}
         to={tab.route}
+        exact={tab.exact}
+        strict={tab.strict}
         title={tab.title}
       >
         <span>{tab.title}</span>
