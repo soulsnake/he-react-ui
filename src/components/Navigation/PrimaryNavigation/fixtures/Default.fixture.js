@@ -102,12 +102,12 @@ export default {
             key: 'REVIEWS',
             title: 'Reviews',
             label: 'Reviews',
-            route: '/reviews/summary',
+            route: '/reviews',
             items: [
               {
                 key: 'SUMMARY',
                 label: 'Reviews',
-                route: '/reviews/summary'
+                route: '/reviews'
               },
               {
                 key: 'PREFERENCES',
@@ -181,7 +181,7 @@ export default {
               },
               {
                 key: 'VIEW_PROFILE',
-                label: 'VIEW',
+                label: 'View profile',
                 route: 'http://external.url/'
               }
             ]
@@ -245,7 +245,7 @@ export default {
               {
                 key: 'AUTOMATIC',
                 label: 'Automatic',
-                route: '/automatic'
+                route: '/availability/automatic'
               }
             ]
           },

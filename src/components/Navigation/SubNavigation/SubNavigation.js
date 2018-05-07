@@ -4,14 +4,17 @@
 
 // Vendor
 import React, { Component } from 'react'
-import { Route, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { matchPath } from 'react-router'
 import PropTypes from 'prop-types'
 import Heading from '../../Layout/Heading'
 import Icon from '../../Icon'
 import SingleSelect from '../../Form/SingleSelect'
+import classnames from 'classnames'
+import isExternal from 'is-url-external'
+import HashRoute from '../../HashRoute'
 
 import style from './SubNavigation.scss'
-
 class SubNavigation extends Component {
   static propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape({
@@ -38,18 +41,29 @@ class SubNavigation extends Component {
   }
 
   renderItems (items) {
-    return items.map((item, index) => (
-      <NavLink
-        key={index}
-        className={style.item}
-        activeClassName={style.selected}
-        exact
-        to={item.route}
-        title={item.label}
-      >
-        <span>{item.label}</span>
-      </NavLink>
-    ))
+    return items.map((item, index) => {
+      if (isExternal(item.route)) {
+        return (
+          <a target="_blank" href={item.route} className={style.item}>
+            <span>{item.label}</span>
+          </a>
+        )
+      } else {
+        return (
+          <NavLink
+            key={index}
+            className={classnames(style.item, {
+              [style.selected]: matchPath(location.pathname + location.hash, { path: item.route, exact: true, strict: false }) !== null
+            })}
+            exact
+            to={item.route}
+            title={item.label}
+          >
+            <span>{item.label}</span>
+          </NavLink>
+        )
+      }
+    })
   }
 
   renderSubNav (item, practices, handleLocationChange, logoutRoute) {
@@ -87,7 +101,7 @@ class SubNavigation extends Component {
 
   renderRoutes (item, practices, handleLocationChange, logoutRoute, exact) {
     return (
-      <Route exact={exact} path={item.route} render={() => this.renderSubNav(item, practices, handleLocationChange, logoutRoute)} />
+      <HashRoute exact={exact} path={item.route} render={() => this.renderSubNav(item, practices, handleLocationChange, logoutRoute)} />
     )
   }
 
