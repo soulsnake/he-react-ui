@@ -16,6 +16,8 @@ import SubNavigation from '../SubNavigation'
 import styles from './PrimaryNavigation.scss'
 import Icon from '../../Icon'
 
+const SUPPORTED_BADGES = ['NEW', 'FREE']
+
 class PrimaryNavigation extends React.Component {
   static propTypes = {
     bottomKeys: PropTypes.arrayOf(PropTypes.string),
@@ -33,7 +35,7 @@ class PrimaryNavigation extends React.Component {
         key: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         route: PropTypes.string.isRequired,
-        badge: PropTypes.oneOf(['NEW', 'FREE']),
+        badge: PropTypes.oneOf(SUPPORTED_BADGES),
         notifications: PropTypes.number,
         items: PropTypes.arrayOf(PropTypes.shape({
           key: PropTypes.string.isRequired,
@@ -206,12 +208,8 @@ class PrimaryNavigation extends React.Component {
     this.setState({openKey: null})
   }
 
-  getCurrentData (items) {
-    return items[1].items[0]
-  }
-
   render () {
-    const { renderBuckets, renderSliders, getCurrentData } = this
+    const { renderBuckets, renderSliders } = this
     const { items } = this.props
 
     return (
@@ -222,7 +220,7 @@ class PrimaryNavigation extends React.Component {
         </div>
         <div className={styles.spacer}>&nbsp;</div>
         <div className={styles.content}>
-          <SubNavigation item={getCurrentData(items)} logoutRoute="/admin/auth/logout" />
+          <SubNavigation items={items} logoutRoute="/admin/auth/logout" />
         </div>
       </div>
     )

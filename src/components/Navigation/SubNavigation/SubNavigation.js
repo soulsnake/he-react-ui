@@ -3,8 +3,8 @@
  */
 
 // Vendor
-import React, { Component, Fragment } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Route, NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Heading from '../../Layout/Heading'
 import Icon from '../../Icon'
@@ -12,22 +12,26 @@ import SingleSelect from '../../Form/SingleSelect'
 
 import style from './SubNavigation.scss'
 
-const SUPPORTED_BADGES = ['NEW', 'FREE']
-
 class SubNavigation extends Component {
   static propTypes = {
-    item: PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
       key: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
       route: PropTypes.string,
-      badge: PropTypes.oneOf(SUPPORTED_BADGES),
-      notifications: PropTypes.number,
       items: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        route: PropTypes.string.isRequired
+        title: PropTypes.string.isRequired,
+        route: PropTypes.string.isRequired,
+        notifications: PropTypes.number,
+        items: PropTypes.arrayOf(PropTypes.shape({
+          key: PropTypes.string.isRequired,
+          label: PropTypes.string.isRequired,
+          route: PropTypes.string.isRequired
+        }))
       }))
-    }),
+    })).isRequired,
     practices: PropTypes.array,
     handleLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired
@@ -48,41 +52,52 @@ class SubNavigation extends Component {
     ))
   }
 
-  render () {
-    const { item, practices, handleLocationChange, logoutRoute } = this.props
-
+  renderSubNav (item, practices, handleLocationChange, logoutRoute) {
     return (
-      <Fragment>
-        <div className={style.bar}>
-          <div className={style.top}>
-            <Heading h1 className={style.heading}>{item.title}</Heading>
-            <div className={style.controls}>
-              {practices && practices.length > 1 &&
-              (
-                <span className={style.rightControlOption}>
-                  <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={practices} onChange={handleLocationChange} />
-                </span>
-              )}
-              <NavLink
-                key="logout"
-                to={logoutRoute}
-                className={style.topNavLink}
-                title="Logout"
-              >
-                <span className={style.rightControlOption}>
-                  <Icon className={style.icon} name="Logout" />Logout
-                </span>
-              </NavLink>
-            </div>
+      <div className={style.bar}>
+        <div className={style.top}>
+          <Heading h1 className={style.heading}>{item.title}</Heading>
+          <div className={style.controls}>
+            {practices && practices.length > 1 &&
+            (
+              <span className={style.rightControlOption}>
+                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={practices} onChange={handleLocationChange} />
+              </span>
+            )}
+            <NavLink
+              key="logout"
+              to={logoutRoute}
+              className={style.topNavLink}
+              title="Logout"
+            >
+              <span className={style.rightControlOption}>
+                <Icon className={style.icon} name="Logout" />Logout
+              </span>
+            </NavLink>
           </div>
-          {item.items && item.items.length > 0 && (
-            <div className={style.items}>
-              {this.renderItems(item.items)}
-            </div>
-          )}
         </div>
-      </Fragment>
+        {item.items && item.items.length > 0 && (
+          <div className={style.items}>
+            {this.renderItems(item.items)}
+          </div>
+        )}
+      </div>
     )
+  }
+
+  renderRoutes (item, practices, handleLocationChange, logoutRoute) {
+    return (
+      <Route path={item.route} render={() => this.renderSubNav(item, practices, handleLocationChange, logoutRoute)} />
+    )
+  }
+
+  render () {
+    const { items, practices, handleLocationChange, logoutRoute } = this.props
+    return items.map((item) => {
+      return item.items && item.items.map((item) => {
+        return this.renderRoutes(item, practices, handleLocationChange, logoutRoute)
+      })
+    })
   }
 }
 
