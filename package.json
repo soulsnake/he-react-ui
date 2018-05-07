@@ -20,7 +20,7 @@
     "components"
   ],
   "author": "HealthEngine",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.5",
     "coveralls": "^3.0.0",
