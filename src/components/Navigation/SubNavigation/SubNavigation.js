@@ -19,7 +19,7 @@ class SubNavigation extends Component {
     item: PropTypes.shape({
       key: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      route: PropTypes.string.isRequired,
+      route: PropTypes.string,
       badge: PropTypes.oneOf(SUPPORTED_BADGES),
       notifications: PropTypes.number,
       items: PropTypes.arrayOf(PropTypes.shape({

@@ -11,7 +11,7 @@ import isExternal from 'is-url-external'
 import { matchPath } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
-import SubNavigation from '../SubNavigation';
+import SubNavigation from '../SubNavigation'
 
 import styles from './PrimaryNavigation.scss'
 import Icon from '../../Icon'
@@ -41,8 +41,7 @@ class PrimaryNavigation extends React.Component {
           route: PropTypes.string.isRequired
         }))
       }))
-    })).isRequired,
-    subNavigation: PropTypes.Component
+    })).isRequired
   }
 
   static defaultProps = {
@@ -208,7 +207,7 @@ class PrimaryNavigation extends React.Component {
   }
 
   getCurrentData (items) {
-    return items[1]
+    return items[1].items[0]
   }
 
   render () {

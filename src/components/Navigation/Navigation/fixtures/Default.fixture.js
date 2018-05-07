@@ -123,7 +123,7 @@ export default {
       {
         key: 'CARE',
         label: 'Care',
-        icon: 'Patients',
+        icon: 'Engage',
         title: 'Care',
         items: [
           {
