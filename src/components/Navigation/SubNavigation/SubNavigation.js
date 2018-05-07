@@ -85,18 +85,22 @@ class SubNavigation extends Component {
     )
   }
 
-  renderRoutes (item, practices, handleLocationChange, logoutRoute) {
+  renderRoutes (item, practices, handleLocationChange, logoutRoute, exact) {
     return (
-      <Route path={item.route} render={() => this.renderSubNav(item, practices, handleLocationChange, logoutRoute)} />
+      <Route exact={exact} path={item.route} render={() => this.renderSubNav(item, practices, handleLocationChange, logoutRoute)} />
     )
   }
 
   render () {
     const { items, practices, handleLocationChange, logoutRoute } = this.props
     return items.map((item) => {
-      return item.items && item.items.map((item) => {
-        return this.renderRoutes(item, practices, handleLocationChange, logoutRoute)
-      })
+      if (item.items) {
+        return item.items && item.items.map((item) => {
+          return this.renderRoutes(item, practices, handleLocationChange, logoutRoute)
+        })
+      } else {
+        return this.renderRoutes(item, practices, handleLocationChange, logoutRoute, true)
+      }
     })
   }
 }
