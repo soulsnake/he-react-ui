@@ -12,7 +12,7 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
   submit={false}
 >
   <button
-    className=""
+    className="button teal"
     onClick={[Function]}
     type="button"
   >
