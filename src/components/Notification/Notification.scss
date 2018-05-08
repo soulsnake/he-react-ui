@@ -1,0 +1,95 @@
+@import '../../styles/base';
+
+.notification {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  font-family: $font-stack;
+  font-size: $notification-size;
+  justify-content: space-between;
+  letter-spacing: 0;
+  line-height: 24px;
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.notification.closed {
+  display: none;
+}
+
+.notification.default {
+  background-color: $n_grey_4;
+  border-color: $n_grey_2;
+  color: $navy_1;
+}
+
+.notification.confirmation {
+  background-color: $sp_green_light_80;
+  border-color: $sp_green;
+  color: $sp_green_dark_40;
+}
+
+.notification.warning {
+  background-color: $sp_yellow_light_80;
+  border-color: $sp_yellow;
+  color: $sp_yellow_dark_40;
+}
+
+.notification.error {
+  background-color: $sp_red_light_80;
+  border-color: $sp_red;
+  color: $sp_red_dark_40;
+}
+
+.icon {
+  border-radius: 16px;
+  fill: $white;
+  height: 16px;
+  margin-right: 8px;
+  padding: 4px;
+  vertical-align: middle;
+  width: 16px;
+}
+
+.icon.confirmation {
+  background-color: $sp_green_base;
+}
+
+.icon.warning {
+  background-color: $sp_yellow;
+}
+
+.icon.error {
+  background-color: $sp_red;
+}
+
+.message {
+  display: inline;
+  flex: 1;
+  vertical-align: middle;
+}
+
+.closeIcon {
+  cursor: pointer;
+  height: 24px;
+  margin-left: 8px;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.closeIcon.default {
+  fill: $navy_1;
+}
+
+.closeIcon.confirmation {
+  fill: $sp_green_dark_40;
+}
+
+.closeIcon.warning {
+  fill: $sp_yellow_dark_40;
+}
+
+.closeIcon.error {
+  fill: $sp_red_dark_40;
+}

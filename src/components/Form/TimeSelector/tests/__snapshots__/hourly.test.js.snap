@@ -382,27 +382,28 @@ exports[`<TimeSelector /> rendered correctly with fixture 1`] = `
     stopPropagation={false}
   >
     <div
-      className=""
+      className="outer hourly"
     >
       <div
-        className=""
+        className="select"
         onClick={[Function]}
       >
         <span>
           0:00
         </span>
         <Icon
+          className="clock"
           height={32}
           name="Clock"
           width={32}
         >
           <Clock
-            className=""
+            className="icon clock"
             height={32}
             width={32}
           >
             <svg
-              className=""
+              className="icon clock"
               height="32px"
               version="1.1"
               viewBox="0 0 26 26"
@@ -421,171 +422,173 @@ exports[`<TimeSelector /> rendered correctly with fixture 1`] = `
           </Clock>
         </Icon>
       </div>
-      <div>
+      <div
+        className="options"
+      >
         <ul>
           <li
-            className=""
+            className="option"
             key="0"
             onClick={[Function]}
           >
             0:00
           </li>
           <li
-            className=""
+            className="option"
             key="1"
             onClick={[Function]}
           >
             1:00
           </li>
           <li
-            className=""
+            className="option"
             key="2"
             onClick={[Function]}
           >
             2:00
           </li>
           <li
-            className=""
+            className="option"
             key="3"
             onClick={[Function]}
           >
             3:00
           </li>
           <li
-            className=""
+            className="option"
             key="4"
             onClick={[Function]}
           >
             4:00
           </li>
           <li
-            className=""
+            className="option"
             key="5"
             onClick={[Function]}
           >
             5:00
           </li>
           <li
-            className=""
+            className="option"
             key="6"
             onClick={[Function]}
           >
             6:00
           </li>
           <li
-            className=""
+            className="option"
             key="7"
             onClick={[Function]}
           >
             7:00
           </li>
           <li
-            className=""
+            className="option"
             key="8"
             onClick={[Function]}
           >
             8:00
           </li>
           <li
-            className=""
+            className="option"
             key="9"
             onClick={[Function]}
           >
             9:00
           </li>
           <li
-            className=""
+            className="option"
             key="10"
             onClick={[Function]}
           >
             10:00
           </li>
           <li
-            className=""
+            className="option"
             key="11"
             onClick={[Function]}
           >
             11:00
           </li>
           <li
-            className=""
+            className="option"
             key="12"
             onClick={[Function]}
           >
             12:00
           </li>
           <li
-            className=""
+            className="option"
             key="13"
             onClick={[Function]}
           >
             13:00
           </li>
           <li
-            className=""
+            className="option"
             key="14"
             onClick={[Function]}
           >
             14:00
           </li>
           <li
-            className=""
+            className="option"
             key="15"
             onClick={[Function]}
           >
             15:00
           </li>
           <li
-            className=""
+            className="option"
             key="16"
             onClick={[Function]}
           >
             16:00
           </li>
           <li
-            className=""
+            className="option"
             key="17"
             onClick={[Function]}
           >
             17:00
           </li>
           <li
-            className=""
+            className="option"
             key="18"
             onClick={[Function]}
           >
             18:00
           </li>
           <li
-            className=""
+            className="option"
             key="19"
             onClick={[Function]}
           >
             19:00
           </li>
           <li
-            className=""
+            className="option"
             key="20"
             onClick={[Function]}
           >
             20:00
           </li>
           <li
-            className=""
+            className="option"
             key="21"
             onClick={[Function]}
           >
             21:00
           </li>
           <li
-            className=""
+            className="option"
             key="22"
             onClick={[Function]}
           >
             22:00
           </li>
           <li
-            className=""
+            className="option"
             key="23"
             onClick={[Function]}
           >
