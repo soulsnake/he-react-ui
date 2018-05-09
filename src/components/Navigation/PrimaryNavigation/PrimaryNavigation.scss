@@ -50,70 +50,6 @@ $slider-width: 264px;
   flex-grow: 1;
 }
 
-.bucket {
-  border-left: solid 4px transparent;
-  color: $white;
-  cursor: pointer;
-  display: block;
-  flex-shrink: 0;
-  height: $bucket-width;
-  max-width: $bucket-width;
-  opacity: .65;
-  overflow: hidden;
-  padding-right: 4px;
-  position: relative;
-  text-decoration: none;
-  &:hover {
-    background-color: $navy_2_dark_20;
-    opacity: 1;
-  }
-  &:active {
-    background-color: $navy_2_dark_40;
-    opacity: 1;
-  }
-  &.bucketCurrent {
-    border-left-color: $teal_1;
-    opacity: 1;
-  }
-  &.bucketOpen {
-    background-color: $navy_2_dark_40;
-    opacity: 1;
-  }
-  @include transition(all 0.2s);
-  &:last-child {
-    margin-bottom: 16px;
-  }
-}
-
-.bucketIcon {
-  display: block;
-  height: 24px;
-  margin: 16px auto 0;
-  width: 24px;
-}
-
-.bucketLabel {
-  display: block;
-  font-size: 11px;
-  margin: 8px auto 0;
-  overflow: hidden;
-  text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.bucketNotification {
-  animation: pulse 1.5s;
-  animation-iteration-count: infinite;
-  background-color: $teal_1;
-  border-radius: 100%;
-  height: 8px;
-  position: absolute;
-  right: 4px;
-  top: 8px;
-  width: 8px;
-}
-
 .sliders {
   height: 100%;
   left: 0;
@@ -168,56 +104,6 @@ $slider-width: 264px;
   .list {
     transform: translate(-40px, 20px) scale(0.6);
   }
-}
-
-.listHeading {
-  color: $n_grey_1;
-  display: block;
-  font-size: 15px;
-  margin-bottom: 16px;
-}
-
-.listItem {
-  border-radius: 4px;
-  color: $white;
-  display: block;
-  font-size: 13px;
-  padding: 10px;
-  text-decoration: none;
-  &:hover {
-    background-color: $navy_2;
-  }
-  &:active {
-    background-color: $teal_1;
-  }
-  &.listCurrent {
-    background-color: $teal_1;
-  }
-  @include transition(all 0.2s);
-}
-
-.badge {
-  border-radius: 4px;
-  display: block;
-  float: right;
-  font-size: 11px;
-  margin-top: -2px;
-  padding: 4px;
-  width: fit-content;
-}
-
-.badgeNotification {
-  background-color: $sp_red;
-  border-radius: 13px;
-  min-width: 13px;
-}
-
-.badgeNew {
-  background-color: $sp_dark_green;
-}
-
-.badgeFree {
-  background-color: $sp_orange;
 }
 
 .external {
