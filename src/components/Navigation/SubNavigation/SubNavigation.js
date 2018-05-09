@@ -12,29 +12,21 @@ import Icon from '../../Icon'
 import SingleSelect from '../../Form/SingleSelect'
 import classnames from 'classnames'
 import isExternal from 'is-url-external'
-import HashRoute from '../../HashRoute'
 
 import style from './SubNavigation.scss'
 class SubNavigation extends Component {
   static propTypes = {
-    items: PropTypes.arrayOf(PropTypes.shape({
+    item: PropTypes.shape({
       key: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      icon: PropTypes.string.isRequired,
-      route: PropTypes.string,
+      route: PropTypes.string.isRequired,
+      notifications: PropTypes.number,
       items: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        route: PropTypes.string.isRequired,
-        notifications: PropTypes.number,
-        items: PropTypes.arrayOf(PropTypes.shape({
-          key: PropTypes.string.isRequired,
-          label: PropTypes.string.isRequired,
-          route: PropTypes.string.isRequired
-        }))
+        label: PropTypes.string.isRequired,
+        route: PropTypes.string.isRequired
       }))
-    })).isRequired,
+    }).isRequired,
     practices: PropTypes.array,
     handleLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired
@@ -66,7 +58,8 @@ class SubNavigation extends Component {
     })
   }
 
-  renderSubNav (item, practices, handleLocationChange, logoutRoute) {
+  render () {
+    const { item, practices, handleLocationChange, logoutRoute } = this.props
     return (
       <div className={style.bar}>
         <div className={style.top}>
@@ -97,25 +90,6 @@ class SubNavigation extends Component {
         )}
       </div>
     )
-  }
-
-  renderRoutes (item, practices, handleLocationChange, logoutRoute, exact) {
-    return (
-      <HashRoute exact={exact} path={item.route} render={() => this.renderSubNav(item, practices, handleLocationChange, logoutRoute)} />
-    )
-  }
-
-  render () {
-    const { items, practices, handleLocationChange, logoutRoute } = this.props
-    return items.map((item) => {
-      if (item.items) {
-        return item.items && item.items.map((item) => {
-          return this.renderRoutes(item, practices, handleLocationChange, logoutRoute)
-        })
-      } else {
-        return this.renderRoutes(item, practices, handleLocationChange, logoutRoute, true)
-      }
-    })
   }
 }
 

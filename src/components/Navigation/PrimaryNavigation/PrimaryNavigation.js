@@ -12,6 +12,7 @@ import { matchPath } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
 import SubNavigation from '../SubNavigation'
+import HashRoute from '../../HashRoute'
 
 import styles from './PrimaryNavigation.scss'
 import Icon from '../../Icon'
@@ -43,7 +44,10 @@ class PrimaryNavigation extends React.Component {
           route: PropTypes.string.isRequired
         }))
       }))
-    })).isRequired
+    })).isRequired,
+    practices: PropTypes.array,
+    handleLocationChange: PropTypes.func,
+    logoutRoute: PropTypes.string.isRequired
   }
 
   static defaultProps = {
@@ -67,6 +71,7 @@ class PrimaryNavigation extends React.Component {
     this.renderSlider = this.renderSlider.bind(this)
     this.renderSliders = this.renderSliders.bind(this)
     this.toggleBucket = this.toggleBucket.bind(this)
+    this.renderSubNav = this.renderSubNav.bind(this)
   }
 
   closeBucket () {
@@ -208,9 +213,34 @@ class PrimaryNavigation extends React.Component {
     this.setState({openKey: null})
   }
 
+  renderRoutes (item, practices, handleLocationChange, logoutRoute, exact) {
+    return (
+      <HashRoute
+        exact={exact}
+        path={item.route}
+        render={
+          () => (<SubNavigation item={item} logoutRoute="/admin/auth/logout" />)
+        }
+      />
+    )
+  }
+
+  renderSubNav (items, practices, handleLocationChange, logoutRoute) {
+    const { renderRoutes } = this
+    return items.map((item) => {
+      if (item.items) {
+        return item.items && item.items.map((item) => {
+          return renderRoutes(item, practices, handleLocationChange, logoutRoute)
+        })
+      } else {
+        return renderRoutes(item, practices, handleLocationChange, logoutRoute, true)
+      }
+    })
+  }
+
   render () {
-    const { renderBuckets, renderSliders } = this
-    const { items } = this.props
+    const { renderBuckets, renderSliders, renderSubNav } = this
+    const { items, practices, handleLocationChange, logoutRoute } = this.props
 
     return (
       <div className={styles.outer}>
@@ -220,7 +250,7 @@ class PrimaryNavigation extends React.Component {
         </div>
         <div className={styles.spacer}>&nbsp;</div>
         <div className={styles.content}>
-          <SubNavigation items={items} logoutRoute="/admin/auth/logout" />
+          {renderSubNav(items, practices, handleLocationChange, logoutRoute)}
         </div>
       </div>
     )

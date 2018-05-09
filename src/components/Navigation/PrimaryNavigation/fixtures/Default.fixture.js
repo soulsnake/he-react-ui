@@ -134,17 +134,17 @@ export default {
               {
                 key: 'ACTIONS',
                 label: 'Actions',
-                route: '/recalls#actions'
+                route: '/recalls'
               },
               {
                 key: 'TEMPLATES',
                 label: 'Templates',
-                route: '/feedback#templates'
+                route: '/recalls#templates'
               },
               {
                 key: 'PREFERENCES',
                 label: 'Preferences',
-                route: '/recalls#settings'
+                route: '/recalls/settings'
               }
             ]
           },
