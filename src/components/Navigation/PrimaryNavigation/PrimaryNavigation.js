@@ -4,11 +4,9 @@
  *
  */
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import isExternal from 'is-url-external'
-import { matchPath } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
 import SubNavigation from '../SubNavigation'
@@ -17,7 +15,7 @@ import HashRoute from '../../HashRoute'
 import styles from './PrimaryNavigation.scss'
 import Icon from '../../Icon'
 import Bucket from '../Bucket'
-import List from '../List'
+import Slider from '../Slider'
 
 const SUPPORTED_BADGES = ['NEW', 'FREE']
 
@@ -67,7 +65,6 @@ class PrimaryNavigation extends Component {
     this.closeBucket = this.closeBucket.bind(this)
     this.handleClickOutside = this.handleClickOutside.bind(this)
     this.renderBuckets = this.renderBuckets.bind(this)
-    this.renderSlider = this.renderSlider.bind(this)
     this.renderSliders = this.renderSliders.bind(this)
     this.toggleBucket = this.toggleBucket.bind(this)
     this.renderSubNav = this.renderSubNav.bind(this)
@@ -98,37 +95,22 @@ class PrimaryNavigation extends Component {
         </NavLink>
         {topItems.map(item => <Bucket open={item.key === openKey} onClickParent={() => toggleBucket(item.key)} onClickRoute={closeBucket} {...item} />)}
         <div className={styles.bucketFiller} onClick={closeBucket} />
-        {bottomItems.map(item => <Bucket open={item.key === openKey} onClickParent={toggleBucket} onClickRoute={closeBucket} {...item} />)}
+        {bottomItems.map(item => <Bucket open={item.key === openKey} onClickParent={() => toggleBucket(item.key)} onClickRoute={closeBucket} {...item} />)}
       </div>
     )
   }
 
-  renderSlider (item, top) {
-    const { openKey } = this.state
-    const { closeBucket } = this
-
-    return (<div
-      className={classnames(styles.slider, {
-        [styles.sliderOpen]: openKey === item.key,
-        [styles.topSlider]: top,
-        [styles.bottomSlider]: !top
-      })}
-      key={item.key}>
-      <div className={styles.sliderFiller} />
-      <List className={styles.list} onSelect={closeBucket} {...item} />
-    </div>)
-  }
-
   renderSliders () {
-    const { renderSlider } = this
+    const { closeBucket } = this
     const { bottomKeys, items } = this.props
+    const { openKey } = this.state
     const topItems = items.filter(item => !bottomKeys.includes(item.key))
     const bottomItems = items.filter(item => bottomKeys.includes(item.key))
 
     return (
       <div className={styles.sliders}>
-        {topItems.map(item => renderSlider(item, true))}
-        {bottomItems.map(item => renderSlider(item, false))}
+        {topItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} top {...item} />)}
+        {bottomItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} top {...item} />)}
       </div>
     )
   }
