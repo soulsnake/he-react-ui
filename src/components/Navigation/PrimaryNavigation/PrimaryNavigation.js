@@ -4,7 +4,7 @@
  *
  */
 
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import isExternal from 'is-url-external'
@@ -19,7 +19,7 @@ import Icon from '../../Icon'
 
 const SUPPORTED_BADGES = ['NEW', 'FREE']
 
-class PrimaryNavigation extends React.Component {
+class PrimaryNavigation extends Component {
   static propTypes = {
     bottomKeys: PropTypes.arrayOf(PropTypes.string),
     logo: PropTypes.shape({
@@ -87,16 +87,20 @@ class PrimaryNavigation extends React.Component {
   renderBucket (bucket) {
     const { closeBucket, toggleBucket } = this
     const { openKey } = this.state
+
     const external = isExternal(bucket.route)
     const activeChild = bucket.items && bucket.items.find(
       (child) => matchPath(location.pathname + location.hash, { path: child.route, exact: false, strict: false }) !== null)
+
     const notificationChild = bucket.items && bucket.items.find((child) => child.notifications > 0)
+
     const content = (
       <Fragment>
         <Icon className={styles.bucketIcon} name={bucket.icon} />
         <span className={styles.bucketLabel}>{bucket.label}</span>
         {notificationChild && <div className={styles.bucketNotification} />}
       </Fragment>)
+
     const props = {
       key: bucket.key,
       className: classnames(styles.bucket, {
@@ -213,13 +217,14 @@ class PrimaryNavigation extends React.Component {
     this.setState({openKey: null})
   }
 
-  renderRoutes (item, practices, handleLocationChange, logoutRoute, exact) {
+  renderRoutes (item, practices, onLocationChange, logoutRoute, exact) {
     return (
       <HashRoute
+        key={'Subnav_' + item.key}
         exact={exact}
         path={item.route}
         render={
-          () => (<SubNavigation item={item} logoutRoute="/admin/auth/logout" />)
+          () => (<SubNavigation item={item} logoutRoute={logoutRoute} practices={practices} onLocationChange={onLocationChange} />)
         }
       />
     )
@@ -228,11 +233,10 @@ class PrimaryNavigation extends React.Component {
   renderSubNav (items, practices, handleLocationChange, logoutRoute) {
     const { renderRoutes } = this
     return items.map((item) => {
-      if (item.items) {
-        return item.items && item.items.map((item) => {
-          return renderRoutes(item, practices, handleLocationChange, logoutRoute)
-        })
-      } else {
+      switch ((item.items && item.items.length > 0)) {
+      case true:
+        return item.items.map(child => renderRoutes(child, practices, handleLocationChange, logoutRoute, false))
+      default:
         return renderRoutes(item, practices, handleLocationChange, logoutRoute, true)
       }
     })

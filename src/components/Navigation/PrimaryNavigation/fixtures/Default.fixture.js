@@ -13,6 +13,11 @@ function PrimaryNavigationWrapped (props) {
 export default {
   component: PrimaryNavigationWrapped,
   props: {
+    logoutRoute: '/admin/auth/logout',
+    practices: [
+      'Location A',
+      'Location B'
+    ].map((practice) => ({value: practice, label: practice})),
     bottomKeys: [ 'HELP', 'SETTINGS' ],
     logo: {
       icon: 'HealthEngine',
