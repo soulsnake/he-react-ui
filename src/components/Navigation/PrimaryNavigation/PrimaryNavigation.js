@@ -221,7 +221,7 @@ class PrimaryNavigation extends Component {
     return (
       <HashRoute
         key={'Subnav_' + item.key}
-        exact={exact}
+        exact={item.route === '/'} // Slash will match anything so we need to be exact in that case.
         path={item.route}
         render={
           () => (<SubNavigation item={item} logoutRoute={logoutRoute} practices={practices} onLocationChange={onLocationChange} />)
@@ -233,11 +233,11 @@ class PrimaryNavigation extends Component {
   renderSubNav (items, practices, handleLocationChange, logoutRoute) {
     const { renderRoutes } = this
     return items.map((item) => {
-      switch ((item.items && item.items.length > 0)) {
+      switch (item.items && item.items.length > 0) {
       case true:
-        return item.items.map(child => renderRoutes(child, practices, handleLocationChange, logoutRoute, false))
+        return item.items.map(child => renderRoutes(child, practices, handleLocationChange, logoutRoute))
       default:
-        return renderRoutes(item, practices, handleLocationChange, logoutRoute, true)
+        return renderRoutes(item, practices, handleLocationChange, logoutRoute)
       }
     })
   }
