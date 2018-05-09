@@ -15,16 +15,19 @@ exports[`<TextField /> rendered correctly with fixture 1`] = `
   value=""
 >
   <div
-    className=""
+    className="outer"
   >
-    <div>
+    <div
+      className="block"
+    >
       <label
-        className=""
+        className="label"
         htmlFor="demo"
       >
         First Name
       </label>
       <input
+        className="input"
         disabled={false}
         id="demo"
         name="demo"
