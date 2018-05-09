@@ -18,7 +18,9 @@ TabViewWrapped.propTypes = {
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      route: PropTypes.string.isRequired
+      route: PropTypes.string.isRequired,
+      exact: PropTypes.string.isRequired,
+      strict: PropTypes.string.isRequired
     })
   )
 }
@@ -28,6 +30,7 @@ export default {
   props: {
     heading: 'Heading',
     tabs: [
+      {title: 'Root', route: '/', exact: true},
       {title: 'Somewhere', route: '/somewhere'},
       {title: 'Elsewhere', route: '/elsewhere'}
     ]

@@ -28,34 +28,36 @@ exports[`<InlineSelector /> rendered correctly with fixture 1`] = `
   vertical={false}
 >
   <div
-    className=""
+    className="outer"
     id="demo"
     name="demo"
   >
-    <div>
+    <div
+      className="options"
+    >
       <div
-        className=""
+        className="option"
         key="0"
         onClick={[Function]}
       >
         Any
       </div>
       <div
-        className=""
+        className="option"
         key="1"
         onClick={[Function]}
       >
         AM
       </div>
       <div
-        className=""
+        className="option"
         key="2"
         onClick={[Function]}
       >
         PM
       </div>
       <div
-        className=""
+        className="option"
         key="3"
         onClick={[Function]}
       >
