@@ -145,7 +145,7 @@ class PrimaryNavigation extends Component {
   }
 
   render () {
-    const { renderBuckets, renderSliders, renderSubNav } = this
+    const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this
     const { items, practices, handleLocationChange, logoutRoute } = this.props
 
     return (
@@ -155,7 +155,7 @@ class PrimaryNavigation extends Component {
           {renderSliders()}
         </div>
         <div className={styles.spacer}>&nbsp;</div>
-        <div className={styles.content}>
+        <div className={styles.content} onClick={closeBucket}>
           {renderSubNav(items, practices, handleLocationChange, logoutRoute)}
         </div>
       </div>
