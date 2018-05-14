@@ -96,9 +96,14 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
           ]
         }
       >
-        <div>
-          <div>
+        <div
+          className="bar"
+        >
+          <div
+            className="top"
+          >
             <Heading
+              className="heading"
               h1={true}
               h2={false}
               h3={false}
@@ -106,14 +111,19 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               nav={false}
             >
               <h1
-                className=""
+                className="heading h1 heading"
               >
                 Patient feedback
               </h1>
             </Heading>
-            <div>
-              <span>
+            <div
+              className="controls"
+            >
+              <span
+                className="rightControlOption"
+              >
                 <OnClickOutside(SingleSelect)
+                  className="locationSelector"
                   eventTypes={
                     Array [
                       "mousedown",
@@ -140,6 +150,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                   stopPropagation={false}
                 >
                   <SingleSelect
+                    className="locationSelector"
                     disableOnClickOutside={[Function]}
                     disabled={false}
                     enableOnClickOutside={[Function]}
@@ -172,7 +183,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                     value={null}
                   >
                     <div
-                      className=""
+                      className="outer locationSelector"
                       options={
                         Array [
                           Object {
@@ -187,7 +198,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                       }
                     >
                       <div
-                        className=""
+                        className="select"
                         id="locationSelector"
                         onClick={[Function]}
                       >
@@ -195,21 +206,16 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                           Location A
                         </span>
                         <Icon
-                          height={32}
+                          className="caret"
                           name="DropDown"
-                          width={32}
                         >
                           <DropDown
-                            className=""
-                            height={32}
-                            width={32}
+                            className="icon caret"
                           >
                             <svg
-                              className=""
-                              height="32px"
+                              className="icon caret"
                               version="1.1"
                               viewBox="0 0 24 24"
-                              width="32px"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <g
@@ -223,16 +229,18 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                           </DropDown>
                         </Icon>
                       </div>
-                      <ul>
+                      <ul
+                        className="options"
+                      >
                         <li
-                          className="undefined"
+                          className="option selected"
                           key="Location A"
                           onClick={[Function]}
                         >
                           Location A
                         </li>
                         <li
-                          className=""
+                          className="option"
                           key="Location B"
                           onClick={[Function]}
                         >
@@ -246,6 +254,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               <NavLink
                 activeClassName="active"
                 ariaCurrent="true"
+                className="topNavLink"
                 key="logout"
                 title="Logout"
                 to="/admin/auth/logout"
@@ -255,33 +264,32 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                 >
                   <Link
                     aria-current={false}
+                    className="topNavLink"
                     replace={false}
                     title="Logout"
                     to="/admin/auth/logout"
                   >
                     <a
                       aria-current={false}
+                      className="topNavLink"
                       href="/admin/auth/logout"
                       onClick={[Function]}
                       title="Logout"
                     >
-                      <span>
+                      <span
+                        className="rightControlOption"
+                      >
                         <Icon
-                          height={16}
+                          className="icon"
                           name="Logout"
-                          width={16}
                         >
                           <Logout
-                            className=""
-                            height={16}
-                            width={16}
+                            className="icon icon"
                           >
                             <svg
-                              className=""
-                              height={16}
+                              className="icon icon"
                               version="1.1"
                               viewBox="0 1 16 16"
-                              width={16}
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <g
@@ -317,10 +325,13 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               </NavLink>
             </div>
           </div>
-          <div>
+          <div
+            className="items"
+          >
             <NavLink
               activeClassName="active"
               ariaCurrent="true"
+              className="item"
               exact={true}
               key="0"
               title="Summary"
@@ -332,12 +343,14 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               >
                 <Link
                   aria-current={false}
+                  className="item"
                   replace={false}
                   title="Summary"
                   to="/feedback"
                 >
                   <a
                     aria-current={false}
+                    className="item"
                     href="/feedback"
                     onClick={[Function]}
                     title="Summary"
@@ -352,6 +365,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
             <NavLink
               activeClassName="active"
               ariaCurrent="true"
+              className="item"
               exact={true}
               key="1"
               title="Preferences"
@@ -363,12 +377,14 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               >
                 <Link
                   aria-current={false}
+                  className="item"
                   replace={false}
                   title="Preferences"
                   to="/feedback/settings"
                 >
                   <a
                     aria-current={false}
+                    className="item"
                     href="/feedback/settings"
                     onClick={[Function]}
                     title="Preferences"
