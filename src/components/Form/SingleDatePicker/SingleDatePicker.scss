@@ -366,6 +366,10 @@
             position: absolute;
             top: 18px;
             width: 24px;
+            svg {
+                height: 22px;
+                width: 22px;
+            }
         }
         .DayPickerNavigation_button__horizontal:focus,
         .DayPickerNavigation_button__horizontal:hover {

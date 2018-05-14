@@ -1,6 +1,11 @@
+// design language colors
+$grey_1: #2B4B5A;
+$grey_2: #5C7783;
+$teal_dark_60: #004149;
+
 // core colors
 $white: #FFF;
-$navy_1: #2B4B5A;
+$navy_1: $grey_1;
 $navy_2: #051E2A;
 $navy_tint_1: #57707C;
 $navy_tint_2: #9FB3BC;
@@ -37,3 +42,6 @@ $n_grey_1: #D3DDE1;
 $n_grey_2: #E3E8ED;
 $n_grey_3: #ECF0F2;
 $n_grey_4: #F5F7F8;
+
+$navy_2_dark_20: #223C48;
+$navy_2_dark_40: #192D36;

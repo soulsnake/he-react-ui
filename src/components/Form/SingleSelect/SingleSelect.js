@@ -133,6 +133,7 @@ class SingleSelect extends React.Component {
         {...restProps}>
         {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
         <div
+          id={id}
           className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled})}
           onClick={this.toggleExpand}>
           <span>{this.getDisplay()}</span>

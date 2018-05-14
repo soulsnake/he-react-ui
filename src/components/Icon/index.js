@@ -6,6 +6,7 @@ import Add from './Add'
 import Alarm from './Alarm'
 import Alert from './Alert'
 import {ArrowLeft, ArrowRight, ArrowUp, ArrowDown} from './Arrows'
+import Bookings from './Bookings'
 import Calendar from './Calendar'
 import CaretRight from './CaretRight'
 import {CheckBoxChecked, CheckBoxUnchecked, RadioChecked, RadioUnchecked} from './CheckBoxes'
@@ -15,7 +16,14 @@ import Cross from './Cross'
 import Delete from './Delete'
 import DropDown from './DropDown'
 import Edit from './Edit'
+import Engage from './Engage'
 import Ellipsis from './Ellipsis'
+import HealthEngine from './HealthEngine'
+import Help from './Help'
+import Home from './Home'
+import Logout from './Logout'
+import Megaphone from './Megaphone'
+import Patients from './Patients'
 import Search from './Search'
 import Settings from './Settings'
 import Sync from './Sync'
@@ -52,6 +60,8 @@ function createIcon (iconProps) {
     return <ArrowUp {...props} />
   case 'ArrowDown':
     return <ArrowDown {...props} />
+  case 'Bookings':
+    return <Bookings {...props} />
   case 'Calendar':
     return <Calendar {...props} />
   case 'CaretRight':
@@ -78,8 +88,22 @@ function createIcon (iconProps) {
     return <DropDown {...props} />
   case 'Edit':
     return <Edit {...props} />
+  case 'Engage':
+    return <Engage {...props} />
+  case 'HealthEngine':
+    return <HealthEngine {...props} />
+  case 'Help':
+    return <Help {...props} />
+  case 'Home':
+    return <Home {...props} />
+  case 'Megaphone':
+    return <Megaphone {...props} />
+  case 'Patients':
+    return <Patients {...props} />
   case 'Ellipsis':
     return <Ellipsis {...props} />
+  case 'Logout':
+    return <Logout {...props} />
   case 'RadioChecked':
     return <RadioChecked {...props} />
   case 'RadioUnchecked':
@@ -101,16 +125,12 @@ function createIcon (iconProps) {
 
 createIcon.propTypes = {
   name: PropTypes.string.isRequired,
-  width: PropTypes.number,
-  height: PropTypes.number,
   color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
   className: PropTypes.string
 }
 
 export default class Icon extends React.Component {
   static defaultProps = {
-    width: 32,
-    height: 32,
     name: 'Cross'
   }
 

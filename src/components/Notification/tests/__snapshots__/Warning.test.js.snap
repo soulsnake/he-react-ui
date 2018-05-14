@@ -15,10 +15,8 @@ exports[`<Notification type="warning" /> rendered correctly with fixture 1`] = `
     >
       <svg
         className="icon warning"
-        height="undefinedpx"
         version="1.1"
         viewBox="0 0 20 20"
-        width="undefinedpx"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g

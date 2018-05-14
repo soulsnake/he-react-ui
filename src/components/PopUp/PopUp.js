@@ -83,8 +83,6 @@ class PopUp extends React.Component {
             <Icon
               className={styles.close}
               name="Cross"
-              width={32}
-              height={32}
               onClick={this.handleClose}
             />
           )}

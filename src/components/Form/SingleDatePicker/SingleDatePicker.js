@@ -120,8 +120,8 @@ class SingleDatePicker extends React.Component {
                 onDateChange={this.handleDateChange}
                 focused={this.state.focused}
                 onFocusChange={this.handleFocusChange}
-                navNext={<Icon width={22} height={22} name="ChevronRight" />}
-                navPrev={<Icon width={22} height={22} name="ChevronLeft" />}
+                navNext={<Icon name="ChevronRight" />}
+                navPrev={<Icon name="ChevronLeft" />}
                 {...restProps}
               />) }
           </Media>

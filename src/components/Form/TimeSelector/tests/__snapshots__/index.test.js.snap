@@ -412,21 +412,15 @@ exports[`<TimeSelector /> rendered correctly with fixture 1`] = `
             </span>
             <Icon
               className="clock"
-              height={32}
               name="Clock"
-              width={32}
             >
               <Clock
                 className="icon clock"
-                height={32}
-                width={32}
               >
                 <svg
                   className="icon clock"
-                  height="32px"
                   version="1.1"
                   viewBox="0 0 26 26"
-                  width="32px"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <g

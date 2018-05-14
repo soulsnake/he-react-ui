@@ -1,0 +1,87 @@
+@import '../../../styles/base';
+
+.bar {
+  background-color: $white;
+  font-family: $font-stack;
+  color: $navy_1;
+  padding: 20px 48px;
+}
+
+.heading {
+  color: $teal_dark_60;
+  margin-bottom: 0px;
+}
+
+.items { 
+  margin-top: 32px;
+  display: flex;
+}
+
+.item {
+  color: $navy_tint_1;
+  cursor: pointer;
+  padding: 0 24px 24px;
+  text-decoration: none;
+  user-select: none;
+  @include breakpoint(small) {
+    padding: 0 8px 8px;
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+  span {
+    padding-bottom: 16px;
+    border-bottom: solid 6px transparent;
+  }
+}
+
+.selected {
+  color: $grey_1;
+  font-weight: bold;
+  span {
+    border-bottom-color: $teal_1;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  .rightControlOption {
+    padding: 0px 28px;
+    border-right: 1px solid $n_grey_1;
+    &:last-child {
+      border-right: none;
+      padding-right: 0px;
+    }
+    .icon {
+      margin-right: 8px;
+      margin-bottom: -2px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.controls {
+  color: $grey_2;
+  .topNavLink {
+    color: $grey_2;
+    text-decoration: none;
+  }
+}
+
+.locationSelector {
+  display: inline-block;
+  width: fit-content;
+  div {
+    border: none;
+    display: inline-block;
+    color: $grey_2;
+    svg {
+      color: $grey_2;
+      &:hover {
+        color: $grey_1;
+      }
+    }
+  }
+}

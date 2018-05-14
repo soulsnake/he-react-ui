@@ -53,21 +53,17 @@
 }
 
 .close {
+  border-radius: 32px;
   cursor: pointer;
-  position: absolute;
   color: $navy_2;
-  top: 16px;
-  right: 16px;
-  width: 52px;
-  height: 52px;
-  padding: 16px;
-
-  @include box-sizing(border-box);
-  @include border-radius(200px);
+  height: 24px;
+  padding: 8px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 24px;
   @include breakpoint(small) {
-    padding: 12px;
-    width: 44px;
-    height: 44px;
+    padding: 4px;
   }
 }
 

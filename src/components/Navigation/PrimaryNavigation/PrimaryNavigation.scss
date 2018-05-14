@@ -1,0 +1,88 @@
+@import '../../../styles/base';
+
+$bucket-width: 76px;
+$slider-width: 264px;
+
+.nav {
+  font-family: $font-stack;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  user-select: none;
+  z-index: 99;
+}
+
+.buckets {
+  background-color: $navy_1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  height: 100%;
+  width: $bucket-width;
+  z-index: 1;
+}
+
+.logoBucket {
+  cursor: pointer;
+  flex-shrink: 0;
+  height: $bucket-width;
+  max-width: $bucket-width;
+  text-align: center;
+  &:hover {
+    background-color: $navy_2_dark_20;
+  }
+  &:active {
+    background-color: $navy_2_dark_40;
+  }
+  @include transition(all 0.2s);
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin: 18px auto;
+}
+
+.bucketFiller {
+  flex-grow: 1;
+}
+
+.sliders {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: relative;
+}
+
+.external {
+  color: $sp_yellow;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: .5;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+
+.outer {
+  display: flex;
+}
+
+.spacer {
+  width: $bucket-width;
+  height: 100%;
+  content: ' ';
+}
+
+.content {
+  flex-grow: 1;
+}

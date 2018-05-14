@@ -27,11 +27,9 @@ exports[`<Notification canClose=true type="default" /> rendered correctly with f
     >
       <svg
         className="closeIcon default"
-        height="undefinedpx"
         onClick={[Function]}
         version="1.1"
         viewBox="0 0 24 24"
-        width="undefinedpx"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -74,11 +72,9 @@ exports[`can close 1`] = `
     >
       <svg
         className="closeIcon default"
-        height="undefinedpx"
         onClick={[Function]}
         version="1.1"
         viewBox="0 0 24 24"
-        width="undefinedpx"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -121,11 +117,9 @@ exports[`can close 2`] = `
     >
       <svg
         className="closeIcon default"
-        height="undefinedpx"
         onClick={[Function]}
         version="1.1"
         viewBox="0 0 24 24"
-        width="undefinedpx"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g

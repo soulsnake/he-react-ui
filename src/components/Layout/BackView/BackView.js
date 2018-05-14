@@ -26,7 +26,7 @@ class BackView extends Component {
           <div className={style.barInner}>
             <Link to={route}>
               <Heading h1 nav className={style.heading}>
-                <Icon className={style.arrow} name="ArrowLeft" width={40} height={40} />
+                <Icon className={style.arrow} name="ArrowLeft" />
                 {heading}
               </Heading>
             </Link>
