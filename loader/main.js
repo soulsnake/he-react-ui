@@ -40711,7 +40711,7 @@ exports.default = {
         }, {
           key: 'TEMPLATES',
           label: 'Templates',
-          route: '/recalls#templates'
+          route: '/recalls/templates'
         }, {
           key: 'PREFERENCES',
           label: 'Preferences',
