@@ -11,7 +11,7 @@ export default class LoadingScreen extends React.Component {
     children: null
   }
 
-  render() {
+  render () {
     const { children } = this.props
     return (
       <div className={style.loadingContainer}>
