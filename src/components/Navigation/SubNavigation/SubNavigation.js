@@ -14,7 +14,7 @@ import classnames from 'classnames'
 import isExternal from 'is-url-external'
 
 import style from './SubNavigation.scss'
-import LoadingStrip from "../../Loading/LoadingStrip/LoadingStrip";
+
 class SubNavigation extends Component {
   static propTypes = {
     item: PropTypes.shape({
