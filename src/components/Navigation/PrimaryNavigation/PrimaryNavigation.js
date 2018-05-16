@@ -22,7 +22,7 @@ class PrimaryNavigation extends Component {
   static propTypes = {
     bottomKeys: PropTypes.arrayOf(PropTypes.string),
     logo: PropTypes.shape({
-      icon: PropTypes.string.isRequired,
+      icon: PropTypes.any.isRequired,
       route: PropTypes.string.isRequired
     }).isRequired,
     items: PropTypes.arrayOf(PropTypes.shape({
@@ -44,14 +44,17 @@ class PrimaryNavigation extends Component {
         }))
       }))
     })).isRequired,
-    practices: PropTypes.array,
+    locations: PropTypes.array,
     handleLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired
   }
 
   static defaultProps = {
-    baseUrl: '',
-    bottomKeys: []
+    bottomKeys: [],
+    logo: {
+      icon: <Icon className={styles.logo} name="HealthEngine" />,
+      route: '/'
+    }
   }
 
   constructor (props) {
@@ -90,7 +93,9 @@ class PrimaryNavigation extends Component {
       <div className={styles.buckets}>
         <NavLink className={styles.logoBucket} to={logo.route}
           onClick={closeBucket}>
-          <Icon className={styles.logo} name={logo.icon} />
+          <div className={styles.logo}>
+            {logo.icon}
+          </div>
         </NavLink>
         {topItems.map(item => <Bucket open={item.key === openKey} onClickParent={() => toggleBucket(item.key)} onClickRoute={closeBucket} {...item} />)}
         <div className={styles.bucketFiller} onClick={closeBucket} />
@@ -108,8 +113,8 @@ class PrimaryNavigation extends Component {
 
     return (
       <div className={styles.sliders}>
-        {topItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} top {...item} />)}
-        {bottomItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} top {...item} />)}
+        {topItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} {...item} />)}
+        {bottomItems.map(item => <Slider bottom open={openKey === item.key} onSelect={closeBucket} {...item} />)}
       </div>
     )
   }
@@ -118,34 +123,34 @@ class PrimaryNavigation extends Component {
     this.setState({openKey: null})
   }
 
-  renderRoutes (item, practices, onLocationChange, logoutRoute, exact) {
+  renderRoutes (item, locations, onLocationChange, logoutRoute, exact) {
     return (
       <HashRoute
         key={'Subnav_' + item.key}
         exact={item.route === '/'} // Slash will match anything so we need to be exact in that case.
         path={item.route}
         render={
-          () => (<SubNavigation item={item} logoutRoute={logoutRoute} practices={practices} onLocationChange={onLocationChange} />)
+          () => (<SubNavigation item={item} logoutRoute={logoutRoute} locations={locations} onLocationChange={onLocationChange} />)
         }
       />
     )
   }
 
-  renderSubNav (items, practices, handleLocationChange, logoutRoute) {
+  renderSubNav (items, locations, handleLocationChange, logoutRoute) {
     const { renderRoutes } = this
     return items.map((item) => {
       switch (item.items && item.items.length > 0) {
       case true:
-        return item.items.map(child => renderRoutes(child, practices, handleLocationChange, logoutRoute))
+        return item.items.map(child => renderRoutes(child, locations, handleLocationChange, logoutRoute))
       default:
-        return renderRoutes(item, practices, handleLocationChange, logoutRoute)
+        return renderRoutes(item, locations, handleLocationChange, logoutRoute)
       }
     })
   }
 
   render () {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this
-    const { items, practices, handleLocationChange, logoutRoute } = this.props
+    const { items, locations, handleLocationChange, logoutRoute } = this.props
 
     return (
       <div className={styles.outer}>
@@ -155,7 +160,7 @@ class PrimaryNavigation extends Component {
         </div>
         <div className={styles.spacer}>&nbsp;</div>
         <div className={styles.content} onClick={closeBucket}>
-          {renderSubNav(items, practices, handleLocationChange, logoutRoute)}
+          {renderSubNav(items, locations, handleLocationChange, logoutRoute)}
         </div>
       </div>
     )
