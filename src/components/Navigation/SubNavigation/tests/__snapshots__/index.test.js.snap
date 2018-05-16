@@ -82,6 +82,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
             "title": "Parent title",
           }
         }
+        loading={false}
         locations={
           Array [
             Object {
