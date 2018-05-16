@@ -7,24 +7,23 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
       "badge": "FREE",
       "items": Array [
         Object {
-          "key": "SUMMARY",
-          "label": "Summary",
-          "route": "/feedback",
+          "key": "MAIN",
+          "label": "Main",
+          "route": "/parent",
         },
         Object {
-          "key": "PREFERENCES",
-          "label": "Preferences",
-          "route": "/feedback/settings",
+          "key": "SECONDARY",
+          "label": "Secondary",
+          "route": "/parent/secondary",
         },
       ],
-      "key": "FEEDBACK",
-      "label": "Patient feedback",
-      "route": "/feedback",
-      "title": "Patient feedback",
+      "key": "PARENT",
+      "label": "Parent",
+      "route": "/parent",
+      "title": "Parent title",
     }
   }
-  logoutRoute="/admin/auth/logout"
-  practices={
+  locations={
     Array [
       Object {
         "label": "Location A",
@@ -36,6 +35,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
       },
     ]
   }
+  logoutRoute="/logout"
 >
   <BrowserRouter>
     <Router
@@ -66,24 +66,23 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
             "badge": "FREE",
             "items": Array [
               Object {
-                "key": "SUMMARY",
-                "label": "Summary",
-                "route": "/feedback",
+                "key": "MAIN",
+                "label": "Main",
+                "route": "/parent",
               },
               Object {
-                "key": "PREFERENCES",
-                "label": "Preferences",
-                "route": "/feedback/settings",
+                "key": "SECONDARY",
+                "label": "Secondary",
+                "route": "/parent/secondary",
               },
             ],
-            "key": "FEEDBACK",
-            "label": "Patient feedback",
-            "route": "/feedback",
-            "title": "Patient feedback",
+            "key": "PARENT",
+            "label": "Parent",
+            "route": "/parent",
+            "title": "Parent title",
           }
         }
-        logoutRoute="/admin/auth/logout"
-        practices={
+        locations={
           Array [
             Object {
               "label": "Location A",
@@ -95,6 +94,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
             },
           ]
         }
+        logoutRoute="/logout"
       >
         <div
           className="bar"
@@ -113,7 +113,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               <h1
                 className="heading h1 heading"
               >
-                Patient feedback
+                Parent title
               </h1>
             </Heading>
             <div
@@ -257,22 +257,22 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                 className="topNavLink"
                 key="logout"
                 title="Logout"
-                to="/admin/auth/logout"
+                to="/logout"
               >
                 <Route
-                  path="/admin/auth/logout"
+                  path="/logout"
                 >
                   <Link
                     aria-current={false}
                     className="topNavLink"
                     replace={false}
                     title="Logout"
-                    to="/admin/auth/logout"
+                    to="/logout"
                   >
                     <a
                       aria-current={false}
                       className="topNavLink"
-                      href="/admin/auth/logout"
+                      href="/logout"
                       onClick={[Function]}
                       title="Logout"
                     >
@@ -316,29 +316,29 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               className="item"
               exact={true}
               key="0"
-              title="Summary"
-              to="/feedback"
+              title="Main"
+              to="/parent"
             >
               <Route
                 exact={true}
-                path="/feedback"
+                path="/parent"
               >
                 <Link
                   aria-current={false}
                   className="item"
                   replace={false}
-                  title="Summary"
-                  to="/feedback"
+                  title="Main"
+                  to="/parent"
                 >
                   <a
                     aria-current={false}
                     className="item"
-                    href="/feedback"
+                    href="/parent"
                     onClick={[Function]}
-                    title="Summary"
+                    title="Main"
                   >
                     <span>
-                      Summary
+                      Main
                     </span>
                   </a>
                 </Link>
@@ -350,29 +350,29 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
               className="item"
               exact={true}
               key="1"
-              title="Preferences"
-              to="/feedback/settings"
+              title="Secondary"
+              to="/parent/secondary"
             >
               <Route
                 exact={true}
-                path="/feedback/settings"
+                path="/parent/secondary"
               >
                 <Link
                   aria-current={false}
                   className="item"
                   replace={false}
-                  title="Preferences"
-                  to="/feedback/settings"
+                  title="Secondary"
+                  to="/parent/secondary"
                 >
                   <a
                     aria-current={false}
                     className="item"
-                    href="/feedback/settings"
+                    href="/parent/secondary"
                     onClick={[Function]}
-                    title="Preferences"
+                    title="Secondary"
                   >
                     <span>
-                      Preferences
+                      Secondary
                     </span>
                   </a>
                 </Link>

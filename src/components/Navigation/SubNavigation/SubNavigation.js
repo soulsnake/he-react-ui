@@ -27,7 +27,7 @@ class SubNavigation extends Component {
         route: PropTypes.string.isRequired
       }))
     }).isRequired,
-    practices: PropTypes.array,
+    locations: PropTypes.array,
     onLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired
   }
@@ -59,16 +59,16 @@ class SubNavigation extends Component {
   }
 
   render () {
-    const { item, practices, onLocationChange, logoutRoute } = this.props
+    const { item, locations, onLocationChange, logoutRoute } = this.props
     return (
       <div className={style.bar}>
         <div className={style.top}>
           <Heading h1 className={style.heading}>{item.title}</Heading>
           <div className={style.controls}>
-            {practices && practices.length > 1 &&
+            {locations && locations.length > 1 &&
             (
               <span className={style.rightControlOption}>
-                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={practices} onChange={onLocationChange} />
+                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={locations} onChange={onLocationChange} />
               </span>
             )}
             <NavLink

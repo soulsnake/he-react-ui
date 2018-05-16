@@ -16,28 +16,28 @@ export default {
   component: SubNavigationWrapped,
   props: {
     item: {
-      key: 'FEEDBACK',
-      title: 'Patient feedback',
-      label: 'Patient feedback',
-      route: '/feedback',
+      key: 'PARENT',
+      title: 'Parent title',
+      label: 'Parent',
+      route: '/parent',
       badge: 'FREE',
       items: [
         {
-          'key': 'SUMMARY',
-          'label': 'Summary',
-          'route': '/feedback'
+          'key': 'MAIN',
+          'label': 'Main',
+          'route': '/parent'
         },
         {
-          'key': 'PREFERENCES',
-          'label': 'Preferences',
-          'route': '/feedback/settings'
+          'key': 'SECONDARY',
+          'label': 'Secondary',
+          'route': '/parent/secondary'
         }
       ]
     },
-    practices: [
+    locations: [
       'Location A',
       'Location B'
-    ].map((practice) => ({value: practice, label: practice})),
-    logoutRoute: '/admin/auth/logout'
+    ].map((location) => ({value: location, label: location})),
+    logoutRoute: '/logout'
   }
 }
