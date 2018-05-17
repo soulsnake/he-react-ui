@@ -13,202 +13,113 @@ function PrimaryNavigationWrapped (props) {
 export default {
   component: PrimaryNavigationWrapped,
   props: {
-    logoutRoute: '/admin/auth/logout',
-    practices: [
+    logoutRoute: '/logout',
+    locations: [
       'Location A',
       'Location B'
-    ].map((practice) => ({value: practice, label: practice})),
+    ].map((location) => ({value: location, label: location})),
     bottomKeys: [ 'HELP', 'SETTINGS' ],
-    logo: {
-      icon: 'HealthEngine',
-      route: '/'
-    },
     items: [
       {
-        key: 'HOME',
-        label: 'Home',
-        icon: 'Home',
-        title: 'Practice admin',
-        route: '/'
-      },
-      {
-        key: 'BOOKINGS',
-        label: 'Bookings',
-        icon: 'Bookings',
-        title: 'Bookings',
+        key: 'BUCKET1',
+        label: 'Bucket 1',
+        icon: 'Engage',
+        title: 'Your first bucket',
         items: [
           {
-            key: 'ONLINE_BOOKINGS',
-            title: 'Online bookings',
-            label: 'Online bookings',
-            route: '/online-bookings',
+            key: 'NORMAL',
+            title: 'Normal stuff',
+            label: 'Normal item',
+            route: '/normal',
             items: [
               {
-                key: 'BOOKINGS',
-                label: 'Bookings',
-                route: '/online-bookings'
+                key: 'MAIN',
+                label: 'Main',
+                route: '/normal'
               },
               {
-                key: 'PREFERENCES',
-                label: 'Preferences',
-                route: '/online-bookings/preferences'
+                key: 'SECOND',
+                label: 'Second',
+                route: '/normal/second'
               }
             ]
           },
           {
-            key: 'REMINDERS',
-            title: 'Reminders',
-            label: 'Reminders',
-            route: '/reminders',
+            key: 'NOTIFICATIONS',
+            title: 'Notifications',
+            label: 'Notifications',
+            route: '/notifications',
             notifications: 23,
             items: [
               {
-                key: 'DASHBOARD',
-                label: 'Dashboard',
-                route: '/reminders'
+                key: 'MAIN',
+                label: 'Main',
+                route: '/notifications'
               },
               {
-                key: 'PENDING',
-                label: 'Add / delete',
-                route: '/reminders/pending'
+                key: 'SECOND',
+                label: 'Second',
+                route: '/notifications/second'
               },
               {
-                key: 'HISTORY',
-                label: 'History',
-                route: '/reminders/history'
-              },
-              {
-                key: 'PREFERENCES',
-                label: 'Preferences',
-                route: '/reminders/settings'
+                key: 'THIRD',
+                label: 'Third',
+                route: '/notifications/third'
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        key: 'BUCKET2',
+        label: 'Bucket 2',
+        icon: 'Megaphone',
+        title: 'Your second bucket',
+        items: [
           {
-            key: 'PULSE',
-            title: 'Patient pulse',
-            label: 'Patient pulse',
-            route: '/feedback/#/free',
+            key: 'FREE',
+            title: 'Free item',
+            label: 'Free item',
+            route: '/free',
             badge: 'FREE',
             items: [
               {
-                key: 'SUMMARY',
-                label: 'Summary',
-                route: '/feedback/#/free'
+                key: 'MAIN',
+                label: 'Main',
+                route: '/free'
               },
               {
-                key: 'PREFERENCES',
-                label: 'Preferences',
-                route: '/feedback/#/free/settings'
+                key: 'SECOND',
+                label: 'Second',
+                route: '/free/second'
               }
             ]
           },
           {
-            key: 'REVIEWS',
-            title: 'Reviews',
-            label: 'Reviews',
-            route: '/reviews',
+            key: 'NEW',
+            title: 'New item',
+            label: 'New item',
+            route: '/new',
+            badge: 'NEW',
             items: [
               {
-                key: 'SUMMARY',
-                label: 'Reviews',
-                route: '/reviews'
+                key: 'MAIN',
+                label: 'Main',
+                route: '/new'
               },
               {
-                key: 'PREFERENCES',
-                label: 'Preferences',
-                route: '/reviews/settings'
+                key: 'SECOND',
+                label: 'Second',
+                route: '/new/second'
               }
             ]
-          }
-        ]
-      },
-      {
-        key: 'CARE',
-        label: 'Care',
-        icon: 'Engage',
-        title: 'Care',
-        items: [
-          {
-            key: 'RECALLS',
-            title: 'Recalls',
-            label: 'Recalls',
-            route: '/recalls',
-            notifications: 104,
-            items: [
-              {
-                key: 'ACTIONS',
-                label: 'Actions',
-                route: '/recalls'
-              },
-              {
-                key: 'TEMPLATES',
-                label: 'Templates',
-                route: '/recalls/templates'
-              },
-              {
-                key: 'PREFERENCES',
-                label: 'Preferences',
-                route: '/recalls/settings'
-              }
-            ]
-          },
-          {
-            key: 'PRESCRIPTIONS',
-            title: 'Prescriptions',
-            label: 'Prescriptions',
-            route: '/prescriptions',
-            badge: 'NEW'
-          }
-        ]
-      },
-      {
-        key: 'MARKETING',
-        label: 'Marketing',
-        icon: 'Megaphone',
-        title: 'Marketing',
-        items: [
-          {
-            key: 'PROFESSIONAL_PROFILE',
-            title: 'Professional profile',
-            label: 'Practice profile',
-            route: '/profile',
-            items: [
-              {
-                key: 'PRACTICE_PROFILE',
-                label: 'Practice profile',
-                route: '/profile'
-              },
-              {
-                key: 'PRACTITIONER_PROFILES',
-                label: 'Practitioner profiles',
-                route: '/profile/practitioners'
-              },
-              {
-                key: 'VIEW_PROFILE',
-                label: 'View profile',
-                route: 'http://external.url/'
-              }
-            ]
-          },
-          {
-            key: 'PATIENT_MATCH',
-            title: 'Patient match',
-            label: 'Patient match',
-            route: '/patient-match'
-          },
-          {
-            key: 'MARKETING_RESOURCES',
-            title: 'Marketing resources',
-            label: 'Marketing resources',
-            route: '/marketing-resources'
           }
         ]
       },
       {
         key: 'HELP',
-        label: 'Help centre',
-        title: 'Help centre',
+        label: 'Help',
+        title: 'Help',
         icon: 'Help',
         route: 'https://external.url/'
       },
@@ -219,46 +130,58 @@ export default {
         title: 'Settings',
         items: [
           {
-            key: 'PERMISSIONS',
-            title: 'Logins & permissions',
-            label: 'Logins & permissions',
-            route: '/permissions'
-          },
-          {
-            key: 'NOTIFICATIONS',
-            title: 'Notifications',
-            label: 'Notifications',
-            route: '/notifications'
-          },
-          {
-            key: 'INSTALLATION_RESOURCES',
-            title: 'Installation resources',
-            label: 'Installation resources',
-            route: '/installation-resources'
-          },
-          {
-            key: 'AVAILABILITY',
-            title: 'Manage availability',
-            label: 'Manage availability',
-            route: '/availability',
+            key: 'ITEM1',
+            title: 'Item 1',
+            label: 'Item 1',
+            route: '/settings-1',
             items: [
               {
-                key: 'CALENDAR',
-                label: 'Calendar',
-                route: '/availability'
+                key: 'MAIN',
+                label: 'Main',
+                route: '/settings-1'
               },
               {
-                key: 'AUTOMATIC',
-                label: 'Automatic',
-                route: '/availability/automatic'
+                key: 'SECOND',
+                label: 'Second',
+                route: '/settings-1/second'
               }
             ]
           },
           {
-            key: 'APPOINTMENT_TYPES',
-            title: 'Appointment types',
-            label: 'Appointment types',
-            route: '/appointment-types'
+            key: 'ITEM2',
+            title: 'Item 2',
+            label: 'Item 2',
+            route: '/settings-2',
+            items: [
+              {
+                key: 'MAIN',
+                label: 'Main',
+                route: '/settings-2'
+              },
+              {
+                key: 'SECOND',
+                label: 'Second',
+                route: '/settings-2/second'
+              }
+            ]
+          },
+          {
+            key: 'ITEM3',
+            title: 'Item 3',
+            label: 'Item 3',
+            route: '/settings-3',
+            items: [
+              {
+                key: 'MAIN',
+                label: 'Main',
+                route: '/settings-3'
+              },
+              {
+                key: 'SECOND',
+                label: 'Second',
+                route: '/settings-3/second'
+              }
+            ]
           }
         ]
       }

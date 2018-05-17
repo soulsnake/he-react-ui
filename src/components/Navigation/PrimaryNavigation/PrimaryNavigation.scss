@@ -26,9 +26,12 @@ $slider-width: 264px;
 }
 
 .logoBucket {
+  align-items: center;
   cursor: pointer;
+  display: flex;
   flex-shrink: 0;
   height: $bucket-width;
+  justify-content: center;
   max-width: $bucket-width;
   text-align: center;
   &:hover {
@@ -43,7 +46,6 @@ $slider-width: 264px;
 .logo {
   height: 40px;
   width: 40px;
-  margin: 18px auto;
 }
 
 .bucketFiller {
@@ -56,11 +58,6 @@ $slider-width: 264px;
   pointer-events: none;
   position: relative;
 }
-
-.external {
-  color: $sp_yellow;
-}
-
 @keyframes pulse {
   0% {
     opacity: .5;
