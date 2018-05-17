@@ -20,7 +20,18 @@ $slider-width: 264px;
       }
     }
   }
+  &.bottom {
+    .filler {
+      height: 100%;
+    }
+  }
   @include transition(left 0.4s ease-in-out, filter 0.4s ease-out);
+}
+
+.bottom {
+  .list {
+    transform: translate(-40px, 20px) scale(0.6);
+  }
 }
 
 .open {
@@ -33,15 +44,6 @@ $slider-width: 264px;
     transform: none;
   }
   @include transition(left 0.4s ease-in-out);
-}
-
-.bottom {
-  .filler {
-    height: 100%;
-  }
-  .list {
-    transform: translate(-40px, 20px) scale(0.6);
-  }
 }
 
 .list {
