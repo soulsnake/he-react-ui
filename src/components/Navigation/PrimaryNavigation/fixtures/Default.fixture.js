@@ -1,17 +1,8 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
 import PrimaryNavigation from '../'
 
-function PrimaryNavigationWrapped (props) {
-  const {...all} = props
-  return (
-    <BrowserRouter basePath="/loader/index.html/">
-      <PrimaryNavigation {...all} />
-    </BrowserRouter>)
-}
-
 export default {
-  component: PrimaryNavigationWrapped,
+  component: PrimaryNavigation,
+  url: '/',
   props: {
     logoutRoute: '/admin/auth/logout',
     practices: [

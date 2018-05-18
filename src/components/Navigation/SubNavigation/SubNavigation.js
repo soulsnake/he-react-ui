@@ -5,7 +5,7 @@
 // Vendor
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import { matchPath } from 'react-router'
+import { matchPath, withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 import Heading from '../../Layout/Heading'
 import Icon from '../../Icon'
@@ -14,6 +14,7 @@ import classnames from 'classnames'
 import isExternal from 'is-url-external'
 
 import style from './SubNavigation.scss'
+
 class SubNavigation extends Component {
   static propTypes = {
     item: PropTypes.shape({
@@ -29,10 +30,13 @@ class SubNavigation extends Component {
     }).isRequired,
     practices: PropTypes.array,
     onLocationChange: PropTypes.func,
-    logoutRoute: PropTypes.string.isRequired
+    logoutRoute: PropTypes.string.isRequired,
+    location: PropTypes.object
   }
 
   renderItems (items) {
+    const { location } = this.props
+
     return items.map((item, index) => {
       if (isExternal(item.route)) {
         return (
@@ -93,4 +97,4 @@ class SubNavigation extends Component {
   }
 }
 
-export default SubNavigation
+export default withRouter(SubNavigation)

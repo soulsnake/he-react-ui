@@ -1,16 +1,8 @@
-import React from 'react'
 import TimeSelector from '../'
-import GenericFormElementWrapper from '../../GenericFormElementWrapper'
-
-function TimeSelectorWrapped (props) {
-  const {...all} = props
-  return (
-    <GenericFormElementWrapper component={TimeSelector} props={all} />
-  )
-}
 
 export default {
-  component: TimeSelectorWrapped,
+  component: TimeSelector,
+  formWrapper: {value: ''},
   props: {
     id: 'demo', name: 'demo', hourly: false
   }
