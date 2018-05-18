@@ -42,9 +42,9 @@
   justify-content: center;
 
   transition-property: flex-grow;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 
-  &.submitting, &.done {
+  &.submitting {
     flex-grow: 0.01; // working around a chrome bug
     padding: 0;
   }
@@ -171,6 +171,12 @@
 .iconRight {
   @extend .iconContainer;
   right: 12px;
+}
+
+.iconCenter {
+  @extend .iconContainer;
+  left: 50%;
+  margin-left: -12px;
 }
 
 .legacyIcon {

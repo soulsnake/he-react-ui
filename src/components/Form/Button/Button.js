@@ -1,10 +1,10 @@
 /**
-*
-* Button
-*
-*/
+ *
+ * Button
+ *
+ */
 
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Icon from '../../Icon'
@@ -14,7 +14,9 @@ import LoadingSpinner from '../../Loading/LoadingSpinner'
 let iconDeprecationShown = false
 function showIconDeprecation () {
   if (!iconDeprecationShown) {
-    console.error('Button.icon is deprecated. Please use iconLeft or iconRight instead, which take an element rather than a string.')
+    console.error(
+      'Button.icon is deprecated. Please use iconLeft or iconRight instead, which take an element rather than a string.'
+    )
     iconDeprecationShown = true
   }
 }
@@ -49,7 +51,7 @@ class Button extends React.Component {
     onClick: () => null
   }
 
-  handleClick = (event) => {
+  handleClick = event => {
     if (!this.props.disabled) {
       this.props.onClick(event)
     }
@@ -63,13 +65,25 @@ class Button extends React.Component {
   }
 
   render () {
-    const { children, className, color, disabled, icon, iconLeft, iconRight, keyline, link, onClick, small, large, squared, submit, submitting, done, ...rest } = this.props
-
-    /* FIXME */ console.log(...[
-      {done, submitting},
-      '{done, submitting}'
-    ].reverse()) /* FIXME */
-    
+    const {
+      children,
+      className,
+      color,
+      disabled,
+      icon,
+      iconLeft,
+      iconRight,
+      keyline,
+      link,
+      onClick,
+      small,
+      large,
+      squared,
+      submit,
+      submitting,
+      done,
+      ...rest
+    } = this.props
 
     const buttonClasses = classnames(style.button, {
       [style.green]: done,
@@ -80,37 +94,47 @@ class Button extends React.Component {
       [style.squared]: squared,
       [style.done]: done,
       [style.submitting]: submitting,
-      [className]: className})
+      [className]: className
+    })
 
     const containerClasses = classnames(style.buttonContainer, {
       [style.small]: small,
       [style.large]: large
     })
 
-    const statusIcon = done ? <Icon name="Tick" /> : submitting ? <LoadingSpinner size={24} /> : null
+    const statusIcon = done ? (
+      <div className={style.iconCenter}>
+        <Icon name="Tick" />
+      </div>
+    ) : submitting ? (
+      <div className={style.iconLeft}>
+        <LoadingSpinner size={24} />
+      </div>
+    ) : null
 
-    return (<div className={containerClasses}>
-      <button
-        className={buttonClasses}
-        type={submit ? 'submit' : 'button'}
-        onClick={this.handleClick}
-        {...rest}>
+    return (
+      <div className={containerClasses}>
+        <button
+          className={buttonClasses}
+          type={submit ? 'submit' : 'button'}
+          onClick={this.handleClick}
+          {...rest}
+        >
+          {statusIcon || (
+            <Fragment>
+              {iconLeft && <div className={style.iconLeft}>{iconLeft}</div>}
 
-        {statusIcon ? <div className={style.iconLeft}>{statusIcon}</div> : <Fragment>
-          {iconLeft && <div className={style.iconLeft}>{iconLeft}</div>}
+              <div className={style.content}>
+                {children}
 
-          <div className={style.content}>
-            {children}
+                {icon && <Icon className={style.legacyIcon} name={icon} />}
+              </div>
 
-            {icon && <Icon
-              className={style.legacyIcon}
-              name={icon} />}
-          </div>
-
-          {iconRight && <div className={style.iconRight}>{iconRight}</div>}
-        </Fragment>}
-      </button>
-    </div>
+              {iconRight && <div className={style.iconRight}>{iconRight}</div>}
+            </Fragment>
+          )}
+        </button>
+      </div>
     )
   }
 }
