@@ -7,5 +7,5 @@ export default {
   props: {
     iconLeft: <Icon name="Settings" />
   },
-  children: 'Button and Disestablishmentarianism'
+  children: 'Button and Antidisestablishmentarianism'
 }
