@@ -7,6 +7,7 @@
 import React, {Component, Fragment} from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import { withRouter } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
 import SubNavigation from '../SubNavigation'
@@ -186,4 +187,4 @@ class PrimaryNavigation extends Component {
   }
 }
 
-export default onClickOutside(PrimaryNavigation)
+export default withRouter(onClickOutside(PrimaryNavigation))
