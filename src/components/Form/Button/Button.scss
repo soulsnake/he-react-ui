@@ -18,6 +18,8 @@
   outline: none;
   font-weight: $semi-bold;
   user-select: none;
+  min-width: 180px;
+
   &:not(.disabled):hover {
     filter: brightness(92%);
   }
@@ -80,6 +82,8 @@
 }
 
 .link, .keyline:not(:hover):not(:active) {
+  border-width: 2px;
+  
   &.teal {
     color: $teal_1;
     border-color: $teal_1;
