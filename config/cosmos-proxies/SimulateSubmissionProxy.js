@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 
-export class ButtonActionProxy extends React.Component {
+export class SimulateSubmissionProxy extends React.Component {
   static propTypes = {
     nextProxy: PropTypes.object,
     fixture: PropTypes.object 
@@ -28,7 +28,7 @@ export class ButtonActionProxy extends React.Component {
     const { onClick } = this
     const { done, submitting } = this.state
 
-    const wrappedFixture = fixture.buttonAction
+    const wrappedFixture = fixture.simulateSubmission
       ? {
         ...fixture,
         props: { ...fixture.props, onClick, done, submitting }

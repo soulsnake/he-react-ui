@@ -5,5 +5,6 @@ export default {
   props: {
     icon: 'Sync'
   },
-  children: 'Button'
+  children: 'Button',
+  simulateSubmission: true
 }

@@ -7,5 +7,6 @@ export default {
   props: {
     iconRight: <Icon name="ArrowRight" />
   },
-  children: 'Button'
+  children: 'Button',
+  simulateSubmission: true
 }

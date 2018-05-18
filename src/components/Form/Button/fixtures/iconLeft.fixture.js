@@ -7,5 +7,6 @@ export default {
   props: {
     iconLeft: <Icon name="Settings" />
   },
-  children: 'Button'
+  children: 'Button',
+  simulateSubmission: true
 }
