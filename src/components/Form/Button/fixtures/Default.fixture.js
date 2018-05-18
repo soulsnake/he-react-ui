@@ -2,6 +2,7 @@ import Button from '../'
 
 export default {
   component: Button,
+  centered: true,
   props: {
     submit: false
   },
