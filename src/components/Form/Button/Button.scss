@@ -41,7 +41,8 @@
   align-items: center;
   justify-content: center;
 
-  transition: flex-basis 1s;
+  transition-property: flex-grow;
+  transition-duration: 0.5s;
 
   &.submitting, &.done {
     flex-grow: 0.01; // working around a chrome bug
