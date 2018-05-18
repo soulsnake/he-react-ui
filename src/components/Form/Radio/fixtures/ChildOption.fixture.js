@@ -10,6 +10,7 @@ const other = (<SingleSelect options={[
 
 export default {
   component: Radio,
+  formWrapper: {value: '4'},
   props: {
     name: 'demo',
     options: [
@@ -17,7 +18,6 @@ export default {
       {label: 'Option 2', value: '2'},
       {label: 'Option 3', value: '3'},
       {label: 'Other...', value: '4', child: other}
-    ],
-    value: '4'
+    ]
   }
 }

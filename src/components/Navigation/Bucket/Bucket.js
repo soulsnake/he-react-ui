@@ -7,7 +7,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { matchPath } from 'react-router'
+import { withRouter, matchPath } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import isExternal from 'is-url-external'
 
@@ -25,6 +25,7 @@ class Bucket extends Component {
       notifications: PropTypes.number})),
     onSelect: PropTypes.func,
     open: PropTypes.bool,
+    location: PropTypes.object,
     onClickRoute: PropTypes.func,
     onClickParent: PropTypes.func
   }
@@ -36,7 +37,7 @@ class Bucket extends Component {
   }
 
   render () {
-    const { key, icon, items, label, route, open, onClickRoute, onClickParent } = this.props
+    const { key, icon, items, label, route, open, onClickRoute, onClickParent, location } = this.props
 
     const external = isExternal(route)
     const activeChild = items && items.find(
@@ -74,4 +75,4 @@ class Bucket extends Component {
   }
 }
 
-export default Bucket
+export default withRouter(Bucket)

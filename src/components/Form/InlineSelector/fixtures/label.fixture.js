@@ -2,6 +2,7 @@ import InlineSelector from '../'
 
 export default {
   component: InlineSelector,
+  formWrapper: {value: null},
   props: {
     id: 'demo',
     name: 'demo',
