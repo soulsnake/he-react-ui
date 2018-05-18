@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export class FormWrapperProxy extends React.Component {
   static propTypes = {
     nextProxy: PropTypes.object,
-    fixture: PropTypes.object
+    fixture: PropTypes.object 
   }
 
   state = { value: 0 }

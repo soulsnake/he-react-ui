@@ -10,6 +10,7 @@ const other = (<SingleSelect options={[
 
 export default {
   component: Radio,
+  formWrapper: {},
   props: {
     name: 'demo',
     options: [
