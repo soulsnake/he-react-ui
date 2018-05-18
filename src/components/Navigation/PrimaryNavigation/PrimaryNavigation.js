@@ -187,4 +187,4 @@ class PrimaryNavigation extends Component {
   }
 }
 
-export default withRouter(onClickOutside(PrimaryNavigation))
+export default onClickOutside(PrimaryNavigation)
