@@ -9,10 +9,10 @@ export default {
       key: 'HOME',
       label: 'Home',
       icon: 'Home',
-      title: 'Practice admin',
+      title: 'Welcome home',
       route: '/',
       items: []
     },
-    logoutRoute: '/admin/auth/logout'
+    logoutRoute: '/logout'
   }
 }

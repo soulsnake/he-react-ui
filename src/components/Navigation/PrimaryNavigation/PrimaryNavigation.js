@@ -4,8 +4,9 @@
  *
  */
 
-import React, { Component } from 'react'
+import React, {Component, Fragment} from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { NavLink } from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
 import SubNavigation from '../SubNavigation'
@@ -14,6 +15,7 @@ import HashRoute from '../../HashRoute'
 import styles from './PrimaryNavigation.scss'
 import Icon from '../../Icon'
 import Bucket from '../Bucket'
+import LoadingStrip from '../../Loading/LoadingStrip'
 import Slider from '../Slider'
 
 const SUPPORTED_BADGES = ['NEW', 'FREE']
@@ -22,7 +24,7 @@ class PrimaryNavigation extends Component {
   static propTypes = {
     bottomKeys: PropTypes.arrayOf(PropTypes.string),
     logo: PropTypes.shape({
-      icon: PropTypes.string.isRequired,
+      icon: PropTypes.any.isRequired,
       route: PropTypes.string.isRequired
     }).isRequired,
     items: PropTypes.arrayOf(PropTypes.shape({
@@ -44,14 +46,19 @@ class PrimaryNavigation extends Component {
         }))
       }))
     })).isRequired,
-    practices: PropTypes.array,
+    locations: PropTypes.array,
     handleLocationChange: PropTypes.func,
-    logoutRoute: PropTypes.string.isRequired
+    logoutRoute: PropTypes.string.isRequired,
+    loading: PropTypes.bool
   }
 
   static defaultProps = {
-    baseUrl: '',
-    bottomKeys: []
+    bottomKeys: [],
+    logo: {
+      icon: <Icon className={styles.logo} name="HealthEngine" />,
+      route: '/'
+    },
+    loading: false
   }
 
   constructor (props) {
@@ -81,7 +88,7 @@ class PrimaryNavigation extends Component {
 
   renderBuckets () {
     const { closeBucket, toggleBucket } = this
-    const { bottomKeys, items, logo } = this.props
+    const { bottomKeys, items, loading, logo } = this.props
     const { openKey } = this.state
     const topItems = items.filter(item => !bottomKeys.includes(item.key))
     const bottomItems = items.filter(item => bottomKeys.includes(item.key))
@@ -90,11 +97,22 @@ class PrimaryNavigation extends Component {
       <div className={styles.buckets}>
         <NavLink className={styles.logoBucket} to={logo.route}
           onClick={closeBucket}>
-          <Icon className={styles.logo} name={logo.icon} />
+          <div className={styles.logo}>
+            {logo.icon}
+          </div>
         </NavLink>
-        {topItems.map(item => <Bucket open={item.key === openKey} onClickParent={() => toggleBucket(item.key)} onClickRoute={closeBucket} {...item} />)}
-        <div className={styles.bucketFiller} onClick={closeBucket} />
-        {bottomItems.map(item => <Bucket open={item.key === openKey} onClickParent={() => toggleBucket(item.key)} onClickRoute={closeBucket} {...item} />)}
+        {loading ? (
+          <Fragment>
+            <LoadingStrip className={styles.loadingBucket} />
+            <LoadingStrip className={styles.loadingBucket} />
+            <LoadingStrip className={classnames(styles.loadingBucket, styles.bottom)} />
+          </Fragment>)
+          : (<Fragment>
+            {topItems.map(item => <Bucket open={item.key === openKey} onClickParent={() => toggleBucket(item.key)} onClickRoute={closeBucket} {...item} />)}
+            <div className={styles.bucketFiller} onClick={closeBucket} />
+            {bottomItems.map(item => <Bucket open={item.key === openKey} onClickParent={() => toggleBucket(item.key)} onClickRoute={closeBucket} {...item} />)}
+          </Fragment>)
+        }
       </div>
     )
   }
@@ -108,8 +126,8 @@ class PrimaryNavigation extends Component {
 
     return (
       <div className={styles.sliders}>
-        {topItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} top {...item} />)}
-        {bottomItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} top {...item} />)}
+        {topItems.map(item => <Slider open={openKey === item.key} onSelect={closeBucket} {...item} />)}
+        {bottomItems.map(item => <Slider bottom open={openKey === item.key} onSelect={closeBucket} {...item} />)}
       </div>
     )
   }
@@ -118,44 +136,50 @@ class PrimaryNavigation extends Component {
     this.setState({openKey: null})
   }
 
-  renderRoutes (item, practices, onLocationChange, logoutRoute, exact) {
+  renderRoutes (item, locations, onLocationChange, logoutRoute, exact) {
     return (
       <HashRoute
         key={'Subnav_' + item.key}
         exact={item.route === '/'} // Slash will match anything so we need to be exact in that case.
         path={item.route}
         render={
-          () => (<SubNavigation item={item} logoutRoute={logoutRoute} practices={practices} onLocationChange={onLocationChange} />)
+          () => (<SubNavigation item={item} logoutRoute={logoutRoute} locations={locations} onLocationChange={onLocationChange} />)
         }
       />
     )
   }
 
-  renderSubNav (items, practices, handleLocationChange, logoutRoute) {
+  renderSubNav (items, locations, handleLocationChange, logoutRoute) {
     const { renderRoutes } = this
+    const { loading } = this.props
+
+    if (loading) {
+      return <SubNavigation loading logoutRoute={logoutRoute} />
+    }
+
     return items.map((item) => {
       switch (item.items && item.items.length > 0) {
       case true:
-        return item.items.map(child => renderRoutes(child, practices, handleLocationChange, logoutRoute))
+        return item.items.map(child => renderRoutes(child, locations, handleLocationChange, logoutRoute))
       default:
-        return renderRoutes(item, practices, handleLocationChange, logoutRoute)
+        return renderRoutes(item, locations, handleLocationChange, logoutRoute)
       }
     })
   }
 
   render () {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this
-    const { items, practices, handleLocationChange, logoutRoute } = this.props
+    const { items, loading, locations, handleLocationChange, logoutRoute } = this.props
 
     return (
       <div className={styles.outer}>
         <div className={styles.nav}>
           {renderBuckets()}
-          {renderSliders()}
+          {!loading && renderSliders()}
         </div>
         <div className={styles.spacer}>&nbsp;</div>
         <div className={styles.content} onClick={closeBucket}>
-          {renderSubNav(items, practices, handleLocationChange, logoutRoute)}
+          {renderSubNav(items, locations, handleLocationChange, logoutRoute)}
         </div>
       </div>
     )
