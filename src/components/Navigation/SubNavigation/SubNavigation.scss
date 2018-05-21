@@ -9,7 +9,8 @@
 
 .heading {
   color: $teal_dark_60;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  min-width: 180px;
 }
 
 .items { 
@@ -47,11 +48,11 @@
   display: flex;
   justify-content: space-between;
   .rightControlOption {
-    padding: 0px 28px;
+    padding: 0 28px;
     border-right: 1px solid $n_grey_1;
     &:last-child {
       border-right: none;
-      padding-right: 0px;
+      padding-right: 0;
     }
     .icon {
       margin-right: 8px;

@@ -21,24 +21,23 @@ class Slider extends Component {
       route: PropTypes.string.isRequired,
       notifications: PropTypes.number})),
     open: PropTypes.bool,
-    top: PropTypes.bool,
+    bottom: PropTypes.bool,
     onSelect: PropTypes.func
   }
 
   static defaultProps = {
     onSelect: () => null,
     open: false,
-    top: true
+    bottom: false
   }
 
   render () {
-    const { key, open, top, ...restProps } = this.props
+    const { bottom, key, open, ...restProps } = this.props
 
     return (<div
       className={classnames(styles.slider, {
         [styles.open]: open,
-        [styles.top]: top,
-        [styles.bottom]: !top
+        [styles.bottom]: bottom
       })}
       key={key}>
       <div className={styles.filler} />

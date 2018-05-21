@@ -27,11 +27,16 @@ class SubNavigation extends Component {
         label: PropTypes.string.isRequired,
         route: PropTypes.string.isRequired
       }))
-    }).isRequired,
-    practices: PropTypes.array,
+    }),
+    locations: PropTypes.array,
     onLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired,
-    location: PropTypes.object
+    location: PropTypes.object,
+    loading: PropTypes.bool
+  }
+
+  static defaultProps = {
+    loading: false
   }
 
   renderItems (items) {
@@ -63,16 +68,17 @@ class SubNavigation extends Component {
   }
 
   render () {
-    const { item, practices, onLocationChange, logoutRoute } = this.props
+    const { item, loading, locations, onLocationChange, logoutRoute } = this.props
+
     return (
       <div className={style.bar}>
         <div className={style.top}>
-          <Heading h1 className={style.heading}>{item.title}</Heading>
+          <Heading h1 className={style.heading}>{loading ? '' : item.title}</Heading>
           <div className={style.controls}>
-            {practices && practices.length > 1 &&
+            {!loading && locations && locations.length > 1 &&
             (
               <span className={style.rightControlOption}>
-                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={practices} onChange={onLocationChange} />
+                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={locations} onChange={onLocationChange} />
               </span>
             )}
             <NavLink
@@ -87,7 +93,7 @@ class SubNavigation extends Component {
             </NavLink>
           </div>
         </div>
-        {item.items && item.items.length > 0 && (
+        {!loading && item.items && item.items.length > 0 && (
           <div className={style.items}>
             {this.renderItems(item.items)}
           </div>
