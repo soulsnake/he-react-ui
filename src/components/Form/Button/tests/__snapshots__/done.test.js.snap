@@ -21,7 +21,7 @@ exports[`<Button /> rendered correctly with done fixture 1`] = `
     className="buttonContainer"
   >
     <button
-      className="button green teal done"
+      className="button done"
       onClick={[Function]}
       type="button"
     >

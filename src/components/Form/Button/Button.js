@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Icon from '../../Icon'
 import style from './Button.scss'
-import LoadingSpinner from '../../Loading/LoadingSpinner'
+import ButtonSpinner from './ButtonSpinner'
 class Button extends React.Component {
   static propTypes = {
     submit: PropTypes.bool,
@@ -69,14 +69,14 @@ class Button extends React.Component {
     } = this.props
 
     const buttonClasses = classnames(style.button, {
-      [style[color]]: color,
+      [style[color]]: color && !done,
       [style.disabled]: disabled,
       [style.keyline]: keyline,
       [style.link]: link,
       [style.squared]: squared,
-      [style.done]: done,
       [style.submitting]: submitting,
-      [className]: className
+      [className]: className,
+      [style.done]: done
     })
 
     const containerClasses = classnames(style.buttonContainer, {
@@ -90,7 +90,7 @@ class Button extends React.Component {
       </div>
     ) : submitting ? (
       <div className={style.iconCenter}>
-        <LoadingSpinner size={24} />
+        <ButtonSpinner />
       </div>
     ) : null
 
