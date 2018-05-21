@@ -8,7 +8,7 @@ import style from './Paragraph.scss'
 
 class Paragraph extends React.Component {
   static propTypes = {
-    children: PropTypes.any.isRequired,
+    children: PropTypes.any,
     className: PropTypes.string
   }
 

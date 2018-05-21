@@ -2,6 +2,7 @@ import SingleSelect from '../'
 
 export default {
   component: SingleSelect,
+  formWrapper: {value: null},
   props: {
     id: 'demo',
     name: 'demo',

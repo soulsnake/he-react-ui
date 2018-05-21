@@ -13,7 +13,7 @@ class Heading extends React.Component {
     h3: PropTypes.bool,
     h4: PropTypes.bool,
     nav: PropTypes.bool,
-    children: PropTypes.any.isRequired,
+    children: PropTypes.any,
     className: PropTypes.string
   }
 

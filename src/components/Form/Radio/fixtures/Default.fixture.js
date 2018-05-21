@@ -1,6 +1,7 @@
 import Radio from '../'
 
 export default {
+  formWrapper: {value: ''},
   component: Radio,
   props: {
     name: 'demo',

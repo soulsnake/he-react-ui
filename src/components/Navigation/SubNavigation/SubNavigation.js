@@ -5,7 +5,7 @@
 // Vendor
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import { matchPath } from 'react-router'
+import { matchPath, withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 import Heading from '../../Layout/Heading'
 import Icon from '../../Icon'
@@ -14,6 +14,7 @@ import classnames from 'classnames'
 import isExternal from 'is-url-external'
 
 import style from './SubNavigation.scss'
+
 class SubNavigation extends Component {
   static propTypes = {
     item: PropTypes.shape({
@@ -26,13 +27,21 @@ class SubNavigation extends Component {
         label: PropTypes.string.isRequired,
         route: PropTypes.string.isRequired
       }))
-    }).isRequired,
+    }),
     locations: PropTypes.array,
     onLocationChange: PropTypes.func,
-    logoutRoute: PropTypes.string.isRequired
+    logoutRoute: PropTypes.string.isRequired,
+    location: PropTypes.object,
+    loading: PropTypes.bool
+  }
+
+  static defaultProps = {
+    loading: false
   }
 
   renderItems (items) {
+    const { location } = this.props
+
     return items.map((item, index) => {
       if (isExternal(item.route)) {
         return (
@@ -59,13 +68,14 @@ class SubNavigation extends Component {
   }
 
   render () {
-    const { item, locations, onLocationChange, logoutRoute } = this.props
+    const { item, loading, locations, onLocationChange, logoutRoute } = this.props
+
     return (
       <div className={style.bar}>
         <div className={style.top}>
-          <Heading h1 className={style.heading}>{item.title}</Heading>
+          <Heading h1 className={style.heading}>{loading ? '' : item.title}</Heading>
           <div className={style.controls}>
-            {locations && locations.length > 1 &&
+            {!loading && locations && locations.length > 1 &&
             (
               <span className={style.rightControlOption}>
                 <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={locations} onChange={onLocationChange} />
@@ -83,7 +93,7 @@ class SubNavigation extends Component {
             </NavLink>
           </div>
         </div>
-        {item.items && item.items.length > 0 && (
+        {!loading && item.items && item.items.length > 0 && (
           <div className={style.items}>
             {this.renderItems(item.items)}
           </div>
@@ -93,4 +103,4 @@ class SubNavigation extends Component {
   }
 }
 
-export default SubNavigation
+export default withRouter(SubNavigation)
