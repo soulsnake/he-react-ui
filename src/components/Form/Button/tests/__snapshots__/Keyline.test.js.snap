@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> rendered correctly with defaultfixture 1`] = `
+exports[`<Button /> rendered correctly with fixture 1`] = `
 <Button
   color="teal"
   disabled={false}
   done={false}
   icon=""
-  keyline={false}
+  keyline={true}
   link={false}
   onClick={[Function]}
   squared={false}
@@ -17,7 +17,7 @@ exports[`<Button /> rendered correctly with defaultfixture 1`] = `
     className="buttonContainer"
   >
     <button
-      className="button teal"
+      className="button teal keyline"
       onClick={[Function]}
       type="button"
     >

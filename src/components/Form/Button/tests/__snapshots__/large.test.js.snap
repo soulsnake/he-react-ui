@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> rendered correctly with defaultfixture 1`] = `
+exports[`<Button /> rendered correctly with large fixture 1`] = `
 <Button
   color="teal"
   disabled={false}
   done={false}
   icon=""
   keyline={false}
+  large={true}
   link={false}
   onClick={[Function]}
   squared={false}
@@ -14,7 +15,7 @@ exports[`<Button /> rendered correctly with defaultfixture 1`] = `
   submitting={false}
 >
   <div
-    className="buttonContainer"
+    className="buttonContainer large"
   >
     <button
       className="button teal"

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> rendered correctly with defaultfixture 1`] = `
+exports[`<Button /> rendered correctly with red fixture 1`] = `
 <Button
-  color="teal"
+  color="red"
   disabled={false}
   done={false}
   icon=""
@@ -17,7 +17,7 @@ exports[`<Button /> rendered correctly with defaultfixture 1`] = `
     className="buttonContainer"
   >
     <button
-      className="button teal"
+      className="button red"
       onClick={[Function]}
       type="button"
     >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> rendered correctly with defaultfixture 1`] = `
+exports[`<Button /> rendered correctly with squared fixture 1`] = `
 <Button
   color="teal"
   disabled={false}
@@ -9,7 +9,7 @@ exports[`<Button /> rendered correctly with defaultfixture 1`] = `
   keyline={false}
   link={false}
   onClick={[Function]}
-  squared={false}
+  squared={true}
   submit={false}
   submitting={false}
 >
@@ -17,7 +17,7 @@ exports[`<Button /> rendered correctly with defaultfixture 1`] = `
     className="buttonContainer"
   >
     <button
-      className="button teal"
+      className="button teal squared"
       onClick={[Function]}
       type="button"
     >
