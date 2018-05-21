@@ -51,6 +51,7 @@ export default function HealthEngine (props) {
     <svg
       className={className}
       {...restProps}
+      viewBox="0 0 48 38"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
     >
