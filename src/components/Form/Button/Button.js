@@ -90,7 +90,7 @@ class Button extends React.Component {
         <Icon name="Tick" />
       </div>
     ) : submitting ? (
-      <div className={style.iconLeft}>
+      <div className={style.iconCenter}>
         <LoadingSpinner size={24} />
       </div>
     ) : null
