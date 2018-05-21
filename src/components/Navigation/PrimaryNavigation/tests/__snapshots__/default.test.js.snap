@@ -18,6 +18,15 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
   items={
     Array [
       Object {
+        "exact": true,
+        "icon": "Home",
+        "items": null,
+        "key": "HOME",
+        "label": "Home",
+        "route": "/",
+        "title": "Homepage",
+      },
+      Object {
         "icon": "Engage",
         "items": Array [
           Object {
@@ -218,6 +227,15 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
     }
     items={
       Array [
+        Object {
+          "exact": true,
+          "icon": "Home",
+          "items": null,
+          "key": "HOME",
+          "label": "Home",
+          "route": "/",
+          "title": "Homepage",
+        },
         Object {
           "icon": "Engage",
           "items": Array [
@@ -509,6 +527,149 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
               </Link>
             </Route>
           </NavLink>
+          <withRouter(Bucket)
+            exact={true}
+            icon="Home"
+            items={null}
+            key="HOME"
+            label="Home"
+            onClickParent={[Function]}
+            onClickRoute={[Function]}
+            open={false}
+            route="/"
+            title="Homepage"
+          >
+            <Route
+              render={[Function]}
+            >
+              <Bucket
+                exact={true}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "key": "mocked",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "key": "mocked",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                icon="Home"
+                items={null}
+                label="Home"
+                location={
+                  Object {
+                    "hash": "",
+                    "key": "mocked",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                onClickParent={[Function]}
+                onClickRoute={[Function]}
+                open={false}
+                route="/"
+                title="Homepage"
+              >
+                <NavLink
+                  activeClassName="current"
+                  ariaCurrent="true"
+                  className="bucket"
+                  exact={true}
+                  onClick={[Function]}
+                  title="Home"
+                  to="/"
+                >
+                  <Route
+                    exact={true}
+                    path="/"
+                  >
+                    <Link
+                      aria-current="true"
+                      className="bucket current"
+                      onClick={[Function]}
+                      replace={false}
+                      style={Object {}}
+                      title="Home"
+                      to="/"
+                    >
+                      <a
+                        aria-current="true"
+                        className="bucket current"
+                        href="/"
+                        onClick={[Function]}
+                        style={Object {}}
+                        title="Home"
+                      >
+                        <Icon
+                          className="icon"
+                          name="Home"
+                        >
+                          <Help
+                            className="icon icon"
+                          >
+                            <svg
+                              className="icon icon"
+                              version="1.1"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g
+                                transform="translate(1.000000, 1.500000)"
+                              >
+                                <path
+                                  d="M 3.984375,9.9863281 A 1.0001,1.0001 0 0 0 3,11 v 10 a 1.0001,1.0001 0 0 0 1,1 h 5 a 1.0001,1.0001 0 0 0 1,-1 v -7 h 2 v 7 a 1.0001,1.0001 0 0 0 1,1 h 5 a 1.0001,1.0001 0 0 0 1,-1 V 11 a 1.0001,1.0001 0 1 0 -2,0 v 9 H 14 V 13 A 1.0001,1.0001 0 0 0 13,12 H 9 a 1.0001,1.0001 0 0 0 -1,1 v 7 H 5 V 11 A 1.0001,1.0001 0 0 0 3.984375,9.9863281 Z"
+                                />
+                                <path
+                                  d="m 11.037109,-1 a 1.0001,1.0001 0 0 0 -0.708984,0.25976562 l -11,9.99999998 a 1.0001,1.0001 0 1 0 1.34375,1.4804684 L 11,1.3515625 21.328125,10.740234 a 1.0001,1.0001 0 1 0 1.34375,-1.4804684 l -11,-9.99999998 A 1.0001,1.0001 0 0 0 11.037109,-1 Z"
+                                />
+                              </g>
+                            </svg>
+                          </Help>
+                        </Icon>
+                        <span
+                          className="label"
+                        >
+                          Home
+                        </span>
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+              </Bucket>
+            </Route>
+          </withRouter(Bucket)>
           <withRouter(Bucket)
             icon="Engage"
             items={
@@ -1280,6 +1441,40 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
         >
           <Slider
             bottom={false}
+            exact={true}
+            icon="Home"
+            items={null}
+            key="HOME"
+            label="Home"
+            onSelect={[Function]}
+            open={false}
+            route="/"
+            title="Homepage"
+          >
+            <div
+              className="slider"
+            >
+              <div
+                className="filler"
+              />
+              <List
+                className="list"
+                exact={true}
+                icon="Home"
+                items={null}
+                label="Home"
+                onSelect={[Function]}
+                route="/"
+                title="Homepage"
+              >
+                <div
+                  className="list"
+                />
+              </List>
+            </div>
+          </Slider>
+          <Slider
+            bottom={false}
             icon="Engage"
             items={
               Array [
@@ -1932,7 +2127,337 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
         onClick={[Function]}
       >
         <HashRoute
-          exact={false}
+          exact={true}
+          key="Subnav_HOME"
+          path="/"
+          render={[Function]}
+        >
+          <Route
+            render={[Function]}
+          >
+            <withRouter(SubNavigation)
+              item={
+                Object {
+                  "exact": true,
+                  "icon": "Home",
+                  "items": null,
+                  "key": "HOME",
+                  "label": "Home",
+                  "route": "/",
+                  "title": "Homepage",
+                }
+              }
+              locations={
+                Array [
+                  Object {
+                    "label": "Location A",
+                    "value": "Location A",
+                  },
+                  Object {
+                    "label": "Location B",
+                    "value": "Location B",
+                  },
+                ]
+              }
+              logoutRoute="/logout"
+            >
+              <Route
+                render={[Function]}
+              >
+                <SubNavigation
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "key": "mocked",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "key": "mocked",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  item={
+                    Object {
+                      "exact": true,
+                      "icon": "Home",
+                      "items": null,
+                      "key": "HOME",
+                      "label": "Home",
+                      "route": "/",
+                      "title": "Homepage",
+                    }
+                  }
+                  loading={false}
+                  location={
+                    Object {
+                      "hash": "",
+                      "key": "mocked",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  locations={
+                    Array [
+                      Object {
+                        "label": "Location A",
+                        "value": "Location A",
+                      },
+                      Object {
+                        "label": "Location B",
+                        "value": "Location B",
+                      },
+                    ]
+                  }
+                  logoutRoute="/logout"
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <div
+                    className="bar"
+                  >
+                    <div
+                      className="top"
+                    >
+                      <Heading
+                        className="heading"
+                        h1={true}
+                        h2={false}
+                        h3={false}
+                        h4={false}
+                        nav={false}
+                      >
+                        <h1
+                          className="heading h1 heading"
+                        >
+                          Homepage
+                        </h1>
+                      </Heading>
+                      <div
+                        className="controls"
+                      >
+                        <span
+                          className="rightControlOption"
+                        >
+                          <OnClickOutside(SingleSelect)
+                            className="locationSelector"
+                            eventTypes={
+                              Array [
+                                "mousedown",
+                                "touchstart",
+                              ]
+                            }
+                            excludeScrollbar={false}
+                            id="locationSelector"
+                            name="location"
+                            options={
+                              Array [
+                                Object {
+                                  "label": "Location A",
+                                  "value": "Location A",
+                                },
+                                Object {
+                                  "label": "Location B",
+                                  "value": "Location B",
+                                },
+                              ]
+                            }
+                            outsideClickIgnoreClass="ignore-react-onclickoutside"
+                            preventDefault={false}
+                            stopPropagation={false}
+                          >
+                            <SingleSelect
+                              className="locationSelector"
+                              disableOnClickOutside={[Function]}
+                              disabled={false}
+                              enableOnClickOutside={[Function]}
+                              error=""
+                              eventTypes={
+                                Array [
+                                  "mousedown",
+                                  "touchstart",
+                                ]
+                              }
+                              id="locationSelector"
+                              inline={false}
+                              name="location"
+                              onChange={[Function]}
+                              options={
+                                Array [
+                                  Object {
+                                    "label": "Location A",
+                                    "value": "Location A",
+                                  },
+                                  Object {
+                                    "label": "Location B",
+                                    "value": "Location B",
+                                  },
+                                ]
+                              }
+                              outsideClickIgnoreClass="ignore-react-onclickoutside"
+                              preventDefault={false}
+                              stopPropagation={false}
+                              value={null}
+                            >
+                              <div
+                                className="outer locationSelector"
+                                options={
+                                  Array [
+                                    Object {
+                                      "label": "Location A",
+                                      "value": "Location A",
+                                    },
+                                    Object {
+                                      "label": "Location B",
+                                      "value": "Location B",
+                                    },
+                                  ]
+                                }
+                              >
+                                <div
+                                  className="select"
+                                  id="locationSelector"
+                                  onClick={[Function]}
+                                >
+                                  <span>
+                                    Location A
+                                  </span>
+                                  <Icon
+                                    className="caret"
+                                    name="DropDown"
+                                  >
+                                    <DropDown
+                                      className="icon caret"
+                                    >
+                                      <svg
+                                        className="icon caret"
+                                        version="1.1"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <g
+                                          transform="translate(15.000000, 7.000000) rotate(90.000000)"
+                                        >
+                                          <path
+                                            d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </DropDown>
+                                  </Icon>
+                                </div>
+                                <ul
+                                  className="options"
+                                >
+                                  <li
+                                    className="option selected"
+                                    key="Location A"
+                                    onClick={[Function]}
+                                  >
+                                    Location A
+                                  </li>
+                                  <li
+                                    className="option"
+                                    key="Location B"
+                                    onClick={[Function]}
+                                  >
+                                    Location B
+                                  </li>
+                                </ul>
+                              </div>
+                            </SingleSelect>
+                          </OnClickOutside(SingleSelect)>
+                        </span>
+                        <NavLink
+                          activeClassName="active"
+                          ariaCurrent="true"
+                          className="topNavLink"
+                          key="logout"
+                          title="Logout"
+                          to="/logout"
+                        >
+                          <Route
+                            path="/logout"
+                          >
+                            <Link
+                              aria-current={false}
+                              className="topNavLink"
+                              replace={false}
+                              title="Logout"
+                              to="/logout"
+                            >
+                              <a
+                                aria-current={false}
+                                className="topNavLink"
+                                href="/logout"
+                                onClick={[Function]}
+                                title="Logout"
+                              >
+                                <span
+                                  className="rightControlOption"
+                                >
+                                  <Icon
+                                    className="icon"
+                                    name="Logout"
+                                  >
+                                    <Logout
+                                      className="icon icon"
+                                    >
+                                      <svg
+                                        className="icon icon"
+                                        version="1.1"
+                                        viewBox="0 1 16 16"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M 7.5 0.66601562 C 6.6774686 0.66601562 6 1.3434842 6 2.1660156 L 6 5.1660156 L 7 5.1660156 L 7 2.1660156 C 7 1.884547 7.2185314 1.6660156 7.5 1.6660156 L 14.5 1.6660156 C 14.781469 1.6660156 15 1.884547 15 2.1660156 L 15 14.166016 C 15 14.447484 14.781469 14.666016 14.5 14.666016 L 7.5 14.666016 C 7.2185314 14.666016 7 14.447484 7 14.166016 L 7 11.166016 L 6 11.166016 L 6 14.166016 C 6 14.988547 6.6774686 15.666016 7.5 15.666016 L 14.5 15.666016 C 15.322531 15.666016 16 14.988547 16 14.166016 L 16 2.1660156 C 16 1.3434842 15.322531 0.66601562 14.5 0.66601562 L 7.5 0.66601562 z M 3.1464844 4.8125 L -0.20703125 8.1660156 L 3.1464844 11.519531 L 3.8535156 10.8125 L 1.7070312 8.6660156 L 11.5 8.6660156 L 11.5 7.6660156 L 1.7070312 7.6660156 L 3.8535156 5.5195312 L 3.1464844 4.8125 z "
+                                          transform="translate(0,1)"
+                                        />
+                                      </svg>
+                                    </Logout>
+                                  </Icon>
+                                  Logout
+                                </span>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </SubNavigation>
+              </Route>
+            </withRouter(SubNavigation)>
+          </Route>
+        </HashRoute>
+        <HashRoute
           key="Subnav_NORMAL"
           path="/normal"
           render={[Function]}
@@ -1942,7 +2467,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
           />
         </HashRoute>
         <HashRoute
-          exact={false}
           key="Subnav_NOTIFICATIONS"
           path="/notifications"
           render={[Function]}
@@ -1952,7 +2476,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
           />
         </HashRoute>
         <HashRoute
-          exact={false}
           key="Subnav_FREE"
           path="/free"
           render={[Function]}
@@ -1962,7 +2485,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
           />
         </HashRoute>
         <HashRoute
-          exact={false}
           key="Subnav_NEW"
           path="/new"
           render={[Function]}
@@ -1972,7 +2494,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
           />
         </HashRoute>
         <HashRoute
-          exact={false}
           key="Subnav_HELP"
           path="https://external.url/"
           render={[Function]}
@@ -1982,7 +2503,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
           />
         </HashRoute>
         <HashRoute
-          exact={false}
           key="Subnav_ITEM1"
           path="/settings-1"
           render={[Function]}
@@ -1992,7 +2512,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
           />
         </HashRoute>
         <HashRoute
-          exact={false}
           key="Subnav_ITEM2"
           path="/settings-2"
           render={[Function]}
@@ -2002,7 +2521,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
           />
         </HashRoute>
         <HashRoute
-          exact={false}
           key="Subnav_ITEM3"
           path="/settings-3"
           render={[Function]}
