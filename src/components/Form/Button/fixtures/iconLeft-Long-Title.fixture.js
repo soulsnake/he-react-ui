@@ -7,5 +7,6 @@ export default {
   props: {
     iconLeft: <Icon name="Settings" />
   },
-  children: 'Button and Antidisestablishmentarianism'
+  children: 'Button with Antidisestablishmentarianism',
+  simulateSubmission: true
 }

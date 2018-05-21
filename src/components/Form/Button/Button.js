@@ -10,16 +10,6 @@ import classnames from 'classnames'
 import Icon from '../../Icon'
 import style from './Button.scss'
 import LoadingSpinner from '../../Loading/LoadingSpinner'
-
-let iconDeprecationShown = false
-function showIconDeprecation () {
-  if (!iconDeprecationShown) {
-    console.error(
-      'Button.icon is deprecated. Please use iconLeft or iconRight instead, which take an element rather than a string.'
-    )
-    iconDeprecationShown = true
-  }
-}
 class Button extends React.Component {
   static propTypes = {
     submit: PropTypes.bool,
@@ -54,13 +44,6 @@ class Button extends React.Component {
   handleClick = event => {
     if (!this.props.disabled) {
       this.props.onClick(event)
-    }
-  }
-
-  constructor (props) {
-    super(props)
-    if (props.icon) {
-      showIconDeprecation()
     }
   }
 
