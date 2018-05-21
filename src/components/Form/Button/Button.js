@@ -69,7 +69,6 @@ class Button extends React.Component {
     } = this.props
 
     const buttonClasses = classnames(style.button, {
-      [style.green]: done,
       [style[color]]: color,
       [style.disabled]: disabled,
       [style.keyline]: keyline,

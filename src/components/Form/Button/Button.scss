@@ -46,12 +46,13 @@
   &.submitting {
     flex-grow: 0.01; // working around a chrome bug
     padding: 0;
+    pointer-events: none;
   }
 
-  &:not(.disabled):hover {
+  &:not(.disabled):not(.submitting):not(.done):hover {
     filter: brightness(92%);
   }
-  &:not(.disabled):active {
+  &:not(.disabled):not(.submitting):not(.done):active {
     filter: brightness(84%);
   }
 }
@@ -97,6 +98,11 @@
   &:active, &:hover, &:focus {
     background: $white;
   }
+}
+
+.done {
+  @extend .green;
+  pointer-events: none;
 }
 
 .keyline {
