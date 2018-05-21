@@ -26,7 +26,7 @@ exports[`<Button /> rendered correctly with submitting fixture 1`] = `
       type="button"
     >
       <div
-        className="iconLeft"
+        className="iconCenter"
       >
         <LoadingSpinner
           color="teal"
