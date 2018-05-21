@@ -136,11 +136,11 @@ class PrimaryNavigation extends Component {
     this.setState({openKey: null})
   }
 
-  renderRoutes (item, locations, onLocationChange, logoutRoute, exact) {
+  renderRoutes (item, locations, onLocationChange, logoutRoute) {
     return (
       <HashRoute
         key={'Subnav_' + item.key}
-        exact={item.route === '/'} // Slash will match anything so we need to be exact in that case.
+        exact={item.exact} // Slash will match anything so we need to be exact in that case.
         path={item.route}
         render={
           () => (<SubNavigation item={item} logoutRoute={logoutRoute} locations={locations} onLocationChange={onLocationChange} />)
