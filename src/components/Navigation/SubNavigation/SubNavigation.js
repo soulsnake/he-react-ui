@@ -78,7 +78,7 @@ class SubNavigation extends Component {
             {!loading && locations && locations.length > 1 &&
             (
               <span className={style.rightControlOption}>
-                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={locations} onChange={onLocationChange} />
+                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={locations} onChange={onLocationChange} style={{paddingBottom: '0px'}} />
               </span>
             )}
             <NavLink

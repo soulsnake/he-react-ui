@@ -64,6 +64,7 @@
 }
 
 .controls {
+  min-height: 43px;
   color: $grey_2;
   .topNavLink {
     color: $grey_2;
@@ -84,5 +85,11 @@
         color: $grey_1;
       }
     }
+  }
+}
+
+:global {
+  #locationSelector {
+    margin-bottom: 0px;
   }
 }
