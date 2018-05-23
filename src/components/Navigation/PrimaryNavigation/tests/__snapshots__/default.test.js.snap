@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
+exports[`<onClickOutside /> rendered correctly with Default fixture 1`] = `
 <OnClickOutside(PrimaryNavigation)
   bottomKeys={
     Array [
@@ -420,7 +420,6 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
       Object {
         "icon": <Icon
           className="logo"
-          inverted={true}
           name="HealthEngine"
         />,
         "route": "/",
@@ -470,12 +469,10 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                   >
                     <Icon
                       className="logo"
-                      inverted={true}
                       name="HealthEngine"
                     >
                       <HealthEngine
                         className="icon logo"
-                        inverted={true}
                       >
                         <svg
                           className="icon logo"
@@ -2119,9 +2116,7 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
       </div>
       <div
         className="spacer"
-      >
-         
-      </div>
+      />
       <div
         className="content"
         onClick={[Function]}
@@ -2264,7 +2259,7 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                         className="controls"
                       >
                         <span
-                          className="rightControlOption"
+                          className="control"
                         >
                           <OnClickOutside(SingleSelect)
                             className="locationSelector"
@@ -2292,6 +2287,11 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                             outsideClickIgnoreClass="ignore-react-onclickoutside"
                             preventDefault={false}
                             stopPropagation={false}
+                            style={
+                              Object {
+                                "paddingBottom": "0px",
+                              }
+                            }
                           >
                             <SingleSelect
                               className="locationSelector"
@@ -2324,6 +2324,11 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                               outsideClickIgnoreClass="ignore-react-onclickoutside"
                               preventDefault={false}
                               stopPropagation={false}
+                              style={
+                                Object {
+                                  "paddingBottom": "0px",
+                                }
+                              }
                               value={null}
                             >
                               <div
@@ -2339,6 +2344,11 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                                       "value": "Location B",
                                     },
                                   ]
+                                }
+                                style={
+                                  Object {
+                                    "paddingBottom": "0px",
+                                  }
                                 }
                               >
                                 <div
@@ -2395,33 +2405,33 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                             </SingleSelect>
                           </OnClickOutside(SingleSelect)>
                         </span>
-                        <NavLink
-                          activeClassName="active"
-                          ariaCurrent="true"
-                          className="topNavLink"
-                          key="logout"
-                          title="Logout"
-                          to="/logout"
+                        <span
+                          className="control"
                         >
-                          <Route
-                            path="/logout"
+                          <NavLink
+                            activeClassName="active"
+                            ariaCurrent="true"
+                            className="navLink"
+                            key="logout"
+                            title="Logout"
+                            to="/logout"
                           >
-                            <Link
-                              aria-current={false}
-                              className="topNavLink"
-                              replace={false}
-                              title="Logout"
-                              to="/logout"
+                            <Route
+                              path="/logout"
                             >
-                              <a
+                              <Link
                                 aria-current={false}
-                                className="topNavLink"
-                                href="/logout"
-                                onClick={[Function]}
+                                className="navLink"
+                                replace={false}
                                 title="Logout"
+                                to="/logout"
                               >
-                                <span
-                                  className="rightControlOption"
+                                <a
+                                  aria-current={false}
+                                  className="navLink"
+                                  href="/logout"
+                                  onClick={[Function]}
+                                  title="Logout"
                                 >
                                   <Icon
                                     className="icon"
@@ -2444,11 +2454,11 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                                     </Logout>
                                   </Icon>
                                   Logout
-                                </span>
-                              </a>
-                            </Link>
-                          </Route>
-                        </NavLink>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                        </span>
                       </div>
                     </div>
                   </div>

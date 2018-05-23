@@ -1,12 +1,4 @@
-import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../fixtures/Default.fixture'
+import fixture from '../fixtures/Default.fixture.js'
+import testFixture from '../../../../../config/testFixture'
 
-const { mount, getWrapper } = createTestContext({ fixture })
-
-beforeEach(mount)
-
-test('<PrimaryNavigation /> rendered correctly with default fixture', () => {
-  let wrapper = getWrapper()
-
-  expect(wrapper).toMatchSnapshot()
-})
+testFixture(fixture, 'Default')
