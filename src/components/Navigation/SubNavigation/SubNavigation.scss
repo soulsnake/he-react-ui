@@ -47,42 +47,37 @@
 .top {
   display: flex;
   justify-content: space-between;
-  .rightControlOption {
-    padding: 0 28px;
-    border-right: 1px solid $n_grey_1;
-    &:last-child {
-      border-right: none;
-      padding-right: 0;
-    }
-    .icon {
-      margin-right: 8px;
-      margin-bottom: -2px;
-      width: 16px;
-      height: 16px;
-    }
-  }
-}
-
-.controls {
-  min-height: 43px;
-  color: $grey_2;
-  .topNavLink {
-    color: $grey_2;
-    text-decoration: none;
-  }
-}
-
-.locationSelector {
-  display: inline-block;
-  width: fit-content;
-  div {
-    border: none;
-    display: inline-block;
-    color: $grey_2;
-    svg {
-      color: $grey_2;
-      &:hover {
-        color: $grey_1;
+  .controls {
+    .control {
+      .navLink {
+        color: $grey_2;
+        text-decoration: none;
+      }
+      padding: 0 28px;
+      border-right: 1px solid $n_grey_1;
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+      .icon {
+        margin-right: 8px;
+        margin-bottom: -2px;
+        width: 16px;
+        height: 16px;
+      }
+      .locationSelector {
+        display: inline-block;
+        width: fit-content;
+        div {
+          border: none;
+          color: $grey_2;
+          svg {
+            color: $grey_2;
+            &:hover {
+              color: $grey_1;
+            }
+          }
+        }
       }
     }
   }
