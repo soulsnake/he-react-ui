@@ -3,7 +3,7 @@ import Button from '../'
 export default {
   component: Button,
   props: {
-    color: 'blue'
+    icon: 'Sync'
   },
   children: 'Button',
   simulateSubmission: true
