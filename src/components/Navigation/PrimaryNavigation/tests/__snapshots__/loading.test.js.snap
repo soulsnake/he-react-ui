@@ -175,9 +175,7 @@ exports[`<PrimaryNavigation /> rendered correctly with fixture 1`] = `
       </div>
       <div
         className="spacer"
-      >
-         
-      </div>
+      />
       <div
         className="content"
         onClick={[Function]}
@@ -275,33 +273,33 @@ exports[`<PrimaryNavigation /> rendered correctly with fixture 1`] = `
                   <div
                     className="controls"
                   >
-                    <NavLink
-                      activeClassName="active"
-                      ariaCurrent="true"
-                      className="topNavLink"
-                      key="logout"
-                      title="Logout"
-                      to="/logout"
+                    <span
+                      className="control"
                     >
-                      <Route
-                        path="/logout"
+                      <NavLink
+                        activeClassName="active"
+                        ariaCurrent="true"
+                        className="navLink"
+                        key="logout"
+                        title="Logout"
+                        to="/logout"
                       >
-                        <Link
-                          aria-current={false}
-                          className="topNavLink"
-                          replace={false}
-                          title="Logout"
-                          to="/logout"
+                        <Route
+                          path="/logout"
                         >
-                          <a
+                          <Link
                             aria-current={false}
-                            className="topNavLink"
-                            href="/logout"
-                            onClick={[Function]}
+                            className="navLink"
+                            replace={false}
                             title="Logout"
+                            to="/logout"
                           >
-                            <span
-                              className="rightControlOption"
+                            <a
+                              aria-current={false}
+                              className="navLink"
+                              href="/logout"
+                              onClick={[Function]}
+                              title="Logout"
                             >
                               <Icon
                                 className="icon"
@@ -324,11 +322,11 @@ exports[`<PrimaryNavigation /> rendered correctly with fixture 1`] = `
                                 </Logout>
                               </Icon>
                               Logout
-                            </span>
-                          </a>
-                        </Link>
-                      </Route>
-                    </NavLink>
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
+                    </span>
                   </div>
                 </div>
               </div>

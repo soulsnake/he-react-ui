@@ -75,8 +75,7 @@ $slider-width: 264px;
 }
 
 .spacer {
-  width: $bucket-width;
-  height: 100%;
+  flex: 0 0 $bucket-width;
   content: ' ';
 }
 

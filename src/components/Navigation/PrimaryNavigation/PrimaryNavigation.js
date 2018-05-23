@@ -49,7 +49,8 @@ class PrimaryNavigation extends Component {
     locations: PropTypes.array,
     handleLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string])
   }
 
   static defaultProps = {
@@ -169,7 +170,7 @@ class PrimaryNavigation extends Component {
 
   render () {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this
-    const { items, loading, locations, handleLocationChange, logoutRoute } = this.props
+    const { items, loading, locations, handleLocationChange, logoutRoute, children } = this.props
 
     return (
       <div className={styles.outer}>
@@ -177,9 +178,10 @@ class PrimaryNavigation extends Component {
           {renderBuckets()}
           {!loading && renderSliders()}
         </div>
-        <div className={styles.spacer}>&nbsp;</div>
+        <div className={styles.spacer} />
         <div className={styles.content} onClick={closeBucket}>
           {renderSubNav(items, locations, handleLocationChange, logoutRoute)}
+          {children}
         </div>
       </div>
     )
