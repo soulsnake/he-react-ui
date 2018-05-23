@@ -10,8 +10,7 @@ class LoadingSpinner extends Component {
     className: PropTypes.string,
     color: PropTypes.oneOf(colors),
     fidget: PropTypes.bool,
-    ringColor: PropTypes.oneOf(colors),
-    size: PropTypes.number
+    ringColor: PropTypes.oneOf(colors)
   }
 
   static defaultProps = {
@@ -21,7 +20,7 @@ class LoadingSpinner extends Component {
   }
 
   render () {
-    const { className, color, fidget, ringColor, size, ...restProps } = this.props
+    const { className, color, fidget, ringColor, ...restProps } = this.props
     const classes = classnames(style.outer, {
       [style[color]]: color,
       [className]: className
@@ -29,11 +28,10 @@ class LoadingSpinner extends Component {
     const ringClasses = classnames(style.ring, {
       [style[ringColor]]: ringColor
     })
-    const sizeStyle = size ? {width: size, height: size} : {}
 
     return (
-      <div className={classes} style={sizeStyle}>
-        <svg className={classnames(style.spinner, {[style.fidget]: fidget})} style={sizeStyle} {...restProps} viewBox={fidget ? '0 0 100 100' : '0 0 24 24'} version="1.1">
+      <div className={classes}>
+        <svg className={classnames(style.spinner, {[style.fidget]: fidget})} {...restProps} viewBox={fidget ? '0 0 100 100' : '0 0 24 24'} version="1.1">
           { fidget ? (<g transform="translate(0, -8)">
             <path className={style.highlight} d="M27.1,79.4c-1.1,0.6-2.4,1-3.7,1c-2.6,0-5.1-1.4-6.4-3.7c-2-3.5-0.8-8,2.7-10.1c1.1-0.6,2.4-1,3.7-1c2.6,0,5.1,1.4,6.4,3.7 C31.8,72.9,30.6,77.4,27.1,79.4z" />
             <path className={style.highlight} d="M72.9,79.4c1.1,0.6,2.4,1,3.7,1c2.6,0,5.1-1.4,6.4-3.7c2-3.5,0.8-8-2.7-10.1c-1.1-0.6-2.4-1-3.7-1c-2.6,0-5.1,1.4-6.4,3.7 C68.2,72.9,69.4,77.4,72.9,79.4z" />
