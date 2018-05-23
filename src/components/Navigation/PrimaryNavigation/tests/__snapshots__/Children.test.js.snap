@@ -420,6 +420,7 @@ exports[`<onClickOutside /> rendered correctly with Children fixture 1`] = `
       Object {
         "icon": <Icon
           className="logo"
+          inverted={true}
           name="HealthEngine"
         />,
         "route": "/",
@@ -469,10 +470,12 @@ exports[`<onClickOutside /> rendered correctly with Children fixture 1`] = `
                   >
                     <Icon
                       className="logo"
+                      inverted={true}
                       name="HealthEngine"
                     >
                       <HealthEngine
                         className="icon logo"
+                        inverted={true}
                       >
                         <svg
                           className="icon logo"
