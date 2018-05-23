@@ -6,17 +6,25 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
   disabled={false}
   icon=""
   keyline={false}
-  link={false}
+  link={true}
   onClick={[Function]}
   squared={false}
   submit={false}
 >
-  <button
-    className="button teal"
-    onClick={[Function]}
-    type="button"
+  <div
+    className="buttonContainer"
   >
-    Button
-  </button>
+    <button
+      className="button teal link"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="content"
+      >
+        Button
+      </div>
+    </button>
+  </div>
 </Button>
 `;
