@@ -52,18 +52,19 @@
       .navLink {
         color: $grey_2;
         text-decoration: none;
+        line-height: 43px;
+        .icon {
+          margin-right: 8px;
+          margin-bottom: -2px;
+          width: 16px;
+          height: 16px;
+        }
       }
       padding: 0 28px;
       border-right: 1px solid $n_grey_1;
       &:last-child {
         border-right: none;
         padding-right: 0;
-      }
-      .icon {
-        margin-right: 8px;
-        margin-bottom: -2px;
-        width: 16px;
-        height: 16px;
       }
       .locationSelector {
         display: inline-block;
