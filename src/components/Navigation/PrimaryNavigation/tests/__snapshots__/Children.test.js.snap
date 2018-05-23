@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<onClickOutside /> rendered correctly with Children fixture 1`] = `
+exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Children fixture 1`] = `
 <OnClickOutside(PrimaryNavigation)
   bottomKeys={
     Array [

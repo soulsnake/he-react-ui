@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<onClickOutside /> rendered correctly with LessThanTwo fixture 1`] = `
+exports[`<OnClickOutside(ActionSet) /> rendered correctly with LessThanTwo fixture 1`] = `
 <OnClickOutside(ActionSet)
   eventTypes={
     Array [

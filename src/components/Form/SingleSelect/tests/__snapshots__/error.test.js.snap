@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<onClickOutside /> rendered correctly with error fixture 1`] = `
+exports[`<OnClickOutside(SingleSelect) /> rendered correctly with error fixture 1`] = `
 <OnClickOutside(SingleSelect)
   error="That selection wasn't great"
   eventTypes={

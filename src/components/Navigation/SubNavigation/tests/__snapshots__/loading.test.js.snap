@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<C /> rendered correctly with loading fixture 1`] = `
+exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1`] = `
 <withRouter(SubNavigation)
   item={
     Object {

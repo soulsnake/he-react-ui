@@ -1,10 +1,12 @@
 import createTestContext from 'react-cosmos-test/enzyme'
 
-export default function testFixture(fixture, name) {
+export default function testFixture(fixture, variant) {
   const { mount, getWrapper } = createTestContext({ fixture })
+  const {component} = fixture;
+  const {displayName, name} = component;
   mount()
   test(`<${
-    fixture.component.name
-  } /> rendered correctly with ${name} fixture`, () =>
+    displayName || name
+  } /> rendered correctly with ${variant} fixture`, () =>
     expect(getWrapper()).toMatchSnapshot())
 }
