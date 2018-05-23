@@ -175,9 +175,7 @@ exports[`<PrimaryNavigation /> rendered correctly with fixture 1`] = `
       </div>
       <div
         className="spacer"
-      >
-         
-      </div>
+      />
       <div
         className="content"
         onClick={[Function]}

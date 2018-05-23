@@ -178,6 +178,11 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                 outsideClickIgnoreClass="ignore-react-onclickoutside"
                 preventDefault={false}
                 stopPropagation={false}
+                style={
+                  Object {
+                    "paddingBottom": "0px",
+                  }
+                }
               >
                 <SingleSelect
                   className="locationSelector"
@@ -210,6 +215,11 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                   outsideClickIgnoreClass="ignore-react-onclickoutside"
                   preventDefault={false}
                   stopPropagation={false}
+                  style={
+                    Object {
+                      "paddingBottom": "0px",
+                    }
+                  }
                   value={null}
                 >
                   <div
@@ -225,6 +235,11 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                           "value": "Location B",
                         },
                       ]
+                    }
+                    style={
+                      Object {
+                        "paddingBottom": "0px",
+                      }
                     }
                   >
                     <div
