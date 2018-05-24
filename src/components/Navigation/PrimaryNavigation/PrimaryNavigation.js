@@ -162,16 +162,16 @@ class PrimaryNavigation extends Component {
     return items.map((item) => {
       switch (item.items && item.items.length > 0) {
       case true:
-        return item.items.map(child => renderRoutes(child, locations, onLocationChange, logoutRoute))
+        return item.items.map(child => renderRoutes(child, locations, onLocationChange, locationValue, logoutRoute))
       default:
-        return renderRoutes(item, locations, onLocationChange, logoutRoute)
+        return renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute)
       }
     })
   }
 
   render () {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this
-    const { items, loading, locations, onLocationChange, logoutRoute, children, locationValue } = this.props
+    const { items, loading, locations, onLocationChange, locationValue, logoutRoute, children } = this.props
 
     return (
       <div className={styles.outer}>
