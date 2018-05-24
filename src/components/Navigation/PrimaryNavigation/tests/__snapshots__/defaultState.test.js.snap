@@ -2542,6 +2542,9 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
             render={[Function]}
           />
         </HashRoute>
+        <div
+          className="children"
+        />
       </div>
     </div>
   </PrimaryNavigation>
