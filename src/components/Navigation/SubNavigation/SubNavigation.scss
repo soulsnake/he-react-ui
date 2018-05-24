@@ -2,8 +2,9 @@
 
 .bar {
   background-color: $white;
-  font-family: $font-stack;
   color: $navy_1;
+  flex-grow: 0;
+  font-family: $font-stack;
   padding: 20px 48px;
 }
 

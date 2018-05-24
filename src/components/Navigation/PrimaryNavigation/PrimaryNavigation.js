@@ -182,7 +182,9 @@ class PrimaryNavigation extends Component {
         <div className={styles.spacer} />
         <div className={styles.content} onClick={closeBucket}>
           {renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute)}
-          {children}
+          <div className={styles.children}>
+            {children}
+          </div>
         </div>
       </div>
     )
