@@ -47,7 +47,7 @@ class PrimaryNavigation extends Component {
       }))
     })).isRequired,
     locations: PropTypes.array,
-    handleLocationChange: PropTypes.func,
+    onLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired,
     loading: PropTypes.bool,
     children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string])
@@ -150,7 +150,7 @@ class PrimaryNavigation extends Component {
     )
   }
 
-  renderSubNav (items, locations, handleLocationChange, logoutRoute) {
+  renderSubNav (items, locations, onLocationChange, logoutRoute) {
     const { renderRoutes } = this
     const { loading } = this.props
 
@@ -161,16 +161,16 @@ class PrimaryNavigation extends Component {
     return items.map((item) => {
       switch (item.items && item.items.length > 0) {
       case true:
-        return item.items.map(child => renderRoutes(child, locations, handleLocationChange, logoutRoute))
+        return item.items.map(child => renderRoutes(child, locations, onLocationChange, logoutRoute))
       default:
-        return renderRoutes(item, locations, handleLocationChange, logoutRoute)
+        return renderRoutes(item, locations, onLocationChange, logoutRoute)
       }
     })
   }
 
   render () {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this
-    const { items, loading, locations, handleLocationChange, logoutRoute, children } = this.props
+    const { items, loading, locations, onLocationChange, logoutRoute, children } = this.props
 
     return (
       <div className={styles.outer}>
@@ -180,7 +180,7 @@ class PrimaryNavigation extends Component {
         </div>
         <div className={styles.spacer} />
         <div className={styles.content} onClick={closeBucket}>
-          {renderSubNav(items, locations, handleLocationChange, logoutRoute)}
+          {renderSubNav(items, locations, onLocationChange, logoutRoute)}
           {children}
         </div>
       </div>
