@@ -81750,19 +81750,19 @@ var PrimaryNavigation = function (_Component) {
     }
   }, {
     key: 'renderRoutes',
-    value: function renderRoutes(item, locations, onLocationChange, logoutRoute) {
+    value: function renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute) {
       return _react2.default.createElement(_HashRoute2.default, {
         key: 'Subnav_' + item.key,
         exact: item.exact // Slash will match anything so we need to be exact in that case.
         , path: item.route,
         render: function render() {
-          return _react2.default.createElement(_SubNavigation2.default, { item: item, logoutRoute: logoutRoute, locations: locations, onLocationChange: onLocationChange });
+          return _react2.default.createElement(_SubNavigation2.default, { item: item, logoutRoute: logoutRoute, locations: locations, onLocationChange: onLocationChange, locationValue: locationValue });
         }
       });
     }
   }, {
     key: 'renderSubNav',
-    value: function renderSubNav(items, locations, handleLocationChange, logoutRoute) {
+    value: function renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute) {
       var renderRoutes = this.renderRoutes;
       var loading = this.props.loading;
 
@@ -81775,10 +81775,10 @@ var PrimaryNavigation = function (_Component) {
         switch (item.items && item.items.length > 0) {
           case true:
             return item.items.map(function (child) {
-              return renderRoutes(child, locations, handleLocationChange, logoutRoute);
+              return renderRoutes(child, locations, onLocationChange, locationValue, logoutRoute);
             });
           default:
-            return renderRoutes(item, locations, handleLocationChange, logoutRoute);
+            return renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute);
         }
       });
     }
@@ -81793,7 +81793,8 @@ var PrimaryNavigation = function (_Component) {
           items = _props3.items,
           loading = _props3.loading,
           locations = _props3.locations,
-          handleLocationChange = _props3.handleLocationChange,
+          onLocationChange = _props3.onLocationChange,
+          locationValue = _props3.locationValue,
           logoutRoute = _props3.logoutRoute,
           children = _props3.children;
 
@@ -81811,8 +81812,12 @@ var PrimaryNavigation = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: _PrimaryNavigation2.default.content, onClick: closeBucket },
-          renderSubNav(items, locations, handleLocationChange, logoutRoute),
-          children
+          renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute),
+          _react2.default.createElement(
+            'div',
+            { className: _PrimaryNavigation2.default.children },
+            children
+          )
         )
       );
     }
@@ -81847,7 +81852,8 @@ PrimaryNavigation.propTypes = {
     }))
   })).isRequired,
   locations: _propTypes2.default.array,
-  handleLocationChange: _propTypes2.default.func,
+  onLocationChange: _propTypes2.default.func,
+  locationValue: _propTypes2.default.string,
   logoutRoute: _propTypes2.default.string.isRequired,
   loading: _propTypes2.default.bool,
   children: _propTypes2.default.oneOfType([_propTypes2.default.array, _propTypes2.default.object, _propTypes2.default.string])
@@ -81979,6 +81985,7 @@ var SubNavigation = function (_Component) {
           loading = _props.loading,
           locations = _props.locations,
           onLocationChange = _props.onLocationChange,
+          locationValue = _props.locationValue,
           logoutRoute = _props.logoutRoute;
 
 
@@ -81999,7 +82006,7 @@ var SubNavigation = function (_Component) {
             !loading && locations && locations.length > 1 && _react2.default.createElement(
               'span',
               { className: _SubNavigation2.default.control },
-              _react2.default.createElement(_SingleSelect2.default, { className: _SubNavigation2.default.locationSelector, id: 'locationSelector', name: 'location', options: locations, onChange: onLocationChange, style: { paddingBottom: '0px' } })
+              _react2.default.createElement(_SingleSelect2.default, { className: _SubNavigation2.default.locationSelector, id: 'locationSelector', name: 'location', options: locations, onChange: onLocationChange, style: { paddingBottom: '0px' }, value: locationValue })
             ),
             _react2.default.createElement(
               'span',
@@ -82046,6 +82053,7 @@ SubNavigation.propTypes = {
   onLocationChange: _propTypes2.default.func,
   logoutRoute: _propTypes2.default.string.isRequired,
   location: _propTypes2.default.object,
+  locationValue: _propTypes2.default.string,
   loading: _propTypes2.default.bool
 };
 SubNavigation.defaultProps = {
@@ -82113,7 +82121,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Sou
 exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
 
 // module
-exports.push([module.i, ".SubNavigation__bar___1LKnC {\n  background-color: #FFF;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  color: #2B4B5A;\n  padding: 20px 48px; }\n\n.SubNavigation__heading___3iRS4 {\n  color: #004149;\n  margin-bottom: 0;\n  min-width: 180px; }\n\n.SubNavigation__items___3Dt3q {\n  margin-top: 32px;\n  display: flex; }\n\n.SubNavigation__item___GcDJ_ {\n  color: #57707C;\n  cursor: pointer;\n  padding: 0 24px 24px;\n  text-decoration: none;\n  user-select: none; }\n  @media (max-width: 767px) {\n    .SubNavigation__item___GcDJ_ {\n      padding: 0 8px 8px; } }\n  .SubNavigation__item___GcDJ_:first-child {\n    padding-left: 0; }\n  .SubNavigation__item___GcDJ_ span {\n    padding-bottom: 16px;\n    border-bottom: solid 6px transparent; }\n\n.SubNavigation__selected___3pyq4 {\n  color: #2B4B5A;\n  font-weight: bold; }\n  .SubNavigation__selected___3pyq4 span {\n    border-bottom-color: #01A4B7; }\n\n.SubNavigation__top___11RiE {\n  display: flex;\n  justify-content: space-between; }\n  .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d {\n    padding: 0 28px;\n    border-right: 1px solid #D3DDE1; }\n    .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__navLink___1zA-R {\n      color: #5C7783;\n      text-decoration: none;\n      line-height: 43px; }\n      .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__navLink___1zA-R .SubNavigation__icon___3rXDS {\n        margin-right: 8px;\n        margin-bottom: -2px;\n        width: 16px;\n        height: 16px; }\n    .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d:last-child {\n      border-right: none;\n      padding-right: 0; }\n    .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 {\n      display: inline-block;\n      width: fit-content; }\n      .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 div {\n        border: none;\n        color: #5C7783; }\n        .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 div svg {\n          color: #5C7783; }\n          .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 div svg:hover {\n            color: #2B4B5A; }\n\n#locationSelector {\n  margin-bottom: 0px; }\n", ""]);
+exports.push([module.i, ".SubNavigation__bar___1LKnC {\n  background-color: #FFF;\n  color: #2B4B5A;\n  flex-grow: 0;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  padding: 20px 48px; }\n\n.SubNavigation__heading___3iRS4 {\n  color: #004149;\n  margin-bottom: 0;\n  min-width: 180px; }\n\n.SubNavigation__items___3Dt3q {\n  margin-top: 32px;\n  display: flex; }\n\n.SubNavigation__item___GcDJ_ {\n  color: #57707C;\n  cursor: pointer;\n  padding: 0 24px 24px;\n  text-decoration: none;\n  user-select: none; }\n  @media (max-width: 767px) {\n    .SubNavigation__item___GcDJ_ {\n      padding: 0 8px 8px; } }\n  .SubNavigation__item___GcDJ_:first-child {\n    padding-left: 0; }\n  .SubNavigation__item___GcDJ_ span {\n    padding-bottom: 16px;\n    border-bottom: solid 6px transparent; }\n\n.SubNavigation__selected___3pyq4 {\n  color: #2B4B5A;\n  font-weight: bold; }\n  .SubNavigation__selected___3pyq4 span {\n    border-bottom-color: #01A4B7; }\n\n.SubNavigation__top___11RiE {\n  display: flex;\n  justify-content: space-between; }\n  .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d {\n    padding: 0 28px;\n    border-right: 1px solid #D3DDE1; }\n    .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__navLink___1zA-R {\n      color: #5C7783;\n      text-decoration: none;\n      line-height: 43px; }\n      .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__navLink___1zA-R .SubNavigation__icon___3rXDS {\n        margin-right: 8px;\n        margin-bottom: -2px;\n        width: 16px;\n        height: 16px; }\n    .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d:last-child {\n      border-right: none;\n      padding-right: 0; }\n    .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 {\n      display: inline-block;\n      width: fit-content; }\n      .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 div {\n        border: none;\n        color: #5C7783; }\n        .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 div svg {\n          color: #5C7783; }\n          .SubNavigation__top___11RiE .SubNavigation__controls___3-R-J .SubNavigation__control___1NG0d .SubNavigation__locationSelector___2wiz7 div svg:hover {\n            color: #2B4B5A; }\n\n#locationSelector {\n  margin-bottom: 0px; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -82262,7 +82270,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Sou
 exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
 
 // module
-exports.push([module.i, ".PrimaryNavigation__nav___3JVxy {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  user-select: none;\n  z-index: 99; }\n\n.PrimaryNavigation__buckets___1k78s {\n  background-color: #2B4B5A;\n  display: flex;\n  flex-direction: column;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: absolute;\n  height: 100%;\n  width: 76px;\n  z-index: 1; }\n\n.PrimaryNavigation__logoBucket___3OqZD {\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  flex-shrink: 0;\n  height: 76px;\n  justify-content: center;\n  max-width: 76px;\n  text-align: center;\n  transition: all 0.2s; }\n  .PrimaryNavigation__logoBucket___3OqZD:hover {\n    background-color: #223C48; }\n  .PrimaryNavigation__logoBucket___3OqZD:active {\n    background-color: #192D36; }\n\n.PrimaryNavigation__logo___3i6To {\n  height: 40px;\n  width: 40px; }\n\n.PrimaryNavigation__bucketFiller___3DqcQ {\n  flex-grow: 1; }\n\n.PrimaryNavigation__sliders___y1RID {\n  height: 100%;\n  left: 0;\n  pointer-events: none;\n  position: relative; }\n\n@keyframes PrimaryNavigation__pulse___26cps {\n  0% {\n    opacity: .5; }\n  25% {\n    opacity: 1; }\n  100% {\n    opacity: .5; } }\n\n.PrimaryNavigation__outer___2tqlA {\n  display: flex; }\n\n.PrimaryNavigation__spacer___2aUSh {\n  flex: 0 0 76px;\n  content: ' '; }\n\n.PrimaryNavigation__content___qzHzB {\n  flex-grow: 1; }\n\n.PrimaryNavigation__loadingBucket___34w6C {\n  border-radius: 100%;\n  height: 40px;\n  margin: 16px;\n  opacity: 0.25;\n  width: 40px; }\n  .PrimaryNavigation__loadingBucket___34w6C.PrimaryNavigation__bottom___Y_8Xg {\n    bottom: 16px;\n    position: absolute; }\n", ""]);
+exports.push([module.i, ".PrimaryNavigation__nav___3JVxy {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  user-select: none;\n  z-index: 99; }\n\n.PrimaryNavigation__buckets___1k78s {\n  background-color: #2B4B5A;\n  display: flex;\n  flex-direction: column;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: absolute;\n  height: 100%;\n  width: 76px;\n  z-index: 1; }\n\n.PrimaryNavigation__logoBucket___3OqZD {\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  flex-shrink: 0;\n  height: 76px;\n  justify-content: center;\n  max-width: 76px;\n  text-align: center;\n  transition: all 0.2s; }\n  .PrimaryNavigation__logoBucket___3OqZD:hover {\n    background-color: #223C48; }\n  .PrimaryNavigation__logoBucket___3OqZD:active {\n    background-color: #192D36; }\n\n.PrimaryNavigation__logo___3i6To {\n  height: 40px;\n  width: 40px; }\n\n.PrimaryNavigation__bucketFiller___3DqcQ {\n  flex-grow: 1; }\n\n.PrimaryNavigation__sliders___y1RID {\n  height: 100%;\n  left: 0;\n  pointer-events: none;\n  position: relative; }\n\n@keyframes PrimaryNavigation__pulse___26cps {\n  0% {\n    opacity: .5; }\n  25% {\n    opacity: 1; }\n  100% {\n    opacity: .5; } }\n\n.PrimaryNavigation__outer___2tqlA {\n  display: flex;\n  height: 100%;\n  width: 100%;\n  position: absolute; }\n\n.PrimaryNavigation__spacer___2aUSh {\n  flex: 0 0 76px;\n  content: ' '; }\n\n.PrimaryNavigation__content___qzHzB {\n  display: flex;\n  flex-grow: 1;\n  height: 100%;\n  flex-direction: column; }\n\n.PrimaryNavigation__loadingBucket___34w6C {\n  border-radius: 100%;\n  height: 40px;\n  margin: 16px;\n  opacity: 0.25;\n  width: 40px; }\n  .PrimaryNavigation__loadingBucket___34w6C.PrimaryNavigation__bottom___Y_8Xg {\n    bottom: 16px;\n    position: absolute; }\n\n.PrimaryNavigation__children___3pRmf {\n  background-color: #ECF0F2;\n  flex-grow: 1;\n  height: 100%;\n  overflow-y: auto; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -82277,6 +82285,7 @@ exports.locals = {
 	"content": "PrimaryNavigation__content___qzHzB",
 	"loadingBucket": "PrimaryNavigation__loadingBucket___34w6C",
 	"bottom": "PrimaryNavigation__bottom___Y_8Xg",
+	"children": "PrimaryNavigation__children___3pRmf",
 	"pulse": "PrimaryNavigation__pulse___26cps"
 };
 
