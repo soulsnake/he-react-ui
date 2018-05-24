@@ -2,8 +2,9 @@ import React from 'react'
 
 import LoadingScreen from '../LoadingScreen'
 import HealthEngine from '../../../Icon/HealthEngine'
+import style from './style.scss'
 
 export default {
   component: LoadingScreen,
-  props: {children: <HealthEngine width={70} height={70} />}
+  props: { children: <HealthEngine className={style.loadingIcon} /> }
 }
