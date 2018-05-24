@@ -57,7 +57,7 @@ class PrimaryNavigation extends Component {
   static defaultProps = {
     bottomKeys: [],
     logo: {
-      icon: <Icon className={styles.logo} name="HealthEngine" />,
+      icon: <Icon className={styles.logo} name="HealthEngine" inverted />,
       route: '/'
     },
     loading: false
