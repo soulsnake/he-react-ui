@@ -2542,45 +2542,49 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Children 
             render={[Function]}
           />
         </HashRoute>
-        <Heading
-          h1={false}
-          h2={false}
-          h3={false}
-          h4={false}
-          nav={false}
+        <div
+          className="children"
         >
-          <h1
-            className="heading"
+          <Heading
+            h1={false}
+            h2={false}
+            h3={false}
+            h4={false}
+            nav={false}
           >
-            Example content
-          </h1>
-        </Heading>
-        <Button
-          color="teal"
-          disabled={false}
-          icon=""
-          keyline={false}
-          link={false}
-          onClick={[Function]}
-          squared={false}
-          submit={false}
-        >
-          <div
-            className="buttonContainer"
-          >
-            <button
-              className="button teal"
-              onClick={[Function]}
-              type="button"
+            <h1
+              className="heading"
             >
-              <div
-                className="content"
+              Example content
+            </h1>
+          </Heading>
+          <Button
+            color="teal"
+            disabled={false}
+            icon=""
+            keyline={false}
+            link={false}
+            onClick={[Function]}
+            squared={false}
+            submit={false}
+          >
+            <div
+              className="buttonContainer"
+            >
+              <button
+                className="button teal"
+                onClick={[Function]}
+                type="button"
               >
-                Hello there
-              </div>
-            </button>
-          </div>
-        </Button>
+                <div
+                  className="content"
+                >
+                  Hello there
+                </div>
+              </button>
+            </div>
+          </Button>
+        </div>
       </div>
     </div>
   </PrimaryNavigation>

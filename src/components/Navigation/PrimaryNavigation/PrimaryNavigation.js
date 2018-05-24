@@ -47,7 +47,8 @@ class PrimaryNavigation extends Component {
       }))
     })).isRequired,
     locations: PropTypes.array,
-    handleLocationChange: PropTypes.func,
+    onLocationChange: PropTypes.func,
+    locationValue: PropTypes.string,
     logoutRoute: PropTypes.string.isRequired,
     loading: PropTypes.bool,
     children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string])
@@ -137,20 +138,20 @@ class PrimaryNavigation extends Component {
     this.setState({openKey: null})
   }
 
-  renderRoutes (item, locations, onLocationChange, logoutRoute) {
+  renderRoutes (item, locations, onLocationChange, locationValue, logoutRoute) {
     return (
       <HashRoute
         key={'Subnav_' + item.key}
         exact={item.exact} // Slash will match anything so we need to be exact in that case.
         path={item.route}
         render={
-          () => (<SubNavigation item={item} logoutRoute={logoutRoute} locations={locations} onLocationChange={onLocationChange} />)
+          () => (<SubNavigation item={item} logoutRoute={logoutRoute} locations={locations} onLocationChange={onLocationChange} locationValue={locationValue} />)
         }
       />
     )
   }
 
-  renderSubNav (items, locations, handleLocationChange, logoutRoute) {
+  renderSubNav (items, locations, onLocationChange, locationValue, logoutRoute) {
     const { renderRoutes } = this
     const { loading } = this.props
 
@@ -161,16 +162,16 @@ class PrimaryNavigation extends Component {
     return items.map((item) => {
       switch (item.items && item.items.length > 0) {
       case true:
-        return item.items.map(child => renderRoutes(child, locations, handleLocationChange, logoutRoute))
+        return item.items.map(child => renderRoutes(child, locations, onLocationChange, locationValue, logoutRoute))
       default:
-        return renderRoutes(item, locations, handleLocationChange, logoutRoute)
+        return renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute)
       }
     })
   }
 
   render () {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this
-    const { items, loading, locations, handleLocationChange, logoutRoute, children } = this.props
+    const { items, loading, locations, onLocationChange, locationValue, logoutRoute, children } = this.props
 
     return (
       <div className={styles.outer}>
@@ -180,8 +181,10 @@ class PrimaryNavigation extends Component {
         </div>
         <div className={styles.spacer} />
         <div className={styles.content} onClick={closeBucket}>
-          {renderSubNav(items, locations, handleLocationChange, logoutRoute)}
-          {children}
+          {renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute)}
+          <div className={styles.children}>
+            {children}
+          </div>
         </div>
       </div>
     )

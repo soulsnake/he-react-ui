@@ -32,6 +32,7 @@ class SubNavigation extends Component {
     onLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired,
     location: PropTypes.object,
+    locationValue: PropTypes.string,
     loading: PropTypes.bool
   }
 
@@ -68,7 +69,7 @@ class SubNavigation extends Component {
   }
 
   render () {
-    const { item, loading, locations, onLocationChange, logoutRoute } = this.props
+    const { item, loading, locations, onLocationChange, locationValue, logoutRoute } = this.props
 
     return (
       <div className={style.bar}>
@@ -78,7 +79,7 @@ class SubNavigation extends Component {
             {!loading && locations && locations.length > 1 &&
             (
               <span className={style.control}>
-                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={locations} onChange={onLocationChange} style={{paddingBottom: '0px'}} />
+                <SingleSelect className={style.locationSelector} id="locationSelector" name="location" options={locations} onChange={onLocationChange} style={{paddingBottom: '0px'}} value={locationValue} />
               </span>
             )}
             <span className={style.control}>

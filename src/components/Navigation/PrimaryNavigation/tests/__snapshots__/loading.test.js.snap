@@ -336,6 +336,9 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
             </SubNavigation>
           </Route>
         </withRouter(SubNavigation)>
+        <div
+          className="children"
+        />
       </div>
     </div>
   </PrimaryNavigation>
