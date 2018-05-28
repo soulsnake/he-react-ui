@@ -82017,7 +82017,8 @@ var SubNavigation = function (_Component) {
                   key: 'logout',
                   to: logoutRoute,
                   className: _SubNavigation2.default.navLink,
-                  title: 'Logout'
+                  title: 'Logout',
+                  target: '_self'
                 },
                 _react2.default.createElement(_Icon2.default, { className: _SubNavigation2.default.icon, name: 'Logout' }),
                 'Logout'
