@@ -11,7 +11,7 @@ import Heading from '../../Layout/Heading'
 import Icon from '../../Icon'
 import SingleSelect from '../../Form/SingleSelect'
 import classnames from 'classnames'
-import isExternal from 'is-url-external'
+import isAbsoluteUrl from 'is-absolute-url'
 
 import style from './SubNavigation.scss'
 
@@ -44,7 +44,7 @@ class SubNavigation extends Component {
     const { location } = this.props
 
     return items.map((item, index) => {
-      if (isExternal(item.route)) {
+      if (isAbsoluteUrl(item.route)) {
         return (
           <a target="_blank" href={item.route} className={style.item}>
             <span>{item.label}</span>
