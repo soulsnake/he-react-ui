@@ -91,12 +91,7 @@ class ActionSet extends React.Component {
         )}
         <div className={style.actions}>
           {children.map((child, i) => (
-            <div
-              role="link"
-              key={i}
-              className={style.action}
-              onClick={this.close}
-            >
+            <div key={i} className={style.action} onClick={this.close}>
               {child}
             </div>
           ))}
