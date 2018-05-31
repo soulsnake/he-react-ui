@@ -1,4 +1,4 @@
-import fixture from "../fixtures/Inactive.fixture.js";
-import testFixture from "../../../../../config/testFixture";
+import fixture from '../fixtures/Inactive.fixture.js';
+import testFixture from '../../../../../config/testFixture';
 
-testFixture(fixture, "Inactive");
+testFixture(fixture, 'Inactive');

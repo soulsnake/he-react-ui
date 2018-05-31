@@ -1,1 +1,1 @@
-export { default } from "./LoadingStrip";
+export { default } from './LoadingStrip';

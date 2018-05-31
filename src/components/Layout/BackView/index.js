@@ -1,1 +1,1 @@
-export { default } from "./BackView";
+export { default } from './BackView';

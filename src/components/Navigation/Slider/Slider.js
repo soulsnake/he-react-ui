@@ -4,12 +4,12 @@
  *
  */
 
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import styles from "./Slider.scss";
-import List from "../List";
+import List from '../List';
+import styles from './Slider.scss';
 
 class Slider extends Component {
   static propTypes = {
@@ -20,18 +20,18 @@ class Slider extends Component {
     items: PropTypes.arrayOf(
       PropTypes.shape({
         route: PropTypes.string.isRequired,
-        notifications: PropTypes.number
-      })
+        notifications: PropTypes.number,
+      }),
     ),
     open: PropTypes.bool,
     bottom: PropTypes.bool,
-    onSelect: PropTypes.func
+    onSelect: PropTypes.func,
   };
 
   static defaultProps = {
     onSelect: () => null,
     open: false,
-    bottom: false
+    bottom: false,
   };
 
   render() {
@@ -41,7 +41,7 @@ class Slider extends Component {
       <div
         className={classnames(styles.slider, {
           [styles.open]: open,
-          [styles.bottom]: bottom
+          [styles.bottom]: bottom,
         })}
         key={key}
       >

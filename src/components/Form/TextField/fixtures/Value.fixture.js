@@ -1,11 +1,11 @@
-import Input from "../";
+import Input from '../';
 
 export default {
   component: Input,
   props: {
-    id: "demo",
-    name: "demo",
-    label: "First Name",
-    value: "Oscar"
-  }
+    id: 'demo',
+    name: 'demo',
+    label: 'First Name',
+    value: 'Oscar',
+  },
 };

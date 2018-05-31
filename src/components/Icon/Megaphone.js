@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Megaphone(props) {
   const { className, ...restProps } = props;
@@ -21,5 +21,5 @@ export default function Megaphone(props) {
 }
 
 Megaphone.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };

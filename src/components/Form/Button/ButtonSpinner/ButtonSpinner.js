@@ -1,5 +1,5 @@
-import React from "react";
-import style from "./ButtonSpinner.scss";
+import React from 'react';
+import style from './ButtonSpinner.scss';
 
 export default class ButtonSpinner extends React.Component {
   render() {

@@ -4,13 +4,13 @@
  *
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import onClickOutside from "react-onclickoutside";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import onClickOutside from 'react-onclickoutside';
 
-import style from "./ActionSet.scss";
-import Icon from "../../Icon";
+import Icon from '../../Icon';
+import style from './ActionSet.scss';
 
 class ActionSet extends React.Component {
   static propTypes = {
@@ -19,24 +19,24 @@ class ActionSet extends React.Component {
     className: PropTypes.string,
     eventTypes: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string)
+      PropTypes.arrayOf(PropTypes.string),
     ]),
     outsideClickIgnoreClass: PropTypes.string,
     preventDefault: PropTypes.bool,
     stopPropagation: PropTypes.bool,
     disableOnClickOutside: PropTypes.func,
-    enableOnClickOutside: PropTypes.func
+    enableOnClickOutside: PropTypes.func,
   };
 
   static defaultProps = {
-    className: "",
-    expanded: false
+    className: '',
+    expanded: false,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
     };
   }
 
@@ -70,7 +70,7 @@ class ActionSet extends React.Component {
     const classes = classnames(style.outer, {
       [style.expandable]: expandable,
       [style.open]: open,
-      [className]: className
+      [className]: className,
     });
 
     return (
@@ -91,7 +91,12 @@ class ActionSet extends React.Component {
         )}
         <div className={style.actions}>
           {children.map((child, i) => (
-            <div key={i} className={style.action} onClick={this.close}>
+            <div
+              role="link"
+              key={i}
+              className={style.action}
+              onClick={this.close}
+            >
               {child}
             </div>
           ))}

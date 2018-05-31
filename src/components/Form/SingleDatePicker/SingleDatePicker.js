@@ -4,23 +4,25 @@
  *
  */
 
-import React from "react";
-import classnames from "classnames";
-import PropTypes from "prop-types";
-import "react-dates/initialize";
-import "react-dates/lib/css/_datepicker.css";
-import momentPropTypes from "react-moment-proptypes";
-import styles from "./SingleDatePicker.scss";
-import Label from "../Label";
-import Icon from "../../Icon";
-import { SingleDatePicker as Picker } from "react-dates";
-import Media from "react-media";
+import React from 'react';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+import momentPropTypes from 'react-moment-proptypes';
+
+import { SingleDatePicker as Picker } from 'react-dates';
+import Media from 'react-media';
+
+import Label from '../Label';
+import Icon from '../../Icon';
+import styles from './SingleDatePicker.scss';
 
 class SingleDatePicker extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    anchorDirection: PropTypes.oneOf(["left", "right"]),
+    anchorDirection: PropTypes.oneOf(['left', 'right']),
     className: PropTypes.string,
     disabled: PropTypes.bool,
     displayFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -34,19 +36,20 @@ class SingleDatePicker extends React.Component {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     value: momentPropTypes.momentObj,
-    style: PropTypes.object
+    style: PropTypes.object,
+    placeholder: PropTypes.string,
   };
 
   static defaultProps = {
-    anchorDirection: "right",
+    anchorDirection: 'right',
     disabled: false,
-    displayFormat: "DD/MM/YYYY",
+    displayFormat: 'DD/MM/YYYY',
     inline: false,
-    placeholder: "Select date",
+    placeholder: 'Select date',
     readOnly: true,
     onBlur: () => null,
     onChange: () => null,
-    onFocus: () => null
+    onFocus: () => null,
   };
 
   constructor(props) {
@@ -54,7 +57,7 @@ class SingleDatePicker extends React.Component {
 
     this.state = {
       focused: false,
-      date: props.value
+      date: props.value,
     };
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handleFocusChange = this.handleFocusChange.bind(this);
@@ -63,7 +66,7 @@ class SingleDatePicker extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.value !== this.state.date) {
       this.setState({
-        date: nextProps.value
+        date: nextProps.value,
       });
     }
   }
@@ -74,7 +77,7 @@ class SingleDatePicker extends React.Component {
     if ((oldDate && oldDate.toJSON()) !== (date && date.toJSON())) {
       const event = {
         value: date,
-        props: this.props
+        props: this.props,
       };
       this.props.onChange(event);
     }
@@ -84,7 +87,7 @@ class SingleDatePicker extends React.Component {
     this.setState({ focused });
     const event = {
       focused,
-      props: this.props
+      props: this.props,
     };
     if (focused) {
       this.props.onFocus(event);
@@ -112,7 +115,7 @@ class SingleDatePicker extends React.Component {
       [styles.disabled]: disabled,
       [styles.focused]: this.state.focused,
       [styles.inline]: inline,
-      [className]: className
+      [className]: className,
     });
 
     return (

@@ -4,11 +4,11 @@
  *
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import Icon from "../../Icon";
-import style from "./CheckBox.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import Icon from '../../Icon';
+import style from './CheckBox.scss';
 
 class CheckBox extends React.Component {
   static propTypes = {
@@ -20,15 +20,17 @@ class CheckBox extends React.Component {
     special: PropTypes.bool,
     value: PropTypes.bool,
     warning: PropTypes.bool,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    checked: PropTypes.bool,
+    error: PropTypes.string,
   };
 
   static defaultProps = {
     checked: false,
     disabled: false,
-    error: "",
+    error: '',
     special: false,
-    onChange: () => {}
+    onChange: () => {},
   };
 
   constructor(props) {
@@ -42,7 +44,7 @@ class CheckBox extends React.Component {
     }
     const event = {
       value: !this.props.value,
-      props: this.props
+      props: this.props,
     };
     this.props.onChange(event);
   };
@@ -62,7 +64,7 @@ class CheckBox extends React.Component {
     } = this.props;
     const classes = {
       [style.disabled]: disabled,
-      [className]: className
+      [className]: className,
     };
 
     return (
@@ -70,14 +72,14 @@ class CheckBox extends React.Component {
         <label className={style.label} htmlFor={id} onClick={handleClick}>
           <Icon
             className={classnames(style.checkbox, style.empty, {
-              [style.special]: special
+              [style.special]: special,
             })}
             name="CheckBoxUnchecked"
           />
           <Icon
             className={classnames(style.checkbox, style.full, {
               [style.checked]: value,
-              [style.special]: special
+              [style.special]: special,
             })}
             name="CheckBoxChecked"
           />

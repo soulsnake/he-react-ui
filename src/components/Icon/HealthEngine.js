@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function HealthEngine(props) {
   const { className, inverted, ...restProps } = props;
@@ -107,5 +107,5 @@ export default function HealthEngine(props) {
 
 HealthEngine.propTypes = {
   className: PropTypes.string,
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
 };

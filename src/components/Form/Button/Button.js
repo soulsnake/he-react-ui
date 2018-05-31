@@ -4,17 +4,17 @@
  *
  */
 
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import Icon from "../../Icon";
-import style from "./Button.scss";
-import ButtonSpinner from "./ButtonSpinner";
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import Icon from '../../Icon';
+import style from './Button.scss';
+import ButtonSpinner from './ButtonSpinner';
 
 class Button extends React.Component {
   static propTypes = {
     submit: PropTypes.bool,
-    color: PropTypes.oneOf(["teal", "blue", "green", "red", "white"]),
+    color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
     link: PropTypes.bool,
     small: PropTypes.bool,
     large: PropTypes.bool,
@@ -28,18 +28,18 @@ class Button extends React.Component {
     squared: PropTypes.bool,
     submitting: PropTypes.bool,
     done: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   static defaultProps = {
     submit: false,
     link: false,
-    color: "teal",
-    icon: "",
+    color: 'teal',
+    icon: '',
     keyline: false,
     disabled: false,
     squared: false,
-    onClick: () => null
+    onClick: () => null,
   };
 
   handleClick = event => {
@@ -77,29 +77,33 @@ class Button extends React.Component {
       [style.squared]: squared,
       [style.submitting]: submitting,
       [className]: className,
-      [style.done]: done
+      [style.done]: done,
     });
 
     const containerClasses = classnames(style.buttonContainer, {
       [style.small]: small,
-      [style.large]: large
+      [style.large]: large,
     });
 
-    const statusIcon = done ? (
-      <div className={style.iconCenter}>
-        <Icon name="Tick" />
-      </div>
-    ) : submitting ? (
+    const submittingIcon = submitting ? (
       <div className={style.iconCenter}>
         <ButtonSpinner />
       </div>
     ) : null;
 
+    const statusIcon = done ? (
+      <div className={style.iconCenter}>
+        <Icon name="Tick" />
+      </div>
+    ) : (
+      submittingIcon
+    );
+
     return (
       <div className={containerClasses}>
         <button
           className={buttonClasses}
-          type={submit ? "submit" : "button"}
+          type={submit ? 'submit' : 'button'}
           onClick={this.handleClick}
           {...rest}
         >

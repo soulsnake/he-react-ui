@@ -1,10 +1,10 @@
-import Button from "../";
+import Button from '../';
 
 export default {
   component: Button,
   props: {
-    squared: true
+    squared: true,
   },
-  children: "Button",
-  simulateSubmission: true
+  children: 'Button',
+  simulateSubmission: true,
 };

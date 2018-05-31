@@ -1,127 +1,127 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import Add from "./Add";
-import Alarm from "./Alarm";
-import Alert from "./Alert";
-import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from "./Arrows";
-import Bookings from "./Bookings";
-import Calendar from "./Calendar";
-import CaretRight from "./CaretRight";
+import Add from './Add';
+import Alarm from './Alarm';
+import Alert from './Alert';
+import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from './Arrows';
+import Bookings from './Bookings';
+import Calendar from './Calendar';
+import CaretRight from './CaretRight';
 import {
   CheckBoxChecked,
   CheckBoxUnchecked,
   RadioChecked,
-  RadioUnchecked
-} from "./CheckBoxes";
-import { ChevronLeft, ChevronRight, ChevronUp, ChevronDown } from "./Chevrons";
-import Clock from "./Clock";
-import Cross from "./Cross";
-import Delete from "./Delete";
-import DropDown from "./DropDown";
-import Edit from "./Edit";
-import Engage from "./Engage";
-import Ellipsis from "./Ellipsis";
-import HealthEngine from "./HealthEngine";
-import Help from "./Help";
-import Home from "./Home";
-import Logout from "./Logout";
-import Megaphone from "./Megaphone";
-import Patients from "./Patients";
-import Search from "./Search";
-import Settings from "./Settings";
-import Sync from "./Sync";
-import Tick from "./Tick";
-import View from "./View";
+  RadioUnchecked,
+} from './CheckBoxes';
+import { ChevronLeft, ChevronRight, ChevronUp, ChevronDown } from './Chevrons';
+import Clock from './Clock';
+import Cross from './Cross';
+import Delete from './Delete';
+import DropDown from './DropDown';
+import Edit from './Edit';
+import Engage from './Engage';
+import Ellipsis from './Ellipsis';
+import HealthEngine from './HealthEngine';
+import Help from './Help';
+import Home from './Home';
+import Logout from './Logout';
+import Megaphone from './Megaphone';
+import Patients from './Patients';
+import Search from './Search';
+import Settings from './Settings';
+import Sync from './Sync';
+import Tick from './Tick';
+import View from './View';
 
-import style from "./Icon.scss";
+import style from './Icon.scss';
 
 function createIcon(iconProps) {
   const { width, height, color, className, name, ...restProps } = iconProps;
   const classes = classnames(style.icon, {
     [style[color]]: color,
-    [className]: className
+    [className]: className,
   });
   const props = {
     width,
     height,
     className: classes,
-    ...restProps
+    ...restProps,
   };
 
   switch (name) {
-    case "Add":
+    case 'Add':
       return <Add {...props} />;
-    case "Alarm":
+    case 'Alarm':
       return <Alarm {...props} />;
-    case "Alert":
+    case 'Alert':
       return <Alert {...props} />;
-    case "ArrowLeft":
+    case 'ArrowLeft':
       return <ArrowLeft {...props} />;
-    case "ArrowRight":
+    case 'ArrowRight':
       return <ArrowRight {...props} />;
-    case "ArrowUp":
+    case 'ArrowUp':
       return <ArrowUp {...props} />;
-    case "ArrowDown":
+    case 'ArrowDown':
       return <ArrowDown {...props} />;
-    case "Bookings":
+    case 'Bookings':
       return <Bookings {...props} />;
-    case "Calendar":
+    case 'Calendar':
       return <Calendar {...props} />;
-    case "CaretRight":
+    case 'CaretRight':
       return <CaretRight {...props} />;
-    case "CheckBoxChecked":
+    case 'CheckBoxChecked':
       return <CheckBoxChecked {...props} />;
-    case "CheckBoxUnchecked":
+    case 'CheckBoxUnchecked':
       return <CheckBoxUnchecked {...props} />;
-    case "ChevronLeft":
+    case 'ChevronLeft':
       return <ChevronLeft {...props} />;
-    case "ChevronRight":
+    case 'ChevronRight':
       return <ChevronRight {...props} />;
-    case "ChevronUp":
+    case 'ChevronUp':
       return <ChevronUp {...props} />;
-    case "ChevronDown":
+    case 'ChevronDown':
       return <ChevronDown {...props} />;
-    case "Clock":
+    case 'Clock':
       return <Clock {...props} />;
-    case "Cross":
+    case 'Cross':
       return <Cross {...props} />;
-    case "Delete":
+    case 'Delete':
       return <Delete {...props} />;
-    case "DropDown":
+    case 'DropDown':
       return <DropDown {...props} />;
-    case "Edit":
+    case 'Edit':
       return <Edit {...props} />;
-    case "Engage":
+    case 'Engage':
       return <Engage {...props} />;
-    case "HealthEngine":
+    case 'HealthEngine':
       return <HealthEngine {...props} />;
-    case "Help":
+    case 'Help':
       return <Help {...props} />;
-    case "Home":
+    case 'Home':
       return <Home {...props} />;
-    case "Megaphone":
+    case 'Megaphone':
       return <Megaphone {...props} />;
-    case "Patients":
+    case 'Patients':
       return <Patients {...props} />;
-    case "Ellipsis":
+    case 'Ellipsis':
       return <Ellipsis {...props} />;
-    case "Logout":
+    case 'Logout':
       return <Logout {...props} />;
-    case "RadioChecked":
+    case 'RadioChecked':
       return <RadioChecked {...props} />;
-    case "RadioUnchecked":
+    case 'RadioUnchecked':
       return <RadioUnchecked {...props} />;
-    case "Search":
+    case 'Search':
       return <Search {...props} />;
-    case "Settings":
+    case 'Settings':
       return <Settings {...props} />;
-    case "Sync":
+    case 'Sync':
       return <Sync {...props} />;
-    case "Tick":
+    case 'Tick':
       return <Tick {...props} />;
-    case "View":
+    case 'View':
       return <View {...props} />;
     default:
       return <Cross {...props} />;
@@ -130,13 +130,13 @@ function createIcon(iconProps) {
 
 createIcon.propTypes = {
   name: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(["teal", "blue", "green", "red", "white"]),
-  className: PropTypes.string
+  color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
+  className: PropTypes.string,
 };
 
 export default class Icon extends React.Component {
   static defaultProps = {
-    name: "Cross"
+    name: 'Cross',
   };
 
   render() {

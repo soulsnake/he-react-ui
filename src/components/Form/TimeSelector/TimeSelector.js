@@ -4,14 +4,14 @@
  *
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import onClickOutside from "react-onclickoutside";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import onClickOutside from 'react-onclickoutside';
 
-import Icon from "../../Icon";
-import Label from "../Label";
-import style from "./TimeSelector.scss";
+import Icon from '../../Icon';
+import Label from '../Label';
+import style from './TimeSelector.scss';
 
 class TimeSelector extends React.Component {
   static propTypes = {
@@ -31,18 +31,18 @@ class TimeSelector extends React.Component {
     onChange: PropTypes.func,
     eventTypes: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string)
+      PropTypes.arrayOf(PropTypes.string),
     ]),
     outsideClickIgnoreClass: PropTypes.string,
     preventDefault: PropTypes.bool,
     stopPropagation: PropTypes.bool,
     disableOnClickOutside: PropTypes.func,
-    enableOnClickOutside: PropTypes.func
+    enableOnClickOutside: PropTypes.func,
   };
 
   static defaultProps = {
     disabled: false,
-    error: "",
+    error: '',
     inline: false,
     required: false,
     hourly: false,
@@ -50,13 +50,13 @@ class TimeSelector extends React.Component {
     hours: (() =>
       [...Array(24).keys()].map(n => ({
         label: n.toString(),
-        value: n.toString()
+        value: n.toString(),
       })))(),
     minutes: (() =>
       [...Array(60).keys()].map(n => ({
-        label: n.toString().padStart(2, "0"),
-        value: n.toString().padStart(2, "0")
-      })))()
+        label: n.toString().padStart(2, '0'),
+        value: n.toString().padStart(2, '0'),
+      })))(),
   };
 
   constructor(props) {
@@ -65,7 +65,7 @@ class TimeSelector extends React.Component {
     this.state = {
       hour: undefined,
       minute: undefined,
-      expanded: false
+      expanded: false,
     };
     this.getDisplay = this.getDisplay.bind(this);
     this.toggleExpand = this.toggleExpand.bind(this);
@@ -78,58 +78,57 @@ class TimeSelector extends React.Component {
     this.selectTime = this.selectTime.bind(this);
   }
 
-  getDisplay = function() {
+  getDisplay = () => {
     const { value } = this.props;
 
-    return value || this.props.placeholder || "0:00";
+    return value || this.props.placeholder || '0:00';
   };
 
-  toggleExpand = function(event) {
+  toggleExpand = () => {
     this.setState({
-      expanded: this.props.disabled ? false : !this.state.expanded
+      expanded: this.props.disabled ? false : !this.state.expanded,
     });
   };
 
-  hideExpand = function(event) {
+  hideExpand = () => {
     this.setState({ expanded: false });
   };
 
-  handleClickOutside = function() {
+  handleClickOutside = () => {
     this.hideExpand();
   };
 
-  generateOptions = function(options) {
-    return options.map(option => (
+  generateOptions = options =>
+    options.map(option => (
       <option key={option.value} value={option.value}>
         {option.label}
       </option>
     ));
-  };
 
-  selectTime = function(hour, minute) {
+  selectTime = (hour, minute) => {
     const { onChange, hourly } = this.props;
     this.setState({
       hour,
       minute,
-      expanded: !hourly // Close if hourly
+      expanded: !hourly, // Close if hourly
     });
     onChange({
-      value: `${hour || 0}:${minute || "00"}`,
-      props: this.props
+      value: `${hour || 0}:${minute || '00'}`,
+      props: this.props,
     });
   };
 
-  selectMinute = function(option) {
+  selectMinute = option => {
     const { hour } = this.state;
     this.selectTime(hour, option.value);
   };
 
-  selectHour = function(option) {
+  selectHour = option => {
     const { minute } = this.state;
     this.selectTime(option.value, minute);
   };
 
-  generateList = function(options, selectOption, padding, onChange) {
+  generateList = (options, selectOption) => {
     const { hourly } = this.props;
     return options.map(option => {
       const selected = this.state.value === option.value;
@@ -185,7 +184,7 @@ class TimeSelector extends React.Component {
       [style.expanded]: this.state.expanded,
       [style.inline]: inline,
       [style.hourly]: hourly,
-      [className]: className
+      [className]: className,
     });
 
     return (
@@ -198,7 +197,7 @@ class TimeSelector extends React.Component {
         <div
           className={classnames(style.select, {
             [style.error]: error,
-            [style.disabled]: disabled
+            [style.disabled]: disabled,
           })}
           onClick={this.toggleExpand}
         >

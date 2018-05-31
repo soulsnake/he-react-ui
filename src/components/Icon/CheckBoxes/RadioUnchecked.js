@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function RadioUnchecked(props) {
   const { className, ...restProps } = props;
@@ -18,5 +18,5 @@ export default function RadioUnchecked(props) {
 }
 
 RadioUnchecked.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };

@@ -1,12 +1,12 @@
-import React from "react";
-import PopUp from "../";
-import { Paragraph } from "../..";
+import React from 'react';
+import PopUp from '../';
+import { Paragraph } from '../..';
 
 export default {
   component: PopUp,
   props: {
     showing: true,
-    modal: true
+    modal: true,
   },
   children: (
     <div>
@@ -15,5 +15,5 @@ export default {
       </Paragraph>
       <Paragraph>If only the 'showing' property were set to false.</Paragraph>
     </div>
-  )
+  ),
 };

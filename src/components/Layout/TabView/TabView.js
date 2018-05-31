@@ -3,12 +3,12 @@
  */
 
 // Vendor
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import style from "./TabView.scss";
-import Heading from "../Heading";
+import Heading from '../Heading';
+import style from './TabView.scss';
 
 class TabView extends Component {
   static propTypes = {
@@ -18,9 +18,9 @@ class TabView extends Component {
         title: PropTypes.string.isRequired,
         route: PropTypes.string.isRequired,
         exact: PropTypes.bool,
-        strict: PropTypes.bool
-      })
-    )
+        strict: PropTypes.bool,
+      }),
+    ),
   };
 
   renderTabs = tabs =>

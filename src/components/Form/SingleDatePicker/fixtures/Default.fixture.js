@@ -1,9 +1,9 @@
-import SingleDatePicker from "../";
+import SingleDatePicker from '../';
 
 export default {
   component: SingleDatePicker,
   props: {
-    id: "demo",
-    name: "demo"
-  }
+    id: 'demo',
+    name: 'demo',
+  },
 };

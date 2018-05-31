@@ -3,17 +3,16 @@
  */
 
 // Vendor
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import { matchPath, withRouter } from "react-router";
-import PropTypes from "prop-types";
-import Heading from "../../Layout/Heading";
-import Icon from "../../Icon";
-import SingleSelect from "../../Form/SingleSelect";
-import classnames from "classnames";
-import isExternal from "is-url-external";
-
-import style from "./SubNavigation.scss";
+import classnames from 'classnames';
+import isExternal from 'is-url-external';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { matchPath, withRouter } from 'react-router';
+import { NavLink } from 'react-router-dom';
+import SingleSelect from '../../Form/SingleSelect';
+import Icon from '../../Icon';
+import Heading from '../../Layout/Heading';
+import style from './SubNavigation.scss';
 
 class SubNavigation extends Component {
   static propTypes = {
@@ -26,20 +25,20 @@ class SubNavigation extends Component {
         PropTypes.shape({
           key: PropTypes.string.isRequired,
           label: PropTypes.string.isRequired,
-          route: PropTypes.string.isRequired
-        })
-      )
+          route: PropTypes.string.isRequired,
+        }),
+      ),
     }),
     locations: PropTypes.array,
     onLocationChange: PropTypes.func,
     logoutRoute: PropTypes.string.isRequired,
     location: PropTypes.object,
     locationValue: PropTypes.string,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
   };
 
   static defaultProps = {
-    loading: false
+    loading: false,
   };
 
   renderItems(items) {
@@ -61,8 +60,8 @@ class SubNavigation extends Component {
               matchPath(location.pathname + location.hash, {
                 path: item.route,
                 exact: true,
-                strict: false
-              }) !== null
+                strict: false,
+              }) !== null,
           })}
           exact
           to={item.route}
@@ -81,14 +80,14 @@ class SubNavigation extends Component {
       locations,
       onLocationChange,
       locationValue,
-      logoutRoute
+      logoutRoute,
     } = this.props;
 
     return (
       <div className={style.bar}>
         <div className={style.top}>
           <Heading h1 className={style.heading}>
-            {loading ? "" : item.title}
+            {loading ? '' : item.title}
           </Heading>
           <div className={style.controls}>
             {!loading &&
@@ -101,7 +100,7 @@ class SubNavigation extends Component {
                     name="location"
                     options={locations}
                     onChange={onLocationChange}
-                    style={{ paddingBottom: "0px" }}
+                    style={{ paddingBottom: '0px' }}
                     value={locationValue}
                   />
                 </span>

@@ -4,15 +4,37 @@
  *
  */
 
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { matchPath } from "react-router";
-import { NavLink } from "react-router-dom";
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { matchPath } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
-import styles from "./List.scss";
+import styles from './List.scss';
 
-const SUPPORTED_BADGES = ["NEW", "FREE"];
+const SUPPORTED_BADGES = ['NEW', 'FREE'];
+
+function renderBadge(item) {
+  if (item.notifications > 0) {
+    return (
+      <div className={classnames(styles.badge, styles.notification)}>
+        {item.notifications}
+      </div>
+    );
+  } else if (item.badge) {
+    return (
+      <div
+        className={classnames(styles.badge, {
+          [styles.free]: item.badge === 'FREE',
+          [styles.new]: item.badge === 'NEW',
+        })}
+      >
+        {item.badge}
+      </div>
+    );
+  }
+  return null;
+}
 
 class List extends Component {
   static propTypes = {
@@ -24,52 +46,29 @@ class List extends Component {
         title: PropTypes.string.isRequired,
         route: PropTypes.string.isRequired,
         badge: PropTypes.oneOf(SUPPORTED_BADGES),
-        notifications: PropTypes.number
-      })
+        notifications: PropTypes.number,
+      }),
     ),
     className: PropTypes.string,
-    onSelect: PropTypes.func
+    onSelect: PropTypes.func,
   };
 
   static defaultProps = {
-    className: "",
-    onSelect: () => null
+    className: '',
+    onSelect: () => null,
   };
 
   constructor(props) {
     super(props);
 
-    this.renderBadge = this.renderBadge.bind(this);
     this.renderItem = this.renderItem.bind(this);
   }
 
-  renderBadge(item) {
-    if (item.notifications > 0) {
-      return (
-        <div className={classnames(styles.badge, styles.notification)}>
-          {item.notifications}
-        </div>
-      );
-    } else if (item.badge) {
-      return (
-        <div
-          className={classnames(styles.badge, {
-            [styles.free]: item.badge === "FREE",
-            [styles.new]: item.badge === "NEW"
-          })}
-        >
-          {item.badge}
-        </div>
-      );
-    }
-  }
-
   renderItem(item) {
-    const { renderBadge } = this;
     const { onSelect } = this.props;
     const current =
-      matchPath(location.pathname + location.hash, {
-        path: item.route
+      matchPath(window.location.pathname + window.location.hash, {
+        path: item.route,
       }) !== null;
 
     return (

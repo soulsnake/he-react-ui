@@ -4,11 +4,11 @@
  *
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import Icon from "../../Icon";
-import style from "./TextField.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import Icon from '../../Icon';
+import style from './TextField.scss';
 
 class TextField extends React.Component {
   static propTypes = {
@@ -25,25 +25,25 @@ class TextField extends React.Component {
     isValid: PropTypes.bool,
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
-    onFocus: PropTypes.func
+    onFocus: PropTypes.func,
   };
 
   static defaultProps = {
-    label: "Field",
+    label: 'Field',
     disabled: false,
     inline: false,
     marker: false,
-    value: "",
+    value: '',
     isValid: true,
     onBlur: () => {},
     onChange: () => {},
-    onFocus: () => {}
+    onFocus: () => {},
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      focused: false
+      focused: false,
     };
     this.handleBlur = this.handleBlur.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -53,11 +53,11 @@ class TextField extends React.Component {
   handleFocus = e => {
     const event = {
       value: e.target.value,
-      props: this.props
+      props: this.props,
     };
 
     this.setState({
-      focused: true
+      focused: true,
     });
     this.props.onFocus(event);
   };
@@ -65,11 +65,11 @@ class TextField extends React.Component {
   handleBlur = e => {
     const event = {
       value: e.target.value,
-      props: this.props
+      props: this.props,
     };
 
     this.setState({
-      focused: false
+      focused: false,
     });
     this.props.onBlur(event);
   };
@@ -77,7 +77,7 @@ class TextField extends React.Component {
   handleChange = e => {
     const event = {
       value: e.target.value,
-      props: this.props
+      props: this.props,
     };
     this.props.onChange(event);
   };
@@ -101,14 +101,14 @@ class TextField extends React.Component {
       ...restProps
     } = this.props;
     const { focused } = this.state;
-    const floating = focused || value !== "";
+    const floating = focused || value !== '';
     const classes = classnames(style.outer, {
       [style.invalid]: !isValid,
       [style.disabled]: disabled,
       [style.inline]: inline,
       [style.focused]: focused,
       [style.hasMarker]: marker,
-      [className]: className
+      [className]: className,
     });
 
     return (
@@ -131,9 +131,9 @@ class TextField extends React.Component {
             value={value}
           />
           {marker &&
-            value !== "" && (
+            value !== '' && (
               <Icon
-                name={isValid ? "Tick" : "Cross"}
+                name={isValid ? 'Tick' : 'Cross'}
                 className={style.marker}
               />
             )}

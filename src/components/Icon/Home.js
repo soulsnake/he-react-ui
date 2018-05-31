@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Help(props) {
   const { className, ...restProps } = props;
@@ -21,5 +21,5 @@ export default function Help(props) {
 }
 
 Help.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };

@@ -3,14 +3,14 @@
  */
 
 // Vendor
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import style from "./EvenGrid.scss";
+import style from './EvenGrid.scss';
 
 class EvenGrid extends Component {
   static propTypes = {
-    children: PropTypes.array
+    children: PropTypes.array,
   };
 
   render() {

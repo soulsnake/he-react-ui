@@ -1,9 +1,9 @@
-import Button from "../";
+import Button from '../';
 
 export default {
   component: Button,
   props: {
-    disabled: true
+    disabled: true,
   },
-  children: "Button"
+  children: 'Button',
 };

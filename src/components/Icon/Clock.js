@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Clock(props) {
   const { className, ...restProps } = props;
@@ -23,5 +23,5 @@ export default function Clock(props) {
 }
 
 Clock.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };

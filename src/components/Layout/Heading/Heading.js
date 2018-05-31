@@ -1,10 +1,10 @@
 // Vendor
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import style from "./Heading.scss";
-import LoadingStrip from "../../Loading/LoadingStrip";
+import LoadingStrip from '../../Loading/LoadingStrip';
+import style from './Heading.scss';
 
 class Heading extends React.Component {
   static propTypes = {
@@ -14,7 +14,7 @@ class Heading extends React.Component {
     h4: PropTypes.bool,
     nav: PropTypes.bool,
     children: PropTypes.any,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   static defaultProps = {
@@ -22,7 +22,7 @@ class Heading extends React.Component {
     h2: false,
     h3: false,
     h4: false,
-    nav: false
+    nav: false,
   };
 
   render() {
@@ -42,7 +42,7 @@ class Heading extends React.Component {
       [style.h3]: h3,
       [style.h4]: h4,
       [style.nav]: nav,
-      [className]: className
+      [className]: className,
     });
     const content = children || <LoadingStrip className={style.loading} />;
 

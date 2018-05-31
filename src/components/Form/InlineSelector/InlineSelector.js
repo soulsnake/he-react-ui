@@ -4,12 +4,11 @@
  *
  */
 
-import React from "react";
-import classnames from "classnames";
-import PropTypes from "prop-types";
-import style from "./InlineSelector.scss";
-
-import Label from "../Label";
+import React from 'react';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import Label from '../Label';
+import style from './InlineSelector.scss';
 
 class InlineSelector extends React.Component {
   static propTypes = {
@@ -20,13 +19,13 @@ class InlineSelector extends React.Component {
     vertical: PropTypes.bool,
     options: PropTypes.array,
     onChange: PropTypes.func,
-    value: PropTypes.string
+    value: PropTypes.string,
   };
 
   static defaultProps = {
     vertical: false,
     options: [],
-    onChange: () => null
+    onChange: () => null,
   };
 
   handleClick = option => {
@@ -35,7 +34,7 @@ class InlineSelector extends React.Component {
     if (oldValue !== option.value) {
       this.props.onChange({
         value: option.value,
-        props: this.props
+        props: this.props,
       });
     }
   };
@@ -53,7 +52,7 @@ class InlineSelector extends React.Component {
     } = this.props;
     const classes = classnames(style.outer, {
       [style.vertical]: vertical,
-      [className]: className
+      [className]: className,
     });
 
     return (
@@ -68,7 +67,7 @@ class InlineSelector extends React.Component {
             <div
               key={index}
               className={classnames(style.option, {
-                [style.selected]: option.value === value
+                [style.selected]: option.value === value,
               })}
               onClick={() => this.handleClick(option)}
             >

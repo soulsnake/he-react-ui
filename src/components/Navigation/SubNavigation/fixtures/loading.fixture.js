@@ -1,14 +1,14 @@
-import SubNavigation from "../";
+import SubNavigation from '../';
 
 export default {
   component: SubNavigation,
-  url: "/feedback",
+  url: '/feedback',
   props: {
     item: {
-      items: []
+      items: [],
     },
     locations: [].map(location => ({ value: location, label: location })),
     loading: true,
-    logoutRoute: "/logout"
-  }
+    logoutRoute: '/logout',
+  },
 };

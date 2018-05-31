@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import Notification from "../";
+import React, { Fragment } from 'react';
+import Notification from '../';
 
 export default {
   component: Notification,
@@ -12,6 +12,6 @@ export default {
       </Fragment>
     ),
     closed: false,
-    type: "confirmation"
-  }
+    type: 'confirmation',
+  },
 };

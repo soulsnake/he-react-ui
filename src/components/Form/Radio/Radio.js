@@ -4,13 +4,13 @@
  *
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import Icon from "../../Icon";
-import Label from "../Label";
-import style from "./Radio.scss";
+import Icon from '../../Icon';
+import Label from '../Label';
+import style from './Radio.scss';
 
 class Radio extends React.Component {
   static propTypes = {
@@ -25,17 +25,17 @@ class Radio extends React.Component {
         label: PropTypes.string.isRequired,
         value: PropTypes.string.isRequired,
         child: PropTypes.any,
-        showChild: PropTypes.bool
-      })
+        showChild: PropTypes.bool,
+      }),
     ).isRequired,
     value: PropTypes.string,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
   };
 
   static defaultProps = {
-    error: "",
+    error: '',
     inline: false,
-    onChange: () => {}
+    onChange: () => {},
   };
 
   constructor(props) {
@@ -52,7 +52,7 @@ class Radio extends React.Component {
       <div
         key={option.value}
         className={classnames(style.option, {
-          [style.selected]: value === option.value
+          [style.selected]: value === option.value,
         })}
         onClick={() => this.handleClick(option.value)}
       >
@@ -87,7 +87,7 @@ class Radio extends React.Component {
     if (oldValue !== value) {
       const event = {
         value,
-        props: this.props
+        props: this.props,
       };
 
       this.props.onChange(event);
@@ -108,7 +108,7 @@ class Radio extends React.Component {
     } = this.props;
     const classes = classnames(style.outer, {
       [style.inline]: inline,
-      [className]: className
+      [className]: className,
     });
 
     return (

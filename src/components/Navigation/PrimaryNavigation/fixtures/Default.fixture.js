@@ -1,190 +1,190 @@
-import PrimaryNavigation from "../";
+import PrimaryNavigation from '../';
 
 export default {
   component: PrimaryNavigation,
-  url: "/",
+  url: '/',
   props: {
-    logoutRoute: "/logout",
-    locations: ["Location A", "Location B"].map(location => ({
+    logoutRoute: '/logout',
+    locations: ['Location A', 'Location B'].map(location => ({
       value: location,
-      label: location
+      label: location,
     })),
-    bottomKeys: ["HELP", "SETTINGS"],
+    bottomKeys: ['HELP', 'SETTINGS'],
     items: [
       {
-        key: "HOME",
-        label: "Home",
-        icon: "Home",
-        title: "Homepage",
+        key: 'HOME',
+        label: 'Home',
+        icon: 'Home',
+        title: 'Homepage',
         items: null,
-        route: "/",
-        exact: true
+        route: '/',
+        exact: true,
       },
       {
-        key: "BUCKET1",
-        label: "Bucket 1",
-        icon: "Engage",
-        title: "Your first bucket",
+        key: 'BUCKET1',
+        label: 'Bucket 1',
+        icon: 'Engage',
+        title: 'Your first bucket',
         items: [
           {
-            key: "NORMAL",
-            title: "Normal stuff",
-            label: "Normal item",
-            route: "/normal",
+            key: 'NORMAL',
+            title: 'Normal stuff',
+            label: 'Normal item',
+            route: '/normal',
             items: [
               {
-                key: "MAIN",
-                label: "Main",
-                route: "/normal"
+                key: 'MAIN',
+                label: 'Main',
+                route: '/normal',
               },
               {
-                key: "SECOND",
-                label: "Second",
-                route: "/normal/second"
-              }
-            ]
+                key: 'SECOND',
+                label: 'Second',
+                route: '/normal/second',
+              },
+            ],
           },
           {
-            key: "NOTIFICATIONS",
-            title: "Notifications",
-            label: "Notifications",
-            route: "/notifications",
+            key: 'NOTIFICATIONS',
+            title: 'Notifications',
+            label: 'Notifications',
+            route: '/notifications',
             notifications: 23,
             items: [
               {
-                key: "MAIN",
-                label: "Main",
-                route: "/notifications"
+                key: 'MAIN',
+                label: 'Main',
+                route: '/notifications',
               },
               {
-                key: "SECOND",
-                label: "Second",
-                route: "/notifications/second"
+                key: 'SECOND',
+                label: 'Second',
+                route: '/notifications/second',
               },
               {
-                key: "THIRD",
-                label: "Third",
-                route: "/notifications/third"
-              }
-            ]
-          }
-        ]
+                key: 'THIRD',
+                label: 'Third',
+                route: '/notifications/third',
+              },
+            ],
+          },
+        ],
       },
       {
-        key: "BUCKET2",
-        label: "Bucket 2",
-        icon: "Megaphone",
-        title: "Your second bucket",
+        key: 'BUCKET2',
+        label: 'Bucket 2',
+        icon: 'Megaphone',
+        title: 'Your second bucket',
         items: [
           {
-            key: "FREE",
-            title: "Free item",
-            label: "Free item",
-            route: "/free",
-            badge: "FREE",
+            key: 'FREE',
+            title: 'Free item',
+            label: 'Free item',
+            route: '/free',
+            badge: 'FREE',
             items: [
               {
-                key: "MAIN",
-                label: "Main",
-                route: "/free"
+                key: 'MAIN',
+                label: 'Main',
+                route: '/free',
               },
               {
-                key: "SECOND",
-                label: "Second",
-                route: "/free/second"
-              }
-            ]
+                key: 'SECOND',
+                label: 'Second',
+                route: '/free/second',
+              },
+            ],
           },
           {
-            key: "NEW",
-            title: "New item",
-            label: "New item",
-            route: "/new",
-            badge: "NEW",
+            key: 'NEW',
+            title: 'New item',
+            label: 'New item',
+            route: '/new',
+            badge: 'NEW',
             items: [
               {
-                key: "MAIN",
-                label: "Main",
-                route: "/new"
+                key: 'MAIN',
+                label: 'Main',
+                route: '/new',
               },
               {
-                key: "SECOND",
-                label: "Second",
-                route: "/new/second"
-              }
-            ]
-          }
-        ]
+                key: 'SECOND',
+                label: 'Second',
+                route: '/new/second',
+              },
+            ],
+          },
+        ],
       },
       {
-        key: "HELP",
-        label: "Help",
-        title: "Help",
-        icon: "Help",
-        route: "https://external.url/"
+        key: 'HELP',
+        label: 'Help',
+        title: 'Help',
+        icon: 'Help',
+        route: 'https://external.url/',
       },
       {
-        key: "SETTINGS",
-        label: "Settings",
-        icon: "Settings",
-        title: "Settings",
+        key: 'SETTINGS',
+        label: 'Settings',
+        icon: 'Settings',
+        title: 'Settings',
         items: [
           {
-            key: "ITEM1",
-            title: "Item 1",
-            label: "Item 1",
-            route: "/settings-1",
+            key: 'ITEM1',
+            title: 'Item 1',
+            label: 'Item 1',
+            route: '/settings-1',
             items: [
               {
-                key: "MAIN",
-                label: "Main",
-                route: "/settings-1"
+                key: 'MAIN',
+                label: 'Main',
+                route: '/settings-1',
               },
               {
-                key: "SECOND",
-                label: "Second",
-                route: "/settings-1/second"
-              }
-            ]
+                key: 'SECOND',
+                label: 'Second',
+                route: '/settings-1/second',
+              },
+            ],
           },
           {
-            key: "ITEM2",
-            title: "Item 2",
-            label: "Item 2",
-            route: "/settings-2",
+            key: 'ITEM2',
+            title: 'Item 2',
+            label: 'Item 2',
+            route: '/settings-2',
             items: [
               {
-                key: "MAIN",
-                label: "Main",
-                route: "/settings-2"
+                key: 'MAIN',
+                label: 'Main',
+                route: '/settings-2',
               },
               {
-                key: "SECOND",
-                label: "Second",
-                route: "/settings-2/second"
-              }
-            ]
+                key: 'SECOND',
+                label: 'Second',
+                route: '/settings-2/second',
+              },
+            ],
           },
           {
-            key: "ITEM3",
-            title: "Item 3",
-            label: "Item 3",
-            route: "/settings-3",
+            key: 'ITEM3',
+            title: 'Item 3',
+            label: 'Item 3',
+            route: '/settings-3',
             items: [
               {
-                key: "MAIN",
-                label: "Main",
-                route: "/settings-3"
+                key: 'MAIN',
+                label: 'Main',
+                route: '/settings-3',
               },
               {
-                key: "SECOND",
-                label: "Second",
-                route: "/settings-3/second"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+                key: 'SECOND',
+                label: 'Second',
+                route: '/settings-3/second',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 };

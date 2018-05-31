@@ -1,15 +1,15 @@
-import TabView from "../";
+import TabView from '../';
 
 export default {
   component: TabView,
-  url: "/",
+  url: '/',
   parentLayout: { marginTop: 40 },
   props: {
-    heading: "Heading",
+    heading: 'Heading',
     tabs: [
-      { title: "Root", route: "/", exact: true },
-      { title: "Somewhere", route: "/somewhere" },
-      { title: "Elsewhere", route: "/elsewhere" }
-    ]
-  }
+      { title: 'Root', route: '/', exact: true },
+      { title: 'Somewhere', route: '/somewhere' },
+      { title: 'Elsewhere', route: '/elsewhere' },
+    ],
+  },
 };

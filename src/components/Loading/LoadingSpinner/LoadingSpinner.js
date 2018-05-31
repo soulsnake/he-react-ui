@@ -1,32 +1,32 @@
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import style from "./LoadingSpinner.scss";
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import style from './LoadingSpinner.scss';
 
-const colors = ["teal", "blue", "green", "grey", "red", "white"];
+const colors = ['teal', 'blue', 'green', 'grey', 'red', 'white'];
 
 class LoadingSpinner extends Component {
   static propTypes = {
     className: PropTypes.string,
     color: PropTypes.oneOf(colors),
     fidget: PropTypes.bool,
-    ringColor: PropTypes.oneOf(colors)
+    ringColor: PropTypes.oneOf(colors),
   };
 
   static defaultProps = {
-    color: "teal",
+    color: 'teal',
     fidget: false,
-    ringColor: "grey"
+    ringColor: 'grey',
   };
 
   render() {
     const { className, color, fidget, ringColor, ...restProps } = this.props;
     const classes = classnames(style.outer, {
       [style[color]]: color,
-      [className]: className
+      [className]: className,
     });
     const ringClasses = classnames(style.ring, {
-      [style[ringColor]]: ringColor
+      [style[ringColor]]: ringColor,
     });
 
     return (
@@ -34,7 +34,7 @@ class LoadingSpinner extends Component {
         <svg
           className={classnames(style.spinner, { [style.fidget]: fidget })}
           {...restProps}
-          viewBox={fidget ? "0 0 100 100" : "0 0 24 24"}
+          viewBox={fidget ? '0 0 100 100' : '0 0 24 24'}
           version="1.1"
         >
           {fidget ? (

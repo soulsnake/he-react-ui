@@ -1,10 +1,10 @@
-import SingleDatePicker from "../";
+import SingleDatePicker from '../';
 
 export default {
   component: SingleDatePicker,
   props: {
-    id: "demo",
-    name: "demo",
-    label: "Which day?"
-  }
+    id: 'demo',
+    name: 'demo',
+    label: 'Which day?',
+  },
 };

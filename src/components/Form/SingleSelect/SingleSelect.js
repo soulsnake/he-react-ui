@@ -4,14 +4,13 @@
  *
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import onClickOutside from "react-onclickoutside";
-
-import Icon from "../../Icon";
-import Label from "../Label";
-import style from "./SingleSelect.scss";
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import onClickOutside from 'react-onclickoutside';
+import Icon from '../../Icon';
+import Label from '../Label';
+import style from './SingleSelect.scss';
 
 class SingleSelect extends React.Component {
   static propTypes = {
@@ -29,28 +28,28 @@ class SingleSelect extends React.Component {
     onChange: PropTypes.func,
     eventTypes: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string)
+      PropTypes.arrayOf(PropTypes.string),
     ]),
     outsideClickIgnoreClass: PropTypes.string,
     preventDefault: PropTypes.bool,
     stopPropagation: PropTypes.bool,
     disableOnClickOutside: PropTypes.func,
-    enableOnClickOutside: PropTypes.func
+    enableOnClickOutside: PropTypes.func,
   };
 
   static defaultProps = {
     disabled: false,
-    error: "",
+    error: '',
     inline: false,
     value: null,
-    onChange: () => {}
+    onChange: () => {},
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      expanded: false
+      expanded: false,
     };
     this.getDisplay = this.getDisplay.bind(this);
     this.toggleExpand = this.toggleExpand.bind(this);
@@ -62,15 +61,15 @@ class SingleSelect extends React.Component {
 
   getDisplay = () => {
     const { options, value } = this.props;
-    const option = options.find(option => option.value === value);
-    const firstLabel = (options && options[0] && options[0].label) || "";
+    const option = options.find(it => it.value === value);
+    const firstLabel = (options && options[0] && options[0].label) || '';
 
     return option ? option.label : this.props.placeholder || firstLabel;
   };
 
   toggleExpand = () => {
     this.setState({
-      expanded: this.props.disabled ? false : !this.state.expanded
+      expanded: this.props.disabled ? false : !this.state.expanded,
     });
   };
 
@@ -85,12 +84,12 @@ class SingleSelect extends React.Component {
   selectOption = option => {
     const oldValue = this.props.value;
     this.setState({
-      expanded: false
+      expanded: false,
     });
     if (oldValue !== option.value) {
       const event = {
         value: option.value,
-        props: this.props
+        props: this.props,
       };
 
       this.props.onChange(event);
@@ -156,7 +155,7 @@ class SingleSelect extends React.Component {
     const classes = classnames(style.outer, {
       [style.expanded]: this.state.expanded,
       [style.inline]: inline,
-      [className]: className
+      [className]: className,
     });
 
     return (
@@ -170,7 +169,7 @@ class SingleSelect extends React.Component {
           id={id}
           className={classnames(style.select, {
             [style.error]: error,
-            [style.disabled]: disabled
+            [style.disabled]: disabled,
           })}
           onClick={this.toggleExpand}
         >

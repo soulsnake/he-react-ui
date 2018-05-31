@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Edit(props) {
   const { className, ...restProps } = props;
@@ -20,5 +20,5 @@ export default function Edit(props) {
 }
 
 Edit.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };

@@ -1,1 +1,1 @@
-export default from "./PrimaryNavigation";
+export default from './PrimaryNavigation';

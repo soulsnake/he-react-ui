@@ -4,15 +4,15 @@
  *
  */
 
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { withRouter, matchPath } from "react-router";
-import { NavLink } from "react-router-dom";
-import isExternal from "is-url-external";
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { withRouter, matchPath } from 'react-router';
+import { NavLink } from 'react-router-dom';
+import isExternal from 'is-url-external';
 
-import styles from "./Bucket.scss";
-import Icon from "../../Icon";
+import Icon from '../../Icon';
+import styles from './Bucket.scss';
 
 class Bucket extends Component {
   static propTypes = {
@@ -23,20 +23,20 @@ class Bucket extends Component {
     items: PropTypes.arrayOf(
       PropTypes.shape({
         route: PropTypes.string.isRequired,
-        notifications: PropTypes.number
-      })
+        notifications: PropTypes.number,
+      }),
     ),
     onSelect: PropTypes.func,
     open: PropTypes.bool,
     location: PropTypes.object,
     onClickRoute: PropTypes.func,
-    onClickParent: PropTypes.func
+    onClickParent: PropTypes.func,
   };
 
   static defaultProps = {
     onClickRoute: () => null,
     onClickParent: () => null,
-    open: false
+    open: false,
   };
 
   render() {
@@ -49,7 +49,7 @@ class Bucket extends Component {
       open,
       onClickRoute,
       onClickParent,
-      location
+      location,
     } = this.props;
 
     const external = isExternal(route);
@@ -58,8 +58,8 @@ class Bucket extends Component {
       items.find(
         child =>
           matchPath(location.pathname + location.hash, {
-            path: child.route
-          }) !== null
+            path: child.route,
+          }) !== null,
       );
     const notificationChild =
       items && items.find(child => child.notifications > 0);
@@ -77,10 +77,10 @@ class Bucket extends Component {
       className: classnames(styles.bucket, {
         [styles.open]: open,
         [styles.external]: external,
-        [styles.current]: activeChild
+        [styles.current]: activeChild,
       }),
       title: label,
-      onClick: () => (route ? onClickRoute() : onClickParent())
+      onClick: () => (route ? onClickRoute() : onClickParent()),
     };
 
     if (route) {

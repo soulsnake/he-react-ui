@@ -4,29 +4,53 @@
  *
  */
 
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { NavLink } from "react-router-dom";
-import onClickOutside from "react-onclickoutside";
-import SubNavigation from "../SubNavigation";
-import HashRoute from "../../HashRoute";
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { NavLink } from 'react-router-dom';
+import onClickOutside from 'react-onclickoutside';
+import SubNavigation from '../SubNavigation';
+import HashRoute from '../../HashRoute';
 
-import styles from "./PrimaryNavigation.scss";
-import Icon from "../../Icon";
-import Bucket from "../Bucket";
-import LoadingStrip from "../../Loading/LoadingStrip";
-import Slider from "../Slider";
+import Icon from '../../Icon';
+import Bucket from '../Bucket';
+import LoadingStrip from '../../Loading/LoadingStrip';
+import Slider from '../Slider';
+import styles from './PrimaryNavigation.scss';
 
-const SUPPORTED_BADGES = ["NEW", "FREE"];
+const SUPPORTED_BADGES = ['NEW', 'FREE'];
 
+function renderRoutes(
+  item,
+  locations,
+  onLocationChange,
+  locationValue,
+  logoutRoute,
+) {
+  return (
+    <HashRoute
+      key={`Subnav_${item.key}`}
+      exact={item.exact} // Slash will match anything so we need to be exact in that case.
+      path={item.route}
+      render={() => (
+        <SubNavigation
+          item={item}
+          logoutRoute={logoutRoute}
+          locations={locations}
+          onLocationChange={onLocationChange}
+          locationValue={locationValue}
+        />
+      )}
+    />
+  );
+}
 class PrimaryNavigation extends Component {
   static propTypes = {
     bottomKeys: PropTypes.arrayOf(PropTypes.string),
     logo: PropTypes.shape({
       icon: PropTypes.any.isRequired,
-      route: PropTypes.string.isRequired
-    }).isRequired,
+      route: PropTypes.string.isRequired,
+    }),
     items: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
@@ -45,12 +69,12 @@ class PrimaryNavigation extends Component {
               PropTypes.shape({
                 key: PropTypes.string.isRequired,
                 label: PropTypes.string.isRequired,
-                route: PropTypes.string.isRequired
-              })
-            )
-          })
-        )
-      })
+                route: PropTypes.string.isRequired,
+              }),
+            ),
+          }),
+        ),
+      }),
     ).isRequired,
     locations: PropTypes.array,
     onLocationChange: PropTypes.func,
@@ -60,24 +84,24 @@ class PrimaryNavigation extends Component {
     children: PropTypes.oneOfType([
       PropTypes.array,
       PropTypes.object,
-      PropTypes.string
-    ])
+      PropTypes.string,
+    ]),
   };
 
   static defaultProps = {
     bottomKeys: [],
     logo: {
       icon: <Icon className={styles.logo} name="HealthEngine" inverted />,
-      route: "/"
+      route: '/',
     },
-    loading: false
+    loading: false,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      openKey: null
+      openKey: null,
     };
 
     this.closeBucket = this.closeBucket.bind(this);
@@ -96,6 +120,38 @@ class PrimaryNavigation extends Component {
     const { openKey } = this.state;
 
     this.setState({ openKey: key === openKey ? null : key });
+  }
+
+  handleClickOutside = () => {
+    this.setState({ openKey: null });
+  };
+
+  renderSliders() {
+    const { closeBucket } = this;
+    const { bottomKeys, items } = this.props;
+    const { openKey } = this.state;
+    const topItems = items.filter(item => !bottomKeys.includes(item.key));
+    const bottomItems = items.filter(item => bottomKeys.includes(item.key));
+
+    return (
+      <div className={styles.sliders}>
+        {topItems.map(item => (
+          <Slider
+            open={openKey === item.key}
+            onSelect={closeBucket}
+            {...item}
+          />
+        ))}
+        {bottomItems.map(item => (
+          <Slider
+            bottom
+            open={openKey === item.key}
+            onSelect={closeBucket}
+            {...item}
+          />
+        ))}
+      </div>
+    );
   }
 
   renderBuckets() {
@@ -147,59 +203,7 @@ class PrimaryNavigation extends Component {
     );
   }
 
-  renderSliders() {
-    const { closeBucket } = this;
-    const { bottomKeys, items } = this.props;
-    const { openKey } = this.state;
-    const topItems = items.filter(item => !bottomKeys.includes(item.key));
-    const bottomItems = items.filter(item => bottomKeys.includes(item.key));
-
-    return (
-      <div className={styles.sliders}>
-        {topItems.map(item => (
-          <Slider
-            open={openKey === item.key}
-            onSelect={closeBucket}
-            {...item}
-          />
-        ))}
-        {bottomItems.map(item => (
-          <Slider
-            bottom
-            open={openKey === item.key}
-            onSelect={closeBucket}
-            {...item}
-          />
-        ))}
-      </div>
-    );
-  }
-
-  handleClickOutside = () => {
-    this.setState({ openKey: null });
-  };
-
-  renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute) {
-    return (
-      <HashRoute
-        key={`Subnav_${item.key}`}
-        exact={item.exact} // Slash will match anything so we need to be exact in that case.
-        path={item.route}
-        render={() => (
-          <SubNavigation
-            item={item}
-            logoutRoute={logoutRoute}
-            locations={locations}
-            onLocationChange={onLocationChange}
-            locationValue={locationValue}
-          />
-        )}
-      />
-    );
-  }
-
   renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute) {
-    const { renderRoutes } = this;
     const { loading } = this.props;
 
     if (loading) {
@@ -215,8 +219,8 @@ class PrimaryNavigation extends Component {
               locations,
               onLocationChange,
               locationValue,
-              logoutRoute
-            )
+              logoutRoute,
+            ),
           );
         default:
           return renderRoutes(
@@ -224,7 +228,7 @@ class PrimaryNavigation extends Component {
             locations,
             onLocationChange,
             locationValue,
-            logoutRoute
+            logoutRoute,
           );
       }
     });
@@ -239,7 +243,7 @@ class PrimaryNavigation extends Component {
       onLocationChange,
       locationValue,
       logoutRoute,
-      children
+      children,
     } = this.props;
 
     return (
@@ -255,7 +259,7 @@ class PrimaryNavigation extends Component {
             locations,
             onLocationChange,
             locationValue,
-            logoutRoute
+            logoutRoute,
           )}
           <div className={styles.children}>{children}</div>
         </div>

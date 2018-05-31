@@ -1,12 +1,12 @@
-import PrimaryNavigation from "../";
+import PrimaryNavigation from '../';
 
 export default {
   component: PrimaryNavigation,
-  url: "/",
+  url: '/',
   props: {
     loading: true,
-    logoutRoute: "/logout",
+    logoutRoute: '/logout',
     locations: [],
-    items: []
-  }
+    items: [],
+  },
 };
