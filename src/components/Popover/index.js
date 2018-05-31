@@ -1,16 +1,16 @@
 /**
-*
-* Popover
-*
-*/
-import classnames from 'classnames'
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './index.scss'
+ *
+ * Popover
+ *
+ */
+import classnames from "classnames";
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./index.scss";
 
 class Popover extends React.Component {
   static propTypes = {
-    placement: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    placement: PropTypes.oneOf(["top", "right", "bottom", "left"]),
     positionTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     positionLeft: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     arrowOffsetTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -19,12 +19,12 @@ class Popover extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.any
-  }
+  };
 
   static defaultProps = {
-    placement: 'right'
-  }
-  render () {
+    placement: "right"
+  };
+  render() {
     const {
       placement,
       positionTop,
@@ -36,24 +36,24 @@ class Popover extends React.Component {
       style,
       children,
       ...props
-    } = this.props
+    } = this.props;
 
     const classes = {
       [styles.popover]: true,
       [styles[placement]]: true
-    }
+    };
 
     const outerStyle = {
-      display: 'block',
+      display: "block",
       top: positionTop,
       left: positionLeft,
       ...style
-    }
+    };
 
     const arrowStyle = {
       top: arrowOffsetTop,
       left: arrowOffsetLeft
-    }
+    };
 
     return (
       <div
@@ -68,8 +68,8 @@ class Popover extends React.Component {
 
         <div className={styles.content}>{children}</div>
       </div>
-    )
+    );
   }
 }
 
-export default Popover
+export default Popover;

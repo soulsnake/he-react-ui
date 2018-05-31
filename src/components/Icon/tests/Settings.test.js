@@ -1,4 +1,4 @@
-import fixture from '../fixtures/Settings.fixture.js'
-import testFixture from '../../../../config/testFixture'
+import fixture from "../fixtures/Settings.fixture.js";
+import testFixture from "../../../../config/testFixture";
 
-testFixture(fixture, 'Settings')
+testFixture(fixture, "Settings");

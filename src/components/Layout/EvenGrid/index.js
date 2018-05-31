@@ -1,1 +1,1 @@
-export {default} from './EvenGrid'
+export { default } from "./EvenGrid";

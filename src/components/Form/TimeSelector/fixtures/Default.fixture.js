@@ -1,9 +1,11 @@
-import TimeSelector from '../'
+import TimeSelector from "../";
 
 export default {
   component: TimeSelector,
-  formWrapper: {value: ''},
+  formWrapper: { value: "" },
   props: {
-    id: 'demo', name: 'demo', hourly: false
+    id: "demo",
+    name: "demo",
+    hourly: false
   }
-}
+};

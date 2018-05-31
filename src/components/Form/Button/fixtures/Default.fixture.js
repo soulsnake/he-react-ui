@@ -1,4 +1,4 @@
-import Button from '../'
+import Button from "../";
 
 export default {
   component: Button,
@@ -6,6 +6,6 @@ export default {
   props: {
     submit: false
   },
-  children: 'Button',
+  children: "Button",
   simulateSubmission: true
-}
+};

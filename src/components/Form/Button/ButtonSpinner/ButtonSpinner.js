@@ -1,15 +1,10 @@
-import React from 'react'
-import style from './ButtonSpinner.scss'
+import React from "react";
+import style from "./ButtonSpinner.scss";
 
 export default class ButtonSpinner extends React.Component {
-  render () {
+  render() {
     return (
-      <svg
-        className={style.spinner}
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
+      <svg className={style.spinner} width="24" height="24" viewBox="0 0 24 24">
         <defs>
           <path
             id="a"
@@ -40,6 +35,6 @@ export default class ButtonSpinner extends React.Component {
           </g>
         </g>
       </svg>
-    )
+    );
   }
 }

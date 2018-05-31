@@ -3,12 +3,12 @@
  */
 
 // Vendor
-import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import style from './TabView.scss'
-import Heading from '../Heading'
+import style from "./TabView.scss";
+import Heading from "../Heading";
 
 class TabView extends Component {
   static propTypes = {
@@ -21,10 +21,10 @@ class TabView extends Component {
         strict: PropTypes.bool
       })
     )
-  }
+  };
 
-  renderTabs = (tabs) => {
-    return tabs.map((tab, index) => (
+  renderTabs = tabs =>
+    tabs.map((tab, index) => (
       <NavLink
         key={index}
         className={style.tab}
@@ -36,26 +36,25 @@ class TabView extends Component {
       >
         <span>{tab.title}</span>
       </NavLink>
-    ))
-  }
+    ));
 
-  render () {
-    const { heading, tabs } = this.props
+  render() {
+    const { heading, tabs } = this.props;
 
     return (
       <div>
         <div className={style.barOuter}>
           <div className={style.barInner}>
-            <Heading h1 nav className={style.heading}>{heading}</Heading>
-            <div className={style.tabs}>
-              {this.renderTabs(tabs)}
-            </div>
+            <Heading h1 nav className={style.heading}>
+              {heading}
+            </Heading>
+            <div className={style.tabs}>{this.renderTabs(tabs)}</div>
           </div>
         </div>
         <div className={style.contentPusher} />
       </div>
-    )
+    );
   }
 }
 
-export default TabView
+export default TabView;

@@ -1,4 +1,4 @@
-import fixture from '../fixtures/Loading.fixture.js'
-import testFixture from '../../../../../config/testFixture'
+import fixture from "../fixtures/Loading.fixture.js";
+import testFixture from "../../../../../config/testFixture";
 
-testFixture(fixture, 'Loading')
+testFixture(fixture, "Loading");

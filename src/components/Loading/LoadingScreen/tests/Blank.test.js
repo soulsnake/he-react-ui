@@ -1,10 +1,9 @@
-import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../fixtures/Blank.fixture'
+import createTestContext from "react-cosmos-test/enzyme";
+import fixture from "../fixtures/Blank.fixture";
 
-const { mount, getWrapper } = createTestContext({ fixture })
+const { mount, getWrapper } = createTestContext({ fixture });
 
-beforeEach(mount)
+beforeEach(mount);
 
-test('<LoadingScreen /> rendered correctly with blank fixture', () =>
-  expect(getWrapper()).toMatchSnapshot()
-)
+test("<LoadingScreen /> rendered correctly with blank fixture", () =>
+  expect(getWrapper()).toMatchSnapshot());

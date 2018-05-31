@@ -1,10 +1,10 @@
-import Label from '../'
+import Label from "../";
 
 export default {
   component: Label,
   props: {
     error: true,
-    htmlFor: 'demo'
+    htmlFor: "demo"
   },
-  children: 'There was a problem'
-}
+  children: "There was a problem"
+};

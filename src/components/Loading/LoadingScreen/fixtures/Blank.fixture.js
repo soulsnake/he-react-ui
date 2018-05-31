@@ -1,6 +1,6 @@
-import LoadingScreen from '../LoadingScreen'
+import LoadingScreen from "../LoadingScreen";
 
 export default {
   component: LoadingScreen,
-  props: {children: null}
-}
+  props: { children: null }
+};

@@ -1,1 +1,1 @@
-export default from './HashRoute'
+export default from "./HashRoute";

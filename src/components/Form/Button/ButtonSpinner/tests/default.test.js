@@ -1,9 +1,9 @@
-import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../fixtures/ButtonSpinner.fixture'
+import createTestContext from "react-cosmos-test/enzyme";
+import fixture from "../fixtures/ButtonSpinner.fixture";
 
-const { mount, getWrapper } = createTestContext({ fixture })
+const { mount, getWrapper } = createTestContext({ fixture });
 
-beforeEach(mount)
+beforeEach(mount);
 
-test('<Button /> rendered correctly with blue fixture', () =>
-  expect(getWrapper()).toMatchSnapshot())
+test("<Button /> rendered correctly with blue fixture", () =>
+  expect(getWrapper()).toMatchSnapshot());

@@ -1,26 +1,26 @@
 /**
-*
-* SingleDatePicker
-*
-*/
+ *
+ * SingleDatePicker
+ *
+ */
 
-import React from 'react'
-import classnames from 'classnames'
-import PropTypes from 'prop-types'
-import 'react-dates/initialize'
-import 'react-dates/lib/css/_datepicker.css'
-import momentPropTypes from 'react-moment-proptypes'
-import styles from './SingleDatePicker.scss'
-import Label from '../Label'
-import Icon from '../../Icon'
-import { SingleDatePicker as Picker } from 'react-dates'
-import Media from 'react-media'
+import React from "react";
+import classnames from "classnames";
+import PropTypes from "prop-types";
+import "react-dates/initialize";
+import "react-dates/lib/css/_datepicker.css";
+import momentPropTypes from "react-moment-proptypes";
+import styles from "./SingleDatePicker.scss";
+import Label from "../Label";
+import Icon from "../../Icon";
+import { SingleDatePicker as Picker } from "react-dates";
+import Media from "react-media";
 
 class SingleDatePicker extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    anchorDirection: PropTypes.oneOf(['left', 'right']),
+    anchorDirection: PropTypes.oneOf(["left", "right"]),
     className: PropTypes.string,
     disabled: PropTypes.bool,
     displayFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -35,80 +35,92 @@ class SingleDatePicker extends React.Component {
     onFocus: PropTypes.func,
     value: momentPropTypes.momentObj,
     style: PropTypes.object
-  }
+  };
 
   static defaultProps = {
-    anchorDirection: 'right',
+    anchorDirection: "right",
     disabled: false,
-    displayFormat: 'DD/MM/YYYY',
+    displayFormat: "DD/MM/YYYY",
     inline: false,
-    placeholder: 'Select date',
+    placeholder: "Select date",
     readOnly: true,
     onBlur: () => null,
     onChange: () => null,
     onFocus: () => null
-  }
+  };
 
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       focused: false,
       date: props.value
-    }
-    this.handleDateChange = this.handleDateChange.bind(this)
-    this.handleFocusChange = this.handleFocusChange.bind(this)
+    };
+    this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleFocusChange = this.handleFocusChange.bind(this);
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.value !== this.state.date) {
       this.setState({
         date: nextProps.value
-      })
+      });
     }
   }
 
-  handleDateChange = (date) => {
-    const oldDate = this.state.date
-    this.setState({ date })
+  handleDateChange = date => {
+    const oldDate = this.state.date;
+    this.setState({ date });
     if ((oldDate && oldDate.toJSON()) !== (date && date.toJSON())) {
       const event = {
         value: date,
         props: this.props
-      }
-      this.props.onChange(event)
+      };
+      this.props.onChange(event);
     }
-  }
+  };
 
-  handleFocusChange = ({focused}) => {
-    this.setState({ focused })
+  handleFocusChange = ({ focused }) => {
+    this.setState({ focused });
     const event = {
       focused,
       props: this.props
-    }
+    };
     if (focused) {
-      this.props.onFocus(event)
+      this.props.onFocus(event);
     } else {
-      this.props.onBlur(event)
+      this.props.onBlur(event);
     }
-  }
+  };
 
-  render () {
-    const { id, className, disabled, error, inline, label, horizontalMargin, onChange, style, value, ...restProps } = this.props
+  render() {
+    const {
+      id,
+      className,
+      disabled,
+      error,
+      inline,
+      label,
+      horizontalMargin,
+      onChange,
+      style,
+      value,
+      ...restProps
+    } = this.props;
     const classes = classnames(styles.outer, {
       [styles.error]: error,
       [styles.disabled]: disabled,
       [styles.focused]: this.state.focused,
       [styles.inline]: inline,
       [className]: className
-    })
+    });
 
     return (
       <div className={classes} style={style}>
         {label && <Label className={styles.label}>{label}</Label>}
         <div className={styles.inner}>
           <Media query={{ maxWidth: 767 }}>
-            { matches => (
+            {matches => (
               <Picker
                 className={styles.picker}
                 date={this.state.date}
@@ -123,14 +135,19 @@ class SingleDatePicker extends React.Component {
                 navNext={<Icon name="ChevronRight" />}
                 navPrev={<Icon name="ChevronLeft" />}
                 {...restProps}
-              />) }
+              />
+            )}
           </Media>
           <Icon className={styles.icon} name="Calendar" />
         </div>
-        {error && <Label className={styles.errorMessage} htmlFor={id} error>{error}</Label>}
+        {error && (
+          <Label className={styles.errorMessage} htmlFor={id} error>
+            {error}
+          </Label>
+        )}
       </div>
-    )
+    );
   }
 }
 
-export default SingleDatePicker
+export default SingleDatePicker;

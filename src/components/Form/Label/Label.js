@@ -1,15 +1,15 @@
 /**
-*
-* Label
-*
-*/
+ *
+ * Label
+ *
+ */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
-import Icon from '../../Icon'
-import style from './Label.scss'
-import LoadingStrip from '../../Loading/LoadingStrip'
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import Icon from "../../Icon";
+import style from "./Label.scss";
+import LoadingStrip from "../../Loading/LoadingStrip";
 
 class Label extends React.Component {
   static propTypes = {
@@ -17,29 +17,31 @@ class Label extends React.Component {
     error: PropTypes.bool,
     htmlFor: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
-  }
+  };
 
   static defaultProps = {
     error: false,
     onChange: () => null
-  }
+  };
 
-  render () {
-    const { children, className, error, htmlFor, ...restProps } = this.props
+  render() {
+    const { children, className, error, htmlFor, ...restProps } = this.props;
     const classes = classnames(style.label, {
       [style.error]: error,
       [className]: className
-    })
+    });
 
     return (
-      <div
-        className={classes}
-        {...restProps}>
+      <div className={classes} {...restProps}>
         {error && <Icon className={style.icon} name="Alert" />}
-        {children ? <label htmlFor={htmlFor}>{children}</label> : <LoadingStrip className={style.loading} />}
+        {children ? (
+          <label htmlFor={htmlFor}>{children}</label>
+        ) : (
+          <LoadingStrip className={style.loading} />
+        )}
       </div>
-    )
+    );
   }
 }
 
-export default Label
+export default Label;

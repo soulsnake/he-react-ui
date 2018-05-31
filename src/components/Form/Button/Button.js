@@ -4,16 +4,17 @@
  *
  */
 
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
-import Icon from '../../Icon'
-import style from './Button.scss'
-import ButtonSpinner from './ButtonSpinner'
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import Icon from "../../Icon";
+import style from "./Button.scss";
+import ButtonSpinner from "./ButtonSpinner";
+
 class Button extends React.Component {
   static propTypes = {
     submit: PropTypes.bool,
-    color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
+    color: PropTypes.oneOf(["teal", "blue", "green", "red", "white"]),
     link: PropTypes.bool,
     small: PropTypes.bool,
     large: PropTypes.bool,
@@ -28,26 +29,26 @@ class Button extends React.Component {
     submitting: PropTypes.bool,
     done: PropTypes.bool,
     className: PropTypes.string
-  }
+  };
 
   static defaultProps = {
     submit: false,
     link: false,
-    color: 'teal',
-    icon: '',
+    color: "teal",
+    icon: "",
     keyline: false,
     disabled: false,
     squared: false,
     onClick: () => null
-  }
+  };
 
   handleClick = event => {
     if (!this.props.disabled) {
-      this.props.onClick(event)
+      this.props.onClick(event);
     }
-  }
+  };
 
-  render () {
+  render() {
     const {
       children,
       className,
@@ -66,7 +67,7 @@ class Button extends React.Component {
       submitting,
       done,
       ...rest
-    } = this.props
+    } = this.props;
 
     const buttonClasses = classnames(style.button, {
       [style[color]]: color && !done,
@@ -77,12 +78,12 @@ class Button extends React.Component {
       [style.submitting]: submitting,
       [className]: className,
       [style.done]: done
-    })
+    });
 
     const containerClasses = classnames(style.buttonContainer, {
       [style.small]: small,
       [style.large]: large
-    })
+    });
 
     const statusIcon = done ? (
       <div className={style.iconCenter}>
@@ -92,13 +93,13 @@ class Button extends React.Component {
       <div className={style.iconCenter}>
         <ButtonSpinner />
       </div>
-    ) : null
+    ) : null;
 
     return (
       <div className={containerClasses}>
         <button
           className={buttonClasses}
-          type={submit ? 'submit' : 'button'}
+          type={submit ? "submit" : "button"}
           onClick={this.handleClick}
           {...rest}
         >
@@ -117,8 +118,8 @@ class Button extends React.Component {
           )}
         </button>
       </div>
-    )
+    );
   }
 }
 
-export default Button
+export default Button;
