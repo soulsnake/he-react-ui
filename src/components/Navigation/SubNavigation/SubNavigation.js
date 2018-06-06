@@ -9,10 +9,12 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import isAbsoluteUrl from 'is-absolute-url'
 import SingleSelect from '../../Form/SingleSelect';
 import Icon from '../../Icon';
 import Heading from '../../Layout/Heading';
 import style from './SubNavigation.scss';
+
 
 class SubNavigation extends Component {
   static propTypes = {
@@ -45,7 +47,7 @@ class SubNavigation extends Component {
     const { location } = this.props;
 
     return items.map((item, index) => {
-      if (isExternal(item.route)) {
+      if (isAbsoluteUrl(item.route)) {
         return (
           <a target="_blank" href={item.route} className={style.item}>
             <span>{item.label}</span>
