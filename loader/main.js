@@ -5430,7 +5430,7 @@ if (false) {
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(636)();
+  module.exports = __webpack_require__(634)();
 }
 
 
@@ -5515,7 +5515,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports =  true ? __webpack_require__(638) : require('./build');
+module.exports =  true ? __webpack_require__(636) : require('./build');
 
 //# sourceMappingURL=index.js.map
 
@@ -5530,7 +5530,7 @@ var defineProperties = __webpack_require__(40);
 
 var implementation = __webpack_require__(336);
 var getPolyfill = __webpack_require__(337);
-var shim = __webpack_require__(635);
+var shim = __webpack_require__(633);
 
 var polyfill = getPolyfill();
 
@@ -5951,7 +5951,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(639);
+var _propTypes = __webpack_require__(637);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -5959,13 +5959,13 @@ var _hoistNonReactStatics = __webpack_require__(338);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _deepmerge = __webpack_require__(642);
+var _deepmerge = __webpack_require__(640);
 
 var _deepmerge2 = _interopRequireDefault(_deepmerge);
 
-var _constants = __webpack_require__(643);
+var _constants = __webpack_require__(641);
 
-var _brcast = __webpack_require__(644);
+var _brcast = __webpack_require__(642);
 
 var _brcast2 = _interopRequireDefault(_brcast);
 
@@ -6261,7 +6261,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Heading = __webpack_require__(726);
+var _Heading = __webpack_require__(724);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -6550,7 +6550,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Label = __webpack_require__(588);
+var _Label = __webpack_require__(586);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -7026,7 +7026,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _LoadingStrip = __webpack_require__(591);
+var _LoadingStrip = __webpack_require__(587);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -8364,11 +8364,11 @@ exports.EVENT_HANDLERS_KEY = undefined;
 exports.addEventListener = addEventListener;
 exports.removeEventListener = removeEventListener;
 
-var _normalizeEventOptions = __webpack_require__(652);
+var _normalizeEventOptions = __webpack_require__(650);
 
 var _normalizeEventOptions2 = _interopRequireDefault(_normalizeEventOptions);
 
-var _TargetEventHandlers = __webpack_require__(655);
+var _TargetEventHandlers = __webpack_require__(653);
 
 var _TargetEventHandlers2 = _interopRequireDefault(_TargetEventHandlers);
 
@@ -8944,7 +8944,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Paragraph = __webpack_require__(741);
+var _Paragraph = __webpack_require__(739);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -8966,7 +8966,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _LoadingSpinner = __webpack_require__(744);
+var _LoadingSpinner = __webpack_require__(742);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -9930,11 +9930,11 @@ var _CalendarMonthGrid = __webpack_require__(342);
 
 var _CalendarMonthGrid2 = _interopRequireDefault(_CalendarMonthGrid);
 
-var _DayPickerNavigation = __webpack_require__(680);
+var _DayPickerNavigation = __webpack_require__(678);
 
 var _DayPickerNavigation2 = _interopRequireDefault(_DayPickerNavigation);
 
-var _DayPickerKeyboardShortcuts = __webpack_require__(683);
+var _DayPickerKeyboardShortcuts = __webpack_require__(681);
 
 var _DayPickerKeyboardShortcuts2 = _interopRequireDefault(_DayPickerKeyboardShortcuts);
 
@@ -9946,7 +9946,7 @@ var _calculateDimension = __webpack_require__(341);
 
 var _calculateDimension2 = _interopRequireDefault(_calculateDimension);
 
-var _getActiveElement = __webpack_require__(685);
+var _getActiveElement = __webpack_require__(683);
 
 var _getActiveElement2 = _interopRequireDefault(_getActiveElement);
 
@@ -11714,7 +11714,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _LoadingScreenModule = __webpack_require__(754);
+var _LoadingScreenModule = __webpack_require__(752);
 
 var _LoadingScreenModule2 = _interopRequireDefault(_LoadingScreenModule);
 
@@ -18238,7 +18238,13 @@ function Alert(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 20 20', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 20 20',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 3.000000)' },
@@ -18284,7 +18290,13 @@ function Cross(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(7.000000, 7.000000)' },
@@ -18470,7 +18482,13 @@ function Tick(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)' },
@@ -18772,12 +18790,7 @@ var ButtonSpinner = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'svg',
-        {
-          className: _ButtonSpinner2.default.spinner,
-          width: '24',
-          height: '24',
-          viewBox: '0 0 24 24'
-        },
+        { className: _ButtonSpinner2.default.spinner, width: '24', height: '24', viewBox: '0 0 24 24' },
         _react2.default.createElement(
           'defs',
           null,
@@ -19624,13 +19637,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ = __webpack_require__(33);
-
-var _2 = _interopRequireDefault(_);
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _ = __webpack_require__(33);
+
+var _2 = _interopRequireDefault(_);
 
 var _SingleSelect = __webpack_require__(23);
 
@@ -19638,7 +19651,9 @@ var _SingleSelect2 = _interopRequireDefault(_SingleSelect);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var other = _react2.default.createElement(_SingleSelect2.default, { options: [{ value: 'A', label: 'A' }, { value: 'B', label: 'B' }, { value: 'C', label: 'C' }] });
+var other = _react2.default.createElement(_SingleSelect2.default, {
+  options: [{ value: 'A', label: 'A' }, { value: 'B', label: 'B' }, { value: 'C', label: 'C' }]
+});
 
 exports.default = {
   component: _2.default,
@@ -19660,13 +19675,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ = __webpack_require__(33);
-
-var _2 = _interopRequireDefault(_);
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _ = __webpack_require__(33);
+
+var _2 = _interopRequireDefault(_);
 
 var _SingleSelect = __webpack_require__(23);
 
@@ -19674,7 +19689,9 @@ var _SingleSelect2 = _interopRequireDefault(_SingleSelect);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var other = _react2.default.createElement(_SingleSelect2.default, { options: [{ value: 'A', label: 'A' }, { value: 'B', label: 'B' }, { value: 'C', label: 'C' }] });
+var other = _react2.default.createElement(_SingleSelect2.default, {
+  options: [{ value: 'A', label: 'A' }, { value: 'B', label: 'B' }, { value: 'C', label: 'C' }]
+});
 
 exports.default = {
   component: _2.default,
@@ -19759,7 +19776,7 @@ exports.default = {
   component: _2.default,
   props: {
     name: 'demo',
-    error: 'That selection wasn\'t great',
+    error: "That selection wasn't great",
     options: [{ label: 'Option 1', value: '1' }, { label: 'Option 2', value: '2' }, { label: 'Option 3', value: '3' }],
     value: '1'
   }
@@ -32439,7 +32456,7 @@ var bind = __webpack_require__(51);
 var canBeObject = function (obj) {
 	return typeof obj !== 'undefined' && obj !== null;
 };
-var hasSymbols = __webpack_require__(634)();
+var hasSymbols = __webpack_require__(632)();
 var toObject = Object;
 var push = bind.call(Function.call, Array.prototype.push);
 var propIsEnumerable = bind.call(Function.call, Object.prototype.propertyIsEnumerable);
@@ -32619,7 +32636,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports['default'] = getCalendarDaySettings;
 
-var _getPhrase = __webpack_require__(648);
+var _getPhrase = __webpack_require__(646);
 
 var _getPhrase2 = _interopRequireDefault(_getPhrase);
 
@@ -32711,7 +32728,7 @@ var _getPhrasePropTypes = __webpack_require__(14);
 
 var _getPhrasePropTypes2 = _interopRequireDefault(_getPhrasePropTypes);
 
-var _CalendarWeek = __webpack_require__(649);
+var _CalendarWeek = __webpack_require__(647);
 
 var _CalendarWeek2 = _interopRequireDefault(_CalendarWeek);
 
@@ -32723,7 +32740,7 @@ var _calculateDimension = __webpack_require__(341);
 
 var _calculateDimension2 = _interopRequireDefault(_calculateDimension);
 
-var _getCalendarMonthWeeks = __webpack_require__(651);
+var _getCalendarMonthWeeks = __webpack_require__(649);
 
 var _getCalendarMonthWeeks2 = _interopRequireDefault(_getCalendarMonthWeeks);
 
@@ -33148,11 +33165,11 @@ var _CalendarMonth = __webpack_require__(340);
 
 var _CalendarMonth2 = _interopRequireDefault(_CalendarMonth);
 
-var _isTransitionEndSupported = __webpack_require__(657);
+var _isTransitionEndSupported = __webpack_require__(655);
 
 var _isTransitionEndSupported2 = _interopRequireDefault(_isTransitionEndSupported);
 
-var _getTransformStyles = __webpack_require__(658);
+var _getTransformStyles = __webpack_require__(656);
 
 var _getTransformStyles2 = _interopRequireDefault(_getTransformStyles);
 
@@ -33639,7 +33656,7 @@ function getCalendarMonthWidth(daySize) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PortalCompat__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortalWithState__ = __webpack_require__(663);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortalWithState__ = __webpack_require__(661);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Portal", function() { return __WEBPACK_IMPORTED_MODULE_0__PortalCompat__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PortalWithState", function() { return __WEBPACK_IMPORTED_MODULE_1__PortalWithState__["a"]; });
 
@@ -33654,8 +33671,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Portal__ = __webpack_require__(660);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LegacyPortal__ = __webpack_require__(662);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Portal__ = __webpack_require__(658);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LegacyPortal__ = __webpack_require__(660);
 
 
 
@@ -35428,7 +35445,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref) {
 /* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var debounce = __webpack_require__(664),
+var debounce = __webpack_require__(662),
     isObject = __webpack_require__(119);
 
 /** Error message constants. */
@@ -35503,7 +35520,7 @@ module.exports = throttle;
 /* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(666);
+var freeGlobal = __webpack_require__(664);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -35702,7 +35719,7 @@ var _isDayVisible = __webpack_require__(121);
 
 var _isDayVisible2 = _interopRequireDefault(_isDayVisible);
 
-var _getSelectedDateOffset = __webpack_require__(679);
+var _getSelectedDateOffset = __webpack_require__(677);
 
 var _getSelectedDateOffset2 = _interopRequireDefault(_getSelectedDateOffset);
 
@@ -37081,7 +37098,7 @@ var define = __webpack_require__(40);
 
 var implementation = __webpack_require__(364);
 var getPolyfill = __webpack_require__(370);
-var shim = __webpack_require__(678);
+var shim = __webpack_require__(676);
 
 var polyfill = getPolyfill();
 
@@ -37101,7 +37118,7 @@ module.exports = polyfill;
 "use strict";
 
 
-var ES = __webpack_require__(673);
+var ES = __webpack_require__(671);
 var has = __webpack_require__(52);
 var bind = __webpack_require__(51);
 var isEnumerable = bind.call(Function.call, Object.prototype.propertyIsEnumerable);
@@ -38778,7 +38795,7 @@ exports.default = {
   props: {
     id: 'demo',
     name: 'demo',
-    error: 'That wasn\'t the best choice'
+    error: "That wasn't the best choice"
   }
 };
 
@@ -38885,7 +38902,7 @@ exports.default = {
   props: {
     id: 'demo',
     name: 'demo',
-    error: 'That selection wasn\'t great',
+    error: "That selection wasn't great",
     placeholder: 'Select from the list',
     options: [{ label: 'Option 1', value: '1' }, { label: 'Option 2', value: '2' }, { label: 'Option 3', value: '3' }]
   }
@@ -39076,7 +39093,7 @@ exports.default = {
     id: 'demo',
     name: 'demo',
     label: 'First Name',
-    error: 'Something isn\'t right',
+    error: "Something isn't right",
     validateFunc: function validateFunc() {
       return false;
     }
@@ -39106,7 +39123,7 @@ exports.default = {
     id: 'demo',
     name: 'demo',
     label: 'First Name',
-    error: 'Something isn\'t right',
+    error: "Something isn't right",
     marker: true,
     validateFunc: function validateFunc() {
       return false;
@@ -39191,7 +39208,9 @@ exports.default = {
   component: _2.default,
   formWrapper: { value: '' },
   props: {
-    id: 'demo', name: 'demo', hourly: false
+    id: 'demo',
+    name: 'demo',
+    hourly: false
   }
 };
 
@@ -39243,7 +39262,7 @@ exports.default = {
   props: {
     id: 'demo',
     name: 'demo',
-    error: 'That selection wasn\'t great'
+    error: "That selection wasn't great"
   }
 };
 
@@ -39345,7 +39364,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   component: _2.default,
   props: {
-    'color': 'blue'
+    color: 'blue'
   }
 };
 
@@ -39391,7 +39410,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   component: _2.default,
   props: {
-    'name': 'HealthEngine'
+    name: 'HealthEngine'
   }
 };
 
@@ -39415,7 +39434,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   component: _2.default,
   props: {
-    'name': 'Settings'
+    name: 'Settings'
   }
 };
 
@@ -40616,7 +40635,18 @@ exports.default = {
     heading: 'Section Heading',
     description: 'This generally provides some further explanation about what the user can / should do.'
   },
-  children: _react2.default.createElement(_Radio2.default, { name: 'demo', id: 'demo', label: 'Run for how long?', value: 'false', options: [{ label: 'Indefinitely', value: 'false' }, { label: 'Specific date...', value: 'true', child: _react2.default.createElement(_SingleDatePicker2.default, { id: 'demo2', name: 'demo2' }), showChild: false }] })
+  children: _react2.default.createElement(_Radio2.default, {
+    name: 'demo',
+    id: 'demo',
+    label: 'Run for how long?',
+    value: 'false',
+    options: [{ label: 'Indefinitely', value: 'false' }, {
+      label: 'Specific date...',
+      value: 'true',
+      child: _react2.default.createElement(_SingleDatePicker2.default, { id: 'demo2', name: 'demo2' }),
+      showChild: false
+    }]
+  })
 };
 
 /***/ }),
@@ -40849,7 +40879,15 @@ exports.default = {
   component: _2.default,
   props: {
     columns: [{ title: 'Name' }, { title: 'Specialty' }, { title: 'Date of Birth', width: 'narrow' }, { title: 'Status', width: 'extraNarrow' }, { title: '', width: 'extraNarrow' }],
-    body: [{ content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active', actions] }, { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active', actions] }, { content: ['???', '???', '23/06/1021', 'Immortal', actions] }, { content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive', actions] }, { content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees', actions] }]
+    body: [{
+      content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active', actions]
+    }, {
+      content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active', actions]
+    }, { content: ['???', '???', '23/06/1021', 'Immortal', actions] }, {
+      content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive', actions]
+    }, {
+      content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees', actions]
+    }]
   }
 };
 
@@ -40873,7 +40911,7 @@ var _LoadingStrip = __webpack_require__(49);
 
 var _LoadingStrip2 = _interopRequireDefault(_LoadingStrip);
 
-var _LoadingScreen = __webpack_require__(753);
+var _LoadingScreen = __webpack_require__(751);
 
 var _LoadingScreen2 = _interopRequireDefault(_LoadingScreen);
 
@@ -40974,7 +41012,11 @@ exports.default = {
   component: _2.default,
   props: {
     columns: [{ title: 'Name' }, { title: 'Specialty' }, { title: 'Date of Birth', width: 'narrow' }, { title: 'Status', width: 'extraNarrow' }],
-    body: [{ content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active'] }, { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active'] }, { content: ['???', '???', '23/06/1021', 'Immortal'] }, { content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive'] }, { content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees'] }]
+    body: [{ content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active'] }, { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active'] }, { content: ['???', '???', '23/06/1021', 'Immortal'] }, {
+      content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive']
+    }, {
+      content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees']
+    }]
   }
 };
 
@@ -40999,7 +41041,12 @@ exports.default = {
   component: _2.default,
   props: {
     columns: [{ title: 'Name' }, { title: 'Specialty' }, { title: 'Date of Birth', width: 'narrow' }, { title: 'Status', width: 'extraNarrow' }],
-    body: [{ content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active'] }, { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active'] }, { content: ['???', '???', '23/06/1021', 'Immortal'], inactive: true }, { content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive'], inactive: true }, { content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees'] }]
+    body: [{ content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active'] }, { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active'] }, { content: ['???', '???', '23/06/1021', 'Immortal'], inactive: true }, {
+      content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive'],
+      inactive: true
+    }, {
+      content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees']
+    }]
   }
 };
 
@@ -41073,7 +41120,11 @@ exports.default = {
   component: _2.default,
   props: {
     columns: [{ title: 'Name', sortable: true }, { title: 'Specialty', sortable: true }, { title: 'Date of Birth', width: 'narrow' }, { title: 'Status', sortable: true, width: 'extraNarrow' }],
-    body: [{ content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active'] }, { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active'] }, { content: ['???', '???', '23/06/1021', 'Immortal'] }, { content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive'] }, { content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees'] }]
+    body: [{ content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active'] }, { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active'] }, { content: ['???', '???', '23/06/1021', 'Immortal'] }, {
+      content: ['Mary Tillerman', 'General Practitioner', '15/09/1984', 'Inactive']
+    }, {
+      content: ['Nick Wickerman', 'Investigative Journalist', '02/08/1987', 'Bees']
+    }]
   }
 };
 
@@ -41275,7 +41326,10 @@ exports.default = {
   props: {
     logoutRoute: '/logout',
     locations: ['Location A', 'Location B'].map(function (location) {
-      return { value: location, label: location };
+      return {
+        value: location,
+        label: location
+      };
     }),
     bottomKeys: ['HELP', 'SETTINGS'],
     items: [{
@@ -41442,7 +41496,10 @@ exports.default = {
   props: {
     logoutRoute: '/logout',
     locations: ['Location A', 'Location B'].map(function (location) {
-      return { value: location, label: location };
+      return {
+        value: location,
+        label: location
+      };
     }),
     bottomKeys: ['HELP', 'SETTINGS'],
     items: [{
@@ -41642,17 +41699,20 @@ exports.default = {
       route: '/parent',
       badge: 'FREE',
       items: [{
-        'key': 'MAIN',
-        'label': 'Main',
-        'route': '/parent'
+        key: 'MAIN',
+        label: 'Main',
+        route: '/parent'
       }, {
-        'key': 'SECONDARY',
-        'label': 'Secondary',
-        'route': '/parent/secondary'
+        key: 'SECONDARY',
+        label: 'Secondary',
+        route: '/parent/secondary'
       }]
     },
     locations: ['Location A', 'Location B'].map(function (location) {
-      return { value: location, label: location };
+      return {
+        value: location,
+        label: location
+      };
     }),
     logoutRoute: '/logout'
   }
@@ -42084,10 +42144,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * Popover
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Popover
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 
 var Popover = function (_React$Component) {
@@ -42395,7 +42455,7 @@ exports.default = {
     showing: true,
     modal: true,
     style: {
-      backgroundImage: 'url(\'https://i.imgur.com/5JGZrYe.jpg\')',
+      backgroundImage: "url('https://i.imgur.com/5JGZrYe.jpg')",
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
@@ -61795,10 +61855,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * ActionIcon
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ActionIcon
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var ActionIcon = function (_React$Component) {
   _inherits(ActionIcon, _React$Component);
@@ -61845,9 +61905,7 @@ var ActionIcon = function (_React$Component) {
           onClick: this.handleClick,
           title: title
         }, rest),
-        _react2.default.createElement(_Icon2.default, {
-          className: _ActionIcon2.default.icon,
-          name: icon })
+        _react2.default.createElement(_Icon2.default, { className: _ActionIcon2.default.icon, name: icon })
       );
     }
   }]);
@@ -62019,7 +62077,13 @@ function Add(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(5.000000, 5.000000)' },
@@ -62065,7 +62129,13 @@ function Alarm(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(4.000000, 3.000000)' },
@@ -62146,7 +62216,13 @@ function ArrowLeft(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(22.000000, 5.000000) scale(-1, 1)' },
@@ -62192,7 +62268,13 @@ function ArrowRight(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 5.000000)' },
@@ -62238,7 +62320,13 @@ function ArrowUp(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(5.000000, 22.000000) rotate(-90.000000)' },
@@ -62284,7 +62372,13 @@ function ArrowDown(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(22.000000, 2.000000) rotate(90.000000)' },
@@ -62330,7 +62424,13 @@ function Bookings(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(1.000000, 1.000000)' },
@@ -62385,7 +62485,13 @@ function Calendar(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 26 26', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 26 26',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(5.000000, 5.000000)' },
@@ -62431,7 +62537,13 @@ function CaretRight(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(0.000000, 8.000000)' },
@@ -62512,7 +62624,13 @@ function CheckBoxChecked(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 20 20', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 20 20',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement('path', { d: 'M18.5 0.04L18.72 0.08L18.92 0.14L19.11 0.22L19.28 0.32L19.43 0.44L19.56 0.57L19.68 0.72L19.78 0.89L19.86 1.08L19.92 1.28L19.96 1.5L19.99 1.74L20 2L20 18L19.99 18.26L19.96 18.5L19.92 18.72L19.86 18.92L19.78 19.11L19.68 19.28L19.56 19.43L19.43 19.56L19.28 19.68L19.11 19.78L18.92 19.86L18.72 19.92L18.5 19.96L18.26 19.99L18 20L2 20L1.74 19.99L1.5 19.96L1.28 19.92L1.08 19.86L0.89 19.78L0.72 19.68L0.57 19.56L0.44 19.43L0.32 19.28L0.22 19.11L0.14 18.92L0.08 18.72L0.04 18.5L0.01 18.26L0 18L0 2L0.01 1.74L0.04 1.5L0.08 1.28L0.14 1.08L0.22 0.89L0.32 0.72L0.44 0.57L0.57 0.44L0.72 0.32L0.89 0.22L1.08 0.14L1.28 0.08L1.5 0.04L1.74 0.01L2 0L18 0L18.26 0.01L18.5 0.04ZM5.91 8.73L4 10.64L8.64 15.27L16 7.91L14.09 6L8.64 11.45L5.91 8.73Z' })
   );
 }
@@ -62554,7 +62672,13 @@ function CheckBoxUnchecked(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 20 20', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 20 20',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement('path', { d: 'M18.5 0.04L18.72 0.08L18.92 0.14L19.11 0.22L19.28 0.32L19.43 0.44L19.56 0.57L19.68 0.72L19.78 0.89L19.86 1.08L19.92 1.28L19.96 1.5L19.99 1.74L20 2L20 18L19.99 18.26L19.96 18.5L19.92 18.72L19.86 18.92L19.78 19.11L19.68 19.28L19.56 19.43L19.43 19.56L19.28 19.68L19.11 19.78L18.92 19.86L18.72 19.92L18.5 19.96L18.26 19.99L18 20L2 20L1.74 19.99L1.5 19.96L1.28 19.92L1.08 19.86L0.89 19.78L0.72 19.68L0.57 19.56L0.44 19.43L0.32 19.28L0.22 19.11L0.14 18.92L0.08 18.72L0.04 18.5L0.01 18.26L0 18L0 2L0.01 1.74L0.04 1.5L0.08 1.28L0.14 1.08L0.22 0.89L0.32 0.72L0.44 0.57L0.57 0.44L0.72 0.32L0.89 0.22L1.08 0.14L1.28 0.08L1.5 0.04L1.74 0.01L2 0L18 0L18.26 0.01L18.5 0.04ZM2.55 2.03L2.47 2.05L2.39 2.08L2.32 2.11L2.25 2.16L2.19 2.21L2.14 2.27L2.09 2.34L2.06 2.41L2.03 2.49L2.01 2.57L2.01 2.66L2.01 17.34L2.01 17.43L2.03 17.51L2.06 17.59L2.09 17.66L2.14 17.73L2.19 17.79L2.25 17.84L2.32 17.89L2.39 17.92L2.47 17.95L2.55 17.97L2.64 17.97L17.36 17.97L17.45 17.97L17.53 17.95L17.61 17.92L17.68 17.89L17.75 17.84L17.81 17.79L17.86 17.73L17.91 17.66L17.94 17.59L17.97 17.51L17.99 17.43L17.99 17.34L17.99 2.66L17.99 2.57L17.97 2.49L17.94 2.41L17.91 2.34L17.86 2.27L17.81 2.21L17.75 2.16L17.68 2.11L17.61 2.08L17.53 2.05L17.45 2.03L17.36 2.03L2.64 2.03L2.55 2.03Z' })
   );
 }
@@ -62596,7 +62720,13 @@ function RadioChecked(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 20 20', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 20 20',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement('path', { d: 'M12.66 0.36L13.89 0.79L15.05 1.37L16.11 2.08L17.07 2.93L17.92 3.89L18.63 4.95L19.21 6.11L19.64 7.34L19.91 8.64L20 10L19.91 11.36L19.64 12.66L19.21 13.89L18.63 15.05L17.92 16.11L17.07 17.07L16.11 17.92L15.05 18.63L13.89 19.21L12.66 19.64L11.36 19.91L10 20L8.64 19.91L7.34 19.64L6.11 19.21L4.95 18.63L3.89 17.92L2.93 17.07L2.08 16.11L1.37 15.05L0.79 13.89L0.36 12.66L0.09 11.36L0 10L0.09 8.64L0.36 7.34L0.79 6.11L1.37 4.95L2.08 3.89L2.93 2.93L3.89 2.08L4.95 1.37L6.11 0.79L7.34 0.36L8.64 0.09L10 0L11.36 0.09L12.66 0.36ZM7.64 6.77L6.77 7.64L6.2 8.74L6 10L6.2 11.26L6.77 12.36L7.64 13.23L8.74 13.8L10 14L11.26 13.8L12.36 13.23L13.23 12.36L13.8 11.26L14 10L13.8 8.74L13.23 7.64L12.36 6.77L11.26 6.2L10 6L8.74 6.2L7.64 6.77Z' })
   );
 }
@@ -62638,7 +62768,13 @@ function RadioUnchecked(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 20 20', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 20 20',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement('path', { d: 'M12.66 0.36L13.89 0.79L15.05 1.37L16.11 2.08L17.07 2.93L17.92 3.89L18.63 4.95L19.21 6.11L19.64 7.34L19.91 8.64L20 10L19.91 11.36L19.64 12.66L19.21 13.89L18.63 15.05L17.92 16.11L17.07 17.07L16.11 17.92L15.05 18.63L13.89 19.21L12.66 19.64L11.36 19.91L10 20L8.64 19.91L7.34 19.64L6.11 19.21L4.95 18.63L3.89 17.92L2.93 17.07L2.08 16.11L1.37 15.05L0.79 13.89L0.36 12.66L0.09 11.36L0 10L0.09 8.64L0.36 7.34L0.79 6.11L1.37 4.95L2.08 3.89L2.93 2.93L3.89 2.08L4.95 1.37L6.11 0.79L7.34 0.36L8.64 0.09L10 0L11.36 0.09L12.66 0.36ZM7.46 2.4L6.31 2.89L5.27 3.54L4.34 4.34L3.54 5.27L2.89 6.31L2.4 7.46L2.1 8.69L1.99 9.98L2.1 11.28L2.4 12.51L2.89 13.65L3.54 14.7L4.34 15.63L5.27 16.43L6.31 17.08L7.46 17.56L8.69 17.87L9.98 17.97L11.28 17.87L12.51 17.56L13.65 17.08L14.7 16.43L15.63 15.63L16.43 14.7L17.08 13.65L17.56 12.51L17.87 11.28L17.97 9.98L17.87 8.69L17.56 7.46L17.08 6.31L16.43 5.27L15.63 4.34L14.7 3.54L13.65 2.89L12.51 2.4L11.28 2.1L9.98 1.99L8.69 2.1L7.46 2.4Z' })
   );
 }
@@ -62715,7 +62851,13 @@ function ChevronLeft(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(15.000000, 7.000000) scale(-1, 1)' },
@@ -62761,7 +62903,13 @@ function ChevronRight(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(9.000000, 7.000000)' },
@@ -62807,7 +62955,13 @@ function ChevronUp(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(7.000000, 15.000000) rotate(-90.000000)' },
@@ -62853,7 +63007,13 @@ function ChevronDown(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(17.000000, 9.000000) rotate(90.000000)' },
@@ -62899,11 +63059,20 @@ function Clock(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 26 26', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 26 26',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(0.500000, 0.500000)' },
-      _react2.default.createElement('path', { d: 'M11.25,8.75 L11.25,5 C11.25,4.30964406 10.6903559,3.75 10,3.75 C9.30964406,3.75 8.75,4.30964406 8.75,5 L8.75,10 C8.75,10.6903559 9.30964406,11.25 10,11.25 L15,11.25 C15.6903559,11.25 16.25,10.6903559 16.25,10 C16.25,9.30964406 15.6903559,8.75 15,8.75 L11.25,8.75 Z M10,19.375 C4.82233047,19.375 0.625,15.1776695 0.625,10 C0.625,4.82233047 4.82233047,0.625 10,0.625 C15.1776695,0.625 19.375,4.82233047 19.375,10 C19.375,15.1776695 15.1776695,19.375 10,19.375 Z', id: 'path-1' })
+      _react2.default.createElement('path', {
+        d: 'M11.25,8.75 L11.25,5 C11.25,4.30964406 10.6903559,3.75 10,3.75 C9.30964406,3.75 8.75,4.30964406 8.75,5 L8.75,10 C8.75,10.6903559 9.30964406,11.25 10,11.25 L15,11.25 C15.6903559,11.25 16.25,10.6903559 16.25,10 C16.25,9.30964406 15.6903559,8.75 15,8.75 L11.25,8.75 Z M10,19.375 C4.82233047,19.375 0.625,15.1776695 0.625,10 C0.625,4.82233047 4.82233047,0.625 10,0.625 C15.1776695,0.625 19.375,4.82233047 19.375,10 C19.375,15.1776695 15.1776695,19.375 10,19.375 Z',
+        id: 'path-1'
+      })
     )
   );
 }
@@ -62945,7 +63114,13 @@ function Delete(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 2.000000)' },
@@ -62991,7 +63166,13 @@ function DropDown(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(15.000000, 7.000000) rotate(90.000000)' },
@@ -63037,7 +63218,13 @@ function Edit(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 2.000000)' },
@@ -63083,7 +63270,13 @@ function Engage(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 26 26', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 26 26',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(1.000000, 1.000000)' },
@@ -63144,7 +63337,13 @@ function Ellipsis(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(0, 8.000000)' },
@@ -63192,7 +63391,13 @@ function Help(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(1.000000, 1.000000)' },
@@ -63240,7 +63445,13 @@ function Help(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(1.000000, 1.500000)' },
@@ -63287,8 +63498,17 @@ function Logout(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 1 16 16', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
-    _react2.default.createElement('path', { transform: 'translate(0,1)', d: 'M 7.5 0.66601562 C 6.6774686 0.66601562 6 1.3434842 6 2.1660156 L 6 5.1660156 L 7 5.1660156 L 7 2.1660156 C 7 1.884547 7.2185314 1.6660156 7.5 1.6660156 L 14.5 1.6660156 C 14.781469 1.6660156 15 1.884547 15 2.1660156 L 15 14.166016 C 15 14.447484 14.781469 14.666016 14.5 14.666016 L 7.5 14.666016 C 7.2185314 14.666016 7 14.447484 7 14.166016 L 7 11.166016 L 6 11.166016 L 6 14.166016 C 6 14.988547 6.6774686 15.666016 7.5 15.666016 L 14.5 15.666016 C 15.322531 15.666016 16 14.988547 16 14.166016 L 16 2.1660156 C 16 1.3434842 15.322531 0.66601562 14.5 0.66601562 L 7.5 0.66601562 z M 3.1464844 4.8125 L -0.20703125 8.1660156 L 3.1464844 11.519531 L 3.8535156 10.8125 L 1.7070312 8.6660156 L 11.5 8.6660156 L 11.5 7.6660156 L 1.7070312 7.6660156 L 3.8535156 5.5195312 L 3.1464844 4.8125 z ' })
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 1 16 16',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
+    _react2.default.createElement('path', {
+      transform: 'translate(0,1)',
+      d: 'M 7.5 0.66601562 C 6.6774686 0.66601562 6 1.3434842 6 2.1660156 L 6 5.1660156 L 7 5.1660156 L 7 2.1660156 C 7 1.884547 7.2185314 1.6660156 7.5 1.6660156 L 14.5 1.6660156 C 14.781469 1.6660156 15 1.884547 15 2.1660156 L 15 14.166016 C 15 14.447484 14.781469 14.666016 14.5 14.666016 L 7.5 14.666016 C 7.2185314 14.666016 7 14.447484 7 14.166016 L 7 11.166016 L 6 11.166016 L 6 14.166016 C 6 14.988547 6.6774686 15.666016 7.5 15.666016 L 14.5 15.666016 C 15.322531 15.666016 16 14.988547 16 14.166016 L 16 2.1660156 C 16 1.3434842 15.322531 0.66601562 14.5 0.66601562 L 7.5 0.66601562 z M 3.1464844 4.8125 L -0.20703125 8.1660156 L 3.1464844 11.519531 L 3.8535156 10.8125 L 1.7070312 8.6660156 L 11.5 8.6660156 L 11.5 7.6660156 L 1.7070312 7.6660156 L 3.8535156 5.5195312 L 3.1464844 4.8125 z '
+    })
   );
 }
 
@@ -63329,7 +63549,13 @@ function Megaphone(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 23 23', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 23 23',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(1.000000, 1.000000)' },
@@ -63376,7 +63602,13 @@ function Patients(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 26 26', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 26 26',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(1.000000, 1.000000)' },
@@ -63425,7 +63657,13 @@ function Search(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 2.000000)' },
@@ -63471,7 +63709,13 @@ function Settings(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 2.000000)' },
@@ -63517,7 +63761,13 @@ function Sync(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 2.000000)' },
@@ -63563,7 +63813,13 @@ function View(props) {
 
   return _react2.default.createElement(
     'svg',
-    _extends({ className: className }, restProps, { viewBox: '0 0 24 24', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' }),
+    _extends({
+      className: className
+    }, restProps, {
+      viewBox: '0 0 24 24',
+      version: '1.1',
+      xmlns: 'http://www.w3.org/2000/svg'
+    }),
     _react2.default.createElement(
       'g',
       { transform: 'translate(2.000000, 4.000000)' },
@@ -63778,13 +64034,13 @@ var _reactOnclickoutside = __webpack_require__(88);
 
 var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
 
-var _ActionSet = __webpack_require__(570);
-
-var _ActionSet2 = _interopRequireDefault(_ActionSet);
-
 var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
+
+var _ActionSet = __webpack_require__(570);
+
+var _ActionSet2 = _interopRequireDefault(_ActionSet);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63797,10 +64053,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * ActionSet
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ActionSet
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var ActionSet = function (_React$Component) {
   _inherits(ActionSet, _React$Component);
@@ -63858,7 +64114,13 @@ var ActionSet = function (_React$Component) {
           onMouseEnter: this.open,
           onMouseLeave: this.close
         }, rest),
-        expandable && _react2.default.createElement(_Icon2.default, { className: _ActionSet2.default.ellipsis, name: 'Ellipsis', width: 36, height: 36, onClick: this.open }),
+        expandable && _react2.default.createElement(_Icon2.default, {
+          className: _ActionSet2.default.ellipsis,
+          name: 'Ellipsis',
+          width: 36,
+          height: 36,
+          onClick: this.open
+        }),
         _react2.default.createElement(
           'div',
           { className: _ActionSet2.default.actions },
@@ -64725,15 +64987,17 @@ var Button = function (_React$Component) {
 
       var containerClasses = (0, _classnames4.default)(_Button2.default.buttonContainer, (_classnames2 = {}, _defineProperty(_classnames2, _Button2.default.small, small), _defineProperty(_classnames2, _Button2.default.large, large), _classnames2));
 
-      var statusIcon = done ? _react2.default.createElement(
-        'div',
-        { className: _Button2.default.iconCenter },
-        _react2.default.createElement(_Icon2.default, { name: 'Tick' })
-      ) : submitting ? _react2.default.createElement(
+      var submittingIcon = submitting ? _react2.default.createElement(
         'div',
         { className: _Button2.default.iconCenter },
         _react2.default.createElement(_ButtonSpinner2.default, null)
       ) : null;
+
+      var statusIcon = done ? _react2.default.createElement(
+        'div',
+        { className: _Button2.default.iconCenter },
+        _react2.default.createElement(_Icon2.default, { name: 'Tick' })
+      ) : submittingIcon;
 
       return _react2.default.createElement(
         'div',
@@ -64987,10 +65251,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * CheckBox
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * CheckBox
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var CheckBox = function (_React$Component) {
   _inherits(CheckBox, _React$Component);
@@ -65043,19 +65307,19 @@ var CheckBox = function (_React$Component) {
           { className: _CheckBox2.default.label, htmlFor: id, onClick: handleClick },
           _react2.default.createElement(_Icon2.default, {
             className: (0, _classnames4.default)(_CheckBox2.default.checkbox, _CheckBox2.default.empty, _defineProperty({}, _CheckBox2.default.special, special)),
-            name: 'CheckBoxUnchecked' }),
+            name: 'CheckBoxUnchecked'
+          }),
           _react2.default.createElement(_Icon2.default, {
             className: (0, _classnames4.default)(_CheckBox2.default.checkbox, _CheckBox2.default.full, (_classnames2 = {}, _defineProperty(_classnames2, _CheckBox2.default.checked, value), _defineProperty(_classnames2, _CheckBox2.default.special, special), _classnames2)),
-            name: 'CheckBoxChecked' }),
+            name: 'CheckBoxChecked'
+          }),
           _react2.default.createElement(
             'span',
             { className: _CheckBox2.default.text },
             label
           )
         ),
-        warning && _react2.default.createElement(_Icon2.default, {
-          className: _CheckBox2.default.warning,
-          name: 'Alert' })
+        warning && _react2.default.createElement(_Icon2.default, { className: _CheckBox2.default.warning, name: 'Alert' })
       );
     }
   }]);
@@ -65072,7 +65336,9 @@ CheckBox.propTypes = {
   special: _propTypes2.default.bool,
   value: _propTypes2.default.bool,
   warning: _propTypes2.default.bool,
-  onChange: _propTypes2.default.func
+  onChange: _propTypes2.default.func,
+  checked: _propTypes2.default.bool,
+  error: _propTypes2.default.string
 };
 CheckBox.defaultProps = {
   checked: false,
@@ -65213,13 +65479,13 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _InlineSelector = __webpack_require__(586);
-
-var _InlineSelector2 = _interopRequireDefault(_InlineSelector);
-
 var _Label = __webpack_require__(32);
 
 var _Label2 = _interopRequireDefault(_Label);
+
+var _InlineSelector = __webpack_require__(592);
+
+var _InlineSelector2 = _interopRequireDefault(_InlineSelector);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -65232,10 +65498,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * InlineSelector
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * InlineSelector
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var InlineSelector = function (_React$Component) {
   _inherits(InlineSelector, _React$Component);
@@ -65300,7 +65566,8 @@ var InlineSelector = function (_React$Component) {
                 className: (0, _classnames4.default)(_InlineSelector2.default.option, _defineProperty({}, _InlineSelector2.default.selected, option.value === value)),
                 onClick: function onClick() {
                   return _this2.handleClick(option);
-                } },
+                }
+              },
               option.label
             );
           })
@@ -65335,78 +65602,6 @@ exports.default = InlineSelector;
 /* 586 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(587);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./InlineSelector.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./InlineSelector.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 587 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".InlineSelector__outer___1Bw83 {\n  margin-bottom: 12px;\n  user-select: none; }\n\n.InlineSelector__options___1zD9p {\n  display: flex;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  flex: 1;\n  flex-direction: row; }\n\n.InlineSelector__option___2HGi2 {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n  border: 1px solid #E3E8ED;\n  white-space: nowrap;\n  padding: 10px 10px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  color: #2B4B5A;\n  background-color: #FFF;\n  margin-left: -1px;\n  min-width: 44px; }\n  .InlineSelector__option___2HGi2:first-child {\n    border-radius: 4px 0 0 4px; }\n  .InlineSelector__option___2HGi2:last-child {\n    border-radius: 0 4px 4px 0; }\n  .InlineSelector__option___2HGi2:not(.InlineSelector__disabled___2QU3o):hover {\n    border: 1px solid #01A4B7;\n    z-index: 1; }\n  .InlineSelector__option___2HGi2:not(.InlineSelector__disabled___2QU3o).InlineSelector__selected___2T3a7 {\n    background-color: #01A4B7;\n    border: 1px solid #01A4B7;\n    color: #FFF; }\n    .InlineSelector__option___2HGi2:not(.InlineSelector__disabled___2QU3o).InlineSelector__selected___2T3a7:hover {\n      background-color: #018392;\n      border: 1px solid #018392; }\n\n.InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p {\n  flex-direction: column;\n  min-width: auto; }\n  .InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p .InlineSelector__option___2HGi2 {\n    margin-left: 0;\n    margin-top: -1px; }\n    .InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p .InlineSelector__option___2HGi2:first-child {\n      border-radius: 4px 4px 0 0; }\n    .InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p .InlineSelector__option___2HGi2:last-child {\n      border-radius: 0 0 4px 4px; }\n", ""]);
-
-// exports
-exports.locals = {
-	"outer": "InlineSelector__outer___1Bw83",
-	"options": "InlineSelector__options___1zD9p",
-	"option": "InlineSelector__option___2HGi2",
-	"disabled": "InlineSelector__disabled___2QU3o",
-	"selected": "InlineSelector__selected___2T3a7",
-	"vertical": "InlineSelector__vertical___15qw-"
-};
-
-/***/ }),
-/* 588 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -65434,13 +65629,13 @@ var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
-var _Label = __webpack_require__(589);
-
-var _Label2 = _interopRequireDefault(_Label);
-
 var _LoadingStrip = __webpack_require__(49);
 
 var _LoadingStrip2 = _interopRequireDefault(_LoadingStrip);
+
+var _Label = __webpack_require__(590);
+
+var _Label2 = _interopRequireDefault(_Label);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -65453,10 +65648,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * Label
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Label
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var Label = function (_React$Component) {
   _inherits(Label, _React$Component);
@@ -65483,9 +65678,7 @@ var Label = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({
-          className: classes
-        }, restProps),
+        _extends({ className: classes }, restProps),
         error && _react2.default.createElement(_Icon2.default, { className: _Label2.default.icon, name: 'Alert' }),
         children ? _react2.default.createElement(
           'label',
@@ -65503,7 +65696,8 @@ Label.propTypes = {
   className: _propTypes2.default.string,
   error: _propTypes2.default.bool,
   htmlFor: _propTypes2.default.string,
-  children: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array])
+  children: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
+  onChange: _propTypes2.default.func
 };
 Label.defaultProps = {
   error: false,
@@ -65514,77 +65708,7 @@ Label.defaultProps = {
 exports.default = Label;
 
 /***/ }),
-/* 589 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(590);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Label.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Label.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 590 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".Label__label___37hyU {\n  color: #051E2A;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  font-size: 16px;\n  font-weight: 400;\n  margin-bottom: 12px; }\n  .Label__label___37hyU label {\n    cursor: pointer;\n    user-select: none;\n    vertical-align: middle; }\n\n.Label__error___15mTC {\n  color: #DF0E42; }\n\n.Label__icon___3b_DF {\n  float: left;\n  height: 22px;\n  margin-right: 8px;\n  margin-top: 0;\n  pointer-events: none;\n  width: 22px; }\n\n.Label__loading___2FV2n {\n  height: 16px;\n  max-width: 160px; }\n", ""]);
-
-// exports
-exports.locals = {
-	"label": "Label__label___37hyU",
-	"error": "Label__error___15mTC",
-	"icon": "Label__icon___3b_DF",
-	"loading": "Label__loading___2FV2n"
-};
-
-/***/ }),
-/* 591 */
+/* 587 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65608,7 +65732,7 @@ var _classnames2 = __webpack_require__(8);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _LoadingStrip = __webpack_require__(592);
+var _LoadingStrip = __webpack_require__(588);
 
 var _LoadingStrip2 = _interopRequireDefault(_LoadingStrip);
 
@@ -65655,11 +65779,11 @@ LoadingStrip.propTypes = {
 exports.default = LoadingStrip;
 
 /***/ }),
-/* 592 */
+/* 588 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(593);
+var content = __webpack_require__(589);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -65705,7 +65829,7 @@ if(false) {
 }
 
 /***/ }),
-/* 593 */
+/* 589 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -65721,6 +65845,148 @@ exports.locals = {
 	"outer": "LoadingStrip__outer___1H0wA",
 	"inner": "LoadingStrip__inner___z6O4w",
 	"slide": "LoadingStrip__slide___1X2Q6"
+};
+
+/***/ }),
+/* 590 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(591);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Label.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Label.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 591 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".Label__label___37hyU {\n  color: #051E2A;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  font-size: 16px;\n  font-weight: 400;\n  margin-bottom: 12px; }\n  .Label__label___37hyU label {\n    cursor: pointer;\n    user-select: none;\n    vertical-align: middle; }\n\n.Label__error___15mTC {\n  color: #DF0E42; }\n\n.Label__icon___3b_DF {\n  float: left;\n  height: 22px;\n  margin-right: 8px;\n  margin-top: 0;\n  pointer-events: none;\n  width: 22px; }\n\n.Label__loading___2FV2n {\n  height: 16px;\n  max-width: 160px; }\n", ""]);
+
+// exports
+exports.locals = {
+	"label": "Label__label___37hyU",
+	"error": "Label__error___15mTC",
+	"icon": "Label__icon___3b_DF",
+	"loading": "Label__loading___2FV2n"
+};
+
+/***/ }),
+/* 592 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(593);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./InlineSelector.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./InlineSelector.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 593 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".InlineSelector__outer___1Bw83 {\n  margin-bottom: 12px;\n  user-select: none; }\n\n.InlineSelector__options___1zD9p {\n  display: flex;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  flex: 1;\n  flex-direction: row; }\n\n.InlineSelector__option___2HGi2 {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n  border: 1px solid #E3E8ED;\n  white-space: nowrap;\n  padding: 10px 10px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  color: #2B4B5A;\n  background-color: #FFF;\n  margin-left: -1px;\n  min-width: 44px; }\n  .InlineSelector__option___2HGi2:first-child {\n    border-radius: 4px 0 0 4px; }\n  .InlineSelector__option___2HGi2:last-child {\n    border-radius: 0 4px 4px 0; }\n  .InlineSelector__option___2HGi2:not(.InlineSelector__disabled___2QU3o):hover {\n    border: 1px solid #01A4B7;\n    z-index: 1; }\n  .InlineSelector__option___2HGi2:not(.InlineSelector__disabled___2QU3o).InlineSelector__selected___2T3a7 {\n    background-color: #01A4B7;\n    border: 1px solid #01A4B7;\n    color: #FFF; }\n    .InlineSelector__option___2HGi2:not(.InlineSelector__disabled___2QU3o).InlineSelector__selected___2T3a7:hover {\n      background-color: #018392;\n      border: 1px solid #018392; }\n\n.InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p {\n  flex-direction: column;\n  min-width: auto; }\n  .InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p .InlineSelector__option___2HGi2 {\n    margin-left: 0;\n    margin-top: -1px; }\n    .InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p .InlineSelector__option___2HGi2:first-child {\n      border-radius: 4px 4px 0 0; }\n    .InlineSelector__vertical___15qw- .InlineSelector__options___1zD9p .InlineSelector__option___2HGi2:last-child {\n      border-radius: 0 0 4px 4px; }\n", ""]);
+
+// exports
+exports.locals = {
+	"outer": "InlineSelector__outer___1Bw83",
+	"options": "InlineSelector__options___1zD9p",
+	"option": "InlineSelector__option___2HGi2",
+	"disabled": "InlineSelector__disabled___2QU3o",
+	"selected": "InlineSelector__selected___2T3a7",
+	"vertical": "InlineSelector__vertical___15qw-"
 };
 
 /***/ }),
@@ -65825,10 +66091,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * Radio
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Radio
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var Radio = function (_React$Component) {
   _inherits(Radio, _React$Component);
@@ -65848,10 +66114,13 @@ var Radio = function (_React$Component) {
       return options.map(function (option) {
         return _react2.default.createElement(
           'div',
-          { key: option.value, className: (0, _classnames4.default)(_Radio2.default.option, _defineProperty({}, _Radio2.default.selected, value === option.value)),
+          {
+            key: option.value,
+            className: (0, _classnames4.default)(_Radio2.default.option, _defineProperty({}, _Radio2.default.selected, value === option.value)),
             onClick: function onClick() {
               return _this.handleClick(option.value);
-            } },
+            }
+          },
           _react2.default.createElement('input', {
             className: _Radio2.default.input,
             value: option.value,
@@ -65860,9 +66129,16 @@ var Radio = function (_React$Component) {
             checked: value === option.value,
             onChange: function onChange() {
               return null;
-            } }),
-          _react2.default.createElement(_Icon2.default, { className: (0, _classnames4.default)(_Radio2.default.icon, _Radio2.default.empty), name: 'RadioUnchecked' }),
-          _react2.default.createElement(_Icon2.default, { className: (0, _classnames4.default)(_Radio2.default.icon, _Radio2.default.full), name: 'RadioChecked' }),
+            }
+          }),
+          _react2.default.createElement(_Icon2.default, {
+            className: (0, _classnames4.default)(_Radio2.default.icon, _Radio2.default.empty),
+            name: 'RadioUnchecked'
+          }),
+          _react2.default.createElement(_Icon2.default, {
+            className: (0, _classnames4.default)(_Radio2.default.icon, _Radio2.default.full),
+            name: 'RadioChecked'
+          }),
           option.label && _react2.default.createElement(
             'label',
             { className: _Radio2.default.tag },
@@ -66056,17 +66332,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(0);
+var _classnames4 = __webpack_require__(8);
 
-var _react2 = _interopRequireDefault(_react);
+var _classnames5 = _interopRequireDefault(_classnames4);
 
 var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames4 = __webpack_require__(8);
+var _react = __webpack_require__(0);
 
-var _classnames5 = _interopRequireDefault(_classnames4);
+var _react2 = _interopRequireDefault(_react);
 
 var _reactOnclickoutside = __webpack_require__(88);
 
@@ -66095,10 +66371,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * SingleSelect
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * SingleSelect
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var SingleSelect = function (_React$Component) {
   _inherits(SingleSelect, _React$Component);
@@ -66113,8 +66389,8 @@ var SingleSelect = function (_React$Component) {
           options = _this$props.options,
           value = _this$props.value;
 
-      var option = options.find(function (option) {
-        return option.value === value;
+      var option = options.find(function (it) {
+        return it.value === value;
       });
       var firstLabel = options && options[0] && options[0].label || '';
 
@@ -66122,7 +66398,9 @@ var SingleSelect = function (_React$Component) {
     };
 
     _this.toggleExpand = function () {
-      _this.setState({ expanded: _this.props.disabled ? false : !_this.state.expanded });
+      _this.setState({
+        expanded: _this.props.disabled ? false : !_this.state.expanded
+      });
     };
 
     _this.hideExpand = function () {
@@ -66166,9 +66444,14 @@ var SingleSelect = function (_React$Component) {
         }
         return _react2.default.createElement(
           'li',
-          { className: (0, _classnames5.default)(_SingleSelect2.default.option, _defineProperty({}, _SingleSelect2.default.selected, selected)), key: option.value, onClick: function onClick() {
+          {
+            className: (0, _classnames5.default)(_SingleSelect2.default.option, _defineProperty({}, _SingleSelect2.default.selected, selected)),
+            key: option.value,
+            onClick: function onClick() {
               return _this.selectOption(option);
-            }, ref: ref },
+            },
+            ref: ref
+          },
           option.label
         );
       });
@@ -66215,9 +66498,7 @@ var SingleSelect = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({
-          className: classes
-        }, restProps),
+        _extends({ className: classes }, restProps),
         label && _react2.default.createElement(
           _Label2.default,
           { className: _SingleSelect2.default.label, htmlFor: id },
@@ -66228,7 +66509,8 @@ var SingleSelect = function (_React$Component) {
           {
             id: id,
             className: (0, _classnames5.default)(_SingleSelect2.default.select, (_classnames3 = {}, _defineProperty(_classnames3, _SingleSelect2.default.error, error), _defineProperty(_classnames3, _SingleSelect2.default.disabled, disabled), _classnames3)),
-            onClick: this.toggleExpand },
+            onClick: this.toggleExpand
+          },
           _react2.default.createElement(
             'span',
             null,
@@ -66422,9 +66704,11 @@ var _reactMomentProptypes = __webpack_require__(24);
 
 var _reactMomentProptypes2 = _interopRequireDefault(_reactMomentProptypes);
 
-var _SingleDatePicker = __webpack_require__(630);
+var _reactDates = __webpack_require__(630);
 
-var _SingleDatePicker2 = _interopRequireDefault(_SingleDatePicker);
+var _reactMedia = __webpack_require__(686);
+
+var _reactMedia2 = _interopRequireDefault(_reactMedia);
 
 var _Label = __webpack_require__(32);
 
@@ -66434,11 +66718,9 @@ var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
-var _reactDates = __webpack_require__(632);
+var _SingleDatePicker = __webpack_require__(687);
 
-var _reactMedia = __webpack_require__(688);
-
-var _reactMedia2 = _interopRequireDefault(_reactMedia);
+var _SingleDatePicker2 = _interopRequireDefault(_SingleDatePicker);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66451,10 +66733,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * SingleDatePicker
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * SingleDatePicker
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var SingleDatePicker = function (_React$Component) {
   _inherits(SingleDatePicker, _React$Component);
@@ -66592,7 +66874,8 @@ SingleDatePicker.propTypes = {
   onChange: _propTypes2.default.func,
   onFocus: _propTypes2.default.func,
   value: _reactMomentProptypes2.default.momentObj,
-  style: _propTypes2.default.object
+  style: _propTypes2.default.object,
+  placeholder: _propTypes2.default.string
 };
 SingleDatePicker.defaultProps = {
   anchorDirection: 'right',
@@ -68718,87 +69001,12 @@ module.exports = {
 /* 630 */
 /***/ (function(module, exports, __webpack_require__) {
 
+// eslint-disable-next-line import/no-unresolved
+module.exports = __webpack_require__(631);
 
-var content = __webpack_require__(631);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./SingleDatePicker.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./SingleDatePicker.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ }),
 /* 631 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".SingleDatePicker__outer___2RZZx {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  margin-bottom: 12px;\n  position: relative;\n  user-select: none;\n  width: 280px; }\n  @media (max-width: 767px) {\n    .SingleDatePicker__outer___2RZZx {\n      width: 100%; } }\n\n.SingleDatePicker__inline___7kAOS {\n  display: inline-block;\n  margin-right: 36px;\n  vertical-align: top; }\n  @media (max-width: 767px) {\n    .SingleDatePicker__inline___7kAOS {\n      margin-right: 0; } }\n\n.SingleDatePicker__inner___2ifOi {\n  margin-bottom: 12px;\n  position: relative;\n  width: 100%; }\n  .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__picker___3lb8y {\n    border-color: #018392;\n    color: #051E2A; }\n  .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n    color: #018392; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_panel {\n    padding: 0 22px 11px; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_button {\n    position: relative;\n    height: 100%;\n    text-align: center;\n    background: 0 0;\n    border: 2px solid #00a699;\n    color: #00a699;\n    padding: 4px 12px;\n    margin-right: 8px;\n    font: inherit;\n    font-weight: 700;\n    line-height: normal;\n    overflow: visible;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    cursor: pointer; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_button:active {\n    outline: 0; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_button__selected {\n    color: #FFF;\n    background: #00a699; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput {\n    display: inline-block;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__rtl {\n    direction: rtl; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__disabled {\n    background-color: #f2f2f2; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__block {\n    display: block; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__showClearDate {\n    padding-right: 30px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate {\n    background: 0 0;\n    border: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    cursor: pointer;\n    padding: 10px;\n    margin: 0 10px 0 5px;\n    position: absolute;\n    right: 0;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n    -ms-transform: translateY(-50%);\n    transform: translateY(-50%); }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__default:focus,\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__default:hover {\n    background: #dbdbdb;\n    border-radius: 50%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__small {\n    padding: 6px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__hide {\n    visibility: hidden; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate_svg {\n    fill: #82888a;\n    height: 12px;\n    width: 15px;\n    vertical-align: middle; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate_svg__small {\n    height: 9px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_calendarIcon {\n    background: 0 0;\n    border: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    cursor: pointer;\n    display: inline-block;\n    vertical-align: middle;\n    padding: 10px;\n    margin: 0 5px 0 10px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_calendarIcon_svg {\n    fill: #82888a;\n    height: 15px;\n    width: 14px;\n    vertical-align: middle; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker {\n    position: relative;\n    display: inline-block;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker__block {\n    display: block; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker {\n    z-index: 1;\n    background-color: #FFF;\n    position: absolute; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__rtl {\n    direction: rtl; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__directionLeft {\n    left: 0; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__directionRight {\n    right: 0; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__portal {\n    background-color: rgba(0, 0, 0, 0.3);\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__fullScreenPortal {\n    background-color: #FFF; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton {\n    background: 0 0;\n    border: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    cursor: pointer;\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 15px;\n    z-index: 2; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton:focus,\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton:hover {\n    color: #b0b3b4;\n    text-decoration: none; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton_svg {\n    height: 15px;\n    width: 15px;\n    fill: #cacccd; }\n  .SingleDatePicker__inner___2ifOi .DayPickerKeyboardShortcuts_buttonReset {\n    background: 0 0;\n    border: 0;\n    border-radius: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    padding: 0;\n    cursor: pointer;\n    font-size: 14px; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay {\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    cursor: pointer;\n    font-size: 14px;\n    text-align: center; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay:active {\n    outline: 0; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__defaultCursor {\n    cursor: default; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__default {\n    border: none;\n    border-radius: 40px;\n    color: #2B4B5A;\n    outline: none;\n    transition: all 0.2s; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__default:hover {\n    background: #01A4B7;\n    color: #FFF; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__hovered_offset {\n    background: #f4f5f5;\n    color: inherit; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__outside {\n    border: 0;\n    background: #FFF;\n    color: #565a5c; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__selected {\n    background: #D5F0F3;\n    color: #2B4B5A; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__selected:active,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__selected:hover {\n    background: #01A4B7;\n    color: #FFF; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_calendar,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_calendar:active,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_calendar:hover {\n    background: #F5F7F8;\n    color: #2B4B5A; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_out_of_range,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_out_of_range:active,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_out_of_range:hover {\n    background: none;\n    color: #E3E8ED;\n    cursor: not-allowed; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth {\n    text-align: center;\n    padding: 0 13px;\n    vertical-align: top;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_table {\n    border-collapse: collapse;\n    border-spacing: 0; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_verticalSpacing {\n    border-collapse: separate; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_caption {\n    color: #051E2A;\n    font-size: 18px;\n    text-align: center;\n    padding-top: 22px;\n    padding-bottom: 37px;\n    opacity: 1;\n    caption-side: initial; }\n    .SingleDatePicker__inner___2ifOi .CalendarMonth_caption strong {\n      font-weight: 600; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_caption__verticalScrollable {\n    padding-top: 12px;\n    padding-bottom: 7px; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid {\n    background: #FFF;\n    text-align: left;\n    z-index: 0; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__animating {\n    z-index: 1; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__horizontal {\n    position: absolute;\n    left: 9px; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__vertical {\n    margin: 0 auto; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__vertical_scrollable {\n    margin: 0 auto;\n    overflow-y: scroll; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid_month__horizontal {\n    display: inline-block;\n    vertical-align: top;\n    min-height: 100%; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid_month__hideForAnimation {\n    position: absolute;\n    z-index: -1;\n    opacity: 0;\n    pointer-events: none; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid_month__hidden {\n    visibility: hidden; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_container {\n    position: relative;\n    z-index: 2; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_container__vertical {\n    background: #FFF;\n    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    height: 52px;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_container__verticalScrollable {\n    position: relative; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button {\n    cursor: pointer;\n    line-height: .78;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default {\n    border: 1px solid #051E2A;\n    background-color: #FFF;\n    color: #051E2A;\n    outline: none; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default:focus,\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default:hover {\n    filter: brightness(0.92); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default:active {\n    filter: brightness(0.84); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal {\n    background: #FFF;\n    border: 1px solid #051E2A;\n    border-radius: 24px;\n    color: #051E2A;\n    height: 24px;\n    outline: none;\n    padding: 0;\n    position: absolute;\n    top: 18px;\n    width: 24px; }\n    .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal svg {\n      height: 22px;\n      width: 22px; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal:focus,\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal:hover {\n    background: #01A4B7;\n    border: none;\n    color: #FFF;\n    filter: brightness(0.92); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal:active {\n    background: #01A4B7;\n    border: none;\n    color: #FFF;\n    filter: brightness(0.84); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_leftButton__horizontal {\n    left: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_rightButton__horizontal {\n    right: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__vertical {\n    display: inline-block;\n    position: relative;\n    height: 100%;\n    width: 50%; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__vertical__default {\n    padding: 5px; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_nextButton__vertical__default {\n    border-left: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_nextButton__verticalScrollable {\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_svg__horizontal {\n    height: 19px;\n    width: 19px;\n    fill: #82888a; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_svg__vertical {\n    height: 42px;\n    width: 42px;\n    fill: #565a5c; }\n  .SingleDatePicker__inner___2ifOi .DayPicker {\n    background: #FFF;\n    position: relative;\n    text-align: left; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__horizontal {\n    background: #FFF; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__verticalScrollable {\n    height: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__hidden {\n    visibility: hidden; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__withBorder {\n    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);\n    border-radius: 4px;\n    margin-top: -14px;\n    padding: 16px 24px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_portal__horizontal {\n    box-shadow: none;\n    position: absolute;\n    left: 50%;\n    top: 50%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_portal__vertical {\n    position: initial; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_focusRegion {\n    outline: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_calendarInfo__horizontal,\n  .SingleDatePicker__inner___2ifOi .DayPicker_wrapper__horizontal {\n    display: inline-block;\n    vertical-align: top; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeaders {\n    position: relative; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeaders__horizontal {\n    margin-left: 9px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader {\n    color: #051E2A;\n    position: absolute;\n    top: 62px;\n    z-index: 2;\n    padding: 0 13px;\n    text-align: left; }\n    .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader small {\n      font-size: 14px;\n      font-weight: 600; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader__vertical {\n    left: 50%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader__verticalScrollable {\n    top: 0;\n    display: table-row;\n    border-bottom: 1px solid #dbdbdb;\n    background: #FFF;\n    margin-left: 0;\n    left: 0;\n    width: 100%;\n    text-align: center; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader_ul {\n    list-style: none;\n    margin: 1px 0;\n    padding-left: 0;\n    padding-right: 0;\n    font-size: 14px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader_li {\n    display: inline-block;\n    text-align: center; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer {\n    position: relative;\n    overflow: hidden;\n    border-radius: 3px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer__horizontal {\n    -webkit-transition: height .2s ease-in-out;\n    -moz-transition: height .2s ease-in-out;\n    transition: height .2s ease-in-out; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer__vertical {\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer__verticalScrollable {\n    padding-top: 20px;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    left: 0;\n    overflow-y: scroll; }\n  .SingleDatePicker__inner___2ifOi .DayPickerKeyboardShortcuts_show {\n    display: none; }\n  .SingleDatePicker__inner___2ifOi .DateInput {\n    margin: 0;\n    padding: 0;\n    background: #FFF;\n    position: relative;\n    display: inline-block;\n    width: 100%;\n    vertical-align: middle; }\n  .SingleDatePicker__inner___2ifOi .DateInput__small {\n    width: 90px; }\n  .SingleDatePicker__inner___2ifOi .DateInput__block {\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DateInput__disabled {\n    background: #f2f2f2;\n    color: #dbdbdb; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input {\n    background-color: #FFF;\n    border: solid 1px #E3E8ED;\n    border-radius: 4px;\n    box-sizing: border-box;\n    color: #2B4B5A;\n    cursor: pointer;\n    font-size: 16px;\n    font-weight: 400;\n    outline: none;\n    padding: 12px;\n    padding-right: 42px;\n    position: relative;\n    width: 100%;\n    transition: all 0.2s; }\n    .SingleDatePicker__inner___2ifOi .DateInput_input:hover {\n      border-color: #01A4B7; }\n      .SingleDatePicker__inner___2ifOi .DateInput_input:hover::placeholder {\n        color: #051E2A; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__small {\n    font-size: 14px;\n    line-height: 18px;\n    padding: 8px 8px 6px; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__regular {\n    font-weight: auto; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__readOnly {\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__focused {\n    border-color: #E3E8ED; }\n    .SingleDatePicker__inner___2ifOi .DateInput_input__focused:hover {\n      border-color: #E3E8ED; }\n      .SingleDatePicker__inner___2ifOi .DateInput_input__focused:hover::placeholder {\n        color: #2B4B5A; }\n  .SingleDatePicker__inner___2ifOi .DateInput_screenReaderMessage {\n    border: 0;\n    clip: rect(0, 0, 0, 0);\n    height: 1px;\n    margin: -1px;\n    overflow: hidden;\n    padding: 0;\n    position: absolute;\n    width: 1px; }\n  .SingleDatePicker__inner___2ifOi .DateInput_fang {\n    position: absolute;\n    margin-top: -13px;\n    width: 20px;\n    height: 10px;\n    left: 50%;\n    z-index: 2; }\n    @media (max-width: 767px) {\n      .SingleDatePicker__inner___2ifOi .DateInput_fang {\n        left: unset;\n        right: 132px; } }\n  .SingleDatePicker__inner___2ifOi .DateInput_fangShape {\n    fill: #FFF; }\n  .SingleDatePicker__inner___2ifOi .DateInput_fangStroke {\n    stroke: #E3E8ED;\n    fill: transparent; }\n\n.SingleDatePicker__icon___2frN4 {\n  color: #2B4B5A;\n  fill: currentColor;\n  pointer-events: none;\n  position: absolute;\n  right: 6px;\n  top: 6px;\n  transition: all 0.2s; }\n\n.SingleDatePicker__focused___13KvX .SingleDatePicker__inner___2ifOi .SingleDatePicker__icon___2frN4, .SingleDatePicker__focused___13KvX .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n  color: #01A4B7; }\n\n.SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi .DateInput_input, .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi:hover .DateInput_input {\n  background-color: #F5F7F8;\n  border-color: #E3E8ED;\n  cursor: not-allowed;\n  color: #57707C; }\n  .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi .DateInput_input::placeholder, .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi:hover .DateInput_input::placeholder {\n    color: #57707C; }\n\n.SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi .SingleDatePicker__icon___2frN4, .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n  color: #57707C; }\n\n.SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input {\n  background-color: #FBE6EC;\n  border-color: #DF0E42;\n  color: #DF0E42; }\n  .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input::placeholder, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input::placeholder {\n    color: #DF0E42; }\n  .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input:hover, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input:focus, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input:hover, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input:focus {\n    border-color: #DF0E42; }\n\n.SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .SingleDatePicker__icon___2frN4, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n  color: #DF0E42; }\n\n.SingleDatePicker__errorMessage___3gd-z {\n  margin-top: 12px;\n  margin-bottom: 0; }\n", ""]);
-
-// exports
-exports.locals = {
-	"outer": "SingleDatePicker__outer___2RZZx",
-	"inline": "SingleDatePicker__inline___7kAOS",
-	"inner": "SingleDatePicker__inner___2ifOi",
-	"picker": "SingleDatePicker__picker___3lb8y",
-	"icon": "SingleDatePicker__icon___2frN4",
-	"focused": "SingleDatePicker__focused___13KvX",
-	"disabled": "SingleDatePicker__disabled___3iEqZ",
-	"error": "SingleDatePicker__error___1t-Fk",
-	"errorMessage": "SingleDatePicker__errorMessage___3gd-z"
-};
-
-/***/ }),
-/* 632 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// eslint-disable-next-line import/no-unresolved
-module.exports = __webpack_require__(633);
-
-
-/***/ }),
-/* 633 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -68844,7 +69052,7 @@ Object.defineProperty(exports, 'CalendarMonthGrid', {
   }()
 });
 
-var _DateRangePicker = __webpack_require__(659);
+var _DateRangePicker = __webpack_require__(657);
 
 Object.defineProperty(exports, 'DateRangePicker', {
   enumerable: true,
@@ -68948,7 +69156,7 @@ Object.defineProperty(exports, 'OutsideClickHandler', {
   }()
 });
 
-var _SingleDatePicker = __webpack_require__(686);
+var _SingleDatePicker = __webpack_require__(684);
 
 Object.defineProperty(exports, 'SingleDatePicker', {
   enumerable: true,
@@ -69000,7 +69208,7 @@ Object.defineProperty(exports, 'isInclusivelyAfterDay', {
   }()
 });
 
-var _isInclusivelyBeforeDay = __webpack_require__(687);
+var _isInclusivelyBeforeDay = __webpack_require__(685);
 
 Object.defineProperty(exports, 'isInclusivelyBeforeDay', {
   enumerable: true,
@@ -69081,7 +69289,7 @@ Object.defineProperty(exports, 'toMomentObject', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 /***/ }),
-/* 634 */
+/* 632 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69130,7 +69338,7 @@ module.exports = function hasSymbols() {
 
 
 /***/ }),
-/* 635 */
+/* 633 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69151,7 +69359,7 @@ module.exports = function shimAssign() {
 
 
 /***/ }),
-/* 636 */
+/* 634 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69166,7 +69374,7 @@ module.exports = function shimAssign() {
 
 var emptyFunction = __webpack_require__(18);
 var invariant = __webpack_require__(20);
-var ReactPropTypesSecret = __webpack_require__(637);
+var ReactPropTypesSecret = __webpack_require__(635);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -69216,7 +69424,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 637 */
+/* 635 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69235,7 +69443,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 638 */
+/* 636 */
 /***/ (function(module, exports) {
 
 function noop() {
@@ -69282,7 +69490,7 @@ module.exports = {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 639 */
+/* 637 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -69311,12 +69519,12 @@ if (false) {
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(640)();
+  module.exports = __webpack_require__(638)();
 }
 
 
 /***/ }),
-/* 640 */
+/* 638 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69331,7 +69539,7 @@ if (false) {
 
 var emptyFunction = __webpack_require__(18);
 var invariant = __webpack_require__(20);
-var ReactPropTypesSecret = __webpack_require__(641);
+var ReactPropTypesSecret = __webpack_require__(639);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -69381,7 +69589,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 641 */
+/* 639 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69400,7 +69608,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 642 */
+/* 640 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69504,7 +69712,7 @@ module.exports = deepmerge_1;
 
 
 /***/ }),
-/* 643 */
+/* 641 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -69518,14 +69726,14 @@ var DIRECTIONS = exports.DIRECTIONS = {
 };
 
 /***/ }),
-/* 644 */
+/* 642 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _propTypes = __webpack_require__(645);
+var _propTypes = __webpack_require__(643);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -69538,7 +69746,7 @@ exports['default'] = _propTypes2['default'].shape({
 });
 
 /***/ }),
-/* 645 */
+/* 643 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -69567,12 +69775,12 @@ if (false) {
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(646)();
+  module.exports = __webpack_require__(644)();
 }
 
 
 /***/ }),
-/* 646 */
+/* 644 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69587,7 +69795,7 @@ if (false) {
 
 var emptyFunction = __webpack_require__(18);
 var invariant = __webpack_require__(20);
-var ReactPropTypesSecret = __webpack_require__(647);
+var ReactPropTypesSecret = __webpack_require__(645);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -69637,7 +69845,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 647 */
+/* 645 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69656,7 +69864,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 648 */
+/* 646 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -69674,7 +69882,7 @@ function getPhrase(phrase, args) {
 }
 
 /***/ }),
-/* 649 */
+/* 647 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -69692,7 +69900,7 @@ var _CalendarDay = __webpack_require__(117);
 
 var _CalendarDay2 = _interopRequireDefault(_CalendarDay);
 
-var _CustomizableCalendarDay = __webpack_require__(650);
+var _CustomizableCalendarDay = __webpack_require__(648);
 
 var _CustomizableCalendarDay2 = _interopRequireDefault(_CustomizableCalendarDay);
 
@@ -69715,7 +69923,7 @@ function CalendarWeek(_ref) {
 CalendarWeek.propTypes = propTypes;
 
 /***/ }),
-/* 650 */
+/* 648 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70222,7 +70430,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref2) {
 })(CustomizableCalendarDay);
 
 /***/ }),
-/* 651 */
+/* 649 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70283,7 +70491,7 @@ function getCalendarMonthWeeks(month, enableOutsideDays) {
 }
 
 /***/ }),
-/* 652 */
+/* 650 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70291,7 +70499,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports['default'] = normalizeEventOptions;
 
-var _canUsePassiveEventListeners = __webpack_require__(653);
+var _canUsePassiveEventListeners = __webpack_require__(651);
 
 var _canUsePassiveEventListeners2 = _interopRequireDefault(_canUsePassiveEventListeners);
 
@@ -70314,7 +70522,7 @@ function normalizeEventOptions(eventOptions) {
 }
 
 /***/ }),
-/* 653 */
+/* 651 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70322,7 +70530,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports['default'] = canUsePassiveEventListeners;
 
-var _canUseDOM = __webpack_require__(654);
+var _canUseDOM = __webpack_require__(652);
 
 var _canUseDOM2 = _interopRequireDefault(_canUseDOM);
 
@@ -70368,7 +70576,7 @@ function canUsePassiveEventListeners() {
 }
 
 /***/ }),
-/* 654 */
+/* 652 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70379,7 +70587,7 @@ var CAN_USE_DOM = !!(typeof window !== 'undefined' && window.document && window.
 exports['default'] = CAN_USE_DOM;
 
 /***/ }),
-/* 655 */
+/* 653 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70388,7 +70596,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _eventOptionsKey = __webpack_require__(656);
+var _eventOptionsKey = __webpack_require__(654);
 
 var _eventOptionsKey2 = _interopRequireDefault(_eventOptionsKey);
 
@@ -70513,7 +70721,7 @@ var TargetEventHandlers = function () {
 exports['default'] = TargetEventHandlers;
 
 /***/ }),
-/* 656 */
+/* 654 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70551,7 +70759,7 @@ function eventOptionsKey(normalizedEventOptions) {
 }
 
 /***/ }),
-/* 657 */
+/* 655 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70563,7 +70771,7 @@ function isTransitionEndSupported() {
 }
 
 /***/ }),
-/* 658 */
+/* 656 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -70580,7 +70788,7 @@ function getTransformStyles(transformValue) {
 }
 
 /***/ }),
-/* 659 */
+/* 657 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -71399,7 +71607,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref) {
 })(DateRangePicker);
 
 /***/ }),
-/* 660 */
+/* 658 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71409,7 +71617,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(661);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(659);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71465,7 +71673,7 @@ Portal.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Portal);
 
 /***/ }),
-/* 661 */
+/* 659 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71473,7 +71681,7 @@ Portal.propTypes = {
 var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 /***/ }),
-/* 662 */
+/* 660 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71562,7 +71770,7 @@ Portal.propTypes = {
 };
 
 /***/ }),
-/* 663 */
+/* 661 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71717,12 +71925,12 @@ PortalWithState.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (PortalWithState);
 
 /***/ }),
-/* 664 */
+/* 662 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(119),
-    now = __webpack_require__(665),
-    toNumber = __webpack_require__(667);
+    now = __webpack_require__(663),
+    toNumber = __webpack_require__(665);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -71913,7 +72121,7 @@ module.exports = debounce;
 
 
 /***/ }),
-/* 665 */
+/* 663 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(357);
@@ -71942,7 +72150,7 @@ module.exports = now;
 
 
 /***/ }),
-/* 666 */
+/* 664 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -71953,11 +72161,11 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(31)))
 
 /***/ }),
-/* 667 */
+/* 665 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(119),
-    isSymbol = __webpack_require__(668);
+    isSymbol = __webpack_require__(666);
 
 /** Used as references for various `Number` constants. */
 var NAN = 0 / 0;
@@ -72025,11 +72233,11 @@ module.exports = toNumber;
 
 
 /***/ }),
-/* 668 */
+/* 666 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(669),
-    isObjectLike = __webpack_require__(672);
+var baseGetTag = __webpack_require__(667),
+    isObjectLike = __webpack_require__(670);
 
 /** `Object#toString` result references. */
 var symbolTag = '[object Symbol]';
@@ -72060,12 +72268,12 @@ module.exports = isSymbol;
 
 
 /***/ }),
-/* 669 */
+/* 667 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(358),
-    getRawTag = __webpack_require__(670),
-    objectToString = __webpack_require__(671);
+    getRawTag = __webpack_require__(668),
+    objectToString = __webpack_require__(669);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -72094,7 +72302,7 @@ module.exports = baseGetTag;
 
 
 /***/ }),
-/* 670 */
+/* 668 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(358);
@@ -72146,7 +72354,7 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 671 */
+/* 669 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -72174,7 +72382,7 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 672 */
+/* 670 */
 /***/ (function(module, exports) {
 
 /**
@@ -72209,23 +72417,23 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 673 */
+/* 671 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(674);
+module.exports = __webpack_require__(672);
 
 
 /***/ }),
-/* 674 */
+/* 672 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var ES2015 = __webpack_require__(675);
+var ES2015 = __webpack_require__(673);
 var assign = __webpack_require__(367);
 
 var ES2016 = assign(assign({}, ES2015), {
@@ -72242,7 +72450,7 @@ module.exports = ES2016;
 
 
 /***/ }),
-/* 675 */
+/* 673 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72261,7 +72469,7 @@ var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
 var assign = __webpack_require__(367);
 var sign = __webpack_require__(368);
 var mod = __webpack_require__(369);
-var isPrimitive = __webpack_require__(676);
+var isPrimitive = __webpack_require__(674);
 var parseInteger = parseInt;
 var bind = __webpack_require__(51);
 var arraySlice = bind.call(Function.call, Array.prototype.slice);
@@ -72288,7 +72496,7 @@ var trim = function (value) {
 	return replace(value, trimRegex, '');
 };
 
-var ES5 = __webpack_require__(677);
+var ES5 = __webpack_require__(675);
 
 var hasRegExpMatcher = __webpack_require__(209);
 
@@ -72814,7 +73022,7 @@ module.exports = ES6;
 
 
 /***/ }),
-/* 676 */
+/* 674 */
 /***/ (function(module, exports) {
 
 module.exports = function isPrimitive(value) {
@@ -72823,7 +73031,7 @@ module.exports = function isPrimitive(value) {
 
 
 /***/ }),
-/* 677 */
+/* 675 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73066,7 +73274,7 @@ module.exports = ES5;
 
 
 /***/ }),
-/* 678 */
+/* 676 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73087,7 +73295,7 @@ module.exports = function shimValues() {
 
 
 /***/ }),
-/* 679 */
+/* 677 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -73106,7 +73314,7 @@ function getSelectedDateOffset(fn, day) {
 }
 
 /***/ }),
-/* 680 */
+/* 678 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -73145,11 +73353,11 @@ var _RightArrow = __webpack_require__(359);
 
 var _RightArrow2 = _interopRequireDefault(_RightArrow);
 
-var _ChevronUp = __webpack_require__(681);
+var _ChevronUp = __webpack_require__(679);
 
 var _ChevronUp2 = _interopRequireDefault(_ChevronUp);
 
-var _ChevronDown = __webpack_require__(682);
+var _ChevronDown = __webpack_require__(680);
 
 var _ChevronDown2 = _interopRequireDefault(_ChevronDown);
 
@@ -73375,7 +73583,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref2) {
 })(DayPickerNavigation);
 
 /***/ }),
-/* 681 */
+/* 679 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -73408,7 +73616,7 @@ ChevronUp.defaultProps = {
 exports['default'] = ChevronUp;
 
 /***/ }),
-/* 682 */
+/* 680 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -73441,7 +73649,7 @@ ChevronDown.defaultProps = {
 exports['default'] = ChevronDown;
 
 /***/ }),
-/* 683 */
+/* 681 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -73475,7 +73683,7 @@ var _getPhrasePropTypes = __webpack_require__(14);
 
 var _getPhrasePropTypes2 = _interopRequireDefault(_getPhrasePropTypes);
 
-var _KeyboardShortcutRow = __webpack_require__(684);
+var _KeyboardShortcutRow = __webpack_require__(682);
 
 var _KeyboardShortcutRow2 = _interopRequireDefault(_KeyboardShortcutRow);
 
@@ -73943,7 +74151,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref3) {
 })(DayPickerKeyboardShortcuts);
 
 /***/ }),
-/* 684 */
+/* 682 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -74055,7 +74263,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref2) {
 })(KeyboardShortcutRow);
 
 /***/ }),
-/* 685 */
+/* 683 */
 /***/ (function(module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -74067,7 +74275,7 @@ function getActiveElement() {
 }
 
 /***/ }),
-/* 686 */
+/* 684 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -74918,7 +75126,7 @@ exports['default'] = (0, _reactWithStyles.withStyles)(function (_ref) {
 })(SingleDatePicker);
 
 /***/ }),
-/* 687 */
+/* 685 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -74942,7 +75150,7 @@ function isInclusivelyBeforeDay(a, b) {
 }
 
 /***/ }),
-/* 688 */
+/* 686 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -76098,6 +76306,81 @@ Media.defaultProps = {
 
 
 /***/ }),
+/* 687 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(688);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./SingleDatePicker.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./SingleDatePicker.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 688 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".SingleDatePicker__outer___2RZZx {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  margin-bottom: 12px;\n  position: relative;\n  user-select: none;\n  width: 280px; }\n  @media (max-width: 767px) {\n    .SingleDatePicker__outer___2RZZx {\n      width: 100%; } }\n\n.SingleDatePicker__inline___7kAOS {\n  display: inline-block;\n  margin-right: 36px;\n  vertical-align: top; }\n  @media (max-width: 767px) {\n    .SingleDatePicker__inline___7kAOS {\n      margin-right: 0; } }\n\n.SingleDatePicker__inner___2ifOi {\n  margin-bottom: 12px;\n  position: relative;\n  width: 100%; }\n  .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__picker___3lb8y {\n    border-color: #018392;\n    color: #051E2A; }\n  .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n    color: #018392; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_panel {\n    padding: 0 22px 11px; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_button {\n    position: relative;\n    height: 100%;\n    text-align: center;\n    background: 0 0;\n    border: 2px solid #00a699;\n    color: #00a699;\n    padding: 4px 12px;\n    margin-right: 8px;\n    font: inherit;\n    font-weight: 700;\n    line-height: normal;\n    overflow: visible;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    cursor: pointer; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_button:active {\n    outline: 0; }\n  .SingleDatePicker__inner___2ifOi .PresetDateRangePicker_button__selected {\n    color: #FFF;\n    background: #00a699; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput {\n    display: inline-block;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__rtl {\n    direction: rtl; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__disabled {\n    background-color: #f2f2f2; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__block {\n    display: block; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput__showClearDate {\n    padding-right: 30px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate {\n    background: 0 0;\n    border: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    cursor: pointer;\n    padding: 10px;\n    margin: 0 10px 0 5px;\n    position: absolute;\n    right: 0;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n    -ms-transform: translateY(-50%);\n    transform: translateY(-50%); }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__default:focus,\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__default:hover {\n    background: #dbdbdb;\n    border-radius: 50%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__small {\n    padding: 6px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate__hide {\n    visibility: hidden; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate_svg {\n    fill: #82888a;\n    height: 12px;\n    width: 15px;\n    vertical-align: middle; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_clearDate_svg__small {\n    height: 9px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_calendarIcon {\n    background: 0 0;\n    border: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    cursor: pointer;\n    display: inline-block;\n    vertical-align: middle;\n    padding: 10px;\n    margin: 0 5px 0 10px; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePickerInput_calendarIcon_svg {\n    fill: #82888a;\n    height: 15px;\n    width: 14px;\n    vertical-align: middle; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker {\n    position: relative;\n    display: inline-block;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker__block {\n    display: block; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker {\n    z-index: 1;\n    background-color: #FFF;\n    position: absolute; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__rtl {\n    direction: rtl; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__directionLeft {\n    left: 0; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__directionRight {\n    right: 0; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__portal {\n    background-color: rgba(0, 0, 0, 0.3);\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_picker__fullScreenPortal {\n    background-color: #FFF; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton {\n    background: 0 0;\n    border: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    cursor: pointer;\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 15px;\n    z-index: 2; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton:focus,\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton:hover {\n    color: #b0b3b4;\n    text-decoration: none; }\n  .SingleDatePicker__inner___2ifOi .SingleDatePicker_closeButton_svg {\n    height: 15px;\n    width: 15px;\n    fill: #cacccd; }\n  .SingleDatePicker__inner___2ifOi .DayPickerKeyboardShortcuts_buttonReset {\n    background: 0 0;\n    border: 0;\n    border-radius: 0;\n    color: inherit;\n    font: inherit;\n    line-height: normal;\n    overflow: visible;\n    padding: 0;\n    cursor: pointer;\n    font-size: 14px; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay {\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    cursor: pointer;\n    font-size: 14px;\n    text-align: center; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay:active {\n    outline: 0; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__defaultCursor {\n    cursor: default; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__default {\n    border: none;\n    border-radius: 40px;\n    color: #2B4B5A;\n    outline: none;\n    transition: all 0.2s; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__default:hover {\n    background: #01A4B7;\n    color: #FFF; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__hovered_offset {\n    background: #f4f5f5;\n    color: inherit; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__outside {\n    border: 0;\n    background: #FFF;\n    color: #565a5c; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__selected {\n    background: #D5F0F3;\n    color: #2B4B5A; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__selected:active,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__selected:hover {\n    background: #01A4B7;\n    color: #FFF; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_calendar,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_calendar:active,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_calendar:hover {\n    background: #F5F7F8;\n    color: #2B4B5A; }\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_out_of_range,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_out_of_range:active,\n  .SingleDatePicker__inner___2ifOi .CalendarDay__blocked_out_of_range:hover {\n    background: none;\n    color: #E3E8ED;\n    cursor: not-allowed; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth {\n    text-align: center;\n    padding: 0 13px;\n    vertical-align: top;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_table {\n    border-collapse: collapse;\n    border-spacing: 0; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_verticalSpacing {\n    border-collapse: separate; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_caption {\n    color: #051E2A;\n    font-size: 18px;\n    text-align: center;\n    padding-top: 22px;\n    padding-bottom: 37px;\n    opacity: 1;\n    caption-side: initial; }\n    .SingleDatePicker__inner___2ifOi .CalendarMonth_caption strong {\n      font-weight: 600; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonth_caption__verticalScrollable {\n    padding-top: 12px;\n    padding-bottom: 7px; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid {\n    background: #FFF;\n    text-align: left;\n    z-index: 0; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__animating {\n    z-index: 1; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__horizontal {\n    position: absolute;\n    left: 9px; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__vertical {\n    margin: 0 auto; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid__vertical_scrollable {\n    margin: 0 auto;\n    overflow-y: scroll; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid_month__horizontal {\n    display: inline-block;\n    vertical-align: top;\n    min-height: 100%; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid_month__hideForAnimation {\n    position: absolute;\n    z-index: -1;\n    opacity: 0;\n    pointer-events: none; }\n  .SingleDatePicker__inner___2ifOi .CalendarMonthGrid_month__hidden {\n    visibility: hidden; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_container {\n    position: relative;\n    z-index: 2; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_container__vertical {\n    background: #FFF;\n    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    height: 52px;\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_container__verticalScrollable {\n    position: relative; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button {\n    cursor: pointer;\n    line-height: .78;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default {\n    border: 1px solid #051E2A;\n    background-color: #FFF;\n    color: #051E2A;\n    outline: none; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default:focus,\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default:hover {\n    filter: brightness(0.92); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__default:active {\n    filter: brightness(0.84); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal {\n    background: #FFF;\n    border: 1px solid #051E2A;\n    border-radius: 24px;\n    color: #051E2A;\n    height: 24px;\n    outline: none;\n    padding: 0;\n    position: absolute;\n    top: 18px;\n    width: 24px; }\n    .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal svg {\n      height: 22px;\n      width: 22px; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal:focus,\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal:hover {\n    background: #01A4B7;\n    border: none;\n    color: #FFF;\n    filter: brightness(0.92); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__horizontal:active {\n    background: #01A4B7;\n    border: none;\n    color: #FFF;\n    filter: brightness(0.84); }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_leftButton__horizontal {\n    left: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_rightButton__horizontal {\n    right: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__vertical {\n    display: inline-block;\n    position: relative;\n    height: 100%;\n    width: 50%; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_button__vertical__default {\n    padding: 5px; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_nextButton__vertical__default {\n    border-left: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_nextButton__verticalScrollable {\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_svg__horizontal {\n    height: 19px;\n    width: 19px;\n    fill: #82888a; }\n  .SingleDatePicker__inner___2ifOi .DayPickerNavigation_svg__vertical {\n    height: 42px;\n    width: 42px;\n    fill: #565a5c; }\n  .SingleDatePicker__inner___2ifOi .DayPicker {\n    background: #FFF;\n    position: relative;\n    text-align: left; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__horizontal {\n    background: #FFF; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__verticalScrollable {\n    height: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__hidden {\n    visibility: hidden; }\n  .SingleDatePicker__inner___2ifOi .DayPicker__withBorder {\n    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);\n    border-radius: 4px;\n    margin-top: -14px;\n    padding: 16px 24px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_portal__horizontal {\n    box-shadow: none;\n    position: absolute;\n    left: 50%;\n    top: 50%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_portal__vertical {\n    position: initial; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_focusRegion {\n    outline: 0; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_calendarInfo__horizontal,\n  .SingleDatePicker__inner___2ifOi .DayPicker_wrapper__horizontal {\n    display: inline-block;\n    vertical-align: top; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeaders {\n    position: relative; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeaders__horizontal {\n    margin-left: 9px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader {\n    color: #051E2A;\n    position: absolute;\n    top: 62px;\n    z-index: 2;\n    padding: 0 13px;\n    text-align: left; }\n    .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader small {\n      font-size: 14px;\n      font-weight: 600; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader__vertical {\n    left: 50%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader__verticalScrollable {\n    top: 0;\n    display: table-row;\n    border-bottom: 1px solid #dbdbdb;\n    background: #FFF;\n    margin-left: 0;\n    left: 0;\n    width: 100%;\n    text-align: center; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader_ul {\n    list-style: none;\n    margin: 1px 0;\n    padding-left: 0;\n    padding-right: 0;\n    font-size: 14px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_weekHeader_li {\n    display: inline-block;\n    text-align: center; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer {\n    position: relative;\n    overflow: hidden;\n    border-radius: 3px; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer__horizontal {\n    -webkit-transition: height .2s ease-in-out;\n    -moz-transition: height .2s ease-in-out;\n    transition: height .2s ease-in-out; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer__vertical {\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DayPicker_transitionContainer__verticalScrollable {\n    padding-top: 20px;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    left: 0;\n    overflow-y: scroll; }\n  .SingleDatePicker__inner___2ifOi .DayPickerKeyboardShortcuts_show {\n    display: none; }\n  .SingleDatePicker__inner___2ifOi .DateInput {\n    margin: 0;\n    padding: 0;\n    background: #FFF;\n    position: relative;\n    display: inline-block;\n    width: 100%;\n    vertical-align: middle; }\n  .SingleDatePicker__inner___2ifOi .DateInput__small {\n    width: 90px; }\n  .SingleDatePicker__inner___2ifOi .DateInput__block {\n    width: 100%; }\n  .SingleDatePicker__inner___2ifOi .DateInput__disabled {\n    background: #f2f2f2;\n    color: #dbdbdb; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input {\n    background-color: #FFF;\n    border: solid 1px #E3E8ED;\n    border-radius: 4px;\n    box-sizing: border-box;\n    color: #2B4B5A;\n    cursor: pointer;\n    font-size: 16px;\n    font-weight: 400;\n    outline: none;\n    padding: 12px;\n    padding-right: 42px;\n    position: relative;\n    width: 100%;\n    transition: all 0.2s; }\n    .SingleDatePicker__inner___2ifOi .DateInput_input:hover {\n      border-color: #01A4B7; }\n      .SingleDatePicker__inner___2ifOi .DateInput_input:hover::placeholder {\n        color: #051E2A; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__small {\n    font-size: 14px;\n    line-height: 18px;\n    padding: 8px 8px 6px; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__regular {\n    font-weight: auto; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__readOnly {\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n  .SingleDatePicker__inner___2ifOi .DateInput_input__focused {\n    border-color: #E3E8ED; }\n    .SingleDatePicker__inner___2ifOi .DateInput_input__focused:hover {\n      border-color: #E3E8ED; }\n      .SingleDatePicker__inner___2ifOi .DateInput_input__focused:hover::placeholder {\n        color: #2B4B5A; }\n  .SingleDatePicker__inner___2ifOi .DateInput_screenReaderMessage {\n    border: 0;\n    clip: rect(0, 0, 0, 0);\n    height: 1px;\n    margin: -1px;\n    overflow: hidden;\n    padding: 0;\n    position: absolute;\n    width: 1px; }\n  .SingleDatePicker__inner___2ifOi .DateInput_fang {\n    position: absolute;\n    margin-top: -13px;\n    width: 20px;\n    height: 10px;\n    left: 50%;\n    z-index: 2; }\n    @media (max-width: 767px) {\n      .SingleDatePicker__inner___2ifOi .DateInput_fang {\n        left: unset;\n        right: 132px; } }\n  .SingleDatePicker__inner___2ifOi .DateInput_fangShape {\n    fill: #FFF; }\n  .SingleDatePicker__inner___2ifOi .DateInput_fangStroke {\n    stroke: #E3E8ED;\n    fill: transparent; }\n\n.SingleDatePicker__icon___2frN4 {\n  color: #2B4B5A;\n  fill: currentColor;\n  pointer-events: none;\n  position: absolute;\n  right: 6px;\n  top: 6px;\n  transition: all 0.2s; }\n\n.SingleDatePicker__focused___13KvX .SingleDatePicker__inner___2ifOi .SingleDatePicker__icon___2frN4, .SingleDatePicker__focused___13KvX .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n  color: #01A4B7; }\n\n.SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi .DateInput_input, .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi:hover .DateInput_input {\n  background-color: #F5F7F8;\n  border-color: #E3E8ED;\n  cursor: not-allowed;\n  color: #57707C; }\n  .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi .DateInput_input::placeholder, .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi:hover .DateInput_input::placeholder {\n    color: #57707C; }\n\n.SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi .SingleDatePicker__icon___2frN4, .SingleDatePicker__disabled___3iEqZ .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n  color: #57707C; }\n\n.SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input {\n  background-color: #FBE6EC;\n  border-color: #DF0E42;\n  color: #DF0E42; }\n  .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input::placeholder, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input::placeholder {\n    color: #DF0E42; }\n  .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input:hover, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .DateInput_input:focus, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input:hover, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .DateInput_input:focus {\n    border-color: #DF0E42; }\n\n.SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi .SingleDatePicker__icon___2frN4, .SingleDatePicker__error___1t-Fk .SingleDatePicker__inner___2ifOi:hover .SingleDatePicker__icon___2frN4 {\n  color: #DF0E42; }\n\n.SingleDatePicker__errorMessage___3gd-z {\n  margin-top: 12px;\n  margin-bottom: 0; }\n", ""]);
+
+// exports
+exports.locals = {
+	"outer": "SingleDatePicker__outer___2RZZx",
+	"inline": "SingleDatePicker__inline___7kAOS",
+	"inner": "SingleDatePicker__inner___2ifOi",
+	"picker": "SingleDatePicker__picker___3lb8y",
+	"icon": "SingleDatePicker__icon___2frN4",
+	"focused": "SingleDatePicker__focused___13KvX",
+	"disabled": "SingleDatePicker__disabled___3iEqZ",
+	"error": "SingleDatePicker__error___1t-Fk",
+	"errorMessage": "SingleDatePicker__errorMessage___3gd-z"
+};
+
+/***/ }),
 /* 689 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -76512,10 +76795,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * TimeSelector
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * TimeSelector
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var TimeSelector = function (_React$Component) {
   _inherits(TimeSelector, _React$Component);
@@ -76526,22 +76809,24 @@ var TimeSelector = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (TimeSelector.__proto__ || Object.getPrototypeOf(TimeSelector)).call(this, props));
 
     _this.getDisplay = function () {
-      var value = this.props.value;
+      var value = _this.props.value;
 
 
-      return value || this.props.placeholder || '0:00';
+      return value || _this.props.placeholder || '0:00';
     };
 
-    _this.toggleExpand = function (event) {
-      this.setState({ expanded: this.props.disabled ? false : !this.state.expanded });
+    _this.toggleExpand = function () {
+      _this.setState({
+        expanded: _this.props.disabled ? false : !_this.state.expanded
+      });
     };
 
-    _this.hideExpand = function (event) {
-      this.setState({ expanded: false });
+    _this.hideExpand = function () {
+      _this.setState({ expanded: false });
     };
 
     _this.handleClickOutside = function () {
-      this.hideExpand();
+      _this.hideExpand();
     };
 
     _this.generateOptions = function (options) {
@@ -76555,42 +76840,40 @@ var TimeSelector = function (_React$Component) {
     };
 
     _this.selectTime = function (hour, minute) {
-      var _props = this.props,
-          onChange = _props.onChange,
-          hourly = _props.hourly;
+      var _this$props = _this.props,
+          onChange = _this$props.onChange,
+          hourly = _this$props.hourly;
 
-      this.setState({
+      _this.setState({
         hour: hour,
         minute: minute,
         expanded: !hourly // Close if hourly
       });
       onChange({
         value: (hour || 0) + ':' + (minute || '00'),
-        props: this.props
+        props: _this.props
       });
     };
 
     _this.selectMinute = function (option) {
-      var hour = this.state.hour;
+      var hour = _this.state.hour;
 
-      this.selectTime(hour, option.value);
+      _this.selectTime(hour, option.value);
     };
 
     _this.selectHour = function (option) {
-      var minute = this.state.minute;
+      var minute = _this.state.minute;
 
-      this.selectTime(option.value, minute);
+      _this.selectTime(option.value, minute);
     };
 
-    _this.generateList = function (options, selectOption, padding, onChange) {
-      var _this2 = this;
-
-      var hourly = this.props.hourly;
+    _this.generateList = function (options, selectOption) {
+      var hourly = _this.props.hourly;
 
       return options.map(function (option) {
-        var selected = _this2.state.value === option.value;
+        var selected = _this.state.value === option.value;
         var ref = null;
-        if (_this2.state.value === option.value) {
+        if (_this.state.value === option.value) {
           ref = function ref(item) {
             if (item) {
               setTimeout(function () {
@@ -76601,9 +76884,14 @@ var TimeSelector = function (_React$Component) {
         }
         return _react2.default.createElement(
           'li',
-          { className: (0, _classnames5.default)(_TimeSelector2.default.option, _defineProperty({}, _TimeSelector2.default.selected, selected)), key: option.value, onClick: function onClick() {
+          {
+            className: (0, _classnames5.default)(_TimeSelector2.default.option, _defineProperty({}, _TimeSelector2.default.selected, selected)),
+            key: option.value,
+            onClick: function onClick() {
               return selectOption(option);
-            }, ref: ref },
+            },
+            ref: ref
+          },
           '' + (hourly ? option.label + ':00' : option.label)
         );
       });
@@ -76631,36 +76919,34 @@ var TimeSelector = function (_React$Component) {
     value: function render() {
       var _classnames2, _classnames3;
 
-      var _props2 = this.props,
-          id = _props2.id,
-          name = _props2.name,
-          className = _props2.className,
-          required = _props2.required,
-          disabled = _props2.disabled,
-          error = _props2.error,
-          label = _props2.label,
-          placeholder = _props2.placeholder,
-          onChange = _props2.onChange,
-          value = _props2.value,
-          inline = _props2.inline,
-          minutes = _props2.minutes,
-          hours = _props2.hours,
-          hourly = _props2.hourly,
-          eventTypes = _props2.eventTypes,
-          outsideClickIgnoreClass = _props2.outsideClickIgnoreClass,
-          preventDefault = _props2.preventDefault,
-          stopPropagation = _props2.stopPropagation,
-          disableOnClickOutside = _props2.disableOnClickOutside,
-          enableOnClickOutside = _props2.enableOnClickOutside,
-          restProps = _objectWithoutProperties(_props2, ['id', 'name', 'className', 'required', 'disabled', 'error', 'label', 'placeholder', 'onChange', 'value', 'inline', 'minutes', 'hours', 'hourly', 'eventTypes', 'outsideClickIgnoreClass', 'preventDefault', 'stopPropagation', 'disableOnClickOutside', 'enableOnClickOutside']);
+      var _props = this.props,
+          id = _props.id,
+          name = _props.name,
+          className = _props.className,
+          required = _props.required,
+          disabled = _props.disabled,
+          error = _props.error,
+          label = _props.label,
+          placeholder = _props.placeholder,
+          onChange = _props.onChange,
+          value = _props.value,
+          inline = _props.inline,
+          minutes = _props.minutes,
+          hours = _props.hours,
+          hourly = _props.hourly,
+          eventTypes = _props.eventTypes,
+          outsideClickIgnoreClass = _props.outsideClickIgnoreClass,
+          preventDefault = _props.preventDefault,
+          stopPropagation = _props.stopPropagation,
+          disableOnClickOutside = _props.disableOnClickOutside,
+          enableOnClickOutside = _props.enableOnClickOutside,
+          restProps = _objectWithoutProperties(_props, ['id', 'name', 'className', 'required', 'disabled', 'error', 'label', 'placeholder', 'onChange', 'value', 'inline', 'minutes', 'hours', 'hourly', 'eventTypes', 'outsideClickIgnoreClass', 'preventDefault', 'stopPropagation', 'disableOnClickOutside', 'enableOnClickOutside']);
 
       var classes = (0, _classnames5.default)(_TimeSelector2.default.outer, (_classnames2 = {}, _defineProperty(_classnames2, _TimeSelector2.default.expanded, this.state.expanded), _defineProperty(_classnames2, _TimeSelector2.default.inline, inline), _defineProperty(_classnames2, _TimeSelector2.default.hourly, hourly), _defineProperty(_classnames2, className, className), _classnames2));
 
       return _react2.default.createElement(
         'div',
-        _extends({
-          className: classes
-        }, restProps),
+        _extends({ className: classes }, restProps),
         label && _react2.default.createElement(
           _Label2.default,
           { className: _TimeSelector2.default.label, htmlFor: id },
@@ -76670,7 +76956,8 @@ var TimeSelector = function (_React$Component) {
           'div',
           {
             className: (0, _classnames5.default)(_TimeSelector2.default.select, (_classnames3 = {}, _defineProperty(_classnames3, _TimeSelector2.default.error, error), _defineProperty(_classnames3, _TimeSelector2.default.disabled, disabled), _classnames3)),
-            onClick: this.toggleExpand },
+            onClick: this.toggleExpand
+          },
           _react2.default.createElement(
             'span',
             null,
@@ -76735,12 +77022,18 @@ TimeSelector.defaultProps = {
   onChange: function onChange() {},
   hours: function () {
     return [].concat(_toConsumableArray(Array(24).keys())).map(function (n) {
-      return { label: n.toString(), value: n.toString() };
+      return {
+        label: n.toString(),
+        value: n.toString()
+      };
     });
   }(),
   minutes: function () {
     return [].concat(_toConsumableArray(Array(60).keys())).map(function (n) {
-      return { label: n.toString().padStart(2, '0'), value: n.toString().padStart(2, '0') };
+      return {
+        label: n.toString().padStart(2, '0'),
+        value: n.toString().padStart(2, '0')
+      };
     });
   }()
 };
@@ -76903,13 +77196,13 @@ var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
-var _BackView = __webpack_require__(724);
-
-var _BackView2 = _interopRequireDefault(_BackView);
-
 var _Heading = __webpack_require__(21);
 
 var _Heading2 = _interopRequireDefault(_Heading);
+
+var _BackView = __webpack_require__(727);
+
+var _BackView2 = _interopRequireDefault(_BackView);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -79519,77 +79812,6 @@ var createMemoryHistory = function createMemoryHistory() {
 /* 724 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(725);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./BackView.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./BackView.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 725 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".BackView__barOuter___1egdF {\n  background-color: #051E2A;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  height: fit-content;\n  position: absolute;\n  width: 100%;\n  left: 0;\n  margin-top: -40px; }\n\n.BackView__barInner___H_QlS {\n  margin: 0 auto;\n  color: #FFF;\n  height: 132px;\n  position: relative;\n  width: 1200px; }\n  @media (min-width: 1080px) and (max-width: 1199px) {\n    .BackView__barInner___H_QlS {\n      width: 960px; } }\n  @media (min-width: 768px) and (max-width: 1079px) {\n    .BackView__barInner___H_QlS {\n      width: 768px; } }\n  @media (max-width: 767px) {\n    .BackView__barInner___H_QlS {\n      margin-left: 12px;\n      width: 100%; } }\n  .BackView__barInner___H_QlS a {\n    text-decoration: none; }\n\n.BackView__heading___1PPs1 {\n  color: #FFF;\n  margin-top: 52px;\n  margin-bottom: 40px; }\n\n.BackView__arrow___1RJVM {\n  fill: currentColor;\n  float: left;\n  height: 40px;\n  margin: -5px 12px 0 0;\n  width: 40px; }\n\n.BackView__contentPusher___3zkFR {\n  height: 188px; }\n", ""]);
-
-// exports
-exports.locals = {
-	"barOuter": "BackView__barOuter___1egdF",
-	"barInner": "BackView__barInner___H_QlS",
-	"heading": "BackView__heading___1PPs1",
-	"arrow": "BackView__arrow___1RJVM",
-	"contentPusher": "BackView__contentPusher___3zkFR"
-};
-
-/***/ }),
-/* 726 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -79613,13 +79835,13 @@ var _classnames2 = __webpack_require__(8);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _Heading = __webpack_require__(727);
-
-var _Heading2 = _interopRequireDefault(_Heading);
-
 var _LoadingStrip = __webpack_require__(49);
 
 var _LoadingStrip2 = _interopRequireDefault(_LoadingStrip);
+
+var _Heading = __webpack_require__(725);
+
+var _Heading2 = _interopRequireDefault(_Heading);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -79712,11 +79934,11 @@ Heading.defaultProps = {
 exports.default = Heading;
 
 /***/ }),
-/* 727 */
+/* 725 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(728);
+var content = __webpack_require__(726);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -79762,7 +79984,7 @@ if(false) {
 }
 
 /***/ }),
-/* 728 */
+/* 726 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -79782,6 +80004,77 @@ exports.locals = {
 	"h2": "Heading__h2___3BwYm",
 	"h3": "Heading__h3___fXqry",
 	"h4": "Heading__h4___1BeFs"
+};
+
+/***/ }),
+/* 727 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(728);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./BackView.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./BackView.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 728 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".BackView__barOuter___1egdF {\n  background-color: #051E2A;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  height: fit-content;\n  position: absolute;\n  width: 100%;\n  left: 0;\n  margin-top: -40px; }\n\n.BackView__barInner___H_QlS {\n  margin: 0 auto;\n  color: #FFF;\n  height: 132px;\n  position: relative;\n  width: 1200px; }\n  @media (min-width: 1080px) and (max-width: 1199px) {\n    .BackView__barInner___H_QlS {\n      width: 960px; } }\n  @media (min-width: 768px) and (max-width: 1079px) {\n    .BackView__barInner___H_QlS {\n      width: 768px; } }\n  @media (max-width: 767px) {\n    .BackView__barInner___H_QlS {\n      margin-left: 12px;\n      width: 100%; } }\n  .BackView__barInner___H_QlS a {\n    text-decoration: none; }\n\n.BackView__heading___1PPs1 {\n  color: #FFF;\n  margin-top: 52px;\n  margin-bottom: 40px; }\n\n.BackView__arrow___1RJVM {\n  fill: currentColor;\n  float: left;\n  height: 40px;\n  margin: -5px 12px 0 0;\n  width: 40px; }\n\n.BackView__contentPusher___3zkFR {\n  height: 188px; }\n", ""]);
+
+// exports
+exports.locals = {
+	"barOuter": "BackView__barOuter___1egdF",
+	"barInner": "BackView__barInner___H_QlS",
+	"heading": "BackView__heading___1PPs1",
+	"arrow": "BackView__arrow___1RJVM",
+	"contentPusher": "BackView__contentPusher___3zkFR"
 };
 
 /***/ }),
@@ -79867,9 +80160,7 @@ var EvenGrid = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({
-          className: _EvenGrid2.default.outer
-        }, restProps),
+        _extends({ className: _EvenGrid2.default.outer }, restProps),
         children.map(function (child, index) {
           return _react2.default.createElement(
             'div',
@@ -80165,10 +80456,6 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _FormSection = __webpack_require__(739);
-
-var _FormSection2 = _interopRequireDefault(_FormSection);
-
 var _Heading = __webpack_require__(21);
 
 var _Heading2 = _interopRequireDefault(_Heading);
@@ -80180,6 +80467,10 @@ var _Paragraph2 = _interopRequireDefault(_Paragraph);
 var _LoadingSpinner = __webpack_require__(101);
 
 var _LoadingSpinner2 = _interopRequireDefault(_LoadingSpinner);
+
+var _FormSection = __webpack_require__(745);
+
+var _FormSection2 = _interopRequireDefault(_FormSection);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -80211,9 +80502,7 @@ var FormSection = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({
-          className: _FormSection2.default.outer
-        }, restProps),
+        _extends({ className: _FormSection2.default.outer }, restProps),
         _react2.default.createElement(
           'div',
           { className: _FormSection2.default.left },
@@ -80251,75 +80540,6 @@ exports.default = FormSection;
 /* 739 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(740);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./FormSection.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./FormSection.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 740 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".FormSection__outer___3IM71 {\n  background-color: #FFF;\n  border-radius: 4px;\n  display: flex;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  margin-bottom: 32px;\n  padding: 38px;\n  vertical-align: top; }\n  @media (max-width: 767px) {\n    .FormSection__outer___3IM71 {\n      display: block; } }\n\n.FormSection__left___1B_Nx {\n  display: inline-block;\n  margin-right: 48px;\n  width: 312px;\n  min-width: 312px; }\n  @media (min-width: 1080px) and (max-width: 1199px) {\n    .FormSection__left___1B_Nx {\n      width: 180px;\n      min-width: 180px; } }\n  @media (min-width: 768px) and (max-width: 1079px) {\n    .FormSection__left___1B_Nx {\n      width: 180px;\n      min-width: 180px; } }\n  @media (max-width: 767px) {\n    .FormSection__left___1B_Nx {\n      width: 100%;\n      min-width: 100%;\n      margin-bottom: 20px; } }\n\n.FormSection__right___1iVO_ {\n  display: inline-block;\n  width: 100%; }\n", ""]);
-
-// exports
-exports.locals = {
-	"outer": "FormSection__outer___3IM71",
-	"left": "FormSection__left___1B_Nx",
-	"right": "FormSection__right___1iVO_"
-};
-
-/***/ }),
-/* 741 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -80347,7 +80567,7 @@ var _LoadingStrip = __webpack_require__(49);
 
 var _LoadingStrip2 = _interopRequireDefault(_LoadingStrip);
 
-var _Paragraph = __webpack_require__(742);
+var _Paragraph = __webpack_require__(740);
 
 var _Paragraph2 = _interopRequireDefault(_Paragraph);
 
@@ -80389,15 +80609,14 @@ var Paragraph = function (_React$Component) {
           _extends({ className: classes }, restProps),
           children
         );
-      } else {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_LoadingStrip2.default, { className: _Paragraph2.default.loading }),
-          _react2.default.createElement(_LoadingStrip2.default, { className: _Paragraph2.default.loading }),
-          _react2.default.createElement(_LoadingStrip2.default, { className: _Paragraph2.default.loading })
-        );
       }
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_LoadingStrip2.default, { className: _Paragraph2.default.loading }),
+        _react2.default.createElement(_LoadingStrip2.default, { className: _Paragraph2.default.loading }),
+        _react2.default.createElement(_LoadingStrip2.default, { className: _Paragraph2.default.loading })
+      );
     }
   }]);
 
@@ -80411,11 +80630,11 @@ Paragraph.propTypes = {
 exports.default = Paragraph;
 
 /***/ }),
-/* 742 */
+/* 740 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(743);
+var content = __webpack_require__(741);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -80461,7 +80680,7 @@ if(false) {
 }
 
 /***/ }),
-/* 743 */
+/* 741 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -80479,7 +80698,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 744 */
+/* 742 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -80505,7 +80724,7 @@ var _classnames4 = __webpack_require__(8);
 
 var _classnames5 = _interopRequireDefault(_classnames4);
 
-var _LoadingSpinner = __webpack_require__(745);
+var _LoadingSpinner = __webpack_require__(743);
 
 var _LoadingSpinner2 = _interopRequireDefault(_LoadingSpinner);
 
@@ -80552,19 +80771,42 @@ var LoadingSpinner = function (_Component) {
         { className: classes },
         _react2.default.createElement(
           'svg',
-          _extends({ className: (0, _classnames5.default)(_LoadingSpinner2.default.spinner, _defineProperty({}, _LoadingSpinner2.default.fidget, fidget)) }, restProps, { viewBox: fidget ? '0 0 100 100' : '0 0 24 24', version: '1.1' }),
+          _extends({
+            className: (0, _classnames5.default)(_LoadingSpinner2.default.spinner, _defineProperty({}, _LoadingSpinner2.default.fidget, fidget))
+          }, restProps, {
+            viewBox: fidget ? '0 0 100 100' : '0 0 24 24',
+            version: '1.1'
+          }),
           fidget ? _react2.default.createElement(
             'g',
             { transform: 'translate(0, -8)' },
-            _react2.default.createElement('path', { className: _LoadingSpinner2.default.highlight, d: 'M27.1,79.4c-1.1,0.6-2.4,1-3.7,1c-2.6,0-5.1-1.4-6.4-3.7c-2-3.5-0.8-8,2.7-10.1c1.1-0.6,2.4-1,3.7-1c2.6,0,5.1,1.4,6.4,3.7 C31.8,72.9,30.6,77.4,27.1,79.4z' }),
-            _react2.default.createElement('path', { className: _LoadingSpinner2.default.highlight, d: 'M72.9,79.4c1.1,0.6,2.4,1,3.7,1c2.6,0,5.1-1.4,6.4-3.7c2-3.5,0.8-8-2.7-10.1c-1.1-0.6-2.4-1-3.7-1c-2.6,0-5.1,1.4-6.4,3.7 C68.2,72.9,69.4,77.4,72.9,79.4z' }),
-            _react2.default.createElement('path', { className: _LoadingSpinner2.default.highlight, d: 'M 57.4,27 A 7.4000001,7.4000001 0 0 1 50,34.4 7.4000001,7.4000001 0 0 1 42.6,27 7.4000001,7.4000001 0 0 1 50,19.6 7.4000001,7.4000001 0 0 1 57.4,27 Z' }),
-            _react2.default.createElement('path', { className: ringClasses, d: 'M86.5,57.5c-3.1-1.9-6.4-2.8-9.8-2.8c-0.5,0-0.9,0-1.4,0c-0.4,0-0.8,0-1.1,0c-2.1,0-4.2-0.4-6.2-1.2 c-0.8-3.6-2.8-6.9-5.4-9.3c0.4-2.5,1.3-4.8,2.7-6.9c2-2.9,3.2-6.5,3.2-10.4c0-10.2-8.2-18.4-18.4-18.4c-0.3,0-0.6,0-0.9,0 C39.7,9,32,16.8,31.6,26.2c-0.2,4.1,1,7.9,3.2,11c1.4,2.1,2.3,4.5,2.7,6.9c-2.6,2.5-4.6,5.7-5.4,9.3c-1.9,0.7-4,1.1-6.1,1.1 c-0.4,0-0.8,0-1.2,0c-0.5,0-0.9-0.1-1.4-0.1c-3.1,0-6.3,0.8-9.2,2.5c-9.1,5.2-12,17-6.3,25.9c3.5,5.4,9.5,8.4,15.6,8.4 c2.9,0,5.8-0.7,8.5-2.1c3.6-1.9,6.3-4.9,8-8.3c1.1-2.3,2.7-4.2,4.6-5.8c1.7,0.5,3.5,0.8,5.4,0.8c1.9,0,3.7-0.3,5.4-0.8 c1.9,1.6,3.5,3.5,4.6,5.7c1.5,3.2,4,6,7.4,8c2.9,1.7,6.1,2.5,9.2,2.5c6.6,0,13.1-3.6,16.4-10C97.3,73.1,94.4,62.5,86.5,57.5z M29.6,83.7c-1.9,1.1-4,1.6-6.1,1.6c-4.2,0-8.4-2.2-10.6-6.1c-3.4-5.9-1.4-13.4,4.5-16.8c1.9-1.1,4-1.6,6.1-1.6 c4.2,0,8.4,2.2,10.6,6.1C37.5,72.8,35.4,80.3,29.6,83.7z M50,39.3c-6.8,0-12.3-5.5-12.3-12.3S43.2,14.7,50,14.7 c6.8,0,12.3,5.5,12.3,12.3S56.8,39.3,50,39.3z M87.2,79.2c-2.3,3.9-6.4,6.1-10.6,6.1c-2.1,0-4.2-0.5-6.1-1.6 c-5.9-3.4-7.9-10.9-4.5-16.8c2.3-3.9,6.4-6.1,10.6-6.1c2.1,0,4.2,0.5,6.1,1.6C88.6,65.8,90.6,73.3,87.2,79.2z' })
+            _react2.default.createElement('path', {
+              className: _LoadingSpinner2.default.highlight,
+              d: 'M27.1,79.4c-1.1,0.6-2.4,1-3.7,1c-2.6,0-5.1-1.4-6.4-3.7c-2-3.5-0.8-8,2.7-10.1c1.1-0.6,2.4-1,3.7-1c2.6,0,5.1,1.4,6.4,3.7 C31.8,72.9,30.6,77.4,27.1,79.4z'
+            }),
+            _react2.default.createElement('path', {
+              className: _LoadingSpinner2.default.highlight,
+              d: 'M72.9,79.4c1.1,0.6,2.4,1,3.7,1c2.6,0,5.1-1.4,6.4-3.7c2-3.5,0.8-8-2.7-10.1c-1.1-0.6-2.4-1-3.7-1c-2.6,0-5.1,1.4-6.4,3.7 C68.2,72.9,69.4,77.4,72.9,79.4z'
+            }),
+            _react2.default.createElement('path', {
+              className: _LoadingSpinner2.default.highlight,
+              d: 'M 57.4,27 A 7.4000001,7.4000001 0 0 1 50,34.4 7.4000001,7.4000001 0 0 1 42.6,27 7.4000001,7.4000001 0 0 1 50,19.6 7.4000001,7.4000001 0 0 1 57.4,27 Z'
+            }),
+            _react2.default.createElement('path', {
+              className: ringClasses,
+              d: 'M86.5,57.5c-3.1-1.9-6.4-2.8-9.8-2.8c-0.5,0-0.9,0-1.4,0c-0.4,0-0.8,0-1.1,0c-2.1,0-4.2-0.4-6.2-1.2 c-0.8-3.6-2.8-6.9-5.4-9.3c0.4-2.5,1.3-4.8,2.7-6.9c2-2.9,3.2-6.5,3.2-10.4c0-10.2-8.2-18.4-18.4-18.4c-0.3,0-0.6,0-0.9,0 C39.7,9,32,16.8,31.6,26.2c-0.2,4.1,1,7.9,3.2,11c1.4,2.1,2.3,4.5,2.7,6.9c-2.6,2.5-4.6,5.7-5.4,9.3c-1.9,0.7-4,1.1-6.1,1.1 c-0.4,0-0.8,0-1.2,0c-0.5,0-0.9-0.1-1.4-0.1c-3.1,0-6.3,0.8-9.2,2.5c-9.1,5.2-12,17-6.3,25.9c3.5,5.4,9.5,8.4,15.6,8.4 c2.9,0,5.8-0.7,8.5-2.1c3.6-1.9,6.3-4.9,8-8.3c1.1-2.3,2.7-4.2,4.6-5.8c1.7,0.5,3.5,0.8,5.4,0.8c1.9,0,3.7-0.3,5.4-0.8 c1.9,1.6,3.5,3.5,4.6,5.7c1.5,3.2,4,6,7.4,8c2.9,1.7,6.1,2.5,9.2,2.5c6.6,0,13.1-3.6,16.4-10C97.3,73.1,94.4,62.5,86.5,57.5z M29.6,83.7c-1.9,1.1-4,1.6-6.1,1.6c-4.2,0-8.4-2.2-10.6-6.1c-3.4-5.9-1.4-13.4,4.5-16.8c1.9-1.1,4-1.6,6.1-1.6 c4.2,0,8.4,2.2,10.6,6.1C37.5,72.8,35.4,80.3,29.6,83.7z M50,39.3c-6.8,0-12.3-5.5-12.3-12.3S43.2,14.7,50,14.7 c6.8,0,12.3,5.5,12.3,12.3S56.8,39.3,50,39.3z M87.2,79.2c-2.3,3.9-6.4,6.1-10.6,6.1c-2.1,0-4.2-0.5-6.1-1.6 c-5.9-3.4-7.9-10.9-4.5-16.8c2.3-3.9,6.4-6.1,10.6-6.1c2.1,0,4.2,0.5,6.1,1.6C88.6,65.8,90.6,73.3,87.2,79.2z'
+            })
           ) : _react2.default.createElement(
             _react.Fragment,
             null,
-            _react2.default.createElement('path', { className: ringClasses, d: 'M23.39 15.79L22.93 16.95L22.36 18.05L21.68 19.09L20.91 20.04L20.04 20.91L19.09 21.68L18.05 22.36L16.95 22.93L15.79 23.39L14.57 23.72L13.31 23.93L12 24L10.69 23.93L9.43 23.72L8.21 23.39L7.05 22.93L5.95 22.36L4.91 21.68L3.96 20.91L3.09 20.04L2.32 19.09L1.64 18.05L1.07 16.95L0.61 15.79L0.28 14.57L0.07 13.31L0 12L0.07 10.69L0.28 9.43L0.61 8.21L1.07 7.05L1.64 5.95L2.32 4.91L3.09 3.96L3.96 3.09L4.91 2.32L5.95 1.64L7.05 1.07L8.21 0.61L9.43 0.28L10.69 0.07L12 0L12 2.04L10.65 2.13L9.35 2.39L8.12 2.82L6.97 3.4L5.91 4.12L4.96 4.96L4.12 5.91L3.4 6.97L2.82 8.12L2.39 9.35L2.13 10.65L2.04 12L2.13 13.35L2.39 14.65L2.82 15.88L3.4 17.03L4.12 18.09L4.96 19.04L5.91 19.88L6.97 20.6L8.12 21.18L9.35 21.61L10.65 21.87L12 21.96L13.35 21.87L14.65 21.61L15.88 21.18L17.03 20.6L18.09 19.88L19.04 19.04L19.88 18.09L20.6 17.03L21.18 15.88L21.61 14.65L21.87 13.35L21.96 12L24 12L23.93 13.31L23.72 14.57L23.39 15.79Z' }),
-            _react2.default.createElement('path', { className: _LoadingSpinner2.default.highlight, d: 'M15.79 0.61L16.95 1.07L18.05 1.64L19.09 2.32L20.04 3.09L20.91 3.96L21.68 4.91L22.36 5.95L22.93 7.05L23.39 8.21L23.72 9.43L23.93 10.69L24 12L21.96 12L21.87 10.65L21.61 9.35L21.18 8.12L20.6 6.97L19.88 5.91L19.04 4.96L18.09 4.12L17.03 3.4L15.88 2.82L14.65 2.39L13.35 2.13L12 2.04L12 0L13.31 0.07L14.57 0.28L14.57 0.28L15.79 0.61Z' })
+            _react2.default.createElement('path', {
+              className: ringClasses,
+              d: 'M23.39 15.79L22.93 16.95L22.36 18.05L21.68 19.09L20.91 20.04L20.04 20.91L19.09 21.68L18.05 22.36L16.95 22.93L15.79 23.39L14.57 23.72L13.31 23.93L12 24L10.69 23.93L9.43 23.72L8.21 23.39L7.05 22.93L5.95 22.36L4.91 21.68L3.96 20.91L3.09 20.04L2.32 19.09L1.64 18.05L1.07 16.95L0.61 15.79L0.28 14.57L0.07 13.31L0 12L0.07 10.69L0.28 9.43L0.61 8.21L1.07 7.05L1.64 5.95L2.32 4.91L3.09 3.96L3.96 3.09L4.91 2.32L5.95 1.64L7.05 1.07L8.21 0.61L9.43 0.28L10.69 0.07L12 0L12 2.04L10.65 2.13L9.35 2.39L8.12 2.82L6.97 3.4L5.91 4.12L4.96 4.96L4.12 5.91L3.4 6.97L2.82 8.12L2.39 9.35L2.13 10.65L2.04 12L2.13 13.35L2.39 14.65L2.82 15.88L3.4 17.03L4.12 18.09L4.96 19.04L5.91 19.88L6.97 20.6L8.12 21.18L9.35 21.61L10.65 21.87L12 21.96L13.35 21.87L14.65 21.61L15.88 21.18L17.03 20.6L18.09 19.88L19.04 19.04L19.88 18.09L20.6 17.03L21.18 15.88L21.61 14.65L21.87 13.35L21.96 12L24 12L23.93 13.31L23.72 14.57L23.39 15.79Z'
+            }),
+            _react2.default.createElement('path', {
+              className: _LoadingSpinner2.default.highlight,
+              d: 'M15.79 0.61L16.95 1.07L18.05 1.64L19.09 2.32L20.04 3.09L20.91 3.96L21.68 4.91L22.36 5.95L22.93 7.05L23.39 8.21L23.72 9.43L23.93 10.69L24 12L21.96 12L21.87 10.65L21.61 9.35L21.18 8.12L20.6 6.97L19.88 5.91L19.04 4.96L18.09 4.12L17.03 3.4L15.88 2.82L14.65 2.39L13.35 2.13L12 2.04L12 0L13.31 0.07L14.57 0.28L14.57 0.28L15.79 0.61Z'
+            })
           )
         )
       );
@@ -80588,11 +80830,11 @@ LoadingSpinner.defaultProps = {
 exports.default = LoadingSpinner;
 
 /***/ }),
-/* 745 */
+/* 743 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(746);
+var content = __webpack_require__(744);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -80638,7 +80880,7 @@ if(false) {
 }
 
 /***/ }),
-/* 746 */
+/* 744 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -80663,6 +80905,75 @@ exports.locals = {
 	"grey": "LoadingSpinner__grey___2AD58",
 	"red": "LoadingSpinner__red___ZHBEp",
 	"white": "LoadingSpinner__white___1N9kk"
+};
+
+/***/ }),
+/* 745 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(746);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./FormSection.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./FormSection.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 746 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".FormSection__outer___3IM71 {\n  background-color: #FFF;\n  border-radius: 4px;\n  display: flex;\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  margin-bottom: 32px;\n  padding: 38px;\n  vertical-align: top; }\n  @media (max-width: 767px) {\n    .FormSection__outer___3IM71 {\n      display: block; } }\n\n.FormSection__left___1B_Nx {\n  display: inline-block;\n  margin-right: 48px;\n  width: 312px;\n  min-width: 312px; }\n  @media (min-width: 1080px) and (max-width: 1199px) {\n    .FormSection__left___1B_Nx {\n      width: 180px;\n      min-width: 180px; } }\n  @media (min-width: 768px) and (max-width: 1079px) {\n    .FormSection__left___1B_Nx {\n      width: 180px;\n      min-width: 180px; } }\n  @media (max-width: 767px) {\n    .FormSection__left___1B_Nx {\n      width: 100%;\n      min-width: 100%;\n      margin-bottom: 20px; } }\n\n.FormSection__right___1iVO_ {\n  display: inline-block;\n  width: 100%; }\n", ""]);
+
+// exports
+exports.locals = {
+	"outer": "FormSection__outer___3IM71",
+	"left": "FormSection__left___1B_Nx",
+	"right": "FormSection__right___1iVO_"
 };
 
 /***/ }),
@@ -80769,15 +81080,15 @@ var _classnames5 = __webpack_require__(8);
 
 var _classnames6 = _interopRequireDefault(_classnames5);
 
-var _Table = __webpack_require__(751);
-
-var _Table2 = _interopRequireDefault(_Table);
-
 var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
 var _Loading = __webpack_require__(431);
+
+var _Table = __webpack_require__(754);
+
+var _Table2 = _interopRequireDefault(_Table);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -80794,6 +81105,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // Vendor
 
 
+function defaultSort(a, b) {
+  var stringA = String(a).toLowerCase();
+  var stringB = String(b).toLowerCase();
+
+  if (stringA < stringB) {
+    return -1;
+  } else if (stringA > stringB) {
+    return 1;
+  }
+  return 0;
+}
+
 var Table = function (_Component) {
   _inherits(Table, _Component);
 
@@ -80807,7 +81130,6 @@ var Table = function (_Component) {
       sortColumn: null,
       sortedBody: props.body
     };
-    _this.defaultSort = _this.defaultSort.bind(_this);
     _this.renderHeaders = _this.renderHeaders.bind(_this);
     _this.renderBody = _this.renderBody.bind(_this);
     _this.sortBody = _this.sortBody.bind(_this);
@@ -80824,45 +81146,23 @@ var Table = function (_Component) {
       });
     }
   }, {
-    key: 'renderHeaders',
-    value: function renderHeaders() {
-      var defaultSort = this.defaultSort,
-          sortBody = this.sortBody;
-      var columns = this.props.columns;
+    key: 'sortBody',
+    value: function sortBody(columnIndex, sortFunction) {
       var _state = this.state,
           sortAscending = _state.sortAscending,
-          sortColumn = _state.sortColumn;
+          sortColumn = _state.sortColumn,
+          sortedBody = _state.sortedBody;
 
+      var ascending = sortColumn === columnIndex ? !sortAscending : true;
+      var body = sortedBody.sort(function (a, b) {
+        return ascending ? sortFunction(a.content[columnIndex], b.content[columnIndex]) : sortFunction(b.content[columnIndex], a.content[columnIndex]);
+      });
 
-      if (columns && columns.length > 0) {
-        return columns.map(function (column, index) {
-          var _classnames;
-
-          return _react2.default.createElement(
-            'div',
-            {
-              className: (0, _classnames6.default)(_Table2.default.heading, (_classnames = {}, _defineProperty(_classnames, _Table2.default[column.width], column.width), _defineProperty(_classnames, _Table2.default.sortable, column.sortable), _defineProperty(_classnames, _Table2.default.ascending, sortColumn === index && sortAscending), _defineProperty(_classnames, _Table2.default.descending, sortColumn === index && !sortAscending), _classnames)),
-              onClick: function onClick() {
-                return column.sortable && sortBody(index, column.sortFunction || defaultSort);
-              },
-              key: index },
-            _react2.default.createElement(
-              'span',
-              { className: _Table2.default.title },
-              column.title
-            ),
-            sortColumn === index && _react2.default.createElement(_Icon2.default, { className: _Table2.default.caret, name: 'DropDown' })
-          );
-        });
-      } else {
-        return ['narrow', 'wide', 'extraNarrow'].map(function (width, index) {
-          return _react2.default.createElement(
-            'div',
-            { key: index, className: (0, _classnames6.default)(_Table2.default.heading, _defineProperty({}, _Table2.default[width], width)) },
-            _react2.default.createElement(_Loading.LoadingStrip, null)
-          );
-        });
-      }
+      this.setState({
+        sortAscending: ascending,
+        sortColumn: columnIndex,
+        sortedBody: body
+      });
     }
   }, {
     key: 'renderBody',
@@ -80875,53 +81175,66 @@ var Table = function (_Component) {
         return sortedBody.map(function (row, rowIndex) {
           return _react2.default.createElement(
             'div',
-            { className: (0, _classnames6.default)(_Table2.default.row, _defineProperty({}, _Table2.default.inactive, row.inactive)), key: rowIndex },
+            {
+              className: (0, _classnames6.default)(_Table2.default.row, _defineProperty({}, _Table2.default.inactive, row.inactive)),
+              key: rowIndex
+            },
             row.content.map(function (cell, cellIndex) {
               return _react2.default.createElement(
                 'div',
                 {
                   className: (0, _classnames6.default)(_Table2.default.cell, _defineProperty({}, _Table2.default[columns[cellIndex].width], columns[cellIndex].width)),
-                  key: cellIndex },
+                  key: cellIndex
+                },
                 cell
               );
             })
           );
         });
-      } else {
-        return _react2.default.createElement(_Loading.LoadingSpinner, { className: _Table2.default.bodyLoading });
       }
+      return _react2.default.createElement(_Loading.LoadingSpinner, { className: _Table2.default.bodyLoading });
     }
   }, {
-    key: 'defaultSort',
-    value: function defaultSort(a, b) {
-      var stringA = String(a).toLowerCase();
-      var stringB = String(b).toLowerCase();
-
-      if (stringA < stringB) {
-        return -1;
-      } else if (stringA > stringB) {
-        return 1;
-      } else {
-        return 0;
-      }
-    }
-  }, {
-    key: 'sortBody',
-    value: function sortBody(columnIndex, sortFunction) {
+    key: 'renderHeaders',
+    value: function renderHeaders() {
+      var sortBody = this.sortBody;
+      var columns = this.props.columns;
       var _state2 = this.state,
           sortAscending = _state2.sortAscending,
-          sortColumn = _state2.sortColumn,
-          sortedBody = _state2.sortedBody;
+          sortColumn = _state2.sortColumn;
 
-      var ascending = sortColumn === columnIndex ? !sortAscending : true;
-      var body = sortedBody.sort(function (a, b) {
-        return ascending ? sortFunction(a.content[columnIndex], b.content[columnIndex]) : sortFunction(b.content[columnIndex], a.content[columnIndex]);
-      });
 
-      this.setState({
-        sortAscending: ascending,
-        sortColumn: columnIndex,
-        sortedBody: body
+      if (columns && columns.length > 0) {
+        return columns.map(function (column, index) {
+          var _classnames3;
+
+          return _react2.default.createElement(
+            'div',
+            {
+              className: (0, _classnames6.default)(_Table2.default.heading, (_classnames3 = {}, _defineProperty(_classnames3, _Table2.default[column.width], column.width), _defineProperty(_classnames3, _Table2.default.sortable, column.sortable), _defineProperty(_classnames3, _Table2.default.ascending, sortColumn === index && sortAscending), _defineProperty(_classnames3, _Table2.default.descending, sortColumn === index && !sortAscending), _classnames3)),
+              onClick: function onClick() {
+                return column.sortable && sortBody(index, column.sortFunction || defaultSort);
+              },
+              key: index
+            },
+            _react2.default.createElement(
+              'span',
+              { className: _Table2.default.title },
+              column.title
+            ),
+            sortColumn === index && _react2.default.createElement(_Icon2.default, { className: _Table2.default.caret, name: 'DropDown' })
+          );
+        });
+      }
+      return ['narrow', 'wide', 'extraNarrow'].map(function (width, index) {
+        return _react2.default.createElement(
+          'div',
+          {
+            key: index,
+            className: (0, _classnames6.default)(_Table2.default.heading, _defineProperty({}, _Table2.default[width], width))
+          },
+          _react2.default.createElement(_Loading.LoadingStrip, null)
+        );
       });
     }
   }, {
@@ -80969,88 +81282,6 @@ exports.default = Table;
 /* 751 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(752);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Table.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Table.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 752 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".Table__table___IVZQj {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  cursor: default;\n  display: block;\n  background-color: #FFF;\n  margin-bottom: 48px;\n  width: 100%; }\n  @media (max-width: 767px) {\n    .Table__table___IVZQj {\n      overflow-x: auto; } }\n\n.Table__header___1FClz {\n  display: flex;\n  margin: 0 44px; }\n  @media (max-width: 767px) {\n    .Table__header___1FClz {\n      margin: 0 20px;\n      min-width: 767px; } }\n\n.Table__heading___3vJ5U {\n  align-items: center;\n  color: #051E2A;\n  display: flex;\n  flex-direction: row;\n  flex-basis: 0;\n  flex-grow: 1;\n  font-weight: 600;\n  min-height: 70px;\n  overflow: hidden;\n  padding-left: 24px; }\n  .Table__heading___3vJ5U:first-child {\n    padding-left: 0; }\n  .Table__heading___3vJ5U.Table__sortable___3SOMf {\n    cursor: pointer;\n    user-select: none; }\n    .Table__heading___3vJ5U.Table__sortable___3SOMf:hover {\n      color: #01A4B7;\n      filter: brightness(92%); }\n    .Table__heading___3vJ5U.Table__sortable___3SOMf:active {\n      color: #01A4B7;\n      filter: brightness(84%); }\n    .Table__heading___3vJ5U.Table__sortable___3SOMf.Table__ascending___2HWy4 .Table__caret___3u532 {\n      transform: scaleY(-1); }\n  .Table__heading___3vJ5U .Table__caret___3u532 {\n    flex-shrink: 0; }\n  .Table__heading___3vJ5U .Table__title___1UzlY {\n    overflow: hidden;\n    text-overflow: ellipsis; }\n\n.Table__body___1OBuk {\n  display: block; }\n\n.Table__cell___kbkF6 {\n  border-top: solid 1px #E3E8ED;\n  color: #2B4B5A;\n  display: flex;\n  flex-direction: column;\n  font-size: 14px;\n  flex-basis: 0;\n  flex-grow: 1;\n  min-height: 70px;\n  justify-content: center;\n  padding-left: 24px;\n  transition: 0.5s ease all; }\n  .Table__cell___kbkF6:first-child {\n    padding-left: 0; }\n\n.Table__row___1Fl1z {\n  display: flex;\n  padding: 0 44px;\n  transition: 0.5s ease all; }\n  .Table__row___1Fl1z:hover {\n    background-color: #F5F7F8; }\n    .Table__row___1Fl1z:hover .Table__cell___kbkF6 {\n      border-top-color: transparent; }\n    .Table__row___1Fl1z:hover + .Table__row___1Fl1z .Table__cell___kbkF6 {\n      border-top-color: transparent; }\n  .Table__row___1Fl1z.Table__inactive___3e0-A .Table__cell___kbkF6 {\n    color: #9FB3BC; }\n  @media (max-width: 767px) {\n    .Table__row___1Fl1z {\n      padding: 0 20px;\n      min-width: 767px; } }\n\n.Table__extraWide___3-6rV {\n  flex-grow: 4; }\n\n.Table__wide___1pTpW {\n  flex-grow: 2; }\n\n.Table__narrow___27ZYo {\n  flex-grow: 0.5; }\n\n.Table__extraNarrow___3pd0Q {\n  flex-grow: 0.25; }\n\n.Table__bodyLoading___epc7- {\n  border-top: solid 1px #E3E8ED;\n  height: 160px;\n  margin: 0 44px;\n  width: auto; }\n  @media (max-width: 767px) {\n    .Table__bodyLoading___epc7- {\n      margin: 0 20px;\n      width: 100%; } }\n", ""]);
-
-// exports
-exports.locals = {
-	"table": "Table__table___IVZQj",
-	"header": "Table__header___1FClz",
-	"heading": "Table__heading___3vJ5U",
-	"sortable": "Table__sortable___3SOMf",
-	"ascending": "Table__ascending___2HWy4",
-	"caret": "Table__caret___3u532",
-	"title": "Table__title___1UzlY",
-	"body": "Table__body___1OBuk",
-	"cell": "Table__cell___kbkF6",
-	"row": "Table__row___1Fl1z",
-	"inactive": "Table__inactive___3e0-A",
-	"extraWide": "Table__extraWide___3-6rV",
-	"wide": "Table__wide___1pTpW",
-	"narrow": "Table__narrow___27ZYo",
-	"extraNarrow": "Table__extraNarrow___3pd0Q",
-	"bodyLoading": "Table__bodyLoading___epc7-"
-};
-
-/***/ }),
-/* 753 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -81070,11 +81301,11 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 754 */
+/* 752 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(755);
+var content = __webpack_require__(753);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -81120,7 +81351,7 @@ if(false) {
 }
 
 /***/ }),
-/* 755 */
+/* 753 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -81137,6 +81368,88 @@ exports.locals = {
 	"pulseButton2": "LoadingScreen-module__pulseButton2___BRpen",
 	"pulse": "LoadingScreen-module__pulse___1aaul",
 	"pulse2": "LoadingScreen-module__pulse2___3HbS4"
+};
+
+/***/ }),
+/* 754 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(755);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Table.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Table.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 755 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".Table__table___IVZQj {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  cursor: default;\n  display: block;\n  background-color: #FFF;\n  margin-bottom: 48px;\n  width: 100%; }\n  @media (max-width: 767px) {\n    .Table__table___IVZQj {\n      overflow-x: auto; } }\n\n.Table__header___1FClz {\n  display: flex;\n  margin: 0 44px; }\n  @media (max-width: 767px) {\n    .Table__header___1FClz {\n      margin: 0 20px;\n      min-width: 767px; } }\n\n.Table__heading___3vJ5U {\n  align-items: center;\n  color: #051E2A;\n  display: flex;\n  flex-direction: row;\n  flex-basis: 0;\n  flex-grow: 1;\n  font-weight: 600;\n  min-height: 70px;\n  overflow: hidden;\n  padding-left: 24px; }\n  .Table__heading___3vJ5U:first-child {\n    padding-left: 0; }\n  .Table__heading___3vJ5U.Table__sortable___3SOMf {\n    cursor: pointer;\n    user-select: none; }\n    .Table__heading___3vJ5U.Table__sortable___3SOMf:hover {\n      color: #01A4B7;\n      filter: brightness(92%); }\n    .Table__heading___3vJ5U.Table__sortable___3SOMf:active {\n      color: #01A4B7;\n      filter: brightness(84%); }\n    .Table__heading___3vJ5U.Table__sortable___3SOMf.Table__ascending___2HWy4 .Table__caret___3u532 {\n      transform: scaleY(-1); }\n  .Table__heading___3vJ5U .Table__caret___3u532 {\n    flex-shrink: 0; }\n  .Table__heading___3vJ5U .Table__title___1UzlY {\n    overflow: hidden;\n    text-overflow: ellipsis; }\n\n.Table__body___1OBuk {\n  display: block; }\n\n.Table__cell___kbkF6 {\n  border-top: solid 1px #E3E8ED;\n  color: #2B4B5A;\n  display: flex;\n  flex-direction: column;\n  font-size: 14px;\n  flex-basis: 0;\n  flex-grow: 1;\n  min-height: 70px;\n  justify-content: center;\n  padding-left: 24px;\n  transition: 0.5s ease all; }\n  .Table__cell___kbkF6:first-child {\n    padding-left: 0; }\n\n.Table__row___1Fl1z {\n  display: flex;\n  padding: 0 44px;\n  transition: 0.5s ease all; }\n  .Table__row___1Fl1z:hover {\n    background-color: #F5F7F8; }\n    .Table__row___1Fl1z:hover .Table__cell___kbkF6 {\n      border-top-color: transparent; }\n    .Table__row___1Fl1z:hover + .Table__row___1Fl1z .Table__cell___kbkF6 {\n      border-top-color: transparent; }\n  .Table__row___1Fl1z.Table__inactive___3e0-A .Table__cell___kbkF6 {\n    color: #9FB3BC; }\n  @media (max-width: 767px) {\n    .Table__row___1Fl1z {\n      padding: 0 20px;\n      min-width: 767px; } }\n\n.Table__extraWide___3-6rV {\n  flex-grow: 4; }\n\n.Table__wide___1pTpW {\n  flex-grow: 2; }\n\n.Table__narrow___27ZYo {\n  flex-grow: 0.5; }\n\n.Table__extraNarrow___3pd0Q {\n  flex-grow: 0.25; }\n\n.Table__bodyLoading___epc7- {\n  border-top: solid 1px #E3E8ED;\n  height: 160px;\n  margin: 0 44px;\n  width: auto; }\n  @media (max-width: 767px) {\n    .Table__bodyLoading___epc7- {\n      margin: 0 20px;\n      width: 100%; } }\n", ""]);
+
+// exports
+exports.locals = {
+	"table": "Table__table___IVZQj",
+	"header": "Table__header___1FClz",
+	"heading": "Table__heading___3vJ5U",
+	"sortable": "Table__sortable___3SOMf",
+	"ascending": "Table__ascending___2HWy4",
+	"caret": "Table__caret___3u532",
+	"title": "Table__title___1UzlY",
+	"body": "Table__body___1OBuk",
+	"cell": "Table__cell___kbkF6",
+	"row": "Table__row___1Fl1z",
+	"inactive": "Table__inactive___3e0-A",
+	"extraWide": "Table__extraWide___3-6rV",
+	"wide": "Table__wide___1pTpW",
+	"narrow": "Table__narrow___27ZYo",
+	"extraNarrow": "Table__extraNarrow___3pd0Q",
+	"bodyLoading": "Table__bodyLoading___epc7-"
 };
 
 /***/ }),
@@ -81185,13 +81498,13 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _TabView = __webpack_require__(758);
-
-var _TabView2 = _interopRequireDefault(_TabView);
-
 var _Heading = __webpack_require__(21);
 
 var _Heading2 = _interopRequireDefault(_Heading);
+
+var _TabView = __webpack_require__(758);
+
+var _TabView2 = _interopRequireDefault(_TabView);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -81566,15 +81879,11 @@ var _HashRoute = __webpack_require__(771);
 
 var _HashRoute2 = _interopRequireDefault(_HashRoute);
 
-var _PrimaryNavigation = __webpack_require__(773);
-
-var _PrimaryNavigation2 = _interopRequireDefault(_PrimaryNavigation);
-
 var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
-var _Bucket = __webpack_require__(775);
+var _Bucket = __webpack_require__(773);
 
 var _Bucket2 = _interopRequireDefault(_Bucket);
 
@@ -81582,9 +81891,13 @@ var _LoadingStrip = __webpack_require__(49);
 
 var _LoadingStrip2 = _interopRequireDefault(_LoadingStrip);
 
-var _Slider = __webpack_require__(780);
+var _Slider = __webpack_require__(778);
 
 var _Slider2 = _interopRequireDefault(_Slider);
+
+var _PrimaryNavigation = __webpack_require__(786);
+
+var _PrimaryNavigation2 = _interopRequireDefault(_PrimaryNavigation);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -81599,6 +81912,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var SUPPORTED_BADGES = ['NEW', 'FREE'];
+
+function renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute) {
+  return _react2.default.createElement(_HashRoute2.default, {
+    key: 'Subnav_' + item.key,
+    exact: item.exact // Slash will match anything so we need to be exact in that case.
+    , path: item.route,
+    render: function render() {
+      return _react2.default.createElement(_SubNavigation2.default, {
+        item: item,
+        logoutRoute: logoutRoute,
+        locations: locations,
+        onLocationChange: onLocationChange,
+        locationValue: locationValue
+      });
+    }
+  });
+}
 
 var PrimaryNavigation = function (_Component) {
   _inherits(PrimaryNavigation, _Component);
@@ -81639,15 +81969,49 @@ var PrimaryNavigation = function (_Component) {
       this.setState({ openKey: key === openKey ? null : key });
     }
   }, {
+    key: 'renderSliders',
+    value: function renderSliders() {
+      var closeBucket = this.closeBucket;
+      var _props = this.props,
+          bottomKeys = _props.bottomKeys,
+          items = _props.items;
+      var openKey = this.state.openKey;
+
+      var topItems = items.filter(function (item) {
+        return !bottomKeys.includes(item.key);
+      });
+      var bottomItems = items.filter(function (item) {
+        return bottomKeys.includes(item.key);
+      });
+
+      return _react2.default.createElement(
+        'div',
+        { className: _PrimaryNavigation2.default.sliders },
+        topItems.map(function (item) {
+          return _react2.default.createElement(_Slider2.default, _extends({
+            open: openKey === item.key,
+            onSelect: closeBucket
+          }, item));
+        }),
+        bottomItems.map(function (item) {
+          return _react2.default.createElement(_Slider2.default, _extends({
+            bottom: true,
+            open: openKey === item.key,
+            onSelect: closeBucket
+          }, item));
+        })
+      );
+    }
+  }, {
     key: 'renderBuckets',
     value: function renderBuckets() {
       var closeBucket = this.closeBucket,
           toggleBucket = this.toggleBucket;
-      var _props = this.props,
-          bottomKeys = _props.bottomKeys,
-          items = _props.items,
-          loading = _props.loading,
-          logo = _props.logo;
+      var _props2 = this.props,
+          bottomKeys = _props2.bottomKeys,
+          items = _props2.items,
+          loading = _props2.loading,
+          logo = _props2.logo;
       var openKey = this.state.openKey;
 
       var topItems = items.filter(function (item) {
@@ -81662,8 +82026,11 @@ var PrimaryNavigation = function (_Component) {
         { className: _PrimaryNavigation2.default.buckets },
         _react2.default.createElement(
           _reactRouterDom.NavLink,
-          { className: _PrimaryNavigation2.default.logoBucket, to: logo.route,
-            onClick: closeBucket },
+          {
+            className: _PrimaryNavigation2.default.logoBucket,
+            to: logo.route,
+            onClick: closeBucket
+          },
           _react2.default.createElement(
             'div',
             { className: _PrimaryNavigation2.default.logo },
@@ -81675,67 +82042,37 @@ var PrimaryNavigation = function (_Component) {
           null,
           _react2.default.createElement(_LoadingStrip2.default, { className: _PrimaryNavigation2.default.loadingBucket }),
           _react2.default.createElement(_LoadingStrip2.default, { className: _PrimaryNavigation2.default.loadingBucket }),
-          _react2.default.createElement(_LoadingStrip2.default, { className: (0, _classnames2.default)(_PrimaryNavigation2.default.loadingBucket, _PrimaryNavigation2.default.bottom) })
+          _react2.default.createElement(_LoadingStrip2.default, {
+            className: (0, _classnames2.default)(_PrimaryNavigation2.default.loadingBucket, _PrimaryNavigation2.default.bottom)
+          })
         ) : _react2.default.createElement(
           _react.Fragment,
           null,
           topItems.map(function (item) {
-            return _react2.default.createElement(_Bucket2.default, _extends({ open: item.key === openKey, onClickParent: function onClickParent() {
+            return _react2.default.createElement(_Bucket2.default, _extends({
+              open: item.key === openKey,
+              onClickParent: function onClickParent() {
                 return toggleBucket(item.key);
-              }, onClickRoute: closeBucket }, item));
+              },
+              onClickRoute: closeBucket
+            }, item));
           }),
           _react2.default.createElement('div', { className: _PrimaryNavigation2.default.bucketFiller, onClick: closeBucket }),
           bottomItems.map(function (item) {
-            return _react2.default.createElement(_Bucket2.default, _extends({ open: item.key === openKey, onClickParent: function onClickParent() {
+            return _react2.default.createElement(_Bucket2.default, _extends({
+              open: item.key === openKey,
+              onClickParent: function onClickParent() {
                 return toggleBucket(item.key);
-              }, onClickRoute: closeBucket }, item));
+              },
+              onClickRoute: closeBucket
+            }, item));
           })
         )
       );
     }
   }, {
-    key: 'renderSliders',
-    value: function renderSliders() {
-      var closeBucket = this.closeBucket;
-      var _props2 = this.props,
-          bottomKeys = _props2.bottomKeys,
-          items = _props2.items;
-      var openKey = this.state.openKey;
-
-      var topItems = items.filter(function (item) {
-        return !bottomKeys.includes(item.key);
-      });
-      var bottomItems = items.filter(function (item) {
-        return bottomKeys.includes(item.key);
-      });
-
-      return _react2.default.createElement(
-        'div',
-        { className: _PrimaryNavigation2.default.sliders },
-        topItems.map(function (item) {
-          return _react2.default.createElement(_Slider2.default, _extends({ open: openKey === item.key, onSelect: closeBucket }, item));
-        }),
-        bottomItems.map(function (item) {
-          return _react2.default.createElement(_Slider2.default, _extends({ bottom: true, open: openKey === item.key, onSelect: closeBucket }, item));
-        })
-      );
-    }
-  }, {
-    key: 'renderRoutes',
-    value: function renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute) {
-      return _react2.default.createElement(_HashRoute2.default, {
-        key: 'Subnav_' + item.key,
-        exact: item.exact // Slash will match anything so we need to be exact in that case.
-        , path: item.route,
-        render: function render() {
-          return _react2.default.createElement(_SubNavigation2.default, { item: item, logoutRoute: logoutRoute, locations: locations, onLocationChange: onLocationChange, locationValue: locationValue });
-        }
-      });
-    }
-  }, {
     key: 'renderSubNav',
     value: function renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute) {
-      var renderRoutes = this.renderRoutes;
       var loading = this.props.loading;
 
 
@@ -81803,7 +82140,7 @@ PrimaryNavigation.propTypes = {
   logo: _propTypes2.default.shape({
     icon: _propTypes2.default.any.isRequired,
     route: _propTypes2.default.string.isRequired
-  }).isRequired,
+  }),
   items: _propTypes2.default.arrayOf(_propTypes2.default.shape({
     key: _propTypes2.default.string.isRequired,
     label: _propTypes2.default.string.isRequired,
@@ -81853,30 +82190,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(43);
-
-var _reactRouter = __webpack_require__(59);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _Heading = __webpack_require__(21);
-
-var _Heading2 = _interopRequireDefault(_Heading);
-
-var _Icon = __webpack_require__(6);
-
-var _Icon2 = _interopRequireDefault(_Icon);
-
-var _SingleSelect = __webpack_require__(23);
-
-var _SingleSelect2 = _interopRequireDefault(_SingleSelect);
-
 var _classnames2 = __webpack_require__(8);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
@@ -81884,6 +82197,30 @@ var _classnames3 = _interopRequireDefault(_classnames2);
 var _isAbsoluteUrl = __webpack_require__(768);
 
 var _isAbsoluteUrl2 = _interopRequireDefault(_isAbsoluteUrl);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = __webpack_require__(59);
+
+var _reactRouterDom = __webpack_require__(43);
+
+var _SingleSelect = __webpack_require__(23);
+
+var _SingleSelect2 = _interopRequireDefault(_SingleSelect);
+
+var _Icon = __webpack_require__(6);
+
+var _Icon2 = _interopRequireDefault(_Icon);
+
+var _Heading = __webpack_require__(21);
+
+var _Heading2 = _interopRequireDefault(_Heading);
 
 var _SubNavigation = __webpack_require__(769);
 
@@ -81930,23 +82267,26 @@ var SubNavigation = function (_Component) {
               item.label
             )
           );
-        } else {
-          return _react2.default.createElement(
-            _reactRouterDom.NavLink,
-            {
-              key: index,
-              className: (0, _classnames3.default)(_SubNavigation2.default.item, _defineProperty({}, _SubNavigation2.default.selected, (0, _reactRouter.matchPath)(location.pathname + location.hash, { path: item.route, exact: true, strict: false }) !== null)),
-              exact: true,
-              to: item.route,
-              title: item.label
-            },
-            _react2.default.createElement(
-              'span',
-              null,
-              item.label
-            )
-          );
         }
+        return _react2.default.createElement(
+          _reactRouterDom.NavLink,
+          {
+            key: index,
+            className: (0, _classnames3.default)(_SubNavigation2.default.item, _defineProperty({}, _SubNavigation2.default.selected, (0, _reactRouter.matchPath)(location.pathname + location.hash, {
+              path: item.route,
+              exact: true,
+              strict: false
+            }) !== null)),
+            exact: true,
+            to: item.route,
+            title: item.label
+          },
+          _react2.default.createElement(
+            'span',
+            null,
+            item.label
+          )
+        );
       });
     }
   }, {
@@ -81978,7 +82318,15 @@ var SubNavigation = function (_Component) {
             !loading && locations && locations.length > 1 && _react2.default.createElement(
               'span',
               { className: _SubNavigation2.default.control },
-              _react2.default.createElement(_SingleSelect2.default, { className: _SubNavigation2.default.locationSelector, id: 'locationSelector', name: 'location', options: locations, onChange: onLocationChange, style: { paddingBottom: '0px' }, value: locationValue })
+              _react2.default.createElement(_SingleSelect2.default, {
+                className: _SubNavigation2.default.locationSelector,
+                id: 'locationSelector',
+                name: 'location',
+                options: locations,
+                onChange: onLocationChange,
+                style: { paddingBottom: '0px' },
+                value: locationValue
+              })
             ),
             _react2.default.createElement(
               'span',
@@ -82171,8 +82519,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
 function HashRoute(props) {
   var _render = props.render,
       path = props.path,
@@ -82181,9 +82527,7 @@ function HashRoute(props) {
 
   return _react2.default.createElement(_reactRouterDom.Route, {
     render: function render(_ref) {
-      var location = _ref.location,
-          props = _objectWithoutProperties(_ref, ['location']);
-
+      var location = _ref.location;
       return (0, _reactRouter.matchPath)(location.pathname + location.hash, { path: path, exact: exact, strict: strict }) && _render();
     }
   });
@@ -82202,85 +82546,6 @@ exports.default = HashRoute;
 /* 773 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(774);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./PrimaryNavigation.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./PrimaryNavigation.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 774 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".PrimaryNavigation__nav___3JVxy {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  user-select: none;\n  z-index: 99; }\n\n.PrimaryNavigation__buckets___1k78s {\n  background-color: #2B4B5A;\n  display: flex;\n  flex-direction: column;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: absolute;\n  height: 100%;\n  width: 76px;\n  z-index: 1; }\n\n.PrimaryNavigation__logoBucket___3OqZD {\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  flex-shrink: 0;\n  height: 76px;\n  justify-content: center;\n  max-width: 76px;\n  text-align: center;\n  transition: all 0.2s; }\n  .PrimaryNavigation__logoBucket___3OqZD:hover {\n    background-color: #223C48; }\n  .PrimaryNavigation__logoBucket___3OqZD:active {\n    background-color: #192D36; }\n\n.PrimaryNavigation__logo___3i6To {\n  height: 40px;\n  width: 40px; }\n\n.PrimaryNavigation__bucketFiller___3DqcQ {\n  flex-grow: 1; }\n\n.PrimaryNavigation__sliders___y1RID {\n  height: 100%;\n  left: 0;\n  pointer-events: none;\n  position: relative; }\n\n@keyframes PrimaryNavigation__pulse___26cps {\n  0% {\n    opacity: .5; }\n  25% {\n    opacity: 1; }\n  100% {\n    opacity: .5; } }\n\n.PrimaryNavigation__outer___2tqlA {\n  display: flex;\n  height: 100%;\n  width: 100%;\n  position: absolute; }\n\n.PrimaryNavigation__spacer___2aUSh {\n  flex: 0 0 76px;\n  content: ' '; }\n\n.PrimaryNavigation__content___qzHzB {\n  display: flex;\n  flex-grow: 1;\n  height: 100%;\n  flex-direction: column; }\n\n.PrimaryNavigation__loadingBucket___34w6C {\n  border-radius: 100%;\n  height: 40px;\n  margin: 16px;\n  opacity: 0.25;\n  width: 40px; }\n  .PrimaryNavigation__loadingBucket___34w6C.PrimaryNavigation__bottom___Y_8Xg {\n    bottom: 16px;\n    position: absolute; }\n\n.PrimaryNavigation__children___3pRmf {\n  background-color: #ECF0F2;\n  flex-grow: 1;\n  height: 100%;\n  overflow-y: auto; }\n", ""]);
-
-// exports
-exports.locals = {
-	"nav": "PrimaryNavigation__nav___3JVxy",
-	"buckets": "PrimaryNavigation__buckets___1k78s",
-	"logoBucket": "PrimaryNavigation__logoBucket___3OqZD",
-	"logo": "PrimaryNavigation__logo___3i6To",
-	"bucketFiller": "PrimaryNavigation__bucketFiller___3DqcQ",
-	"sliders": "PrimaryNavigation__sliders___y1RID",
-	"outer": "PrimaryNavigation__outer___2tqlA",
-	"spacer": "PrimaryNavigation__spacer___2aUSh",
-	"content": "PrimaryNavigation__content___qzHzB",
-	"loadingBucket": "PrimaryNavigation__loadingBucket___34w6C",
-	"bottom": "PrimaryNavigation__bottom___Y_8Xg",
-	"children": "PrimaryNavigation__children___3pRmf",
-	"pulse": "PrimaryNavigation__pulse___26cps"
-};
-
-/***/ }),
-/* 775 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -82289,7 +82554,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _Bucket = __webpack_require__(776);
+var _Bucket = __webpack_require__(774);
 
 var _Bucket2 = _interopRequireDefault(_Bucket);
 
@@ -82298,7 +82563,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Bucket2.default;
 
 /***/ }),
-/* 776 */
+/* 774 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82328,17 +82593,17 @@ var _reactRouter = __webpack_require__(59);
 
 var _reactRouterDom = __webpack_require__(43);
 
-var _isUrlExternal = __webpack_require__(777);
+var _isUrlExternal = __webpack_require__(775);
 
 var _isUrlExternal2 = _interopRequireDefault(_isUrlExternal);
-
-var _Bucket = __webpack_require__(778);
-
-var _Bucket2 = _interopRequireDefault(_Bucket);
 
 var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
+
+var _Bucket = __webpack_require__(776);
+
+var _Bucket2 = _interopRequireDefault(_Bucket);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -82382,7 +82647,9 @@ var Bucket = function (_Component) {
 
       var external = (0, _isUrlExternal2.default)(route);
       var activeChild = items && items.find(function (child) {
-        return (0, _reactRouter.matchPath)(location.pathname + location.hash, { path: child.route }) !== null;
+        return (0, _reactRouter.matchPath)(location.pathname + location.hash, {
+          path: child.route
+        }) !== null;
       });
       var notificationChild = items && items.find(function (child) {
         return child.notifications > 0;
@@ -82416,20 +82683,18 @@ var Bucket = function (_Component) {
             _extends({ target: '_blank', href: route }, props),
             content
           );
-        } else {
-          return _react2.default.createElement(
-            _reactRouterDom.NavLink,
-            _extends({ exact: true, to: route, activeClassName: _Bucket2.default.current }, props),
-            content
-          );
         }
-      } else {
         return _react2.default.createElement(
-          'div',
-          props,
+          _reactRouterDom.NavLink,
+          _extends({ exact: true, to: route, activeClassName: _Bucket2.default.current }, props),
           content
         );
       }
+      return _react2.default.createElement(
+        'div',
+        props,
+        content
+      );
     }
   }]);
 
@@ -82443,7 +82708,8 @@ Bucket.propTypes = {
   route: _propTypes2.default.string,
   items: _propTypes2.default.arrayOf(_propTypes2.default.shape({
     route: _propTypes2.default.string.isRequired,
-    notifications: _propTypes2.default.number })),
+    notifications: _propTypes2.default.number
+  })),
   onSelect: _propTypes2.default.func,
   open: _propTypes2.default.bool,
   location: _propTypes2.default.object,
@@ -82462,7 +82728,7 @@ Bucket.defaultProps = {
 exports.default = (0, _reactRouter.withRouter)(Bucket);
 
 /***/ }),
-/* 777 */
+/* 775 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82490,11 +82756,11 @@ module.exports = function(url) {
 
 
 /***/ }),
-/* 778 */
+/* 776 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(779);
+var content = __webpack_require__(777);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -82540,7 +82806,7 @@ if(false) {
 }
 
 /***/ }),
-/* 779 */
+/* 777 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -82564,7 +82830,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 780 */
+/* 778 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82575,7 +82841,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _Slider = __webpack_require__(781);
+var _Slider = __webpack_require__(779);
 
 var _Slider2 = _interopRequireDefault(_Slider);
 
@@ -82584,7 +82850,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Slider2.default;
 
 /***/ }),
-/* 781 */
+/* 779 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82610,13 +82876,13 @@ var _classnames2 = __webpack_require__(8);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _Slider = __webpack_require__(782);
-
-var _Slider2 = _interopRequireDefault(_Slider);
-
-var _List = __webpack_require__(784);
+var _List = __webpack_require__(780);
 
 var _List2 = _interopRequireDefault(_List);
+
+var _Slider = __webpack_require__(784);
+
+var _Slider2 = _interopRequireDefault(_Slider);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -82658,7 +82924,8 @@ var Slider = function (_Component) {
         'div',
         {
           className: (0, _classnames3.default)(_Slider2.default.slider, (_classnames = {}, _defineProperty(_classnames, _Slider2.default.open, open), _defineProperty(_classnames, _Slider2.default.bottom, bottom), _classnames)),
-          key: key },
+          key: key
+        },
         _react2.default.createElement('div', { className: _Slider2.default.filler }),
         _react2.default.createElement(_List2.default, _extends({ className: _Slider2.default.list }, restProps))
       );
@@ -82675,7 +82942,8 @@ Slider.propTypes = {
   route: _propTypes2.default.string,
   items: _propTypes2.default.arrayOf(_propTypes2.default.shape({
     route: _propTypes2.default.string.isRequired,
-    notifications: _propTypes2.default.number })),
+    notifications: _propTypes2.default.number
+  })),
   open: _propTypes2.default.bool,
   bottom: _propTypes2.default.bool,
   onSelect: _propTypes2.default.func
@@ -82690,78 +82958,7 @@ Slider.defaultProps = {
 exports.default = Slider;
 
 /***/ }),
-/* 782 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(783);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Slider.scss", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Slider.scss");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 783 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
-exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
-
-// module
-exports.push([module.i, ".Slider__slider___1kyLC {\n  background-color: #192D36;\n  display: flex;\n  filter: brightness(65%);\n  flex-direction: column;\n  height: 100%;\n  left: -188px;\n  position: absolute;\n  width: 264px;\n  z-index: -99;\n  transition: left 0.4s ease-in-out, filter 0.4s ease-out; }\n  .Slider__slider___1kyLC:nth-child(1) .Slider__filler___dCjNj {\n    height: 76px; }\n  .Slider__slider___1kyLC:nth-child(2) .Slider__filler___dCjNj {\n    height: 152px; }\n  .Slider__slider___1kyLC:nth-child(3) .Slider__filler___dCjNj {\n    height: 228px; }\n  .Slider__slider___1kyLC:nth-child(4) .Slider__filler___dCjNj {\n    height: 304px; }\n  .Slider__slider___1kyLC:nth-child(5) .Slider__filler___dCjNj {\n    height: 380px; }\n  .Slider__slider___1kyLC:nth-child(6) .Slider__filler___dCjNj {\n    height: 456px; }\n  .Slider__slider___1kyLC:nth-child(7) .Slider__filler___dCjNj {\n    height: 532px; }\n  .Slider__slider___1kyLC:nth-child(8) .Slider__filler___dCjNj {\n    height: 608px; }\n  .Slider__slider___1kyLC:nth-child(9) .Slider__filler___dCjNj {\n    height: 684px; }\n  .Slider__slider___1kyLC:nth-child(10) .Slider__filler___dCjNj {\n    height: 760px; }\n  .Slider__slider___1kyLC:nth-child(11) .Slider__filler___dCjNj {\n    height: 836px; }\n  .Slider__slider___1kyLC:nth-child(12) .Slider__filler___dCjNj {\n    height: 912px; }\n  .Slider__slider___1kyLC:nth-child(13) .Slider__filler___dCjNj {\n    height: 988px; }\n  .Slider__slider___1kyLC:nth-child(14) .Slider__filler___dCjNj {\n    height: 1064px; }\n  .Slider__slider___1kyLC:nth-child(15) .Slider__filler___dCjNj {\n    height: 1140px; }\n  .Slider__slider___1kyLC:nth-child(16) .Slider__filler___dCjNj {\n    height: 1216px; }\n  .Slider__slider___1kyLC:nth-child(17) .Slider__filler___dCjNj {\n    height: 1292px; }\n  .Slider__slider___1kyLC:nth-child(18) .Slider__filler___dCjNj {\n    height: 1368px; }\n  .Slider__slider___1kyLC:nth-child(19) .Slider__filler___dCjNj {\n    height: 1444px; }\n  .Slider__slider___1kyLC:nth-child(20) .Slider__filler___dCjNj {\n    height: 1520px; }\n  .Slider__slider___1kyLC:nth-child(21) .Slider__filler___dCjNj {\n    height: 1596px; }\n  .Slider__slider___1kyLC:nth-child(22) .Slider__filler___dCjNj {\n    height: 1672px; }\n  .Slider__slider___1kyLC:nth-child(23) .Slider__filler___dCjNj {\n    height: 1748px; }\n  .Slider__slider___1kyLC:nth-child(24) .Slider__filler___dCjNj {\n    height: 1824px; }\n  .Slider__slider___1kyLC:nth-child(25) .Slider__filler___dCjNj {\n    height: 1900px; }\n  .Slider__slider___1kyLC:nth-child(26) .Slider__filler___dCjNj {\n    height: 1976px; }\n  .Slider__slider___1kyLC:nth-child(27) .Slider__filler___dCjNj {\n    height: 2052px; }\n  .Slider__slider___1kyLC:nth-child(28) .Slider__filler___dCjNj {\n    height: 2128px; }\n  .Slider__slider___1kyLC:nth-child(29) .Slider__filler___dCjNj {\n    height: 2204px; }\n  .Slider__slider___1kyLC:nth-child(30) .Slider__filler___dCjNj {\n    height: 2280px; }\n  .Slider__slider___1kyLC:nth-child(31) .Slider__filler___dCjNj {\n    height: 2356px; }\n  .Slider__slider___1kyLC:nth-child(32) .Slider__filler___dCjNj {\n    height: 2432px; }\n  .Slider__slider___1kyLC:nth-child(33) .Slider__filler___dCjNj {\n    height: 2508px; }\n  .Slider__slider___1kyLC:nth-child(34) .Slider__filler___dCjNj {\n    height: 2584px; }\n  .Slider__slider___1kyLC:nth-child(35) .Slider__filler___dCjNj {\n    height: 2660px; }\n  .Slider__slider___1kyLC:nth-child(36) .Slider__filler___dCjNj {\n    height: 2736px; }\n  .Slider__slider___1kyLC:nth-child(37) .Slider__filler___dCjNj {\n    height: 2812px; }\n  .Slider__slider___1kyLC:nth-child(38) .Slider__filler___dCjNj {\n    height: 2888px; }\n  .Slider__slider___1kyLC:nth-child(39) .Slider__filler___dCjNj {\n    height: 2964px; }\n  .Slider__slider___1kyLC:nth-child(40) .Slider__filler___dCjNj {\n    height: 3040px; }\n  .Slider__slider___1kyLC:nth-child(41) .Slider__filler___dCjNj {\n    height: 3116px; }\n  .Slider__slider___1kyLC:nth-child(42) .Slider__filler___dCjNj {\n    height: 3192px; }\n  .Slider__slider___1kyLC:nth-child(43) .Slider__filler___dCjNj {\n    height: 3268px; }\n  .Slider__slider___1kyLC:nth-child(44) .Slider__filler___dCjNj {\n    height: 3344px; }\n  .Slider__slider___1kyLC:nth-child(45) .Slider__filler___dCjNj {\n    height: 3420px; }\n  .Slider__slider___1kyLC:nth-child(46) .Slider__filler___dCjNj {\n    height: 3496px; }\n  .Slider__slider___1kyLC:nth-child(47) .Slider__filler___dCjNj {\n    height: 3572px; }\n  .Slider__slider___1kyLC:nth-child(48) .Slider__filler___dCjNj {\n    height: 3648px; }\n  .Slider__slider___1kyLC:nth-child(49) .Slider__filler___dCjNj {\n    height: 3724px; }\n  .Slider__slider___1kyLC:nth-child(50) .Slider__filler___dCjNj {\n    height: 3800px; }\n  .Slider__slider___1kyLC:nth-child(51) .Slider__filler___dCjNj {\n    height: 3876px; }\n  .Slider__slider___1kyLC:nth-child(52) .Slider__filler___dCjNj {\n    height: 3952px; }\n  .Slider__slider___1kyLC:nth-child(53) .Slider__filler___dCjNj {\n    height: 4028px; }\n  .Slider__slider___1kyLC:nth-child(54) .Slider__filler___dCjNj {\n    height: 4104px; }\n  .Slider__slider___1kyLC:nth-child(55) .Slider__filler___dCjNj {\n    height: 4180px; }\n  .Slider__slider___1kyLC:nth-child(56) .Slider__filler___dCjNj {\n    height: 4256px; }\n  .Slider__slider___1kyLC:nth-child(57) .Slider__filler___dCjNj {\n    height: 4332px; }\n  .Slider__slider___1kyLC:nth-child(58) .Slider__filler___dCjNj {\n    height: 4408px; }\n  .Slider__slider___1kyLC:nth-child(59) .Slider__filler___dCjNj {\n    height: 4484px; }\n  .Slider__slider___1kyLC:nth-child(60) .Slider__filler___dCjNj {\n    height: 4560px; }\n  .Slider__slider___1kyLC:nth-child(61) .Slider__filler___dCjNj {\n    height: 4636px; }\n  .Slider__slider___1kyLC:nth-child(62) .Slider__filler___dCjNj {\n    height: 4712px; }\n  .Slider__slider___1kyLC:nth-child(63) .Slider__filler___dCjNj {\n    height: 4788px; }\n  .Slider__slider___1kyLC:nth-child(64) .Slider__filler___dCjNj {\n    height: 4864px; }\n  .Slider__slider___1kyLC:nth-child(65) .Slider__filler___dCjNj {\n    height: 4940px; }\n  .Slider__slider___1kyLC:nth-child(66) .Slider__filler___dCjNj {\n    height: 5016px; }\n  .Slider__slider___1kyLC:nth-child(67) .Slider__filler___dCjNj {\n    height: 5092px; }\n  .Slider__slider___1kyLC:nth-child(68) .Slider__filler___dCjNj {\n    height: 5168px; }\n  .Slider__slider___1kyLC:nth-child(69) .Slider__filler___dCjNj {\n    height: 5244px; }\n  .Slider__slider___1kyLC:nth-child(70) .Slider__filler___dCjNj {\n    height: 5320px; }\n  .Slider__slider___1kyLC:nth-child(71) .Slider__filler___dCjNj {\n    height: 5396px; }\n  .Slider__slider___1kyLC:nth-child(72) .Slider__filler___dCjNj {\n    height: 5472px; }\n  .Slider__slider___1kyLC:nth-child(73) .Slider__filler___dCjNj {\n    height: 5548px; }\n  .Slider__slider___1kyLC:nth-child(74) .Slider__filler___dCjNj {\n    height: 5624px; }\n  .Slider__slider___1kyLC:nth-child(75) .Slider__filler___dCjNj {\n    height: 5700px; }\n  .Slider__slider___1kyLC:nth-child(76) .Slider__filler___dCjNj {\n    height: 5776px; }\n  .Slider__slider___1kyLC:nth-child(77) .Slider__filler___dCjNj {\n    height: 5852px; }\n  .Slider__slider___1kyLC:nth-child(78) .Slider__filler___dCjNj {\n    height: 5928px; }\n  .Slider__slider___1kyLC:nth-child(79) .Slider__filler___dCjNj {\n    height: 6004px; }\n  .Slider__slider___1kyLC:nth-child(80) .Slider__filler___dCjNj {\n    height: 6080px; }\n  .Slider__slider___1kyLC:nth-child(81) .Slider__filler___dCjNj {\n    height: 6156px; }\n  .Slider__slider___1kyLC:nth-child(82) .Slider__filler___dCjNj {\n    height: 6232px; }\n  .Slider__slider___1kyLC:nth-child(83) .Slider__filler___dCjNj {\n    height: 6308px; }\n  .Slider__slider___1kyLC:nth-child(84) .Slider__filler___dCjNj {\n    height: 6384px; }\n  .Slider__slider___1kyLC:nth-child(85) .Slider__filler___dCjNj {\n    height: 6460px; }\n  .Slider__slider___1kyLC:nth-child(86) .Slider__filler___dCjNj {\n    height: 6536px; }\n  .Slider__slider___1kyLC:nth-child(87) .Slider__filler___dCjNj {\n    height: 6612px; }\n  .Slider__slider___1kyLC:nth-child(88) .Slider__filler___dCjNj {\n    height: 6688px; }\n  .Slider__slider___1kyLC:nth-child(89) .Slider__filler___dCjNj {\n    height: 6764px; }\n  .Slider__slider___1kyLC:nth-child(90) .Slider__filler___dCjNj {\n    height: 6840px; }\n  .Slider__slider___1kyLC:nth-child(91) .Slider__filler___dCjNj {\n    height: 6916px; }\n  .Slider__slider___1kyLC:nth-child(92) .Slider__filler___dCjNj {\n    height: 6992px; }\n  .Slider__slider___1kyLC:nth-child(93) .Slider__filler___dCjNj {\n    height: 7068px; }\n  .Slider__slider___1kyLC:nth-child(94) .Slider__filler___dCjNj {\n    height: 7144px; }\n  .Slider__slider___1kyLC:nth-child(95) .Slider__filler___dCjNj {\n    height: 7220px; }\n  .Slider__slider___1kyLC:nth-child(96) .Slider__filler___dCjNj {\n    height: 7296px; }\n  .Slider__slider___1kyLC:nth-child(97) .Slider__filler___dCjNj {\n    height: 7372px; }\n  .Slider__slider___1kyLC:nth-child(98) .Slider__filler___dCjNj {\n    height: 7448px; }\n  .Slider__slider___1kyLC:nth-child(99) .Slider__filler___dCjNj {\n    height: 7524px; }\n  .Slider__slider___1kyLC:nth-child(100) .Slider__filler___dCjNj {\n    height: 7600px; }\n  .Slider__slider___1kyLC.Slider__bottom___7Rq19 .Slider__filler___dCjNj {\n    height: 100%; }\n\n.Slider__bottom___7Rq19 .Slider__list___1lcnL {\n  transform: translate(-40px, 20px) scale(0.6); }\n\n.Slider__open___8OjMT {\n  left: 76px;\n  filter: none;\n  pointer-events: auto;\n  z-index: -1;\n  transition: left 0.4s ease-in-out; }\n  .Slider__open___8OjMT .Slider__list___1lcnL {\n    opacity: 1;\n    transform: none; }\n\n.Slider__list___1lcnL {\n  margin: 8px 16px 16px 24px;\n  opacity: 0;\n  transform: translate(-40px, -20px) scale(0.6);\n  transition: opacity 0.3s 0.1s, transform 0.3s 0.1s; }\n", ""]);
-
-// exports
-exports.locals = {
-	"slider": "Slider__slider___1kyLC",
-	"filler": "Slider__filler___dCjNj",
-	"bottom": "Slider__bottom___7Rq19",
-	"list": "Slider__list___1lcnL",
-	"open": "Slider__open___8OjMT"
-};
-
-/***/ }),
-/* 784 */
+/* 780 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82772,7 +82969,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _List = __webpack_require__(785);
+var _List = __webpack_require__(781);
 
 var _List2 = _interopRequireDefault(_List);
 
@@ -82781,7 +82978,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _List2.default;
 
 /***/ }),
-/* 785 */
+/* 781 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82809,25 +83006,46 @@ var _reactRouter = __webpack_require__(59);
 
 var _reactRouterDom = __webpack_require__(43);
 
-var _List = __webpack_require__(786);
+var _List = __webpack_require__(782);
 
 var _List2 = _interopRequireDefault(_List);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Navigation List
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
+                                                                                                                                                                                                                   *
+                                                                                                                                                                                                                   * Navigation List
+                                                                                                                                                                                                                   *
+                                                                                                                                                                                                                   */
 
 var SUPPORTED_BADGES = ['NEW', 'FREE'];
+
+function renderBadge(item) {
+  if (item.notifications > 0) {
+    return _react2.default.createElement(
+      'div',
+      { className: (0, _classnames4.default)(_List2.default.badge, _List2.default.notification) },
+      item.notifications
+    );
+  } else if (item.badge) {
+    var _classnames;
+
+    return _react2.default.createElement(
+      'div',
+      {
+        className: (0, _classnames4.default)(_List2.default.badge, (_classnames = {}, _defineProperty(_classnames, _List2.default.free, item.badge === 'FREE'), _defineProperty(_classnames, _List2.default.new, item.badge === 'NEW'), _classnames))
+      },
+      item.badge
+    );
+  }
+  return null;
+}
 
 var List = function (_Component) {
   _inherits(List, _Component);
@@ -82837,37 +83055,16 @@ var List = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).call(this, props));
 
-    _this.renderBadge = _this.renderBadge.bind(_this);
     _this.renderItem = _this.renderItem.bind(_this);
     return _this;
   }
 
   _createClass(List, [{
-    key: 'renderBadge',
-    value: function renderBadge(item) {
-      if (item.notifications > 0) {
-        return _react2.default.createElement(
-          'div',
-          { className: (0, _classnames4.default)(_List2.default.badge, _List2.default.notification) },
-          item.notifications
-        );
-      } else if (item.badge) {
-        var _classnames;
-
-        return _react2.default.createElement(
-          'div',
-          { className: (0, _classnames4.default)(_List2.default.badge, (_classnames = {}, _defineProperty(_classnames, _List2.default.free, item.badge === 'FREE'), _defineProperty(_classnames, _List2.default.new, item.badge === 'NEW'), _classnames)) },
-          item.badge
-        );
-      }
-    }
-  }, {
     key: 'renderItem',
     value: function renderItem(item) {
-      var renderBadge = this.renderBadge;
       var onSelect = this.props.onSelect;
 
-      var current = (0, _reactRouter.matchPath)(location.pathname + location.hash, {
+      var current = (0, _reactRouter.matchPath)(window.location.pathname + window.location.hash, {
         path: item.route
       }) !== null;
 
@@ -82878,7 +83075,8 @@ var List = function (_Component) {
           activeClassName: _List2.default.current,
           key: item.key,
           to: item.route,
-          onClick: onSelect },
+          onClick: onSelect
+        },
         item.label,
         renderBadge(item)
       );
@@ -82938,11 +83136,11 @@ List.defaultProps = {
 exports.default = List;
 
 /***/ }),
-/* 786 */
+/* 782 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(787);
+var content = __webpack_require__(783);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -82988,7 +83186,7 @@ if(false) {
 }
 
 /***/ }),
-/* 787 */
+/* 783 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -83008,6 +83206,156 @@ exports.locals = {
 	"notification": "List__notification___1Nj81",
 	"new": "List__new___j-oad",
 	"free": "List__free___2qYFP"
+};
+
+/***/ }),
+/* 784 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(785);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Slider.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./Slider.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 785 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".Slider__slider___1kyLC {\n  background-color: #192D36;\n  display: flex;\n  filter: brightness(65%);\n  flex-direction: column;\n  height: 100%;\n  left: -188px;\n  position: absolute;\n  width: 264px;\n  z-index: -99;\n  transition: left 0.4s ease-in-out, filter 0.4s ease-out; }\n  .Slider__slider___1kyLC:nth-child(1) .Slider__filler___dCjNj {\n    height: 76px; }\n  .Slider__slider___1kyLC:nth-child(2) .Slider__filler___dCjNj {\n    height: 152px; }\n  .Slider__slider___1kyLC:nth-child(3) .Slider__filler___dCjNj {\n    height: 228px; }\n  .Slider__slider___1kyLC:nth-child(4) .Slider__filler___dCjNj {\n    height: 304px; }\n  .Slider__slider___1kyLC:nth-child(5) .Slider__filler___dCjNj {\n    height: 380px; }\n  .Slider__slider___1kyLC:nth-child(6) .Slider__filler___dCjNj {\n    height: 456px; }\n  .Slider__slider___1kyLC:nth-child(7) .Slider__filler___dCjNj {\n    height: 532px; }\n  .Slider__slider___1kyLC:nth-child(8) .Slider__filler___dCjNj {\n    height: 608px; }\n  .Slider__slider___1kyLC:nth-child(9) .Slider__filler___dCjNj {\n    height: 684px; }\n  .Slider__slider___1kyLC:nth-child(10) .Slider__filler___dCjNj {\n    height: 760px; }\n  .Slider__slider___1kyLC:nth-child(11) .Slider__filler___dCjNj {\n    height: 836px; }\n  .Slider__slider___1kyLC:nth-child(12) .Slider__filler___dCjNj {\n    height: 912px; }\n  .Slider__slider___1kyLC:nth-child(13) .Slider__filler___dCjNj {\n    height: 988px; }\n  .Slider__slider___1kyLC:nth-child(14) .Slider__filler___dCjNj {\n    height: 1064px; }\n  .Slider__slider___1kyLC:nth-child(15) .Slider__filler___dCjNj {\n    height: 1140px; }\n  .Slider__slider___1kyLC:nth-child(16) .Slider__filler___dCjNj {\n    height: 1216px; }\n  .Slider__slider___1kyLC:nth-child(17) .Slider__filler___dCjNj {\n    height: 1292px; }\n  .Slider__slider___1kyLC:nth-child(18) .Slider__filler___dCjNj {\n    height: 1368px; }\n  .Slider__slider___1kyLC:nth-child(19) .Slider__filler___dCjNj {\n    height: 1444px; }\n  .Slider__slider___1kyLC:nth-child(20) .Slider__filler___dCjNj {\n    height: 1520px; }\n  .Slider__slider___1kyLC:nth-child(21) .Slider__filler___dCjNj {\n    height: 1596px; }\n  .Slider__slider___1kyLC:nth-child(22) .Slider__filler___dCjNj {\n    height: 1672px; }\n  .Slider__slider___1kyLC:nth-child(23) .Slider__filler___dCjNj {\n    height: 1748px; }\n  .Slider__slider___1kyLC:nth-child(24) .Slider__filler___dCjNj {\n    height: 1824px; }\n  .Slider__slider___1kyLC:nth-child(25) .Slider__filler___dCjNj {\n    height: 1900px; }\n  .Slider__slider___1kyLC:nth-child(26) .Slider__filler___dCjNj {\n    height: 1976px; }\n  .Slider__slider___1kyLC:nth-child(27) .Slider__filler___dCjNj {\n    height: 2052px; }\n  .Slider__slider___1kyLC:nth-child(28) .Slider__filler___dCjNj {\n    height: 2128px; }\n  .Slider__slider___1kyLC:nth-child(29) .Slider__filler___dCjNj {\n    height: 2204px; }\n  .Slider__slider___1kyLC:nth-child(30) .Slider__filler___dCjNj {\n    height: 2280px; }\n  .Slider__slider___1kyLC:nth-child(31) .Slider__filler___dCjNj {\n    height: 2356px; }\n  .Slider__slider___1kyLC:nth-child(32) .Slider__filler___dCjNj {\n    height: 2432px; }\n  .Slider__slider___1kyLC:nth-child(33) .Slider__filler___dCjNj {\n    height: 2508px; }\n  .Slider__slider___1kyLC:nth-child(34) .Slider__filler___dCjNj {\n    height: 2584px; }\n  .Slider__slider___1kyLC:nth-child(35) .Slider__filler___dCjNj {\n    height: 2660px; }\n  .Slider__slider___1kyLC:nth-child(36) .Slider__filler___dCjNj {\n    height: 2736px; }\n  .Slider__slider___1kyLC:nth-child(37) .Slider__filler___dCjNj {\n    height: 2812px; }\n  .Slider__slider___1kyLC:nth-child(38) .Slider__filler___dCjNj {\n    height: 2888px; }\n  .Slider__slider___1kyLC:nth-child(39) .Slider__filler___dCjNj {\n    height: 2964px; }\n  .Slider__slider___1kyLC:nth-child(40) .Slider__filler___dCjNj {\n    height: 3040px; }\n  .Slider__slider___1kyLC:nth-child(41) .Slider__filler___dCjNj {\n    height: 3116px; }\n  .Slider__slider___1kyLC:nth-child(42) .Slider__filler___dCjNj {\n    height: 3192px; }\n  .Slider__slider___1kyLC:nth-child(43) .Slider__filler___dCjNj {\n    height: 3268px; }\n  .Slider__slider___1kyLC:nth-child(44) .Slider__filler___dCjNj {\n    height: 3344px; }\n  .Slider__slider___1kyLC:nth-child(45) .Slider__filler___dCjNj {\n    height: 3420px; }\n  .Slider__slider___1kyLC:nth-child(46) .Slider__filler___dCjNj {\n    height: 3496px; }\n  .Slider__slider___1kyLC:nth-child(47) .Slider__filler___dCjNj {\n    height: 3572px; }\n  .Slider__slider___1kyLC:nth-child(48) .Slider__filler___dCjNj {\n    height: 3648px; }\n  .Slider__slider___1kyLC:nth-child(49) .Slider__filler___dCjNj {\n    height: 3724px; }\n  .Slider__slider___1kyLC:nth-child(50) .Slider__filler___dCjNj {\n    height: 3800px; }\n  .Slider__slider___1kyLC:nth-child(51) .Slider__filler___dCjNj {\n    height: 3876px; }\n  .Slider__slider___1kyLC:nth-child(52) .Slider__filler___dCjNj {\n    height: 3952px; }\n  .Slider__slider___1kyLC:nth-child(53) .Slider__filler___dCjNj {\n    height: 4028px; }\n  .Slider__slider___1kyLC:nth-child(54) .Slider__filler___dCjNj {\n    height: 4104px; }\n  .Slider__slider___1kyLC:nth-child(55) .Slider__filler___dCjNj {\n    height: 4180px; }\n  .Slider__slider___1kyLC:nth-child(56) .Slider__filler___dCjNj {\n    height: 4256px; }\n  .Slider__slider___1kyLC:nth-child(57) .Slider__filler___dCjNj {\n    height: 4332px; }\n  .Slider__slider___1kyLC:nth-child(58) .Slider__filler___dCjNj {\n    height: 4408px; }\n  .Slider__slider___1kyLC:nth-child(59) .Slider__filler___dCjNj {\n    height: 4484px; }\n  .Slider__slider___1kyLC:nth-child(60) .Slider__filler___dCjNj {\n    height: 4560px; }\n  .Slider__slider___1kyLC:nth-child(61) .Slider__filler___dCjNj {\n    height: 4636px; }\n  .Slider__slider___1kyLC:nth-child(62) .Slider__filler___dCjNj {\n    height: 4712px; }\n  .Slider__slider___1kyLC:nth-child(63) .Slider__filler___dCjNj {\n    height: 4788px; }\n  .Slider__slider___1kyLC:nth-child(64) .Slider__filler___dCjNj {\n    height: 4864px; }\n  .Slider__slider___1kyLC:nth-child(65) .Slider__filler___dCjNj {\n    height: 4940px; }\n  .Slider__slider___1kyLC:nth-child(66) .Slider__filler___dCjNj {\n    height: 5016px; }\n  .Slider__slider___1kyLC:nth-child(67) .Slider__filler___dCjNj {\n    height: 5092px; }\n  .Slider__slider___1kyLC:nth-child(68) .Slider__filler___dCjNj {\n    height: 5168px; }\n  .Slider__slider___1kyLC:nth-child(69) .Slider__filler___dCjNj {\n    height: 5244px; }\n  .Slider__slider___1kyLC:nth-child(70) .Slider__filler___dCjNj {\n    height: 5320px; }\n  .Slider__slider___1kyLC:nth-child(71) .Slider__filler___dCjNj {\n    height: 5396px; }\n  .Slider__slider___1kyLC:nth-child(72) .Slider__filler___dCjNj {\n    height: 5472px; }\n  .Slider__slider___1kyLC:nth-child(73) .Slider__filler___dCjNj {\n    height: 5548px; }\n  .Slider__slider___1kyLC:nth-child(74) .Slider__filler___dCjNj {\n    height: 5624px; }\n  .Slider__slider___1kyLC:nth-child(75) .Slider__filler___dCjNj {\n    height: 5700px; }\n  .Slider__slider___1kyLC:nth-child(76) .Slider__filler___dCjNj {\n    height: 5776px; }\n  .Slider__slider___1kyLC:nth-child(77) .Slider__filler___dCjNj {\n    height: 5852px; }\n  .Slider__slider___1kyLC:nth-child(78) .Slider__filler___dCjNj {\n    height: 5928px; }\n  .Slider__slider___1kyLC:nth-child(79) .Slider__filler___dCjNj {\n    height: 6004px; }\n  .Slider__slider___1kyLC:nth-child(80) .Slider__filler___dCjNj {\n    height: 6080px; }\n  .Slider__slider___1kyLC:nth-child(81) .Slider__filler___dCjNj {\n    height: 6156px; }\n  .Slider__slider___1kyLC:nth-child(82) .Slider__filler___dCjNj {\n    height: 6232px; }\n  .Slider__slider___1kyLC:nth-child(83) .Slider__filler___dCjNj {\n    height: 6308px; }\n  .Slider__slider___1kyLC:nth-child(84) .Slider__filler___dCjNj {\n    height: 6384px; }\n  .Slider__slider___1kyLC:nth-child(85) .Slider__filler___dCjNj {\n    height: 6460px; }\n  .Slider__slider___1kyLC:nth-child(86) .Slider__filler___dCjNj {\n    height: 6536px; }\n  .Slider__slider___1kyLC:nth-child(87) .Slider__filler___dCjNj {\n    height: 6612px; }\n  .Slider__slider___1kyLC:nth-child(88) .Slider__filler___dCjNj {\n    height: 6688px; }\n  .Slider__slider___1kyLC:nth-child(89) .Slider__filler___dCjNj {\n    height: 6764px; }\n  .Slider__slider___1kyLC:nth-child(90) .Slider__filler___dCjNj {\n    height: 6840px; }\n  .Slider__slider___1kyLC:nth-child(91) .Slider__filler___dCjNj {\n    height: 6916px; }\n  .Slider__slider___1kyLC:nth-child(92) .Slider__filler___dCjNj {\n    height: 6992px; }\n  .Slider__slider___1kyLC:nth-child(93) .Slider__filler___dCjNj {\n    height: 7068px; }\n  .Slider__slider___1kyLC:nth-child(94) .Slider__filler___dCjNj {\n    height: 7144px; }\n  .Slider__slider___1kyLC:nth-child(95) .Slider__filler___dCjNj {\n    height: 7220px; }\n  .Slider__slider___1kyLC:nth-child(96) .Slider__filler___dCjNj {\n    height: 7296px; }\n  .Slider__slider___1kyLC:nth-child(97) .Slider__filler___dCjNj {\n    height: 7372px; }\n  .Slider__slider___1kyLC:nth-child(98) .Slider__filler___dCjNj {\n    height: 7448px; }\n  .Slider__slider___1kyLC:nth-child(99) .Slider__filler___dCjNj {\n    height: 7524px; }\n  .Slider__slider___1kyLC:nth-child(100) .Slider__filler___dCjNj {\n    height: 7600px; }\n  .Slider__slider___1kyLC.Slider__bottom___7Rq19 .Slider__filler___dCjNj {\n    height: 100%; }\n\n.Slider__bottom___7Rq19 .Slider__list___1lcnL {\n  transform: translate(-40px, 20px) scale(0.6); }\n\n.Slider__open___8OjMT {\n  left: 76px;\n  filter: none;\n  pointer-events: auto;\n  z-index: -1;\n  transition: left 0.4s ease-in-out; }\n  .Slider__open___8OjMT .Slider__list___1lcnL {\n    opacity: 1;\n    transform: none; }\n\n.Slider__list___1lcnL {\n  margin: 8px 16px 16px 24px;\n  opacity: 0;\n  transform: translate(-40px, -20px) scale(0.6);\n  transition: opacity 0.3s 0.1s, transform 0.3s 0.1s; }\n", ""]);
+
+// exports
+exports.locals = {
+	"slider": "Slider__slider___1kyLC",
+	"filler": "Slider__filler___dCjNj",
+	"bottom": "Slider__bottom___7Rq19",
+	"list": "Slider__list___1lcnL",
+	"open": "Slider__open___8OjMT"
+};
+
+/***/ }),
+/* 786 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(787);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./PrimaryNavigation.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-1!../../../../node_modules/sass-loader/lib/loader.js!./PrimaryNavigation.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 787 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);", ""]);
+exports.push([module.i, "@import url(https://d2g92a8pyizotc.cloudfront.net/public/fonts/MessinaSansWeb/MessinaSansWeb.css);", ""]);
+
+// module
+exports.push([module.i, ".PrimaryNavigation__nav___3JVxy {\n  font-family: \"MessinaSansWeb\", \"Arial\", sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  user-select: none;\n  z-index: 99; }\n\n.PrimaryNavigation__buckets___1k78s {\n  background-color: #2B4B5A;\n  display: flex;\n  flex-direction: column;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: absolute;\n  height: 100%;\n  width: 76px;\n  z-index: 1; }\n\n.PrimaryNavigation__logoBucket___3OqZD {\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  flex-shrink: 0;\n  height: 76px;\n  justify-content: center;\n  max-width: 76px;\n  text-align: center;\n  transition: all 0.2s; }\n  .PrimaryNavigation__logoBucket___3OqZD:hover {\n    background-color: #223C48; }\n  .PrimaryNavigation__logoBucket___3OqZD:active {\n    background-color: #192D36; }\n\n.PrimaryNavigation__logo___3i6To {\n  height: 40px;\n  width: 40px; }\n\n.PrimaryNavigation__bucketFiller___3DqcQ {\n  flex-grow: 1; }\n\n.PrimaryNavigation__sliders___y1RID {\n  height: 100%;\n  left: 0;\n  pointer-events: none;\n  position: relative; }\n\n@keyframes PrimaryNavigation__pulse___26cps {\n  0% {\n    opacity: .5; }\n  25% {\n    opacity: 1; }\n  100% {\n    opacity: .5; } }\n\n.PrimaryNavigation__outer___2tqlA {\n  display: flex;\n  height: 100%;\n  width: 100%;\n  position: absolute; }\n\n.PrimaryNavigation__spacer___2aUSh {\n  flex: 0 0 76px;\n  content: ' '; }\n\n.PrimaryNavigation__content___qzHzB {\n  display: flex;\n  flex-grow: 1;\n  height: 100%;\n  flex-direction: column; }\n\n.PrimaryNavigation__loadingBucket___34w6C {\n  border-radius: 100%;\n  height: 40px;\n  margin: 16px;\n  opacity: 0.25;\n  width: 40px; }\n  .PrimaryNavigation__loadingBucket___34w6C.PrimaryNavigation__bottom___Y_8Xg {\n    bottom: 16px;\n    position: absolute; }\n\n.PrimaryNavigation__children___3pRmf {\n  background-color: #ECF0F2;\n  flex-grow: 1;\n  height: 100%;\n  overflow-y: auto; }\n", ""]);
+
+// exports
+exports.locals = {
+	"nav": "PrimaryNavigation__nav___3JVxy",
+	"buckets": "PrimaryNavigation__buckets___1k78s",
+	"logoBucket": "PrimaryNavigation__logoBucket___3OqZD",
+	"logo": "PrimaryNavigation__logo___3i6To",
+	"bucketFiller": "PrimaryNavigation__bucketFiller___3DqcQ",
+	"sliders": "PrimaryNavigation__sliders___y1RID",
+	"outer": "PrimaryNavigation__outer___2tqlA",
+	"spacer": "PrimaryNavigation__spacer___2aUSh",
+	"content": "PrimaryNavigation__content___qzHzB",
+	"loadingBucket": "PrimaryNavigation__loadingBucket___34w6C",
+	"bottom": "PrimaryNavigation__bottom___Y_8Xg",
+	"children": "PrimaryNavigation__children___3pRmf",
+	"pulse": "PrimaryNavigation__pulse___26cps"
 };
 
 /***/ }),
@@ -83078,33 +83426,33 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(0);
+var _classnames4 = __webpack_require__(8);
 
-var _react2 = _interopRequireDefault(_react);
+var _classnames5 = _interopRequireDefault(_classnames4);
 
 var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Notification = __webpack_require__(791);
+var _react = __webpack_require__(0);
 
-var _Notification2 = _interopRequireDefault(_Notification);
+var _react2 = _interopRequireDefault(_react);
 
 var _Alert = __webpack_require__(152);
 
 var _Alert2 = _interopRequireDefault(_Alert);
 
-var _Tick = __webpack_require__(155);
-
-var _Tick2 = _interopRequireDefault(_Tick);
-
 var _Cross = __webpack_require__(153);
 
 var _Cross2 = _interopRequireDefault(_Cross);
 
-var _classnames4 = __webpack_require__(8);
+var _Tick = __webpack_require__(155);
 
-var _classnames5 = _interopRequireDefault(_classnames4);
+var _Tick2 = _interopRequireDefault(_Tick);
+
+var _Notification = __webpack_require__(791);
+
+var _Notification2 = _interopRequireDefault(_Notification);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -83412,10 +83760,6 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _PopUp = __webpack_require__(798);
-
-var _PopUp2 = _interopRequireDefault(_PopUp);
-
 var _Icon = __webpack_require__(6);
 
 var _Icon2 = _interopRequireDefault(_Icon);
@@ -83423,6 +83767,10 @@ var _Icon2 = _interopRequireDefault(_Icon);
 var _LoadingSpinner = __webpack_require__(101);
 
 var _LoadingSpinner2 = _interopRequireDefault(_LoadingSpinner);
+
+var _PopUp = __webpack_require__(798);
+
+var _PopUp2 = _interopRequireDefault(_PopUp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
