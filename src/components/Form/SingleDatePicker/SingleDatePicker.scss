@@ -214,7 +214,7 @@
         .CalendarDay__default {
             border: none;
             border-radius: 40px;
-            color: $navy_1;
+            color: $grey_1;
             outline: none;
             @include transition(all 0.2s);
         }
@@ -232,8 +232,8 @@
             color: #565a5c
         }
         .CalendarDay__selected {
-            background: $teal_tint_3;
-            color: $navy_1;
+            background: $teal_light_80;
+            color: $grey_1;
         }
         .CalendarDay__selected:active,
         .CalendarDay__selected:hover {
@@ -244,7 +244,7 @@
         .CalendarDay__blocked_calendar:active,
         .CalendarDay__blocked_calendar:hover {
             background: $n_grey_4;
-            color: $navy_1;
+            color: $grey_1;
         }
         .CalendarDay__blocked_out_of_range,
         .CalendarDay__blocked_out_of_range:active,
@@ -544,7 +544,7 @@
             border: solid 1px $n_grey_2;
             border-radius: 4px;
             box-sizing: border-box;
-            color: $navy_1;
+            color: $grey_1;
             cursor: pointer;
             font-size: $input-size;
             font-weight: $regular;
@@ -580,7 +580,7 @@
             &:hover {
                 border-color: $n_grey_2;
                 &::placeholder {
-                    color: $navy_1;
+                    color: $grey_1;
                 }
             }
         }
@@ -616,7 +616,7 @@
     }
 }
 .icon {
-    color: $navy_1;
+    color: $grey_1;
     fill: currentColor;
     pointer-events: none;
     position: absolute;
@@ -640,14 +640,14 @@
                 background-color: $n_grey_4;
                 border-color: $n_grey_2;
                 cursor: not-allowed;
-                color: $navy_tint_1;
+                color: $grey_2;
                 &::placeholder {
-                    color: $navy_tint_1;
+                    color: $grey_2;
                 }
             }
         }
         .icon {
-            color: $navy_tint_1;
+            color: $grey_2;
         }
     }
 }
@@ -656,7 +656,7 @@
     .inner, .inner:hover {
         :global {
             .DateInput_input {
-                background-color: $sp_light_red;
+                background-color: $red_light_80;
                 border-color: $sp_red;
                 color: $sp_red;
                 &::placeholder {

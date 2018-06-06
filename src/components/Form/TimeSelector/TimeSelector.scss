@@ -28,7 +28,7 @@
   background-color: $white;
   border: solid 1px $n_grey_2;
   border-radius: 4px;
-  color: $navy_1;
+  color: $grey_1;
   cursor: pointer;
   font-size: $input-size;
   font-weight: $regular;
@@ -86,21 +86,21 @@
 .disabled {
   border-color: $n_grey_2;
   cursor: not-allowed;
-  color: $navy_tint_1;
+  color: $grey_2;
   &:hover {
     border-color: $n_grey_2;
-    color: $navy_tint_1;
+    color: $grey_2;
     .clock {
-      color: $navy_tint_2;
+      color: $grey_3;
     }
   }
   .clock {
-    color: $navy_tint_2;
+    color: $grey_3;
   }
 }
 
 .error {
-  background-color: $sp_light_red;
+  background-color: $red_light_80;
   .clock {
     color: $sp_red;
   }
@@ -158,7 +158,7 @@
 }
 
 .option {
-  color: $navy_1;
+  color: $grey_1;
   padding: 12px;
   user-select: none;
   &:hover {
@@ -169,5 +169,5 @@
 }
 
 .selected {
-  background-color: $teal_tint_3;
+  background-color: $teal_light_80;
 }

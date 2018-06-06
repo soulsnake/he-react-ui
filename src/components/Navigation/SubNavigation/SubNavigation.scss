@@ -2,7 +2,7 @@
 
 .bar {
   background-color: $white;
-  color: $navy_1;
+  color: $grey_1;
   flex-grow: 0;
   font-family: $font-stack;
   padding: 20px 48px;
@@ -20,7 +20,7 @@
 }
 
 .item {
-  color: $navy_tint_1;
+  color: $grey_2;
   cursor: pointer;
   padding: 0 24px 24px;
   text-decoration: none;

@@ -27,7 +27,7 @@
   background-color: $white;
   border: solid 1px $n_grey_2;
   border-radius: 4px;
-  color: $navy_1;
+  color: $grey_1;
   cursor: pointer;
   font-size: $input-size;
   font-weight: $regular;
@@ -81,18 +81,18 @@
   background-color: $n_grey_4;
   border-color: $n_grey_2;
   cursor: not-allowed;
-  color: $navy_tint_1;
+  color: $grey_2;
   &:hover {
     border-color: $n_grey_2;
-    color: $navy_tint_1;
+    color: $grey_2;
   }
   .caret {
-    color: $navy_tint_2;
+    color: $grey_3;
   }
 }
 
 .error, .error:active, .error:hover, .error:focus {
-  background-color: $sp_light_red;
+  background-color: $red_light_80;
   border-color: $sp_red;
   color: $sp_red;
   .caret {
@@ -131,7 +131,7 @@
 }
 
 .option {
-  color: $navy_1;
+  color: $grey_1;
   padding: 12px;
   user-select: none;
   &:hover {
@@ -142,5 +142,5 @@
 }
 
 .selected {
-  background-color: $teal_tint_3;
+  background-color: $teal_light_80;
 }

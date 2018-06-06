@@ -67,7 +67,7 @@
 
 .cell {
   border-top: solid 1px $n_grey_2;
-  color: $navy_1;
+  color: $grey_1;
   display: flex;
   flex-direction: column;
   font-size: 14px;
@@ -98,7 +98,7 @@
   }
   &.inactive {
     .cell {
-      color: $navy_tint_2;
+      color: $grey_3;
     }
   }
   transition: 0.5s ease all;

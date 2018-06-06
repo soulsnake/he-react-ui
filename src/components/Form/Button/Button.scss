@@ -50,7 +50,7 @@
   }
 
   &.done {
-    background-color: $sp_green;
+    background-color: $green;
     pointer-events: none;
   }
 
@@ -84,9 +84,9 @@
 }
 
 .green {
-  background: $sp_green;
+  background: $green;
   &:active, &:hover, &:focus {
-    background: $sp_green;
+    background: $green;
   }
 }
 
@@ -138,8 +138,8 @@
   }
 
   &.green {
-    color: $sp_green;
-    border-color: $sp_green;
+    color: $green;
+    border-color: $green;
   }
 
   &.red {

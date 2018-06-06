@@ -21,13 +21,13 @@
 .notification.default {
   background-color: $n_grey_4;
   border-color: $n_grey_2;
-  color: $navy_1;
+  color: $grey_1;
 }
 
 .notification.confirmation {
-  background-color: $sp_green_light_80;
-  border-color: $sp_green;
-  color: $sp_green_dark_40;
+  background-color: $green_light_80;
+  border-color: $green;
+  color: $green_dark_40;
 }
 
 .notification.warning {
@@ -53,7 +53,7 @@
 }
 
 .icon.confirmation {
-  background-color: $sp_green_base;
+  background-color: $green_base;
 }
 
 .icon.warning {
@@ -79,11 +79,11 @@
 }
 
 .closeIcon.default {
-  fill: $navy_1;
+  fill: $grey_1;
 }
 
 .closeIcon.confirmation {
-  fill: $sp_green_dark_40;
+  fill: $green_dark_40;
 }
 
 .closeIcon.warning {
