@@ -6,7 +6,7 @@
     position: relative;
     background-color: transparent;
     cursor: auto;
-    color: $navy_2;
+    color: $he_black;
     margin-bottom: 12px;
     user-select: none;
     width: 280px;
@@ -41,9 +41,9 @@
 }
 
 .input {
-    border: thin solid $n_grey_3;
+    border: thin solid $grey_6;
     border-radius: 5px;
-    color: $navy_2;
+    color: $he_black;
     height: 64px;
     position: relative;
     width: 100%;
@@ -57,7 +57,7 @@
     margin-top: 0px;
     font-size: $input-size;
     &:hover {
-        border-color: $teal_1;
+        border-color: $teal;
     }
 }
 
@@ -72,8 +72,8 @@
         color: $grey_3;
     }
     .input {
-        background-color: $n_grey_4;
-        border-color: $n_grey_2;
+        background-color: $grey_7;
+        border-color: $grey_5;
         cursor: not-allowed;
         .label {
             color: $grey_3;
@@ -87,10 +87,10 @@
 
 .focused {
     .input {
-        border-color: $teal_1;
+        border-color: $teal;
     }
     .label {
-        color: $teal_1;
+        color: $teal;
     }
     .marker {
         color: $green;
@@ -100,16 +100,16 @@
 .invalid {
     .input {
         background-color: $red_light_80;
-        border-color: $sp_red;
+        border-color: $red;
     }
     .label {
-        color: $sp_red;
+        color: $red;
     }
     .description {
-        color: $sp_red;
+        color: $red;
     }
     .marker {
-        color: $sp_red;
+        color: $red;
     }
 }
 

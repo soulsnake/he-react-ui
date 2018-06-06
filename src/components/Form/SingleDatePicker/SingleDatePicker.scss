@@ -21,11 +21,11 @@
     width: 100%;
     &:hover {
         .picker {
-            border-color: $teal_2;
-            color: $navy_2;
+            border-color: $teal_dark_20;
+            color: $he_black;
         }
         .icon {
-            color: $teal_2;
+            color: $teal_dark_20;
         }
     }
     :global {
@@ -219,7 +219,7 @@
             @include transition(all 0.2s);
         }
         .CalendarDay__default:hover {
-            background: $teal_1;
+            background: $teal;
             color: $white;
         }
         .CalendarDay__hovered_offset {
@@ -237,20 +237,20 @@
         }
         .CalendarDay__selected:active,
         .CalendarDay__selected:hover {
-            background: $teal_1;
+            background: $teal;
             color: $white;
         }
         .CalendarDay__blocked_calendar,
         .CalendarDay__blocked_calendar:active,
         .CalendarDay__blocked_calendar:hover {
-            background: $n_grey_4;
+            background: $grey_7;
             color: $grey_1;
         }
         .CalendarDay__blocked_out_of_range,
         .CalendarDay__blocked_out_of_range:active,
         .CalendarDay__blocked_out_of_range:hover {
             background: none;
-            color: $n_grey_2;
+            color: $grey_5;
             cursor: not-allowed;
         }
         .CalendarMonth {
@@ -270,7 +270,7 @@
             border-collapse: separate
         }
         .CalendarMonth_caption {
-            color: $navy_2;
+            color: $he_black;
             font-size: 18px;
             text-align: center;
             padding-top: 22px;
@@ -343,9 +343,9 @@
             user-select: none
         }
         .DayPickerNavigation_button__default {
-            border: 1px solid $navy_2;
+            border: 1px solid $he_black;
             background-color: $white;
-            color: $navy_2;
+            color: $he_black;
             outline: none;
         }
         .DayPickerNavigation_button__default:focus,
@@ -357,9 +357,9 @@
         }
         .DayPickerNavigation_button__horizontal {
             background: $white;
-            border: 1px solid $navy_2;
+            border: 1px solid $he_black;
             border-radius: 24px;
-            color: $navy_2;
+            color: $he_black;
             height: 24px;
             outline: none;
             padding: 0;
@@ -373,13 +373,13 @@
         }
         .DayPickerNavigation_button__horizontal:focus,
         .DayPickerNavigation_button__horizontal:hover {
-            background: $teal_1;
+            background: $teal;
             border: none;
             color: $white;
             filter: brightness(0.92);
         }
         .DayPickerNavigation_button__horizontal:active {
-            background: $teal_1;
+            background: $teal;
             border: none;
             color: $white;
             filter: brightness(0.84);
@@ -459,7 +459,7 @@
             margin-left: 9px
         }
         .DayPicker_weekHeader {
-            color: $navy_2;
+            color: $he_black;
             position: absolute;
             top: 62px;
             z-index: 2;
@@ -541,7 +541,7 @@
         }
         .DateInput_input {
             background-color: $white;
-            border: solid 1px $n_grey_2;
+            border: solid 1px $grey_5;
             border-radius: 4px;
             box-sizing: border-box;
             color: $grey_1;
@@ -554,9 +554,9 @@
             position: relative;
             width: 100%;
             &:hover {
-                border-color: $teal_1;
+                border-color: $teal;
                 &::placeholder {
-                    color: $navy_2;
+                    color: $he_black;
                 }
             }
             @include transition(all 0.2s);
@@ -576,9 +576,9 @@
             user-select: none
         }
         .DateInput_input__focused {
-            border-color: $n_grey_2;
+            border-color: $grey_5;
             &:hover {
-                border-color: $n_grey_2;
+                border-color: $grey_5;
                 &::placeholder {
                     color: $grey_1;
                 }
@@ -610,7 +610,7 @@
             fill: $white
         }
         .DateInput_fangStroke {
-            stroke: $n_grey_2;
+            stroke: $grey_5;
             fill: transparent
         }
     }
@@ -628,7 +628,7 @@
 .focused {
     .inner, .inner:hover {
         .icon {
-            color: $teal_1;
+            color: $teal;
         }
     }
 }
@@ -637,8 +637,8 @@
     .inner, .inner:hover {
         :global {
             .DateInput_input {
-                background-color: $n_grey_4;
-                border-color: $n_grey_2;
+                background-color: $grey_7;
+                border-color: $grey_5;
                 cursor: not-allowed;
                 color: $grey_2;
                 &::placeholder {
@@ -657,18 +657,18 @@
         :global {
             .DateInput_input {
                 background-color: $red_light_80;
-                border-color: $sp_red;
-                color: $sp_red;
+                border-color: $red;
+                color: $red;
                 &::placeholder {
-                    color: $sp_red;
+                    color: $red;
                 }
                 &:hover, &:focus {
-                    border-color: $sp_red;
+                    border-color: $red;
                 }
             }
         }
         .icon {
-            color: $sp_red;
+            color: $red;
         }
     }
 }

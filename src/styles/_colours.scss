@@ -143,35 +143,6 @@ $pink_dark_60: #5A082C;
  
  /* 
   * 
-  * Legacy name aliases
-  * 
-  */
- 
-$teal_2: $teal_dark_20;
-$teal_1: $teal;
-$sp_blue: $blue;
-$n_grey_1: $grey_4; 
-$n_grey_2: $grey_5;
-$n_grey_3: $grey_6;
-$n_grey_4: $grey_7;
-$navy_2: $he_black;
-$sp_red_light_80: $red_light_80;
-$sp_red_dark_40: $red_dark_40;
-$sp_red: $red;
-$sp_yellow_dark_40: $yellow_dark_40;
-$sp_yellow_light_80: $yellow_light_80;
-$sp_yellow: $yellow;
-$green_light_80: $green_light_80;
-$green_dark_40: $green_dark_40;
-$sp_dark_green: $green;
-$green_base: $green;
-$sp_orange: $orange;
-$sp_pink: $pink;
- 
- 
- 
- /* 
-  * 
   * Javascript export to make these available in code
   * 
   */
@@ -203,8 +174,6 @@ $sp_pink: $pink;
    grey_7: $grey_7;
    he_black: $he_black;
    green: $green;
-   sp_dark_green: $sp_dark_green;
-   sp_green_base: $green_base;
    green_light_80: $green_light_80;
    green_light_60: $green_light_60;
    green_light_40: $green_light_40;
@@ -212,10 +181,7 @@ $sp_pink: $pink;
    green_dark_60: $green_dark_60;
    green_dark_40: $green_dark_40;
    green_dark_20: $green_dark_20;
-   sp_green_light_80: $green_light_80;
-   sp_green_dark_40: $green_dark_40;
    yellow: $yellow;
-   sp_yellow: $sp_yellow;
    yellow_light_80: $yellow_light_80;
    yellow_light_60: $yellow_light_60;
    yellow_light_40: $yellow_light_40;
@@ -223,10 +189,7 @@ $sp_pink: $pink;
    yellow_dark_60: $yellow_dark_60;
    yellow_dark_40: $yellow_dark_40;
    yellow_dark_20: $yellow_dark_20;
-   sp_yellow_dark_40: $sp_yellow_dark_40;
-   sp_yellow_light_80: $sp_yellow_light_80;
    orange: $orange;
-   sp_orange: $sp_orange;
    orange_light_80: $orange_light_80;
    orange_light_60: $orange_light_60;
    orange_light_40: $orange_light_40;
@@ -235,7 +198,6 @@ $sp_pink: $pink;
    orange_dark_40: $orange_dark_40;
    orange_dark_20: $orange_dark_20;
    red: $red;
-   sp_red: $sp_red;
    red_light_80: $red_light_80;
    red_light_60: $red_light_60;
    red_light_40: $red_light_40;
@@ -243,10 +205,7 @@ $sp_pink: $pink;
    red_dark_60: $red_dark_60;
    red_dark_40: $red_dark_40;
    red_dark_20: $red_dark_20;
-   sp_red_light_80: $sp_red_light_80;
-   sp_red_dark_40: $sp_red_dark_40;
    pink: $pink;
-   sp_pink: $sp_pink;
    pink_light_80: $pink_light_80;
    pink_light_60: $pink_light_60;
    pink_light_40: $pink_light_40;
@@ -254,13 +213,5 @@ $sp_pink: $pink;
    pink_dark_20: $pink_dark_20;
    pink_dark_40: $pink_dark_40;
    pink_dark_60: $pink_dark_60;
-   teal_2: $teal_2;
-   teal_1: $teal_1;
-   sp_blue: $sp_blue;
-   n_grey_1: $n_grey_1;
-   n_grey_2: $n_grey_2;
-   n_grey_3: $n_grey_3;
-   n_grey_4: $n_grey_4;
-   navy_2: $navy_2;
  }
 

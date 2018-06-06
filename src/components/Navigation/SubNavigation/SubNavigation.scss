@@ -41,7 +41,7 @@
   color: $grey_1;
   font-weight: bold;
   span {
-    border-bottom-color: $teal_1;
+    border-bottom-color: $teal;
   }
 }
 
@@ -62,7 +62,7 @@
         }
       }
       padding: 0 28px;
-      border-right: 1px solid $n_grey_1;
+      border-right: 1px solid $grey_4;
       &:last-child {
         border-right: none;
         padding-right: 0;

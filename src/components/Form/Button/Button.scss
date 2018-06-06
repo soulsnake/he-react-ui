@@ -70,16 +70,16 @@
 
 
 .teal {
-  background: $teal_1;
+  background: $teal;
   &:active, &:hover, &:focus {
-    background: $teal_1;
+    background: $teal;
   }
 }
 
 .blue {
-  background: $sp_blue;
+  background: $blue;
   &:active, &:hover, &:focus {
-    background: $sp_blue;
+    background: $blue;
   }
 }
 
@@ -91,15 +91,15 @@
 }
 
 .red {
-  background: $sp_red;
+  background: $red;
   &:active, &:hover, &:focus {
-    background: $sp_red;
+    background: $red;
   }
 }
 
 .white {
   background: $white;
-  color: $teal_2;
+  color: $teal_dark_20;
   &:active, &:hover, &:focus {
     background: $white;
   }
@@ -128,13 +128,13 @@
   border-width: 2px;
 
   &.teal {
-    color: $teal_1;
-    border-color: $teal_1;
+    color: $teal;
+    border-color: $teal;
   }
 
   &.blue {
-    color: $sp_blue;
-    border-color: $sp_blue;
+    color: $blue;
+    border-color: $blue;
   }
 
   &.green {
@@ -143,8 +143,8 @@
   }
 
   &.red {
-    color: $sp_red;
-    border-color: $sp_red;
+    color: $red;
+    border-color: $red;
   }
 
   &.white {
@@ -197,9 +197,9 @@
 .disabled {
   cursor: not-allowed;
   &:not(.link) {
-    background: $n_grey_1 !important;
+    background: $grey_4 !important;
     &:active, &:hover, &:focus {
-      background: $n_grey_1 !important;
+      background: $grey_4 !important;
     }
   }
   color: $white !important;
