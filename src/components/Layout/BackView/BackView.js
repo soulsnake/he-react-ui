@@ -3,22 +3,22 @@
  */
 
 // Vendor
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import Icon from '../../Icon'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Icon from '../../Icon';
 
-import style from './BackView.scss'
-import Heading from '../Heading'
+import Heading from '../Heading';
+import style from './BackView.scss';
 
 class BackView extends Component {
   static propTypes = {
     heading: PropTypes.string.isRequired,
-    route: PropTypes.string.isRequired
-  }
+    route: PropTypes.string.isRequired,
+  };
 
-  render () {
-    const { heading, route } = this.props
+  render() {
+    const { heading, route } = this.props;
 
     return (
       <div>
@@ -34,8 +34,8 @@ class BackView extends Component {
         </div>
         <div className={style.contentPusher} />
       </div>
-    )
+    );
   }
 }
 
-export default BackView
+export default BackView;

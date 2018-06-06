@@ -1,14 +1,14 @@
 /**
-*
-* CheckBox
-*
-*/
+ *
+ * CheckBox
+ *
+ */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
-import Icon from '../../Icon'
-import style from './CheckBox.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import Icon from '../../Icon';
+import style from './CheckBox.scss';
 
 class CheckBox extends React.Component {
   static propTypes = {
@@ -20,58 +20,75 @@ class CheckBox extends React.Component {
     special: PropTypes.bool,
     value: PropTypes.bool,
     warning: PropTypes.bool,
-    onChange: PropTypes.func
-  }
+    onChange: PropTypes.func,
+    checked: PropTypes.bool,
+    error: PropTypes.string,
+  };
 
   static defaultProps = {
     checked: false,
     disabled: false,
     error: '',
     special: false,
-    onChange: () => {}
-  }
+    onChange: () => {},
+  };
 
-  constructor (props) {
-    super(props)
-    this.handleClick = this.handleClick.bind(this)
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = () => {
     if (this.props.disabled) {
-      return
+      return;
     }
     const event = {
       value: !this.props.value,
-      props: this.props
-    }
-    this.props.onChange(event)
-  }
+      props: this.props,
+    };
+    this.props.onChange(event);
+  };
 
-  render () {
-    const { handleClick } = this
-    const { id, className, disabled, label, special, value, warning, onChange, ...restProps } = this.props
+  render() {
+    const { handleClick } = this;
+    const {
+      id,
+      className,
+      disabled,
+      label,
+      special,
+      value,
+      warning,
+      onChange,
+      ...restProps
+    } = this.props;
     const classes = {
       [style.disabled]: disabled,
-      [className]: className
-    }
+      [className]: className,
+    };
 
     return (
       <div className={classnames(style.outer, classes)} id={id} {...restProps}>
         <label className={style.label} htmlFor={id} onClick={handleClick}>
           <Icon
-            className={classnames(style.checkbox, style.empty, {[style.special]: special})}
-            name="CheckBoxUnchecked" />
+            className={classnames(style.checkbox, style.empty, {
+              [style.special]: special,
+            })}
+            name="CheckBoxUnchecked"
+          />
           <Icon
-            className={classnames(style.checkbox, style.full, {[style.checked]: value, [style.special]: special})}
-            name="CheckBoxChecked" />
+            className={classnames(style.checkbox, style.full, {
+              [style.checked]: value,
+              [style.special]: special,
+            })}
+            name="CheckBoxChecked"
+          />
           <span className={style.text}>{label}</span>
         </label>
-        {warning && <Icon
-          className={style.warning}
-          name="Alert" />}
+        {warning && <Icon className={style.warning} name="Alert" />}
       </div>
-    )
+    );
   }
 }
 
-export default CheckBox
+export default CheckBox;

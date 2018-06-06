@@ -1,4 +1,4 @@
-import Input from '../'
+import Input from '../';
 
 export default {
   component: Input,
@@ -6,6 +6,6 @@ export default {
     id: 'demo',
     name: 'demo',
     label: 'First Name',
-    disabled: true
-  }
-}
+    disabled: true,
+  },
+};

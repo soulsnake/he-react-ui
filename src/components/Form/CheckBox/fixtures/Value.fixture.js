@@ -1,4 +1,4 @@
-import CheckBox from '../'
+import CheckBox from '../';
 
 export default {
   component: CheckBox,
@@ -6,6 +6,6 @@ export default {
     id: 'demo',
     name: 'demo',
     label: 'Label',
-    value: true
-  }
-}
+    value: true,
+  },
+};

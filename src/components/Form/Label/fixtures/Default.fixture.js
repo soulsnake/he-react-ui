@@ -1,9 +1,9 @@
-import Label from '../'
+import Label from '../';
 
 export default {
   component: Label,
   props: {
-    htmlFor: 'demo'
+    htmlFor: 'demo',
   },
-  children: 'Label'
-}
+  children: 'Label',
+};

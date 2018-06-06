@@ -1,15 +1,15 @@
-import PrimaryNavigation from '../'
+import PrimaryNavigation from '../';
 
 export default {
   component: PrimaryNavigation,
   url: '/',
   props: {
     logoutRoute: '/logout',
-    locations: [
-      'Location A',
-      'Location B'
-    ].map((location) => ({value: location, label: location})),
-    bottomKeys: [ 'HELP', 'SETTINGS' ],
+    locations: ['Location A', 'Location B'].map(location => ({
+      value: location,
+      label: location,
+    })),
+    bottomKeys: ['HELP', 'SETTINGS'],
     items: [
       {
         key: 'HOME',
@@ -18,7 +18,7 @@ export default {
         title: 'Homepage',
         items: null,
         route: '/',
-        exact: true
+        exact: true,
       },
       {
         key: 'BUCKET1',
@@ -35,14 +35,14 @@ export default {
               {
                 key: 'MAIN',
                 label: 'Main',
-                route: '/normal'
+                route: '/normal',
               },
               {
                 key: 'SECOND',
                 label: 'Second',
-                route: '/normal/second'
-              }
-            ]
+                route: '/normal/second',
+              },
+            ],
           },
           {
             key: 'NOTIFICATIONS',
@@ -54,21 +54,21 @@ export default {
               {
                 key: 'MAIN',
                 label: 'Main',
-                route: '/notifications'
+                route: '/notifications',
               },
               {
                 key: 'SECOND',
                 label: 'Second',
-                route: '/notifications/second'
+                route: '/notifications/second',
               },
               {
                 key: 'THIRD',
                 label: 'Third',
-                route: '/notifications/third'
-              }
-            ]
-          }
-        ]
+                route: '/notifications/third',
+              },
+            ],
+          },
+        ],
       },
       {
         key: 'BUCKET2',
@@ -86,14 +86,14 @@ export default {
               {
                 key: 'MAIN',
                 label: 'Main',
-                route: '/free'
+                route: '/free',
               },
               {
                 key: 'SECOND',
                 label: 'Second',
-                route: '/free/second'
-              }
-            ]
+                route: '/free/second',
+              },
+            ],
           },
           {
             key: 'NEW',
@@ -105,23 +105,23 @@ export default {
               {
                 key: 'MAIN',
                 label: 'Main',
-                route: '/new'
+                route: '/new',
               },
               {
                 key: 'SECOND',
                 label: 'Second',
-                route: '/new/second'
-              }
-            ]
-          }
-        ]
+                route: '/new/second',
+              },
+            ],
+          },
+        ],
       },
       {
         key: 'HELP',
         label: 'Help',
         title: 'Help',
         icon: 'Help',
-        route: 'https://external.url/'
+        route: 'https://external.url/',
       },
       {
         key: 'SETTINGS',
@@ -138,14 +138,14 @@ export default {
               {
                 key: 'MAIN',
                 label: 'Main',
-                route: '/settings-1'
+                route: '/settings-1',
               },
               {
                 key: 'SECOND',
                 label: 'Second',
-                route: '/settings-1/second'
-              }
-            ]
+                route: '/settings-1/second',
+              },
+            ],
           },
           {
             key: 'ITEM2',
@@ -156,14 +156,14 @@ export default {
               {
                 key: 'MAIN',
                 label: 'Main',
-                route: '/settings-2'
+                route: '/settings-2',
               },
               {
                 key: 'SECOND',
                 label: 'Second',
-                route: '/settings-2/second'
-              }
-            ]
+                route: '/settings-2/second',
+              },
+            ],
           },
           {
             key: 'ITEM3',
@@ -174,17 +174,17 @@ export default {
               {
                 key: 'MAIN',
                 label: 'Main',
-                route: '/settings-3'
+                route: '/settings-3',
               },
               {
                 key: 'SECOND',
                 label: 'Second',
-                route: '/settings-3/second'
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-}
+                route: '/settings-3/second',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+};

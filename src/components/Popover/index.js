@@ -1,12 +1,12 @@
 /**
-*
-* Popover
-*
-*/
-import classnames from 'classnames'
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './index.scss'
+ *
+ * Popover
+ *
+ */
+import classnames from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './index.scss';
 
 class Popover extends React.Component {
   static propTypes = {
@@ -18,13 +18,13 @@ class Popover extends React.Component {
     title: PropTypes.node,
     className: PropTypes.string,
     style: PropTypes.object,
-    children: PropTypes.any
-  }
+    children: PropTypes.any,
+  };
 
   static defaultProps = {
-    placement: 'right'
-  }
-  render () {
+    placement: 'right',
+  };
+  render() {
     const {
       placement,
       positionTop,
@@ -36,24 +36,24 @@ class Popover extends React.Component {
       style,
       children,
       ...props
-    } = this.props
+    } = this.props;
 
     const classes = {
       [styles.popover]: true,
-      [styles[placement]]: true
-    }
+      [styles[placement]]: true,
+    };
 
     const outerStyle = {
       display: 'block',
       top: positionTop,
       left: positionLeft,
-      ...style
-    }
+      ...style,
+    };
 
     const arrowStyle = {
       top: arrowOffsetTop,
-      left: arrowOffsetLeft
-    }
+      left: arrowOffsetLeft,
+    };
 
     return (
       <div
@@ -68,8 +68,8 @@ class Popover extends React.Component {
 
         <div className={styles.content}>{children}</div>
       </div>
-    )
+    );
   }
 }
 
-export default Popover
+export default Popover;

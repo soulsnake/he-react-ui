@@ -1,10 +1,10 @@
-import FormSection from '../'
+import FormSection from '../';
 
 export default {
   component: FormSection,
   props: {
     heading: '',
-    description: ''
+    description: '',
   },
-  children: ''
-}
+  children: '',
+};

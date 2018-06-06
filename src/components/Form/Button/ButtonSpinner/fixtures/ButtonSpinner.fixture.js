@@ -1,5 +1,5 @@
-import ButtonSpinner from '../ButtonSpinner'
+import ButtonSpinner from '../ButtonSpinner';
 
 export default {
-  component: ButtonSpinner
-}
+  component: ButtonSpinner,
+};

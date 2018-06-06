@@ -1,14 +1,14 @@
-import ActionIcon from './ActionIcon'
-import ActionSet from './ActionSet'
-import Button from './Button'
-import SingleDatePicker from './SingleDatePicker'
-import CheckBox from './CheckBox'
-import InlineSelector from './InlineSelector'
-import Label from './Label'
-import Radio from './Radio'
-import SingleSelect from './SingleSelect'
-import TextField from './TextField'
-import TimeSelector from './TimeSelector'
+import ActionIcon from './ActionIcon';
+import ActionSet from './ActionSet';
+import Button from './Button';
+import SingleDatePicker from './SingleDatePicker';
+import CheckBox from './CheckBox';
+import InlineSelector from './InlineSelector';
+import Label from './Label';
+import Radio from './Radio';
+import SingleSelect from './SingleSelect';
+import TextField from './TextField';
+import TimeSelector from './TimeSelector';
 
 export {
   ActionIcon,
@@ -21,5 +21,5 @@ export {
   SingleDatePicker,
   SingleSelect,
   TextField,
-  TimeSelector
-}
+  TimeSelector,
+};

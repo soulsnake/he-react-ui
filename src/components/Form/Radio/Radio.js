@@ -1,16 +1,16 @@
 /**
-*
-* Radio
-*
-*/
+ *
+ * Radio
+ *
+ */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import Icon from '../../Icon'
-import Label from '../Label'
-import style from './Radio.scss'
+import Icon from '../../Icon';
+import Label from '../Label';
+import style from './Radio.scss';
 
 class Radio extends React.Component {
   static propTypes = {
@@ -25,78 +25,108 @@ class Radio extends React.Component {
         label: PropTypes.string.isRequired,
         value: PropTypes.string.isRequired,
         child: PropTypes.any,
-        showChild: PropTypes.bool
-      })).isRequired,
+        showChild: PropTypes.bool,
+      }),
+    ).isRequired,
     value: PropTypes.string,
-    onChange: PropTypes.func
-  }
+    onChange: PropTypes.func,
+  };
 
   static defaultProps = {
     error: '',
     inline: false,
-    onChange: () => {}
-  }
+    onChange: () => {},
+  };
 
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
-    this.generateOptions = this.generateOptions.bind(this)
-    this.handleClick = this.handleClick.bind(this)
+    this.generateOptions = this.generateOptions.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   generateOptions = () => {
-    const { name, options, value } = this.props
+    const { name, options, value } = this.props;
 
-    return options.map((option) => (
-      <div key={option.value} className={classnames(style.option, {[style.selected]: value === option.value})}
-        onClick={() => this.handleClick(option.value)}>
+    return options.map(option => (
+      <div
+        key={option.value}
+        className={classnames(style.option, {
+          [style.selected]: value === option.value,
+        })}
+        onClick={() => this.handleClick(option.value)}
+      >
         <input
           className={style.input}
           value={option.value}
           type="radio"
           name={name}
           checked={value === option.value}
-          onChange={() => null} />
-        <Icon className={classnames(style.icon, style.empty)} name="RadioUnchecked" />
-        <Icon className={classnames(style.icon, style.full)} name="RadioChecked" />
+          onChange={() => null}
+        />
+        <Icon
+          className={classnames(style.icon, style.empty)}
+          name="RadioUnchecked"
+        />
+        <Icon
+          className={classnames(style.icon, style.full)}
+          name="RadioChecked"
+        />
         {option.label && <label className={style.tag}>{option.label}</label>}
-        {(option.child && (option.showChild || value === option.value)) &&
-          <div className={style.child}>{option.child}</div>}
+        {option.child &&
+          (option.showChild || value === option.value) && (
+            <div className={style.child}>{option.child}</div>
+          )}
       </div>
-    ))
-  }
+    ));
+  };
 
-  handleClick = (value) => {
-    const oldValue = this.props.value
+  handleClick = value => {
+    const oldValue = this.props.value;
 
     if (oldValue !== value) {
       const event = {
-        value: value,
-        props: this.props
-      }
+        value,
+        props: this.props,
+      };
 
-      this.props.onChange(event)
+      this.props.onChange(event);
     }
-  }
+  };
 
-  render () {
-    const { generateOptions } = this
-    const { id, className, error, inline, label, onChange, value, ...restProps } = this.props
+  render() {
+    const { generateOptions } = this;
+    const {
+      id,
+      className,
+      error,
+      inline,
+      label,
+      onChange,
+      value,
+      ...restProps
+    } = this.props;
     const classes = classnames(style.outer, {
       [style.inline]: inline,
-      [className]: className
-    })
+      [className]: className,
+    });
 
     return (
       <div className={classes} id={id} {...restProps}>
-        {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
-        <div className={style.options}>
-          {generateOptions()}
-        </div>
-        {error && <Label className={style.error} error>{error}</Label>}
+        {label && (
+          <Label className={style.label} htmlFor={id}>
+            {label}
+          </Label>
+        )}
+        <div className={style.options}>{generateOptions()}</div>
+        {error && (
+          <Label className={style.error} error>
+            {error}
+          </Label>
+        )}
       </div>
-    )
+    );
   }
 }
 
-export default Radio
+export default Radio;

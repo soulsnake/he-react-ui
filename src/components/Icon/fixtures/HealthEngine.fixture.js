@@ -1,8 +1,8 @@
-import Icon from '../'
+import Icon from '../';
 
 export default {
   component: Icon,
   props: {
-    'name': 'HealthEngine'
-  }
-}
+    name: 'HealthEngine',
+  },
+};

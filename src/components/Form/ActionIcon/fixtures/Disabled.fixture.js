@@ -1,4 +1,4 @@
-import ActionIcon from '../'
+import ActionIcon from '../';
 
 export default {
   component: ActionIcon,
@@ -6,6 +6,6 @@ export default {
     icon: 'Delete',
     color: 'red',
     title: 'Delete',
-    disabled: true
-  }
-}
+    disabled: true,
+  },
+};

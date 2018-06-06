@@ -1,9 +1,9 @@
-import Table from '../'
+import Table from '../';
 
 export default {
   component: Table,
   props: {
     columns: [],
-    body: []
-  }
-}
+    body: [],
+  },
+};

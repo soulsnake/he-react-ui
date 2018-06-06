@@ -1,4 +1,4 @@
-import Icon from '../'
+import Icon from '../';
 
 export default {
   component: Icon,
@@ -10,7 +10,7 @@ export default {
     style: {
       padding: '8px',
       borderRadius: '100%',
-      border: 'solid 1px'
-    }
-  }
-}
+      border: 'solid 1px',
+    },
+  },
+};

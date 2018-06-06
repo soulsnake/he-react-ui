@@ -1,17 +1,19 @@
-import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../fixtures/Default.fixture'
+import createTestContext from 'react-cosmos-test/enzyme';
+import fixture from '../fixtures/Default.fixture';
 
-const { mount, getWrapper } = createTestContext({ fixture })
+const { mount, getWrapper } = createTestContext({ fixture });
 
-beforeEach(mount)
+beforeEach(mount);
 
 test('<InlineSelector /> rendered correctly with fixture', () => {
-  let wrapper = getWrapper()
+  const wrapper = getWrapper();
   Object.keys(fixture.props.options).forEach(key => {
-    expect(wrapper.text()).toContain(fixture.props.options[key].label)
-  })
+    expect(wrapper.text()).toContain(fixture.props.options[key].label);
+  });
 
-  expect(wrapper.find('div')).toHaveLength(Object.keys(fixture.props.options).length + 2)
+  expect(wrapper.find('div')).toHaveLength(
+    Object.keys(fixture.props.options).length + 2,
+  );
 
-  expect(wrapper).toMatchSnapshot()
-})
+  expect(wrapper).toMatchSnapshot();
+});

@@ -1,4 +1,4 @@
-import Input from '../'
+import Input from '../';
 
 export default {
   component: Input,
@@ -6,9 +6,9 @@ export default {
     id: 'demo',
     name: 'demo',
     label: 'First Name',
-    error: 'Something isn\'t right',
+    error: "Something isn't right",
     marker: true,
     validateFunc: () => false,
-    value: 'Bruce'
-  }
-}
+    value: 'Bruce',
+  },
+};

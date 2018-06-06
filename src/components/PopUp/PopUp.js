@@ -3,12 +3,13 @@
  * Popup
  *
  */
-import classnames from 'classnames'
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './PopUp.scss'
-import Icon from '../Icon'
-import LoadingSpinner from '../Loading/LoadingSpinner'
+import classnames from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import Icon from '../Icon';
+import LoadingSpinner from '../Loading/LoadingSpinner';
+import styles from './PopUp.scss';
 
 class PopUp extends React.Component {
   static propTypes = {
@@ -19,31 +20,31 @@ class PopUp extends React.Component {
     onOpen: PropTypes.func,
     showing: PropTypes.bool,
     noPadding: PropTypes.bool,
-    style: PropTypes.object
-  }
+    style: PropTypes.object,
+  };
 
   static defaultProps = {
     modal: false,
     noPadding: false,
     onClose: () => null,
     onOpen: () => null,
-    showing: false
-  }
+    showing: false,
+  };
 
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      showing: props.showing
-    }
+      showing: props.showing,
+    };
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.showing !== this.state.showing) {
       this.setState({
-        showing: nextProps.showing
-      })
+        showing: nextProps.showing,
+      });
       if (nextProps.showing) {
-        this.props.onOpen()
+        this.props.onOpen();
       }
     }
   }
@@ -51,13 +52,13 @@ class PopUp extends React.Component {
   handleClose = () => {
     if (!this.props.modal) {
       this.setState({
-        showing: false
-      })
-      this.props.onClose()
+        showing: false,
+      });
+      this.props.onClose();
     }
-  }
+  };
 
-  render () {
+  render() {
     const {
       children,
       className,
@@ -67,13 +68,13 @@ class PopUp extends React.Component {
       style,
       noPadding,
       ...restProps
-    } = this.props
+    } = this.props;
     const classes = classnames(styles.outer, {
-      [styles.showing]: this.state.showing
-    })
+      [styles.showing]: this.state.showing,
+    });
     const popupClasses = classnames(styles.popup, className, {
-      [styles.popupWithPadding]: !noPadding
-    })
+      [styles.popupWithPadding]: !noPadding,
+    });
 
     return (
       <div className={classes} {...restProps}>
@@ -89,8 +90,8 @@ class PopUp extends React.Component {
           {children || <LoadingSpinner />}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default PopUp
+export default PopUp;

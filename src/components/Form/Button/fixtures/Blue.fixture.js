@@ -1,10 +1,10 @@
-import Button from '../'
+import Button from '../';
 
 export default {
   component: Button,
   props: {
-    color: 'blue'
+    color: 'blue',
   },
   children: 'Button',
-  simulateSubmission: true
-}
+  simulateSubmission: true,
+};

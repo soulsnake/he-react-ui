@@ -1,9 +1,9 @@
-import InlineSelector from '../'
+import InlineSelector from '../';
 
 export default {
   component: InlineSelector,
   formWrapper: {
-    value: null
+    value: null,
   },
   props: {
     id: 'demo',
@@ -12,7 +12,7 @@ export default {
       { label: 'Any', value: '1' },
       { label: 'AM', value: '2' },
       { label: 'PM', value: '3' },
-      { label: 'After Hours', value: '4' }
-    ]
-  }
-}
+      { label: 'After Hours', value: '4' },
+    ],
+  },
+};

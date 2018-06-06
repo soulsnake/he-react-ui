@@ -1,4 +1,4 @@
-import fixture from '../fixtures/ErrorClose.fixture.js'
-import testFixture from '../../../../config/testFixture'
+import fixture from '../fixtures/ErrorClose.fixture.js';
+import testFixture from '../../../../config/testFixture';
 
-testFixture(fixture, 'ErrorClose')
+testFixture(fixture, 'ErrorClose');

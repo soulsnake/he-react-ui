@@ -1,14 +1,14 @@
-import createTestContext from 'react-cosmos-test/enzyme'
-import fixture from '../fixtures/Default.fixture'
+import createTestContext from 'react-cosmos-test/enzyme';
+import fixture from '../fixtures/Default.fixture';
 
-const { mount, getWrapper } = createTestContext({ fixture })
+const { mount, getWrapper } = createTestContext({ fixture });
 
-beforeEach(mount)
+beforeEach(mount);
 
 test('<TimeSelector /> rendered correctly with fixture', () => {
-  let wrapper = getWrapper()
+  const wrapper = getWrapper();
 
-  expect(wrapper.find('li')).toHaveLength(60 + 24) // 60 minutes and 24 hours
+  expect(wrapper.find('li')).toHaveLength(60 + 24); // 60 minutes and 24 hours
 
-  expect(wrapper).toMatchSnapshot()
-})
+  expect(wrapper).toMatchSnapshot();
+});

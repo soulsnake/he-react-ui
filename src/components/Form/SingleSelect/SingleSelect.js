@@ -1,17 +1,16 @@
 /**
-*
-* SingleSelect
-*
-*/
+ *
+ * SingleSelect
+ *
+ */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
-import onClickOutside from 'react-onclickoutside'
-
-import Icon from '../../Icon'
-import Label from '../Label'
-import style from './SingleSelect.scss'
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import onClickOutside from 'react-onclickoutside';
+import Icon from '../../Icon';
+import Label from '../Label';
+import style from './SingleSelect.scss';
 
 class SingleSelect extends React.Component {
   static propTypes = {
@@ -29,123 +28,163 @@ class SingleSelect extends React.Component {
     onChange: PropTypes.func,
     eventTypes: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string)
+      PropTypes.arrayOf(PropTypes.string),
     ]),
     outsideClickIgnoreClass: PropTypes.string,
     preventDefault: PropTypes.bool,
     stopPropagation: PropTypes.bool,
     disableOnClickOutside: PropTypes.func,
-    enableOnClickOutside: PropTypes.func
-  }
+    enableOnClickOutside: PropTypes.func,
+  };
 
   static defaultProps = {
     disabled: false,
     error: '',
     inline: false,
     value: null,
-    onChange: () => {}
-  }
+    onChange: () => {},
+  };
 
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
-      expanded: false
-    }
-    this.getDisplay = this.getDisplay.bind(this)
-    this.toggleExpand = this.toggleExpand.bind(this)
-    this.hideExpand = this.hideExpand.bind(this)
-    this.handleClickOutside = this.handleClickOutside.bind(this)
-    this.selectOption = this.selectOption.bind(this)
-    this.generateOptions = this.generateOptions.bind(this)
+      expanded: false,
+    };
+    this.getDisplay = this.getDisplay.bind(this);
+    this.toggleExpand = this.toggleExpand.bind(this);
+    this.hideExpand = this.hideExpand.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.selectOption = this.selectOption.bind(this);
+    this.generateOptions = this.generateOptions.bind(this);
   }
 
   getDisplay = () => {
-    const { options, value } = this.props
-    const option = options.find(option => option.value === value)
-    const firstLabel = (options && options[0] && options[0].label) || ''
+    const { options, value } = this.props;
+    const option = options.find(it => it.value === value);
+    const firstLabel = (options && options[0] && options[0].label) || '';
 
-    return option ? option.label : (this.props.placeholder || firstLabel)
-  }
+    return option ? option.label : this.props.placeholder || firstLabel;
+  };
 
   toggleExpand = () => {
-    this.setState({expanded: this.props.disabled ? false : !this.state.expanded})
-  }
+    this.setState({
+      expanded: this.props.disabled ? false : !this.state.expanded,
+    });
+  };
 
   hideExpand = () => {
-    this.setState({expanded: false})
-  }
+    this.setState({ expanded: false });
+  };
 
   handleClickOutside = () => {
-    this.hideExpand()
-  }
+    this.hideExpand();
+  };
 
-  selectOption = (option) => {
-    const oldValue = this.props.value
+  selectOption = option => {
+    const oldValue = this.props.value;
     this.setState({
-      expanded: false
-    })
+      expanded: false,
+    });
     if (oldValue !== option.value) {
       const event = {
         value: option.value,
-        props: this.props
-      }
+        props: this.props,
+      };
 
-      this.props.onChange(event)
+      this.props.onChange(event);
     }
-  }
+  };
 
   generateOptions = () => {
-    const firstValue = (this.props.options && this.props.options[0] && this.props.options[0].value) || undefined
-    const value = this.props.value || (this.props.placeholder ? undefined : firstValue)
+    const firstValue =
+      (this.props.options &&
+        this.props.options[0] &&
+        this.props.options[0].value) ||
+      undefined;
+    const value =
+      this.props.value || (this.props.placeholder ? undefined : firstValue);
 
-    return this.props.options.map((option) => {
-      const selected = value === option.value
-      let ref = null
+    return this.props.options.map(option => {
+      const selected = value === option.value;
+      let ref = null;
       if (value === option.value) {
-        ref = (item) => {
+        ref = item => {
           if (item) {
             setTimeout(() => {
-              item.parentNode.scrollTop = item.offsetTop - item.parentNode.offsetTop
-            }, 200)
+              item.parentNode.scrollTop =
+                item.offsetTop - item.parentNode.offsetTop;
+            }, 200);
           }
-        }
+        };
       }
-      return (<li className={classnames(style.option, {[style.selected]: selected})} key={option.value} onClick={() => this.selectOption(option)} ref={ref}>
-        {option.label}
-      </li>)
-    })
-  }
+      return (
+        <li
+          className={classnames(style.option, { [style.selected]: selected })}
+          key={option.value}
+          onClick={() => this.selectOption(option)}
+          ref={ref}
+        >
+          {option.label}
+        </li>
+      );
+    });
+  };
 
-  render () {
-    const { id, name, className, required, disabled, error, inline, label, placeholder, onChange, value,
-      eventTypes, outsideClickIgnoreClass, preventDefault, stopPropagation, disableOnClickOutside, enableOnClickOutside,
-      ...restProps } = this.props
+  render() {
+    const {
+      id,
+      name,
+      className,
+      required,
+      disabled,
+      error,
+      inline,
+      label,
+      placeholder,
+      onChange,
+      value,
+      eventTypes,
+      outsideClickIgnoreClass,
+      preventDefault,
+      stopPropagation,
+      disableOnClickOutside,
+      enableOnClickOutside,
+      ...restProps
+    } = this.props;
     const classes = classnames(style.outer, {
       [style.expanded]: this.state.expanded,
       [style.inline]: inline,
-      [className]: className
-    })
+      [className]: className,
+    });
 
     return (
-      <div
-        className={classes}
-        {...restProps}>
-        {label && <Label className={style.label} htmlFor={id}>{label}</Label>}
+      <div className={classes} {...restProps}>
+        {label && (
+          <Label className={style.label} htmlFor={id}>
+            {label}
+          </Label>
+        )}
         <div
           id={id}
-          className={classnames(style.select, {[style.error]: error, [style.disabled]: disabled})}
-          onClick={this.toggleExpand}>
+          className={classnames(style.select, {
+            [style.error]: error,
+            [style.disabled]: disabled,
+          })}
+          onClick={this.toggleExpand}
+        >
           <span>{this.getDisplay()}</span>
           <Icon className={style.caret} name="DropDown" />
         </div>
-        <ul className={style.options}>
-          {this.generateOptions()}
-        </ul>
-        {error && <Label className={style.errorMessage} htmlFor={id} error>{error}</Label>}
+        <ul className={style.options}>{this.generateOptions()}</ul>
+        {error && (
+          <Label className={style.errorMessage} htmlFor={id} error>
+            {error}
+          </Label>
+        )}
       </div>
-    )
+    );
   }
 }
 
-export default onClickOutside(SingleSelect)
+export default onClickOutside(SingleSelect);

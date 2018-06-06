@@ -1,4 +1,4 @@
-import SubNavigation from '../'
+import SubNavigation from '../';
 
 export default {
   component: SubNavigation,
@@ -12,21 +12,21 @@ export default {
       badge: 'FREE',
       items: [
         {
-          'key': 'MAIN',
-          'label': 'Main',
-          'route': '/parent'
+          key: 'MAIN',
+          label: 'Main',
+          route: '/parent',
         },
         {
-          'key': 'SECONDARY',
-          'label': 'Secondary',
-          'route': '/parent/secondary'
-        }
-      ]
+          key: 'SECONDARY',
+          label: 'Secondary',
+          route: '/parent/secondary',
+        },
+      ],
     },
-    locations: [
-      'Location A',
-      'Location B'
-    ].map((location) => ({value: location, label: location})),
-    logoutRoute: '/logout'
-  }
-}
+    locations: ['Location A', 'Location B'].map(location => ({
+      value: location,
+      label: location,
+    })),
+    logoutRoute: '/logout',
+  },
+};

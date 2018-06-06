@@ -1,4 +1,4 @@
-import fixture from '../fixtures/Sortable.fixture.js'
-import testFixture from '../../../../../config/testFixture'
+import fixture from '../fixtures/Sortable.fixture.js';
+import testFixture from '../../../../../config/testFixture';
 
-testFixture(fixture, 'Sortable')
+testFixture(fixture, 'Sortable');

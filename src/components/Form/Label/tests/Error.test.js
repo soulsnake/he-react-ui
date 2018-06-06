@@ -1,4 +1,4 @@
-import fixture from '../fixtures/Error.fixture.js'
-import testFixture from '../../../../../config/testFixture'
+import fixture from '../fixtures/Error.fixture.js';
+import testFixture from '../../../../../config/testFixture';
 
-testFixture(fixture, 'Error')
+testFixture(fixture, 'Error');

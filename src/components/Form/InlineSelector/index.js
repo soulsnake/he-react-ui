@@ -1,1 +1,1 @@
-export { default } from './InlineSelector'
+export { default } from './InlineSelector';

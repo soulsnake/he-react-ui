@@ -1,9 +1,9 @@
-import ActionIcon from '../'
+import ActionIcon from '../';
 
 export default {
   component: ActionIcon,
   props: {
     icon: 'Edit',
-    title: 'Edit'
-  }
-}
+    title: 'Edit',
+  },
+};

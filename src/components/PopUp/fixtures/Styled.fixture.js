@@ -1,5 +1,5 @@
-import React from 'react'
-import PopUp from '../'
+import React from 'react';
+import PopUp from '../';
 
 export default {
   component: PopUp,
@@ -7,7 +7,7 @@ export default {
     showing: true,
     modal: true,
     style: {
-      backgroundImage: 'url(\'https://i.imgur.com/5JGZrYe.jpg\')',
+      backgroundImage: "url('https://i.imgur.com/5JGZrYe.jpg')",
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
@@ -17,11 +17,13 @@ export default {
       height: '200px',
       padding: '10%',
       fontSize: '22px',
-      fontWeight: 'bolder'
-    }
+      fontWeight: 'bolder',
+    },
   },
-  children: <div>
-    <p>Wow!</p>
-    <p>Look how versatile you can make the pop-up window.</p>
-  </div>
-}
+  children: (
+    <div>
+      <p>Wow!</p>
+      <p>Look how versatile you can make the pop-up window.</p>
+    </div>
+  ),
+};

@@ -1,9 +1,9 @@
-import Heading from '../'
+import Heading from '../';
 
 export default {
   component: Heading,
   props: {
-    h3: true
+    h3: true,
   },
-  children: 'Heading'
-}
+  children: 'Heading',
+};

@@ -1,5 +1,4 @@
-
-import SubNavigation from '../'
+import SubNavigation from '../';
 
 export default {
   component: SubNavigation,
@@ -11,8 +10,8 @@ export default {
       icon: 'Home',
       title: 'Welcome home',
       route: '/',
-      items: []
+      items: [],
     },
-    logoutRoute: '/logout'
-  }
-}
+    logoutRoute: '/logout',
+  },
+};

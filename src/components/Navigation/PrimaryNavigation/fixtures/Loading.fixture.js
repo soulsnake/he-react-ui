@@ -1,4 +1,4 @@
-import PrimaryNavigation from '../'
+import PrimaryNavigation from '../';
 
 export default {
   component: PrimaryNavigation,
@@ -7,6 +7,6 @@ export default {
     loading: true,
     logoutRoute: '/logout',
     locations: [],
-    items: []
-  }
-}
+    items: [],
+  },
+};
