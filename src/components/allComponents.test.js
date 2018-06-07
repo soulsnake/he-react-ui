@@ -10,6 +10,10 @@ jest.mock('react-tippy', () => ({
   )),
 }));
 
+beforeEach(() => {
+  jest.setTimeout(30000);
+});
+
 runTests({
   cosmosConfigPath: require.resolve('../../cosmos.config.js'),
 });
