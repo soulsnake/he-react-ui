@@ -20,7 +20,9 @@ export default class Popover extends React.Component {
   };
 
   notifyMount = node => {
-    if (node) this.setState({ fullyMounted: true });
+    if (node) {
+      this.setState({ fullyMounted: true });
+    }
   };
 
   render() {
