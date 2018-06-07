@@ -7598,6 +7598,7 @@ exports[`Cosmos fixtures: Popover:base 1`] = `
   <div>
     <div
       delay={100}
+      disabled={true}
       hideDelay={300}
       interactive={true}
       interactiveBorder={16}
@@ -7645,6 +7646,9 @@ exports[`Cosmos fixtures: Popover:base 1`] = `
       </div>
     </div>
   </div>
+  <span
+    style="hidden"
+  />
 </div>
 `;
 
@@ -7659,6 +7663,7 @@ exports[`Cosmos fixtures: Popover:className 1`] = `
   <div>
     <div
       delay={100}
+      disabled={true}
       hideDelay={300}
       interactive={true}
       interactiveBorder={16}
@@ -7706,6 +7711,9 @@ exports[`Cosmos fixtures: Popover:className 1`] = `
       </div>
     </div>
   </div>
+  <span
+    style="hidden"
+  />
 </div>
 `;
 
@@ -7720,6 +7728,7 @@ exports[`Cosmos fixtures: Popover:complexContent 1`] = `
   <div>
     <div
       delay={100}
+      disabled={true}
       hideDelay={300}
       interactive={true}
       interactiveBorder={16}
@@ -7826,6 +7835,9 @@ exports[`Cosmos fixtures: Popover:complexContent 1`] = `
       </div>
     </div>
   </div>
+  <span
+    style="hidden"
+  />
 </div>
 `;
 
@@ -7840,6 +7852,7 @@ exports[`Cosmos fixtures: Popover:light 1`] = `
   <div>
     <div
       delay={100}
+      disabled={true}
       hideDelay={300}
       interactive={true}
       interactiveBorder={16}
@@ -7887,6 +7900,9 @@ exports[`Cosmos fixtures: Popover:light 1`] = `
       </div>
     </div>
   </div>
+  <span
+    style="hidden"
+  />
 </div>
 `;
 
@@ -7901,6 +7917,7 @@ exports[`Cosmos fixtures: Popover:preferRight 1`] = `
   <div>
     <div
       delay={100}
+      disabled={true}
       hideDelay={300}
       interactive={true}
       interactiveBorder={16}
@@ -7948,6 +7965,9 @@ exports[`Cosmos fixtures: Popover:preferRight 1`] = `
       </div>
     </div>
   </div>
+  <span
+    style="hidden"
+  />
 </div>
 `;
 
@@ -7962,6 +7982,7 @@ exports[`Cosmos fixtures: Popover:tooltip 1`] = `
   <div>
     <div
       delay={100}
+      disabled={true}
       hideDelay={300}
       interactive={false}
       interactiveBorder={16}
@@ -8009,6 +8030,9 @@ exports[`Cosmos fixtures: Popover:tooltip 1`] = `
       </div>
     </div>
   </div>
+  <span
+    style="hidden"
+  />
 </div>
 `;
 
@@ -8023,6 +8047,7 @@ exports[`Cosmos fixtures: Popover:triggerOnClick 1`] = `
   <div>
     <div
       delay={100}
+      disabled={true}
       hideDelay={300}
       interactive={true}
       interactiveBorder={16}
@@ -8070,6 +8095,9 @@ exports[`Cosmos fixtures: Popover:triggerOnClick 1`] = `
       </div>
     </div>
   </div>
+  <span
+    style="hidden"
+  />
 </div>
 `;
 
