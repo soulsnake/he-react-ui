@@ -11898,7 +11898,7 @@ var Popover = function (_React$Component) {
           },
           children
         ),
-        !this.fullyMounted && _react2.default.createElement('span', { ref: this.notifyMount, style: _index2.default.hidden })
+        !this.fullyMounted && _react2.default.createElement('span', { ref: this.notifyMount, className: _index2.default.hidden })
       );
     }
   }]);
