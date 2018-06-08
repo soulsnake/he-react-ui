@@ -60,7 +60,7 @@ export default class Popover extends React.Component {
         </Tippy>
 
         {!this.fullyMounted && (
-          <span ref={this.notifyMount} style={style.hidden} />
+          <span ref={this.notifyMount} className={style.hidden} />
         )}
       </React.Fragment>
     );
