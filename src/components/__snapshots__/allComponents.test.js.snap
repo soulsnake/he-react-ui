@@ -915,6 +915,12 @@ exports[`Cosmos fixtures: CheckBox:warning 1`] = `
 </div>
 `;
 
+exports[`Cosmos fixtures: DoubleDatePicker:base 1`] = `
+<div
+  className="main"
+/>
+`;
+
 exports[`Cosmos fixtures: EvenGrid:Default 1`] = `
 <div
   className="outer"
