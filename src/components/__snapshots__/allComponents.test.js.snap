@@ -8248,7 +8248,7 @@ exports[`Cosmos fixtures: Popover:base 1`] = `
     </div>
   </div>
   <span
-    style="hidden"
+    className="hidden"
   />
 </div>
 `;
@@ -8313,7 +8313,7 @@ exports[`Cosmos fixtures: Popover:className 1`] = `
     </div>
   </div>
   <span
-    style="hidden"
+    className="hidden"
   />
 </div>
 `;
@@ -8437,7 +8437,7 @@ exports[`Cosmos fixtures: Popover:complexContent 1`] = `
     </div>
   </div>
   <span
-    style="hidden"
+    className="hidden"
   />
 </div>
 `;
@@ -8502,7 +8502,7 @@ exports[`Cosmos fixtures: Popover:light 1`] = `
     </div>
   </div>
   <span
-    style="hidden"
+    className="hidden"
   />
 </div>
 `;
@@ -8567,7 +8567,7 @@ exports[`Cosmos fixtures: Popover:preferRight 1`] = `
     </div>
   </div>
   <span
-    style="hidden"
+    className="hidden"
   />
 </div>
 `;
@@ -8632,7 +8632,7 @@ exports[`Cosmos fixtures: Popover:tooltip 1`] = `
     </div>
   </div>
   <span
-    style="hidden"
+    className="hidden"
   />
 </div>
 `;
@@ -8697,7 +8697,7 @@ exports[`Cosmos fixtures: Popover:triggerOnClick 1`] = `
     </div>
   </div>
   <span
-    style="hidden"
+    className="hidden"
   />
 </div>
 `;
