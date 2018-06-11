@@ -114,4 +114,20 @@ export default [
       value: null,
     },
   },
+
+  {
+    component: DateRangePicker,
+
+    name: 'customPlaceholder',
+
+    parentLayout,
+
+    props: {
+      placeholder: 'When will you be traveling?',
+    },
+
+    formWrapper: {
+      value: null,
+    },
+  },
 ];

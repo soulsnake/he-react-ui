@@ -39,11 +39,13 @@ export default class DateRangePicker extends React.Component {
     allowCustom: PropTypes.bool,
 
     onChange: PropTypes.func,
+    placeholder: PropTypes.string,
   };
 
   static defaultProps = {
     allowCustom: true,
     options: [],
+    placeholder: 'Select a date range',
   };
 
   state = {
@@ -51,7 +53,6 @@ export default class DateRangePicker extends React.Component {
   };
 
   getSelectOptions = () => {
-    // Add the placeholder 'custom' options
     const { options, allowCustom } = this.props;
 
     const wrappedOptions = options.map(({ label }, index) => ({
@@ -102,10 +103,9 @@ export default class DateRangePicker extends React.Component {
   handleSelectOpen = () => {
     if (this.props.options.length) {
       return true;
-    } 
-      this.showCustomPicker();
-      return false;
-    
+    }
+    this.showCustomPicker();
+    return false;
   };
 
   id = Math.random()
@@ -124,7 +124,7 @@ export default class DateRangePicker extends React.Component {
     const placeholder =
       startDate && endDate
         ? `${startDate.format(FORMAT)} — ${endDate.format(FORMAT)}`
-        : 'Select a date range';
+        : this.props.placeholder;
 
     return (
       <div className={classes}>
