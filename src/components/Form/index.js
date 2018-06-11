@@ -2,7 +2,6 @@ import ActionIcon from './ActionIcon';
 import ActionSet from './ActionSet';
 import Button from './Button';
 import CheckBox from './CheckBox';
-import DoubleDatePicker from './DoubleDatePicker';
 import InlineSelector from './InlineSelector';
 import Label from './Label';
 import Radio from './Radio';
@@ -20,7 +19,6 @@ export {
   Label,
   Radio,
   SingleDatePicker,
-  DoubleDatePicker,
   SingleSelect,
   TextField,
   TimeSelector,

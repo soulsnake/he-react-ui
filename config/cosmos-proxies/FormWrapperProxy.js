@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export class FormWrapperProxy extends React.Component {
   static propTypes = {
@@ -17,7 +17,11 @@ export class FormWrapperProxy extends React.Component {
     }
   }
 
-  onChange = ({ value }) => this.setState({ value })
+  onChange = ({ value }) => {
+    
+    
+    this.setState({ value })
+  }
 
   render () {
     const { nextProxy, fixture, ...nextProps } = this.props

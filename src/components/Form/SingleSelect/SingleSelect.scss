@@ -35,8 +35,12 @@
   position: relative;
   width: 100%;
   &:hover {
-    border-color: $teal_2;
+    border-color: $teal_1;
     color: $navy_2;
+
+    .caret {
+      color: $teal_1;
+    }
   }
   span {
     display: block;
@@ -47,17 +51,20 @@
   @include transition(all 0.2s);
 }
 
-.expanded {
+.expanded, .forceOpen {
   .select {
     color: $navy_2;
-    &:hover {
-      border-color: $n_grey_2;
-    }
+    border-color: $teal_1;
+    border-radius: 4px 4px 0px 0px;
+    
     .caret {
       color: $teal_1;
       transform: rotate(180deg);
     }
   }
+}
+
+.expanded {
   .options {
     margin-left: 0;
     opacity: 1;
@@ -111,14 +118,15 @@
 
 .options {
   background-color: $white;
-  border: solid 1px $n_grey_2;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px $n_grey_1;
+  border: solid 1px $teal_1;
+  border-top: solid 1px $n_grey_1;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0 6px 12px $n_grey_1;
   cursor: pointer;
   font-size: $input-size;
   font-weight: $regular;
   list-style: none;
-  margin: -4px 0 0 4%;
+  margin: -13px 0 0 4%;
   max-height: 240px;
   opacity: 0;
   overflow-y: auto;

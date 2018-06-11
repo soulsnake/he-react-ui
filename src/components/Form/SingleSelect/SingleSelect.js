@@ -23,7 +23,12 @@ class SingleSelect extends React.Component {
     inline: PropTypes.bool,
     label: PropTypes.string,
     placeholder: PropTypes.string,
-    options: PropTypes.array.isRequired,
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        value: PropTypes.any.isRequired,
+      }),
+    ).isRequired,
     value: PropTypes.string,
     onChange: PropTypes.func,
     eventTypes: PropTypes.oneOfType([
@@ -35,6 +40,7 @@ class SingleSelect extends React.Component {
     stopPropagation: PropTypes.bool,
     disableOnClickOutside: PropTypes.func,
     enableOnClickOutside: PropTypes.func,
+    forceOpen: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -150,11 +156,13 @@ class SingleSelect extends React.Component {
       stopPropagation,
       disableOnClickOutside,
       enableOnClickOutside,
+      forceOpen,
       ...restProps
     } = this.props;
     const classes = classnames(style.outer, {
       [style.expanded]: this.state.expanded,
       [style.inline]: inline,
+      [style.forceOpen]: forceOpen,
       [className]: className,
     });
 
