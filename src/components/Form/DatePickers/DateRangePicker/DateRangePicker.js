@@ -8,11 +8,11 @@ import { DateRangePicker as InnerDateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import momentPropTypes from 'react-moment-proptypes';
-import { Icon } from '../../index';
-import SingleSelect from '../SingleSelect/SingleSelect';
+import { Icon, SingleSelect } from '../../../';
 import style from './DateRangePicker.module.scss';
 
 const CUSTOM = 'CUSTOM';
+const FORMAT = 'D MMM YYYY';
 
 const NEVER = () => false;
 
@@ -47,9 +47,7 @@ export default class DateRangePicker extends React.Component {
   };
 
   state = {
-    focusedInput: 'startDate',
-    startDate: null,
-    endDate: null,
+    focusedInput: null,
   };
 
   getSelectOptions = () => {
@@ -89,12 +87,25 @@ export default class DateRangePicker extends React.Component {
     this.props.onChange({ value: [startDate, endDate] });
   };
 
+  showCustomPicker = () => {
+    this.setState({ focusedInput: 'startDate' });
+  };
+
   handleSelectChange = ev => {
     if (ev.value === CUSTOM) {
-      this.setState({ focusedInput: 'startDate' });
+      this.showCustomPicker();
     } else {
       this.props.onChange(this.props.options[ev.value]);
     }
+  };
+
+  handleSelectOpen = () => {
+    if (this.props.options.length) {
+      return true;
+    } 
+      this.showCustomPicker();
+      return false;
+    
   };
 
   id = Math.random()
@@ -110,6 +121,11 @@ export default class DateRangePicker extends React.Component {
 
     const classes = classNames(style.outer, className);
 
+    const placeholder =
+      startDate && endDate
+        ? `${startDate.format(FORMAT)} — ${endDate.format(FORMAT)}`
+        : 'Select a date range';
+
     return (
       <div className={classes}>
         <SingleSelect
@@ -118,14 +134,14 @@ export default class DateRangePicker extends React.Component {
           label={label}
           error={error}
           disabled={disabled}
-          placeholder={`${startDate &&
-            startDate.format('YY-MM-DD')} → ${endDate &&
-            endDate.format('YY-MM-DD')}`}
+          placeholder={placeholder}
           name={`${this.id}-select-id`}
           onChange={this.handleSelectChange}
           options={this.getSelectOptions()}
           forceOpen={!!focusedInput}
+          onBeforeOpen={this.handleSelectOpen}
         />
+
         <div className={style.inner}>
           <InnerDateRangePicker
             startDateId={`${this.id}-start`}

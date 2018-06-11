@@ -5,11 +5,11 @@ import CheckBox from './CheckBox';
 import InlineSelector from './InlineSelector';
 import Label from './Label';
 import Radio from './Radio';
-import SingleDatePicker from './SingleDatePicker';
 import SingleSelect from './SingleSelect';
 import TextField from './TextField';
 import TimeSelector from './TimeSelector';
 
+export * from './DatePickers';
 export {
   ActionIcon,
   ActionSet,
@@ -18,7 +18,6 @@ export {
   InlineSelector,
   Label,
   Radio,
-  SingleDatePicker,
   SingleSelect,
   TextField,
   TimeSelector,

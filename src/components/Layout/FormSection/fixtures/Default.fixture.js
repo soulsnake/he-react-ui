@@ -1,7 +1,7 @@
 import React from 'react';
 import FormSection from '../';
+import SingleDatePicker from '../../../';
 import Radio from '../../../Form/Radio';
-import SingleDatePicker from '../../../Form/SingleDatePicker';
 
 export default {
   component: FormSection,

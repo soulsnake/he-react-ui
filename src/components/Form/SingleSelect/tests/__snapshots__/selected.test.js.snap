@@ -46,6 +46,7 @@ exports[`<OnClickOutside(SingleSelect) /> rendered correctly with selected fixtu
     id="demo"
     inline={false}
     name="demo"
+    onBeforeOpen={[Function]}
     onChange={[Function]}
     options={
       Array [
@@ -70,6 +71,7 @@ exports[`<OnClickOutside(SingleSelect) /> rendered correctly with selected fixtu
   >
     <div
       className="outer"
+      onBeforeOpen={[Function]}
       options={
         Array [
           Object {

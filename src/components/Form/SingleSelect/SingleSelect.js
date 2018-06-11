@@ -40,6 +40,7 @@ class SingleSelect extends React.Component {
     stopPropagation: PropTypes.bool,
     disableOnClickOutside: PropTypes.func,
     enableOnClickOutside: PropTypes.func,
+    onBeforeOpen: PropTypes.func,
     forceOpen: PropTypes.bool,
   };
 
@@ -49,6 +50,7 @@ class SingleSelect extends React.Component {
     inline: false,
     value: null,
     onChange: () => {},
+    onBeforeOpen: () => true,
   };
 
   constructor(props) {
@@ -74,9 +76,14 @@ class SingleSelect extends React.Component {
   };
 
   toggleExpand = () => {
-    this.setState({
-      expanded: this.props.disabled ? false : !this.state.expanded,
-    });
+    if (this.state.expanded) {
+      this.setState({
+        expanded: false,
+      });
+    } else if (this.props.onBeforeOpen())
+      this.setState({
+        expanded: !this.props.disabled,
+      });
   };
 
   hideExpand = () => {
@@ -157,6 +164,7 @@ class SingleSelect extends React.Component {
       disableOnClickOutside,
       enableOnClickOutside,
       forceOpen,
+      onBeforeOpen,
       ...restProps
     } = this.props;
     const classes = classnames(style.outer, {

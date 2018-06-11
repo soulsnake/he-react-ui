@@ -12,8 +12,8 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import Media from 'react-media';
 import momentPropTypes from 'react-moment-proptypes';
-import Icon from '../../Icon';
-import Label from '../Label';
+import Icon from '../../../Icon';
+import Label from '../../Label';
 import styles from './SingleDatePicker.scss';
 
 class SingleDatePicker extends React.Component {

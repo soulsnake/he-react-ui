@@ -199,6 +199,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                   id="locationSelector"
                   inline={false}
                   name="location"
+                  onBeforeOpen={[Function]}
                   onChange={[Function]}
                   options={
                     Array [
@@ -224,6 +225,7 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                 >
                   <div
                     className="outer locationSelector"
+                    onBeforeOpen={[Function]}
                     options={
                       Array [
                         Object {

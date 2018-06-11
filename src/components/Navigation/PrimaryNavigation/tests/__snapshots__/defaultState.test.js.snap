@@ -2311,6 +2311,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
                               id="locationSelector"
                               inline={false}
                               name="location"
+                              onBeforeOpen={[Function]}
                               onChange={[Function]}
                               options={
                                 Array [
@@ -2336,6 +2337,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
                             >
                               <div
                                 className="outer locationSelector"
+                                onBeforeOpen={[Function]}
                                 options={
                                   Array [
                                     Object {
