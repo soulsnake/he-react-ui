@@ -195,4 +195,6 @@ class SingleSelect extends React.Component {
   }
 }
 
+export { SingleSelect as InnerSingleSelect };
+
 export default onClickOutside(SingleSelect);

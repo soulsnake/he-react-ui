@@ -13,51 +13,69 @@ const LAST_MONTH = {
   ],
 };
 
+const parentLayout = {
+  margin: 40,
+  padding: 40,
+  border: 'solid 1px silver',
+  background: 'white',
+  boxShadow: '0 5px 10px rgba(0,0,0,0.1)',
+};
+
+const formWrapper = {
+  value: LAST_MONTH.value,
+};
+
+const options = [
+  LAST_MONTH,
+
+  {
+    label: 'Last 3 months',
+    value: [
+      moment()
+        .subtract(3, 'month')
+        .startOf('month'),
+      moment()
+        .subtract(1, 'month')
+        .endOf('month'),
+    ],
+  },
+
+  {
+    label: 'Last 12 months',
+    value: [
+      moment()
+        .subtract(12, 'month')
+        .startOf('month'),
+      moment()
+        .subtract(1, 'month')
+        .endOf('month'),
+    ],
+  },
+];
+
 export default [
   {
-    name: 'base',
+    name: 'withChoices',
     component: DateRangePicker,
 
     props: {
-      options: [
-        LAST_MONTH,
-
-        {
-          label: 'Last 3 months',
-          value: [
-            moment()
-              .subtract(3, 'month')
-              .startOf('month'),
-            moment()
-              .subtract(1, 'month')
-              .endOf('month'),
-          ],
-        },
-
-        {
-          label: 'Last 12 months',
-          value: [
-            moment()
-              .subtract(12, 'month')
-              .startOf('month'),
-            moment()
-              .subtract(1, 'month')
-              .endOf('month'),
-          ],
-        },
-      ],
+      options,
     },
 
-    parentLayout: {
-      margin: 40,
-      padding: 40,
-      border: 'solid 1px silver',
-      background: 'white',
-      boxShadow: '0 5px 10px rgba(0,0,0,0.1)',
-    },
+    parentLayout,
 
-    formWrapper: {
-      value: LAST_MONTH.value,
+    formWrapper,
+  },
+
+  {
+    component: DateRangePicker,
+
+    name: 'customPickerOpen',
+
+    formWrapper,
+
+    state: {
+      focusedInput: 'startDate',
     },
   },
 ];
