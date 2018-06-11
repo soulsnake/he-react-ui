@@ -14,6 +14,8 @@ import style from './DateRangePicker.module.scss';
 
 const CUSTOM = 'CUSTOM';
 
+const NEVER = () => false;
+
 function sameDay(firstMoment, secondMoment) {
   return firstMoment && secondMoment && firstMoment.isSame(secondMoment, 'd');
 }
@@ -70,14 +72,13 @@ export default class DateRangePicker extends React.Component {
 
   getSelectValue = () => {
     const { value, options } = this.props;
+
     const index = options.findIndex(
       entry =>
         sameDay(entry.value[0], value[0]) && sameDay(entry.value[1], value[1]),
     );
 
-    console.log('Getting select value; index =', index);
-
-    return index === -1 ? CUSTOM : String(index);
+    return index === -1 ? null : String(index);
   };
 
   handleFocusChange = focusedInput => {
@@ -140,6 +141,8 @@ export default class DateRangePicker extends React.Component {
             navNext={<Icon name="ChevronRight" />}
             navPrev={<Icon name="ChevronLeft" />}
             focusedInput={focusedInput}
+            isDayBlocked={NEVER}
+            isOutsideRange={NEVER}
           />
         </div>
       </div>

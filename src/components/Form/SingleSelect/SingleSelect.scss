@@ -55,7 +55,7 @@
 .expanded, .forceOpen {
   .select {
     color: $he_black;
-    border-color: $teal_1;
+    border-color: $teal;
     border-radius: 4px 4px 0px 0px;
     
     .caret {
@@ -120,7 +120,7 @@
 .options {
   background-color: $white;
   border: solid 1px $teal;
-  border-top: solid 1px $n_grey_1;
+  border-top: solid 1px $grey_7;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 6px 12px $grey_4;
   cursor: pointer;

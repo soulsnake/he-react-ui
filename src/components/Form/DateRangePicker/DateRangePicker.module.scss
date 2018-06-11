@@ -85,18 +85,23 @@
     .CalendarDay:active {
       outline: 0
     }
+    
+    .CalendarDay__selected_span {
+      background: $teal_light_80;
+    }
+
     .CalendarDay__defaultCursor {
       cursor: default
     }
     .CalendarDay__default {
       border: none;
       border-radius: 40px;
-      color: $navy_1;
+      color: $grey_1;
       outline: none;
       @include transition(all 0.2s);
     }
     .CalendarDay__default:hover {
-      background: $teal_1;
+      background: $teal;
       color: $white;
     }
     .CalendarDay__hovered_offset {
@@ -109,25 +114,25 @@
       color: #565a5c
     }
     .CalendarDay__selected {
-      background: $teal_tint_3;
-      color: $navy_1;
+      background: $teal_light_80;
+      color: $he_black;
     }
     .CalendarDay__selected:active,
     .CalendarDay__selected:hover {
-      background: $teal_1;
+      background: $teal;
       color: $white;
     }
     .CalendarDay__blocked_calendar,
     .CalendarDay__blocked_calendar:active,
     .CalendarDay__blocked_calendar:hover {
-      background: $n_grey_4;
-      color: $navy_1;
+      background: $grey_7;
+      color: $grey_1;
     }
     .CalendarDay__blocked_out_of_range,
     .CalendarDay__blocked_out_of_range:active,
     .CalendarDay__blocked_out_of_range:hover {
       background: none;
-      color: $n_grey_2;
+      color: $grey_5;
       cursor: not-allowed;
     }
     .CalendarMonth {
@@ -147,7 +152,7 @@
       border-collapse: separate
     }
     .CalendarMonth_caption {
-      color: $navy_2;
+      color: $he_black;
       font-size: 18px;
       text-align: center;
       padding-top: 22px;
@@ -220,9 +225,9 @@
       user-select: none
     }
     .DayPickerNavigation_button__default {
-      border: 1px solid $navy_2;
+      border: 1px solid $he_black;
       background-color: $white;
-      color: $navy_2;
+      color: $he_black;
       outline: none;
     }
     .DayPickerNavigation_button__default:focus,
@@ -234,9 +239,9 @@
     }
     .DayPickerNavigation_button__horizontal {
       background: $white;
-      border: 1px solid $navy_2;
+      border: 1px solid $he_black;
       border-radius: 24px;
-      color: $navy_2;
+      color: $he_black;
       height: 24px;
       outline: none;
       padding: 0;
@@ -250,13 +255,13 @@
     }
     .DayPickerNavigation_button__horizontal:focus,
     .DayPickerNavigation_button__horizontal:hover {
-      background: $teal_1;
+      background: $teal;
       border: none;
       color: $white;
       filter: brightness(0.92);
     }
     .DayPickerNavigation_button__horizontal:active {
-      background: $teal_1;
+      background: $teal;
       border: none;
       color: $white;
       filter: brightness(0.84);
@@ -293,7 +298,7 @@
       fill: #565a5c
     }
     .DayPicker {
-      border: solid 1px $teal_1;
+      border: solid 1px $teal;
       background: $white;
       position: relative;
       text-align: left
@@ -309,7 +314,7 @@
     }
     .DayPicker__withBorder {
       box-shadow: 0 0 4px rgba(0, 0, 0, .2);
-      border: solid 1px $teal_1;
+      border: solid 1px $teal;
       border-radius: 0px 4px 4px 4px;
       padding: 16px 24px;
     }
@@ -337,7 +342,7 @@
       margin-left: 9px
     }
     .DayPicker_weekHeader {
-      color: $navy_2;
+      color: $he_black;
       position: absolute;
       top: 62px;
       z-index: 2;
