@@ -86,19 +86,22 @@
       outline: 0
     }
     
-    .CalendarDay__selected_span {
-      background: $teal_light_80;
-    }
+    
 
     .CalendarDay__defaultCursor {
       cursor: default
     }
     .CalendarDay__default {
-      border: none;
+      border: 0;
+      margin-bottom: 2px;
       border-radius: 40px;
       color: $grey_1;
       outline: none;
       @include transition(all 0.2s);
+    }
+    .CalendarDay__selected_span:not(.CalendarDay__selected) {
+      background: $teal_light_80;
+      border-radius: 0px;
     }
     .CalendarDay__default:hover {
       background: $teal;
@@ -114,8 +117,14 @@
       color: #565a5c
     }
     .CalendarDay__selected {
-      background: $teal_light_80;
+      background: $teal;
       color: $he_black;
+    }
+    .CalendarDay__selected_start {
+      border-radius: 40px 0 0 40px;
+    }
+    .CalendarDay__selected_end {
+      border-radius: 0 40px 40px 0 ;
     }
     .CalendarDay__selected:active,
     .CalendarDay__selected:hover {
