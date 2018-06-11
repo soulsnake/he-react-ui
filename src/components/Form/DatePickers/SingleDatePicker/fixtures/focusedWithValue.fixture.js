@@ -4,7 +4,7 @@ import SingleDatePicker from '../';
 export default {
   component: SingleDatePicker,
 
-  state: { focused: true },
+  // state: { focused: true },
 
   props: {
     id: 'demo',

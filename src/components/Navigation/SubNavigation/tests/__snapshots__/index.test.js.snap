@@ -225,7 +225,6 @@ exports[`<SubNavigation /> rendered correctly with fixture 1`] = `
                 >
                   <div
                     className="outer locationSelector"
-                    onBeforeOpen={[Function]}
                     options={
                       Array [
                         Object {

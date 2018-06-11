@@ -225,7 +225,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with Default fixture 1
                 >
                   <div
                     className="outer locationSelector"
-                    onBeforeOpen={[Function]}
                     options={
                       Array [
                         Object {

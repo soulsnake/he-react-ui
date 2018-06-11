@@ -72,7 +72,6 @@ exports[`<OnClickOutside(SingleSelect) /> rendered correctly with label fixture 
   >
     <div
       className="outer"
-      onBeforeOpen={[Function]}
       options={
         Array [
           Object {

@@ -67,19 +67,19 @@ export default [
     formWrapper,
   },
 
-  {
-    component: DateRangePicker,
+  // {
+  //   component: DateRangePicker,
 
-    name: 'customPickerOpen',
+  //   name: 'customPickerOpen',
 
-    parentLayout,
+  //   parentLayout,
 
-    formWrapper,
+  //   formWrapper,
 
-    state: {
-      focusedInput: 'startDate',
-    },
-  },
+  //   state: {
+  //     focusedInput: 'startDate',
+  //   },
+  // },
 
   {
     component: DateRangePicker,

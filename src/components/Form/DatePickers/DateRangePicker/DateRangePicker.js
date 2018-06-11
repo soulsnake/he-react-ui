@@ -31,6 +31,8 @@ export default class DateRangePicker extends React.Component {
 
     value: PropTypes.arrayOf(momentPropTypes.momentObj),
 
+    id: PropTypes.string,
+
     className: PropTypes.string,
     label: PropTypes.string,
     error: PropTypes.string,
@@ -46,6 +48,7 @@ export default class DateRangePicker extends React.Component {
     allowCustom: true,
     options: [],
     placeholder: 'Select a date range',
+    id: 'date-range-picker',
   };
 
   state = {
@@ -108,12 +111,8 @@ export default class DateRangePicker extends React.Component {
     return false;
   };
 
-  id = Math.random()
-    .toString(36)
-    .substr(2);
-
   render() {
-    const { error, disabled, className, label, value } = this.props;
+    const { error, disabled, className, label, value, id } = this.props;
 
     const [startDate, endDate] = value || [null, null];
 
@@ -129,13 +128,13 @@ export default class DateRangePicker extends React.Component {
     return (
       <div className={classes}>
         <SingleSelect
-          id={`${this.id}-select-id`}
+          id={`${id}-select-id`}
           value={this.getSelectValue()}
           label={label}
           error={error}
           disabled={disabled}
           placeholder={placeholder}
-          name={`${this.id}-select-id`}
+          name={`${id}-select-name`}
           onChange={this.handleSelectChange}
           options={this.getSelectOptions()}
           forceOpen={!!focusedInput}
@@ -144,10 +143,10 @@ export default class DateRangePicker extends React.Component {
 
         <div className={style.inner}>
           <InnerDateRangePicker
-            startDateId={`${this.id}-start`}
+            startDateId={`${id}-start`}
             customArrowIcon={null}
             minimumNights={0}
-            endDateId={`${this.id}-end`}
+            endDateId={`${id}-end`}
             startDate={startDate}
             endDate={endDate}
             daySize={28}

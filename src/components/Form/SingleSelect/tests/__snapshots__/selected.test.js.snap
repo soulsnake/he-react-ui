@@ -71,7 +71,6 @@ exports[`<OnClickOutside(SingleSelect) /> rendered correctly with selected fixtu
   >
     <div
       className="outer"
-      onBeforeOpen={[Function]}
       options={
         Array [
           Object {
