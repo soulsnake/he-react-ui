@@ -1,6 +1,3 @@
-// Value should be passed in, But the current value of the 'custom' tab is local state.
-// When we receive a new set of values, we check whether they match a known range,
-// and if not, we set the mode to 'custom'.
 import classNames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -105,6 +102,12 @@ export default class DateRangePicker extends React.Component {
     return index === -1 ? CUSTOM : String(index);
   };
 
+  getRangeTitle = () => {
+    const { value } = this.props;
+    const [startDate, endDate] = value || [null, null];
+    return formatRange(startDate, endDate);
+  };
+
   handleFocusChange = focusedInput => {
     this.setState({ focusedInput });
   };
@@ -136,12 +139,6 @@ export default class DateRangePicker extends React.Component {
 
   handleSelectClose = () => {
     this.setState({ selectOpen: false });
-  };
-
-  getRangeTitle = () => {
-    const { value } = this.props;
-    const [startDate, endDate] = value || [null, null];
-    return formatRange(startDate, endDate);
   };
 
   render() {

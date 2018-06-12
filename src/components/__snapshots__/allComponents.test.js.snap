@@ -948,7 +948,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
         onClick={[Function]}
       >
         <span>
-          1 May 2018 — 31 May 2018
+          May 2018
         </span>
         <svg
           className="icon caret"
