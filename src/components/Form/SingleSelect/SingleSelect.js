@@ -31,6 +31,8 @@ class SingleSelect extends React.Component {
     ).isRequired,
     value: PropTypes.string,
     onChange: PropTypes.func,
+    onBeforeOpen: PropTypes.func,
+    onClose: PropTypes.func,
     eventTypes: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.string),
@@ -40,8 +42,8 @@ class SingleSelect extends React.Component {
     stopPropagation: PropTypes.bool,
     disableOnClickOutside: PropTypes.func,
     enableOnClickOutside: PropTypes.func,
-    onBeforeOpen: PropTypes.func,
     forceOpen: PropTypes.bool,
+    forceTitle: PropTypes.string,
   };
 
   static defaultProps = {
@@ -51,6 +53,7 @@ class SingleSelect extends React.Component {
     value: null,
     onChange: () => {},
     onBeforeOpen: () => true,
+    onClose: () => true,
   };
 
   constructor(props) {
@@ -68,18 +71,19 @@ class SingleSelect extends React.Component {
   }
 
   getDisplay = () => {
-    const { options, value } = this.props;
+    const { options, value, forceTitle, placeholder } = this.props;
+
+    if (forceTitle) return forceTitle;
+
     const option = options.find(it => it.value === value);
     const firstLabel = (options && options[0] && options[0].label) || '';
 
-    return option ? option.label : this.props.placeholder || firstLabel;
+    return option ? option.label : placeholder || firstLabel;
   };
 
   toggleExpand = () => {
     if (this.state.expanded) {
-      this.setState({
-        expanded: false,
-      });
+      this.hideExpand();
     } else if (this.props.onBeforeOpen())
       this.setState({
         expanded: !this.props.disabled,
@@ -88,6 +92,7 @@ class SingleSelect extends React.Component {
 
   hideExpand = () => {
     this.setState({ expanded: false });
+    this.props.onClose();
   };
 
   handleClickOutside = () => {
@@ -96,9 +101,7 @@ class SingleSelect extends React.Component {
 
   selectOption = option => {
     const oldValue = this.props.value;
-    this.setState({
-      expanded: false,
-    });
+    this.hideExpand();
     if (oldValue !== option.value) {
       const event = {
         value: option.value,
@@ -164,6 +167,7 @@ class SingleSelect extends React.Component {
       disableOnClickOutside,
       enableOnClickOutside,
       forceOpen,
+      forceTitle,
       onBeforeOpen,
       ...restProps
     } = this.props;

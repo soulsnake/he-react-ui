@@ -53,6 +53,7 @@ export default class DateRangePicker extends React.Component {
 
   state = {
     focusedInput: null,
+    selectOpen: false,
   };
 
   getSelectOptions = () => {
@@ -80,7 +81,7 @@ export default class DateRangePicker extends React.Component {
         sameDay(entry.value[0], value[0]) && sameDay(entry.value[1], value[1]),
     );
 
-    return index === -1 ? null : String(index);
+    return index === -1 ? CUSTOM : String(index);
   };
 
   handleFocusChange = focusedInput => {
@@ -104,6 +105,7 @@ export default class DateRangePicker extends React.Component {
   };
 
   handleSelectOpen = () => {
+    this.setState({ selectOpen: true });
     if (this.props.options.length) {
       return true;
     }
@@ -111,34 +113,50 @@ export default class DateRangePicker extends React.Component {
     return false;
   };
 
+  handleSelectClose = () => {
+    this.setState({ selectOpen: false });
+  };
+
+  getRangeTitle = () => {
+    const { value } = this.props;
+    const [startDate, endDate] = value || [null, null];
+    return (
+      startDate &&
+      endDate &&
+      `${startDate.format(FORMAT)} — ${endDate.format(FORMAT)}`
+    );
+  };
+
   render() {
     const { error, disabled, className, label, value, id } = this.props;
 
     const [startDate, endDate] = value || [null, null];
 
-    const { focusedInput } = this.state;
+    const { focusedInput, selectOpen } = this.state;
 
     const classes = classNames(style.outer, className);
 
-    const placeholder =
-      startDate && endDate
-        ? `${startDate.format(FORMAT)} — ${endDate.format(FORMAT)}`
-        : this.props.placeholder;
+    const placeholder = this.getRangeTitle() || this.props.placeholder;
+
+    const selectValue = this.getSelectValue();
+    const shouldForceTitle = selectOpen || selectValue === CUSTOM;
 
     return (
       <div className={classes}>
         <SingleSelect
           id={`${id}-select-id`}
-          value={this.getSelectValue()}
+          value={selectValue}
+          forceTitle={shouldForceTitle ? placeholder : null}
           label={label}
           error={error}
           disabled={disabled}
           placeholder={placeholder}
           name={`${id}-select-name`}
           onChange={this.handleSelectChange}
+          onBeforeOpen={this.handleSelectOpen}
+          onClose={this.handleSelectClose}
           options={this.getSelectOptions()}
           forceOpen={!!focusedInput}
-          onBeforeOpen={this.handleSelectOpen}
         />
 
         <div className={style.inner}>

@@ -49,6 +49,7 @@ exports[`<OnClickOutside(SingleSelect) /> rendered correctly with error fixture 
     name="demo"
     onBeforeOpen={[Function]}
     onChange={[Function]}
+    onClose={[Function]}
     options={
       Array [
         Object {
@@ -73,6 +74,7 @@ exports[`<OnClickOutside(SingleSelect) /> rendered correctly with error fixture 
   >
     <div
       className="outer"
+      onClose={[Function]}
       options={
         Array [
           Object {

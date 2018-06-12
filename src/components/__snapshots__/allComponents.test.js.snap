@@ -932,6 +932,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
   >
     <div
       className="outer"
+      onClose={[Function]}
       options={
         Array [
           Object {
@@ -970,7 +971,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
         className="options"
       >
         <li
-          className="option"
+          className="option selected"
           onClick={[Function]}
         >
           Custom
@@ -1083,6 +1084,7 @@ exports[`Cosmos fixtures: DateRangePicker:customPlaceholder 1`] = `
   >
     <div
       className="outer"
+      onClose={[Function]}
       options={
         Array [
           Object {
@@ -1121,7 +1123,7 @@ exports[`Cosmos fixtures: DateRangePicker:customPlaceholder 1`] = `
         className="options"
       >
         <li
-          className="option"
+          className="option selected"
           onClick={[Function]}
         >
           Custom
@@ -1234,6 +1236,7 @@ exports[`Cosmos fixtures: DateRangePicker:noInitialValue 1`] = `
   >
     <div
       className="outer"
+      onClose={[Function]}
       options={
         Array [
           Object {
@@ -1272,7 +1275,7 @@ exports[`Cosmos fixtures: DateRangePicker:noInitialValue 1`] = `
         className="options"
       >
         <li
-          className="option"
+          className="option selected"
           onClick={[Function]}
         >
           Custom
@@ -1385,6 +1388,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
   >
     <div
       className="outer"
+      onClose={[Function]}
       options={
         Array [
           Object {
@@ -1556,6 +1560,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
   >
     <div
       className="outer"
+      onClose={[Function]}
       options={
         Array [
           Object {
@@ -4549,6 +4554,7 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
           >
             <div
               className="outer locationSelector"
+              onClose={[Function]}
               options={
                 Array [
                   Object {
@@ -5104,6 +5110,7 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
           >
             <div
               className="outer locationSelector"
+              onClose={[Function]}
               options={
                 Array [
                   Object {
@@ -5362,6 +5369,7 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Loading 1`] = `
 exports[`Cosmos fixtures: OnClickOutside(SingleSelect):Default 1`] = `
 <div
   className="outer"
+  onClose={[Function]}
   options={
     Array [
       Object {
@@ -5433,6 +5441,7 @@ exports[`Cosmos fixtures: OnClickOutside(SingleSelect):Default 1`] = `
 exports[`Cosmos fixtures: OnClickOutside(SingleSelect):disabled 1`] = `
 <div
   className="outer"
+  onClose={[Function]}
   options={
     Array [
       Object {
@@ -5504,6 +5513,7 @@ exports[`Cosmos fixtures: OnClickOutside(SingleSelect):disabled 1`] = `
 exports[`Cosmos fixtures: OnClickOutside(SingleSelect):error 1`] = `
 <div
   className="outer"
+  onClose={[Function]}
   options={
     Array [
       Object {
@@ -5600,6 +5610,7 @@ exports[`Cosmos fixtures: OnClickOutside(SingleSelect):error 1`] = `
 exports[`Cosmos fixtures: OnClickOutside(SingleSelect):label 1`] = `
 <div
   className="outer"
+  onClose={[Function]}
   options={
     Array [
       Object {
@@ -5692,6 +5703,7 @@ exports[`Cosmos fixtures: OnClickOutside(SingleSelect):placeholder 1`] = `
 >
   <div
     className="outer"
+    onClose={[Function]}
     options={
       Array [
         Object {
@@ -5764,6 +5776,7 @@ exports[`Cosmos fixtures: OnClickOutside(SingleSelect):placeholder 1`] = `
 exports[`Cosmos fixtures: OnClickOutside(SingleSelect):selected 1`] = `
 <div
   className="outer"
+  onClose={[Function]}
   options={
     Array [
       Object {
@@ -9816,6 +9829,7 @@ exports[`Cosmos fixtures: Radio:ChildOption 1`] = `
       >
         <div
           className="outer"
+          onClose={[Function]}
           options={
             Array [
               Object {
@@ -10119,6 +10133,7 @@ exports[`Cosmos fixtures: Radio:ChildOptionShow 1`] = `
       >
         <div
           className="outer"
+          onClose={[Function]}
           options={
             Array [
               Object {
@@ -11286,6 +11301,7 @@ exports[`Cosmos fixtures: SingleDatePicker:label 1`] = `
 exports[`Cosmos fixtures: SingleSelect:open 1`] = `
 <div
   className="outer expanded"
+  onClose={[Function]}
   options={
     Array [
       Object {
@@ -13168,6 +13184,7 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):Default 1`] = `
       >
         <div
           className="outer locationSelector"
+          onClose={[Function]}
           options={
             Array [
               Object {
