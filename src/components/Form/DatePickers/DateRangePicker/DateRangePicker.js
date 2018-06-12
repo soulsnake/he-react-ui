@@ -19,10 +19,12 @@ function sameDay(firstMoment, secondMoment) {
 }
 
 function formatRange(startDate, endDate) {
-  // If the startDate is at the start of a month, just render MONTH_FORMAT
-  // If the endDate is at the start of a month, just render MONTH_FORMAT
-  // If they are identical, just return one of them
-  // If either is null, just return null
+  // If a start-date is the start of the month, we just list the month and year.
+  // Ditto if an end-date is at the end of the month.
+  // If the start-date and end-date would render the same string, we just return that string
+  // (eg: if the span is one whole month, or just a single day).
+  // Otherwise, we return a dash-separated range.
+
   if (!startDate || !endDate) return null;
 
   const startDisplay = sameDay(startDate, moment(startDate).startOf('month'))
