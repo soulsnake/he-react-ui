@@ -2,6 +2,7 @@
 // When we receive a new set of values, we check whether they match a known range,
 // and if not, we set the mode to 'custom'.
 import classNames from 'classnames';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DateRangePicker as InnerDateRangePicker } from 'react-dates';
@@ -12,12 +13,32 @@ import { Icon, SingleSelect } from '../../../';
 import style from './DateRangePicker.module.scss';
 
 const CUSTOM = 'CUSTOM';
-const FORMAT = 'D MMM YYYY';
-
+const DAY_FORMAT = 'D MMM YYYY';
+const MONTH_FORMAT = 'MMM YYYY';
 const NEVER = () => false;
 
 function sameDay(firstMoment, secondMoment) {
   return firstMoment && secondMoment && firstMoment.isSame(secondMoment, 'd');
+}
+
+function formatRange(startDate, endDate) {
+  // If the startDate is at the start of a month, just render MONTH_FORMAT
+  // If the endDate is at the start of a month, just render MONTH_FORMAT
+  // If they are identical, just return one of them
+  // If either is null, just return null
+  if (!startDate || !endDate) return null;
+
+  const startDisplay = sameDay(startDate, moment(startDate).startOf('month'))
+    ? startDate.format(MONTH_FORMAT)
+    : startDate.format(DAY_FORMAT);
+
+  const endDisplay = sameDay(endDate, moment(endDate).endOf('month'))
+    ? endDate.format(MONTH_FORMAT)
+    : endDate.format(DAY_FORMAT);
+
+  return startDisplay === endDisplay
+    ? startDisplay
+    : `${startDisplay} — ${endDisplay}`;
 }
 
 export default class DateRangePicker extends React.Component {
@@ -120,11 +141,7 @@ export default class DateRangePicker extends React.Component {
   getRangeTitle = () => {
     const { value } = this.props;
     const [startDate, endDate] = value || [null, null];
-    return (
-      startDate &&
-      endDate &&
-      `${startDate.format(FORMAT)} — ${endDate.format(FORMAT)}`
-    );
+    return formatRange(startDate, endDate);
   };
 
   render() {
