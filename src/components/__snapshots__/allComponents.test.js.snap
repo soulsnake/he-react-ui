@@ -971,7 +971,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
         className="options"
       >
         <li
-          className="option selected"
+          className="option"
           onClick={[Function]}
         >
           Custom
@@ -1123,7 +1123,7 @@ exports[`Cosmos fixtures: DateRangePicker:customPlaceholder 1`] = `
         className="options"
       >
         <li
-          className="option selected"
+          className="option"
           onClick={[Function]}
         >
           Custom
@@ -1275,7 +1275,7 @@ exports[`Cosmos fixtures: DateRangePicker:noInitialValue 1`] = `
         className="options"
       >
         <li
-          className="option selected"
+          className="option"
           onClick={[Function]}
         >
           Custom
@@ -2294,9 +2294,18 @@ exports[`Cosmos fixtures: FormSection:Default 1`] = `
             "value": "false",
           },
           Object {
-            "child": <UNDEFINED
+            "child": <SingleDatePicker
+              anchorDirection="right"
+              disabled={false}
+              displayFormat="DD/MM/YYYY"
               id="demo2"
+              inline={false}
               name="demo2"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Select date"
+              readOnly={true}
             />,
             "label": "Specific date...",
             "showChild": false,
@@ -11086,72 +11095,6 @@ exports[`Cosmos fixtures: SingleDatePicker:error 1`] = `
     >
       That wasn't the best choice
     </label>
-  </div>
-</div>
-`;
-
-exports[`Cosmos fixtures: SingleDatePicker:focused 1`] = `
-<div
-  className="outer"
-  style={undefined}
->
-  <div
-    className="inner"
-  >
-    <div
-      className="SingleDatePicker SingleDatePicker_1"
-    >
-      <div>
-        <div
-          className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2"
-        >
-          <div
-            className="DateInput DateInput_1"
-          >
-            <input
-              aria-describedby="DateInput__screen-reader-message-demo"
-              aria-label="Select date"
-              autoComplete="off"
-              className="DateInput_input DateInput_input_1 DateInput_input__readOnly DateInput_input__readOnly_2"
-              disabled={false}
-              id="demo"
-              name="demo"
-              onChange={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Select date"
-              readOnly={true}
-              required={false}
-              type="text"
-              value=""
-            />
-            <p
-              className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
-              id="DateInput__screen-reader-message-demo"
-            >
-              Press the down arrow key to interact with the calendar and
-  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <svg
-      className="icon icon"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 26 26"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(5.000000, 5.000000)"
-      >
-        <path
-          d="M4,2.5 L12,2.5 L12,1.5 C12,0.94771525 12.4477153,0.5 13,0.5 C13.5522847,0.5 14,0.94771525 14,1.5 L14,2.5 C15.1045695,2.5 16,3.3954305 16,4.5 L16,6 L16,14 C16,14.8284271 15.3284271,15.5 14.5,15.5 L1.5,15.5 C0.671572875,15.5 0,14.8284271 0,14 L0,6 L0,4.5 C-2.22044605e-16,3.3954305 0.8954305,2.5 2,2.5 L2,1.5 C2,0.94771525 2.44771525,0.5 3,0.5 C3.55228475,0.5 4,0.94771525 4,1.5 L4,2.5 Z M14,7.5 L2,7.5 L2,13.5 L14,13.5 L14,7.5 Z"
-        />
-      </g>
-    </svg>
   </div>
 </div>
 `;

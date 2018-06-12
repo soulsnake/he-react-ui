@@ -67,20 +67,6 @@ export default [
     formWrapper,
   },
 
-  // {
-  //   component: DateRangePicker,
-
-  //   name: 'customPickerOpen',
-
-  //   parentLayout,
-
-  //   formWrapper,
-
-  //   state: {
-  //     focusedInput: 'startDate',
-  //   },
-  // },
-
   {
     component: DateRangePicker,
 
@@ -130,4 +116,14 @@ export default [
       value: null,
     },
   },
+  /* This fixture is temporarily commented out because it cannot be safely tested within JSDOM. */
+  // {
+  //   component: DateRangePicker,
+  //   name: 'customPickerOpen',
+  //   parentLayout,
+  //   formWrapper,
+  //   state: {
+  //     focusedInput: 'startDate',
+  //   },
+  // },
 ];

@@ -1,12 +1,14 @@
-import SingleDatePicker from '../';
+// import SingleDatePicker from '../';
 
-export default {
-  component: SingleDatePicker,
+/* This fixture is temporarily commented out because it cannot be safely tested within JSDOM. */
 
-  // state: { focused: true },
+// export default {
+//   component: SingleDatePicker,
 
-  props: {
-    id: 'demo',
-    name: 'demo',
-  },
-};
+//   state: { focused: true },
+
+//   props: {
+//     id: 'demo',
+//     name: 'demo',
+//   },
+// };
