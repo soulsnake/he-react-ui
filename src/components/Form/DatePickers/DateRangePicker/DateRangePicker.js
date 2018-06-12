@@ -99,7 +99,7 @@ export default class DateRangePicker extends React.Component {
         sameDay(entry.value[0], value[0]) && sameDay(entry.value[1], value[1]),
     );
 
-    return index === -1 ? CUSTOM : String(index);
+    return index === -1 ? null : String(index);
   };
 
   getRangeTitle = () => {
