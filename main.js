@@ -97048,13 +97048,13 @@ var _classnames3 = __webpack_require__(13);
 
 var _classnames4 = _interopRequireDefault(_classnames3);
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
 var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
 
 var _Icon = __webpack_require__(11);
 
