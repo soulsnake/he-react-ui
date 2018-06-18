@@ -59,14 +59,12 @@ class Button extends React.Component {
       iconRight,
       keyline,
       link,
-      onClick,
       small,
       large,
       squared,
       submit,
       submitting,
       done,
-      ...rest
     } = this.props;
 
     const buttonClasses = classnames(style.button, {
@@ -105,7 +103,6 @@ class Button extends React.Component {
           className={buttonClasses}
           type={submit ? 'submit' : 'button'}
           onClick={this.handleClick}
-          {...rest}
         >
           {statusIcon || (
             <Fragment>
