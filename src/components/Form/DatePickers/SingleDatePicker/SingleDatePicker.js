@@ -19,7 +19,6 @@ import styles from './SingleDatePicker.scss';
 class SingleDatePicker extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
     anchorDirection: PropTypes.oneOf(['left', 'right']),
     className: PropTypes.string,
     disabled: PropTypes.bool,
@@ -39,12 +38,12 @@ class SingleDatePicker extends React.Component {
   };
 
   static defaultProps = {
-    anchorDirection: 'right',
+    anchorDirection: 'left',
     disabled: false,
     displayFormat: 'DD/MM/YYYY',
     inline: false,
-    placeholder: 'Select date',
-    readOnly: true,
+    placeholder: 'Date',
+    readOnly: false,
     onBlur: () => null,
     onChange: () => null,
     onFocus: () => null,
@@ -97,16 +96,18 @@ class SingleDatePicker extends React.Component {
   render() {
     const {
       id,
-      className,
-      disabled,
       error,
+      horizontalMargin,
       inline,
       label,
-      horizontalMargin,
-      onChange,
+      className,
+      disabled,
       style,
-      value,
-      ...restProps
+      anchorDirection,
+      displayFormat,
+      isOutsideRange,
+      readOnly,
+      placeholder,
     } = this.props;
     const classes = classnames(styles.outer, {
       [styles.error]: error,
@@ -123,7 +124,6 @@ class SingleDatePicker extends React.Component {
           <Media query={{ maxWidth: 767 }}>
             {matches => (
               <Picker
-                className={styles.picker}
                 date={this.state.date}
                 daySize={28}
                 disabled={disabled}
@@ -135,7 +135,11 @@ class SingleDatePicker extends React.Component {
                 onFocusChange={this.handleFocusChange}
                 navNext={<Icon name="ChevronRight" />}
                 navPrev={<Icon name="ChevronLeft" />}
-                {...restProps}
+                anchorDirection={anchorDirection}
+                displayFormat={displayFormat}
+                isOutsideRange={isOutsideRange}
+                readOnly={readOnly}
+                placeholder={placeholder}
               />
             )}
           </Media>
