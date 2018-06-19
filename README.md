@@ -1,6 +1,6 @@
 # he-react-ui
-[![Build Status](https://travis-ci.org/HealthEngineAU/he-react-ui.svg?branch=master)](https://travis-ci.org/HealthEngineAU/he-react-ui)
-[![Coverage Status](https://coveralls.io/repos/github/HealthEngineAU/he-react-ui/badge.svg?branch=master)](https://coveralls.io/github/HealthEngineAU/he-react-ui?branch=master)
+[![Build Status](https://travis-ci.org/HealthEngineAU/he-react-ui.svg?branch=master&cache_bust=725a301f3e230f8a0a47afe5e2c28029ad63c9f2)](https://travis-ci.org/HealthEngineAU/he-react-ui)
+[![Coverage Status](https://coveralls.io/repos/github/HealthEngineAU/he-react-ui/badge.svg?branch=master&cache_bust=725a301f3e230f8a0a47afe5e2c28029ad63c9f2)](https://coveralls.io/github/HealthEngineAU/he-react-ui?branch=master)
 
 Clean stateless react UI components built for https://healthengine.com.au
 
