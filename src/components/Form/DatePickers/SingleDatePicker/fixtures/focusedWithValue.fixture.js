@@ -9,6 +9,6 @@ export default {
   props: {
     id: 'demo',
     name: 'demo',
-    value: moment(),
+    value: moment('2018-06-19'),
   },
 };
