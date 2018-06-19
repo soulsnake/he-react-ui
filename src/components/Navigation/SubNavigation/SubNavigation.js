@@ -26,6 +26,7 @@ class SubNavigation extends Component {
           key: PropTypes.string.isRequired,
           label: PropTypes.string.isRequired,
           route: PropTypes.string.isRequired,
+          exact: PropTypes.bool,
         }),
       ),
     }),
@@ -59,7 +60,7 @@ class SubNavigation extends Component {
             [style.selected]:
               matchPath(location.pathname + location.hash, {
                 path: item.route,
-                exact: true,
+                exact: item.exact || typeof item.exact === 'undefined', // Default to true
                 strict: false,
               }) !== null,
           })}

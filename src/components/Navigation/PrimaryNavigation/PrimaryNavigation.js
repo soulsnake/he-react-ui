@@ -69,6 +69,7 @@ class PrimaryNavigation extends Component {
                 key: PropTypes.string.isRequired,
                 label: PropTypes.string.isRequired,
                 route: PropTypes.string.isRequired,
+                exact: PropTypes.bool,
               }),
             ),
           }),
