@@ -28,11 +28,11 @@ $bucket-width: 76px;
   position: relative;
   text-decoration: none;
   &:hover {
-    background-color: $teal_dark_60;
+    background-color: $special_case_grey_dark_20;
     opacity: 1;
   }
   &:active {
-    background-color: $blue_dark_60;
+    background-color: $special_case_grey_dark_40;
     color: $white;
     opacity: 1;
   }
@@ -41,7 +41,7 @@ $bucket-width: 76px;
     opacity: 1;
   }
   &.open {
-    background-color: $blue_dark_60;
+    background-color: $special_case_grey_dark_40;
     opacity: 1;
   }
   @include transition(all 0.2s);

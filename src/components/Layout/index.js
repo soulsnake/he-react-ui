@@ -1,4 +1,5 @@
 import BackView from './BackView';
+import Content from './Content';
 import EvenGrid from './EvenGrid';
 import Footer from './Footer';
 import FormSection from './FormSection';
@@ -9,6 +10,7 @@ import TabView from './TabView';
 
 export {
   BackView,
+  Content,
   EvenGrid,
   Footer,
   FormSection,
