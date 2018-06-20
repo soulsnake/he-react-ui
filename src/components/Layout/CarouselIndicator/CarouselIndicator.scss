@@ -1,0 +1,35 @@
+@import '../../../styles/base';
+
+.outer{
+}
+.wrapper{
+  z-index: 15;
+  width: 100%;
+  padding-left: 0;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+.item{
+  display: flex;
+  width: 8px;
+  height: 8px;
+  margin: 3px;
+  text-indent: -999px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: $n_grey_1;
+
+}
+.nextBtn{
+  display: flex;
+  margin-left: 14px;
+  color: $teal_1;
+  font-weight: bold;
+  cursor: pointer;
+}
+.active {
+  width: 8px;
+  height: 8px;
+  background-color: $teal_1;
+}

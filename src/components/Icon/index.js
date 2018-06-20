@@ -5,7 +5,13 @@ import classnames from 'classnames';
 import Add from './Add';
 import Alarm from './Alarm';
 import Alert from './Alert';
-import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from './Arrows';
+import {
+  ArrowLeft,
+  ArrowRight,
+  ArrowUp,
+  ArrowDown,
+  CurvedArrow,
+} from './Arrows';
 import Bookings from './Bookings';
 import Calendar from './Calendar';
 import CaretRight from './CaretRight';
@@ -24,6 +30,7 @@ import Edit from './Edit';
 import Engage from './Engage';
 import Ellipsis from './Ellipsis';
 import HealthEngine from './HealthEngine';
+import HealthEngineWithText from './HealthEngineWithText';
 import Help from './Help';
 import Home from './Home';
 import Logout from './Logout';
@@ -85,6 +92,8 @@ function createIcon(iconProps) {
       return <ChevronDown {...props} />;
     case 'Clock':
       return <Clock {...props} />;
+    case 'CurvedArrow':
+      return <CurvedArrow {...props} />;
     case 'Cross':
       return <Cross {...props} />;
     case 'Delete':
@@ -97,6 +106,8 @@ function createIcon(iconProps) {
       return <Engage {...props} />;
     case 'HealthEngine':
       return <HealthEngine {...props} />;
+    case 'HealthEngineWithText':
+      return <HealthEngineWithText {...props} />;
     case 'Help':
       return <Help {...props} />;
     case 'Home':
