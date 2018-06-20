@@ -37,12 +37,12 @@
 .popup {
   background-color: $white;
   border-radius: 4px;
-  color: $navy_1;
+  color: $grey_1;
   font-family: $font-stack;
   top: 0;
   left: 150px;
   max-height: 399px;
-  max-width: 484px;
+  max-width: 544px;
   min-width: 320px;
   opacity: 0;
   overflow-y: auto;
@@ -65,14 +65,14 @@
 }
 .tutorialIntroHeader{
   padding: 18px 15px 8px 15px; 
-  width: 484px;
+  width: 544px;
   .heLogoWithText {
     width: 161px;
     height: 32px;
   }
 }
 .greyBackground{
-  background: $n_grey_4;
+  background: $grey_7;
 }
 .tutorialIntroFooter{
   margin-top: 38px;
@@ -116,7 +116,7 @@
 }
 
 .close:hover {
-  background: $n_grey_2;
+  background: $grey_5;
 }
 
 .showing {

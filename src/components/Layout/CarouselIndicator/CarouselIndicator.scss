@@ -18,18 +18,18 @@
   text-indent: -999px;
   border-radius: 10px;
   cursor: pointer;
-  background-color: $n_grey_1;
+  background-color: $grey_4;
 
 }
 .nextBtn{
   display: flex;
   margin-left: 14px;
-  color: $teal_1;
+  color: $teal;
   font-weight: bold;
   cursor: pointer;
 }
 .active {
   width: 8px;
   height: 8px;
-  background-color: $teal_1;
+  background-color: $teal;
 }
