@@ -5445,6 +5445,19 @@ log-driver@^1.2.5:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/log-driver/-/log-driver-1.2.7.tgz#63b95021f0702fedfa2c9bb0a24e7797d71871d8"
 
+log-symbols@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
+  dependencies:
+    chalk "^2.0.1"
+
+loglevelnext@^1.0.1:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/loglevelnext/-/loglevelnext-1.0.5.tgz#36fc4f5996d6640f539ff203ba819641680d75a2"
+  dependencies:
+    es6-symbol "^3.1.1"
+    object.assign "^4.1.0"
+
 longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
@@ -5455,7 +5468,7 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3
   dependencies:
     js-tokens "^3.0.0"
 
-loud-rejection@^1.0.0:
+loud-rejection@^1.0.0, loud-rejection@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
   dependencies:
@@ -5649,9 +5662,9 @@ mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
 
-mime@^1.5.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
+mime@^2.1.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-2.3.1.tgz#b1621c54d63b97c47d3cfe7f7215f7d64517c369"
 
 mimic-fn@^1.0.0:
   version "1.1.0"
@@ -6957,6 +6970,13 @@ react-cosmos-config@^4.4.0:
     react-cosmos-shared "^4.4.0"
     yargs "^11.0.0"
 
+react-cosmos-config@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/react-cosmos-config/-/react-cosmos-config-4.5.0.tgz#454a0f6e4ee92d8f37b7cca30d868c86525f1ebd"
+  dependencies:
+    react-cosmos-shared "^4.4.0"
+    yargs "^11.0.0"
+
 react-cosmos-loader@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/react-cosmos-loader/-/react-cosmos-loader-4.4.0.tgz#8b14893ea0a8cefb44e74f79190a4788266f8ccd"
@@ -6968,9 +6988,9 @@ react-cosmos-loader@^4.4.0:
     react-cosmos-shared "^4.4.0"
     react-cosmos-state-proxy "^4.4.0"
 
-react-cosmos-playground@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/react-cosmos-playground/-/react-cosmos-playground-4.4.0.tgz#d5f7ea300f63c3e52043f91b38c529c77739adca"
+react-cosmos-playground@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/react-cosmos-playground/-/react-cosmos-playground-4.5.0.tgz#626f970c185762305a59fd0c2dab98a798f0fe64"
 
 react-cosmos-router-proxy@^4.2.1:
   version "4.2.1"
@@ -7046,9 +7066,9 @@ react-cosmos-voyager@^4.4.0:
     glob "^7.1.1"
     traverse "^0.6.6"
 
-react-cosmos@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/react-cosmos/-/react-cosmos-4.4.0.tgz#d1187f1d56040f13964a424b6c32110c4bbf6753"
+react-cosmos@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/react-cosmos/-/react-cosmos-4.5.0.tgz#b182e6a91a8c3a97a633e10b6cb1562871576d76"
   dependencies:
     babel-polyfill "^6.26.0"
     express "^4.16.3"
@@ -7058,16 +7078,16 @@ react-cosmos@^4.4.0:
     import-from "^2.1.0"
     lodash.omit "^4.5.0"
     object.values "^1.0.4"
-    react-cosmos-config "^4.4.0"
+    react-cosmos-config "^4.5.0"
     react-cosmos-loader "^4.4.0"
-    react-cosmos-playground "^4.4.0"
+    react-cosmos-playground "^4.5.0"
     react-cosmos-shared "^4.4.0"
     react-cosmos-voyager "^4.4.0"
     react-cosmos-voyager2 "^4.4.0"
     react-dev-utils "^5.0.1"
     react-error-overlay "^4.0.0"
     resolve-from "^4.0.0"
-    webpack-dev-middleware "^1.12.0"
+    webpack-dev-middleware "^2.0.6"
     webpack-hot-middleware "^2.22.2"
     yargs "^11.0.0"
 
@@ -8448,10 +8468,6 @@ time-stamp@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
 
-time-stamp@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-2.0.0.tgz#95c6a44530e15ba8d6f4a3ecb8c3a3fac46da357"
-
 timers-browserify@^2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.6.tgz#241e76927d9ca05f4d959819022f5b3664b64bae"
@@ -8683,6 +8699,10 @@ urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
 
+url-join@^2.0.2:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/url-join/-/url-join-2.0.5.tgz#5af22f18c052a000a48d7b82c5e9c2e2feeda728"
+
 url-parse@^1.1.8, url-parse@~1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.1.tgz#4dec9dad3dc8585f862fed461d2e19bbf623df30"
@@ -8845,15 +8865,17 @@ webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
 
-webpack-dev-middleware@^1.12.0:
-  version "1.12.2"
-  resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-1.12.2.tgz#f8fc1120ce3b4fc5680ceecb43d777966b21105e"
+webpack-dev-middleware@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-2.0.6.tgz#a51692801e8310844ef3e3790e1eacfe52326fd4"
   dependencies:
+    loud-rejection "^1.6.0"
     memory-fs "~0.4.1"
-    mime "^1.5.0"
+    mime "^2.1.0"
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
-    time-stamp "^2.0.0"
+    url-join "^2.0.2"
+    webpack-log "^1.0.1"
 
 webpack-hot-middleware@^2.22.2:
   version "2.22.2"
@@ -8863,6 +8885,15 @@ webpack-hot-middleware@^2.22.2:
     html-entities "^1.2.0"
     querystring "^0.2.0"
     strip-ansi "^3.0.0"
+
+webpack-log@^1.0.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-log/-/webpack-log-1.2.0.tgz#a4b34cda6b22b518dbb0ab32e567962d5c72a43d"
+  dependencies:
+    chalk "^2.1.0"
+    log-symbols "^2.1.0"
+    loglevelnext "^1.0.1"
+    uuid "^3.1.0"
 
 webpack-sources@^1.0.1:
   version "1.1.0"

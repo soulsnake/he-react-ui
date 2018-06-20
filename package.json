@@ -41,7 +41,7 @@
     "prop-types": "^15.6.1",
     "raf": "^3.4.0",
     "react": "^16.3.0",
-    "react-cosmos": "^4.4.0",
+    "react-cosmos": "^4.5.0",
     "react-cosmos-router-proxy": "^4.2.1",
     "react-cosmos-telescope": "^4.4.0",
     "react-cosmos-test": "^4.4.0",
