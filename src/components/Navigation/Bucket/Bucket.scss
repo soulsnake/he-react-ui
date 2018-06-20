@@ -2,6 +2,18 @@
 
 $bucket-width: 76px;
 
+@keyframes pulse {
+  0% {
+    opacity: .5;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+
 .bucket {
   border-left: solid 4px transparent;
   color: $white;

@@ -58,17 +58,6 @@ $slider-width: 264px;
   pointer-events: none;
   position: relative;
 }
-@keyframes pulse {
-  0% {
-    opacity: .5;
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .5;
-  }
-}
 
 .outer {
   display: flex;
@@ -89,7 +78,6 @@ $slider-width: 264px;
   flex-grow: 1;
   height: 100%;
   flex-direction: column;
-  overflow-x: auto;
 }
 
 .loadingBucket {
@@ -109,4 +97,5 @@ $slider-width: 264px;
   flex-grow: 1;
   height: 100%;
   overflow-y: auto;
+  overflow-x: auto;
 }

@@ -16,6 +16,7 @@ after_success:
 
 before_deploy:
   - yarn cosmos-export
+  - touch cosmos-export/.nojekyll
 
 deploy:
   - provider: pages
