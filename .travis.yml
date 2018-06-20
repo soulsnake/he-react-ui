@@ -9,13 +9,14 @@ script:
   - yarn
   - yarn lint
   - yarn coverage
+  - yarn build
 
 after_success:
   - yarn coveralls
 
 before_deploy:
   - yarn cosmos-export
-  - yarn build
+  - touch cosmos-export/.nojekyll
 
 deploy:
   - provider: pages
