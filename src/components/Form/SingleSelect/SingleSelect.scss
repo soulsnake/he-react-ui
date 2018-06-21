@@ -21,6 +21,10 @@
       transform: rotate(180deg);
     }
   }
+  width: 280px;
+  @include breakpoint(small) {
+    width: 100%;
+  }
   // React-select styles
   :global {
     .Select-control {
@@ -32,7 +36,7 @@
       overflow: scroll;
     }
     .Select-clear-zone {
-      display: table-cell;
+      display: none;
     }
     .Select-value-label, .Select-placeholder {
       position: absolute;
@@ -86,10 +90,6 @@
   font-weight: $regular;
   margin-bottom: 12px;
   position: relative;
-  width: 280px;
-  @include breakpoint(small) {
-    width: 100%;
-  }
   &:hover {
     border-color: $teal;
   }
