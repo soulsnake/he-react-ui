@@ -25,6 +25,72 @@
   @include breakpoint(small) {
     width: 100%;
   }
+  &.error, &.error:active, &.error:hover, &.error:focus {
+    &:not(.expanded) {
+      .caret {
+          color: $red;
+      }
+    }
+  }
+  .caret {
+    color: $he_black;
+    fill: currentColor;
+    position: absolute;
+    pointer-events: none;
+    top: 5px;
+    right: 8px;
+    @include transition(all 0.2s);
+  }
+
+  &.disabled, &.disabled:hover {
+    .caret {
+      color: $grey_3;
+    }
+  }
+}
+
+.select {
+  font-family: $font-stack;
+  background-color: $white;
+  border: solid 1px $grey_5;
+  border-radius: 4px;
+  color: $grey_1;
+  cursor: pointer;
+  font-size: $input-size;
+  font-weight: $regular;
+  margin-bottom: 12px;
+  &:hover {
+    border-color: $teal;
+  }
+  &.expanded {
+    border-color: $teal;
+    box-shadow: 0px 0px 10px rgba($teal, 15);
+  }
+  &.disabled {
+    background-color: $grey_7;
+    border-color: $grey_5;
+    color: $grey_2;
+    cursor: not-allowed;
+    &:hover {
+      border-color: $grey_5;
+      color: $grey_2;
+    }
+  }
+
+  @include transition(all 0.2s); // TODO Height transition
+
+  &.error, &.error:active, &.error:hover, &.error:focus {
+    &:not(.expanded) {
+      background-color: $red_light_80;
+      border-color: $red;
+      color: $red;
+      :global {
+        .Select-placeholder {
+          color: $red;
+        }
+      }
+    }
+  }
   // React-select styles
   :global {
     .Select-control {
@@ -52,7 +118,7 @@
       color: $grey_3;
     }
     .is-open {
-      .Select-placeholder {
+      .Select-placeholder, .Select-value-label {
         left: 24px;
         max-height: 240px;
         overflow: scroll;
@@ -72,86 +138,10 @@
       border: 0 none;
       background: none;
       height: 48px;
+      font-weight: $semi-bold;
+      caret-color: $teal;
       &:focus {
         outline: none;
-      }
-    }
-  }
-}
-
-.select {
-  font-family: $font-stack;
-  background-color: $white;
-  border: solid 1px $grey_5;
-  border-radius: 4px;
-  color: $grey_1;
-  cursor: pointer;
-  font-size: $input-size;
-  font-weight: $regular;
-  margin-bottom: 12px;
-  position: relative;
-  &:hover {
-    border-color: $teal;
-  }
-  &.expanded {
-    border-color: $teal;
-    box-shadow: 0px 0px 10px rgba($teal, 15);
-  }
-
-  @include transition(all 0.2s); // TODO Height transition
-}
-
-.expanded {
-  .options {
-    margin-left: 0;
-    opacity: 1;
-    pointer-events: auto;
-    width: 100%;
-  }
-}
-
-.caret {
-  color: $he_black;
-  fill: currentColor;
-  position: absolute;
-  pointer-events: none;
-  top: 5px;
-  right: 8px;
-  @include transition(all 0.2s);
-}
-
-.select.disabled, .outer.disabled, .outer.disabled:hover {
-  background-color: $grey_7;
-  border-color: $grey_5;
-  color: $grey_2;
-  cursor: not-allowed;
-  &:hover {
-    border-color: $grey_5;
-    color: $grey_2;
-  }
-}
-
-.outer.disabled, .outer.disabled:hover {
-  .caret {
-    color: $grey_3;
-  }
-}
-
-.select, {
-  &.error, &.error:active, &.error:hover, &.error:focus {
-    &:not(.expanded) {
-      background-color: $red_light_80;
-      border-color: $red;
-      color: $red;
-    }
-  }
-}
-
-.outer {
-  &.error, &.error:active, &.error:hover, &.error:focus {
-    &:not(.expanded) {
-      .caret {
-          color: $red;
       }
     }
   }
