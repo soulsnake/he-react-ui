@@ -4,8 +4,75 @@
   margin-bottom: 12px;
 }
 
-.input {
-  display: none;
+.outer {
+  position: relative;
+  width: fit-content;
+  .caret {
+    margin-top: 4px;
+  }
+  &:hover {
+    .caret {
+      color: $teal;
+    }
+  }
+  &.expanded {
+    .caret {
+      color: $teal;
+      transform: rotate(180deg);
+    }
+  }
+  // React-select styles
+  :global {
+    .Select-control {
+      height: 48px;
+      padding: 0px 16px;
+    }
+    .Select-menu-outer {
+      max-height: 240px;
+      overflow: scroll;
+    }
+    .Select-clear-zone {
+      display: table-cell;
+    }
+    .Select-value-label, .Select-placeholder {
+      position: absolute;
+      top: 0px;
+      left: 16px;
+      font-size: 16px;
+      line-height: 48px;
+    }
+    .Select-clear {
+      float: right;
+    }
+    .Select-placeholder, .is-open .Select-value-label {
+      color: $grey_3;
+    }
+    .is-open {
+      .Select-placeholder {
+        left: 24px;
+        max-height: 240px;
+        overflow: scroll;
+      }
+    }
+    .Select-option {
+      color: $grey_1;
+      padding: 0px 16px;
+      line-height: 40px;
+      &.is-focused {
+        background-color: $grey_7;
+      }
+    }
+    input[role=combobox] {
+      font-size: 16px;
+      color: $grey_1;
+      border: 0 none;
+      background: none;
+      height: 48px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }
 
 .select {
@@ -24,61 +91,14 @@
     width: 100%;
   }
   &:hover {
-  border-color: $teal;
-  color: $he_black;
-
-  .caret {
-    color: $teal;
-  }
-
-  }
-  @include transition(all 0.2s);
-    // React-select styles
-
-  :global {
-    .Select-control {
-      height: 48px;
-      padding: 0px 16px;
-    }
-    .Select-menu-outer {
-      max-height: 240px;
-      overflow: scroll;
-    }
-    .Select-placeholder {
-      position: absolute;
-      top: 0px;
-      left: 16px;
-      font-size: 16px;
-      line-height: 48px;
-      color: $grey_1;
-    }
-    .Select-option {
-      color: $grey_1;
-      padding: 8px 16px;
-      &.is-focused {
-        background-color: $grey_4;
-        color: $grey_2;
-      }
-    }
-    input[role=combobox] {
-      font-size: 16px;
-      color: $grey_2;
-      border: 0 none;
-    }
-  }
-}
-
-.expanded, .forceOpen {
-  .select {
-    color: $he_black;
     border-color: $teal;
-    border-radius: 4px 4px 0px 0px;
-
-    .caret {
-      color: $teal;
-      transform: rotate(180deg);
-    }
   }
+  &.expanded {
+    border-color: $teal;
+    box-shadow: 0px 0px 10px rgba($teal, 15);
+  }
+
+  @include transition(all 0.2s); // TODO Height transition
 }
 
 .expanded {
@@ -87,7 +107,6 @@
     opacity: 1;
     pointer-events: auto;
     width: 100%;
-    @include transition(opacity 0.2s, width 0.2s, margin-left, 0.2s);
   }
 }
 
@@ -101,66 +120,44 @@
   @include transition(all 0.2s);
 }
 
-.disabled {
+.select.disabled, .outer.disabled, .outer.disabled:hover {
   background-color: $grey_7;
   border-color: $grey_5;
-  cursor: not-allowed;
   color: $grey_2;
+  cursor: not-allowed;
   &:hover {
     border-color: $grey_5;
     color: $grey_2;
   }
+}
+
+.outer.disabled, .outer.disabled:hover {
   .caret {
     color: $grey_3;
   }
 }
 
-.error, .error:active, .error:hover, .error:focus {
-  background-color: $red_light_80;
-  border-color: $red;
-  color: $red;
-  .caret {
-    color: $red;
+.select, {
+  &.error, &.error:active, &.error:hover, &.error:focus {
+    &:not(.expanded) {
+      background-color: $red_light_80;
+      border-color: $red;
+      color: $red;
+    }
   }
-  &.expanded {
-    border-color: $red;
-    color: $red;
+}
+
+.outer {
+  &.error, &.error:active, &.error:hover, &.error:focus {
+    &:not(.expanded) {
+      .caret {
+          color: $red;
+      }
+    }
   }
 }
 
 .errorMessage {
   margin-top: 12px;
   margin-bottom: 0;
-}
-
-.options {
-  background-color: $white;
-  border: solid 1px $teal;
-  border-top: solid 1px $grey_7;
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0 6px 12px $grey_4;
-  cursor: pointer;
-  font-size: $input-size;
-  font-weight: $regular;
-  list-style: none;
-  margin: -13px 0 0 4%;
-  max-height: 240px;
-  opacity: 0;
-  overflow-y: auto;
-  padding: 0;
-  position: absolute;
-  pointer-events: none;
-  width: 80%;
-  z-index: 1;
-  @include transition(margin-left 0.2s, opacity 0.2s, width 0.2s);
-}
-
-.option {
-  padding: 12px;
-  user-select: none;
-  @include transition(all 0.2s);
-}
-
-.selected {
-  background-color: $teal_light_80;
 }
