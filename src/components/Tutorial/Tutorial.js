@@ -21,15 +21,17 @@ class Tutorial extends React.Component {
     style: PropTypes.object,
     tutorialStages: PropTypes.object,
     onClose: PropTypes.func,
+    onChangeStep: PropTypes.func,
   };
 
   static defaultProps = {
     showing: false,
+    onChangeStep: e => null,
   };
 
   state = {
     showing: this.props.showing,
-    currentStep: 0,
+    currentStep: -1,
     currentStage: 'intro',
   };
 
@@ -44,12 +46,16 @@ class Tutorial extends React.Component {
     this.setState({
       currentStage: 'steps',
     });
+    this.nextStep();
   };
 
   nextStep = () => {
+    const { tutorialStages } = this.props;
+
     this.setState({
       currentStep: this.state.currentStep + 1,
     });
+    this.props.onChangeStep(tutorialStages.steps[this.state.currentStep + 1]);
   };
 
   renderIntro = intro => (
@@ -66,7 +72,7 @@ class Tutorial extends React.Component {
 
   renderSteps = (i, steps) => (
     <div className={styles.tutorialWrapper}>
-      <h3 className={styles.tutorialHeaderWrapper}>{steps[i].header}</h3>
+      <h3 className={styles.tutorialHeader}>{steps[i].header}</h3>
 
       {steps[i].content || <LoadingSpinner />}
 
@@ -99,7 +105,9 @@ class Tutorial extends React.Component {
   renderContent = () => {
     const { className, tutorialStages, style } = this.props;
     const { currentStep, currentStage } = this.state;
-    const popupClasses = classnames(styles.popup, className);
+    const popupClasses = classnames(styles.popup, className, {
+      [styles.popupCentered]: currentStage === 'intro',
+    });
     let wrapperStyle = {};
     let rightOverlay = {};
     let leftOverlay = {};
@@ -110,14 +118,22 @@ class Tutorial extends React.Component {
       wrapperStyle = {
         position: 'absolute',
         width: '100%',
+        height: '100%',
         top: steps[currentStep].top,
         left: steps[currentStep].left,
+        right: 'auto',
       };
       rightOverlay = {
         left: steps[currentStep].left,
       };
       leftOverlay = {
         width: steps[currentStep].left,
+      };
+    } else {
+      wrapperStyle = {
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
       };
     }
 
@@ -144,7 +160,7 @@ class Tutorial extends React.Component {
               ? this.renderSteps(currentStep, steps)
               : this.renderIntro(tutorialStages[currentStage])}
           </div>
-          <Icon className={styles.arrow} name="CurvedArrow" />
+          {steps && <Icon className={styles.arrow} name="CurvedArrow" />}
         </div>
       </Fragment>
     );

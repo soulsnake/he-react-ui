@@ -20,19 +20,6 @@ import Tutorial from '../../Tutorial';
 
 const SUPPORTED_BADGES = ['NEW', 'FREE'];
 
-/*
-khong biet tai sao may minh bay gio dang rat la buon, bon chon va lo lang, lo lang vi khong tu tin rang nhung quyet dinh cua minh la dung dan, ko biet viec minh ve vietnam ky nay co phai la mot cai gi do no qua 
-
-co le cam giac cua minh dang la cam thay minh noi khong dung su that, so rang khi no vo le ra thi minh khong handle noi
-
-co ay dang nghi rang that su cong ty dang muon mo chi nhanh ben VN va muon dua minh ve de lam, nen viec di cong tac la dieu hien nhien, 1 tuan, nhung co nen noi den viec minh o VN 4 tuan ma ko lien quan gi den cong viec. Co le nen noi. Ket qua di cong tac ra sao 
-
-toi mai a bay nha e, e cho a ra san bay duoc khong?
-
-a noi voi ong a ve VN lam duoc ko, ong noi, ko duoc, may phai o day voi tao, tao dan may ve vi tao muon tuyen nguoi trong field cua may, ma trong cty hien tai may la best trong field nay roi, va may la nguoi VN nua, nen nhieu yeu to thich hop de may di phong van. Nhung tao van muon may lam o day, ben nay tao se tuyen mot dua lead, may se lam viec voi thang lead do.
-
-
-*/
 function renderRoutes(
   item,
   locations,
@@ -99,6 +86,13 @@ class PrimaryNavigation extends Component {
       PropTypes.object,
       PropTypes.string,
     ]),
+    tutorialProps: PropTypes.shape({
+      showing: PropTypes.bool,
+      tutorialStages: PropTypes.shape({
+        intro: PropTypes.object,
+        steps: PropTypes.array,
+      }),
+    }),
   };
 
   static defaultProps = {
@@ -108,6 +102,7 @@ class PrimaryNavigation extends Component {
       route: '/',
     },
     loading: false,
+    tutorialProps: null,
   };
 
   constructor(props) {
@@ -251,7 +246,13 @@ class PrimaryNavigation extends Component {
     });
   }
 
-  renderTutorial = () => <Tutorial left="76px" showing />;
+  onChangeStep = (step) => {
+    console.log(step)
+  }
+  
+  renderTutorial = tutorialProps => {
+    return <Tutorial showing={true} onChangeStep={this.onChangeStep} tutorialStages={tutorialProps.tutorialStages}/>;
+  };
 
   render() {
     const {
@@ -269,6 +270,7 @@ class PrimaryNavigation extends Component {
       locationValue,
       logoutRoute,
       children,
+      tutorialProps,
     } = this.props;
 
     return (
@@ -288,7 +290,7 @@ class PrimaryNavigation extends Component {
           )}
           <div className={styles.children}>{children}</div>
         </div>
-        {renderTutorial()}
+        {tutorialProps && renderTutorial(tutorialProps)}
       </div>
     );
   }

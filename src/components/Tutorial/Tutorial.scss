@@ -57,15 +57,24 @@
   }
 }
 
+.popupCentered {
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .popupWithPadding {
   padding: 38px;
   @include breakpoint(small) {
     padding: 20px;
   }
 }
+.tutorialHeader{
+  padding: 18px 30px 8px 30px; 
+}
 .tutorialIntroHeader{
   padding: 18px 15px 8px 15px; 
-  width: 544px;
   .heLogoWithText {
     width: 161px;
     height: 32px;
@@ -83,6 +92,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    div {
+      min-width: auto;
+    }
     .leftElement{
       margin: 0;
       text-align: left;
