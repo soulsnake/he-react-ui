@@ -6,6 +6,22 @@
 
 .outer {
   position: relative;
+  margin-bottom: 12px; // Form auto spacing. Should split out into another componenet eventually.
+  height: 48px;
+  width: 280px;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+  &.fill {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: fit-content;
   .caret {
     margin-top: 4px;
@@ -23,6 +39,9 @@
   }
   width: 280px;
   @include breakpoint(small) {
+    width: 100%;
+  }
+  &.fill {
     width: 100%;
   }
   &.error, &.error:active, &.error:hover, &.error:focus {
@@ -58,7 +77,6 @@
   cursor: pointer;
   font-size: $input-size;
   font-weight: $regular;
-  margin-bottom: 12px;
   &:hover {
     border-color: $teal;
   }
@@ -124,13 +142,13 @@
         overflow: scroll;
       }
     }
-    .Select-option {
+    .Select-option, .Select-noresults {
       color: $grey_1;
       padding: 0px 16px;
       line-height: 40px;
-      &.is-focused {
-        background-color: $grey_7;
-      }
+    }
+    .Select-option.is-focused {
+      background-color: $grey_7;
     }
     input[role=combobox] {
       font-size: 16px;

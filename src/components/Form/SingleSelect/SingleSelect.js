@@ -41,6 +41,7 @@ class SingleSelect extends React.Component {
     stopPropagation: PropTypes.bool,
     forceOpen: PropTypes.bool,
     forceTitle: PropTypes.string,
+    fill: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -115,6 +116,8 @@ class SingleSelect extends React.Component {
       eventTypes,
       preventDefault,
       stopPropagation,
+      onBeforeOpen,
+      fill,
       ...restProps
     } = this.props;
     const { handleOpen, handleClose, handleChange } = this;
@@ -131,13 +134,12 @@ class SingleSelect extends React.Component {
           </Label>
         )}
         <div
-          className={classnames(style.outer, {
-            [className]: className,
+          className={classnames(style.container, {
             [style.expanded]: expanded,
             [style.disabled]: disabled,
             [style.error]: error,
+            [style.fill]: fill,
           })}
-          {...restProps}
         >
           <Select
             options={options}
