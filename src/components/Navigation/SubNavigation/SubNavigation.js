@@ -87,26 +87,26 @@ class SubNavigation extends Component {
     return (
       <div className={style.bar}>
         <div className={style.top}>
-          <Heading h1 className={style.heading}>
-            {loading ? '' : item.title}
-          </Heading>
+          <h2 className={style.heading}>{loading ? '' : item.title}</h2>
           <div className={style.controls}>
             {!loading &&
               locations &&
-              locations.length > 1 && (
-                <span className={style.control}>
+              ((locations.length > 1 && (
+                <span className={classnames(style.control, style.selector)}>
                   <SingleSelect
-                    className={style.locationSelector}
                     id="locationSelector"
                     name="location"
                     options={locations}
                     onChange={onLocationChange}
-                    style={{ paddingBottom: '0px' }}
                     value={locationValue}
+                    fill
                   />
                 </span>
-              )}
-            <span className={style.control}>
+              )) ||
+                (locations.length === 1 && (
+                  <span className={style.control}>{locations[0].label}</span>
+                )))}
+            <span className={classnames(style.control, style.logout)}>
               <NavLink
                 key="logout"
                 to={logoutRoute}

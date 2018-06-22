@@ -39,6 +39,7 @@ $bucket-width: 76px;
   &.current {
     border-left-color: $teal;
     opacity: 1;
+    background-color: $special_case_grey_dark_20;
   }
   &.open {
     background-color: $special_case_grey_dark_40;

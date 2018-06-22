@@ -5,18 +5,23 @@
   color: $grey_1;
   flex-grow: 0;
   font-family: $font-stack;
-  padding: 20px 48px;
+  padding: 0px 48px 2px 48px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $grey_5
 }
 
 .heading {
   color: $teal_dark_60;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  margin-top: 24px;
   min-width: 180px;
+  font-weight: $regular;
+  font-size: 20px;
 }
 
-.items { 
-  margin-top: 32px;
+.items {
   display: flex;
+  margin-top: -4px;
 }
 
 .item {
@@ -32,7 +37,7 @@
     padding-left: 0;
   }
   span {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
     border-bottom: solid 3px transparent;
   }
 }
@@ -49,44 +54,32 @@
   display: flex;
   justify-content: space-between;
   .controls {
+    display: flex;
+    align-items: center;
+    min-height: 76px;
     .control {
-      .navLink {
-        color: $grey_2;
-        text-decoration: none;
-        line-height: 43px;
-        .icon {
-          margin-right: 8px;
-          margin-bottom: -2px;
-          width: 16px;
-          height: 16px;
-        }
-      }
+      color: $grey_2;
+      display: inline-block;
       padding: 0 28px;
-      border-right: 1px solid $grey_4;
-      &:last-child {
-        border-right: none;
-        padding-right: 0;
+      &.selector {
+        width: 270px;
       }
-      .locationSelector {
-        display: inline-block;
-        width: fit-content;
-        div {
-          border: none;
+      &.logout {
+        border-left: 1px solid $grey_4;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        .navLink {
           color: $grey_2;
-          svg {
-            color: $grey_2;
-            &:hover {
-              color: $grey_1;
-            }
+          text-decoration: none;
+          .icon {
+            margin-right: 8px;
+            margin-bottom: -2px;
+            width: 16px;
+            height: 16px;
           }
         }
       }
     }
-  }
-}
-
-:global {
-  #locationSelector {
-    margin-bottom: 0px;
   }
 }
