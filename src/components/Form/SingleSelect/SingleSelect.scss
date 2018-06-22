@@ -112,7 +112,7 @@
   // React-select styles
   :global {
     .Select-control {
-      height: 48px;
+      height: 100%;
       padding: 0px 16px;
     }
     .Select-menu-outer {
@@ -141,6 +141,9 @@
         max-height: 240px;
         overflow: scroll;
       }
+    }
+    .Select-input {
+      height: 46px;
     }
     .Select-option, .Select-noresults {
       color: $grey_1;

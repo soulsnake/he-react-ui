@@ -125,8 +125,10 @@ class SingleSelect extends React.Component {
 
     return (
       <div
-        className={classnames(style.outer, { [className]: className })}
-        {...restProps}
+        className={classnames(style.outer, {
+          [className]: className,
+          [style.fill]: fill,
+        })}
       >
         {label && (
           <Label className={style.label} htmlFor={id}>
@@ -140,6 +142,7 @@ class SingleSelect extends React.Component {
             [style.error]: error,
             [style.fill]: fill,
           })}
+          {...restProps}
         >
           <Select
             options={options}
@@ -153,6 +156,7 @@ class SingleSelect extends React.Component {
             onChange={handleChange}
             onOpen={handleOpen}
             onClose={handleClose}
+            id={id}
           />
           <Icon className={style.caret} name="DropDown" />
         </div>
