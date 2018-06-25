@@ -11,7 +11,7 @@ import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import SingleSelect from '../../Form/SingleSelect';
 import Icon from '../../Icon';
-import Heading from '../../Layout/Heading';
+import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './SubNavigation.scss';
 
 class SubNavigation extends Component {
@@ -87,25 +87,33 @@ class SubNavigation extends Component {
     return (
       <div className={style.bar}>
         <div className={style.top}>
-          <h2 className={style.heading}>{loading ? '' : item.title}</h2>
+          {loading ? (
+            <LoadingStrip className={style.loadingHeading} />
+          ) : (
+            <h2 className={style.heading}>{item.title}</h2>
+          )}
           <div className={style.controls}>
-            {!loading &&
-              locations &&
-              ((locations.length > 1 && (
-                <span className={classnames(style.control, style.selector)}>
-                  <SingleSelect
-                    id="locationSelector"
-                    name="location"
-                    options={locations}
-                    onChange={onLocationChange}
-                    value={locationValue}
-                    fill
-                  />
-                </span>
-              )) ||
-                (locations.length === 1 && (
-                  <span className={style.control}>{locations[0].label}</span>
-                )))}
+            {(loading && (
+              <span className={style.control}>
+                <LoadingStrip className={style.loadingLocation} />
+              </span>
+            )) ||
+              (locations &&
+                ((locations.length > 1 && (
+                  <span className={classnames(style.control, style.selector)}>
+                    <SingleSelect
+                      id="locationSelector"
+                      name="location"
+                      options={locations}
+                      onChange={onLocationChange}
+                      value={locationValue}
+                      fill
+                    />
+                  </span>
+                )) ||
+                  (locations.length === 1 && (
+                    <span className={style.control}>{locations[0].label}</span>
+                  ))))}
             <span className={classnames(style.control, style.logout)}>
               <NavLink
                 key="logout"
