@@ -63,6 +63,8 @@ export default class DateRangePicker extends React.Component {
 
     onChange: PropTypes.func,
     placeholder: PropTypes.string,
+
+    keepOpenOnDateSelect: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -71,6 +73,7 @@ export default class DateRangePicker extends React.Component {
     placeholder: 'Select a date range',
     id: 'date-range-picker',
     fill: false,
+    keepOpenOnDateSelect: false,
   };
 
   state = {
@@ -146,7 +149,16 @@ export default class DateRangePicker extends React.Component {
   };
 
   render() {
-    const { error, disabled, className, label, value, id, fill } = this.props;
+    const {
+      error,
+      disabled,
+      className,
+      label,
+      value,
+      id,
+      fill,
+      keepOpenOnDateSelect,
+    } = this.props;
 
     const [startDate, endDate] = value || [null, null];
 
@@ -195,6 +207,7 @@ export default class DateRangePicker extends React.Component {
             focusedInput={focusedInput}
             isDayBlocked={NEVER}
             isOutsideRange={NEVER}
+            keepOpenOnDateSelect={keepOpenOnDateSelect}
           />
         </div>
       </div>
