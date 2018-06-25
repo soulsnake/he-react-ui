@@ -82,6 +82,12 @@
     .Select-menu-outer {
       position: static;
     }
+    .Select-input {
+      padding: 0px;
+    }
+    input[role=combobox] {
+      padding: 0px;
+    }
     // React-select custom styles
     .Select-control {
       padding: 0px 44px 0px 16px;
