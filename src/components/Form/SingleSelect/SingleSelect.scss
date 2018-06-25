@@ -66,6 +66,67 @@
       color: $grey_3;
     }
   }
+  :global {
+    // Style reset
+    .Select-control, .Select-menu-outer {
+      border: none;
+    }
+    .is-open {
+      .Select-control {
+        border-bottom: 1px solid $grey_5;
+      }
+    }
+    .Select-clear-zone, .Select-arrow-zone {
+      display: none;
+    }
+    .Select-menu-outer {
+      position: static;
+    }
+    // React-select custom styles
+    .Select-control {
+      padding: 0px 48px 0px 16px;
+    }
+    .Select-menu-outer {
+      max-height: 240px;
+      overflow: scroll;
+    }
+    .Select-clear {
+      float: right;
+    }
+    .Select-input {
+      height: 46px;
+    }
+    .Select-option, .Select-noresults {
+      color: $grey_1;
+      padding: 11px 16px;
+    }
+    .Select-option.is-focused {
+      background-color: $grey_7;
+    }
+    input[role=combobox] {
+      font-size: 16px;
+      color: $grey_1;
+      border: 0 none;
+      background: none;
+      height: 48px;
+      font-weight: $semi-bold;
+      caret-color: $teal;
+      &:focus {
+        outline: none;
+      }
+    }
+    .Select-value-label, .Select-placeholder {
+      position: absolute;
+      font-size: 16px;
+      line-height: 48px;
+      height: 48px;
+      overflow: hidden;
+      color: $grey_1;
+    }
+    .Select-placeholder, .is-open .Select-value-label {
+      color: $grey_3;
+    }
+  }
 }
 
 .select {
@@ -106,63 +167,6 @@
         .Select-placeholder {
           color: $red;
         }
-      }
-    }
-  }
-  // React-select styles
-  :global {
-    .Select-control {
-      height: 100%;
-      padding: 0px 16px;
-    }
-    .Select-menu-outer {
-      max-height: 240px;
-      overflow: scroll;
-    }
-    .Select-clear-zone {
-      display: none;
-    }
-    .Select-value-label, .Select-placeholder {
-      position: absolute;
-      top: 0px;
-      left: 16px;
-      font-size: 16px;
-      line-height: 48px;
-    }
-    .Select-clear {
-      float: right;
-    }
-    .Select-placeholder, .is-open .Select-value-label {
-      color: $grey_3;
-    }
-    .is-open {
-      .Select-placeholder, .Select-value-label {
-        left: 24px;
-        max-height: 240px;
-        overflow: scroll;
-      }
-    }
-    .Select-input {
-      height: 46px;
-    }
-    .Select-option, .Select-noresults {
-      color: $grey_1;
-      padding: 0px 16px;
-      line-height: 40px;
-    }
-    .Select-option.is-focused {
-      background-color: $grey_7;
-    }
-    input[role=combobox] {
-      font-size: 16px;
-      color: $grey_1;
-      border: 0 none;
-      background: none;
-      height: 48px;
-      font-weight: $semi-bold;
-      caret-color: $teal;
-      &:focus {
-        outline: none;
       }
     }
   }
