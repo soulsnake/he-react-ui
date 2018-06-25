@@ -44,7 +44,11 @@ class Slider extends Component {
         })}
         key={itemKey}
       >
-        <div className={styles.filler} />
+        <div className={styles.filler}>
+          <div className={styles.sitename}>
+            HealthEngine
+          </div>
+        </div>
         <List className={styles.list} itemKey={itemKey} {...restProps} />
       </div>
     );
