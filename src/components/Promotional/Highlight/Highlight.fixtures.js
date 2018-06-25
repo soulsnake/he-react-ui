@@ -29,7 +29,7 @@ export default [
     name: 'YouTube',
     component: Highlight,
     props: {
-      youtubeId: '',
+      youtubeId: 'iYuXzohJUFE',
     },
     children: content,
     parentLayout,

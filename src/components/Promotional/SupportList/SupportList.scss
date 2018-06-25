@@ -1,0 +1,12 @@
+@import '../../../styles/_base';
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: $font-stack;
+  justify-content: space-evenly;
+  margin: auto;
+  max-width: 1080px;
+  padding: 16px;
+}

@@ -11,6 +11,23 @@ import SupportList from '../SupportList';
 
 class PromoDemo extends React.Component {
   render() {
+    const benefit = (
+      <BenefitItem>
+        <em>Really good for this</em> in some truly amazing ways
+      </BenefitItem>
+    );
+
+    const support = (
+      <SupportItem
+        name="Medical Bandages"
+        extra="Adhesive only"
+        image={{
+          src: 'http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png',
+          alt: 'A bandage.',
+        }}
+      />
+    );
+
     return (
       <div style={{ backgroundColor: '#F5F7F8' }}>
         <Banner title="Product Name">
@@ -45,18 +62,13 @@ class PromoDemo extends React.Component {
           </Highlight>
           <h2>Sweet benefits</h2>
           <BenefitList>
-            <BenefitItem>
-              <em>Really good for this</em> in some truly amazing ways
-            </BenefitItem>
-            <BenefitItem>
-              <em>Really good for this</em> in some truly amazing ways
-            </BenefitItem>
-            <BenefitItem>
-              <em>Really good for this</em> in some truly amazing ways
-            </BenefitItem>
-            <BenefitItem>
-              <em>Really good for this</em> in some truly amazing ways
-            </BenefitItem>
+            {benefit}
+            {benefit}
+            {benefit}
+            {benefit}
+            {benefit}
+            {benefit}
+            {benefit}
           </BenefitList>
         </PromoSection>
         <PromoSection white>
@@ -66,13 +78,29 @@ class PromoDemo extends React.Component {
             text made to emulate a more detailed description of the item being
             promoted. It's really good if you take the time to check it out.
           </p>
-          <BenefitList>
-            <SupportList>
-              sdafsdfa
-            </SupportList>
-          </BenefitList>
+          <SupportList>
+            {support}
+            {support}
+            {support}
+            {support}
+            {support}
+            {support}
+            {support}
+            {support}
+            {support}
+            {support}
+          </SupportList>
+          <p>And there's even more great stuff about this product.</p>
+          <Button large>Find out more</Button>
         </PromoSection>
-       </div>
+        <PromoFooter header="Ready for this product?">
+          <p>This product will change everything.</p>
+          <Button large>Activate now</Button>
+          <Button large color="white" keyline>
+            Find out more
+          </Button>
+        </PromoFooter>
+      </div>
     );
   }
 }

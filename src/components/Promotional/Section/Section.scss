@@ -23,5 +23,14 @@ h2 {
   font-weight: $regular;
   color: $he_black;
   margin: 0 auto 48px;
-  padding-top: 96px;
+  padding: 96px 16px 0;
+}
+
+p {
+  font-size: 18px;
+  padding: 0 16px;
+}
+
+a {
+  text-decoration: none;
 }

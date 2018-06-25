@@ -7,14 +7,14 @@
   flex-direction: column;
   font-family: $font-stack;
   min-height: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 128px;
   text-align: center;
   width: 100%;
 }
 
-.title {
+.header {
   color: $white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: $regular;
   margin: 96px auto 0 auto;
   padding: 0 16px;
@@ -28,7 +28,7 @@
   padding: 0 16px;
 
   p {
-    margin-top: 16px;
+    margin: 48px auto;
   }
 
   a {
