@@ -1,0 +1,33 @@
+@import '../../../styles/_base';
+
+.outer {
+  background: url('../assets/BlueBackground.svg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-stack;
+  min-height: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  color: $white;
+  font-size: 40px;
+  font-weight: $regular;
+  margin: 96px auto 0 auto;
+  padding: 0 16px;
+}
+
+.content {
+  color: $white;
+  font-size: 18px;
+  margin: auto;
+  max-width: 640px;
+  padding: 0 16px;
+
+  p {
+    margin-top: 16px;
+  }
+}
