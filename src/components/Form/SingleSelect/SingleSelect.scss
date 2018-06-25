@@ -84,7 +84,8 @@
     }
     // React-select custom styles
     .Select-control {
-      padding: 0px 48px 0px 16px;
+      padding: 0px 44px 0px 16px;
+      position: relative;
     }
     .Select-menu-outer {
       max-height: 240px;
@@ -117,10 +118,13 @@
     }
     .Select-value-label, .Select-placeholder {
       position: absolute;
+      left: 16px;
+      right: 44px;
       font-size: 16px;
       line-height: 48px;
-      height: 48px;
       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       color: $grey_1;
     }
     .Select-placeholder, .is-open .Select-value-label {
