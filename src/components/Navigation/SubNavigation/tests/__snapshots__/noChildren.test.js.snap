@@ -86,25 +86,16 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
         <div
           className="top"
         >
-          <Heading
+          <h2
             className="heading"
-            h1={true}
-            h2={false}
-            h3={false}
-            h4={false}
-            nav={false}
           >
-            <h1
-              className="heading h1 heading"
-            >
-              Welcome home
-            </h1>
-          </Heading>
+            Welcome home
+          </h2>
           <div
             className="controls"
           >
             <span
-              className="control"
+              className="control logout"
             >
               <NavLink
                 activeClassName="active"

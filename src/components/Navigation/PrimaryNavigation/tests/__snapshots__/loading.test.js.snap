@@ -43,6 +43,7 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
     logoutRoute="/logout"
     outsideClickIgnoreClass="ignore-react-onclickoutside"
     preventDefault={false}
+    siteName="HealthEngine"
     stopPropagation={false}
   >
     <div
@@ -249,35 +250,37 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
                 <div
                   className="top"
                 >
-                  <Heading
-                    className="heading"
-                    h1={true}
-                    h2={false}
-                    h3={false}
-                    h4={false}
-                    nav={false}
+                  <LoadingStrip
+                    className="loadingHeading"
                   >
-                    <h1
-                      className="heading h1 heading"
+                    <div
+                      className="outer loadingHeading"
+                    >
+                      <div
+                        className="inner"
+                      />
+                    </div>
+                  </LoadingStrip>
+                  <div
+                    className="controls"
+                  >
+                    <span
+                      className="control"
                     >
                       <LoadingStrip
-                        className="loading"
+                        className="loadingLocation"
                       >
                         <div
-                          className="outer loading"
+                          className="outer loadingLocation"
                         >
                           <div
                             className="inner"
                           />
                         </div>
                       </LoadingStrip>
-                    </h1>
-                  </Heading>
-                  <div
-                    className="controls"
-                  >
+                    </span>
                     <span
-                      className="control"
+                      className="control logout"
                     >
                       <NavLink
                         activeClassName="active"

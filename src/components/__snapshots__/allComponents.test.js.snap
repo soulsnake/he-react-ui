@@ -1063,24 +1063,95 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
   >
     <div
       className="outer"
-      onClose={[Function]}
-      options={
-        Array [
-          Object {
-            "label": "Custom",
-            "value": "CUSTOM",
-          },
-        ]
-      }
     >
       <div
-        className="select"
-        id="date-range-picker-select-id"
-        onClick={[Function]}
+        className="container"
+        forceOpen={false}
+        forceTitle={null}
+        onClose={[Function]}
       >
-        <span>
-          May 2018
-        </span>
+        <div
+          className="Select select is-clearable is-searchable Select--single"
+          style={undefined}
+        >
+          <div
+            className="Select-control"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={undefined}
+          >
+            <span
+              className="Select-multi-value-wrapper"
+              id="react-select-2--value"
+            >
+              <div
+                className="Select-placeholder"
+              >
+                Select...
+              </div>
+              <div
+                className="Select-input"
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant="react-select-2--value"
+                  aria-describedby={undefined}
+                  aria-expanded="false"
+                  aria-haspopup="false"
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns=""
+                  className={undefined}
+                  id="date-range-picker-select-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  role="combobox"
+                  style={
+                    Object {
+                      "boxSizing": "content-box",
+                      "width": "5px",
+                    }
+                  }
+                  tabIndex={undefined}
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </span>
+            <span
+              className="Select-arrow-zone"
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Select-arrow"
+                onMouseDown={[Function]}
+              />
+            </span>
+          </div>
+        </div>
         <svg
           className="icon caret"
           height={undefined}
@@ -1098,17 +1169,6 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
           </g>
         </svg>
       </div>
-      <ul
-        className="options"
-      >
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Custom
-        </li>
-      </ul>
-      
     </div>
     <div
       className="inner"
@@ -1215,24 +1275,95 @@ exports[`Cosmos fixtures: DateRangePicker:customPlaceholder 1`] = `
   >
     <div
       className="outer"
-      onClose={[Function]}
-      options={
-        Array [
-          Object {
-            "label": "Custom",
-            "value": "CUSTOM",
-          },
-        ]
-      }
     >
       <div
-        className="select"
-        id="date-range-picker-select-id"
-        onClick={[Function]}
+        className="container"
+        forceOpen={false}
+        forceTitle={null}
+        onClose={[Function]}
       >
-        <span>
-          When will you be traveling?
-        </span>
+        <div
+          className="Select select is-clearable is-searchable Select--single"
+          style={undefined}
+        >
+          <div
+            className="Select-control"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={undefined}
+          >
+            <span
+              className="Select-multi-value-wrapper"
+              id="react-select-3--value"
+            >
+              <div
+                className="Select-placeholder"
+              >
+                Select...
+              </div>
+              <div
+                className="Select-input"
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant="react-select-3--value"
+                  aria-describedby={undefined}
+                  aria-expanded="false"
+                  aria-haspopup="false"
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns=""
+                  className={undefined}
+                  id="date-range-picker-select-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  role="combobox"
+                  style={
+                    Object {
+                      "boxSizing": "content-box",
+                      "width": "5px",
+                    }
+                  }
+                  tabIndex={undefined}
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </span>
+            <span
+              className="Select-arrow-zone"
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Select-arrow"
+                onMouseDown={[Function]}
+              />
+            </span>
+          </div>
+        </div>
         <svg
           className="icon caret"
           height={undefined}
@@ -1250,17 +1381,6 @@ exports[`Cosmos fixtures: DateRangePicker:customPlaceholder 1`] = `
           </g>
         </svg>
       </div>
-      <ul
-        className="options"
-      >
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Custom
-        </li>
-      </ul>
-      
     </div>
     <div
       className="inner"
@@ -1367,36 +1487,122 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
   >
     <div
       className="outer fill"
-      onClose={[Function]}
-      options={
-        Array [
-          Object {
-            "label": "Last month",
-            "value": "0",
-          },
-          Object {
-            "label": "Last 3 months",
-            "value": "1",
-          },
-          Object {
-            "label": "Last 12 months",
-            "value": "2",
-          },
-          Object {
-            "label": "Custom",
-            "value": "CUSTOM",
-          },
-        ]
-      }
     >
       <div
-        className="select"
-        id="date-range-picker-select-id"
-        onClick={[Function]}
+        className="container fill"
+        forceOpen={false}
+        forceTitle={null}
+        onClose={[Function]}
       >
-        <span>
-          Last month
-        </span>
+        <div
+          className="Select select has-value is-clearable is-searchable Select--single"
+          style={undefined}
+        >
+          <div
+            className="Select-control"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={undefined}
+          >
+            <span
+              className="Select-multi-value-wrapper"
+              id="react-select-4--value"
+            >
+              <div
+                className="Select-value"
+                style={undefined}
+                title={undefined}
+              >
+                <span
+                  aria-selected="true"
+                  className="Select-value-label"
+                  id="react-select-4--value-item"
+                  role="option"
+                >
+                  Last month
+                </span>
+              </div>
+              <div
+                className="Select-input"
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant="react-select-4--value"
+                  aria-describedby={undefined}
+                  aria-expanded="false"
+                  aria-haspopup="false"
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns=""
+                  className={undefined}
+                  id="date-range-picker-select-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  role="combobox"
+                  style={
+                    Object {
+                      "boxSizing": "content-box",
+                      "width": "5px",
+                    }
+                  }
+                  tabIndex={undefined}
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </span>
+            <span
+              aria-label="Clear value"
+              className="Select-clear-zone"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              title="Clear value"
+            >
+              <span
+                className="Select-clear"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&times;",
+                  }
+                }
+              />
+            </span>
+            <span
+              className="Select-arrow-zone"
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Select-arrow"
+                onMouseDown={[Function]}
+              />
+            </span>
+          </div>
+        </div>
         <svg
           className="icon caret"
           height={undefined}
@@ -1414,35 +1620,6 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
           </g>
         </svg>
       </div>
-      <ul
-        className="options"
-      >
-        <li
-          className="option selected"
-          onClick={[Function]}
-        >
-          Last month
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 3 months
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 12 months
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Custom
-        </li>
-      </ul>
-      
     </div>
     <div
       className="inner"
@@ -1549,24 +1726,95 @@ exports[`Cosmos fixtures: DateRangePicker:noInitialValue 1`] = `
   >
     <div
       className="outer"
-      onClose={[Function]}
-      options={
-        Array [
-          Object {
-            "label": "Custom",
-            "value": "CUSTOM",
-          },
-        ]
-      }
     >
       <div
-        className="select"
-        id="date-range-picker-select-id"
-        onClick={[Function]}
+        className="container"
+        forceOpen={false}
+        forceTitle={null}
+        onClose={[Function]}
       >
-        <span>
-          Select a date range
-        </span>
+        <div
+          className="Select select is-clearable is-searchable Select--single"
+          style={undefined}
+        >
+          <div
+            className="Select-control"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={undefined}
+          >
+            <span
+              className="Select-multi-value-wrapper"
+              id="react-select-5--value"
+            >
+              <div
+                className="Select-placeholder"
+              >
+                Select...
+              </div>
+              <div
+                className="Select-input"
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant="react-select-5--value"
+                  aria-describedby={undefined}
+                  aria-expanded="false"
+                  aria-haspopup="false"
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns=""
+                  className={undefined}
+                  id="date-range-picker-select-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  role="combobox"
+                  style={
+                    Object {
+                      "boxSizing": "content-box",
+                      "width": "5px",
+                    }
+                  }
+                  tabIndex={undefined}
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </span>
+            <span
+              className="Select-arrow-zone"
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Select-arrow"
+                onMouseDown={[Function]}
+              />
+            </span>
+          </div>
+        </div>
         <svg
           className="icon caret"
           height={undefined}
@@ -1584,17 +1832,6 @@ exports[`Cosmos fixtures: DateRangePicker:noInitialValue 1`] = `
           </g>
         </svg>
       </div>
-      <ul
-        className="options"
-      >
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Custom
-        </li>
-      </ul>
-      
     </div>
     <div
       className="inner"
@@ -1701,32 +1938,122 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
   >
     <div
       className="outer"
-      onClose={[Function]}
-      options={
-        Array [
-          Object {
-            "label": "Last month",
-            "value": "0",
-          },
-          Object {
-            "label": "Last 3 months",
-            "value": "1",
-          },
-          Object {
-            "label": "Last 12 months",
-            "value": "2",
-          },
-        ]
-      }
     >
       <div
-        className="select"
-        id="date-range-picker-select-id"
-        onClick={[Function]}
+        className="container"
+        forceOpen={false}
+        forceTitle={null}
+        onClose={[Function]}
       >
-        <span>
-          Last month
-        </span>
+        <div
+          className="Select select has-value is-clearable is-searchable Select--single"
+          style={undefined}
+        >
+          <div
+            className="Select-control"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={undefined}
+          >
+            <span
+              className="Select-multi-value-wrapper"
+              id="react-select-6--value"
+            >
+              <div
+                className="Select-value"
+                style={undefined}
+                title={undefined}
+              >
+                <span
+                  aria-selected="true"
+                  className="Select-value-label"
+                  id="react-select-6--value-item"
+                  role="option"
+                >
+                  Last month
+                </span>
+              </div>
+              <div
+                className="Select-input"
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant="react-select-6--value"
+                  aria-describedby={undefined}
+                  aria-expanded="false"
+                  aria-haspopup="false"
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns=""
+                  className={undefined}
+                  id="date-range-picker-select-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  role="combobox"
+                  style={
+                    Object {
+                      "boxSizing": "content-box",
+                      "width": "5px",
+                    }
+                  }
+                  tabIndex={undefined}
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </span>
+            <span
+              aria-label="Clear value"
+              className="Select-clear-zone"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              title="Clear value"
+            >
+              <span
+                className="Select-clear"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&times;",
+                  }
+                }
+              />
+            </span>
+            <span
+              className="Select-arrow-zone"
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Select-arrow"
+                onMouseDown={[Function]}
+              />
+            </span>
+          </div>
+        </div>
         <svg
           className="icon caret"
           height={undefined}
@@ -1744,29 +2071,6 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
           </g>
         </svg>
       </div>
-      <ul
-        className="options"
-      >
-        <li
-          className="option selected"
-          onClick={[Function]}
-        >
-          Last month
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 3 months
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 12 months
-        </li>
-      </ul>
-      
     </div>
     <div
       className="inner"
@@ -1873,36 +2177,122 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
   >
     <div
       className="outer"
-      onClose={[Function]}
-      options={
-        Array [
-          Object {
-            "label": "Last month",
-            "value": "0",
-          },
-          Object {
-            "label": "Last 3 months",
-            "value": "1",
-          },
-          Object {
-            "label": "Last 12 months",
-            "value": "2",
-          },
-          Object {
-            "label": "Custom",
-            "value": "CUSTOM",
-          },
-        ]
-      }
     >
       <div
-        className="select"
-        id="date-range-picker-select-id"
-        onClick={[Function]}
+        className="container"
+        forceOpen={false}
+        forceTitle={null}
+        onClose={[Function]}
       >
-        <span>
-          Last month
-        </span>
+        <div
+          className="Select select has-value is-clearable is-searchable Select--single"
+          style={undefined}
+        >
+          <div
+            className="Select-control"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={undefined}
+          >
+            <span
+              className="Select-multi-value-wrapper"
+              id="react-select-7--value"
+            >
+              <div
+                className="Select-value"
+                style={undefined}
+                title={undefined}
+              >
+                <span
+                  aria-selected="true"
+                  className="Select-value-label"
+                  id="react-select-7--value-item"
+                  role="option"
+                >
+                  Last month
+                </span>
+              </div>
+              <div
+                className="Select-input"
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant="react-select-7--value"
+                  aria-describedby={undefined}
+                  aria-expanded="false"
+                  aria-haspopup="false"
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns=""
+                  className={undefined}
+                  id="date-range-picker-select-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  role="combobox"
+                  style={
+                    Object {
+                      "boxSizing": "content-box",
+                      "width": "5px",
+                    }
+                  }
+                  tabIndex={undefined}
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </span>
+            <span
+              aria-label="Clear value"
+              className="Select-clear-zone"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              title="Clear value"
+            >
+              <span
+                className="Select-clear"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&times;",
+                  }
+                }
+              />
+            </span>
+            <span
+              className="Select-arrow-zone"
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Select-arrow"
+                onMouseDown={[Function]}
+              />
+            </span>
+          </div>
+        </div>
         <svg
           className="icon caret"
           height={undefined}
@@ -1920,35 +2310,6 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
           </g>
         </svg>
       </div>
-      <ul
-        className="options"
-      >
-        <li
-          className="option selected"
-          onClick={[Function]}
-        >
-          Last month
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 3 months
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 12 months
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Custom
-        </li>
-      </ul>
-      
     </div>
     <div
       className="inner"
@@ -4710,7 +5071,13 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
       >
         <div
           className="filler"
-        />
+        >
+          <div
+            className="sitename"
+          >
+            Your Site
+          </div>
+        </div>
         <div
           className="list"
         />
@@ -4720,7 +5087,13 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
       >
         <div
           className="filler"
-        />
+        >
+          <div
+            className="sitename"
+          >
+            Your Site
+          </div>
+        </div>
         <div
           className="list"
         >
@@ -4759,7 +5132,13 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
       >
         <div
           className="filler"
-        />
+        >
+          <div
+            className="sitename"
+          >
+            Your Site
+          </div>
+        </div>
         <div
           className="list"
         >
@@ -4866,46 +5245,106 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
       <div
         className="top"
       >
-        <h1
-          className="heading h1 heading"
+        <h2
+          className="heading"
         >
           Homepage
-        </h1>
+        </h2>
         <div
           className="controls"
         >
           <span
-            className="control"
+            className="control selector"
           >
             <div
-              className="outer locationSelector"
-              onClose={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Location A",
-                    "value": "Location A",
-                  },
-                  Object {
-                    "label": "Location B",
-                    "value": "Location B",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "paddingBottom": "0px",
-                }
-              }
+              className="outer fill"
             >
               <div
-                className="select"
-                id="locationSelector"
-                onClick={[Function]}
+                className="container fill"
+                onClose={[Function]}
               >
-                <span>
-                  Location A
-                </span>
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                  style={undefined}
+                >
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    style={undefined}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-18--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        Select...
+                      </div>
+                      <div
+                        className="Select-input"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
+                      >
+                        <input
+                          aria-activedescendant="react-select-18--value"
+                          aria-describedby={undefined}
+                          aria-expanded="false"
+                          aria-haspopup="false"
+                          aria-label={undefined}
+                          aria-labelledby={undefined}
+                          aria-owns=""
+                          className={undefined}
+                          id="locationSelector"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          required={false}
+                          role="combobox"
+                          style={
+                            Object {
+                              "boxSizing": "content-box",
+                              "width": "5px",
+                            }
+                          }
+                          tabIndex={undefined}
+                          value=""
+                        />
+                        <div
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
+                      </div>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
                 <svg
                   className="icon caret"
                   height={undefined}
@@ -4923,27 +5362,10 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
                   </g>
                 </svg>
               </div>
-              <ul
-                className="options"
-              >
-                <li
-                  className="option selected"
-                  onClick={[Function]}
-                >
-                  Location A
-                </li>
-                <li
-                  className="option"
-                  onClick={[Function]}
-                >
-                  Location B
-                </li>
-              </ul>
-              
             </div>
           </span>
           <span
-            className="control"
+            className="control logout"
           >
             <a
               aria-current={false}
@@ -5266,7 +5688,13 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
       >
         <div
           className="filler"
-        />
+        >
+          <div
+            className="sitename"
+          >
+            Your Site
+          </div>
+        </div>
         <div
           className="list"
         />
@@ -5276,7 +5704,13 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
       >
         <div
           className="filler"
-        />
+        >
+          <div
+            className="sitename"
+          >
+            Your Site
+          </div>
+        </div>
         <div
           className="list"
         >
@@ -5315,7 +5749,13 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
       >
         <div
           className="filler"
-        />
+        >
+          <div
+            className="sitename"
+          >
+            Your Site
+          </div>
+        </div>
         <div
           className="list"
         >
@@ -5422,46 +5862,106 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
       <div
         className="top"
       >
-        <h1
-          className="heading h1 heading"
+        <h2
+          className="heading"
         >
           Homepage
-        </h1>
+        </h2>
         <div
           className="controls"
         >
           <span
-            className="control"
+            className="control selector"
           >
             <div
-              className="outer locationSelector"
-              onClose={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Location A",
-                    "value": "Location A",
-                  },
-                  Object {
-                    "label": "Location B",
-                    "value": "Location B",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "paddingBottom": "0px",
-                }
-              }
+              className="outer fill"
             >
               <div
-                className="select"
-                id="locationSelector"
-                onClick={[Function]}
+                className="container fill"
+                onClose={[Function]}
               >
-                <span>
-                  Location A
-                </span>
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                  style={undefined}
+                >
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    style={undefined}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-19--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        Select...
+                      </div>
+                      <div
+                        className="Select-input"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
+                      >
+                        <input
+                          aria-activedescendant="react-select-19--value"
+                          aria-describedby={undefined}
+                          aria-expanded="false"
+                          aria-haspopup="false"
+                          aria-label={undefined}
+                          aria-labelledby={undefined}
+                          aria-owns=""
+                          className={undefined}
+                          id="locationSelector"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          required={false}
+                          role="combobox"
+                          style={
+                            Object {
+                              "boxSizing": "content-box",
+                              "width": "5px",
+                            }
+                          }
+                          tabIndex={undefined}
+                          value=""
+                        />
+                        <div
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
+                      </div>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
                 <svg
                   className="icon caret"
                   height={undefined}
@@ -5479,27 +5979,10 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
                   </g>
                 </svg>
               </div>
-              <ul
-                className="options"
-              >
-                <li
-                  className="option selected"
-                  onClick={[Function]}
-                >
-                  Location A
-                </li>
-                <li
-                  className="option"
-                  onClick={[Function]}
-                >
-                  Location B
-                </li>
-              </ul>
-              
             </div>
           </span>
           <span
-            className="control"
+            className="control logout"
           >
             <a
               aria-current={false}
@@ -5639,22 +6122,29 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Loading 1`] = `
       <div
         className="top"
       >
-        <h1
-          className="heading h1 heading"
+        <div
+          className="outer loadingHeading"
         >
           <div
-            className="outer loading"
-          >
-            <div
-              className="inner"
-            />
-          </div>
-        </h1>
+            className="inner"
+          />
+        </div>
         <div
           className="controls"
         >
           <span
             className="control"
+          >
+            <div
+              className="outer loadingLocation"
+            >
+              <div
+                className="inner"
+              />
+            </div>
+          </span>
+          <span
+            className="control logout"
           >
             <a
               aria-current={false}
@@ -5688,557 +6178,6 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Loading 1`] = `
       className="children"
     />
   </div>
-</div>
-`;
-
-exports[`Cosmos fixtures: OnClickOutside(SingleSelect):Default 1`] = `
-<div
-  className="outer"
-  onClose={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Option 1",
-        "value": "1",
-      },
-      Object {
-        "label": "Option 2",
-        "value": "2",
-      },
-      Object {
-        "label": "Option 3",
-        "value": "3",
-      },
-    ]
-  }
->
-  <div
-    className="select"
-    id="demo"
-    onClick={[Function]}
-  >
-    <span>
-      Option 1
-    </span>
-    <svg
-      className="icon caret"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 24 24"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(15.000000, 7.000000) rotate(90.000000)"
-      >
-        <path
-          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
-        />
-      </g>
-    </svg>
-  </div>
-  <ul
-    className="options"
-  >
-    <li
-      className="option selected"
-      onClick={[Function]}
-    >
-      Option 1
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 2
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 3
-    </li>
-  </ul>
-  
-</div>
-`;
-
-exports[`Cosmos fixtures: OnClickOutside(SingleSelect):disabled 1`] = `
-<div
-  className="outer"
-  onClose={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Option 1",
-        "value": "1",
-      },
-      Object {
-        "label": "Option 2",
-        "value": "2",
-      },
-      Object {
-        "label": "Option 3",
-        "value": "3",
-      },
-    ]
-  }
->
-  <div
-    className="select disabled"
-    id="demo"
-    onClick={[Function]}
-  >
-    <span>
-      Select from the list
-    </span>
-    <svg
-      className="icon caret"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 24 24"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(15.000000, 7.000000) rotate(90.000000)"
-      >
-        <path
-          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
-        />
-      </g>
-    </svg>
-  </div>
-  <ul
-    className="options"
-  >
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 1
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 2
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 3
-    </li>
-  </ul>
-  
-</div>
-`;
-
-exports[`Cosmos fixtures: OnClickOutside(SingleSelect):error 1`] = `
-<div
-  className="outer"
-  onClose={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Option 1",
-        "value": "1",
-      },
-      Object {
-        "label": "Option 2",
-        "value": "2",
-      },
-      Object {
-        "label": "Option 3",
-        "value": "3",
-      },
-    ]
-  }
->
-  <div
-    className="select error"
-    id="demo"
-    onClick={[Function]}
-  >
-    <span>
-      Select from the list
-    </span>
-    <svg
-      className="icon caret"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 24 24"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(15.000000, 7.000000) rotate(90.000000)"
-      >
-        <path
-          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
-        />
-      </g>
-    </svg>
-  </div>
-  <ul
-    className="options"
-  >
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 1
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 2
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 3
-    </li>
-  </ul>
-  <div
-    className="label error errorMessage"
-    onChange={[Function]}
-  >
-    <svg
-      className="icon icon"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 20 20"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(2.000000, 3.000000)"
-      >
-        <path
-          d="M8.88235294,0.654411765 L15.2156863,12.5294118 C15.475585,13.0167218 15.2912316,13.6224542 14.8039216,13.8823529 C14.6590914,13.9595957 14.4974742,14 14.3333333,14 L1.66666667,14 C1.11438192,14 0.666666667,13.5522847 0.666666667,13 C0.666666667,12.8358592 0.70707098,12.6742419 0.784313725,12.5294118 L7.11764706,0.654411765 C7.37754576,0.167101691 7.98327816,-0.017251647 8.47058824,0.242647059 C8.6456522,0.336014504 8.7889855,0.479347805 8.88235294,0.654411765 Z M7.25,5 L7.25,7.5 C7.25,7.91421356 7.58578644,8.25 8,8.25 C8.41421356,8.25 8.75,7.91421356 8.75,7.5 L8.75,5 C8.75,4.58578644 8.41421356,4.25 8,4.25 C7.58578644,4.25 7.25,4.58578644 7.25,5 Z M8,12 C8.55228475,12 9,11.5522847 9,11 C9,10.4477153 8.55228475,10 8,10 C7.44771525,10 7,10.4477153 7,11 C7,11.5522847 7.44771525,12 8,12 Z"
-        />
-      </g>
-    </svg>
-    <label
-      htmlFor="demo"
-    >
-      That selection wasn't great
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Cosmos fixtures: OnClickOutside(SingleSelect):fill 1`] = `
-<div
-  className="outer fill"
-  onClose={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Option 1",
-        "value": "1",
-      },
-      Object {
-        "label": "Option 2",
-        "value": "2",
-      },
-      Object {
-        "label": "Option 3",
-        "value": "3",
-      },
-    ]
-  }
->
-  <div
-    className="select"
-    id="demo"
-    onClick={[Function]}
-  >
-    <span>
-      Option 1
-    </span>
-    <svg
-      className="icon caret"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 24 24"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(15.000000, 7.000000) rotate(90.000000)"
-      >
-        <path
-          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
-        />
-      </g>
-    </svg>
-  </div>
-  <ul
-    className="options"
-  >
-    <li
-      className="option selected"
-      onClick={[Function]}
-    >
-      Option 1
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 2
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 3
-    </li>
-  </ul>
-  
-</div>
-`;
-
-exports[`Cosmos fixtures: OnClickOutside(SingleSelect):label 1`] = `
-<div
-  className="outer"
-  onClose={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Option 1",
-        "value": "1",
-      },
-      Object {
-        "label": "Option 2",
-        "value": "2",
-      },
-      Object {
-        "label": "Option 3",
-        "value": "3",
-      },
-    ]
-  }
->
-  <div
-    className="label label"
-    onChange={[Function]}
-  >
-    <label
-      htmlFor="demo"
-    >
-      Select from the list
-    </label>
-  </div>
-  <div
-    className="select"
-    id="demo"
-    onClick={[Function]}
-  >
-    <span>
-      Option 1
-    </span>
-    <svg
-      className="icon caret"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 24 24"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(15.000000, 7.000000) rotate(90.000000)"
-      >
-        <path
-          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
-        />
-      </g>
-    </svg>
-  </div>
-  <ul
-    className="options"
-  >
-    <li
-      className="option selected"
-      onClick={[Function]}
-    >
-      Option 1
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 2
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 3
-    </li>
-  </ul>
-  
-</div>
-`;
-
-exports[`Cosmos fixtures: OnClickOutside(SingleSelect):placeholder 1`] = `
-<div
-  style={
-    Object {
-      "background": "white",
-      "border": "solid 1px silver",
-      "boxShadow": "0 5px 10px rgba(0,0,0,0.1)",
-      "margin": 40,
-      "padding": 40,
-    }
-  }
->
-  <div
-    className="outer"
-    onClose={[Function]}
-    options={
-      Array [
-        Object {
-          "label": "Option 1",
-          "value": "1",
-        },
-        Object {
-          "label": "Option 2",
-          "value": "2",
-        },
-        Object {
-          "label": "Option 3",
-          "value": "3",
-        },
-      ]
-    }
-  >
-    <div
-      className="select"
-      id="demo"
-      onClick={[Function]}
-    >
-      <span>
-        Select from the list
-      </span>
-      <svg
-        className="icon caret"
-        height={undefined}
-        version="1.1"
-        viewBox="0 0 24 24"
-        width={undefined}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          transform="translate(15.000000, 7.000000) rotate(90.000000)"
-        >
-          <path
-            d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
-          />
-        </g>
-      </svg>
-    </div>
-    <ul
-      className="options"
-    >
-      <li
-        className="option"
-        onClick={[Function]}
-      >
-        Option 1
-      </li>
-      <li
-        className="option"
-        onClick={[Function]}
-      >
-        Option 2
-      </li>
-      <li
-        className="option"
-        onClick={[Function]}
-      >
-        Option 3
-      </li>
-    </ul>
-    
-  </div>
-</div>
-`;
-
-exports[`Cosmos fixtures: OnClickOutside(SingleSelect):selected 1`] = `
-<div
-  className="outer"
-  onClose={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Option 1",
-        "value": "1",
-      },
-      Object {
-        "label": "Option 2",
-        "value": "2",
-      },
-      Object {
-        "label": "Option 3",
-        "value": "3",
-      },
-    ]
-  }
->
-  <div
-    className="select"
-    id="demo"
-    onClick={[Function]}
-  >
-    <span>
-      Option 3
-    </span>
-    <svg
-      className="icon caret"
-      height={undefined}
-      version="1.1"
-      viewBox="0 0 24 24"
-      width={undefined}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        transform="translate(15.000000, 7.000000) rotate(90.000000)"
-      >
-        <path
-          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
-        />
-      </g>
-    </svg>
-  </div>
-  <ul
-    className="options"
-  >
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 1
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
-    >
-      Option 2
-    </li>
-    <li
-      className="option selected"
-      onClick={[Function]}
-    >
-      Option 3
-    </li>
-  </ul>
-  
 </div>
 `;
 
@@ -10013,16 +9952,15 @@ exports[`Cosmos fixtures: Radio:ChildOption 1`] = `
         "value": "3",
       },
       Object {
-        "child": <OnClickOutside(SingleSelect)
-          eventTypes={
-            Array [
-              "mousedown",
-              "touchstart",
-            ]
-          }
-          excludeScrollbar={false}
+        "child": <SingleSelect
+          disabled={false}
+          error=""
           id="demo"
+          inline={false}
           name="demo"
+          onBeforeOpen={[Function]}
+          onChange={[Function]}
+          onClose={[Function]}
           options={
             Array [
               Object {
@@ -10039,9 +9977,7 @@ exports[`Cosmos fixtures: Radio:ChildOption 1`] = `
               },
             ]
           }
-          outsideClickIgnoreClass="ignore-react-onclickoutside"
-          preventDefault={false}
-          stopPropagation={false}
+          value={null}
         />,
         "label": "Other...",
         "value": "4",
@@ -10224,32 +10160,93 @@ exports[`Cosmos fixtures: Radio:ChildOption 1`] = `
       >
         <div
           className="outer"
-          onClose={[Function]}
-          options={
-            Array [
-              Object {
-                "label": "A",
-                "value": "A",
-              },
-              Object {
-                "label": "B",
-                "value": "B",
-              },
-              Object {
-                "label": "C",
-                "value": "C",
-              },
-            ]
-          }
         >
           <div
-            className="select"
-            id="demo"
-            onClick={[Function]}
+            className="container"
+            onClose={[Function]}
           >
-            <span>
-              A
-            </span>
+            <div
+              className="Select select is-clearable is-searchable Select--single"
+              style={undefined}
+            >
+              <div
+                className="Select-control"
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={undefined}
+              >
+                <span
+                  className="Select-multi-value-wrapper"
+                  id="react-select-8--value"
+                >
+                  <div
+                    className="Select-placeholder"
+                  >
+                    Select...
+                  </div>
+                  <div
+                    className="Select-input"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
+                  >
+                    <input
+                      aria-activedescendant="react-select-8--value"
+                      aria-describedby={undefined}
+                      aria-expanded="false"
+                      aria-haspopup="false"
+                      aria-label={undefined}
+                      aria-labelledby={undefined}
+                      aria-owns=""
+                      className={undefined}
+                      id="demo"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      required={false}
+                      role="combobox"
+                      style={
+                        Object {
+                          "boxSizing": "content-box",
+                          "width": "5px",
+                        }
+                      }
+                      tabIndex={undefined}
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="Select-arrow-zone"
+                  onMouseDown={[Function]}
+                >
+                  <span
+                    className="Select-arrow"
+                    onMouseDown={[Function]}
+                  />
+                </span>
+              </div>
+            </div>
             <svg
               className="icon caret"
               height={undefined}
@@ -10267,29 +10264,6 @@ exports[`Cosmos fixtures: Radio:ChildOption 1`] = `
               </g>
             </svg>
           </div>
-          <ul
-            className="options"
-          >
-            <li
-              className="option selected"
-              onClick={[Function]}
-            >
-              A
-            </li>
-            <li
-              className="option"
-              onClick={[Function]}
-            >
-              B
-            </li>
-            <li
-              className="option"
-              onClick={[Function]}
-            >
-              C
-            </li>
-          </ul>
-          
         </div>
       </div>
     </div>
@@ -10318,16 +10292,15 @@ exports[`Cosmos fixtures: Radio:ChildOptionShow 1`] = `
         "value": "3",
       },
       Object {
-        "child": <OnClickOutside(SingleSelect)
-          eventTypes={
-            Array [
-              "mousedown",
-              "touchstart",
-            ]
-          }
-          excludeScrollbar={false}
+        "child": <SingleSelect
+          disabled={false}
+          error=""
           id="demo"
+          inline={false}
           name="demo"
+          onBeforeOpen={[Function]}
+          onChange={[Function]}
+          onClose={[Function]}
           options={
             Array [
               Object {
@@ -10344,9 +10317,7 @@ exports[`Cosmos fixtures: Radio:ChildOptionShow 1`] = `
               },
             ]
           }
-          outsideClickIgnoreClass="ignore-react-onclickoutside"
-          preventDefault={false}
-          stopPropagation={false}
+          value={null}
         />,
         "label": "Other...",
         "showChild": true,
@@ -10530,32 +10501,93 @@ exports[`Cosmos fixtures: Radio:ChildOptionShow 1`] = `
       >
         <div
           className="outer"
-          onClose={[Function]}
-          options={
-            Array [
-              Object {
-                "label": "A",
-                "value": "A",
-              },
-              Object {
-                "label": "B",
-                "value": "B",
-              },
-              Object {
-                "label": "C",
-                "value": "C",
-              },
-            ]
-          }
         >
           <div
-            className="select"
-            id="demo"
-            onClick={[Function]}
+            className="container"
+            onClose={[Function]}
           >
-            <span>
-              A
-            </span>
+            <div
+              className="Select select is-clearable is-searchable Select--single"
+              style={undefined}
+            >
+              <div
+                className="Select-control"
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={undefined}
+              >
+                <span
+                  className="Select-multi-value-wrapper"
+                  id="react-select-9--value"
+                >
+                  <div
+                    className="Select-placeholder"
+                  >
+                    Select...
+                  </div>
+                  <div
+                    className="Select-input"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
+                  >
+                    <input
+                      aria-activedescendant="react-select-9--value"
+                      aria-describedby={undefined}
+                      aria-expanded="false"
+                      aria-haspopup="false"
+                      aria-label={undefined}
+                      aria-labelledby={undefined}
+                      aria-owns=""
+                      className={undefined}
+                      id="demo"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      required={false}
+                      role="combobox"
+                      style={
+                        Object {
+                          "boxSizing": "content-box",
+                          "width": "5px",
+                        }
+                      }
+                      tabIndex={undefined}
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="Select-arrow-zone"
+                  onMouseDown={[Function]}
+                >
+                  <span
+                    className="Select-arrow"
+                    onMouseDown={[Function]}
+                  />
+                </span>
+              </div>
+            </div>
             <svg
               className="icon caret"
               height={undefined}
@@ -10573,29 +10605,6 @@ exports[`Cosmos fixtures: Radio:ChildOptionShow 1`] = `
               </g>
             </svg>
           </div>
-          <ul
-            className="options"
-          >
-            <li
-              className="option selected"
-              onClick={[Function]}
-            >
-              A
-            </li>
-            <li
-              className="option"
-              onClick={[Function]}
-            >
-              B
-            </li>
-            <li
-              className="option"
-              onClick={[Function]}
-            >
-              C
-            </li>
-          </ul>
-          
         </div>
       </div>
     </div>
@@ -11629,35 +11638,96 @@ exports[`Cosmos fixtures: SingleDatePicker:label 1`] = `
 </div>
 `;
 
-exports[`Cosmos fixtures: SingleSelect:open 1`] = `
+exports[`Cosmos fixtures: SingleSelect:Default 1`] = `
 <div
-  className="outer expanded"
-  onClose={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Option 1",
-        "value": "1",
-      },
-      Object {
-        "label": "Option 2",
-        "value": "2",
-      },
-      Object {
-        "label": "Option 3",
-        "value": "3",
-      },
-    ]
-  }
+  className="outer"
 >
   <div
-    className="select"
-    id="demo"
-    onClick={[Function]}
+    className="container"
+    onClose={[Function]}
   >
-    <span>
-      Option 1
-    </span>
+    <div
+      className="Select select is-clearable is-searchable Select--single"
+      style={undefined}
+    >
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-10--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant="react-select-10--value"
+              aria-describedby={undefined}
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns=""
+              className={undefined}
+              id="demo"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              tabIndex={undefined}
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
     <svg
       className="icon caret"
       height={undefined}
@@ -11675,29 +11745,770 @@ exports[`Cosmos fixtures: SingleSelect:open 1`] = `
       </g>
     </svg>
   </div>
-  <ul
-    className="options"
+</div>
+`;
+
+exports[`Cosmos fixtures: SingleSelect:disabled 1`] = `
+<div
+  className="outer"
+>
+  <div
+    className="container disabled"
+    onClose={[Function]}
   >
-    <li
-      className="option selected"
-      onClick={[Function]}
+    <div
+      className="Select select disabled is-clearable is-disabled is-searchable Select--single"
+      style={undefined}
     >
-      Option 1
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-11--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            aria-activedescendant="react-select-11--value"
+            aria-disabled="true"
+            aria-expanded={false}
+            aria-label={undefined}
+            aria-labelledby={undefined}
+            aria-owns=""
+            className="Select-input"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            role="combobox"
+            style={
+              Object {
+                "border": 0,
+                "display": "inline-block",
+                "width": 1,
+              }
+            }
+            tabIndex={0}
+          />
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
+    <svg
+      className="icon caret"
+      height={undefined}
+      version="1.1"
+      viewBox="0 0 24 24"
+      width={undefined}
+      xmlns="http://www.w3.org/2000/svg"
     >
-      Option 2
-    </li>
-    <li
-      className="option"
-      onClick={[Function]}
+      <g
+        transform="translate(15.000000, 7.000000) rotate(90.000000)"
+      >
+        <path
+          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: SingleSelect:error 1`] = `
+<div
+  className="outer"
+>
+  <div
+    className="container error"
+    onClose={[Function]}
+  >
+    <div
+      className="Select select error is-clearable is-searchable Select--single"
+      style={undefined}
     >
-      Option 3
-    </li>
-  </ul>
-  
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-12--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant="react-select-12--value"
+              aria-describedby={undefined}
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns=""
+              className={undefined}
+              id="demo"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              tabIndex={undefined}
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
+    <svg
+      className="icon caret"
+      height={undefined}
+      version="1.1"
+      viewBox="0 0 24 24"
+      width={undefined}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(15.000000, 7.000000) rotate(90.000000)"
+      >
+        <path
+          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: SingleSelect:fill 1`] = `
+<div
+  className="outer fill"
+>
+  <div
+    className="container fill"
+    onClose={[Function]}
+  >
+    <div
+      className="Select select is-clearable is-searchable Select--single"
+      style={undefined}
+    >
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-13--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant="react-select-13--value"
+              aria-describedby={undefined}
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns=""
+              className={undefined}
+              id="demo"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              tabIndex={undefined}
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
+    <svg
+      className="icon caret"
+      height={undefined}
+      version="1.1"
+      viewBox="0 0 24 24"
+      width={undefined}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(15.000000, 7.000000) rotate(90.000000)"
+      >
+        <path
+          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: SingleSelect:label 1`] = `
+<div
+  className="outer"
+>
+  <div
+    className="label label"
+    onChange={[Function]}
+  >
+    <label
+      htmlFor="demo"
+    >
+      Select from the list
+    </label>
+  </div>
+  <div
+    className="container"
+    onClose={[Function]}
+  >
+    <div
+      className="Select select is-clearable is-searchable Select--single"
+      style={undefined}
+    >
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-14--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant="react-select-14--value"
+              aria-describedby={undefined}
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns=""
+              className={undefined}
+              id="demo"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              tabIndex={undefined}
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
+    <svg
+      className="icon caret"
+      height={undefined}
+      version="1.1"
+      viewBox="0 0 24 24"
+      width={undefined}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(15.000000, 7.000000) rotate(90.000000)"
+      >
+        <path
+          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: SingleSelect:open 1`] = `
+<div
+  className="outer"
+>
+  <div
+    className="container expanded"
+    onClose={[Function]}
+  >
+    <div
+      className="Select select expanded is-clearable is-searchable Select--single"
+      style={undefined}
+    >
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-15--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant="react-select-15--value"
+              aria-describedby={undefined}
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns=""
+              className={undefined}
+              id="demo"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              tabIndex={undefined}
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
+    <svg
+      className="icon caret"
+      height={undefined}
+      version="1.1"
+      viewBox="0 0 24 24"
+      width={undefined}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(15.000000, 7.000000) rotate(90.000000)"
+      >
+        <path
+          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: SingleSelect:placeholder 1`] = `
+<div
+  style={
+    Object {
+      "background": "white",
+      "border": "solid 1px silver",
+      "boxShadow": "0 5px 10px rgba(0,0,0,0.1)",
+      "margin": 40,
+      "padding": 40,
+    }
+  }
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="container"
+      onClose={[Function]}
+    >
+      <div
+        className="Select select is-clearable is-searchable Select--single"
+        style={undefined}
+      >
+        <div
+          className="Select-control"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={undefined}
+        >
+          <span
+            className="Select-multi-value-wrapper"
+            id="react-select-16--value"
+          >
+            <div
+              className="Select-placeholder"
+            >
+              Select...
+            </div>
+            <div
+              className="Select-input"
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant="react-select-16--value"
+                aria-describedby={undefined}
+                aria-expanded="false"
+                aria-haspopup="false"
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns=""
+                className={undefined}
+                id="demo"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                role="combobox"
+                style={
+                  Object {
+                    "boxSizing": "content-box",
+                    "width": "5px",
+                  }
+                }
+                tabIndex={undefined}
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </span>
+          <span
+            className="Select-arrow-zone"
+            onMouseDown={[Function]}
+          >
+            <span
+              className="Select-arrow"
+              onMouseDown={[Function]}
+            />
+          </span>
+        </div>
+      </div>
+      <svg
+        className="icon caret"
+        height={undefined}
+        version="1.1"
+        viewBox="0 0 24 24"
+        width={undefined}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          transform="translate(15.000000, 7.000000) rotate(90.000000)"
+        >
+          <path
+            d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: SingleSelect:selected 1`] = `
+<div
+  className="outer"
+>
+  <div
+    className="container"
+    onClose={[Function]}
+  >
+    <div
+      className="Select select is-clearable is-searchable Select--single"
+      style={undefined}
+    >
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-17--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant="react-select-17--value"
+              aria-describedby={undefined}
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns=""
+              className={undefined}
+              id="demo"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              tabIndex={undefined}
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
+    <svg
+      className="icon caret"
+      height={undefined}
+      version="1.1"
+      viewBox="0 0 24 24"
+      width={undefined}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(15.000000, 7.000000) rotate(90.000000)"
+      >
+        <path
+          d="M2,6.93247919 L2,-0.932479194 C2,-1.20862157 2.22385763,-1.43247919 2.5,-1.43247919 C2.61696825,-1.43247919 2.7302347,-1.39147108 2.8200922,-1.31658983 L7.53906723,2.61588936 C7.75120568,2.7926714 7.77986771,3.10795375 7.60308567,3.3200922 C7.58372606,3.34332373 7.56229876,3.36475103 7.53906723,3.38411064 L2.8200922,7.31658983 C2.60795375,7.49337187 2.2926714,7.46470984 2.11588936,7.25257139 C2.04100811,7.16271389 2,7.04944745 2,6.93247919 Z"
+        />
+      </g>
+    </svg>
+  </div>
 </div>
 `;
 
@@ -13500,46 +14311,106 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):Default 1`] = `
   <div
     className="top"
   >
-    <h1
-      className="heading h1 heading"
+    <h2
+      className="heading"
     >
       Parent title
-    </h1>
+    </h2>
     <div
       className="controls"
     >
       <span
-        className="control"
+        className="control selector"
       >
         <div
-          className="outer locationSelector"
-          onClose={[Function]}
-          options={
-            Array [
-              Object {
-                "label": "Location A",
-                "value": "Location A",
-              },
-              Object {
-                "label": "Location B",
-                "value": "Location B",
-              },
-            ]
-          }
-          style={
-            Object {
-              "paddingBottom": "0px",
-            }
-          }
+          className="outer fill"
         >
           <div
-            className="select"
-            id="locationSelector"
-            onClick={[Function]}
+            className="container fill"
+            onClose={[Function]}
           >
-            <span>
-              Location A
-            </span>
+            <div
+              className="Select select is-clearable is-searchable Select--single"
+              style={undefined}
+            >
+              <div
+                className="Select-control"
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={undefined}
+              >
+                <span
+                  className="Select-multi-value-wrapper"
+                  id="react-select-20--value"
+                >
+                  <div
+                    className="Select-placeholder"
+                  >
+                    Select...
+                  </div>
+                  <div
+                    className="Select-input"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
+                  >
+                    <input
+                      aria-activedescendant="react-select-20--value"
+                      aria-describedby={undefined}
+                      aria-expanded="false"
+                      aria-haspopup="false"
+                      aria-label={undefined}
+                      aria-labelledby={undefined}
+                      aria-owns=""
+                      className={undefined}
+                      id="locationSelector"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      required={false}
+                      role="combobox"
+                      style={
+                        Object {
+                          "boxSizing": "content-box",
+                          "width": "5px",
+                        }
+                      }
+                      tabIndex={undefined}
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="Select-arrow-zone"
+                  onMouseDown={[Function]}
+                >
+                  <span
+                    className="Select-arrow"
+                    onMouseDown={[Function]}
+                  />
+                </span>
+              </div>
+            </div>
             <svg
               className="icon caret"
               height={undefined}
@@ -13557,27 +14428,144 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):Default 1`] = `
               </g>
             </svg>
           </div>
-          <ul
-            className="options"
-          >
-            <li
-              className="option selected"
-              onClick={[Function]}
-            >
-              Location A
-            </li>
-            <li
-              className="option"
-              onClick={[Function]}
-            >
-              Location B
-            </li>
-          </ul>
-          
         </div>
       </span>
       <span
+        className="control logout"
+      >
+        <a
+          aria-current={false}
+          className="navLink"
+          href="/logout"
+          onClick={[Function]}
+          style={undefined}
+          target="_self"
+          title="Logout"
+        >
+          <svg
+            className="icon icon"
+            height={undefined}
+            version="1.1"
+            viewBox="0 1 16 16"
+            width={undefined}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 7.5 0.66601562 C 6.6774686 0.66601562 6 1.3434842 6 2.1660156 L 6 5.1660156 L 7 5.1660156 L 7 2.1660156 C 7 1.884547 7.2185314 1.6660156 7.5 1.6660156 L 14.5 1.6660156 C 14.781469 1.6660156 15 1.884547 15 2.1660156 L 15 14.166016 C 15 14.447484 14.781469 14.666016 14.5 14.666016 L 7.5 14.666016 C 7.2185314 14.666016 7 14.447484 7 14.166016 L 7 11.166016 L 6 11.166016 L 6 14.166016 C 6 14.988547 6.6774686 15.666016 7.5 15.666016 L 14.5 15.666016 C 15.322531 15.666016 16 14.988547 16 14.166016 L 16 2.1660156 C 16 1.3434842 15.322531 0.66601562 14.5 0.66601562 L 7.5 0.66601562 z M 3.1464844 4.8125 L -0.20703125 8.1660156 L 3.1464844 11.519531 L 3.8535156 10.8125 L 1.7070312 8.6660156 L 11.5 8.6660156 L 11.5 7.6660156 L 1.7070312 7.6660156 L 3.8535156 5.5195312 L 3.1464844 4.8125 z "
+              transform="translate(0,1)"
+            />
+          </svg>
+          Logout
+        </a>
+      </span>
+    </div>
+  </div>
+  <div
+    className="items"
+  >
+    <a
+      aria-current={false}
+      className="item"
+      href="/parent"
+      onClick={[Function]}
+      style={undefined}
+      title="Main"
+    >
+      <span>
+        Main
+      </span>
+    </a>
+    <a
+      aria-current={false}
+      className="item"
+      href="/parent/secondary"
+      onClick={[Function]}
+      style={undefined}
+      title="Secondary"
+    >
+      <span>
+        Secondary
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: withRouter(SubNavigation):OnePractice 1`] = `
+<div
+  className="bar"
+>
+  <div
+    className="top"
+  >
+    <h2
+      className="heading"
+    >
+      Parent title
+    </h2>
+    <div
+      className="controls"
+    >
+      <span
         className="control"
+      >
+        Location A
+      </span>
+      <span
+        className="control logout"
+      >
+        <a
+          aria-current={false}
+          className="navLink"
+          href="/logout"
+          onClick={[Function]}
+          style={undefined}
+          target="_self"
+          title="Logout"
+        >
+          <svg
+            className="icon icon"
+            height={undefined}
+            version="1.1"
+            viewBox="0 1 16 16"
+            width={undefined}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 7.5 0.66601562 C 6.6774686 0.66601562 6 1.3434842 6 2.1660156 L 6 5.1660156 L 7 5.1660156 L 7 2.1660156 C 7 1.884547 7.2185314 1.6660156 7.5 1.6660156 L 14.5 1.6660156 C 14.781469 1.6660156 15 1.884547 15 2.1660156 L 15 14.166016 C 15 14.447484 14.781469 14.666016 14.5 14.666016 L 7.5 14.666016 C 7.2185314 14.666016 7 14.447484 7 14.166016 L 7 11.166016 L 6 11.166016 L 6 14.166016 C 6 14.988547 6.6774686 15.666016 7.5 15.666016 L 14.5 15.666016 C 15.322531 15.666016 16 14.988547 16 14.166016 L 16 2.1660156 C 16 1.3434842 15.322531 0.66601562 14.5 0.66601562 L 7.5 0.66601562 z M 3.1464844 4.8125 L -0.20703125 8.1660156 L 3.1464844 11.519531 L 3.8535156 10.8125 L 1.7070312 8.6660156 L 11.5 8.6660156 L 11.5 7.6660156 L 1.7070312 7.6660156 L 3.8535156 5.5195312 L 3.1464844 4.8125 z "
+              transform="translate(0,1)"
+            />
+          </svg>
+          Logout
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cosmos fixtures: withRouter(SubNavigation):OnePracticeWithChildren 1`] = `
+<div
+  className="bar"
+>
+  <div
+    className="top"
+  >
+    <h2
+      className="heading"
+    >
+      Parent title
+    </h2>
+    <div
+      className="controls"
+    >
+      <span
+        className="control"
+      >
+        Location A
+      </span>
+      <span
+        className="control logout"
       >
         <a
           aria-current={false}
@@ -13644,22 +14632,29 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):loading 1`] = `
   <div
     className="top"
   >
-    <h1
-      className="heading h1 heading"
+    <div
+      className="outer loadingHeading"
     >
       <div
-        className="outer loading"
-      >
-        <div
-          className="inner"
-        />
-      </div>
-    </h1>
+        className="inner"
+      />
+    </div>
     <div
       className="controls"
     >
       <span
         className="control"
+      >
+        <div
+          className="outer loadingLocation"
+        >
+          <div
+            className="inner"
+          />
+        </div>
+      </span>
+      <span
+        className="control logout"
       >
         <a
           aria-current={false}
@@ -13698,16 +14693,16 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):noChildren 1`] = `
   <div
     className="top"
   >
-    <h1
-      className="heading h1 heading"
+    <h2
+      className="heading"
     >
       Welcome home
-    </h1>
+    </h2>
     <div
       className="controls"
     >
       <span
-        className="control"
+        className="control logout"
       >
         <a
           aria-current={false}
