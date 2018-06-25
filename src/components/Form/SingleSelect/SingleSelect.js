@@ -39,9 +39,8 @@ class SingleSelect extends React.Component {
     ]),
     preventDefault: PropTypes.bool,
     stopPropagation: PropTypes.bool,
-    forceOpen: PropTypes.bool,
-    forceTitle: PropTypes.string,
     fill: PropTypes.bool,
+    forceTitle: PropTypes.string,
   };
 
   static defaultProps = {
@@ -141,6 +140,7 @@ class SingleSelect extends React.Component {
             [style.disabled]: disabled,
             [style.error]: error,
             [style.fill]: fill,
+            [style.inline]: inline,
           })}
           {...restProps}
         >
