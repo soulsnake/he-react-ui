@@ -12,6 +12,7 @@ import styles from './Slider.scss';
 
 class Slider extends Component {
   static propTypes = {
+    siteName: PropTypes.string,
     itemKey: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
@@ -34,7 +35,7 @@ class Slider extends Component {
   };
 
   render() {
-    const { bottom, itemKey, open, ...restProps } = this.props;
+    const { bottom, itemKey, open, siteName, ...restProps } = this.props;
 
     return (
       <div
@@ -45,9 +46,7 @@ class Slider extends Component {
         key={itemKey}
       >
         <div className={styles.filler}>
-          <div className={styles.sitename}>
-            HealthEngine
-          </div>
+          {siteName && <div className={styles.sitename}>{siteName}</div>}
         </div>
         <List className={styles.list} itemKey={itemKey} {...restProps} />
       </div>
