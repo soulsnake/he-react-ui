@@ -81,6 +81,7 @@ exports[`<SingleSelect /> rendered correctly with label fixture 1`] = `
         menuBuffer={0}
         menuRenderer={[Function]}
         multi={false}
+        name="demo"
         noResultsText="No results found"
         onBlurResetsInput={true}
         onChange={[Function]}
@@ -119,6 +120,7 @@ exports[`<SingleSelect /> rendered correctly with label fixture 1`] = `
         value={null}
         valueComponent={[Function]}
         valueKey="value"
+        valueRenderer={[Function]}
       >
         <div
           className="Select select is-clearable is-searchable Select--single"

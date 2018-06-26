@@ -2372,6 +2372,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
                                   menuBuffer={0}
                                   menuRenderer={[Function]}
                                   multi={false}
+                                  name="location"
                                   noResultsText="No results found"
                                   onBlurResetsInput={true}
                                   onChange={[Function]}
@@ -2406,6 +2407,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
                                   value={null}
                                   valueComponent={[Function]}
                                   valueKey="value"
+                                  valueRenderer={[Function]}
                                 >
                                   <div
                                     className="Select select is-clearable is-searchable Select--single"
