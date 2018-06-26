@@ -10,7 +10,7 @@ import styles from './BenefitList.scss';
 class BenefitList extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
-  }
+  };
 
   render() {
     const { children } = this.props;

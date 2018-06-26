@@ -18,7 +18,7 @@ class Section extends React.Component {
     white: false,
   };
 
-  render () {
+  render() {
     const { children, white } = this.props;
     const classes = classnames(styles.outer, {
       [styles.white]: white,

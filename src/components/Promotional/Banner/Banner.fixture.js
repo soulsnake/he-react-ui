@@ -1,10 +1,13 @@
 import React from 'react';
-import Footer from '.';
-import Button from '../../Form/Button';
+import Banner from '.';
+import Button from '../../Form/Button/Button';
 
 const content = (
   <React.Fragment>
-    <p>This product will change everything.</p>
+    <p>
+      This is a paragraph of text made to emulate a quick description of the
+      item being promoted.
+    </p>
     <Button large>Activate now</Button>
     <Button large color="white" keyline>
       Find out more
@@ -13,9 +16,9 @@ const content = (
 );
 
 export default {
-  component: Footer,
+  component: Banner,
   props: {
-    header: 'Ready for this product?',
+    title: 'The Heading',
   },
   children: content,
 };

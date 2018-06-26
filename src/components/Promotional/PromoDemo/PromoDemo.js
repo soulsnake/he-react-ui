@@ -1,11 +1,11 @@
 import React from 'react';
-import Banner from '../Banner';
 import Button from '../../Form/Button';
+import Banner from '../Banner';
 import BenefitItem from '../BenefitItem';
 import BenefitList from '../BenefitList';
-import PromoSection from '../Section';
 import PromoFooter from '../Footer';
-import Highlight from '../Highlight';
+import PromoHighlight from '../Highlight';
+import PromoSection from '../Section';
 import SupportItem from '../SupportItem';
 import SupportList from '../SupportList';
 
@@ -16,7 +16,6 @@ class PromoDemo extends React.Component {
         <em>Really good for this</em> in some truly amazing ways
       </BenefitItem>
     );
-
     const support = (
       <SupportItem
         name="Medical Bandages"
@@ -41,7 +40,7 @@ class PromoDemo extends React.Component {
           </Button>
         </Banner>
         <PromoSection>
-          <Highlight
+          <PromoHighlight
             image={{
               src:
                 'http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png',
@@ -59,7 +58,7 @@ class PromoDemo extends React.Component {
               text made to emulate a more detailed description of the item being
               promoted. It's really good if you take the time to check it out.
             </p>
-          </Highlight>
+          </PromoHighlight>
           <h2>Sweet benefits</h2>
           <BenefitList>
             {benefit}
