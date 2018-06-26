@@ -65,16 +65,11 @@ class SingleSelect extends React.Component {
     this.handleClose = this.handleClose.bind(this);
   }
 
-  getDisplay = () => {
-    const { options, value, forceTitle, placeholder } = this.props;
+  getDisplay(option) {
+    const { forceTitle } = this.props;
 
-    if (forceTitle) return forceTitle;
-
-    const option = options.find(it => it.value === value);
-    const firstLabel = (options && options[0] && options[0].label) || '';
-
-    return option ? option.label : placeholder || firstLabel;
-  };
+    return forceTitle || option.label;
+  }
 
   handleChange(data) {
     const oldValue = this.props.value;
@@ -116,6 +111,7 @@ class SingleSelect extends React.Component {
       preventDefault,
       stopPropagation,
       onBeforeOpen,
+      forceTitle,
       fill,
       ...restProps
     } = this.props;
@@ -150,13 +146,18 @@ class SingleSelect extends React.Component {
               [style.expanded]: expanded,
               [style.disabled]: disabled,
               [style.error]: error,
+              [style.forceTitle]: forceTitle,
             })}
             disabled={disabled}
             value={value}
             onChange={handleChange}
             onOpen={handleOpen}
             onClose={handleClose}
+            placeholder={forceTitle || placeholder}
+            valueRenderer={this.getDisplay}
             id={id}
+            name={name}
+            required={required}
           />
           <Icon className={style.caret} name="DropDown" />
         </div>

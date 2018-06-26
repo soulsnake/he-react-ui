@@ -133,8 +133,12 @@
       white-space: nowrap;
       color: $grey_1;
     }
-    .Select-placeholder, .is-open .Select-value-label {
-      color: $grey_3;
+  }
+  .select:not(.forceTitle) {
+    :global {
+      .Select-placeholder, .is-open .Select-value-label {
+        color: $grey_3;
+      }
     }
   }
 }
