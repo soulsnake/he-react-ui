@@ -112,6 +112,7 @@ class SingleSelect extends React.Component {
       stopPropagation,
       onBeforeOpen,
       forceTitle,
+      forceOpen, // Deprecated
       fill,
       ...restProps
     } = this.props;
