@@ -57,6 +57,8 @@
     "react-router-dom": "^4.2.2",
     "react-select": "^1.2.1",
     "react-tippy": "^1.2.2",
+    "react-youtube": "^7.6.0",
+    "url-loader": "^1.0.1",
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {

@@ -1,0 +1,32 @@
+@import '../../../styles/_base';
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  font-family: $font-stack;
+  margin: 0 auto 24px;
+  max-width: 288px;
+  width: 100%;
+}
+
+.tick {
+  color: $teal;
+  fill: currentColor;
+  height: 24px;
+  margin-top: -2px;
+  width: 24px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.content {
+  color: $grey_1;
+  font-size: 16px;
+  flex-grow: 1;
+  margin-left: 8px;
+  text-align: left;
+  em {
+    color: $he_black;
+    font-style: normal;
+  }
+}
