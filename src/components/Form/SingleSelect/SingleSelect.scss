@@ -1,33 +1,151 @@
 @import '../../../styles/base';
 
-.outer {
-  font-family: $font-stack;
-  padding-bottom: 12px;
-  position: relative;
-  user-select: none;
-  width: 280px;
-  &.fill {
-    width: 100%;
-  }
-  
-  @include breakpoint(small) {
-    width: 100%;
-  }
-}
-
-.inline {
-  @include inline-block;
-}
-
 .label {
   margin-bottom: 12px;
 }
 
-.input {
-  display: none;
+.outer {
+  position: relative;
+  margin-bottom: 12px; // Form auto spacing. Should split out into another componenet eventually.
+  height: 48px;
+  width: 280px;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+  &.fill {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: fit-content;
+  .caret {
+    margin-top: 4px;
+  }
+  &:hover {
+    .caret {
+      color: $teal;
+    }
+  }
+  &.expanded {
+    z-index: 1;
+    .caret {
+      color: $teal;
+      transform: rotate(180deg);
+    }
+  }
+  width: 280px;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+  &.fill {
+    width: 100%;
+  }
+  &.error, &.error:active, &.error:hover, &.error:focus {
+    &:not(.expanded) {
+      .caret {
+          color: $red;
+      }
+    }
+  }
+  .caret {
+    color: $he_black;
+    fill: currentColor;
+    position: absolute;
+    pointer-events: none;
+    top: 5px;
+    right: 8px;
+    @include transition(all 0.2s);
+  }
+
+  &.disabled, &.disabled:hover {
+    .caret {
+      color: $grey_3;
+    }
+  }
+  :global {
+    // Style reset
+    .Select-control, .Select-menu-outer {
+      border: none;
+    }
+    .is-open {
+      .Select-control {
+        border-bottom: 1px solid $grey_5;
+      }
+    }
+    .Select-clear-zone, .Select-arrow-zone {
+      display: none;
+    }
+    .Select-menu-outer {
+      position: static;
+    }
+    .Select-input {
+      padding: 0px;
+    }
+    input[role=combobox] {
+      padding: 0px;
+    }
+    // React-select custom styles
+    .Select-control {
+      padding: 0px 44px 0px 16px;
+      position: relative;
+    }
+    .Select-menu-outer {
+      max-height: 240px;
+      overflow: auto;
+    }
+    .Select-clear {
+      float: right;
+    }
+    .Select-input {
+      height: 46px;
+    }
+    .Select-option, .Select-noresults {
+      color: $grey_1;
+      padding: 11px 16px;
+    }
+    .Select-option.is-focused {
+      background-color: $grey_7;
+    }
+    input[role=combobox] {
+      font-size: 16px;
+      color: $grey_1;
+      border: 0 none;
+      background: none;
+      height: 48px;
+      font-weight: $semi-bold;
+      caret-color: $teal;
+      &:focus {
+        outline: none;
+      }
+    }
+    .Select-value-label, .Select-placeholder {
+      position: absolute;
+      left: 16px;
+      right: 44px;
+      font-size: 16px;
+      line-height: 48px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: $grey_1;
+    }
+  }
+  .select:not(.forceTitle) {
+    :global {
+      .Select-placeholder, .is-open .Select-value-label {
+        color: $grey_3;
+      }
+    }
+  }
 }
 
 .select {
+  font-family: $font-stack;
   background-color: $white;
   border: solid 1px $grey_5;
   border-radius: 4px;
@@ -35,84 +153,37 @@
   cursor: pointer;
   font-size: $input-size;
   font-weight: $regular;
-  margin-bottom: 12px;
-  position: relative;
-  width: 100%;
   &:hover {
-  border-color: $teal;
-  color: $he_black;
-
-  .caret {
-    color: $teal;
-  }
-
-  }
-  span {
-    display: block;
-    padding: 12px;
-    padding-right: 42px;
-    user-select: none;
-  }
-  @include transition(all 0.2s);
-}
-
-.expanded, .forceOpen {
-  .select {
-    color: $he_black;
     border-color: $teal;
-    border-radius: 4px 4px 0px 0px;
-    
-    .caret {
-      color: $teal;
-      transform: rotate(180deg);
-    }
-  }
-}
-
-.expanded {
-  .options {
-    margin-left: 0;
-    opacity: 1;
-    pointer-events: auto;
-    width: 100%;
-    @include transition(opacity 0.2s, width 0.2s, margin-left, 0.2s);
-  }
-}
-
-.caret {
-  color: $he_black;
-  fill: currentColor;
-  position: absolute;
-  pointer-events: none;
-  top: 5px;
-  right: 8px;
-  @include transition(all 0.2s);
-}
-
-.disabled {
-  background-color: $grey_7;
-  border-color: $grey_5;
-  cursor: not-allowed;
-  color: $grey_2;
-  &:hover {
-    border-color: $grey_5;
-    color: $grey_2;
-  }
-  .caret {
-    color: $grey_3;
-  }
-}
-
-.error, .error:active, .error:hover, .error:focus {
-  background-color: $red_light_80;
-  border-color: $red;
-  color: $red;
-  .caret {
-    color: $red;
   }
   &.expanded {
-    border-color: $red;
-    color: $red;
+    border-color: $teal;
+    box-shadow: 0px 0px 10px rgba($teal, 15);
+  }
+  &.disabled {
+    background-color: $grey_7;
+    border-color: $grey_5;
+    color: $grey_2;
+    cursor: not-allowed;
+    &:hover {
+      border-color: $grey_5;
+      color: $grey_2;
+    }
+  }
+
+  @include transition(all 0.2s); // TODO Height transition
+
+  &.error, &.error:active, &.error:hover, &.error:focus {
+    &:not(.expanded) {
+      background-color: $red_light_80;
+      border-color: $red;
+      color: $red;
+      :global {
+        .Select-placeholder {
+          color: $red;
+        }
+      }
+    }
   }
 }
 
@@ -121,39 +192,4 @@
   margin-bottom: 0;
 }
 
-.options {
-  background-color: $white;
-  border: solid 1px $teal;
-  border-top: solid 1px $grey_7;
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0 6px 12px $grey_4;
-  cursor: pointer;
-  font-size: $input-size;
-  font-weight: $regular;
-  list-style: none;
-  margin: -13px 0 0 4%;
-  max-height: 240px;
-  opacity: 0;
-  overflow-y: auto;
-  padding: 0;
-  position: absolute;
-  pointer-events: none;
-  width: 80%;
-  z-index: 1;
-  @include transition(margin-left 0.2s, opacity 0.2s, width 0.2s);
-}
-
-.option {
-  color: $grey_1;
-  padding: 12px;
-  user-select: none;
-  &:hover {
-    background-color: $grey_7;
-    color: $he_black;
-  }
-  @include transition(all 0.2s);
-}
-
-.selected {
-  background-color: $teal_light_80;
-}
+// TODO inline style

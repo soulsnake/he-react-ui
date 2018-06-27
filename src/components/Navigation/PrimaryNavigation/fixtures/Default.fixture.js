@@ -4,6 +4,7 @@ export default {
   component: PrimaryNavigation,
   url: '/',
   props: {
+    siteName: 'Your Site',
     logoutRoute: '/logout',
     locations: ['Location A', 'Location B'].map(location => ({
       value: location,

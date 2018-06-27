@@ -11,7 +11,7 @@ import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import SingleSelect from '../../Form/SingleSelect';
 import Icon from '../../Icon';
-import Heading from '../../Layout/Heading';
+import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './SubNavigation.scss';
 
 class SubNavigation extends Component {
@@ -87,37 +87,45 @@ class SubNavigation extends Component {
     return (
       <div className={style.bar}>
         <div className={style.top}>
-          <Heading h1 className={style.heading}>
-            {loading ? '' : item.title}
-          </Heading>
-          <div className={style.controls}>
-            {!loading &&
-              locations &&
-              locations.length > 1 && (
-                <span className={style.control}>
+          {loading ? (
+            <LoadingStrip
+              className={classnames(style.heading, style.loadingHeading)}
+            />
+          ) : (
+            <h2 className={style.heading}>{item.title}</h2>
+          )}
+          {(loading && (
+            <span className={style.control}>
+              <LoadingStrip className={style.loadingLocation} />
+            </span>
+          )) ||
+            (locations &&
+              ((locations.length > 1 && (
+                <span className={classnames(style.control, style.selector)}>
                   <SingleSelect
-                    className={style.locationSelector}
                     id="locationSelector"
                     name="location"
                     options={locations}
                     onChange={onLocationChange}
-                    style={{ paddingBottom: '0px' }}
                     value={locationValue}
+                    fill
                   />
                 </span>
-              )}
-            <span className={style.control}>
-              <NavLink
-                key="logout"
-                to={logoutRoute}
-                className={style.navLink}
-                title="Logout"
-                target="_self"
-              >
-                <Icon className={style.icon} name="Logout" />Logout
-              </NavLink>
-            </span>
-          </div>
+              )) ||
+                (locations.length === 1 && (
+                  <span className={style.control}>{locations[0].label}</span>
+                ))))}
+          <span className={classnames(style.control, style.logout)}>
+            <NavLink
+              key="logout"
+              to={logoutRoute}
+              className={style.navLink}
+              title="Logout"
+              target="_self"
+            >
+              <Icon className={style.icon} name="Logout" />Logout
+            </NavLink>
+          </span>
         </div>
         {!loading &&
           item.items &&
