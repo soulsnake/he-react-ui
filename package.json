@@ -10,7 +10,8 @@
     "coverage": "NODE_ENV=test jest --env=jsdom --coverage",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "test:watch": "yarn test -- --watch",
-    "lint": "eslint . --fix --env jest",
+    "lint": "eslint . --env jest",
+    "lint-fix": "eslint . --fix --env jest",
     "cosmos": "cosmos"
   },
   "keywords": [
