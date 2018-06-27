@@ -10,7 +10,8 @@
     "coverage": "NODE_ENV=test jest --env=jsdom --coverage",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "test:watch": "yarn test -- --watch",
-    "lint": "eslint . --fix --env jest",
+    "lint": "eslint . --env jest",
+    "lint-fix": "eslint . --fix --env jest",
     "cosmos": "cosmos"
   },
   "keywords": [
@@ -54,6 +55,8 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-tippy": "^1.2.2",
+    "react-youtube": "^7.6.0",
+    "url-loader": "^1.0.1",
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
