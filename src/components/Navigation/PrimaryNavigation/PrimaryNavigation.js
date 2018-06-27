@@ -4,7 +4,6 @@
  *
  */
 
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import onClickOutside from 'react-onclickoutside';
