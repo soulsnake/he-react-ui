@@ -114,12 +114,6 @@ class TextField extends React.Component {
     return (
       <div className={classes} {...restProps}>
         <div className={style.block}>
-          <label
-            className={classnames(style.label, { [style.floating]: floating })}
-            htmlFor={id}
-          >
-            {label}
-          </label>
           <input
             className={style.input}
             id={id}
@@ -137,6 +131,12 @@ class TextField extends React.Component {
                 className={style.marker}
               />
             )}
+          <label
+            className={classnames(style.label, { [style.floating]: floating })}
+            htmlFor={id}
+          >
+            {label}
+          </label>
         </div>
         {(description || error) && (
           <label htmlFor={id} className={style.description}>
