@@ -81,7 +81,6 @@ exports[`<SingleSelect /> rendered correctly with label fixture 1`] = `
         menuBuffer={0}
         menuRenderer={[Function]}
         multi={false}
-        name="demo"
         noResultsText="No results found"
         onBlurResetsInput={true}
         onChange={[Function]}

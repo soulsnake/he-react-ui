@@ -1492,12 +1492,6 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
           className="Select select has-value is-clearable is-searchable Select--single"
           style={undefined}
         >
-          <input
-            disabled={false}
-            name="date-range-picker-select-name"
-            type="hidden"
-            value="0"
-          />
           <div
             className="Select-control"
             onKeyDown={[Function]}
@@ -1945,12 +1939,6 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
           className="Select select has-value is-clearable is-searchable Select--single"
           style={undefined}
         >
-          <input
-            disabled={false}
-            name="date-range-picker-select-name"
-            type="hidden"
-            value="0"
-          />
           <div
             className="Select-control"
             onKeyDown={[Function]}
@@ -2188,12 +2176,6 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
           className="Select select has-value is-clearable is-searchable Select--single"
           style={undefined}
         >
-          <input
-            disabled={false}
-            name="date-range-picker-select-name"
-            type="hidden"
-            value="0"
-          />
           <div
             className="Select-control"
             onKeyDown={[Function]}
@@ -14200,12 +14182,6 @@ exports[`Cosmos fixtures: TextField:Default 1`] = `
   <div
     className="block"
   >
-    <label
-      className="label"
-      htmlFor="demo"
-    >
-      First Name
-    </label>
     <input
       className="input"
       disabled={false}
@@ -14216,6 +14192,12 @@ exports[`Cosmos fixtures: TextField:Default 1`] = `
       onFocus={[Function]}
       value=""
     />
+    <label
+      className="label"
+      htmlFor="demo"
+    >
+      First Name
+    </label>
   </div>
 </div>
 `;
@@ -14227,12 +14209,6 @@ exports[`Cosmos fixtures: TextField:Description 1`] = `
   <div
     className="block"
   >
-    <label
-      className="label"
-      htmlFor="demo"
-    >
-      First Name
-    </label>
     <input
       className="input"
       disabled={false}
@@ -14243,6 +14219,12 @@ exports[`Cosmos fixtures: TextField:Description 1`] = `
       onFocus={[Function]}
       value=""
     />
+    <label
+      className="label"
+      htmlFor="demo"
+    >
+      First Name
+    </label>
   </div>
   <label
     className="description"
@@ -14260,12 +14242,6 @@ exports[`Cosmos fixtures: TextField:Disabled 1`] = `
   <div
     className="block"
   >
-    <label
-      className="label"
-      htmlFor="demo"
-    >
-      First Name
-    </label>
     <input
       className="input"
       disabled={true}
@@ -14276,6 +14252,12 @@ exports[`Cosmos fixtures: TextField:Disabled 1`] = `
       onFocus={[Function]}
       value=""
     />
+    <label
+      className="label"
+      htmlFor="demo"
+    >
+      First Name
+    </label>
   </div>
 </div>
 `;
@@ -14287,12 +14269,6 @@ exports[`Cosmos fixtures: TextField:Error 1`] = `
   <div
     className="block"
   >
-    <label
-      className="label"
-      htmlFor="demo"
-    >
-      First Name
-    </label>
     <input
       className="input"
       disabled={false}
@@ -14303,6 +14279,12 @@ exports[`Cosmos fixtures: TextField:Error 1`] = `
       onFocus={[Function]}
       value=""
     />
+    <label
+      className="label"
+      htmlFor="demo"
+    >
+      First Name
+    </label>
   </div>
   <label
     className="description"
@@ -14320,12 +14302,6 @@ exports[`Cosmos fixtures: TextField:InvalidMarker 1`] = `
   <div
     className="block"
   >
-    <label
-      className="label floating"
-      htmlFor="demo"
-    >
-      First Name
-    </label>
     <input
       className="input"
       disabled={false}
@@ -14352,6 +14328,12 @@ exports[`Cosmos fixtures: TextField:InvalidMarker 1`] = `
         />
       </g>
     </svg>
+    <label
+      className="label floating"
+      htmlFor="demo"
+    >
+      First Name
+    </label>
   </div>
   <label
     className="description"
@@ -14369,12 +14351,6 @@ exports[`Cosmos fixtures: TextField:ValidMarker 1`] = `
   <div
     className="block"
   >
-    <label
-      className="label floating"
-      htmlFor="demo"
-    >
-      First Name
-    </label>
     <input
       className="input"
       disabled={false}
@@ -14401,6 +14377,12 @@ exports[`Cosmos fixtures: TextField:ValidMarker 1`] = `
         />
       </g>
     </svg>
+    <label
+      className="label floating"
+      htmlFor="demo"
+    >
+      First Name
+    </label>
   </div>
 </div>
 `;
@@ -14412,12 +14394,6 @@ exports[`Cosmos fixtures: TextField:Value 1`] = `
   <div
     className="block"
   >
-    <label
-      className="label floating"
-      htmlFor="demo"
-    >
-      First Name
-    </label>
     <input
       className="input"
       disabled={false}
@@ -14428,6 +14404,12 @@ exports[`Cosmos fixtures: TextField:Value 1`] = `
       onFocus={[Function]}
       value="Oscar"
     />
+    <label
+      className="label floating"
+      htmlFor="demo"
+    >
+      First Name
+    </label>
   </div>
 </div>
 `;

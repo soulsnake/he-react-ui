@@ -2372,7 +2372,6 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
                                   menuBuffer={0}
                                   menuRenderer={[Function]}
                                   multi={false}
-                                  name="location"
                                   noResultsText="No results found"
                                   onBlurResetsInput={true}
                                   onChange={[Function]}
