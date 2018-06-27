@@ -2,7 +2,7 @@
 
 .buttonContainer {
   display: inline-flex;
-  height: 48px;  
+  height: 48px;
   min-width: 180px;
 
   align-items: center;
@@ -12,11 +12,19 @@
     margin-left: 24px;
   }
 
+  @include breakpoint(small) {
+    width: 100%;
+    &+.buttonContainer {
+      margin-left: 0;
+      margin-top: 16px;
+    }
+  }
+
   &.small {
     height: 30px;
     min-width: 100px;
   }
-  
+
   &.large {
     min-width: 280px;
   }
@@ -26,7 +34,7 @@
   display: flex;
   flex-grow: 1;
   height: 100%;
-  flex-basis: 48px;  
+  flex-basis: 48px;
   white-space: nowrap;
   cursor: pointer;
   color: $white;
@@ -108,15 +116,6 @@
   }
 }
 
-
-
-.keyline {
-  &:not(:hover):not(:active) {
-    border: solid 1px;
-    background: none;
-  }
-}
-
 .link {
   background: none;
   border: none;
@@ -195,6 +194,13 @@
   margin-left: 12px;
   margin-right: -8px;
   width: 24px;
+}
+
+.keyline {
+  &:not(:hover):not(:active) {
+    border: solid 1px;
+    background: none;
+  }
 }
 
 .disabled {
