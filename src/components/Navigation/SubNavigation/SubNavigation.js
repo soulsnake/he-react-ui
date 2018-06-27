@@ -88,9 +88,9 @@ class SubNavigation extends Component {
       <div className={style.bar}>
         <div className={style.top}>
           {loading ? (
-            <LoadingStrip
-              className={classnames(style.heading, style.loadingHeading)}
-            />
+            <div className={style.heading}>
+              <LoadingStrip className={style.loadingHeading} />
+            </div>
           ) : (
             <h2 className={style.heading}>{item.title}</h2>
           )}
