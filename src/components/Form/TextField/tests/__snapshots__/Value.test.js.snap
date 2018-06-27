@@ -20,12 +20,6 @@ exports[`<TextField /> rendered correctly with Value fixture 1`] = `
     <div
       className="block"
     >
-      <label
-        className="label floating"
-        htmlFor="demo"
-      >
-        First Name
-      </label>
       <input
         className="input"
         disabled={false}
@@ -36,6 +30,12 @@ exports[`<TextField /> rendered correctly with Value fixture 1`] = `
         onFocus={[Function]}
         value="Oscar"
       />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
     </div>
   </div>
 </TextField>

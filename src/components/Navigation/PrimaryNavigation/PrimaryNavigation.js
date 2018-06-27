@@ -45,6 +45,7 @@ function renderRoutes(
 }
 class PrimaryNavigation extends Component {
   static propTypes = {
+    siteName: PropTypes.string,
     bottomKeys: PropTypes.arrayOf(PropTypes.string),
     logo: PropTypes.shape({
       icon: PropTypes.any.isRequired,
@@ -89,6 +90,7 @@ class PrimaryNavigation extends Component {
   };
 
   static defaultProps = {
+    siteName: 'HealthEngine',
     bottomKeys: [],
     logo: {
       icon: <Icon className={styles.logo} name="HealthEngine" inverted />,
@@ -128,7 +130,7 @@ class PrimaryNavigation extends Component {
 
   renderSliders() {
     const { closeBucket } = this;
-    const { bottomKeys, items } = this.props;
+    const { bottomKeys, items, siteName } = this.props;
     const { openKey } = this.state;
     const topItems = items.filter(item => !bottomKeys.includes(item.key));
     const bottomItems = items.filter(item => bottomKeys.includes(item.key));
@@ -140,6 +142,7 @@ class PrimaryNavigation extends Component {
             open={openKey === item.key}
             onSelect={closeBucket}
             itemKey={item.key}
+            siteName={siteName}
             {...item}
           />
         ))}
