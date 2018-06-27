@@ -157,7 +157,6 @@ class SingleSelect extends React.Component {
             placeholder={forceTitle || placeholder}
             valueRenderer={this.getDisplay}
             id={id}
-            name={name}
             required={required}
           />
           <Icon className={style.caret} name="DropDown" />
