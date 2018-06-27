@@ -5,24 +5,17 @@
   color: $grey_1;
   flex-grow: 0;
   font-family: $font-stack;
-  padding: 0px 48px 2px 48px;
+  padding: 0px 44px 2px 44px;
+  @include breakpoint(small) {
+    padding: 16px 16px 2px 16px;
+  }
   box-sizing: border-box;
   border-bottom: 1px solid $grey_5
-}
-
-.heading {
-  color: $teal_dark_60;
-  margin-bottom: 0px;
-  margin-top: 24px;
-  min-width: 180px;
-  font-weight: $regular;
-  font-size: 20px;
 }
 
 .loadingHeading {
   margin-bottom: 0px;
   margin-top: 24px;
-  height: 24px;
   width: 180px;
 }
 
@@ -33,7 +26,7 @@
 
 .items {
   display: flex;
-  margin-top: -4px;
+  margin-top: 20px;
 }
 
 .item {
@@ -63,21 +56,38 @@
 }
 
 .top {
-  display: flex;
   justify-content: space-between;
-  .controls {
-    display: flex;
-    align-items: center;
-    min-height: 76px;
+  display: flex;
+  @include breakpoint(small) {
+    display: inline-block;
+    width: 100%;
+  }
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 76px;
+  .heading {
+    color: $teal_dark_60;
+    margin: 0px;
+    font-weight: $regular;
+    font-size: 20px;
+    flex: 1 0;
+  }
     .control {
       color: $grey_2;
-      display: inline-block;
       padding: 0 28px;
+      @include breakpoint(small) {
+        padding: 8px 0px 0px 0px;
+      }
       &.selector {
         width: 270px;
       }
       &.logout {
+      float:right;
         border-left: 1px solid $grey_4;
+      @include breakpoint(small) {
+        border-left: none;
+      }
         height: 25px;
         display: flex;
         align-items: center;
@@ -94,4 +104,3 @@
       }
     }
   }
-}

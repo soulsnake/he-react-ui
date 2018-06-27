@@ -88,44 +88,44 @@ class SubNavigation extends Component {
       <div className={style.bar}>
         <div className={style.top}>
           {loading ? (
-            <LoadingStrip className={style.loadingHeading} />
+            <LoadingStrip
+              className={classnames(style.heading, style.loadingHeading)}
+            />
           ) : (
             <h2 className={style.heading}>{item.title}</h2>
           )}
-          <div className={style.controls}>
-            {(loading && (
-              <span className={style.control}>
-                <LoadingStrip className={style.loadingLocation} />
-              </span>
-            )) ||
-              (locations &&
-                ((locations.length > 1 && (
-                  <span className={classnames(style.control, style.selector)}>
-                    <SingleSelect
-                      id="locationSelector"
-                      name="location"
-                      options={locations}
-                      onChange={onLocationChange}
-                      value={locationValue}
-                      fill
-                    />
-                  </span>
-                )) ||
-                  (locations.length === 1 && (
-                    <span className={style.control}>{locations[0].label}</span>
-                  ))))}
-            <span className={classnames(style.control, style.logout)}>
-              <NavLink
-                key="logout"
-                to={logoutRoute}
-                className={style.navLink}
-                title="Logout"
-                target="_self"
-              >
-                <Icon className={style.icon} name="Logout" />Logout
-              </NavLink>
+          {(loading && (
+            <span className={style.control}>
+              <LoadingStrip className={style.loadingLocation} />
             </span>
-          </div>
+          )) ||
+            (locations &&
+              ((locations.length > 1 && (
+                <span className={classnames(style.control, style.selector)}>
+                  <SingleSelect
+                    id="locationSelector"
+                    name="location"
+                    options={locations}
+                    onChange={onLocationChange}
+                    value={locationValue}
+                    fill
+                  />
+                </span>
+              )) ||
+                (locations.length === 1 && (
+                  <span className={style.control}>{locations[0].label}</span>
+                ))))}
+          <span className={classnames(style.control, style.logout)}>
+            <NavLink
+              key="logout"
+              to={logoutRoute}
+              className={style.navLink}
+              title="Logout"
+              target="_self"
+            >
+              <Icon className={style.icon} name="Logout" />Logout
+            </NavLink>
+          </span>
         </div>
         {!loading &&
           item.items &&
