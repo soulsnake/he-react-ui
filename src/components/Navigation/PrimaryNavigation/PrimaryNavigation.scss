@@ -104,16 +104,18 @@ $slider-width: 264px;
   margin: auto;
   margin-bottom: $bucket-width - 60;
   margin-top: $bucket-width - 60;
-  opacity: 0.25;
+  opacity: 0.35;
   width: 40px;
   &:last-child {
     margin-bottom: $bucket-width - 44;
   }
   @include breakpoint(small) {
-    margin-bottom: $bucket-small-width - 60;
-    margin-top: $bucket-small-width - 60;
+    margin-bottom: $bucket-small-width - 41;
+    margin-top: $bucket-small-width - 41;
+    height: 32px;
+    width: 32px;
     &:last-child {
-      margin-bottom: $bucket-small-width - 44;
+      margin-bottom: $bucket-small-width - 22;
     }
   }
 }
