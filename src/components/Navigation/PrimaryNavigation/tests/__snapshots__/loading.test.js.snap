@@ -165,10 +165,35 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
             </div>
           </LoadingStrip>
           <LoadingStrip
-            className="loadingBucket bottom"
+            className="loadingBucket"
           >
             <div
-              className="outer loadingBucket bottom"
+              className="outer loadingBucket"
+            >
+              <div
+                className="inner"
+              />
+            </div>
+          </LoadingStrip>
+          <div
+            className="bucketFiller"
+          />
+          <LoadingStrip
+            className="loadingBucket"
+          >
+            <div
+              className="outer loadingBucket"
+            >
+              <div
+                className="inner"
+              />
+            </div>
+          </LoadingStrip>
+          <LoadingStrip
+            className="loadingBucket"
+          >
+            <div
+              className="outer loadingBucket"
             >
               <div
                 className="inner"
@@ -250,17 +275,21 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
                 <div
                   className="top"
                 >
-                  <LoadingStrip
-                    className="heading loadingHeading"
+                  <div
+                    className="heading"
                   >
-                    <div
-                      className="outer heading loadingHeading"
+                    <LoadingStrip
+                      className="loadingHeading"
                     >
                       <div
-                        className="inner"
-                      />
-                    </div>
-                  </LoadingStrip>
+                        className="outer loadingHeading"
+                      >
+                        <div
+                          className="inner"
+                        />
+                      </div>
+                    </LoadingStrip>
+                  </div>
                   <span
                     className="control"
                   >

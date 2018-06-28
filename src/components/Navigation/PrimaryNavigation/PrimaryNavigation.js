@@ -4,7 +4,6 @@
  *
  */
 
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import onClickOutside from 'react-onclickoutside';
@@ -179,9 +178,10 @@ class PrimaryNavigation extends Component {
           <Fragment>
             <LoadingStrip className={styles.loadingBucket} />
             <LoadingStrip className={styles.loadingBucket} />
-            <LoadingStrip
-              className={classnames(styles.loadingBucket, styles.bottom)}
-            />
+            <LoadingStrip className={styles.loadingBucket} />
+            <div className={styles.bucketFiller} />
+            <LoadingStrip className={styles.loadingBucket} />
+            <LoadingStrip className={styles.loadingBucket} />
           </Fragment>
         ) : (
           <Fragment>
