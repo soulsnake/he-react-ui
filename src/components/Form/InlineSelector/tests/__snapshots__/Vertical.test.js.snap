@@ -42,35 +42,35 @@ exports[`<InlineSelector /> rendered correctly with Vertical fixture 1`] = `
     >
       <div
         className="option"
-        key="0"
+        key="General Exam and Clean"
         onClick={[Function]}
       >
         General Exam and Clean
       </div>
       <div
         className="option"
-        key="1"
+        key="Toothache"
         onClick={[Function]}
       >
         Toothache
       </div>
       <div
         className="option"
-        key="2"
+        key="Loose Filling"
         onClick={[Function]}
       >
         Loose Filling
       </div>
       <div
         className="option"
-        key="3"
+        key="Loose Crown"
         onClick={[Function]}
       >
         Loose Crown
       </div>
       <div
         className="option"
-        key="4"
+        key="Teeth Whitening"
         onClick={[Function]}
       >
         Teeth Whitening

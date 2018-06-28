@@ -8,9 +8,9 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Select from 'react-select';
+import Icon from '../../Icon';
 import Label from '../Label';
 import style from './SingleSelect.scss';
-import Icon from '../../Icon';
 
 class SingleSelect extends React.Component {
   static propTypes = {
@@ -112,7 +112,6 @@ class SingleSelect extends React.Component {
       stopPropagation,
       onBeforeOpen,
       forceTitle,
-      forceOpen, // Deprecated
       fill,
       ...restProps
     } = this.props;

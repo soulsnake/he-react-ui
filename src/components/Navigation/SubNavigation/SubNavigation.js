@@ -45,7 +45,7 @@ class SubNavigation extends Component {
   renderItems(items) {
     const { location } = this.props;
 
-    return items.map((item, index) => {
+    return items.map(item => {
       if (isAbsoluteUrl(item.route)) {
         return (
           <a target="_blank" href={item.route} className={style.item}>
@@ -55,7 +55,7 @@ class SubNavigation extends Component {
       }
       return (
         <NavLink
-          key={index}
+          key={item.key}
           className={classnames(style.item, {
             [style.selected]:
               matchPath(location.pathname + location.hash, {

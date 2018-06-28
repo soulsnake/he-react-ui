@@ -4,11 +4,10 @@
  *
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import onClickOutside from 'react-onclickoutside';
-
 import Icon from '../../Icon';
 import style from './ActionSet.scss';
 
@@ -90,7 +89,7 @@ class ActionSet extends React.Component {
           />
         )}
         <div className={style.actions}>
-          {children.map((child, i) => (
+          {React.Children.map(children, (child, i) => (
             <div key={i} className={style.action} onClick={this.close}>
               {child}
             </div>

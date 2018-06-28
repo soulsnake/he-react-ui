@@ -6,33 +6,31 @@ import classnames from 'classnames';
 import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './Paragraph.scss';
 
-class Paragraph extends React.Component {
-  static propTypes = {
-    children: PropTypes.any,
-    className: PropTypes.string,
-  };
+function Paragraph(props) {
+  const { className, children, ...restProps } = props;
+  const classes = classnames(style.paragraph, {
+    [className]: className,
+  });
 
-  render() {
-    const { className, children, ...restProps } = this.props;
-    const classes = classnames(style.paragraph, {
-      [className]: className,
-    });
-
-    if (children) {
-      return (
-        <p className={classes} {...restProps}>
-          {children}
-        </p>
-      );
-    }
+  if (children) {
     return (
-      <div>
-        <LoadingStrip className={style.loading} />
-        <LoadingStrip className={style.loading} />
-        <LoadingStrip className={style.loading} />
-      </div>
+      <p className={classes} {...restProps}>
+        {children}
+      </p>
     );
   }
+  return (
+    <div>
+      <LoadingStrip className={style.loading} />
+      <LoadingStrip className={style.loading} />
+      <LoadingStrip className={style.loading} />
+    </div>
+  );
 }
+
+Paragraph.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string,
+};
 
 export default Paragraph;

@@ -1,11 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
+import PropTypes from 'prop-types';
+import React from 'react';
 import Add from './Add';
 import Alarm from './Alarm';
 import Alert from './Alert';
-import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from './Arrows';
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp } from './Arrows';
 import Bookings from './Bookings';
 import Calendar from './Calendar';
 import CaretRight from './CaretRight';
@@ -15,17 +14,18 @@ import {
   RadioChecked,
   RadioUnchecked,
 } from './CheckBoxes';
-import { ChevronLeft, ChevronRight, ChevronUp, ChevronDown } from './Chevrons';
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from './Chevrons';
 import Clock from './Clock';
 import Cross from './Cross';
 import Delete from './Delete';
 import DropDown from './DropDown';
 import Edit from './Edit';
-import Engage from './Engage';
 import Ellipsis from './Ellipsis';
+import Engage from './Engage';
 import HealthEngine from './HealthEngine';
 import Help from './Help';
 import Home from './Home';
+import style from './Icon.scss';
 import Logout from './Logout';
 import Megaphone from './Megaphone';
 import Patients from './Patients';
@@ -34,8 +34,6 @@ import Settings from './Settings';
 import Sync from './Sync';
 import Tick from './Tick';
 import View from './View';
-
-import style from './Icon.scss';
 
 function createIcon(iconProps) {
   const { width, height, color, className, name, ...restProps } = iconProps;
@@ -134,12 +132,10 @@ createIcon.propTypes = {
   className: PropTypes.string,
 };
 
-export default class Icon extends React.Component {
-  static defaultProps = {
-    name: 'Cross',
-  };
-
-  render() {
-    return createIcon(this.props);
-  }
+export default function Icon(props) {
+  return createIcon(props);
 }
+
+Icon.defaultProps = {
+  name: 'Cross',
+};

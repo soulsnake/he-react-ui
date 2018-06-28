@@ -419,7 +419,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with Default fixture 1
             ariaCurrent="true"
             className="item"
             exact={true}
-            key="0"
+            key="MAIN"
             title="Main"
             to="/parent"
           >
@@ -453,7 +453,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with Default fixture 1
             ariaCurrent="true"
             className="item"
             exact={true}
-            key="1"
+            key="SECONDARY"
             title="Secondary"
             to="/parent/secondary"
           >

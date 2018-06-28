@@ -27,7 +27,7 @@ Object.assign = require('object-assign');
 // Hack, need to look for another solution
 window.matchMedia =
   window.matchMedia ||
-  function() {
+  function matchMedia() {
     return {
       matches: false,
       addListener() {},
