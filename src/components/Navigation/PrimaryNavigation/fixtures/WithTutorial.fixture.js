@@ -227,8 +227,6 @@ export default {
               </div>
             </div>
           ),
-          top: null,
-          left: null,
         },
         steps: [
           {
@@ -238,8 +236,6 @@ export default {
                 All your menu items have moved <br />to the left hand side.
               </div>
             ),
-            top: '0px',
-            left: '200px',
             target: {
               bucket: 'HOME',
               item: null,
@@ -253,8 +249,6 @@ export default {
                 feedback here.
               </div>
             ),
-            top: '0px',
-            left: '100px',
             target: {
               bucket: 'BUCKET1',
               item: 'NORMAL',
@@ -267,8 +261,6 @@ export default {
                 Send recalls, message your <br />patients, and manage prescription<br />requests here.
               </div>
             ),
-            top: '0px',
-            left: '76px',
             target: {
               bucket: 'BUCKET2',
               item: 'FREE',
@@ -283,8 +275,6 @@ export default {
                 <br />troubleshooting.
               </div>
             ),
-            top: '0px',
-            left: '76px',
             target: {
               bucket: 'HELP',
               item: null,
@@ -298,8 +288,6 @@ export default {
                 all other <br />settings here.
               </div>
             ),
-            top: '0px',
-            left: '76px',
             target: {
               bucket: 'SETTINGS',
               item: 'ITEM1',

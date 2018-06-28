@@ -110,6 +110,10 @@ class PrimaryNavigation extends Component {
 
     this.state = {
       openKey: null,
+      currentTutorialPosition: {
+        top: 0,
+        left: 0,
+      },
     };
 
     this.closeBucket = this.closeBucket.bind(this);
@@ -189,28 +193,28 @@ class PrimaryNavigation extends Component {
             />
           </Fragment>
         ) : (
-          <Fragment>
-            {topItems.map(item => (
-              <Bucket
-                open={item.key === openKey}
-                onClickParent={() => toggleBucket(item.key)}
-                onClickRoute={closeBucket}
-                itemKey={item.key}
-                {...item}
-              />
-            ))}
-            <div className={styles.bucketFiller} onClick={closeBucket} />
-            {bottomItems.map(item => (
-              <Bucket
-                open={item.key === openKey}
-                onClickParent={() => toggleBucket(item.key)}
-                onClickRoute={closeBucket}
-                itemKey={item.key}
-                {...item}
-              />
-            ))}
-          </Fragment>
-        )}
+            <Fragment>
+              {topItems.map(item => (
+                <Bucket
+                  open={item.key === openKey}
+                  onClickParent={() => toggleBucket(item.key)}
+                  onClickRoute={closeBucket}
+                  itemKey={item.key}
+                  {...item}
+                />
+              ))}
+              <div className={styles.bucketFiller} onClick={closeBucket} />
+              {bottomItems.map(item => (
+                <Bucket
+                  open={item.key === openKey}
+                  onClickParent={() => toggleBucket(item.key)}
+                  onClickRoute={closeBucket}
+                  itemKey={item.key}
+                  {...item}
+                />
+              ))}
+            </Fragment>
+          )}
       </div>
     );
   }
@@ -248,10 +252,29 @@ class PrimaryNavigation extends Component {
 
   onChangeStep = (step) => {
     console.log(step)
+    const openBucket = step.target.bucket && step.target.item;
+    let el = step.target.item ? document.getElementById(`NAV_${step.target.item}`) : (step.target.bucket ? document.getElementById(`BUCKET_${step.target.bucket}`) : null);
+    console.log(openBucket, el);
+    this.closeBucket();
+    if (openBucket) {
+      this.toggleBucket(step.target.bucket)
+    }
+    if (el) {
+      const cords = el.getBoundingClientRect();
+      console.log(cords);
+      this.setState({
+        currentTutorialPosition: {
+          top: cords.top - cords.height * 2 / 3,
+          left: cords.right,
+        }
+      })
+    }
+
   }
-  
+
   renderTutorial = tutorialProps => {
-    return <Tutorial showing={true} onChangeStep={this.onChangeStep} tutorialStages={tutorialProps.tutorialStages}/>;
+    const { currentTutorialPosition } = this.state;
+    return <Tutorial showing={true} top={currentTutorialPosition.top} left={currentTutorialPosition.left} onChangeStep={this.onChangeStep} tutorialStages={tutorialProps.tutorialStages} />;
   };
 
   render() {

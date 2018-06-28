@@ -75,6 +75,7 @@ class List extends Component {
         className={classnames(styles.item, { [styles.current]: current })}
         activeClassName={styles.current}
         key={item.key}
+        id={`NAV_${item.key}`}
         to={item.route}
         onClick={onSelect}
       >

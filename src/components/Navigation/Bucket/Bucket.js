@@ -72,6 +72,7 @@ class Bucket extends Component {
     );
 
     const props = {
+      id: `BUCKET_${itemKey}`,
       key: itemKey,
       className: classnames(styles.bucket, {
         [styles.open]: open,

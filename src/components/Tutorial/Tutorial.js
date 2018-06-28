@@ -22,11 +22,15 @@ class Tutorial extends React.Component {
     tutorialStages: PropTypes.object,
     onClose: PropTypes.func,
     onChangeStep: PropTypes.func,
+    left: PropTypes.string,
+    top: PropTypes.string,
   };
 
   static defaultProps = {
     showing: false,
     onChangeStep: e => null,
+    top: 0,
+    left: 0,
   };
 
   state = {
@@ -103,7 +107,7 @@ class Tutorial extends React.Component {
     </div>
   );
   renderContent = () => {
-    const { className, tutorialStages, style } = this.props;
+    const { className, tutorialStages, style, top, left } = this.props;
     const { currentStep, currentStage } = this.state;
     const popupClasses = classnames(styles.popup, className, {
       [styles.popupCentered]: currentStage === 'intro',
@@ -119,15 +123,15 @@ class Tutorial extends React.Component {
         position: 'absolute',
         width: '100%',
         height: '100%',
-        top: steps[currentStep].top,
-        left: steps[currentStep].left,
+        top: top,
+        left: left,
         right: 'auto',
       };
       rightOverlay = {
-        left: steps[currentStep].left,
+        left: left,
       };
       leftOverlay = {
-        width: steps[currentStep].left,
+        width: left,
       };
     } else {
       wrapperStyle = {
