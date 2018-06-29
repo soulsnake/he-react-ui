@@ -123,6 +123,7 @@ class SingleSelect extends React.Component {
         className={classnames(style.outer, {
           [className]: className,
           [style.fill]: fill,
+          [style.inline]: inline,
         })}
       >
         {label && (
@@ -136,7 +137,6 @@ class SingleSelect extends React.Component {
             [style.disabled]: disabled,
             [style.error]: error,
             [style.fill]: fill,
-            [style.inline]: inline,
           })}
           {...restProps}
         >

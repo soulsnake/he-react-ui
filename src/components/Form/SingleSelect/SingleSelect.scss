@@ -192,4 +192,6 @@
   margin-bottom: 0;
 }
 
-// TODO inline style
+.inline {
+  @include inline-block;
+}

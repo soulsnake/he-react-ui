@@ -76,12 +76,13 @@ exports[`<FormSection /> rendered correctly with Loading fixture 1`] = `
       className="right"
     >
       <LoadingSpinner
+        className="spinner"
         color="teal"
         fidget={false}
         ringColor="grey"
       >
         <div
-          className="outer teal"
+          className="outer teal spinner"
         >
           <svg
             className="spinner"
