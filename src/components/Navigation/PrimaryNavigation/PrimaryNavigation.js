@@ -137,29 +137,31 @@ class PrimaryNavigation extends Component {
       this.toggleBucket(step.target.bucket);
     }
     if (el) {
-      this.animateTutorial(step, el);
+      this.setState({
+        currentTutorialPosition: {
+          ...this.state.currentTutorialPosition,
+          opacity: 0,
+        },
+      });
+
+      setTimeout(() => {
+        this.animateTutorial(step, el);
+      }, 100);
     }
   };
 
-  animateTutorial = (step, el, prevLeft = 0) => {
+  animateTutorial = (step, el) => {
     const cords = el.getBoundingClientRect();
-    const slider = document.getElementById('SLIDER_CONTAINER');
-    const sliderCords = slider ? slider.getBoundingClientRect() : cords;
-    const newLeft = step.target.item ? sliderCords.right : cords.right;
+    const newLeft = step.target.item ? 340 : cords.right;
+    console.log();
     this.setState({
       currentTutorialPosition: {
         top: cords.top + cords.height / 2,
         reversed: cords.top > window.innerHeight / 2,
         left: newLeft,
+        opacity: 1,
       },
     });
-    if (prevLeft === newLeft) {
-      return true;
-    }
-    setTimeout(() => {
-      this.animateTutorial(step, el, newLeft);
-    }, 10);
-    return true;
   };
 
   closeBucket() {
@@ -231,28 +233,28 @@ class PrimaryNavigation extends Component {
             />
           </Fragment>
         ) : (
-            <Fragment>
-              {topItems.map(item => (
-                <Bucket
-                  open={item.key === openKey}
-                  onClickParent={() => toggleBucket(item.key)}
-                  onClickRoute={closeBucket}
-                  itemKey={item.key}
-                  {...item}
-                />
-              ))}
-              <div className={styles.bucketFiller} onClick={closeBucket} />
-              {bottomItems.map(item => (
-                <Bucket
-                  open={item.key === openKey}
-                  onClickParent={() => toggleBucket(item.key)}
-                  onClickRoute={closeBucket}
-                  itemKey={item.key}
-                  {...item}
-                />
-              ))}
-            </Fragment>
-          )}
+          <Fragment>
+            {topItems.map(item => (
+              <Bucket
+                open={item.key === openKey}
+                onClickParent={() => toggleBucket(item.key)}
+                onClickRoute={closeBucket}
+                itemKey={item.key}
+                {...item}
+              />
+            ))}
+            <div className={styles.bucketFiller} onClick={closeBucket} />
+            {bottomItems.map(item => (
+              <Bucket
+                open={item.key === openKey}
+                onClickParent={() => toggleBucket(item.key)}
+                onClickRoute={closeBucket}
+                itemKey={item.key}
+                {...item}
+              />
+            ))}
+          </Fragment>
+        )}
       </div>
     );
   }
@@ -296,6 +298,7 @@ class PrimaryNavigation extends Component {
         top={currentTutorialPosition.top}
         left={currentTutorialPosition.left}
         reversed={currentTutorialPosition.reversed}
+        opacity={currentTutorialPosition.opacity}
         onChangeStep={this.onChangeStep}
         tutorialStages={tutorialProps.tutorialStages}
       />

@@ -22,8 +22,9 @@ class Tutorial extends React.Component {
     tutorialStages: PropTypes.object,
     onClose: PropTypes.func,
     onChangeStep: PropTypes.func,
-    left: PropTypes.string,
-    top: PropTypes.string,
+    left: PropTypes.number,
+    top: PropTypes.number,
+    opacity: PropTypes.number,
     reversed: PropTypes.bool,
   };
 
@@ -37,8 +38,9 @@ class Tutorial extends React.Component {
 
   state = {
     showing: this.props.showing,
-    currentStep: -1,
+    currentStep: 0,
     currentStage: 'intro',
+    loadingStep: false,
   };
 
   handleClose = () => {
@@ -56,10 +58,20 @@ class Tutorial extends React.Component {
   };
 
   nextStep = () => {
+    this.setState(
+      {
+        loadingStep: true,
+      },
+      this.doNextStep,
+    );
+  };
+
+  doNextStep = () => {
     const { tutorialStages } = this.props;
 
     this.setState({
       currentStep: this.state.currentStep + 1,
+      loadingStep: false,
     });
     this.props.onChangeStep(tutorialStages.steps[this.state.currentStep + 1]);
   };
@@ -102,7 +114,7 @@ class Tutorial extends React.Component {
           <div className={styles.footerCell}>
             <Button className={styles.rightElement} link>
               Got it!
-            </Button>
+              </Button>
           </div>
         </div>
       )}
@@ -116,8 +128,9 @@ class Tutorial extends React.Component {
       top,
       reversed,
       left,
+      opacity,
     } = this.props;
-    const { currentStep, currentStage } = this.state;
+    const { currentStep, currentStage, loadingStep } = this.state;
     const popupClasses = classnames(styles.popup, className, {
       [styles.popupCentered]: currentStage === 'intro',
     });
@@ -143,7 +156,8 @@ class Tutorial extends React.Component {
         top: newTop,
         left,
         right: 'auto',
-        transition: 'all 0.2s',
+        opacity,
+        transition: 'all 0.4s',
       };
       rightOverlay = {
         left,
@@ -156,7 +170,8 @@ class Tutorial extends React.Component {
         position: 'absolute',
         width: '100%',
         height: '100%',
-        transition: 'all 0.2s',
+        opacity,
+        transition: 'all 0.4s',
       };
     }
 
@@ -172,7 +187,12 @@ class Tutorial extends React.Component {
           style={rightOverlay}
           onClick={this.handleClose}
         />
-        <div style={wrapperStyle}>
+        <div
+          style={wrapperStyle}
+          className={classnames(styles.wrapper, {
+            [styles.showStep]: !loadingStep,
+          })}
+        >
           <div className={popupClasses} id="tutorialPopup" style={style}>
             <Icon
               className={styles.close}

@@ -33,7 +33,13 @@
   width: 0;
   @include transition(opacity 0.2s);
 }
-
+.wrapper{
+  opacity: 0;
+  @include transition(opacity 1s);
+}
+.showStep{
+  opacity: 1;
+}
 .popup {
   background-color: $white;
   border-radius: 4px;
