@@ -26,7 +26,7 @@
     "classnames": "^2.2.5",
     "coveralls": "^3.0.0",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-he": "^0.0.1",
+    "eslint-config-he": "^0.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-flowtype": "^2.48.0",
     "eslint-plugin-import-order-autofix": "^0.8.3",

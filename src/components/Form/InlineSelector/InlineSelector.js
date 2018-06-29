@@ -4,9 +4,9 @@
  *
  */
 
-import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Label from '../Label';
 import style from './InlineSelector.scss';
 
@@ -17,7 +17,12 @@ class InlineSelector extends React.Component {
     className: PropTypes.string,
     label: PropTypes.string,
     vertical: PropTypes.bool,
-    options: PropTypes.array,
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.any,
+        label: PropTypes.string,
+      }),
+    ),
     onChange: PropTypes.func,
     value: PropTypes.string,
   };
@@ -63,9 +68,9 @@ class InlineSelector extends React.Component {
           </Label>
         )}
         <div className={style.options}>
-          {options.map((option, index) => (
+          {options.map(option => (
             <div
-              key={index}
+              key={option.label}
               className={classnames(style.option, {
                 [style.selected]: option.value === value,
               })}

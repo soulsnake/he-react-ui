@@ -8,21 +8,19 @@ import PropTypes from 'prop-types';
 import Icon from '../../Icon';
 import styles from './BenefitItem.scss';
 
-class BenefitItem extends React.Component {
-  static propTypes = {
-    children: PropTypes.any.isRequired,
-  };
+function BenefitItem(props) {
+  const { children } = props;
 
-  render() {
-    const { children } = this.props;
-
-    return (
-      <div className={styles.outer}>
-        <Icon className={styles.tick} name="Tick" />
-        <div className={styles.content}>{children}</div>
-      </div>
-    );
-  }
+  return (
+    <div className={styles.outer}>
+      <Icon className={styles.tick} name="Tick" />
+      <div className={styles.content}>{children}</div>
+    </div>
+  );
 }
+
+BenefitItem.propTypes = {
+  children: PropTypes.any.isRequired,
+};
 
 export default BenefitItem;

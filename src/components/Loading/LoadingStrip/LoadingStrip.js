@@ -1,25 +1,23 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import style from './LoadingStrip.scss';
 
-class LoadingStrip extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-  };
+function LoadingStrip(props) {
+  const { className } = props;
+  const classes = classnames(style.outer, {
+    [className]: className,
+  });
 
-  render() {
-    const { className } = this.props;
-    const classes = classnames(style.outer, {
-      [className]: className,
-    });
-
-    return (
-      <div className={classes}>
-        <div className={style.inner} />
-      </div>
-    );
-  }
+  return (
+    <div className={classes}>
+      <div className={style.inner} />
+    </div>
+  );
 }
+
+LoadingStrip.propTypes = {
+  className: PropTypes.string,
+};
 
 export default LoadingStrip;

@@ -1,23 +1,21 @@
 // Vendor
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import style from './Content.scss';
+import React from 'react';
 import LoadingSpinner from '../../Loading/LoadingSpinner';
+import style from './Content.scss';
 
-class Content extends Component {
-  static propTypes = {
-    children: PropTypes.any,
-  };
+function Content(props) {
+  const { children } = props;
 
-  render() {
-    const { children } = this.props;
-
-    return children ? (
-      <div className={style.content}>{children}</div>
-    ) : (
-      <LoadingSpinner />
-    );
-  }
+  return children ? (
+    <div className={style.content}>{children}</div>
+  ) : (
+    <LoadingSpinner />
+  );
 }
+
+Content.propTypes = {
+  children: PropTypes.any,
+};
 
 export default Content;

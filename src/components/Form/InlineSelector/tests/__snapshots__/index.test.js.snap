@@ -38,28 +38,28 @@ exports[`<InlineSelector /> rendered correctly with fixture 1`] = `
     >
       <div
         className="option"
-        key="0"
+        key="Any"
         onClick={[Function]}
       >
         Any
       </div>
       <div
         className="option"
-        key="1"
+        key="AM"
         onClick={[Function]}
       >
         AM
       </div>
       <div
         className="option"
-        key="2"
+        key="PM"
         onClick={[Function]}
       >
         PM
       </div>
       <div
         className="option"
-        key="3"
+        key="After Hours"
         onClick={[Function]}
       >
         After Hours

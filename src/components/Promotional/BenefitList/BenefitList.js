@@ -7,16 +7,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './BenefitList.scss';
 
-class BenefitList extends React.Component {
-  static propTypes = {
-    children: PropTypes.any.isRequired,
-  };
+function BenefitList(props) {
+  const { children } = props;
 
-  render() {
-    const { children } = this.props;
-
-    return <div className={styles.outer}>{children}</div>;
-  }
+  return <div className={styles.outer}>{children}</div>;
 }
+
+BenefitList.propTypes = {
+  children: PropTypes.any.isRequired,
+};
 
 export default BenefitList;

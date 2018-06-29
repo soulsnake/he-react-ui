@@ -186,7 +186,6 @@ export default class DateRangePicker extends React.Component {
           onBeforeOpen={this.handleSelectOpen}
           onClose={this.handleSelectClose}
           options={this.getSelectOptions()}
-          forceOpen={!!focusedInput}
           fill={fill}
         />
 

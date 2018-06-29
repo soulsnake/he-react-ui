@@ -39,7 +39,7 @@ exports[`<OnClickOutside(ActionSet) /> rendered correctly with Expanded fixture 
       >
         <div
           className="action"
-          key="0"
+          key="0/.0"
           onClick={[Function]}
         >
           <ActionIcon
@@ -84,7 +84,7 @@ exports[`<OnClickOutside(ActionSet) /> rendered correctly with Expanded fixture 
         </div>
         <div
           className="action"
-          key="1"
+          key="1/.1"
           onClick={[Function]}
         >
           <ActionIcon
@@ -129,7 +129,7 @@ exports[`<OnClickOutside(ActionSet) /> rendered correctly with Expanded fixture 
         </div>
         <div
           className="action"
-          key="2"
+          key="2/.2"
           onClick={[Function]}
         >
           <ActionIcon

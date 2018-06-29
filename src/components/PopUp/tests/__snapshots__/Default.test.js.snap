@@ -69,7 +69,7 @@ exports[`<PopUp /> rendered correctly with Default fixture 1`] = `
           <p
             className="paragraph"
           >
-            I can't wait to hear more about all of it later.
+            I cannot wait to hear more about all of it later.
           </p>
         </Paragraph>
         <Button

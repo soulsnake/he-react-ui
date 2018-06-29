@@ -50,7 +50,7 @@ exports[`<TabView /> rendered correctly with Default fixture 1`] = `
             ariaCurrent="true"
             className="tab"
             exact={true}
-            key="0"
+            key="/"
             title="Root"
             to="/"
           >
@@ -85,7 +85,7 @@ exports[`<TabView /> rendered correctly with Default fixture 1`] = `
             activeClassName="selected"
             ariaCurrent="true"
             className="tab"
-            key="1"
+            key="/somewhere"
             title="Somewhere"
             to="/somewhere"
           >
@@ -117,7 +117,7 @@ exports[`<TabView /> rendered correctly with Default fixture 1`] = `
             activeClassName="selected"
             ariaCurrent="true"
             className="tab"
-            key="2"
+            key="/elsewhere"
             title="Elsewhere"
             to="/elsewhere"
           >

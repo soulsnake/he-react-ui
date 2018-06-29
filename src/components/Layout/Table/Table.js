@@ -3,10 +3,9 @@
  */
 
 // Vendor
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import Icon from '../../Icon';
 import { LoadingSpinner, LoadingStrip } from '../../Loading';
 import style from './Table.scss';
@@ -86,14 +85,14 @@ class Table extends Component {
       return sortedBody.map((row, rowIndex) => (
         <div
           className={classnames(style.row, { [style.inactive]: row.inactive })}
-          key={rowIndex}
+          key={rowIndex} // eslint-disable-line react/no-array-index-key
         >
           {row.content.map((cell, cellIndex) => (
             <div
               className={classnames(style.cell, {
                 [style[columns[cellIndex].width]]: columns[cellIndex].width,
               })}
-              key={cellIndex}
+              key={cellIndex} // eslint-disable-line react/no-array-index-key
             >
               {cell}
             </div>
@@ -122,7 +121,7 @@ class Table extends Component {
             column.sortable &&
             sortBody(index, column.sortFunction || defaultSort)
           }
-          key={index}
+          key={column.title}
         >
           <span className={style.title}>{column.title}</span>
           {sortColumn === index && (
@@ -131,9 +130,9 @@ class Table extends Component {
         </div>
       ));
     }
-    return ['narrow', 'wide', 'extraNarrow'].map((width, index) => (
+    return ['narrow', 'wide', 'extraNarrow'].map(width => (
       <div
-        key={index}
+        key={width}
         className={classnames(style.heading, { [style[width]]: width })}
       >
         <LoadingStrip />

@@ -3746,10 +3746,10 @@ exports[`Cosmos fixtures: Highlight:Image 1`] = `
           . This is a paragraph of text made to emulate a more detailed description of the item being promoted.
         </p>
         <p>
-          It's just so versatile!
+          It is just so versatile!
         </p>
         <p>
-          What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It's really good if you take the time to check it out.
+          What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
         </p>
       </div>
     </div>
@@ -3792,10 +3792,10 @@ exports[`Cosmos fixtures: Highlight:YouTube 1`] = `
           . This is a paragraph of text made to emulate a more detailed description of the item being promoted.
         </p>
         <p>
-          It's just so versatile!
+          It is just so versatile!
         </p>
         <p>
-          What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It's really good if you take the time to check it out.
+          What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
         </p>
       </div>
     </div>
@@ -9805,7 +9805,7 @@ exports[`Cosmos fixtures: PopUp:Default 1`] = `
       <p
         className="paragraph"
       >
-        I can't wait to hear more about all of it later.
+        I cannot wait to hear more about all of it later.
       </p>
       <div
         className="buttonContainer"
@@ -9895,12 +9895,12 @@ exports[`Cosmos fixtures: PopUp:Modal 1`] = `
       <p
         className="paragraph"
       >
-        This modal popup can't be closed without a parent interfering.
+        This modal popup cannot be closed without a parent interfering.
       </p>
       <p
         className="paragraph"
       >
-        If only the 'showing' property were set to false.
+        If only the \`showing\` property were set to false.
       </p>
     </div>
   </div>
@@ -10621,10 +10621,10 @@ exports[`Cosmos fixtures: PromoDemo:PromoDemo 1`] = `
             . This is a paragraph of text made to emulate a more detailed description of the item being promoted.
           </p>
           <p>
-            It's just so versatile!
+            It is just so versatile!
           </p>
           <p>
-            What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It's really good if you take the time to check it out.
+            What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
           </p>
         </div>
       </div>
@@ -10843,7 +10843,7 @@ exports[`Cosmos fixtures: PromoDemo:PromoDemo 1`] = `
         Works well with
       </h2>
       <p>
-        What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It's really good if you take the time to check it out.
+        What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
       </p>
       <div
         className="outer"
@@ -11080,7 +11080,7 @@ exports[`Cosmos fixtures: PromoDemo:PromoDemo 1`] = `
         </div>
       </div>
       <p>
-        And there's even more great stuff about this product.
+        And there is even more great stuff about this product.
       </p>
       <div
         className="buttonContainer large"
@@ -12505,10 +12505,10 @@ exports[`Cosmos fixtures: Section:Default 1`] = `
       What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted.
     </p>
     <p>
-      It's just so versatile!
+      It is just so versatile!
     </p>
     <p>
-      What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It's really good if you take the time to check it out.
+      What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
     </p>
   </div>
 </div>
@@ -12528,10 +12528,10 @@ exports[`Cosmos fixtures: Section:White 1`] = `
       What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted.
     </p>
     <p>
-      It's just so versatile!
+      It is just so versatile!
     </p>
     <p>
-      What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It's really good if you take the time to check it out.
+      What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
     </p>
   </div>
 </div>

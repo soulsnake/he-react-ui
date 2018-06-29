@@ -3,10 +3,9 @@
  */
 
 // Vendor
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
 import Heading from '../Heading';
 import style from './TabView.scss';
 
@@ -24,9 +23,9 @@ class TabView extends Component {
   };
 
   renderTabs = tabs =>
-    tabs.map((tab, index) => (
+    tabs.map(tab => (
       <NavLink
-        key={index}
+        key={tab.route}
         className={style.tab}
         activeClassName={style.selected}
         to={tab.route}

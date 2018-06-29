@@ -3,29 +3,26 @@
  */
 
 // Vendor
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import style from './EvenGrid.scss';
 
-class EvenGrid extends Component {
-  static propTypes = {
-    children: PropTypes.array,
-  };
+function EvenGrid(props) {
+  const { children, ...restProps } = props;
 
-  render() {
-    const { children, ...restProps } = this.props;
-
-    return (
-      <div className={style.outer} {...restProps}>
-        {children.map((child, index) => (
-          <div key={index} className={style.child}>
-            {child}
-          </div>
-        ))}
-      </div>
-    );
-  }
+  return (
+    <div className={style.outer} {...restProps}>
+      {React.Children.map(children, (child, index) => (
+        <div key={index} className={style.child}>
+          {child}
+        </div>
+      ))}
+    </div>
+  );
 }
+
+EvenGrid.propTypes = {
+  children: PropTypes.array,
+};
 
 export default EvenGrid;
