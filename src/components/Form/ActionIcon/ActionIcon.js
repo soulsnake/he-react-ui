@@ -1,16 +1,18 @@
+// @flow
+
 /**
  *
  * ActionIcon
  *
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Icon from '../../Icon';
 import style from './ActionIcon.scss';
 
-class ActionIcon extends React.Component {
+class ActionIcon extends React.Component<*> {
   static propTypes = {
     color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
     disabled: PropTypes.bool,
@@ -27,7 +29,7 @@ class ActionIcon extends React.Component {
     onClick: () => null,
   };
 
-  handleClick = event => {
+  handleClick = (event: SyntheticEvent<*>) => {
     if (!this.props.disabled) {
       this.props.onClick(event);
     }
