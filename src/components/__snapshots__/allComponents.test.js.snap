@@ -2005,36 +2005,120 @@ exports[`Cosmos fixtures: DateRangePicker:keepOpenOnDateSelect 1`] = `
   >
     <div
       className="outer"
-      onClose={[Function]}
-      options={
-        Array [
-          Object {
-            "label": "Last month",
-            "value": "0",
-          },
-          Object {
-            "label": "Last 3 months",
-            "value": "1",
-          },
-          Object {
-            "label": "Last 12 months",
-            "value": "2",
-          },
-          Object {
-            "label": "Custom",
-            "value": "CUSTOM",
-          },
-        ]
-      }
     >
       <div
-        className="select"
-        id="date-range-picker-select-id"
-        onClick={[Function]}
+        className="container"
+        onClose={[Function]}
       >
-        <span>
-          Last month
-        </span>
+        <div
+          className="Select select has-value is-clearable is-searchable Select--single"
+          style={undefined}
+        >
+          <div
+            className="Select-control"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={undefined}
+          >
+            <span
+              className="Select-multi-value-wrapper"
+              id="react-select-5--value"
+            >
+              <div
+                className="Select-value"
+                style={undefined}
+                title={undefined}
+              >
+                <span
+                  aria-selected="true"
+                  className="Select-value-label"
+                  id="react-select-5--value-item"
+                  role="option"
+                >
+                  Last month
+                </span>
+              </div>
+              <div
+                className="Select-input"
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant="react-select-5--value"
+                  aria-describedby={undefined}
+                  aria-expanded="false"
+                  aria-haspopup="false"
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns=""
+                  className={undefined}
+                  id="date-range-picker-select-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  role="combobox"
+                  style={
+                    Object {
+                      "boxSizing": "content-box",
+                      "width": "5px",
+                    }
+                  }
+                  tabIndex={undefined}
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </span>
+            <span
+              aria-label="Clear value"
+              className="Select-clear-zone"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              title="Clear value"
+            >
+              <span
+                className="Select-clear"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&times;",
+                  }
+                }
+              />
+            </span>
+            <span
+              className="Select-arrow-zone"
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Select-arrow"
+                onMouseDown={[Function]}
+              />
+            </span>
+          </div>
+        </div>
         <svg
           className="icon caret"
           height={undefined}
@@ -2052,35 +2136,6 @@ exports[`Cosmos fixtures: DateRangePicker:keepOpenOnDateSelect 1`] = `
           </g>
         </svg>
       </div>
-      <ul
-        className="options"
-      >
-        <li
-          className="option selected"
-          onClick={[Function]}
-        >
-          Last month
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 3 months
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Last 12 months
-        </li>
-        <li
-          className="option"
-          onClick={[Function]}
-        >
-          Custom
-        </li>
-      </ul>
-      
     </div>
     <div
       className="inner"
@@ -2207,7 +2262,7 @@ exports[`Cosmos fixtures: DateRangePicker:noInitialValue 1`] = `
           >
             <span
               className="Select-multi-value-wrapper"
-              id="react-select-5--value"
+              id="react-select-6--value"
             >
               <div
                 className="Select-placeholder"
@@ -2223,7 +2278,7 @@ exports[`Cosmos fixtures: DateRangePicker:noInitialValue 1`] = `
                 }
               >
                 <input
-                  aria-activedescendant="react-select-5--value"
+                  aria-activedescendant="react-select-6--value"
                   aria-describedby={undefined}
                   aria-expanded="false"
                   aria-haspopup="false"
@@ -2417,7 +2472,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
           >
             <span
               className="Select-multi-value-wrapper"
-              id="react-select-6--value"
+              id="react-select-7--value"
             >
               <div
                 className="Select-value"
@@ -2427,7 +2482,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
                 <span
                   aria-selected="true"
                   className="Select-value-label"
-                  id="react-select-6--value-item"
+                  id="react-select-7--value-item"
                   role="option"
                 >
                   Last month
@@ -2442,7 +2497,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
                 }
               >
                 <input
-                  aria-activedescendant="react-select-6--value"
+                  aria-activedescendant="react-select-7--value"
                   aria-describedby={undefined}
                   aria-expanded="false"
                   aria-haspopup="false"
@@ -2654,7 +2709,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
           >
             <span
               className="Select-multi-value-wrapper"
-              id="react-select-7--value"
+              id="react-select-8--value"
             >
               <div
                 className="Select-value"
@@ -2664,7 +2719,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
                 <span
                   aria-selected="true"
                   className="Select-value-label"
-                  id="react-select-7--value-item"
+                  id="react-select-8--value-item"
                   role="option"
                 >
                   Last month
@@ -2679,7 +2734,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
                 }
               >
                 <input
-                  aria-activedescendant="react-select-7--value"
+                  aria-activedescendant="react-select-8--value"
                   aria-describedby={undefined}
                   aria-expanded="false"
                   aria-haspopup="false"
@@ -5870,7 +5925,7 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
                 >
                   <span
                     className="Select-multi-value-wrapper"
-                    id="react-select-19--value"
+                    id="react-select-20--value"
                   >
                     <div
                       className="Select-placeholder"
@@ -5886,7 +5941,7 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Children 1`] = `
                       }
                     >
                       <input
-                        aria-activedescendant="react-select-19--value"
+                        aria-activedescendant="react-select-20--value"
                         aria-describedby={undefined}
                         aria-expanded="false"
                         aria-haspopup="false"
@@ -6483,7 +6538,7 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
                 >
                   <span
                     className="Select-multi-value-wrapper"
-                    id="react-select-20--value"
+                    id="react-select-21--value"
                   >
                     <div
                       className="Select-placeholder"
@@ -6499,7 +6554,7 @@ exports[`Cosmos fixtures: OnClickOutside(PrimaryNavigation):Default 1`] = `
                       }
                     >
                       <input
-                        aria-activedescendant="react-select-20--value"
+                        aria-activedescendant="react-select-21--value"
                         aria-describedby={undefined}
                         aria-expanded="false"
                         aria-haspopup="false"
@@ -11399,7 +11454,7 @@ exports[`Cosmos fixtures: Radio:ChildOption 1`] = `
               >
                 <span
                   className="Select-multi-value-wrapper"
-                  id="react-select-8--value"
+                  id="react-select-9--value"
                 >
                   <div
                     className="Select-placeholder"
@@ -11415,7 +11470,7 @@ exports[`Cosmos fixtures: Radio:ChildOption 1`] = `
                     }
                   >
                     <input
-                      aria-activedescendant="react-select-8--value"
+                      aria-activedescendant="react-select-9--value"
                       aria-describedby={undefined}
                       aria-expanded="false"
                       aria-haspopup="false"
@@ -11740,7 +11795,7 @@ exports[`Cosmos fixtures: Radio:ChildOptionShow 1`] = `
               >
                 <span
                   className="Select-multi-value-wrapper"
-                  id="react-select-9--value"
+                  id="react-select-10--value"
                 >
                   <div
                     className="Select-placeholder"
@@ -11756,7 +11811,7 @@ exports[`Cosmos fixtures: Radio:ChildOptionShow 1`] = `
                     }
                   >
                     <input
-                      aria-activedescendant="react-select-9--value"
+                      aria-activedescendant="react-select-10--value"
                       aria-describedby={undefined}
                       aria-expanded="false"
                       aria-haspopup="false"
@@ -12926,7 +12981,7 @@ exports[`Cosmos fixtures: SingleSelect:Default 1`] = `
       >
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-10--value"
+          id="react-select-11--value"
         >
           <div
             className="Select-placeholder"
@@ -12942,7 +12997,7 @@ exports[`Cosmos fixtures: SingleSelect:Default 1`] = `
             }
           >
             <input
-              aria-activedescendant="react-select-10--value"
+              aria-activedescendant="react-select-11--value"
               aria-describedby={undefined}
               aria-expanded="false"
               aria-haspopup="false"
@@ -13036,7 +13091,7 @@ exports[`Cosmos fixtures: SingleSelect:disabled 1`] = `
       >
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-11--value"
+          id="react-select-12--value"
         >
           <div
             className="Select-placeholder"
@@ -13044,7 +13099,7 @@ exports[`Cosmos fixtures: SingleSelect:disabled 1`] = `
             Select from the list
           </div>
           <div
-            aria-activedescendant="react-select-11--value"
+            aria-activedescendant="react-select-12--value"
             aria-disabled="true"
             aria-expanded={false}
             aria-label={undefined}
@@ -13118,7 +13173,7 @@ exports[`Cosmos fixtures: SingleSelect:error 1`] = `
       >
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-12--value"
+          id="react-select-13--value"
         >
           <div
             className="Select-placeholder"
@@ -13134,7 +13189,7 @@ exports[`Cosmos fixtures: SingleSelect:error 1`] = `
             }
           >
             <input
-              aria-activedescendant="react-select-12--value"
+              aria-activedescendant="react-select-13--value"
               aria-describedby={undefined}
               aria-expanded="false"
               aria-haspopup="false"
@@ -13228,7 +13283,7 @@ exports[`Cosmos fixtures: SingleSelect:fill 1`] = `
       >
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-13--value"
+          id="react-select-14--value"
         >
           <div
             className="Select-placeholder"
@@ -13244,7 +13299,7 @@ exports[`Cosmos fixtures: SingleSelect:fill 1`] = `
             }
           >
             <input
-              aria-activedescendant="react-select-13--value"
+              aria-activedescendant="react-select-14--value"
               aria-describedby={undefined}
               aria-expanded="false"
               aria-haspopup="false"
@@ -13349,7 +13404,7 @@ exports[`Cosmos fixtures: SingleSelect:forceTitle 1`] = `
         >
           <span
             className="Select-multi-value-wrapper"
-            id="react-select-14--value"
+            id="react-select-15--value"
           >
             <div
               className="Select-placeholder"
@@ -13365,7 +13420,7 @@ exports[`Cosmos fixtures: SingleSelect:forceTitle 1`] = `
               }
             >
               <input
-                aria-activedescendant="react-select-14--value"
+                aria-activedescendant="react-select-15--value"
                 aria-describedby={undefined}
                 aria-expanded="false"
                 aria-haspopup="false"
@@ -13470,7 +13525,7 @@ exports[`Cosmos fixtures: SingleSelect:label 1`] = `
       >
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-15--value"
+          id="react-select-16--value"
         >
           <div
             className="Select-placeholder"
@@ -13486,7 +13541,7 @@ exports[`Cosmos fixtures: SingleSelect:label 1`] = `
             }
           >
             <input
-              aria-activedescendant="react-select-15--value"
+              aria-activedescendant="react-select-16--value"
               aria-describedby={undefined}
               aria-expanded="false"
               aria-haspopup="false"
@@ -13580,7 +13635,7 @@ exports[`Cosmos fixtures: SingleSelect:open 1`] = `
       >
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-16--value"
+          id="react-select-17--value"
         >
           <div
             className="Select-placeholder"
@@ -13596,7 +13651,7 @@ exports[`Cosmos fixtures: SingleSelect:open 1`] = `
             }
           >
             <input
-              aria-activedescendant="react-select-16--value"
+              aria-activedescendant="react-select-17--value"
               aria-describedby={undefined}
               aria-expanded="false"
               aria-haspopup="false"
@@ -13701,7 +13756,7 @@ exports[`Cosmos fixtures: SingleSelect:placeholder 1`] = `
         >
           <span
             className="Select-multi-value-wrapper"
-            id="react-select-17--value"
+            id="react-select-18--value"
           >
             <div
               className="Select-placeholder"
@@ -13717,7 +13772,7 @@ exports[`Cosmos fixtures: SingleSelect:placeholder 1`] = `
               }
             >
               <input
-                aria-activedescendant="react-select-17--value"
+                aria-activedescendant="react-select-18--value"
                 aria-describedby={undefined}
                 aria-expanded="false"
                 aria-haspopup="false"
@@ -13812,7 +13867,7 @@ exports[`Cosmos fixtures: SingleSelect:selected 1`] = `
       >
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-18--value"
+          id="react-select-19--value"
         >
           <div
             className="Select-placeholder"
@@ -13828,7 +13883,7 @@ exports[`Cosmos fixtures: SingleSelect:selected 1`] = `
             }
           >
             <input
-              aria-activedescendant="react-select-18--value"
+              aria-activedescendant="react-select-19--value"
               aria-describedby={undefined}
               aria-expanded="false"
               aria-haspopup="false"
@@ -15991,7 +16046,7 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):Default 1`] = `
             >
               <span
                 className="Select-multi-value-wrapper"
-                id="react-select-21--value"
+                id="react-select-22--value"
               >
                 <div
                   className="Select-placeholder"
@@ -16007,7 +16062,7 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):Default 1`] = `
                   }
                 >
                   <input
-                    aria-activedescendant="react-select-21--value"
+                    aria-activedescendant="react-select-22--value"
                     aria-describedby={undefined}
                     aria-expanded="false"
                     aria-haspopup="false"
@@ -16174,7 +16229,7 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):MultiPracticeNoChildren 1`] 
             >
               <span
                 className="Select-multi-value-wrapper"
-                id="react-select-22--value"
+                id="react-select-23--value"
               >
                 <div
                   className="Select-placeholder"
@@ -16190,7 +16245,7 @@ exports[`Cosmos fixtures: withRouter(SubNavigation):MultiPracticeNoChildren 1`] 
                   }
                 >
                   <input
-                    aria-activedescendant="react-select-22--value"
+                    aria-activedescendant="react-select-23--value"
                     aria-describedby={undefined}
                     aria-expanded="false"
                     aria-haspopup="false"
