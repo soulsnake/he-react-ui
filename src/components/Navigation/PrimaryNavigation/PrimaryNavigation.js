@@ -111,8 +111,9 @@ class PrimaryNavigation extends Component {
     this.state = {
       openKey: null,
       currentTutorialPosition: {
-        top: 0,
-        left: 0,
+        top: 76,
+        left: 76,
+        reversed: false,
       },
     };
 
@@ -123,6 +124,43 @@ class PrimaryNavigation extends Component {
     this.toggleBucket = this.toggleBucket.bind(this);
     this.renderSubNav = this.renderSubNav.bind(this);
   }
+
+  onChangeStep = step => {
+    const openBucket = step.target.bucket && step.target.item;
+    const el = step.target.item
+      ? document.getElementById(`NAV_${step.target.item}`)
+      : step.target.bucket
+        ? document.getElementById(`BUCKET_${step.target.bucket}`)
+        : null;
+    this.closeBucket();
+    if (openBucket) {
+      this.toggleBucket(step.target.bucket);
+    }
+    if (el) {
+      this.animateTutorial(step, el);
+    }
+  };
+
+  animateTutorial = (step, el, prevLeft = 0) => {
+    const cords = el.getBoundingClientRect();
+    const slider = document.getElementById('SLIDER_CONTAINER');
+    const sliderCords = slider ? slider.getBoundingClientRect() : cords;
+    const newLeft = step.target.item ? sliderCords.right : cords.right;
+    this.setState({
+      currentTutorialPosition: {
+        top: cords.top + cords.height / 2,
+        reversed: cords.top > window.innerHeight / 2,
+        left: newLeft,
+      },
+    });
+    if (prevLeft === newLeft) {
+      return true;
+    }
+    setTimeout(() => {
+      this.animateTutorial(step, el, newLeft);
+    }, 10);
+    return true;
+  };
 
   closeBucket() {
     this.setState({ openKey: null });
@@ -250,31 +288,18 @@ class PrimaryNavigation extends Component {
     });
   }
 
-  onChangeStep = (step) => {
-    console.log(step)
-    const openBucket = step.target.bucket && step.target.item;
-    let el = step.target.item ? document.getElementById(`NAV_${step.target.item}`) : (step.target.bucket ? document.getElementById(`BUCKET_${step.target.bucket}`) : null);
-    console.log(openBucket, el);
-    this.closeBucket();
-    if (openBucket) {
-      this.toggleBucket(step.target.bucket)
-    }
-    if (el) {
-      const cords = el.getBoundingClientRect();
-      console.log(cords);
-      this.setState({
-        currentTutorialPosition: {
-          top: cords.top - cords.height * 2 / 3,
-          left: cords.right,
-        }
-      })
-    }
-
-  }
-
   renderTutorial = tutorialProps => {
     const { currentTutorialPosition } = this.state;
-    return <Tutorial showing={true} top={currentTutorialPosition.top} left={currentTutorialPosition.left} onChangeStep={this.onChangeStep} tutorialStages={tutorialProps.tutorialStages} />;
+    return (
+      <Tutorial
+        showing
+        top={currentTutorialPosition.top}
+        left={currentTutorialPosition.left}
+        reversed={currentTutorialPosition.reversed}
+        onChangeStep={this.onChangeStep}
+        tutorialStages={tutorialProps.tutorialStages}
+      />
+    );
   };
 
   render() {

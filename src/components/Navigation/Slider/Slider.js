@@ -32,7 +32,6 @@ class Slider extends Component {
     open: false,
     bottom: false,
   };
-
   render() {
     const { bottom, itemKey, open, ...restProps } = this.props;
 
@@ -43,6 +42,7 @@ class Slider extends Component {
           [styles.bottom]: bottom,
         })}
         key={itemKey}
+        id={open ? 'SLIDER_CONTAINER' : ''}
       >
         <div className={styles.filler} />
         <List className={styles.list} itemKey={itemKey} {...restProps} />

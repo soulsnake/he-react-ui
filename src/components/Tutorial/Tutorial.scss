@@ -50,7 +50,6 @@
   text-align: center;
   z-index: 1;
   transform: scale(0.95);
-  @include transition(all 0.2s);
   @include breakpoint(small) {
     max-width: 50%;
     max-height: 50%;
@@ -112,6 +111,14 @@
   left: 20px;
   opacity: 0;
 }
+.reversed{
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
 .close {
   border-radius: 32px;
   cursor: pointer;
@@ -133,19 +140,18 @@
 
 .showing {
   pointer-events: auto;
+  @include transition(all 0.2s);
   .overlay {
     opacity: 0.45;
     @include transition(opacity 0.2s);
   }
   .arrow{
     opacity: 1;
-    @include transition(all 0.2s);
     @include transition-delay(0.1s);
   }
   .popup {
     opacity: 1;
     transform: scale(1);
-    @include transition(all 0.2s);
     @include transition-delay(0.1s);
   }
 }

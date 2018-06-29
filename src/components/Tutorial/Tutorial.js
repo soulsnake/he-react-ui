@@ -24,6 +24,7 @@ class Tutorial extends React.Component {
     onChangeStep: PropTypes.func,
     left: PropTypes.string,
     top: PropTypes.string,
+    reversed: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -31,6 +32,7 @@ class Tutorial extends React.Component {
     onChangeStep: e => null,
     top: 0,
     left: 0,
+    reversed: false,
   };
 
   state = {
@@ -107,28 +109,44 @@ class Tutorial extends React.Component {
     </div>
   );
   renderContent = () => {
-    const { className, tutorialStages, style, top, left } = this.props;
+    const {
+      className,
+      tutorialStages,
+      style,
+      top,
+      reversed,
+      left,
+    } = this.props;
     const { currentStep, currentStage } = this.state;
     const popupClasses = classnames(styles.popup, className, {
       [styles.popupCentered]: currentStage === 'intro',
     });
     let wrapperStyle = {};
+    let arrowStyle = {};
     let rightOverlay = {};
     let leftOverlay = {};
     let steps = null;
-
+    let newTop = top - 75;
+    const popup = document.getElementById('tutorialPopup');
     if (currentStage === 'steps' && tutorialStages[currentStage]) {
       steps = tutorialStages[currentStage];
+      if (popup && reversed) {
+        newTop -= popup.getBoundingClientRect().height - 150;
+        arrowStyle = {
+          top: popup.getBoundingClientRect().height - 75,
+        };
+      }
       wrapperStyle = {
         position: 'absolute',
         width: '100%',
         height: '100%',
-        top: top,
-        left: left,
+        top: newTop,
+        left,
         right: 'auto',
+        transition: 'all 0.2s',
       };
       rightOverlay = {
-        left: left,
+        left,
       };
       leftOverlay = {
         width: left,
@@ -138,6 +156,7 @@ class Tutorial extends React.Component {
         position: 'absolute',
         width: '100%',
         height: '100%',
+        transition: 'all 0.2s',
       };
     }
 
@@ -154,7 +173,7 @@ class Tutorial extends React.Component {
           onClick={this.handleClose}
         />
         <div style={wrapperStyle}>
-          <div className={popupClasses} style={style}>
+          <div className={popupClasses} id="tutorialPopup" style={style}>
             <Icon
               className={styles.close}
               name="Cross"
@@ -164,7 +183,15 @@ class Tutorial extends React.Component {
               ? this.renderSteps(currentStep, steps)
               : this.renderIntro(tutorialStages[currentStage])}
           </div>
-          {steps && <Icon className={styles.arrow} name="CurvedArrow" />}
+          {steps && (
+            <Icon
+              className={classnames(styles.arrow, {
+                [styles.reversed]: reversed,
+              })}
+              style={arrowStyle}
+              name="CurvedArrow"
+            />
+          )}
         </div>
       </Fragment>
     );
