@@ -23,6 +23,7 @@
   "author": "HealthEngine",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-flow": "^6.23.0",
     "classnames": "^2.2.5",
     "coveralls": "^3.0.0",
     "eslint-config-airbnb": "^16.1.0",
