@@ -24,7 +24,6 @@ class Tutorial extends React.Component {
     onChangeStep: PropTypes.func,
     left: PropTypes.number,
     top: PropTypes.number,
-    opacity: PropTypes.number,
     reversed: PropTypes.bool,
   };
 
@@ -40,7 +39,7 @@ class Tutorial extends React.Component {
     showing: this.props.showing,
     currentStep: 0,
     currentStage: 'intro',
-    loadingStep: false,
+    opacity: 1,
   };
 
   handleClose = () => {
@@ -58,22 +57,23 @@ class Tutorial extends React.Component {
   };
 
   nextStep = () => {
-    this.setState(
-      {
-        loadingStep: true,
-      },
-      this.doNextStep,
-    );
+    this.setState({
+      opacity: 0,
+    });
+
+    setTimeout(() => {
+      this.doNextStep();
+    }, 100);
   };
 
   doNextStep = () => {
     const { tutorialStages } = this.props;
-
+    const nextStep = this.state.currentStep + 1;
     this.setState({
-      currentStep: this.state.currentStep + 1,
-      loadingStep: false,
+      currentStep: nextStep,
+      opacity: 1,
     });
-    this.props.onChangeStep(tutorialStages.steps[this.state.currentStep + 1]);
+    this.props.onChangeStep(tutorialStages.steps[nextStep]);
   };
 
   renderIntro = intro => (
@@ -114,7 +114,7 @@ class Tutorial extends React.Component {
           <div className={styles.footerCell}>
             <Button className={styles.rightElement} link>
               Got it!
-              </Button>
+            </Button>
           </div>
         </div>
       )}
@@ -128,9 +128,8 @@ class Tutorial extends React.Component {
       top,
       reversed,
       left,
-      opacity,
     } = this.props;
-    const { currentStep, currentStage, loadingStep } = this.state;
+    const { currentStep, currentStage, opacity } = this.state;
     const popupClasses = classnames(styles.popup, className, {
       [styles.popupCentered]: currentStage === 'intro',
     });
@@ -187,12 +186,7 @@ class Tutorial extends React.Component {
           style={rightOverlay}
           onClick={this.handleClose}
         />
-        <div
-          style={wrapperStyle}
-          className={classnames(styles.wrapper, {
-            [styles.showStep]: !loadingStep,
-          })}
-        >
+        <div style={wrapperStyle}>
           <div className={popupClasses} id="tutorialPopup" style={style}>
             <Icon
               className={styles.close}

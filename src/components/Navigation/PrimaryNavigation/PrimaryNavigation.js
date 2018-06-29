@@ -137,31 +137,16 @@ class PrimaryNavigation extends Component {
       this.toggleBucket(step.target.bucket);
     }
     if (el) {
+      const cords = el.getBoundingClientRect();
+      const newLeft = step.target.item ? 340 : cords.right;
       this.setState({
         currentTutorialPosition: {
-          ...this.state.currentTutorialPosition,
-          opacity: 0,
+          top: cords.top + cords.height / 2,
+          reversed: cords.top > window.innerHeight / 2,
+          left: newLeft,
         },
       });
-
-      setTimeout(() => {
-        this.animateTutorial(step, el);
-      }, 100);
     }
-  };
-
-  animateTutorial = (step, el) => {
-    const cords = el.getBoundingClientRect();
-    const newLeft = step.target.item ? 340 : cords.right;
-    console.log();
-    this.setState({
-      currentTutorialPosition: {
-        top: cords.top + cords.height / 2,
-        reversed: cords.top > window.innerHeight / 2,
-        left: newLeft,
-        opacity: 1,
-      },
-    });
   };
 
   closeBucket() {
