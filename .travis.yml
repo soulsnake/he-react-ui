@@ -8,6 +8,7 @@ cache:
 script:
   - yarn
   - yarn lint
+  - yarn flow
   - yarn coverage
   - yarn build
 
