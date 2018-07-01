@@ -95,7 +95,7 @@ export default class DateRangePicker extends React.Component<Props, *> {
   getSelectValue = () => {
     const { value, options } = this.props;
 
-    if (!value) return -1;
+    if (!value) return null;
 
     const index = (options || []).findIndex(
       entry =>

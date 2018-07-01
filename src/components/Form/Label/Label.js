@@ -26,11 +26,13 @@ function Label(props: Props) {
     [className]: className,
   });
 
+  const htmlForProp = htmlFor ? { htmlFor } : {};
+
   return (
     <div className={classes} {...restProps}>
       {error && <Icon className={style.icon} name="Alert" />}
       {children ? (
-        <label htmlFor={htmlFor}>{children}</label>
+        <label {...htmlForProp}>{children}</label>
       ) : (
         <LoadingStrip className={style.loading} />
       )}
@@ -41,7 +43,6 @@ function Label(props: Props) {
 Label.defaultProps = {
   error: false,
   onChange: () => null,
-  htmlFor: '',
 };
 
 export default Label;

@@ -6,7 +6,7 @@ import { matchPath } from 'react-router';
 type Props = {
   render: Function,
   path: string,
-  exact: boolean,
+  exact?: ?boolean,
   strict?: boolean,
 };
 

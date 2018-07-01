@@ -27,7 +27,7 @@ function renderRoutes(
   return (
     <HashRoute
       key={`Subnav_${item.key}`}
-      exact={!!item.exact} // Slash will match anything so we need to be exact in that case.
+      exact={item.exact} // Slash will match anything so we need to be exact in that case.
       path={item.route}
       render={() => (
         <SubNavigation
