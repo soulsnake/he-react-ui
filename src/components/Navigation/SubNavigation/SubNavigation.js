@@ -15,9 +15,11 @@ import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './SubNavigation.scss';
 import type { NavItem } from '../NavItem';
 
+type Option = { value: any, label: string };
+
 type Props = {
   item: NavItem,
-  locations?: NavItem[],
+  locations?: Option[],
   onLocationChange?: Function,
   logoutRoute: string,
   location: Location,

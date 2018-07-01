@@ -6,7 +6,6 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Select from 'react-select';
 import Icon from '../../Icon';
@@ -15,37 +14,29 @@ import style from './SingleSelect.scss';
 
 type Option = { label: string, value: any };
 
-class SingleSelect extends React.Component<*, *> {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    required: PropTypes.bool,
-    disabled: PropTypes.bool,
-    error: PropTypes.string,
-    inline: PropTypes.bool,
-    label: PropTypes.string,
-    placeholder: PropTypes.string,
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        value: PropTypes.any.isRequired,
-      }),
-    ).isRequired,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-    onBeforeOpen: PropTypes.func,
-    onClose: PropTypes.func,
-    eventTypes: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string),
-    ]),
-    preventDefault: PropTypes.bool,
-    stopPropagation: PropTypes.bool,
-    fill: PropTypes.bool,
-    forceTitle: PropTypes.string,
-  };
+export type Props = {
+  id: string,
+  name: string,
+  className?: string,
+  required?: boolean,
+  disabled?: boolean,
+  error?: string,
+  inline?: boolean,
+  label?: string,
+  placeholder?: string,
+  options: Option[],
+  value?: ?string,
+  onChange: Function,
+  onBeforeOpen: Function,
+  onClose: Function,
+  eventTypes?: string | Array<string>,
+  preventDefault?: boolean,
+  stopPropagation?: boolean,
+  fill?: boolean,
+  forceTitle?: ?string,
+};
 
+class SingleSelect extends React.Component<Props, *> {
   static defaultProps = {
     disabled: false,
     error: '',
@@ -115,10 +106,13 @@ class SingleSelect extends React.Component<*, *> {
 
     return (
       <div
-        className={classnames(style.outer, {
-          [className]: className,
-          [style.fill]: fill,
-        })}
+        className={classnames(
+          style.outer,
+          {
+            [style.fill]: fill,
+          },
+          className,
+        )}
       >
         {label && (
           <Label className={style.label} htmlFor={id}>

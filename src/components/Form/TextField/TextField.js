@@ -6,29 +6,28 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../../Icon';
 import style from './TextField.scss';
 
-class TextField extends React.Component<*, *> {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    label: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    description: PropTypes.string,
-    error: PropTypes.string,
-    inline: PropTypes.bool,
-    value: PropTypes.string,
-    disabled: PropTypes.bool,
-    marker: PropTypes.bool,
-    isValid: PropTypes.bool,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-  };
+export type Props = {
+  id: string,
+  name: string,
+  className?: string,
+  label?: Object | string,
+  description?: string,
+  error?: string,
+  inline?: boolean,
+  value?: string,
+  disabled?: boolean,
+  marker?: boolean,
+  isValid?: boolean,
+  onBlur: Function,
+  onChange: Function,
+  onFocus: Function,
+};
 
+class TextField extends React.Component<Props, *> {
   static defaultProps = {
     label: 'Field',
     disabled: false,
@@ -97,14 +96,17 @@ class TextField extends React.Component<*, *> {
     } = this.props;
     const { focused } = this.state;
     const floating = focused || value !== '';
-    const classes = classnames(style.outer, {
-      [style.invalid]: !isValid,
-      [style.disabled]: disabled,
-      [style.inline]: inline,
-      [style.focused]: focused,
-      [style.hasMarker]: marker,
-      [className]: className,
-    });
+    const classes = classnames(
+      style.outer,
+      {
+        [style.invalid]: !isValid,
+        [style.disabled]: disabled,
+        [style.inline]: inline,
+        [style.focused]: focused,
+        [style.hasMarker]: marker,
+      },
+      className,
+    );
 
     return (
       <div className={classes} {...restProps}>
