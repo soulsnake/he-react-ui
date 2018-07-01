@@ -1,8 +1,9 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Megaphone(props: { className: string }) {
+export type Props = { className?: string };
+
+export default function Megaphone(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -20,7 +21,3 @@ export default function Megaphone(props: { className: string }) {
     </svg>
   );
 }
-
-Megaphone.propTypes = {
-  className: PropTypes.string,
-};

@@ -1,8 +1,9 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Bookings(props: { className: string }) {
+export type Props = { className?: string };
+
+export default function Bookings(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -28,7 +29,3 @@ export default function Bookings(props: { className: string }) {
     </svg>
   );
 }
-
-Bookings.propTypes = {
-  className: PropTypes.string,
-};

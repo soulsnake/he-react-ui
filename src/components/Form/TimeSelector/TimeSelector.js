@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import onClickOutside from 'react-onclickoutside';
 
@@ -18,33 +17,30 @@ function asElement(node: Node): HTMLElement {
   return (node: any);
 }
 
-class TimeSelector extends React.Component<*, *> {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    inline: PropTypes.bool,
-    hourly: PropTypes.bool,
-    hours: PropTypes.array,
-    minutes: PropTypes.array,
-    required: PropTypes.bool,
-    disabled: PropTypes.bool,
-    error: PropTypes.string,
-    label: PropTypes.string,
-    placeholder: PropTypes.string,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-    eventTypes: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string),
-    ]),
-    outsideClickIgnoreClass: PropTypes.string,
-    preventDefault: PropTypes.bool,
-    stopPropagation: PropTypes.bool,
-    disableOnClickOutside: PropTypes.func,
-    enableOnClickOutside: PropTypes.func,
-  };
+export type Props = {
+  id: string,
+  name: string,
+  className?: string,
+  inline?: boolean,
+  hourly?: boolean,
+  hours: Array<any>,
+  minutes: Array<any>,
+  required?: boolean,
+  disabled?: boolean,
+  error?: string,
+  label?: string,
+  placeholder?: string,
+  value?: string,
+  onChange: Function,
+  eventTypes?: string | Array<string>,
+  outsideClickIgnoreClass?: string,
+  preventDefault?: boolean,
+  stopPropagation?: boolean,
+  disableOnClickOutside?: Function,
+  enableOnClickOutside?: Function,
+};
 
+class TimeSelector extends React.Component<Props, *> {
   static defaultProps = {
     disabled: false,
     error: '',
@@ -64,24 +60,11 @@ class TimeSelector extends React.Component<*, *> {
       })))(),
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      hour: undefined,
-      minute: undefined,
-      expanded: false,
-    };
-    this.getDisplay = this.getDisplay.bind(this);
-    this.toggleExpand = this.toggleExpand.bind(this);
-    this.hideExpand = this.hideExpand.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.generateOptions = this.generateOptions.bind(this);
-    this.generateList = this.generateList.bind(this);
-    this.selectMinute = this.selectMinute.bind(this);
-    this.selectHour = this.selectHour.bind(this);
-    this.selectTime = this.selectTime.bind(this);
-  }
+  state = {
+    hour: undefined,
+    minute: undefined,
+    expanded: false,
+  };
 
   getDisplay = () => {
     const { value } = this.props;
@@ -190,12 +173,15 @@ class TimeSelector extends React.Component<*, *> {
       enableOnClickOutside,
       ...restProps
     } = this.props;
-    const classes = classnames(style.outer, {
-      [style.expanded]: this.state.expanded,
-      [style.inline]: inline,
-      [style.hourly]: hourly,
-      [className]: className,
-    });
+    const classes = classnames(
+      style.outer,
+      {
+        [style.expanded]: this.state.expanded,
+        [style.inline]: inline,
+        [style.hourly]: hourly,
+      },
+      className,
+    );
 
     return (
       <div className={classes} {...restProps}>

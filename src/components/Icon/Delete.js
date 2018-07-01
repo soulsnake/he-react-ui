@@ -1,8 +1,9 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Delete(props: { className: string }) {
+export type Props = { className?: string };
+
+export default function Delete(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -19,7 +20,3 @@ export default function Delete(props: { className: string }) {
     </svg>
   );
 }
-
-Delete.propTypes = {
-  className: PropTypes.string,
-};
