@@ -14,7 +14,7 @@ import style from './SingleSelect.scss';
 
 type Option = { label: string, value: any };
 
-export type Props = {
+type Props = {
   id: string,
   name: string,
   className?: string,

@@ -6,7 +6,7 @@ import Cross from '../Icon/Cross';
 import Tick from '../Icon/Tick';
 import styles from './Notification.scss';
 
-export type Props = {
+type Props = {
   canClose: boolean,
   children?: Array<any> | Object | string,
   className?: string,

@@ -2,7 +2,7 @@
 import React from 'react';
 import style from './Footer.scss';
 
-export type Props = { children?: any };
+type Props = { children?: any };
 
 function Footer(props: Props) {
   const { children, ...restProps } = props;

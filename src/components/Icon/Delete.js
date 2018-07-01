@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-export type Props = { className?: string };
+type Props = { className?: string };
 
 export default function Delete(props: Props) {
   const { className, ...restProps } = props;

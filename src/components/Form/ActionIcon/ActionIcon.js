@@ -11,7 +11,7 @@ import React from 'react';
 import Icon from '../../Icon';
 import style from './ActionIcon.scss';
 
-export type Props = {
+type Props = {
   color?: 'teal' | 'blue' | 'green' | 'red' | 'white',
   disabled?: boolean,
   onClick: Function,

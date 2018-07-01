@@ -15,7 +15,7 @@ type Option = {
   label?: string,
 };
 
-export type Props = {
+type Props = {
   id: string,
   name: string,
   className?: string,

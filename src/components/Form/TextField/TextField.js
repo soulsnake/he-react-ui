@@ -10,7 +10,7 @@ import classnames from 'classnames';
 import Icon from '../../Icon';
 import style from './TextField.scss';
 
-export type Props = {
+type Props = {
   id: string,
   name: string,
   className?: string,

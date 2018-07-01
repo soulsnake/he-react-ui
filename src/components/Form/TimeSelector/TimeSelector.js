@@ -17,7 +17,7 @@ function asElement(node: Node): HTMLElement {
   return (node: any);
 }
 
-export type Props = {
+type Props = {
   id: string,
   name: string,
   className?: string,

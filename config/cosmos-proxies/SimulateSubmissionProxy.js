@@ -3,7 +3,7 @@ import React from 'react';
 
 const sleep = time => new Promise(resolve => setTimeout(resolve, time));
 
-export type Props = {
+type Props = {
   nextProxy: any,
   fixture: any,
 };

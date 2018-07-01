@@ -12,7 +12,7 @@ import Icon from '../../Icon';
 import Label from '../Label';
 import style from './Radio.scss';
 
-export type Props = {
+type Props = {
   name: string,
   id: string,
   className?: string,

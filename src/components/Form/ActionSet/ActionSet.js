@@ -12,7 +12,7 @@ import onClickOutside from 'react-onclickoutside';
 import Icon from '../../Icon';
 import style from './ActionSet.scss';
 
-export type Props = {
+type Props = {
   children: any,
   expanded?: boolean,
   className?: string,

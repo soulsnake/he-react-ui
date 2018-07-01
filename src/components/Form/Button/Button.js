@@ -12,7 +12,7 @@ import Icon from '../../Icon';
 import style from './Button.scss';
 import ButtonSpinner from './ButtonSpinner';
 
-export type Props = {
+type Props = {
   submit?: boolean,
   color?: 'teal' | 'blue' | 'green' | 'red' | 'white',
   link?: boolean,

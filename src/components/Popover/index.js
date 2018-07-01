@@ -4,7 +4,7 @@ import { Tooltip as Tippy } from 'react-tippy';
 import style from './index.scss';
 import PopoverDisplay from './PopoverDisplay';
 
-export type Props = {
+type Props = {
   children?: any,
   content?: any,
   preferRight?: boolean,

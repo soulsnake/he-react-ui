@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-export type Props = { className?: string };
+type Props = { className?: string };
 
 export default function Settings(props: Props) {
   const { className, ...restProps } = props;

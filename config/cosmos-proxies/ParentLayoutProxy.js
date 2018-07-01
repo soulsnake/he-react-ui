@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-export type Props = {
+type Props = {
   nextProxy: any,
   fixture: any,
 };

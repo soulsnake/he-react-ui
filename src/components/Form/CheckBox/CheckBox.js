@@ -10,7 +10,7 @@ import React from 'react';
 import Icon from '../../Icon';
 import style from './CheckBox.scss';
 
-export type Props = {
+type Props = {
   id: string,
   name: string,
   className?: string,

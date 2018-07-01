@@ -14,7 +14,7 @@ import Icon from '../../Icon';
 import styles from './Bucket.scss';
 import type { NavItem } from '../NavItem';
 
-export type Props = {
+type Props = {
   itemKey: string,
   label: string,
   icon: string,
