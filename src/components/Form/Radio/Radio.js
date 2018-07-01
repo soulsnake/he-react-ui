@@ -6,33 +6,30 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import Icon from '../../Icon';
 import Label from '../Label';
 import style from './Radio.scss';
 
-class Radio extends React.Component<*> {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    error: PropTypes.string,
-    inline: PropTypes.bool,
-    label: PropTypes.string,
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        value: PropTypes.string.isRequired,
-        child: PropTypes.any,
-        showChild: PropTypes.bool,
-      }),
-    ).isRequired,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-  };
+export type Props = {
+  name: string,
+  id: string,
+  className?: string,
+  error?: string,
+  inline?: boolean,
+  label?: string,
+  options: Array<{
+    label: string,
+    value: string,
+    child?: any,
+    showChild?: boolean,
+  }>,
+  value?: string,
+  onChange: Function,
+};
 
+class Radio extends React.Component<Props> {
   static defaultProps = {
     error: '',
     inline: false,
@@ -100,10 +97,13 @@ class Radio extends React.Component<*> {
       value,
       ...restProps
     } = this.props;
-    const classes = classnames(style.outer, {
-      [style.inline]: inline,
-      [className]: className,
-    });
+    const classes = classnames(
+      style.outer,
+      {
+        [style.inline]: inline,
+      },
+      className,
+    );
 
     return (
       <div className={classes} id={id} {...restProps}>

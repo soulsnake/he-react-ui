@@ -6,41 +6,41 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import type moment from 'moment';
 import { SingleDatePicker as Picker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import Media from 'react-media';
-import momentPropTypes from 'react-moment-proptypes';
 import Icon from '../../../Icon';
 import Label from '../../Label';
 import styles from './SingleDatePicker.scss';
 
 type FocusChange = { focused: string };
 
-class SingleDatePicker extends React.Component<*, *> {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    anchorDirection: PropTypes.oneOf(['left', 'right']),
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    displayFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    error: PropTypes.string,
-    horizontalMargin: PropTypes.number,
-    isOutsideRange: PropTypes.func,
-    inline: PropTypes.bool,
-    label: PropTypes.string,
-    readOnly: PropTypes.bool,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    value: momentPropTypes.momentObj,
-    style: PropTypes.object,
-    placeholder: PropTypes.string,
-  };
+type DisplayFormat = Function | string;
 
+type Props = {
+  id: string,
+  anchorDirection?: 'left' | 'right',
+  className?: string,
+  disabled?: boolean,
+  displayFormat?: DisplayFormat,
+  error?: string,
+  horizontalMargin?: number,
+  isOutsideRange?: Function,
+  inline?: boolean,
+  label?: string,
+  readOnly?: boolean,
+  onBlur: Function,
+  onChange: Function,
+  onFocus: Function,
+  value?: moment,
+  style?: Object,
+  placeholder?: string,
+};
+
+class SingleDatePicker extends React.Component<Props, *> {
   static defaultProps = {
     anchorDirection: 'left',
     disabled: false,
@@ -110,13 +110,16 @@ class SingleDatePicker extends React.Component<*, *> {
       readOnly,
       placeholder,
     } = this.props;
-    const classes = classnames(styles.outer, {
-      [styles.error]: error,
-      [styles.disabled]: disabled,
-      [styles.focused]: this.state.focused,
-      [styles.inline]: inline,
-      [className]: className,
-    });
+    const classes = classnames(
+      styles.outer,
+      {
+        [styles.error]: error,
+        [styles.disabled]: disabled,
+        [styles.focused]: this.state.focused,
+        [styles.inline]: inline,
+      },
+      className,
+    );
 
     return (
       <div className={classes} style={style}>
