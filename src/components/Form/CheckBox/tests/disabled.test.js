@@ -1,5 +1,18 @@
 // @flow
+import createTestContext from 'react-cosmos-test/enzyme';
 import fixture from '../fixtures/disabled.fixture.js';
-import testFixture from '../../../../../config/testFixture';
 
-testFixture(fixture, 'disabled');
+const { mount, getWrapper } = createTestContext({ fixture });
+
+beforeEach(mount);
+
+test('<Checkbox /> rendered correctly with disabled fixture', () => {
+  const wrapper = getWrapper();
+
+  expect(wrapper).toMatchSnapshot();
+
+  wrapper
+    .find('label')
+    .first()
+    .simulate('click');
+});
