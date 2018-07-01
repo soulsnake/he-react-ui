@@ -1,10 +1,10 @@
-// @flow
-// Vendor
-import PropTypes from 'prop-types';
+/* @flow */
 import React from 'react';
 import style from './Footer.scss';
 
-function Footer(props: { children: any }) {
+export type Props = { children?: any };
+
+function Footer(props: Props) {
   const { children, ...restProps } = props;
 
   return (
@@ -13,9 +13,5 @@ function Footer(props: { children: any }) {
     </div>
   );
 }
-
-Footer.propTypes = {
-  children: PropTypes.any,
-};
 
 export default Footer;

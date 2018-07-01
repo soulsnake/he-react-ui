@@ -7,24 +7,39 @@
 
 import classnames from 'classnames';
 import isExternal from 'is-url-external';
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import Icon from '../../Icon';
 import styles from './Bucket.scss';
+import type { NavItem } from '../NavItem';
 
-function Bucket({
-  itemKey,
-  icon,
-  items,
-  label,
-  route,
-  open,
-  onClickRoute,
-  onClickParent,
-  location,
-}) {
+export type Props = {
+  itemKey: string,
+  label: string,
+  icon: string,
+  route?: string,
+  items?: NavItem[],
+  onSelect?: Function,
+  open: boolean,
+  location: Location,
+  onClickRoute: Function,
+  onClickParent: Function,
+};
+
+function Bucket(props: Props) {
+  const {
+    itemKey,
+    icon,
+    items,
+    label,
+    route,
+    open,
+    onClickRoute,
+    onClickParent,
+    location,
+  } = props;
+
   const external = isExternal(route);
   const activeChild =
     items &&
@@ -35,7 +50,8 @@ function Bucket({
         }) !== null,
     );
   const notificationChild =
-    items && items.find(child => child.notifications > 0);
+    items &&
+    items.find(child => child.notifications && child.notifications > 0);
 
   const content = (
     <Fragment>
@@ -45,7 +61,7 @@ function Bucket({
     </Fragment>
   );
 
-  const props = {
+  const childProps = {
     key: itemKey,
     className: classnames(styles.bucket, {
       [styles.open]: open,
@@ -59,37 +75,24 @@ function Bucket({
   if (route) {
     if (external) {
       return (
-        <a target="_blank" href={route} {...props}>
+        <a target="_blank" href={route} {...childProps}>
           {content}
         </a>
       );
     }
     return (
-      <NavLink exact to={route} activeClassName={styles.current} {...props}>
+      <NavLink
+        exact
+        to={route}
+        activeClassName={styles.current}
+        {...childProps}
+      >
         {content}
       </NavLink>
     );
   }
-  return <div {...props}>{content}</div>;
+  return <div {...childProps}>{content}</div>;
 }
-
-Bucket.propTypes = {
-  itemKey: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  route: PropTypes.string,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      route: PropTypes.string.isRequired,
-      notifications: PropTypes.number,
-    }),
-  ),
-  onSelect: PropTypes.func,
-  open: PropTypes.bool,
-  location: PropTypes.object,
-  onClickRoute: PropTypes.func,
-  onClickParent: PropTypes.func,
-};
 
 Bucket.defaultProps = {
   onClickRoute: () => null,

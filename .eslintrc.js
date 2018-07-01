@@ -4,7 +4,8 @@ module.exports = {
     "flowtype/require-valid-file-annotation": [
       1,
       "always"
-    ]
+    ],
+    "react/default-props-match-prop-types": 0
   }
 };
   
