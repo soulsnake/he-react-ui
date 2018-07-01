@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * SingleSelect
@@ -12,7 +13,9 @@ import Icon from '../../Icon';
 import Label from '../Label';
 import style from './SingleSelect.scss';
 
-class SingleSelect extends React.Component {
+type Option = { label: string, value: any };
+
+class SingleSelect extends React.Component<*, *> {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -53,25 +56,17 @@ class SingleSelect extends React.Component {
     onClose: () => true,
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    expanded: false,
+  };
 
-    this.state = {
-      expanded: false,
-    };
-    this.getDisplay = this.getDisplay.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-  }
-
-  getDisplay(option) {
+  getDisplay = (option: Option) => {
     const { forceTitle } = this.props;
 
     return forceTitle || option.label;
-  }
+  };
 
-  handleChange(data) {
+  handleChange = (data: Option) => {
     const oldValue = this.props.value;
     if (oldValue !== data.value) {
       const event = {
@@ -81,17 +76,17 @@ class SingleSelect extends React.Component {
 
       this.props.onChange(event);
     }
-  }
+  };
 
-  handleOpen() {
+  handleOpen = () => {
     this.props.onBeforeOpen();
     this.setState({ expanded: true });
-  }
+  };
 
-  handleClose() {
+  handleClose = () => {
     this.setState({ expanded: false });
     this.props.onClose();
-  }
+  };
 
   render() {
     const {

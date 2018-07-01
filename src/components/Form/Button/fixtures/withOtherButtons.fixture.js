@@ -1,8 +1,9 @@
+// @flow
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../';
 
-function Wrapper({ children }) {
+function Wrapper({ children }: { children: any }) {
   return (
     <div style={{ display: 'flex' }}>
       <Button>I am to the left</Button>

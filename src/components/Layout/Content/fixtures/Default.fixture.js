@@ -1,3 +1,4 @@
+// @flow
 import Content from '../';
 
 export default {

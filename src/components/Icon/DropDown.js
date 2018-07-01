@@ -1,7 +1,8 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function DropDown(props) {
+export default function DropDown(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (

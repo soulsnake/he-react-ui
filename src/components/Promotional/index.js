@@ -1,3 +1,4 @@
+// @flow
 import PromoBanner from './Banner';
 import BenefitItem from './BenefitItem';
 import BenefitList from './BenefitList';

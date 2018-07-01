@@ -1,3 +1,4 @@
+// @flow
 import InlineSelector from '../';
 
 export default {

@@ -1,7 +1,9 @@
+// @flow
+
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default class WrapperProxy extends React.Component {
+export default class WrapperProxy extends React.Component<*> {
   static propTypes = {
     nextProxy: PropTypes.object,
     fixture: PropTypes.object,

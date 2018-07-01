@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * InlineSelector
@@ -10,7 +11,7 @@ import React from 'react';
 import Label from '../Label';
 import style from './InlineSelector.scss';
 
-class InlineSelector extends React.Component {
+class InlineSelector extends React.Component<*> {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -33,7 +34,7 @@ class InlineSelector extends React.Component {
     onChange: () => null,
   };
 
-  handleClick = option => {
+  handleClick = (option: { value: string }) => {
     const oldValue = this.props.value;
 
     if (oldValue !== option.value) {

@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * Radio
@@ -12,7 +13,7 @@ import Icon from '../../Icon';
 import Label from '../Label';
 import style from './Radio.scss';
 
-class Radio extends React.Component {
+class Radio extends React.Component<*> {
   static propTypes = {
     name: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
@@ -37,13 +38,6 @@ class Radio extends React.Component {
     inline: false,
     onChange: () => {},
   };
-
-  constructor(props) {
-    super(props);
-
-    this.generateOptions = this.generateOptions.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
 
   generateOptions = () => {
     const { name, options, value } = this.props;
@@ -81,7 +75,7 @@ class Radio extends React.Component {
     ));
   };
 
-  handleClick = value => {
+  handleClick = (value: string) => {
     const oldValue = this.props.value;
 
     if (oldValue !== value) {

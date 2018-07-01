@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * TimeSelector
@@ -13,7 +14,11 @@ import Icon from '../../Icon';
 import Label from '../Label';
 import style from './TimeSelector.scss';
 
-class TimeSelector extends React.Component {
+function asElement(node: Node): HTMLElement {
+  return (node: any);
+}
+
+class TimeSelector extends React.Component<*, *> {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -131,14 +136,19 @@ class TimeSelector extends React.Component {
   generateList = (options, selectOption) => {
     const { hourly } = this.props;
     return options.map(option => {
-      const selected = this.state.value === option.value;
+      const selected = this.props.value === option.value;
       let ref = null;
-      if (this.state.value === option.value) {
+      if (selected) {
         ref = item => {
           if (item) {
             setTimeout(() => {
-              item.parentNode.scrollTop =
-                item.offsetTop - item.parentNode.offsetTop;
+              if (!item.parentNode) return;
+              const parentNode = asElement(item.parentNode);
+
+              if (parentNode) {
+                const { offsetTop } = parentNode;
+                asElement(parentNode).scrollTop = item.offsetTop - offsetTop;
+              }
             }, 200);
           }
         };
@@ -205,7 +215,7 @@ class TimeSelector extends React.Component {
           <Icon className={style.clock} name="Clock" />
         </div>
         <div className={style.options}>
-          <ul>{this.generateList(hours, this.selectHour, true)}</ul>
+          <ul>{this.generateList(hours, this.selectHour)}</ul>
           {!hourly && <ul>{this.generateList(minutes, this.selectMinute)}</ul>}
         </div>
         {error && (

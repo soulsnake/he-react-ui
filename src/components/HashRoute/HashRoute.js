@@ -1,9 +1,16 @@
+// @flow
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { matchPath } from 'react-router';
-import PropTypes from 'prop-types';
 
-function HashRoute(props) {
+type Props = {
+  render: Function,
+  path: string,
+  exact: boolean,
+  strict?: boolean,
+};
+
+export default function HashRoute(props: Props) {
   const { render, path, exact, strict } = props;
   return (
     <Route
@@ -14,12 +21,3 @@ function HashRoute(props) {
     />
   );
 }
-
-HashRoute.propTypes = {
-  render: PropTypes.func,
-  path: PropTypes.string,
-  exact: PropTypes.bool,
-  strict: PropTypes.bool,
-};
-
-export default HashRoute;

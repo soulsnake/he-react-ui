@@ -1,1 +1,4 @@
-export default from './HashRoute';
+// @flow
+import HashRoute from './HashRoute';
+
+export default HashRoute;

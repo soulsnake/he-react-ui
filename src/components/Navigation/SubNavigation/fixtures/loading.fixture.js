@@ -1,3 +1,4 @@
+// @flow
 import SubNavigation from '../';
 
 export default {
@@ -10,7 +11,7 @@ export default {
       title: '',
       route: '#',
     },
-    locations: [].map(location => ({ value: location, label: location })),
+    locations: [],
     loading: true,
     logoutRoute: '/logout',
   },

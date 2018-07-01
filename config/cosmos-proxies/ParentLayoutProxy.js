@@ -1,7 +1,9 @@
+// @flow
+
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function ParentLayoutProxy(props) {
+export default function ParentLayoutProxy(props: *) {
   const { nextProxy, fixture, ...nextProps } = props;
   const { parentLayout } = fixture;
 

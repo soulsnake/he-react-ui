@@ -1,3 +1,4 @@
+// @flow
 import BackView from './BackView';
 import Content from './Content';
 import EvenGrid from './EvenGrid';

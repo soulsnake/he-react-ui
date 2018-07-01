@@ -1,7 +1,8 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Tick(props) {
+export default function Tick(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (

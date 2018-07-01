@@ -1,3 +1,4 @@
+// @flow
 import BackView from '../';
 
 export default {

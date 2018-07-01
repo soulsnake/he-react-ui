@@ -1,3 +1,4 @@
+// @flow
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -6,7 +7,7 @@ import Cross from '../Icon/Cross';
 import Tick from '../Icon/Tick';
 import styles from './Notification.scss';
 
-export default class Notification extends React.PureComponent {
+export default class Notification extends React.PureComponent<*> {
   static defaultProps = {
     canClose: false,
     closed: false,
@@ -27,15 +28,9 @@ export default class Notification extends React.PureComponent {
     type: PropTypes.oneOf(['confirmation', 'default', 'error', 'warning']),
   };
 
-  constructor(props) {
-    super(props);
-
-    this.handleClose = this.handleClose.bind(this);
-  }
-
-  handleClose(event) {
+  handleClose = (event: SyntheticEvent<>) => {
     this.props.onClose(event);
-  }
+  };
 
   render() {
     const { canClose, children, className, closed, type } = this.props;

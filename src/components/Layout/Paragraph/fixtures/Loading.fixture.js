@@ -1,3 +1,4 @@
+// @flow
 import Paragraph from '../';
 
 export default {

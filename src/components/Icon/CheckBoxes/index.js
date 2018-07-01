@@ -1,4 +1,10 @@
-export CheckBoxChecked from './CheckBoxChecked';
-export CheckBoxUnchecked from './CheckBoxUnchecked';
-export RadioChecked from './RadioChecked';
-export RadioUnchecked from './RadioUnchecked';
+// @flow
+import CheckBoxChecked from './CheckBoxChecked';
+import CheckBoxUnchecked from './CheckBoxUnchecked';
+import RadioChecked from './RadioChecked';
+import RadioUnchecked from './RadioUnchecked';
+
+export { CheckBoxChecked };
+export { CheckBoxUnchecked };
+export { RadioChecked };
+export { RadioUnchecked };

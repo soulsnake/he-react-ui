@@ -1,16 +1,17 @@
+// @flow
 /**
  *
  * CheckBox
  *
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Icon from '../../Icon';
 import style from './CheckBox.scss';
 
-class CheckBox extends React.Component {
+class CheckBox extends React.Component<*> {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -32,11 +33,6 @@ class CheckBox extends React.Component {
     special: false,
     onChange: () => {},
   };
-
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
 
   handleClick = () => {
     if (this.props.disabled) {

@@ -1,3 +1,4 @@
+// @flow
 import Footer from '../';
 
 export default {

@@ -1,13 +1,13 @@
+// @flow
 /*
  * EvenGrid
  */
 
 // Vendor
-import PropTypes from 'prop-types';
 import React from 'react';
 import style from './EvenGrid.scss';
 
-function EvenGrid(props) {
+function EvenGrid(props: { children: any }) {
   const { children, ...restProps } = props;
 
   return (
@@ -20,9 +20,5 @@ function EvenGrid(props) {
     </div>
   );
 }
-
-EvenGrid.propTypes = {
-  children: PropTypes.array,
-};
 
 export default EvenGrid;

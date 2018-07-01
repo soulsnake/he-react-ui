@@ -1,27 +1,27 @@
+// @flow
 /**
  *
  * Popup
  *
  */
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Icon from '../Icon';
 import LoadingSpinner from '../Loading/LoadingSpinner';
 import styles from './PopUp.scss';
 
-class PopUp extends React.Component {
-  static propTypes = {
-    children: PropTypes.any.isRequired,
-    className: PropTypes.string,
-    modal: PropTypes.bool,
-    onClose: PropTypes.func,
-    onOpen: PropTypes.func,
-    showing: PropTypes.bool,
-    noPadding: PropTypes.bool,
-    style: PropTypes.object,
-  };
+type Props = {
+  children: any,
+  className?: string,
+  modal?: boolean,
+  onClose?: Function,
+  onOpen?: Function,
+  showing?: boolean,
+  noPadding?: boolean,
+  style?: Object,
+};
 
+class PopUp extends React.Component<Props, *> {
   static defaultProps = {
     modal: false,
     noPadding: false,
@@ -30,19 +30,16 @@ class PopUp extends React.Component {
     showing: false,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      showing: props.showing,
-    };
-  }
+  state = {
+    showing: this.props.showing,
+  };
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     if (nextProps.showing !== this.state.showing) {
       this.setState({
         showing: nextProps.showing,
       });
-      if (nextProps.showing) {
+      if (nextProps.showing && this.props.onOpen) {
         this.props.onOpen();
       }
     }
@@ -53,7 +50,9 @@ class PopUp extends React.Component {
       this.setState({
         showing: false,
       });
-      this.props.onClose();
+      if (this.props.onClose) {
+        this.props.onClose();
+      }
     }
   };
 

@@ -1,14 +1,25 @@
+// @flow
 /**
  *
  * Highlight
  *
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 import YouTube from 'react-youtube';
 import styles from './Highlight.scss';
 
-function Highlight(props) {
+type Image = {
+  src: string,
+  alt: string,
+};
+
+type Props = {
+  children: any,
+  image?: Image,
+  youtubeId?: string,
+};
+
+function Highlight(props: Props) {
   const { children, image, youtubeId } = props;
   const opts = {
     playerVars: {
@@ -34,14 +45,5 @@ function Highlight(props) {
     </div>
   );
 }
-
-Highlight.propTypes = {
-  children: PropTypes.any.isRequired,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-  }),
-  youtubeId: PropTypes.string,
-};
 
 export default Highlight;

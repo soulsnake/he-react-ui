@@ -1,3 +1,5 @@
+// @flow
+
 /**
  *
  * ActionSet
@@ -11,7 +13,7 @@ import onClickOutside from 'react-onclickoutside';
 import Icon from '../../Icon';
 import style from './ActionSet.scss';
 
-class ActionSet extends React.Component {
+class ActionSet extends React.Component<*, *> {
   static propTypes = {
     children: PropTypes.any.isRequired,
     expanded: PropTypes.bool,
@@ -32,12 +34,9 @@ class ActionSet extends React.Component {
     expanded: false,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false,
-    };
-  }
+  state = {
+    open: false,
+  };
 
   close = () => {
     this.setState({ open: false });

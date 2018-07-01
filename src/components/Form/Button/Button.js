@@ -1,3 +1,5 @@
+// @flow
+
 /**
  *
  * Button
@@ -11,7 +13,7 @@ import Icon from '../../Icon';
 import style from './Button.scss';
 import ButtonSpinner from './ButtonSpinner';
 
-class Button extends React.Component {
+class Button extends React.Component<*> {
   static propTypes = {
     submit: PropTypes.bool,
     color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
@@ -42,7 +44,7 @@ class Button extends React.Component {
     onClick: () => null,
   };
 
-  handleClick = event => {
+  handleClick = (event: SyntheticEvent<*>) => {
     if (!this.props.disabled) {
       this.props.onClick(event);
     }

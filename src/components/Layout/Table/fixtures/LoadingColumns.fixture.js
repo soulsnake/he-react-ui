@@ -1,3 +1,4 @@
+// @flow
 import Table from '../';
 
 export default {

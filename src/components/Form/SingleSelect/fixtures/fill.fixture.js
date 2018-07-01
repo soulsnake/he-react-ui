@@ -1,3 +1,4 @@
+// @flow
 import component from '../';
 
 export default {

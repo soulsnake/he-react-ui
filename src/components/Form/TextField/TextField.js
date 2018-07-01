@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * TextField
@@ -10,7 +11,7 @@ import classnames from 'classnames';
 import Icon from '../../Icon';
 import style from './TextField.scss';
 
-class TextField extends React.Component {
+class TextField extends React.Component<*, *> {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -40,19 +41,13 @@ class TextField extends React.Component {
     onFocus: () => {},
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      focused: false,
-    };
-    this.handleBlur = this.handleBlur.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleFocus = this.handleFocus.bind(this);
-  }
+  state = {
+    focused: false,
+  };
 
-  handleFocus = e => {
+  handleFocus = (e: SyntheticEvent<HTMLInputElement>) => {
     const event = {
-      value: e.target.value,
+      value: e.currentTarget.value,
       props: this.props,
     };
 
@@ -62,9 +57,9 @@ class TextField extends React.Component {
     this.props.onFocus(event);
   };
 
-  handleBlur = e => {
+  handleBlur = (e: SyntheticEvent<HTMLInputElement>) => {
     const event = {
-      value: e.target.value,
+      value: e.currentTarget.value,
       props: this.props,
     };
 
@@ -74,9 +69,9 @@ class TextField extends React.Component {
     this.props.onBlur(event);
   };
 
-  handleChange = e => {
+  handleChange = (e: SyntheticEvent<HTMLInputElement>) => {
     const event = {
-      value: e.target.value,
+      value: e.currentTarget.value,
       props: this.props,
     };
     this.props.onChange(event);

@@ -1,13 +1,21 @@
+// @flow
 /**
  *
  * SupportItem
  *
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './SupportItem.scss';
 
-function SupportItem(props) {
+type Image = { src: string, alt: string };
+
+type Props = {
+  name: string,
+  extra?: string,
+  image: Image,
+};
+
+function SupportItem(props: Props) {
   const { extra, image, name } = props;
 
   return (
@@ -20,14 +28,5 @@ function SupportItem(props) {
     </div>
   );
 }
-
-SupportItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  extra: PropTypes.string,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default SupportItem;

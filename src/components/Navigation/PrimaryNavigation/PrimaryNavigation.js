@@ -1,10 +1,10 @@
+// @flow
 /**
  *
  * Primary Navigation
  *
  */
 
-import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import onClickOutside from 'react-onclickoutside';
 import { NavLink } from 'react-router-dom';
@@ -15,8 +15,7 @@ import Bucket from '../Bucket';
 import Slider from '../Slider';
 import SubNavigation from '../SubNavigation';
 import styles from './PrimaryNavigation.scss';
-
-const SUPPORTED_BADGES = ['NEW', 'FREE'];
+import type { NavItem } from '../NavItem';
 
 function renderRoutes(
   item,
@@ -28,7 +27,7 @@ function renderRoutes(
   return (
     <HashRoute
       key={`Subnav_${item.key}`}
-      exact={item.exact} // Slash will match anything so we need to be exact in that case.
+      exact={!!item.exact} // Slash will match anything so we need to be exact in that case.
       path={item.route}
       render={() => (
         <SubNavigation
@@ -42,52 +41,23 @@ function renderRoutes(
     />
   );
 }
-class PrimaryNavigation extends Component {
-  static propTypes = {
-    siteName: PropTypes.string,
-    bottomKeys: PropTypes.arrayOf(PropTypes.string),
-    logo: PropTypes.shape({
-      icon: PropTypes.any.isRequired,
-      route: PropTypes.string.isRequired,
-    }),
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        key: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        icon: PropTypes.string.isRequired,
-        route: PropTypes.string,
-        items: PropTypes.arrayOf(
-          PropTypes.shape({
-            key: PropTypes.string.isRequired,
-            title: PropTypes.string.isRequired,
-            route: PropTypes.string.isRequired,
-            badge: PropTypes.oneOf(SUPPORTED_BADGES),
-            notifications: PropTypes.number,
-            items: PropTypes.arrayOf(
-              PropTypes.shape({
-                key: PropTypes.string.isRequired,
-                label: PropTypes.string.isRequired,
-                route: PropTypes.string.isRequired,
-                exact: PropTypes.bool,
-              }),
-            ),
-          }),
-        ),
-      }),
-    ).isRequired,
-    locations: PropTypes.array,
-    onLocationChange: PropTypes.func,
-    locationValue: PropTypes.string,
-    logoutRoute: PropTypes.string.isRequired,
-    loading: PropTypes.bool,
-    children: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.object,
-      PropTypes.string,
-    ]),
-  };
 
+type Logo = { icon: any, route: string };
+
+type Props = {
+  siteName?: string,
+  bottomKeys: string[],
+  logo: Logo,
+  items: NavItem[],
+  locations?: {}[], // TODO
+  onLocationChange?: Function,
+  locationValue?: string,
+  logoutRoute: string,
+  loading?: boolean,
+  children: any,
+};
+
+class PrimaryNavigation extends Component<Props, *> {
   static defaultProps = {
     siteName: 'HealthEngine',
     bottomKeys: [],
@@ -98,36 +68,25 @@ class PrimaryNavigation extends Component {
     loading: false,
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    openKey: (null: ?string),
+  };
 
-    this.state = {
-      openKey: null,
-    };
-
-    this.closeBucket = this.closeBucket.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.renderBuckets = this.renderBuckets.bind(this);
-    this.renderSliders = this.renderSliders.bind(this);
-    this.toggleBucket = this.toggleBucket.bind(this);
-    this.renderSubNav = this.renderSubNav.bind(this);
-  }
-
-  closeBucket() {
+  closeBucket = () => {
     this.setState({ openKey: null });
-  }
+  };
 
-  toggleBucket(key) {
+  toggleBucket = key => {
     const { openKey } = this.state;
 
     this.setState({ openKey: key === openKey ? null : key });
-  }
+  };
 
   handleClickOutside = () => {
     this.setState({ openKey: null });
   };
 
-  renderSliders() {
+  renderSliders = () => {
     const { closeBucket } = this;
     const { bottomKeys, items, siteName } = this.props;
     const { openKey } = this.state;
@@ -156,9 +115,9 @@ class PrimaryNavigation extends Component {
         ))}
       </div>
     );
-  }
+  };
 
-  renderBuckets() {
+  renderBuckets = () => {
     const { closeBucket, toggleBucket } = this;
     const { bottomKeys, items, loading, logo } = this.props;
     const { openKey } = this.state;
@@ -208,9 +167,15 @@ class PrimaryNavigation extends Component {
         )}
       </div>
     );
-  }
+  };
 
-  renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute) {
+  renderSubNav = (
+    items,
+    locations,
+    onLocationChange,
+    locationValue,
+    logoutRoute,
+  ) => {
     const { loading } = this.props;
 
     if (loading) {
@@ -218,28 +183,27 @@ class PrimaryNavigation extends Component {
     }
 
     return items.map(item => {
-      switch (item.items && item.items.length > 0) {
-        case true:
-          return item.items.map(child =>
-            renderRoutes(
-              child,
-              locations,
-              onLocationChange,
-              locationValue,
-              logoutRoute,
-            ),
-          );
-        default:
-          return renderRoutes(
-            item,
+      if (item.items && item.items.length > 0) {
+        return item.items.map(child =>
+          renderRoutes(
+            child,
             locations,
             onLocationChange,
             locationValue,
             logoutRoute,
-          );
+          ),
+        );
       }
+
+      return renderRoutes(
+        item,
+        locations,
+        onLocationChange,
+        locationValue,
+        logoutRoute,
+      );
     });
-  }
+  };
 
   render() {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this;

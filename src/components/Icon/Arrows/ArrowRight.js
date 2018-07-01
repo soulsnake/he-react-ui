@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function ArrowRight(props) {
+export default function ArrowRight(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (
@@ -18,7 +18,3 @@ export default function ArrowRight(props) {
     </svg>
   );
 }
-
-ArrowRight.propTypes = {
-  className: PropTypes.string,
-};
