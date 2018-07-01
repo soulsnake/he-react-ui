@@ -1,9 +1,12 @@
-// @flow
-
-import PropTypes from 'prop-types';
+/* @flow */
 import React from 'react';
 
-export default function ParentLayoutProxy(props: *) {
+export type Props = {
+  nextProxy: any,
+  fixture: any,
+};
+
+export default function ParentLayoutProxy(props: Props) {
   const { nextProxy, fixture, ...nextProps } = props;
   const { parentLayout } = fixture;
 
@@ -17,8 +20,3 @@ export default function ParentLayoutProxy(props: *) {
 
   return parentLayout ? <div style={parentLayout}>{child}</div> : child;
 }
-
-ParentLayoutProxy.propTypes = {
-  nextProxy: PropTypes.object,
-  fixture: PropTypes.object,
-};

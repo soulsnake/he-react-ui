@@ -6,26 +6,25 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Icon from '../../Icon';
 import style from './CheckBox.scss';
 
-class CheckBox extends React.Component<*> {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    label: PropTypes.string,
-    special: PropTypes.bool,
-    value: PropTypes.bool,
-    warning: PropTypes.bool,
-    onChange: PropTypes.func,
-    checked: PropTypes.bool,
-    error: PropTypes.string,
-  };
+export type Props = {
+  id: string,
+  name: string,
+  className?: string,
+  disabled?: boolean,
+  label?: string,
+  special?: boolean,
+  value?: boolean,
+  warning?: boolean,
+  onChange: Function,
+  checked?: boolean,
+  error?: string,
+};
 
+class CheckBox extends React.Component<Props> {
   static defaultProps = {
     checked: false,
     disabled: false,
@@ -58,13 +57,19 @@ class CheckBox extends React.Component<*> {
       onChange,
       ...restProps
     } = this.props;
-    const classes = {
-      [style.disabled]: disabled,
-      [className]: className,
-    };
 
     return (
-      <div className={classnames(style.outer, classes)} id={id} {...restProps}>
+      <div
+        className={classnames(
+          style.outer,
+          {
+            [style.disabled]: disabled,
+          },
+          className,
+        )}
+        id={id}
+        {...restProps}
+      >
         <label className={style.label} htmlFor={id} onClick={handleClick}>
           <Icon
             className={classnames(style.checkbox, style.empty, {

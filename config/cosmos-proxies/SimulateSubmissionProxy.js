@@ -1,16 +1,14 @@
-// @flow
-
-import PropTypes from 'prop-types';
+/* @flow */
 import React from 'react';
 
 const sleep = time => new Promise(resolve => setTimeout(resolve, time));
 
-export default class SimulateSubmissionProxy extends React.Component<*, *> {
-  static propTypes = {
-    nextProxy: PropTypes.object,
-    fixture: PropTypes.object,
-  };
+export type Props = {
+  nextProxy: any,
+  fixture: any,
+};
 
+export default class SimulateSubmissionProxy extends React.Component<Props, *> {
   state = { done: false, submitting: false };
 
   onClick = () => {

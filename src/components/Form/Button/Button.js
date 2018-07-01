@@ -7,32 +7,31 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import Icon from '../../Icon';
 import style from './Button.scss';
 import ButtonSpinner from './ButtonSpinner';
 
-class Button extends React.Component<*> {
-  static propTypes = {
-    submit: PropTypes.bool,
-    color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
-    link: PropTypes.bool,
-    small: PropTypes.bool,
-    large: PropTypes.bool,
-    onClick: PropTypes.func,
-    keyline: PropTypes.bool,
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-    disabled: PropTypes.bool,
-    icon: PropTypes.string,
-    iconLeft: PropTypes.element,
-    iconRight: PropTypes.element,
-    squared: PropTypes.bool,
-    submitting: PropTypes.bool,
-    done: PropTypes.bool,
-    className: PropTypes.string,
-  };
+export type Props = {
+  submit?: boolean,
+  color?: 'teal' | 'blue' | 'green' | 'red' | 'white',
+  link?: boolean,
+  small?: boolean,
+  large?: boolean,
+  onClick: Function,
+  keyline?: boolean,
+  children?: string | Array<any>,
+  disabled?: boolean,
+  icon?: string,
+  iconLeft?: any,
+  iconRight?: any,
+  squared?: boolean,
+  submitting?: boolean,
+  done?: boolean,
+  className?: string,
+};
 
+class Button extends React.Component<Props> {
   static defaultProps = {
     submit: false,
     link: false,
@@ -69,16 +68,19 @@ class Button extends React.Component<*> {
       done,
     } = this.props;
 
-    const buttonClasses = classnames(style.button, {
-      [style[color]]: color && !done,
-      [style.disabled]: disabled,
-      [style.keyline]: keyline,
-      [style.link]: link,
-      [style.squared]: squared,
-      [style.submitting]: submitting,
-      [className]: className,
-      [style.done]: done,
-    });
+    const buttonClasses = classnames(
+      style.button,
+      color && !done && style[color],
+      {
+        [style.disabled]: disabled,
+        [style.keyline]: keyline,
+        [style.link]: link,
+        [style.squared]: squared,
+        [style.submitting]: submitting,
+        [style.done]: done,
+      },
+      className,
+    );
 
     const containerClasses = classnames(style.buttonContainer, {
       [style.small]: small,

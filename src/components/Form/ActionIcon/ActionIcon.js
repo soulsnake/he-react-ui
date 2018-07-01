@@ -7,21 +7,20 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Icon from '../../Icon';
 import style from './ActionIcon.scss';
 
-class ActionIcon extends React.Component<*> {
-  static propTypes = {
-    color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
-    disabled: PropTypes.bool,
-    onClick: PropTypes.func,
-    icon: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    className: PropTypes.string,
-  };
+export type Props = {
+  color?: 'teal' | 'blue' | 'green' | 'red' | 'white',
+  disabled?: boolean,
+  onClick: Function,
+  icon: string,
+  title: string,
+  className?: string,
+};
 
+class ActionIcon extends React.Component<Props> {
   static defaultProps = {
     className: '',
     color: 'teal',
@@ -45,11 +44,12 @@ class ActionIcon extends React.Component<*> {
       title,
       ...rest
     } = this.props;
-    const classes = classnames(style.button, {
-      [style[color]]: color,
-      [style.disabled]: disabled,
-      [className]: className,
-    });
+    const classes = classnames(
+      style.button,
+      color && style[color],
+      disabled && style.disabled,
+      className,
+    );
 
     return (
       <button
