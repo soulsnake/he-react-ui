@@ -8,7 +8,9 @@ type Fixture<T> = {
   name?: string,
 };
 
-function testOneFixture<T>(fixture: Fixture<T>, variant: string) {
+type FixtureList<T> = Fixture<T>[];
+
+function testOneFixture<T>(fixture: Fixture<T>, variant?: string = 'a') {
   const { mount, getWrapper } = createTestContext({ fixture });
   const { component } = fixture;
   const { displayName, name } = component;
@@ -17,13 +19,13 @@ function testOneFixture<T>(fixture: Fixture<T>, variant: string) {
     variant} fixture`, () => expect(getWrapper()).toMatchSnapshot());
 }
 
-export default function testAllFixtures(
-  fixtures: Fixture | Fixture[],
-  variant: string = 'a',
+export default function testAllFixtures<T>(
+  fixtures: Fixture<T> | FixtureList<T>,
+  variant?: string,
 ) {
-  if (typeof fixtures.forEach === 'function') {
-    fixtures.forEach(it => testOneFixture(it));
-  } else {
-    testOneFixture(fixtures, variant);
+  if (!fixtures.forEach) {
+    testOneFixture((fixtures: any), variant);
+  } else if (typeof fixtures.forEach === 'function') {
+    fixtures.forEach(it => testOneFixture((it: any)));
   }
 }
