@@ -5,7 +5,6 @@ import React from 'react';
 import { DateRangePicker as InnerDateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-import momentPropTypes from 'react-moment-proptypes';
 import { Icon, SingleSelect, Label } from '../../../';
 import style from './DateRangePicker.module.scss';
 
