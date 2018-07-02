@@ -107,7 +107,6 @@ class SingleSelect extends React.Component<Props, *> {
     return (
       <div
         className={classnames(className, style.outer, {
-          [className]: className,
           [style.fill]: fill,
           [style.inline]: inline,
         })}

@@ -14,7 +14,7 @@ const parentLayout = {
 };
 
 const formWrapper = {
-  value: TODAY.value,
+  value: TODAY,
 };
 
 const options = [
