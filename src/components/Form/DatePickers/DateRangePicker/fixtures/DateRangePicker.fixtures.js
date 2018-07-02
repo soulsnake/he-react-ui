@@ -3,8 +3,18 @@ import moment from 'moment';
 import component from '../DateRangePicker';
 
 const TODAY = new Date('2018-06-30');
-const LABEL = "Pretend it's June 2018...";
-
+const LAST_MONTH = {
+  label: 'Last month',
+  value: [
+    moment(TODAY)
+      .subtract(1, 'month')
+      .startOf('month'),
+    moment(TODAY)
+      .subtract(1, 'month')
+      .endOf('month'),
+  ],
+};
+const label = "Pretend it's June 2018...";
 const parentLayout = {
   margin: 20,
   padding: 20,
@@ -14,10 +24,12 @@ const parentLayout = {
 };
 
 const formWrapper = {
-  value: TODAY,
+  value: LAST_MONTH.value,
 };
 
 const options = [
+  LAST_MONTH,
+
   {
     label: 'Last month',
     value: [
@@ -61,7 +73,7 @@ export default [
     component,
 
     props: {
-      label: LABEL,
+      label,
       options,
     },
 
@@ -75,7 +87,7 @@ export default [
     component,
 
     props: {
-      label: LABEL,
+      label,
       options,
       fill: true,
     },
@@ -103,7 +115,7 @@ export default [
     parentLayout,
 
     props: {
-      label: LABEL,
+      label,
       options,
       allowCustom: false,
     },
