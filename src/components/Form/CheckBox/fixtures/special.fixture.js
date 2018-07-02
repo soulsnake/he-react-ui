@@ -1,3 +1,4 @@
+// @flow
 import CheckBox from '../';
 
 export default {

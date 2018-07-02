@@ -1,19 +1,21 @@
+// @flow
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import style from './LoadingSpinner.scss';
 
-const colors = ['teal', 'blue', 'green', 'grey', 'red', 'white'];
+type Color = 'teal' | 'blue' | 'green' | 'grey' | 'red' | 'white';
 
-function LoadingSpinner(props) {
+type Props = {
+  className?: string,
+  color?: Color,
+  fidget?: boolean,
+  ringColor?: Color,
+};
+
+function LoadingSpinner(props: Props) {
   const { className, color, fidget, ringColor, ...restProps } = props;
-  const classes = classnames(style.outer, {
-    [style[color]]: color,
-    [className]: className,
-  });
-  const ringClasses = classnames(style.ring, {
-    [style[ringColor]]: ringColor,
-  });
+  const classes = classnames(style.outer, color && style[color], className);
+  const ringClasses = classnames(style.ring, ringColor && style[ringColor]);
 
   return (
     <div className={classes}>
@@ -58,13 +60,6 @@ function LoadingSpinner(props) {
     </div>
   );
 }
-
-LoadingSpinner.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.oneOf(colors),
-  fidget: PropTypes.bool,
-  ringColor: PropTypes.oneOf(colors),
-};
 
 LoadingSpinner.defaultProps = {
   color: 'teal',

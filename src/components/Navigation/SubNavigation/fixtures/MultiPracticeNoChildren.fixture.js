@@ -1,3 +1,4 @@
+// @flow
 import SubNavigation from '../';
 
 export default {
@@ -12,10 +13,16 @@ export default {
       badge: 'FREE',
       items: [],
     },
-    locations: ['Location A', 'Location B'].map(location => ({
-      value: location,
-      label: location,
-    })),
+    locations: [
+      {
+        value: 'Location A',
+        label: 'Location A',
+      },
+      {
+        value: 'Location B',
+        label: 'Location B',
+      },
+    ],
     logoutRoute: '/logout',
   },
 };

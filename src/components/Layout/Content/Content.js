@@ -1,10 +1,9 @@
-// Vendor
-import PropTypes from 'prop-types';
+// @flow
 import React from 'react';
 import LoadingSpinner from '../../Loading/LoadingSpinner';
 import style from './Content.scss';
 
-function Content(props) {
+function Content(props: { children: any }) {
   const { children } = props;
 
   return children ? (
@@ -13,9 +12,5 @@ function Content(props) {
     <LoadingSpinner />
   );
 }
-
-Content.propTypes = {
-  children: PropTypes.any,
-};
 
 export default Content;

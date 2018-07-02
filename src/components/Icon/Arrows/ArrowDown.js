@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function ArrowDown(props) {
+type Props = { className: string };
+
+export default function ArrowDown(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -18,7 +20,3 @@ export default function ArrowDown(props) {
     </svg>
   );
 }
-
-ArrowDown.propTypes = {
-  className: PropTypes.string,
-};

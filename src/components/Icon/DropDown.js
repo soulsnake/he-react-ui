@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function DropDown(props) {
+type Props = { className?: string };
+
+export default function DropDown(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -18,7 +20,3 @@ export default function DropDown(props) {
     </svg>
   );
 }
-
-DropDown.propTypes = {
-  className: PropTypes.string,
-};

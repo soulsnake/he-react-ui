@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Engage(props) {
+type Props = { className?: string };
+
+export default function Engage(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -29,7 +31,3 @@ export default function Engage(props) {
     </svg>
   );
 }
-
-Engage.propTypes = {
-  className: PropTypes.string,
-};

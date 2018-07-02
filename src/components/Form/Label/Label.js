@@ -1,42 +1,44 @@
+// @flow
 /**
  *
  * Label
  *
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import React from 'react';
 import Icon from '../../Icon';
 import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './Label.scss';
 
-function Label(props) {
+type Props = {
+  className: string,
+  error?: boolean,
+  htmlFor?: string,
+  children: any,
+  onChange?: Function,
+};
+
+function Label(props: Props) {
   const { children, className, error, htmlFor, ...restProps } = props;
   const classes = classnames(style.label, {
     [style.error]: error,
     [className]: className,
   });
 
+  const htmlForProp = htmlFor ? { htmlFor } : {};
+
   return (
     <div className={classes} {...restProps}>
       {error && <Icon className={style.icon} name="Alert" />}
       {children ? (
-        <label htmlFor={htmlFor}>{children}</label>
+        <label {...htmlForProp}>{children}</label>
       ) : (
         <LoadingStrip className={style.loading} />
       )}
     </div>
   );
 }
-
-Label.propTypes = {
-  className: PropTypes.string,
-  error: PropTypes.bool,
-  htmlFor: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  onChange: PropTypes.func,
-};
 
 Label.defaultProps = {
   error: false,

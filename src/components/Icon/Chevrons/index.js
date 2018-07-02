@@ -1,4 +1,10 @@
-export ChevronLeft from './ChevronLeft';
-export ChevronRight from './ChevronRight';
-export ChevronUp from './ChevronUp';
-export ChevronDown from './ChevronDown';
+// @flow
+import ChevronLeft from './ChevronLeft';
+import ChevronRight from './ChevronRight';
+import ChevronUp from './ChevronUp';
+import ChevronDown from './ChevronDown';
+
+export { ChevronLeft };
+export { ChevronRight };
+export { ChevronUp };
+export { ChevronDown };

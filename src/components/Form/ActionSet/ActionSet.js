@@ -1,3 +1,5 @@
+// @flow
+
 /**
  *
  * ActionSet
@@ -5,39 +7,32 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import onClickOutside from 'react-onclickoutside';
 import Icon from '../../Icon';
 import style from './ActionSet.scss';
 
-class ActionSet extends React.Component {
-  static propTypes = {
-    children: PropTypes.any.isRequired,
-    expanded: PropTypes.bool,
-    className: PropTypes.string,
-    eventTypes: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string),
-    ]),
-    outsideClickIgnoreClass: PropTypes.string,
-    preventDefault: PropTypes.bool,
-    stopPropagation: PropTypes.bool,
-    disableOnClickOutside: PropTypes.func,
-    enableOnClickOutside: PropTypes.func,
-  };
+type Props = {
+  children: any,
+  expanded?: boolean,
+  className?: string,
+  eventTypes?: string | Array<string>,
+  outsideClickIgnoreClass?: string,
+  preventDefault?: boolean,
+  stopPropagation?: boolean,
+  disableOnClickOutside?: Function,
+  enableOnClickOutside?: Function,
+};
 
+class ActionSet extends React.Component<Props, *> {
   static defaultProps = {
     className: '',
     expanded: false,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false,
-    };
-  }
+  state = {
+    open: false,
+  };
 
   close = () => {
     this.setState({ open: false });
@@ -66,11 +61,14 @@ class ActionSet extends React.Component {
     } = this.props;
     const { open } = this.state;
     const expandable = children.length > 2 && !expanded;
-    const classes = classnames(style.outer, {
-      [style.expandable]: expandable,
-      [style.open]: open,
-      [className]: className,
-    });
+    const classes = classnames(
+      style.outer,
+      {
+        [style.expandable]: expandable,
+        [style.open]: open,
+      },
+      className,
+    );
 
     return (
       <div

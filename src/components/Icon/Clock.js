@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Clock(props) {
+type Props = { className?: string };
+
+export default function Clock(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -21,7 +23,3 @@ export default function Clock(props) {
     </svg>
   );
 }
-
-Clock.propTypes = {
-  className: PropTypes.string,
-};

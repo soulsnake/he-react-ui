@@ -101,8 +101,5 @@ exports[`<Popover /> rendered correctly with base fixture 1`] = `
       </Icon>
     </div>
   </Tooltip>
-  <span
-    className="hidden"
-  />
 </Popover>
 `;

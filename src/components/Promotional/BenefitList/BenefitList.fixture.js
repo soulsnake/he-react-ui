@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import BenefitList from '.';
 import BenefitItem from '../BenefitItem';

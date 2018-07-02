@@ -1,14 +1,14 @@
+// @flow
 /**
  *
  * BenefitItem
  *
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 import Icon from '../../Icon';
 import styles from './BenefitItem.scss';
 
-function BenefitItem(props) {
+export default function BenefitItem(props: { children: any }) {
   const { children } = props;
 
   return (
@@ -18,9 +18,3 @@ function BenefitItem(props) {
     </div>
   );
 }
-
-BenefitItem.propTypes = {
-  children: PropTypes.any.isRequired,
-};
-
-export default BenefitItem;

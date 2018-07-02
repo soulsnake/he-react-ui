@@ -1,3 +1,4 @@
+// @flow
 import PopUp from '../';
 
 export default {
