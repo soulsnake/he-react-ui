@@ -1767,8 +1767,26 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
     className="outer"
   >
     <div
+      className="label label"
+      onChange={[Function]}
+    >
+      <label>
+        Pretend it's June 2018...
+      </label>
+    </div>
+    <div
       className="outer fill"
     >
+      <div
+        className="label label"
+        onChange={[Function]}
+      >
+        <label
+          htmlFor="date-range-picker-select-id"
+        >
+          Pretend it's June 2018...
+        </label>
+      </div>
       <div
         className="container fill"
         onClose={[Function]}
@@ -2214,8 +2232,26 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
     className="outer"
   >
     <div
+      className="label label"
+      onChange={[Function]}
+    >
+      <label>
+        Pretend it's June 2018...
+      </label>
+    </div>
+    <div
       className="outer"
     >
+      <div
+        className="label label"
+        onChange={[Function]}
+      >
+        <label
+          htmlFor="date-range-picker-select-id"
+        >
+          Pretend it's June 2018...
+        </label>
+      </div>
       <div
         className="container"
         onClose={[Function]}
@@ -2451,8 +2487,26 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
     className="outer"
   >
     <div
+      className="label label"
+      onChange={[Function]}
+    >
+      <label>
+        Pretend it's June 2018...
+      </label>
+    </div>
+    <div
       className="outer"
     >
+      <div
+        className="label label"
+        onChange={[Function]}
+      >
+        <label
+          htmlFor="date-range-picker-select-id"
+        >
+          Pretend it's June 2018...
+        </label>
+      </div>
       <div
         className="container"
         onClose={[Function]}
@@ -3465,7 +3519,7 @@ exports[`Cosmos fixtures: FormSection:Loading 1`] = `
     className="right"
   >
     <div
-      className="outer teal"
+      className="outer teal spinner"
     >
       <svg
         className="spinner"
