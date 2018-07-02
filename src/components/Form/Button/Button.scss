@@ -50,6 +50,7 @@
   user-select: none;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   transition-property: flex-grow;
   transition-duration: 0.3s;
@@ -74,9 +75,9 @@
 }
 
 .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 
@@ -191,9 +192,10 @@
 .legacyIcon {
   fill: currentColor;
   height: 24px;
-  margin-left: 12px;
-  margin-right: -8px;
   width: 24px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
 }
 
 .keyline {

@@ -106,13 +106,10 @@ class SingleSelect extends React.Component<Props, *> {
 
     return (
       <div
-        className={classnames(
-          style.outer,
-          {
-            [style.fill]: fill,
-          },
-          className,
-        )}
+        className={classnames(className, style.outer, {
+          [style.fill]: fill,
+          [style.inline]: inline,
+        })}
       >
         {label && (
           <Label className={style.label} htmlFor={id}>
@@ -125,7 +122,6 @@ class SingleSelect extends React.Component<Props, *> {
             [style.disabled]: disabled,
             [style.error]: error,
             [style.fill]: fill,
-            [style.inline]: inline,
           })}
           {...restProps}
         >

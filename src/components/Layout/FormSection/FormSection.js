@@ -18,7 +18,9 @@ function FormSection(props: {
         <Heading h3>{heading}</Heading>
         <Paragraph>{description}</Paragraph>
       </div>
-      <div className={style.right}>{children || <LoadingSpinner />}</div>
+      <div className={style.right}>
+        {children || <LoadingSpinner className={style.spinner} />}
+      </div>
     </div>
   );
 }
