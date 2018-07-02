@@ -1,13 +1,13 @@
+// @flow
 /**
  *
  * Banner
  *
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Banner.scss';
 
-function Banner(props) {
+function Banner(props: { children: any, title: string }) {
   const { children, title } = props;
 
   return (
@@ -17,10 +17,5 @@ function Banner(props) {
     </div>
   );
 }
-
-Banner.propTypes = {
-  children: PropTypes.any,
-  title: PropTypes.string.isRequired,
-};
 
 export default Banner;

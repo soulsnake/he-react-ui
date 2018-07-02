@@ -1,3 +1,4 @@
+// @flow
 import PromoDemo from './PromoDemo';
 
 export default {

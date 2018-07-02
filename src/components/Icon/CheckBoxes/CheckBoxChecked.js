@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function CheckBoxChecked(props) {
+export default function CheckBoxChecked(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (
@@ -16,7 +16,3 @@ export default function CheckBoxChecked(props) {
     </svg>
   );
 }
-
-CheckBoxChecked.propTypes = {
-  className: PropTypes.string,
-};

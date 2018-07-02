@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * SingleSelect
@@ -5,44 +6,37 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Select from 'react-select';
 import Icon from '../../Icon';
 import Label from '../Label';
 import style from './SingleSelect.scss';
 
-class SingleSelect extends React.Component {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    required: PropTypes.bool,
-    disabled: PropTypes.bool,
-    error: PropTypes.string,
-    inline: PropTypes.bool,
-    label: PropTypes.string,
-    placeholder: PropTypes.string,
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        value: PropTypes.any.isRequired,
-      }),
-    ).isRequired,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-    onBeforeOpen: PropTypes.func,
-    onClose: PropTypes.func,
-    eventTypes: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string),
-    ]),
-    preventDefault: PropTypes.bool,
-    stopPropagation: PropTypes.bool,
-    fill: PropTypes.bool,
-    forceTitle: PropTypes.string,
-  };
+type Option = { label: string, value: any };
 
+type Props = {
+  id: string,
+  name: string,
+  className?: string,
+  required?: boolean,
+  disabled?: boolean,
+  error?: string,
+  inline?: boolean,
+  label?: string,
+  placeholder?: string,
+  options: Option[],
+  value?: ?string,
+  onChange: Function,
+  onBeforeOpen: Function,
+  onClose: Function,
+  eventTypes?: string | Array<string>,
+  preventDefault?: boolean,
+  stopPropagation?: boolean,
+  fill?: boolean,
+  forceTitle?: ?string,
+};
+
+class SingleSelect extends React.Component<Props, *> {
   static defaultProps = {
     disabled: false,
     error: '',
@@ -53,25 +47,17 @@ class SingleSelect extends React.Component {
     onClose: () => true,
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    expanded: false,
+  };
 
-    this.state = {
-      expanded: false,
-    };
-    this.getDisplay = this.getDisplay.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-  }
-
-  getDisplay(option) {
+  getDisplay = (option: Option) => {
     const { forceTitle } = this.props;
 
     return forceTitle || option.label;
-  }
+  };
 
-  handleChange(data) {
+  handleChange = (data: Option) => {
     const oldValue = this.props.value;
     if (oldValue !== data.value) {
       const event = {
@@ -81,17 +67,17 @@ class SingleSelect extends React.Component {
 
       this.props.onChange(event);
     }
-  }
+  };
 
-  handleOpen() {
+  handleOpen = () => {
     this.props.onBeforeOpen();
     this.setState({ expanded: true });
-  }
+  };
 
-  handleClose() {
+  handleClose = () => {
     this.setState({ expanded: false });
     this.props.onClose();
-  }
+  };
 
   render() {
     const {
@@ -120,7 +106,7 @@ class SingleSelect extends React.Component {
 
     return (
       <div
-        className={classnames(style.outer, {
+        className={classnames(className, style.outer, {
           [className]: className,
           [style.fill]: fill,
           [style.inline]: inline,

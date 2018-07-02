@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function CheckBoxUnchecked(props) {
+export default function CheckBoxUnchecked(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (
@@ -16,7 +16,3 @@ export default function CheckBoxUnchecked(props) {
     </svg>
   );
 }
-
-CheckBoxUnchecked.propTypes = {
-  className: PropTypes.string,
-};

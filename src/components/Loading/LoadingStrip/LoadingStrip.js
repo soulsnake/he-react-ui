@@ -1,13 +1,11 @@
+// @flow
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import style from './LoadingStrip.scss';
 
-function LoadingStrip(props) {
+function LoadingStrip(props: { className?: string }) {
   const { className } = props;
-  const classes = classnames(style.outer, {
-    [className]: className,
-  });
+  const classes = classnames(style.outer, className);
 
   return (
     <div className={classes}>
@@ -15,9 +13,5 @@ function LoadingStrip(props) {
     </div>
   );
 }
-
-LoadingStrip.propTypes = {
-  className: PropTypes.string,
-};
 
 export default LoadingStrip;

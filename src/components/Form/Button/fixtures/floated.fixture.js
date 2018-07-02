@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
+// @flow
 import React from 'react';
 import Button from '../';
 
-function Wrapper({ children }) {
+function Wrapper({ children }: { children: any }) {
   return (
     <div
       style={{
@@ -19,8 +19,6 @@ function Wrapper({ children }) {
     </div>
   );
 }
-
-Wrapper.propTypes = { children: PropTypes.any };
 
 export default {
   component: Button,

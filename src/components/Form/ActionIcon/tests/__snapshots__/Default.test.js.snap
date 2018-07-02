@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ActionIcon /> rendered correctly with Default fixture 1`] = `
+exports[`<ActionIcon /> rendered correctly with default fixture 1`] = `
 <ActionIcon
   className=""
   color="teal"

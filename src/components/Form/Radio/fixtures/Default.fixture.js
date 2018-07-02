@@ -1,3 +1,4 @@
+// @flow
 import Radio from '../';
 
 export default {

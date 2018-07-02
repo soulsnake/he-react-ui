@@ -1,3 +1,4 @@
+// @flow
 import PrimaryNavigation from '../';
 
 export default {

@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Table from '../';
 import { ActionIcon, ActionSet } from '../../../Form';

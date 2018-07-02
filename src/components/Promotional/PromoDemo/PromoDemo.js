@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Button from '../../Form/Button';
 import Banner from '../Banner';

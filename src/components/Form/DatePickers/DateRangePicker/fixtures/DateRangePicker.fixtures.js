@@ -1,13 +1,17 @@
+// @flow
 import moment from 'moment';
 import component from '../DateRangePicker';
 
-const JULY_2018 = {
+const TODAY = new Date('2018-06-30');
+const LABEL = "Pretend it's June 2018...";
+
+const LAST_MONTH = {
   label: 'Last month',
   value: [
-    moment('20180701', 'YYYYMMDD')
+    moment(TODAY)
       .subtract(1, 'month')
       .startOf('month'),
-    moment('20180701', 'YYYYMMDD')
+    moment(TODAY)
       .subtract(1, 'month')
       .endOf('month'),
   ],
@@ -22,19 +26,19 @@ const parentLayout = {
 };
 
 const formWrapper = {
-  value: JULY_2018.value,
+  value: TODAY.value,
 };
 
 const options = [
-  JULY_2018,
+  TODAY,
 
   {
     label: 'Last 3 months',
     value: [
-      moment('20180701', 'YYYYMMDD')
+      moment(TODAY)
         .subtract(3, 'month')
         .startOf('month'),
-      moment('20180701', 'YYYYMMDD')
+      moment(TODAY)
         .subtract(1, 'month')
         .endOf('month'),
     ],
@@ -43,10 +47,10 @@ const options = [
   {
     label: 'Last 12 months',
     value: [
-      moment('20180701', 'YYYYMMDD')
+      moment(TODAY)
         .subtract(12, 'month')
         .startOf('month'),
-      moment('20180701', 'YYYYMMDD')
+      moment(TODAY)
         .subtract(1, 'month')
         .endOf('month'),
     ],
@@ -59,7 +63,7 @@ export default [
     component,
 
     props: {
-      label: "Pretend it's July 2018...",
+      label: LABEL,
       options,
     },
 
@@ -73,7 +77,7 @@ export default [
     component,
 
     props: {
-      label: "Pretend it's July 2018...",
+      label: LABEL,
       options,
       fill: true,
     },
@@ -101,7 +105,7 @@ export default [
     parentLayout,
 
     props: {
-      label: "Pretend it's July 2018...",
+      label: LABEL,
       options,
       allowCustom: false,
     },

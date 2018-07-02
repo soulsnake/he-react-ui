@@ -1,5 +1,5 @@
+// @flow
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Add from './Add';
 import Alarm from './Alarm';
@@ -35,13 +35,18 @@ import Sync from './Sync';
 import Tick from './Tick';
 import View from './View';
 
-function createIcon(iconProps) {
-  const { width, height, color, className, name, ...restProps } = iconProps;
-  const classes = classnames(style.icon, {
-    [style[color]]: color,
-    [className]: className,
-  });
-  const props = {
+type Color = 'teal' | 'blue' | 'green' | 'red' | 'white';
+
+export default function Icon(props: {
+  width?: number,
+  height?: number,
+  color?: Color,
+  className?: string,
+  name: string,
+}) {
+  const { width, height, color, className, name, ...restProps } = props;
+  const classes = classnames(style.icon, color && style[color], className);
+  const childProps = {
     width,
     height,
     className: classes,
@@ -50,90 +55,80 @@ function createIcon(iconProps) {
 
   switch (name) {
     case 'Add':
-      return <Add {...props} />;
+      return <Add {...childProps} />;
     case 'Alarm':
-      return <Alarm {...props} />;
+      return <Alarm {...childProps} />;
     case 'Alert':
-      return <Alert {...props} />;
+      return <Alert {...childProps} />;
     case 'ArrowLeft':
-      return <ArrowLeft {...props} />;
+      return <ArrowLeft {...childProps} />;
     case 'ArrowRight':
-      return <ArrowRight {...props} />;
+      return <ArrowRight {...childProps} />;
     case 'ArrowUp':
-      return <ArrowUp {...props} />;
+      return <ArrowUp {...childProps} />;
     case 'ArrowDown':
-      return <ArrowDown {...props} />;
+      return <ArrowDown {...childProps} />;
     case 'Bookings':
-      return <Bookings {...props} />;
+      return <Bookings {...childProps} />;
     case 'Calendar':
-      return <Calendar {...props} />;
+      return <Calendar {...childProps} />;
     case 'CaretRight':
-      return <CaretRight {...props} />;
+      return <CaretRight {...childProps} />;
     case 'CheckBoxChecked':
-      return <CheckBoxChecked {...props} />;
+      return <CheckBoxChecked {...childProps} />;
     case 'CheckBoxUnchecked':
-      return <CheckBoxUnchecked {...props} />;
+      return <CheckBoxUnchecked {...childProps} />;
     case 'ChevronLeft':
-      return <ChevronLeft {...props} />;
+      return <ChevronLeft {...childProps} />;
     case 'ChevronRight':
-      return <ChevronRight {...props} />;
+      return <ChevronRight {...childProps} />;
     case 'ChevronUp':
-      return <ChevronUp {...props} />;
+      return <ChevronUp {...childProps} />;
     case 'ChevronDown':
-      return <ChevronDown {...props} />;
+      return <ChevronDown {...childProps} />;
     case 'Clock':
-      return <Clock {...props} />;
+      return <Clock {...childProps} />;
     case 'Cross':
-      return <Cross {...props} />;
+      return <Cross {...childProps} />;
     case 'Delete':
-      return <Delete {...props} />;
+      return <Delete {...childProps} />;
     case 'DropDown':
-      return <DropDown {...props} />;
+      return <DropDown {...childProps} />;
     case 'Edit':
-      return <Edit {...props} />;
+      return <Edit {...childProps} />;
     case 'Engage':
-      return <Engage {...props} />;
+      return <Engage {...childProps} />;
     case 'HealthEngine':
-      return <HealthEngine {...props} />;
+      return <HealthEngine {...childProps} />;
     case 'Help':
-      return <Help {...props} />;
+      return <Help {...childProps} />;
     case 'Home':
-      return <Home {...props} />;
+      return <Home {...childProps} />;
     case 'Megaphone':
-      return <Megaphone {...props} />;
+      return <Megaphone {...childProps} />;
     case 'Patients':
-      return <Patients {...props} />;
+      return <Patients {...childProps} />;
     case 'Ellipsis':
-      return <Ellipsis {...props} />;
+      return <Ellipsis {...childProps} />;
     case 'Logout':
-      return <Logout {...props} />;
+      return <Logout {...childProps} />;
     case 'RadioChecked':
-      return <RadioChecked {...props} />;
+      return <RadioChecked {...childProps} />;
     case 'RadioUnchecked':
-      return <RadioUnchecked {...props} />;
+      return <RadioUnchecked {...childProps} />;
     case 'Search':
-      return <Search {...props} />;
+      return <Search {...childProps} />;
     case 'Settings':
-      return <Settings {...props} />;
+      return <Settings {...childProps} />;
     case 'Sync':
-      return <Sync {...props} />;
+      return <Sync {...childProps} />;
     case 'Tick':
-      return <Tick {...props} />;
+      return <Tick {...childProps} />;
     case 'View':
-      return <View {...props} />;
+      return <View {...childProps} />;
     default:
-      return <Cross {...props} />;
+      return <Cross {...childProps} />;
   }
-}
-
-createIcon.propTypes = {
-  name: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['teal', 'blue', 'green', 'red', 'white']),
-  className: PropTypes.string,
-};
-
-export default function Icon(props) {
-  return createIcon(props);
 }
 
 Icon.defaultProps = {

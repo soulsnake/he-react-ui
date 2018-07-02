@@ -1,9 +1,14 @@
+// @flow
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './PopoverDisplay.module.scss';
 
-function PopoverDisplay(props) {
+export default function PopoverDisplay(props: {
+  children: any,
+  tooltip?: boolean,
+  className?: string,
+  light?: boolean,
+}) {
   const { children, tooltip, className, light } = props;
 
   const tooltipStyle = tooltip && styles.tooltip;
@@ -22,12 +27,3 @@ function PopoverDisplay(props) {
     </div>
   );
 }
-
-PopoverDisplay.propTypes = {
-  children: PropTypes.any,
-  tooltip: PropTypes.bool,
-  className: PropTypes.string,
-  light: PropTypes.bool,
-};
-
-export default PopoverDisplay;

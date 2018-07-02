@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Radio from '../';
 import SingleSelect from '../../SingleSelect';

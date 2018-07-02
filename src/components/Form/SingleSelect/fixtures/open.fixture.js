@@ -1,3 +1,4 @@
+// @flow
 import { InnerSingleSelect } from '../SingleSelect';
 
 export default {

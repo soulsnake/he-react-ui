@@ -1,3 +1,4 @@
+// @flow
 import LoadingStrip from '../';
 
 export default {

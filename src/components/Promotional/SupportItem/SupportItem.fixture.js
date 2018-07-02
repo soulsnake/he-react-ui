@@ -1,3 +1,4 @@
+// @flow
 import SupportItem from '.';
 
 export default {

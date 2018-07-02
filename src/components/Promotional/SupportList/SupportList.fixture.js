@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import SupportList from '.';
 import SupportItem from '../SupportItem';

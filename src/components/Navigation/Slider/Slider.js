@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * Navigation Slider
@@ -5,12 +6,24 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import List from '../List';
 import styles from './Slider.scss';
+import type { NavItem } from '../NavItem';
 
-function Slider(props) {
+type Props = {
+  siteName?: string,
+  itemKey: string,
+  label: string,
+  icon: string,
+  route?: string,
+  items: NavItem[],
+  open?: boolean,
+  bottom?: boolean,
+  onSelect?: Function,
+};
+
+function Slider(props: Props) {
   const { bottom, itemKey, open, siteName, ...restProps } = props;
 
   return (
@@ -24,27 +37,10 @@ function Slider(props) {
       <div className={styles.filler}>
         {siteName && <div className={styles.sitename}>{siteName}</div>}
       </div>
-      <List className={styles.list} itemKey={itemKey} {...restProps} />
+      <List title="" className={styles.list} itemKey={itemKey} {...restProps} />
     </div>
   );
 }
-
-Slider.propTypes = {
-  siteName: PropTypes.string,
-  itemKey: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  route: PropTypes.string,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      route: PropTypes.string.isRequired,
-      notifications: PropTypes.number,
-    }),
-  ),
-  open: PropTypes.bool,
-  bottom: PropTypes.bool,
-  onSelect: PropTypes.func,
-};
 
 Slider.defaultProps = {
   onSelect: () => null,

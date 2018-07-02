@@ -1,1 +1,2 @@
-export default from './Slider';
+// @flow
+export { default } from './Slider';
