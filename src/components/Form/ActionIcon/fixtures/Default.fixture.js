@@ -1,3 +1,4 @@
+// @flow
 import ActionIcon from '../';
 
 export default {

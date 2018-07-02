@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function ChevronRight(props) {
+export default function ChevronRight(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (
@@ -18,7 +18,3 @@ export default function ChevronRight(props) {
     </svg>
   );
 }
-
-ChevronRight.propTypes = {
-  className: PropTypes.string,
-};

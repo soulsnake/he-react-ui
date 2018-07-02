@@ -1,1 +1,2 @@
-export default from './PrimaryNavigation';
+// @flow
+export { default } from './PrimaryNavigation';

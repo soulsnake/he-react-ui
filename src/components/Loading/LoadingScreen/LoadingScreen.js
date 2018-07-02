@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
+// @flow
 import React from 'react';
 import style from './LoadingScreen.module.scss';
 
-export default function LoadingScreen({ children }) {
+export default function LoadingScreen({ children }: { children?: any }) {
   return (
     <div className={style.loadingContainer}>
       <div className={style.pulseButton} />
@@ -10,10 +10,6 @@ export default function LoadingScreen({ children }) {
     </div>
   );
 }
-
-LoadingScreen.propTypes = {
-  children: PropTypes.element,
-};
 
 LoadingScreen.defaultProps = {
   children: null,

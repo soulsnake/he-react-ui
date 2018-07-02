@@ -1,12 +1,21 @@
+// @flow
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Alert from '../Icon/Alert';
 import Cross from '../Icon/Cross';
 import Tick from '../Icon/Tick';
 import styles from './Notification.scss';
 
-export default class Notification extends React.PureComponent {
+type Props = {
+  canClose: boolean,
+  children?: Array<any> | Object | string,
+  className?: string,
+  closed: boolean,
+  onClose: Function,
+  type: 'confirmation' | 'default' | 'error' | 'warning',
+};
+
+export default class Notification extends React.PureComponent<Props> {
   static defaultProps = {
     canClose: false,
     closed: false,
@@ -14,36 +23,20 @@ export default class Notification extends React.PureComponent {
     type: 'default',
   };
 
-  static propTypes = {
-    canClose: PropTypes.bool,
-    children: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.object,
-      PropTypes.string,
-    ]),
-    className: PropTypes.string,
-    closed: PropTypes.bool,
-    onClose: PropTypes.func,
-    type: PropTypes.oneOf(['confirmation', 'default', 'error', 'warning']),
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.handleClose = this.handleClose.bind(this);
-  }
-
-  handleClose(event) {
+  handleClose = (event: SyntheticEvent<>) => {
     this.props.onClose(event);
-  }
+  };
 
   render() {
     const { canClose, children, className, closed, type } = this.props;
-    const notificationClasses = classnames(styles.notification, {
-      [styles[type]]: styles[type],
-      [className]: className,
-      [styles.closed]: closed,
-    });
+    const notificationClasses = classnames(
+      styles.notification,
+      {
+        [styles[type]]: styles[type],
+        [styles.closed]: closed,
+      },
+      className,
+    );
     const iconClasses = classnames(styles.icon, {
       [styles[type]]: styles[type],
     });

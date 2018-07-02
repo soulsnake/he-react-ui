@@ -1,3 +1,4 @@
+// @flow
 import TimeSelector from '../';
 
 export default {

@@ -12134,9 +12134,7 @@ exports[`Cosmos fixtures: Radio:error 1`] = `
         />
       </g>
     </svg>
-    <label
-      htmlFor={undefined}
-    >
+    <label>
       That selection wasn't great
     </label>
   </div>
@@ -12654,9 +12652,7 @@ exports[`Cosmos fixtures: SingleDatePicker:label 1`] = `
     className="label label"
     onChange={[Function]}
   >
-    <label
-      htmlFor={undefined}
-    >
+    <label>
       Which day?
     </label>
   </div>

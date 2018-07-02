@@ -1,3 +1,4 @@
+// @flow
 import FormSection from '../';
 
 export default {

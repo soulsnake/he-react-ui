@@ -1,14 +1,14 @@
+// @flow
 /**
  *
  * Section
  *
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './Section.scss';
 
-function Section(props) {
+function Section(props: { white?: boolean, children: any }) {
   const { children, white } = props;
   const classes = classnames(styles.outer, {
     [styles.white]: white,
@@ -20,11 +20,6 @@ function Section(props) {
     </div>
   );
 }
-
-Section.propTypes = {
-  children: PropTypes.any.isRequired,
-  white: PropTypes.bool,
-};
 
 Section.defaultProps = {
   white: false,

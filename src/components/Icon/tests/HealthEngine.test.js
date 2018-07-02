@@ -1,3 +1,4 @@
+// @flow
 import fixture from '../fixtures/HealthEngine.fixture.js';
 import testFixture from '../../../../config/testFixture';
 

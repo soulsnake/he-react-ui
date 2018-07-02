@@ -1,13 +1,13 @@
+// @flow
 /**
  *
  * Footer
  *
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Footer.scss';
 
-function Footer(props) {
+function Footer(props: { header: string, children: any }) {
   const { children, header } = props;
 
   return (
@@ -17,10 +17,5 @@ function Footer(props) {
     </div>
   );
 }
-
-Footer.propTypes = {
-  children: PropTypes.any.isRequired,
-  header: PropTypes.string.isRequired,
-};
 
 export default Footer;

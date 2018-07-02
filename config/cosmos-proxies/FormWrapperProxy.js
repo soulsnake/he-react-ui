@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
+/* @flow */
 import React from 'react';
 
-export default class FormWrapperProxy extends React.Component {
-  static propTypes = {
-    nextProxy: PropTypes.object,
-    fixture: PropTypes.object,
-  };
+type Props = {
+  nextProxy: any,
+  fixture: any,
+};
 
-  constructor(props) {
+export default class FormWrapperProxy<T> extends React.Component<Props, *> {
+  constructor(props: Props) {
     super(props);
     const { formWrapper } = props.fixture;
     if (formWrapper && typeof formWrapper === 'object') {
@@ -17,7 +17,7 @@ export default class FormWrapperProxy extends React.Component {
 
   state = { value: 0 };
 
-  onChange = ({ value }) => {
+  onChange = ({ value }: { value: T }) => {
     this.setState({ value });
   };
 

@@ -1,13 +1,16 @@
+// @flow
 import moment from 'moment';
 import component from '../DateRangePicker';
+
+const TODAY = new Date('2018-06-30');
 
 const LAST_MONTH = {
   label: 'Last month',
   value: [
-    moment()
+    moment(TODAY)
       .subtract(1, 'month')
       .startOf('month'),
-    moment()
+    moment(TODAY)
       .subtract(1, 'month')
       .endOf('month'),
   ],
@@ -31,10 +34,10 @@ const options = [
   {
     label: 'Last 3 months',
     value: [
-      moment()
+      moment(TODAY)
         .subtract(3, 'month')
         .startOf('month'),
-      moment()
+      moment(TODAY)
         .subtract(1, 'month')
         .endOf('month'),
     ],
@@ -43,10 +46,10 @@ const options = [
   {
     label: 'Last 12 months',
     value: [
-      moment()
+      moment(TODAY)
         .subtract(12, 'month')
         .startOf('month'),
-      moment()
+      moment(TODAY)
         .subtract(1, 'month')
         .endOf('month'),
     ],

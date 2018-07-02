@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Search(props) {
+type Props = { className?: string };
+
+export default function Search(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -18,7 +20,3 @@ export default function Search(props) {
     </svg>
   );
 }
-
-Search.propTypes = {
-  className: PropTypes.string,
-};

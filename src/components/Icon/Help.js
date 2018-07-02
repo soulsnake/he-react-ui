@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Help(props) {
+type Props = { className?: string };
+
+export default function Help(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -20,7 +22,3 @@ export default function Help(props) {
     </svg>
   );
 }
-
-Help.propTypes = {
-  className: PropTypes.string,
-};

@@ -1,3 +1,4 @@
+// @flow
 /*
  * SubNavigation
  */
@@ -5,7 +6,6 @@
 // Vendor
 import classnames from 'classnames';
 import isAbsoluteUrl from 'is-absolute-url';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
@@ -13,31 +13,21 @@ import SingleSelect from '../../Form/SingleSelect';
 import Icon from '../../Icon';
 import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './SubNavigation.scss';
+import type { NavItem } from '../NavItem';
 
-class SubNavigation extends Component {
-  static propTypes = {
-    item: PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      route: PropTypes.string.isRequired,
-      notifications: PropTypes.number,
-      items: PropTypes.arrayOf(
-        PropTypes.shape({
-          key: PropTypes.string.isRequired,
-          label: PropTypes.string.isRequired,
-          route: PropTypes.string.isRequired,
-          exact: PropTypes.bool,
-        }),
-      ),
-    }),
-    locations: PropTypes.array,
-    onLocationChange: PropTypes.func,
-    logoutRoute: PropTypes.string.isRequired,
-    location: PropTypes.object,
-    locationValue: PropTypes.string,
-    loading: PropTypes.bool,
-  };
+type Option = { value: any, label: string };
 
+type Props = {
+  item: NavItem,
+  locations?: Option[],
+  onLocationChange?: Function,
+  logoutRoute: string,
+  location: Location,
+  locationValue?: string,
+  loading?: boolean,
+};
+
+class SubNavigation extends Component<Props> {
   static defaultProps = {
     loading: false,
   };

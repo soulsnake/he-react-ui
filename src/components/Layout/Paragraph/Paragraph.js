@@ -1,16 +1,19 @@
-// Vendor
+// @flow
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './Paragraph.scss';
 
-function Paragraph(props) {
+type Props = {
+  children: any,
+  className?: string,
+};
+
+function Paragraph(props: Props) {
   const { className, children, ...restProps } = props;
-  const classes = classnames(style.paragraph, {
-    [className]: className,
-  });
+  const classes = classnames(style.paragraph, className);
 
   if (children) {
     return (
@@ -27,10 +30,5 @@ function Paragraph(props) {
     </div>
   );
 }
-
-Paragraph.propTypes = {
-  children: PropTypes.any,
-  className: PropTypes.string,
-};
 
 export default Paragraph;

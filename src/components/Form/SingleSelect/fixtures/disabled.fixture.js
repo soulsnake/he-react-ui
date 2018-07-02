@@ -1,3 +1,4 @@
+// @flow
 import SingleSelect from '../';
 
 export default {

@@ -1,3 +1,4 @@
+// @flow
 import fixture from '../fixtures/Heading3.fixture.js';
 import testFixture from '../../../../../config/testFixture';
 

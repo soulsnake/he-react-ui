@@ -1,1 +1,2 @@
-export default from './Notification';
+// @flow
+export { default } from './Notification';

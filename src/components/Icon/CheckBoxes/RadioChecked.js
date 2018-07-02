@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function RadioChecked(props) {
+export default function RadioChecked(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (
@@ -16,7 +16,3 @@ export default function RadioChecked(props) {
     </svg>
   );
 }
-
-RadioChecked.propTypes = {
-  className: PropTypes.string,
-};

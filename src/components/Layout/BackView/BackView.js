@@ -1,16 +1,12 @@
-/*
- * NavView
- */
+// @flow
 
-// Vendor
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../Icon';
 import Heading from '../Heading';
 import style from './BackView.scss';
 
-function BackView(props) {
+function BackView(props: { heading: string, route: string }) {
   const { heading, route } = props;
 
   return (
@@ -29,10 +25,5 @@ function BackView(props) {
     </div>
   );
 }
-
-BackView.propTypes = {
-  heading: PropTypes.string.isRequired,
-  route: PropTypes.string.isRequired,
-};
 
 export default BackView;

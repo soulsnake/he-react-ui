@@ -1,11 +1,15 @@
-import PropTypes from 'prop-types';
+// @flow
 import React from 'react';
 import LoadingSpinner from '../../Loading/LoadingSpinner';
 import Heading from '../Heading';
 import Paragraph from '../Paragraph';
 import style from './FormSection.scss';
 
-function FormSection(props) {
+function FormSection(props: {
+  children: any,
+  heading: string,
+  description: string,
+}) {
   const { children, description, heading, ...restProps } = props;
 
   return (
@@ -18,11 +22,5 @@ function FormSection(props) {
     </div>
   );
 }
-
-FormSection.propTypes = {
-  heading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  children: PropTypes.any.isRequired,
-};
 
 export default FormSection;

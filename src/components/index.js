@@ -1,3 +1,4 @@
+// @flow
 import Icon from './Icon';
 import { PrimaryNavigation } from './Navigation';
 import Notification from './Notification';

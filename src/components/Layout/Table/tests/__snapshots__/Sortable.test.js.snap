@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Table /> rendered correctly with Sortable fixture 1`] = `
+exports[`<Table /> rendered correctly with sortable fixture 1`] = `
 <Table
   body={
     Array [

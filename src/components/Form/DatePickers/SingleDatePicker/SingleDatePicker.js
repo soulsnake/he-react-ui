@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * SingleDatePicker
@@ -5,38 +6,41 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
+import type moment from 'moment';
 import { SingleDatePicker as Picker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import Media from 'react-media';
-import momentPropTypes from 'react-moment-proptypes';
 import Icon from '../../../Icon';
 import Label from '../../Label';
 import styles from './SingleDatePicker.scss';
 
-class SingleDatePicker extends React.Component {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    anchorDirection: PropTypes.oneOf(['left', 'right']),
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    displayFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    error: PropTypes.string,
-    horizontalMargin: PropTypes.number,
-    isOutsideRange: PropTypes.func,
-    inline: PropTypes.bool,
-    label: PropTypes.string,
-    readOnly: PropTypes.bool,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    value: momentPropTypes.momentObj,
-    style: PropTypes.object,
-    placeholder: PropTypes.string,
-  };
+type FocusChange = { focused: string };
 
+type DisplayFormat = Function | string;
+
+type Props = {
+  id: string,
+  anchorDirection?: 'left' | 'right',
+  className?: string,
+  disabled?: boolean,
+  displayFormat?: DisplayFormat,
+  error?: string,
+  horizontalMargin?: number,
+  isOutsideRange?: Function,
+  inline?: boolean,
+  label?: string,
+  readOnly?: boolean,
+  onBlur: Function,
+  onChange: Function,
+  onFocus: Function,
+  value?: moment,
+  style?: Object,
+  placeholder?: string,
+};
+
+class SingleDatePicker extends React.Component<Props, *> {
   static defaultProps = {
     anchorDirection: 'left',
     disabled: false,
@@ -49,18 +53,14 @@ class SingleDatePicker extends React.Component {
     onFocus: () => null,
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    focused: false,
+    date: this.props.value,
+  };
 
-    this.state = {
-      focused: false,
-      date: props.value,
-    };
-    this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleFocusChange = this.handleFocusChange.bind(this);
-  }
-
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(
+    nextProps: typeof SingleDatePicker.prototype.props,
+  ) {
     if (nextProps.value !== this.state.date) {
       this.setState({
         date: nextProps.value,
@@ -68,7 +68,7 @@ class SingleDatePicker extends React.Component {
     }
   }
 
-  handleDateChange = date => {
+  handleDateChange = (date: moment) => {
     const oldDate = this.state.date;
     this.setState({ date });
     if ((oldDate && oldDate.toJSON()) !== (date && date.toJSON())) {
@@ -80,7 +80,8 @@ class SingleDatePicker extends React.Component {
     }
   };
 
-  handleFocusChange = ({ focused }) => {
+  handleFocusChange = (change: FocusChange) => {
+    const { focused } = change;
     this.setState({ focused });
     const event = {
       focused,
@@ -109,13 +110,16 @@ class SingleDatePicker extends React.Component {
       readOnly,
       placeholder,
     } = this.props;
-    const classes = classnames(styles.outer, {
-      [styles.error]: error,
-      [styles.disabled]: disabled,
-      [styles.focused]: this.state.focused,
-      [styles.inline]: inline,
-      [className]: className,
-    });
+    const classes = classnames(
+      styles.outer,
+      {
+        [styles.error]: error,
+        [styles.disabled]: disabled,
+        [styles.focused]: this.state.focused,
+        [styles.inline]: inline,
+      },
+      className,
+    );
 
     return (
       <div className={classes} style={style}>

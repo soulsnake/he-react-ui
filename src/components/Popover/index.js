@@ -1,25 +1,25 @@
-import PropTypes from 'prop-types';
+/* @flow */
 import React from 'react';
 import { Tooltip as Tippy } from 'react-tippy';
 import style from './index.scss';
 import PopoverDisplay from './PopoverDisplay';
 
-export default class Popover extends React.Component {
-  static propTypes = {
-    children: PropTypes.any,
-    content: PropTypes.any,
-    preferRight: PropTypes.bool,
-    triggerOnClick: PropTypes.bool,
-    tooltip: PropTypes.bool,
-    light: PropTypes.bool,
-    className: PropTypes.string,
-  };
+type Props = {
+  children?: any,
+  content?: any,
+  preferRight?: boolean,
+  triggerOnClick?: boolean,
+  tooltip?: boolean,
+  light?: boolean,
+  className?: string,
+};
 
+export default class Popover extends React.Component<Props, *> {
   state = {
     fullyMounted: false,
   };
 
-  notifyMount = node => {
+  notifyMount = (node: ?Node) => {
     if (node) {
       this.setState({ fullyMounted: true });
     }
@@ -59,7 +59,7 @@ export default class Popover extends React.Component {
           {children}
         </Tippy>
 
-        {!this.fullyMounted && (
+        {!this.state.fullyMounted && (
           <span ref={this.notifyMount} className={style.hidden} />
         )}
       </React.Fragment>
