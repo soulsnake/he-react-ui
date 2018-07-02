@@ -1373,7 +1373,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
               <div
                 className="Select-placeholder"
               >
-                May 2018
+                Jun 2018
               </div>
               <div
                 className="Select-input"
@@ -1481,7 +1481,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/01/2018"
+                value="06/01/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -1523,7 +1523,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/31/2018"
+                value="06/30/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -1767,8 +1767,28 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
     className="outer"
   >
     <div
+      className="label label"
+      onChange={[Function]}
+    >
+      <label
+        htmlFor={undefined}
+      >
+        Pretend it's July 2018...
+      </label>
+    </div>
+    <div
       className="outer fill"
     >
+      <div
+        className="label label"
+        onChange={[Function]}
+      >
+        <label
+          htmlFor="date-range-picker-select-id"
+        >
+          Pretend it's July 2018...
+        </label>
+      </div>
       <div
         className="container fill"
         onClose={[Function]}
@@ -1928,7 +1948,7 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/01/2018"
+                value="06/01/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -1970,7 +1990,7 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/31/2018"
+                value="06/30/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2214,8 +2234,28 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
     className="outer"
   >
     <div
+      className="label label"
+      onChange={[Function]}
+    >
+      <label
+        htmlFor={undefined}
+      >
+        Pretend it's July 2018...
+      </label>
+    </div>
+    <div
       className="outer"
     >
+      <div
+        className="label label"
+        onChange={[Function]}
+      >
+        <label
+          htmlFor="date-range-picker-select-id"
+        >
+          Pretend it's July 2018...
+        </label>
+      </div>
       <div
         className="container"
         onClose={[Function]}
@@ -2375,7 +2415,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/01/2018"
+                value="06/01/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2417,7 +2457,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/31/2018"
+                value="06/30/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2451,8 +2491,28 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
     className="outer"
   >
     <div
+      className="label label"
+      onChange={[Function]}
+    >
+      <label
+        htmlFor={undefined}
+      >
+        Pretend it's July 2018...
+      </label>
+    </div>
+    <div
       className="outer"
     >
+      <div
+        className="label label"
+        onChange={[Function]}
+      >
+        <label
+          htmlFor="date-range-picker-select-id"
+        >
+          Pretend it's July 2018...
+        </label>
+      </div>
       <div
         className="container"
         onClose={[Function]}
@@ -2612,7 +2672,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/01/2018"
+                value="06/01/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2654,7 +2714,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="05/31/2018"
+                value="06/30/2018"
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
