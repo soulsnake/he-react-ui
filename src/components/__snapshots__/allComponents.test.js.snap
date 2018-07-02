@@ -1373,7 +1373,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
               <div
                 className="Select-placeholder"
               >
-                Jun 2018
+                Select a date range
               </div>
               <div
                 className="Select-input"
@@ -1481,7 +1481,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/01/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -1523,7 +1523,7 @@ exports[`Cosmos fixtures: DateRangePicker:customOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/30/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -1770,10 +1770,8 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
       className="label label"
       onChange={[Function]}
     >
-      <label
-        htmlFor={undefined}
-      >
-        Pretend it's July 2018...
+      <label>
+        Pretend it's June 2018...
       </label>
     </div>
     <div
@@ -1786,7 +1784,7 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
         <label
           htmlFor="date-range-picker-select-id"
         >
-          Pretend it's July 2018...
+          Pretend it's June 2018...
         </label>
       </div>
       <div
@@ -1794,7 +1792,7 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
         onClose={[Function]}
       >
         <div
-          className="Select select has-value is-clearable is-searchable Select--single"
+          className="Select select is-clearable is-searchable Select--single"
           style={undefined}
         >
           <div
@@ -1811,18 +1809,9 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
               id="react-select-4--value"
             >
               <div
-                className="Select-value"
-                style={undefined}
-                title={undefined}
+                className="Select-placeholder"
               >
-                <span
-                  aria-selected="true"
-                  className="Select-value-label"
-                  id="react-select-4--value-item"
-                  role="option"
-                >
-                  Last month
-                </span>
+                Select a date range
               </div>
               <div
                 className="Select-input"
@@ -1872,24 +1861,6 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
                   
                 </div>
               </div>
-            </span>
-            <span
-              aria-label="Clear value"
-              className="Select-clear-zone"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              title="Clear value"
-            >
-              <span
-                className="Select-clear"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "&times;",
-                  }
-                }
-              />
             </span>
             <span
               className="Select-arrow-zone"
@@ -1948,7 +1919,7 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/01/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -1990,7 +1961,7 @@ exports[`Cosmos fixtures: DateRangePicker:fill 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/30/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2237,10 +2208,8 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
       className="label label"
       onChange={[Function]}
     >
-      <label
-        htmlFor={undefined}
-      >
-        Pretend it's July 2018...
+      <label>
+        Pretend it's June 2018...
       </label>
     </div>
     <div
@@ -2253,7 +2222,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
         <label
           htmlFor="date-range-picker-select-id"
         >
-          Pretend it's July 2018...
+          Pretend it's June 2018...
         </label>
       </div>
       <div
@@ -2261,7 +2230,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
         onClose={[Function]}
       >
         <div
-          className="Select select has-value is-clearable is-searchable Select--single"
+          className="Select select is-clearable is-searchable Select--single"
           style={undefined}
         >
           <div
@@ -2278,18 +2247,9 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
               id="react-select-6--value"
             >
               <div
-                className="Select-value"
-                style={undefined}
-                title={undefined}
+                className="Select-placeholder"
               >
-                <span
-                  aria-selected="true"
-                  className="Select-value-label"
-                  id="react-select-6--value-item"
-                  role="option"
-                >
-                  Last month
-                </span>
+                Select a date range
               </div>
               <div
                 className="Select-input"
@@ -2341,24 +2301,6 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
               </div>
             </span>
             <span
-              aria-label="Clear value"
-              className="Select-clear-zone"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              title="Clear value"
-            >
-              <span
-                className="Select-clear"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "&times;",
-                  }
-                }
-              />
-            </span>
-            <span
               className="Select-arrow-zone"
               onMouseDown={[Function]}
             >
@@ -2415,7 +2357,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/01/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2457,7 +2399,7 @@ exports[`Cosmos fixtures: DateRangePicker:presetsOnly 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/30/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2494,10 +2436,8 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
       className="label label"
       onChange={[Function]}
     >
-      <label
-        htmlFor={undefined}
-      >
-        Pretend it's July 2018...
+      <label>
+        Pretend it's June 2018...
       </label>
     </div>
     <div
@@ -2510,7 +2450,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
         <label
           htmlFor="date-range-picker-select-id"
         >
-          Pretend it's July 2018...
+          Pretend it's June 2018...
         </label>
       </div>
       <div
@@ -2518,7 +2458,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
         onClose={[Function]}
       >
         <div
-          className="Select select has-value is-clearable is-searchable Select--single"
+          className="Select select is-clearable is-searchable Select--single"
           style={undefined}
         >
           <div
@@ -2535,18 +2475,9 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
               id="react-select-7--value"
             >
               <div
-                className="Select-value"
-                style={undefined}
-                title={undefined}
+                className="Select-placeholder"
               >
-                <span
-                  aria-selected="true"
-                  className="Select-value-label"
-                  id="react-select-7--value-item"
-                  role="option"
-                >
-                  Last month
-                </span>
+                Select a date range
               </div>
               <div
                 className="Select-input"
@@ -2598,24 +2529,6 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
               </div>
             </span>
             <span
-              aria-label="Clear value"
-              className="Select-clear-zone"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              title="Clear value"
-            >
-              <span
-                className="Select-clear"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "&times;",
-                  }
-                }
-              />
-            </span>
-            <span
               className="Select-arrow-zone"
               onMouseDown={[Function]}
             >
@@ -2672,7 +2585,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/01/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
@@ -2714,7 +2627,7 @@ exports[`Cosmos fixtures: DateRangePicker:withChoices 1`] = `
                 readOnly={false}
                 required={false}
                 type="text"
-                value="06/30/2018"
+                value=""
               />
               <p
                 className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
