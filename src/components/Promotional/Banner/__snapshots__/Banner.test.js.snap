@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> rendered correctly with a fixture 1`] = `
+<Banner
+  title="The Heading"
+>
+  <div
+    className="outer"
+  >
+    <h1
+      className="title"
+    >
+      The Heading
+    </h1>
+    <div
+      className="content"
+    >
+      <p>
+        This is a paragraph of text made to emulate a quick description of the item being promoted.
+      </p>
+      <Button
+        color="teal"
+        disabled={false}
+        icon=""
+        keyline={false}
+        large={true}
+        link={false}
+        onClick={[Function]}
+        squared={false}
+        submit={false}
+      >
+        <div
+          className="buttonContainer large"
+        >
+          <button
+            className="button teal"
+            onClick={[Function]}
+            type="button"
+          >
+            <div
+              className="content"
+            >
+              Activate now
+            </div>
+          </button>
+        </div>
+      </Button>
+      <Button
+        color="white"
+        disabled={false}
+        icon=""
+        keyline={true}
+        large={true}
+        link={false}
+        onClick={[Function]}
+        squared={false}
+        submit={false}
+      >
+        <div
+          className="buttonContainer large"
+        >
+          <button
+            className="button white keyline"
+            onClick={[Function]}
+            type="button"
+          >
+            <div
+              className="content"
+            >
+              Find out more
+            </div>
+          </button>
+        </div>
+      </Button>
+    </div>
+  </div>
+</Banner>
+`;

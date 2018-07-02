@@ -83,6 +83,20 @@ export default [
   },
 
   {
+    name: 'keepOpenOnDateSelect',
+    component,
+
+    props: {
+      options,
+      keepOpenOnDateSelect: true,
+    },
+
+    parentLayout,
+
+    formWrapper,
+  },
+
+  {
     name: 'fill',
     component,
 

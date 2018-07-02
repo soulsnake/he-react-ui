@@ -27,4 +27,28 @@ export default [
   { name: 'Sync', component: Icon, props: { name: 'Sync' } },
   { name: 'Tick', component: Icon, props: { name: 'Tick' } },
   { name: 'View', component: Icon, props: { name: 'View' } },
+  { name: 'ChevronUp', component: Icon, props: { name: 'ChevronUp' } },
+  { name: 'ChevronDown', component: Icon, props: { name: 'ChevronDown' } },
+  { name: 'ChevronLeft', component: Icon, props: { name: 'ChevronLeft' } },
+  { name: 'ChevronRight', component: Icon, props: { name: 'ChevronRight' } },
+  {
+    name: 'CheckBoxChecked',
+    component: Icon,
+    props: { name: 'CheckBoxChecked' },
+  },
+  {
+    name: 'CheckBoxUnchecked',
+    component: Icon,
+    props: { name: 'CheckBoxUnchecked' },
+  },
+  { name: 'RadioChecked', component: Icon, props: { name: 'RadioChecked' } },
+  {
+    name: 'RadioUnchecked',
+    component: Icon,
+    props: { name: 'RadioUnchecked' },
+  },
+  { name: 'ArrowDown', component: Icon, props: { name: 'ArrowDown' } },
+  { name: 'ArrowLeft', component: Icon, props: { name: 'ArrowLeft' } },
+  { name: 'ArrowRight', component: Icon, props: { name: 'ArrowRight' } },
+  { name: 'ArrowUp', component: Icon, props: { name: 'ArrowUp' } },
 ];
