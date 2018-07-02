@@ -102,6 +102,20 @@
       "src/**/*.{js,jsx}",
       "!src/**/*.fixture.js"
     ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 79.84,
+        "statements": 79.89,
+        "functions": 68.87,
+        "branches": 80.12
+      }
+    },
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "json-summary"
+    ],
     "setupFiles": [
       "<rootDir>/config/jest.config.js"
     ],
