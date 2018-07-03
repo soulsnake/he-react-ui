@@ -117,7 +117,7 @@ class SingleSelect extends React.Component<Props, *> {
             {label}
           </Label>
         )}
-        <div className={classnames(className, style.relative, {})}>
+        <div className={classnames(className, style.relative)}>
           <div
             className={classnames(style.container, {
               [style.expanded]: expanded,
