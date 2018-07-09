@@ -41,8 +41,8 @@
 
 .image {
   display: block;
-  max-width: 512px;
-  max-height: 320px;
+  max-height: 480px;
+  margin-bottom: -32px;
   width: 100%;
   object-fit: contain;
 }
