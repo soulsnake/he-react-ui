@@ -6,7 +6,6 @@
 
 .outer {
   margin-bottom: 12px; // Form auto spacing. Should split out into another componenet eventually.
-  height: 48px;
   width: 280px;
   @include breakpoint(small) {
     width: 100%;
@@ -20,7 +19,7 @@
 .relative {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 48px;
 }
 
 .container {
