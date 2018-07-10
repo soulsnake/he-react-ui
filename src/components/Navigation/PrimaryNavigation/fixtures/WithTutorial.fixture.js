@@ -234,7 +234,8 @@ export default {
             header: 'New navigation',
             content: (
               <div>
-                Duis in vulputate magna. Pellentesque luctus. <br />Vivamus lobortis sagittis lobortis. Curabitur.
+                Duis in vulputate magna. Pellentesque luctus. <br />Vivamus
+                lobortis sagittis lobortis. Curabitur.
               </div>
             ),
             target: {
@@ -258,7 +259,8 @@ export default {
             header: 'BUCKET2',
             content: (
               <div>
-                Donec molestie commodo convallis. Phasellus vitae purus et diam rhoncus efficitur. 
+                Donec molestie commodo convallis. Phasellus vitae purus et diam
+                rhoncus efficitur.
               </div>
             ),
             target: {
@@ -270,7 +272,9 @@ export default {
             header: 'Need some help?',
             content: (
               <div>
-                Proin nibh nibh, condimentum a tristique in, porta eleifend ex. Proin sodales varius fermentum. Ut vitae elit nisi. Phasellus feugiat rhoncus pulvinar
+                Proin nibh nibh, condimentum a tristique in, porta eleifend ex.
+                Proin sodales varius fermentum. Ut vitae elit nisi. Phasellus
+                feugiat rhoncus pulvinar
               </div>
             ),
             target: {
@@ -282,7 +286,8 @@ export default {
             header: 'Settings',
             content: (
               <div>
-                Nulla dolor nisl, faucibus non sagittis ut, viverra a arcu. Fusce maximus posuere metus vel egestas.
+                Nulla dolor nisl, faucibus non sagittis ut, viverra a arcu.
+                Fusce maximus posuere metus vel egestas.
               </div>
             ),
             target: {

@@ -49,21 +49,21 @@ export default {
       },
       steps: [
         {
-          header: 'New navigation',
+          header: 'Pellentesque',
           content: (
             <div>
-              All your menu items have moved <br />to the left hand side.
+              Duis in vulputate magna. Pellentesque luctus. <br />Vivamus
+              lobortis sagittis lobortis. Curabitur.
             </div>
           ),
           top: '0px',
           left: '200px',
         },
         {
-          header: 'Manage your bookings',
+          header: 'Efficitur',
           content: (
             <div>
-              Find all your bookings, reminders <br />history and patient
-              feedback here.
+              Vivamus efficitur lacus at est ornare porta euismod non leo.
             </div>
           ),
           top: '0px',
@@ -81,23 +81,23 @@ export default {
           left: '76px',
         },
         {
-          header: 'Need some help?',
+          header: 'Commodo?',
           content: (
             <div>
-              Access useful resources, how-to guides, <br />important updates
-              and helpful information <br />on installation, integration and{' '}
-              <br />troubleshooting.
+              Donec molestie commodo convallis. Phasellus vitae purus et diam
+              rhoncus efficitur.
             </div>
           ),
           top: '0px',
           left: '76px',
         },
         {
-          header: 'Settings',
+          header: 'Condimentum',
           content: (
             <div>
-              Manage your logins and permissions, <br />appointment types and
-              all other <br />settings here.
+              Proin nibh nibh, condimentum a tristique in, porta eleifend ex.
+              Proin sodales varius fermentum. Ut vitae elit nisi. Phasellus
+              feugiat rhoncus pulvinar
             </div>
           ),
           top: '0px',
