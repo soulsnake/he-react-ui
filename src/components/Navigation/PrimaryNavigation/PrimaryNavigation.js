@@ -14,8 +14,8 @@ import LoadingStrip from '../../Loading/LoadingStrip';
 import Bucket from '../Bucket';
 import Slider from '../Slider';
 import SubNavigation from '../SubNavigation';
-import styles from './PrimaryNavigation.scss';
 import Tutorial from '../../Tutorial';
+import styles from './PrimaryNavigation.scss';
 import type { NavItem } from '../NavItem';
 
 function renderRoutes(
@@ -42,56 +42,6 @@ function renderRoutes(
     />
   );
 }
-class PrimaryNavigation extends Component {
-  static propTypes = {
-    bottomKeys: PropTypes.arrayOf(PropTypes.string),
-    logo: PropTypes.shape({
-      icon: PropTypes.any.isRequired,
-      route: PropTypes.string.isRequired,
-    }),
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        key: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        icon: PropTypes.string.isRequired,
-        route: PropTypes.string,
-        items: PropTypes.arrayOf(
-          PropTypes.shape({
-            key: PropTypes.string.isRequired,
-            title: PropTypes.string.isRequired,
-            route: PropTypes.string.isRequired,
-            badge: PropTypes.oneOf(SUPPORTED_BADGES),
-            notifications: PropTypes.number,
-            items: PropTypes.arrayOf(
-              PropTypes.shape({
-                key: PropTypes.string.isRequired,
-                label: PropTypes.string.isRequired,
-                route: PropTypes.string.isRequired,
-              }),
-            ),
-          }),
-        ),
-      }),
-    ).isRequired,
-    locations: PropTypes.array,
-    onLocationChange: PropTypes.func,
-    locationValue: PropTypes.string,
-    logoutRoute: PropTypes.string.isRequired,
-    loading: PropTypes.bool,
-    children: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.object,
-      PropTypes.string,
-    ]),
-    tutorialProps: PropTypes.shape({
-      showing: PropTypes.bool,
-      tutorialStages: PropTypes.shape({
-        intro: PropTypes.object,
-        steps: PropTypes.array,
-      }),
-    }),
-  };
 
 type Logo = { icon: any, route: string };
 
@@ -106,6 +56,7 @@ type Props = {
   logoutRoute: string,
   loading?: boolean,
   children: any,
+  tutorialProps: any,
 };
 
 class PrimaryNavigation extends Component<Props, *> {
@@ -122,32 +73,21 @@ class PrimaryNavigation extends Component<Props, *> {
 
   state = {
     openKey: (null: ?string),
+    currentTutorialPosition: {
+      top: 76,
+      left: 76,
+      reversed: false,
+    },
   };
-
-    this.state = {
-      openKey: null,
-      currentTutorialPosition: {
-        top: 76,
-        left: 76,
-        reversed: false,
-      },
-    };
-
-    this.closeBucket = this.closeBucket.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.renderBuckets = this.renderBuckets.bind(this);
-    this.renderSliders = this.renderSliders.bind(this);
-    this.toggleBucket = this.toggleBucket.bind(this);
-    this.renderSubNav = this.renderSubNav.bind(this);
-  }
 
   onChangeStep = step => {
     const openBucket = step.target.bucket && step.target.item;
+    const bucketEl = step.target.bucket
+      ? document.getElementById(`BUCKET_${step.target.bucket}`)
+      : null;
     const el = step.target.item
       ? document.getElementById(`NAV_${step.target.item}`)
-      : step.target.bucket
-        ? document.getElementById(`BUCKET_${step.target.bucket}`)
-        : null;
+      : bucketEl;
     this.closeBucket();
     if (openBucket) {
       this.toggleBucket(step.target.bucket);
@@ -165,7 +105,7 @@ class PrimaryNavigation extends Component<Props, *> {
     }
   };
 
-  closeBucket() {
+  closeBucket = () => {
     this.setState({ openKey: null });
   };
 

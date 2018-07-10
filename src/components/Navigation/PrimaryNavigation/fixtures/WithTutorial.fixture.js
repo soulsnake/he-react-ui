@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import classnames from 'classnames';
 import PrimaryNavigation from '../';
@@ -258,7 +259,8 @@ export default {
             header: 'Provide better care experiences',
             content: (
               <div>
-                Send recalls, message your <br />patients, and manage prescription<br />requests here.
+                Send recalls, message your <br />patients, and manage
+                prescription<br />requests here.
               </div>
             ),
             target: {

@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function HealthEngineWithText(props) {
+export default function HealthEngineWithText(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (
@@ -143,8 +143,3 @@ export default function HealthEngineWithText(props) {
     </svg>
   );
 }
-
-HealthEngineWithText.propTypes = {
-  className: PropTypes.string,
-  inverted: PropTypes.bool,
-};

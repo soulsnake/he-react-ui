@@ -1,11 +1,11 @@
+// @flow
 /**
  *
  * Tutorial
  *
  */
 import classnames from 'classnames';
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment, Component } from 'react';
 
 import Icon from '../Icon';
 import LoadingSpinner from '../Loading/LoadingSpinner';
@@ -14,22 +14,22 @@ import CheckBox from '../Form/CheckBox';
 import styles from './Tutorial.scss';
 import CarouselIndicator from '../Layout/CarouselIndicator';
 
-class Tutorial extends React.Component {
-  static propTypes = {
-    className: PropTypes.string,
-    showing: PropTypes.bool,
-    style: PropTypes.object,
-    tutorialStages: PropTypes.object,
-    onClose: PropTypes.func,
-    onChangeStep: PropTypes.func,
-    left: PropTypes.number,
-    top: PropTypes.number,
-    reversed: PropTypes.bool,
-  };
+type Props = {
+  className: string,
+  showing: boolean,
+  style: any,
+  tutorialStages: any,
+  onClose: Function,
+  onChangeStep: Function,
+  left: number,
+  top: number,
+  reversed: boolean,
+};
 
+class Tutorial extends Component<Props, *> {
   static defaultProps = {
     showing: false,
-    onChangeStep: e => null,
+    onChangeStep: () => null,
     top: 0,
     left: 0,
     reversed: false,
