@@ -60,19 +60,9 @@ function Bucket(props: Props) {
       {notificationChild && <div className={styles.notification} />}
     </Fragment>
   );
-    const props = {
-      id: `BUCKET_${itemKey}`,
-      key: itemKey,
-      className: classnames(styles.bucket, {
-        [styles.open]: open,
-        [styles.external]: external,
-        [styles.current]: activeChild,
-      }),
-      title: label,
-      onClick: () => (route ? onClickRoute() : onClickParent()),
-    };
 
   const childProps = {
+    id: `BUCKET_${itemKey}`,
     key: itemKey,
     className: classnames(styles.bucket, {
       [styles.open]: open,
