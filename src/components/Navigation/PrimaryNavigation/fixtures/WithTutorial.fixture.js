@@ -234,7 +234,7 @@ export default {
             header: 'New navigation',
             content: (
               <div>
-                All your menu items have moved <br />to the left hand side.
+                Duis in vulputate magna. Pellentesque luctus. <br />Vivamus lobortis sagittis lobortis. Curabitur.
               </div>
             ),
             target: {
@@ -243,11 +243,10 @@ export default {
             },
           },
           {
-            header: 'Manage your bookings',
+            header: 'BUCKET1',
             content: (
               <div>
-                Find all your bookings, reminders <br />history and patient
-                feedback here.
+                Vivamus efficitur lacus at est ornare porta euismod non leo.
               </div>
             ),
             target: {
@@ -256,11 +255,10 @@ export default {
             },
           },
           {
-            header: 'Provide better care experiences',
+            header: 'BUCKET2',
             content: (
               <div>
-                Send recalls, message your <br />patients, and manage
-                prescription<br />requests here.
+                Donec molestie commodo convallis. Phasellus vitae purus et diam rhoncus efficitur. 
               </div>
             ),
             target: {
@@ -272,9 +270,7 @@ export default {
             header: 'Need some help?',
             content: (
               <div>
-                Access useful resources, how-to guides, <br />important updates
-                and helpful information <br />on installation, integration and{' '}
-                <br />troubleshooting.
+                Proin nibh nibh, condimentum a tristique in, porta eleifend ex. Proin sodales varius fermentum. Ut vitae elit nisi. Phasellus feugiat rhoncus pulvinar
               </div>
             ),
             target: {
@@ -286,8 +282,7 @@ export default {
             header: 'Settings',
             content: (
               <div>
-                Manage your logins and permissions, <br />appointment types and
-                all other <br />settings here.
+                Nulla dolor nisl, faucibus non sagittis ut, viverra a arcu. Fusce maximus posuere metus vel egestas.
               </div>
             ),
             target: {

@@ -13,7 +13,7 @@ type Props = {
   length?: number,
   current?: number,
   showNext?: boolean,
-  nextStep?: func,
+  nextStep?: Function,
   className?: string,
 };
 
