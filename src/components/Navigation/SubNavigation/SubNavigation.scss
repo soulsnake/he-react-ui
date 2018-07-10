@@ -5,18 +5,20 @@
   color: $grey_1;
   flex-grow: 0;
   font-family: $font-stack;
-  padding: 20px 48px;
+  padding: 0 44px 2px 44px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $grey_5;
+  @include breakpoint(small) {
+    padding: 16px 16px 2px 16px;
+  }
 }
 
-.heading {
-  color: $teal_dark_60;
-  margin-bottom: 0;
-  min-width: 180px;
-}
-
-.items { 
-  margin-top: 32px;
+.items {
   display: flex;
+  margin-top: 20px;
+  @include breakpoint(small) {
+    margin-top: 0;
+  }
 }
 
 .item {
@@ -26,14 +28,16 @@
   text-decoration: none;
   user-select: none;
   @include breakpoint(small) {
-    padding: 0 8px 8px;
+    padding: 0 8px 10px;
   }
+
   &:first-child {
     padding-left: 0;
   }
+
   span {
-    padding-bottom: 16px;
-    border-bottom: solid 6px transparent;
+    padding-bottom: 10px;
+    border-bottom: solid 3px transparent;
   }
 }
 
@@ -46,14 +50,62 @@
 }
 
 .top {
-  display: flex;
   justify-content: space-between;
-  .controls {
-    .control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 76px;
+  @include breakpoint(small) {
+    display: inline-block;
+    min-height: 64px;
+    width: 100%;
+  }
+
+  .heading {
+    color: $teal_dark_60;
+    margin: 0;
+    font-weight: $regular;
+    font-size: 20px;
+    flex: 1 0;
+    @include breakpoint(small) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .control {
+    color: $grey_2;
+    padding: 0 28px;
+    @include breakpoint(small) {
+      padding: 0;
+    }
+
+    &.selector {
+      width: 270px;
+      @include breakpoint(small) {
+        display: block;
+        width: 100%;
+        padding: 0 0 8px 0;
+      }
+    }
+
+    &.logout {
+      float:right;
+      border-left: 1px solid $grey_4;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      @include breakpoint(small) {
+        border-left: none;
+        position: absolute;
+        right: 16px;
+        top: 8px;
+      }
+
       .navLink {
         color: $grey_2;
         text-decoration: none;
-        line-height: 43px;
+
         .icon {
           margin-right: 8px;
           margin-bottom: -2px;
@@ -61,32 +113,16 @@
           height: 16px;
         }
       }
-      padding: 0 28px;
-      border-right: 1px solid $grey_4;
-      &:last-child {
-        border-right: none;
-        padding-right: 0;
-      }
-      .locationSelector {
-        display: inline-block;
-        width: fit-content;
-        div {
-          border: none;
-          color: $grey_2;
-          svg {
-            color: $grey_2;
-            &:hover {
-              color: $grey_1;
-            }
-          }
-        }
-      }
     }
   }
 }
 
-:global {
-  #locationSelector {
-    margin-bottom: 0px;
-  }
+.loadingHeading {
+  height: 20px;
+  width: 180px;
+}
+
+.loadingLocation {
+  height: 20px;
+  width: 170px;
 }

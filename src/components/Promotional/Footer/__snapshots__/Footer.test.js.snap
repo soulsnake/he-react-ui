@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> rendered correctly with a fixture 1`] = `
+<Footer
+  header="Ready for this product?"
+>
+  <div
+    className="outer"
+  >
+    <h2
+      className="header"
+    >
+      Ready for this product?
+    </h2>
+    <div
+      className="content"
+    >
+      <p>
+        This product will change everything.
+      </p>
+      <Button
+        color="teal"
+        disabled={false}
+        icon=""
+        keyline={false}
+        large={true}
+        link={false}
+        onClick={[Function]}
+        squared={false}
+        submit={false}
+      >
+        <div
+          className="buttonContainer large"
+        >
+          <button
+            className="button teal"
+            onClick={[Function]}
+            type="button"
+          >
+            <div
+              className="content"
+            >
+              Activate now
+            </div>
+          </button>
+        </div>
+      </Button>
+      <Button
+        color="white"
+        disabled={false}
+        icon=""
+        keyline={true}
+        large={true}
+        link={false}
+        onClick={[Function]}
+        squared={false}
+        submit={false}
+      >
+        <div
+          className="buttonContainer large"
+        >
+          <button
+            className="button white keyline"
+            onClick={[Function]}
+            type="button"
+          >
+            <div
+              className="content"
+            >
+              Find out more
+            </div>
+          </button>
+        </div>
+      </Button>
+    </div>
+  </div>
+</Footer>
+`;

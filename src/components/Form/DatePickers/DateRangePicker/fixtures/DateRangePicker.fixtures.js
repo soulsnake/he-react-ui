@@ -1,18 +1,20 @@
+// @flow
 import moment from 'moment';
-import DateRangePicker from '../DateRangePicker';
+import component from '../DateRangePicker';
 
+const TODAY = new Date('2018-06-30');
 const LAST_MONTH = {
   label: 'Last month',
   value: [
-    moment()
+    moment(TODAY)
       .subtract(1, 'month')
       .startOf('month'),
-    moment()
+    moment(TODAY)
       .subtract(1, 'month')
       .endOf('month'),
   ],
 };
-
+const label = "Pretend it's June 2018...";
 const parentLayout = {
   margin: 20,
   padding: 20,
@@ -29,12 +31,24 @@ const options = [
   LAST_MONTH,
 
   {
+    label: 'Last month',
+    value: [
+      moment(TODAY)
+        .subtract(1, 'month')
+        .startOf('month'),
+      moment(TODAY)
+        .subtract(1, 'month')
+        .endOf('month'),
+    ],
+  },
+
+  {
     label: 'Last 3 months',
     value: [
-      moment()
+      moment(TODAY)
         .subtract(3, 'month')
         .startOf('month'),
-      moment()
+      moment(TODAY)
         .subtract(1, 'month')
         .endOf('month'),
     ],
@@ -43,10 +57,10 @@ const options = [
   {
     label: 'Last 12 months',
     value: [
-      moment()
+      moment(TODAY)
         .subtract(12, 'month')
         .startOf('month'),
-      moment()
+      moment(TODAY)
         .subtract(1, 'month')
         .endOf('month'),
     ],
@@ -56,9 +70,10 @@ const options = [
 export default [
   {
     name: 'withChoices',
-    component: DateRangePicker,
+    component,
 
     props: {
+      label,
       options,
     },
 
@@ -68,7 +83,36 @@ export default [
   },
 
   {
-    component: DateRangePicker,
+    name: 'keepOpenOnDateSelect',
+    component,
+
+    props: {
+      options,
+      keepOpenOnDateSelect: true,
+    },
+
+    parentLayout,
+
+    formWrapper,
+  },
+
+  {
+    name: 'fill',
+    component,
+
+    props: {
+      label,
+      options,
+      fill: true,
+    },
+
+    parentLayout,
+
+    formWrapper,
+  },
+
+  {
+    component,
 
     name: 'customOnly',
 
@@ -78,19 +122,23 @@ export default [
   },
 
   {
-    component: DateRangePicker,
+    component,
 
     name: 'presetsOnly',
 
     parentLayout,
 
-    props: { options, allowCustom: false },
+    props: {
+      label,
+      options,
+      allowCustom: false,
+    },
 
     formWrapper,
   },
 
   {
-    component: DateRangePicker,
+    component,
 
     name: 'noInitialValue',
 
@@ -102,7 +150,7 @@ export default [
   },
 
   {
-    component: DateRangePicker,
+    component,
 
     name: 'customPlaceholder',
 
@@ -118,7 +166,7 @@ export default [
   },
   /* This fixture is temporarily commented out because it cannot be safely tested within JSDOM. */
   // {
-  //   component: DateRangePicker,
+  //   component,
   //   name: 'customPickerOpen',
   //   parentLayout,
   //   formWrapper,

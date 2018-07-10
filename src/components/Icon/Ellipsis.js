@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Ellipsis(props) {
+type Props = { className?: string };
+
+export default function Ellipsis(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -20,7 +22,3 @@ export default function Ellipsis(props) {
     </svg>
   );
 }
-
-Ellipsis.propTypes = {
-  className: PropTypes.string,
-};

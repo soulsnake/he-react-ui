@@ -1,12 +1,11 @@
+// @flow
 /*
  * Table
  */
 
 // Vendor
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
+import React, { Component } from 'react';
 import Icon from '../../Icon';
 import { LoadingSpinner, LoadingStrip } from '../../Loading';
 import style from './Table.scss';
@@ -22,38 +21,31 @@ function defaultSort(a, b) {
   }
   return 0;
 }
-class Table extends Component {
-  static propTypes = {
-    columns: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        width: PropTypes.oneOf(['extraNarrow', 'narrow', 'wide', 'extraWide']),
-        sortable: PropTypes.bool,
-        sortFunction: PropTypes.func,
-      }),
-    ).isRequired,
-    body: PropTypes.arrayOf(
-      PropTypes.shape({
-        inactive: PropTypes.bool,
-        content: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
-      }),
-    ),
+
+type Width = 'extraNarrow' | 'narrow' | 'wide' | 'extraWide';
+
+type Props = {
+  columns: {
+    title: string,
+    width: Width,
+    sortable: boolean,
+    sortFunction: Function,
+  }[],
+
+  body: {
+    inactive: boolean,
+    content: any[],
+  }[],
+};
+
+class Table extends Component<Props, *> {
+  state = {
+    sortAscending: true,
+    sortColumn: null,
+    sortedBody: this.props.body,
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      sortAscending: true,
-      sortColumn: null,
-      sortedBody: props.body,
-    };
-    this.renderHeaders = this.renderHeaders.bind(this);
-    this.renderBody = this.renderBody.bind(this);
-    this.sortBody = this.sortBody.bind(this);
-  }
-
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     this.setState({
       sortAscending: true,
       sortColumn: null,
@@ -61,7 +53,7 @@ class Table extends Component {
     });
   }
 
-  sortBody(columnIndex, sortFunction) {
+  sortBody = (columnIndex: number, sortFunction: Function) => {
     const { sortAscending, sortColumn, sortedBody } = this.state;
     const ascending = sortColumn === columnIndex ? !sortAscending : true;
     const body = sortedBody.sort(
@@ -76,9 +68,9 @@ class Table extends Component {
       sortColumn: columnIndex,
       sortedBody: body,
     });
-  }
+  };
 
-  renderBody() {
+  renderBody = () => {
     const { columns } = this.props;
     const { sortedBody } = this.state;
 
@@ -86,14 +78,14 @@ class Table extends Component {
       return sortedBody.map((row, rowIndex) => (
         <div
           className={classnames(style.row, { [style.inactive]: row.inactive })}
-          key={rowIndex}
+          key={rowIndex} // eslint-disable-line react/no-array-index-key
         >
           {row.content.map((cell, cellIndex) => (
             <div
               className={classnames(style.cell, {
                 [style[columns[cellIndex].width]]: columns[cellIndex].width,
               })}
-              key={cellIndex}
+              key={cellIndex} // eslint-disable-line react/no-array-index-key
             >
               {cell}
             </div>
@@ -102,44 +94,52 @@ class Table extends Component {
       ));
     }
     return <LoadingSpinner className={style.bodyLoading} />;
-  }
+  };
 
-  renderHeaders() {
+  renderHeaders = () => {
     const { sortBody } = this;
     const { columns } = this.props;
     const { sortAscending, sortColumn } = this.state;
 
     if (columns && columns.length > 0) {
-      return columns.map((column, index) => (
-        <div
-          className={classnames(style.heading, {
-            [style[column.width]]: column.width,
-            [style.sortable]: column.sortable,
-            [style.ascending]: sortColumn === index && sortAscending,
-            [style.descending]: sortColumn === index && !sortAscending,
-          })}
-          onClick={() =>
-            column.sortable &&
-            sortBody(index, column.sortFunction || defaultSort)
-          }
-          key={index}
-        >
-          <span className={style.title}>{column.title}</span>
-          {sortColumn === index && (
-            <Icon className={style.caret} name="DropDown" />
-          )}
-        </div>
-      ));
+      return (
+        <React.Fragment>
+          {columns.map((column, index) => (
+            <div
+              className={classnames(style.heading, {
+                [style[column.width]]: column.width,
+                [style.sortable]: column.sortable,
+                [style.ascending]: sortColumn === index && sortAscending,
+                [style.descending]: sortColumn === index && !sortAscending,
+              })}
+              onClick={() =>
+                column.sortable &&
+                sortBody(index, column.sortFunction || defaultSort)
+              }
+              key={column.title}
+            >
+              <span className={style.title}>{column.title}</span>
+              {sortColumn === index && (
+                <Icon className={style.caret} name="DropDown" />
+              )}
+            </div>
+          ))}
+        </React.Fragment>
+      );
     }
-    return ['narrow', 'wide', 'extraNarrow'].map((width, index) => (
-      <div
-        key={index}
-        className={classnames(style.heading, { [style[width]]: width })}
-      >
-        <LoadingStrip />
-      </div>
-    ));
-  }
+    return (
+      <React.Fragment>
+        {['narrow', 'wide', 'extraNarrow'].map(width => (
+          <div
+            key={width}
+            className={classnames(style.heading, { [style[width]]: width })}
+          >
+            <LoadingStrip />
+          </div>
+        ))}
+      </React.Fragment>
+    );
+  };
 
   render() {
     const { renderHeaders, renderBody } = this;

@@ -1,5 +1,7 @@
+// @flow
 import BackView from './BackView';
 import CarouselIndicator from './CarouselIndicator';
+import Content from './Content';
 import EvenGrid from './EvenGrid';
 import Footer from './Footer';
 import FormSection from './FormSection';
@@ -11,6 +13,7 @@ import TabView from './TabView';
 export {
   BackView,
   CarouselIndicator,
+  Content,
   EvenGrid,
   Footer,
   FormSection,

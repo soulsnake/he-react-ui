@@ -1,3 +1,4 @@
+// @flow
 import Heading from '../';
 
 export default {

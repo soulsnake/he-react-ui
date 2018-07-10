@@ -1,3 +1,4 @@
+// @flow
 import ActionIcon from './ActionIcon';
 import ActionSet from './ActionSet';
 import Button from './Button';

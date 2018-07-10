@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<OnClickOutside(TimeSelector) /> rendered correctly with Default fixture 1`] = `
+exports[`<TimeSelector /> rendered correctly with default fixture 1`] = `
 <OnClickOutside(TimeSelector)
   eventTypes={
     Array [

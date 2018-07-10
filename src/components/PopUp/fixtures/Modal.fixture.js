@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import PopUp from '../';
 import { Paragraph } from '../..';
@@ -11,9 +12,9 @@ export default {
   children: (
     <div>
       <Paragraph>
-        This modal popup can't be closed without a parent interfering.
+        This modal popup cannot be closed without a parent interfering.
       </Paragraph>
-      <Paragraph>If only the 'showing' property were set to false.</Paragraph>
+      <Paragraph>If only the `showing` property were set to false.</Paragraph>
     </div>
   ),
 };

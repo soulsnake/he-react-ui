@@ -1,3 +1,4 @@
+// @flow
 import React, { Fragment } from 'react';
 import PrimaryNavigation from '../';
 import Button from '../../../Form/Button';
@@ -13,11 +14,18 @@ export default {
     </Fragment>
   ),
   props: {
+    siteName: 'Your Site',
     logoutRoute: '/logout',
-    locations: ['Location A', 'Location B'].map(location => ({
-      value: location,
-      label: location,
-    })),
+    locations: [
+      {
+        value: 'Location A',
+        label: 'Location A',
+      },
+      {
+        value: 'Location B',
+        label: 'Location B',
+      },
+    ],
     bottomKeys: ['HELP', 'SETTINGS'],
     items: [
       {

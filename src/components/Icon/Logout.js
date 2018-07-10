@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Logout(props) {
+type Props = { className?: string };
+
+export default function Logout(props: Props) {
   const { className, ...restProps } = props;
 
   return (
@@ -19,7 +21,3 @@ export default function Logout(props) {
     </svg>
   );
 }
-
-Logout.propTypes = {
-  className: PropTypes.string,
-};

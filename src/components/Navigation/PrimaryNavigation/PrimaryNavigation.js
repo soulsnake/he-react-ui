@@ -1,11 +1,10 @@
+// @flow
 /**
  *
  * Primary Navigation
  *
  */
 
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import onClickOutside from 'react-onclickoutside';
 import { NavLink } from 'react-router-dom';
@@ -17,8 +16,7 @@ import Slider from '../Slider';
 import SubNavigation from '../SubNavigation';
 import styles from './PrimaryNavigation.scss';
 import Tutorial from '../../Tutorial';
-
-const SUPPORTED_BADGES = ['NEW', 'FREE'];
+import type { NavItem } from '../NavItem';
 
 function renderRoutes(
   item,
@@ -95,7 +93,24 @@ class PrimaryNavigation extends Component {
     }),
   };
 
+type Logo = { icon: any, route: string };
+
+type Props = {
+  siteName?: string,
+  bottomKeys: string[],
+  logo: Logo,
+  items: NavItem[],
+  locations?: {}[], // TODO
+  onLocationChange?: Function,
+  locationValue?: string,
+  logoutRoute: string,
+  loading?: boolean,
+  children: any,
+};
+
+class PrimaryNavigation extends Component<Props, *> {
   static defaultProps = {
+    siteName: 'HealthEngine',
     bottomKeys: [],
     logo: {
       icon: <Icon className={styles.logo} name="HealthEngine" inverted />,
@@ -105,8 +120,9 @@ class PrimaryNavigation extends Component {
     tutorialProps: null,
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    openKey: (null: ?string),
+  };
 
     this.state = {
       openKey: null,
@@ -151,21 +167,21 @@ class PrimaryNavigation extends Component {
 
   closeBucket() {
     this.setState({ openKey: null });
-  }
+  };
 
-  toggleBucket(key) {
+  toggleBucket = key => {
     const { openKey } = this.state;
 
     this.setState({ openKey: key === openKey ? null : key });
-  }
+  };
 
   handleClickOutside = () => {
     this.setState({ openKey: null });
   };
 
-  renderSliders() {
+  renderSliders = () => {
     const { closeBucket } = this;
-    const { bottomKeys, items } = this.props;
+    const { bottomKeys, items, siteName } = this.props;
     const { openKey } = this.state;
     const topItems = items.filter(item => !bottomKeys.includes(item.key));
     const bottomItems = items.filter(item => bottomKeys.includes(item.key));
@@ -177,6 +193,7 @@ class PrimaryNavigation extends Component {
             open={openKey === item.key}
             onSelect={closeBucket}
             itemKey={item.key}
+            siteName={siteName}
             {...item}
           />
         ))}
@@ -191,9 +208,9 @@ class PrimaryNavigation extends Component {
         ))}
       </div>
     );
-  }
+  };
 
-  renderBuckets() {
+  renderBuckets = () => {
     const { closeBucket, toggleBucket } = this;
     const { bottomKeys, items, loading, logo } = this.props;
     const { openKey } = this.state;
@@ -213,9 +230,10 @@ class PrimaryNavigation extends Component {
           <Fragment>
             <LoadingStrip className={styles.loadingBucket} />
             <LoadingStrip className={styles.loadingBucket} />
-            <LoadingStrip
-              className={classnames(styles.loadingBucket, styles.bottom)}
-            />
+            <LoadingStrip className={styles.loadingBucket} />
+            <div className={styles.bucketFiller} />
+            <LoadingStrip className={styles.loadingBucket} />
+            <LoadingStrip className={styles.loadingBucket} />
           </Fragment>
         ) : (
           <Fragment>
@@ -242,9 +260,15 @@ class PrimaryNavigation extends Component {
         )}
       </div>
     );
-  }
+  };
 
-  renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute) {
+  renderSubNav = (
+    items,
+    locations,
+    onLocationChange,
+    locationValue,
+    logoutRoute,
+  ) => {
     const { loading } = this.props;
 
     if (loading) {
@@ -252,28 +276,27 @@ class PrimaryNavigation extends Component {
     }
 
     return items.map(item => {
-      switch (item.items && item.items.length > 0) {
-        case true:
-          return item.items.map(child =>
-            renderRoutes(
-              child,
-              locations,
-              onLocationChange,
-              locationValue,
-              logoutRoute,
-            ),
-          );
-        default:
-          return renderRoutes(
-            item,
+      if (item.items && item.items.length > 0) {
+        return item.items.map(child =>
+          renderRoutes(
+            child,
             locations,
             onLocationChange,
             locationValue,
             logoutRoute,
-          );
+          ),
+        );
       }
+
+      return renderRoutes(
+        item,
+        locations,
+        onLocationChange,
+        locationValue,
+        logoutRoute,
+      );
     });
-  }
+  };
 
   renderTutorial = tutorialProps => {
     const { currentTutorialPosition } = this.state;

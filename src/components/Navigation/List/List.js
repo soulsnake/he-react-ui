@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * Navigation List
@@ -5,16 +6,14 @@
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import { matchPath } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import styles from './List.scss';
+import type { NavItem } from '../NavItem';
 
-const SUPPORTED_BADGES = ['NEW', 'FREE'];
-
-function renderBadge(item) {
-  if (item.notifications > 0) {
+function renderBadge(item: NavItem) {
+  if (item.notifications && item.notifications > 0) {
     return (
       <div className={classnames(styles.badge, styles.notification)}>
         {item.notifications}
@@ -35,35 +34,21 @@ function renderBadge(item) {
   return null;
 }
 
-class List extends Component {
-  static propTypes = {
-    itemKey: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        key: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        route: PropTypes.string.isRequired,
-        badge: PropTypes.oneOf(SUPPORTED_BADGES),
-        notifications: PropTypes.number,
-      }),
-    ),
-    className: PropTypes.string,
-    onSelect: PropTypes.func,
-  };
+type Props = {
+  itemKey: string,
+  title: string,
+  items: NavItem[],
+  className?: string,
+  onSelect?: Function,
+};
 
+class List extends Component<Props> {
   static defaultProps = {
     className: '',
     onSelect: () => null,
   };
 
-  constructor(props) {
-    super(props);
-
-    this.renderItem = this.renderItem.bind(this);
-  }
-
-  renderItem(item) {
+  renderItem = (item: NavItem) => {
     const { onSelect } = this.props;
     const current =
       matchPath(window.location.pathname + window.location.hash, {
@@ -83,7 +68,7 @@ class List extends Component {
         {renderBadge(item)}
       </NavLink>
     );
-  }
+  };
 
   render() {
     const { renderItem } = this;

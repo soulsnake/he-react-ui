@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Alarm(props) {
+export default function Alarm(props: { className: string }) {
   const { className, ...restProps } = props;
 
   return (
@@ -18,7 +18,3 @@ export default function Alarm(props) {
     </svg>
   );
 }
-
-Alarm.propTypes = {
-  className: PropTypes.string,
-};

@@ -1,12 +1,11 @@
+// @flow
 import classNames from 'classnames';
 import moment from 'moment';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { DateRangePicker as InnerDateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-import momentPropTypes from 'react-moment-proptypes';
-import { Icon, SingleSelect } from '../../../';
+import { Icon, SingleSelect, Label } from '../../../';
 import style from './DateRangePicker.module.scss';
 
 const CUSTOM = 'CUSTOM';
@@ -40,35 +39,37 @@ function formatRange(startDate, endDate) {
     : `${startDisplay} — ${endDisplay}`;
 }
 
-export default class DateRangePicker extends React.Component {
-  static propTypes = {
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string,
-        value: PropTypes.arrayOf(momentPropTypes.momentObj),
-      }),
-    ),
+type Props = {
+  options: { label: string, value: [moment, moment] }[],
+  value: ?[moment, moment],
+  allowCustom: boolean,
 
-    value: PropTypes.arrayOf(momentPropTypes.momentObj),
+  id: string,
 
-    id: PropTypes.string,
+  className?: string,
+  label?: string,
+  error?: string,
+  disabled?: boolean,
 
-    className: PropTypes.string,
-    label: PropTypes.string,
-    error: PropTypes.string,
-    disabled: PropTypes.bool,
+  fill: boolean,
 
-    allowCustom: PropTypes.bool,
+  onChange: Function,
+  placeholder: string,
+  keepOpenOnDateSelect: boolean,
+};
 
-    onChange: PropTypes.func,
-    placeholder: PropTypes.string,
-  };
+type RangePickerResult = { startDate: moment, endDate: moment };
 
+export default class DateRangePicker extends React.Component<Props, *> {
   static defaultProps = {
     allowCustom: true,
     options: [],
     placeholder: 'Select a date range',
     id: 'date-range-picker',
+    fill: false,
+    keepOpenOnDateSelect: false,
+    onChange: () => {},
+    value: null,
   };
 
   state = {
@@ -79,7 +80,7 @@ export default class DateRangePicker extends React.Component {
   getSelectOptions = () => {
     const { options, allowCustom } = this.props;
 
-    const wrappedOptions = options.map(({ label }, index) => ({
+    const wrappedOptions = (options || []).map(({ label }, index) => ({
       label,
       value: String(index),
     }));
@@ -96,7 +97,9 @@ export default class DateRangePicker extends React.Component {
   getSelectValue = () => {
     const { value, options } = this.props;
 
-    const index = options.findIndex(
+    if (!value) return null;
+
+    const index = (options || []).findIndex(
       entry =>
         sameDay(entry.value[0], value[0]) && sameDay(entry.value[1], value[1]),
     );
@@ -106,27 +109,30 @@ export default class DateRangePicker extends React.Component {
 
   getRangeTitle = () => {
     const { value } = this.props;
-    const [startDate, endDate] = value || [null, null];
+    const startDate = value ? value[0] : null;
+    const endDate = value ? value[1] : null;
     return formatRange(startDate, endDate);
   };
 
-  handleFocusChange = focusedInput => {
+  handleFocusChange = (focusedInput: string) => {
     this.setState({ focusedInput });
   };
 
-  handleDatesChange = ({ startDate, endDate }) => {
-    this.props.onChange({ value: [startDate, endDate] });
+  handleDatesChange = (result: RangePickerResult) => {
+    const { startDate, endDate } = result;
+    if (this.props.onChange)
+      this.props.onChange({ value: [startDate, endDate] });
   };
 
   showCustomPicker = () => {
     this.setState({ focusedInput: 'startDate' });
   };
 
-  handleSelectChange = ev => {
+  handleSelectChange = (ev: { value: string }) => {
     if (ev.value === CUSTOM) {
       this.showCustomPicker();
     } else {
-      this.props.onChange(this.props.options[ev.value]);
+      this.props.onChange(this.props.options[Number(ev.value)]);
     }
   };
 
@@ -144,7 +150,16 @@ export default class DateRangePicker extends React.Component {
   };
 
   render() {
-    const { error, disabled, className, label, value, id } = this.props;
+    const {
+      error,
+      disabled,
+      className,
+      label,
+      value,
+      id,
+      fill,
+      keepOpenOnDateSelect,
+    } = this.props;
 
     const [startDate, endDate] = value || [null, null];
 
@@ -159,6 +174,7 @@ export default class DateRangePicker extends React.Component {
 
     return (
       <div className={classes}>
+        {label && <Label className={style.label}>{label}</Label>}
         <SingleSelect
           id={`${id}-select-id`}
           value={selectValue}
@@ -172,7 +188,7 @@ export default class DateRangePicker extends React.Component {
           onBeforeOpen={this.handleSelectOpen}
           onClose={this.handleSelectClose}
           options={this.getSelectOptions()}
-          forceOpen={!!focusedInput}
+          fill={fill}
         />
 
         <div className={style.inner}>
@@ -192,6 +208,7 @@ export default class DateRangePicker extends React.Component {
             focusedInput={focusedInput}
             isDayBlocked={NEVER}
             isOutsideRange={NEVER}
+            keepOpenOnDateSelect={keepOpenOnDateSelect}
           />
         </div>
       </div>

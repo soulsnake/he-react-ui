@@ -73,7 +73,7 @@ exports[`<Table /> rendered correctly with Default fixture 1`] = `
     >
       <div
         className="heading"
-        key="0"
+        key="Name"
         onClick={[Function]}
       >
         <span
@@ -84,7 +84,7 @@ exports[`<Table /> rendered correctly with Default fixture 1`] = `
       </div>
       <div
         className="heading"
-        key="1"
+        key="Specialty"
         onClick={[Function]}
       >
         <span
@@ -95,7 +95,7 @@ exports[`<Table /> rendered correctly with Default fixture 1`] = `
       </div>
       <div
         className="heading narrow"
-        key="2"
+        key="Date of Birth"
         onClick={[Function]}
       >
         <span
@@ -106,7 +106,7 @@ exports[`<Table /> rendered correctly with Default fixture 1`] = `
       </div>
       <div
         className="heading extraNarrow"
-        key="3"
+        key="Status"
         onClick={[Function]}
       >
         <span

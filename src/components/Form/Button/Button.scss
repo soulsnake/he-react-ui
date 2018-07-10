@@ -2,7 +2,7 @@
 
 .buttonContainer {
   display: inline-flex;
-  height: 48px;  
+  height: 48px;
   min-width: 180px;
 
   align-items: center;
@@ -12,11 +12,19 @@
     margin-left: 24px;
   }
 
+  @include breakpoint(small) {
+    width: 100%;
+    &+.buttonContainer {
+      margin-left: 0;
+      margin-top: 16px;
+    }
+  }
+
   &.small {
     height: 30px;
     min-width: 100px;
   }
-  
+
   &.large {
     min-width: 280px;
   }
@@ -26,7 +34,7 @@
   display: flex;
   flex-grow: 1;
   height: 100%;
-  flex-basis: 48px;  
+  flex-basis: 48px;
   white-space: nowrap;
   cursor: pointer;
   color: $white;
@@ -42,6 +50,7 @@
   user-select: none;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   transition-property: flex-grow;
   transition-duration: 0.3s;
@@ -66,9 +75,9 @@
 }
 
 .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 
@@ -105,15 +114,6 @@
   color: $teal_dark_20;
   &:active, &:hover, &:focus {
     background: $white;
-  }
-}
-
-
-
-.keyline {
-  &:not(:hover):not(:active) {
-    border: solid 1px;
-    background: none;
   }
 }
 
@@ -192,9 +192,17 @@
 .legacyIcon {
   fill: currentColor;
   height: 24px;
-  margin-left: 12px;
-  margin-right: -8px;
   width: 24px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.keyline {
+  &:not(:hover):not(:active) {
+    border: solid 1px;
+    background: none;
+  }
 }
 
 .disabled {

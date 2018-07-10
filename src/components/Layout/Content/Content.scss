@@ -1,0 +1,10 @@
+@import '../../../styles/base';
+
+.content {
+  margin: 40px;
+  max-width: 1200px;
+  position: relative;
+  @include breakpoint(small) {
+    margin: 40px 0;
+  }
+}

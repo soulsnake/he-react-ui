@@ -1,3 +1,4 @@
+// @flow
 /*
  * SubNavigation
  */
@@ -5,38 +6,28 @@
 // Vendor
 import classnames from 'classnames';
 import isAbsoluteUrl from 'is-absolute-url';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import SingleSelect from '../../Form/SingleSelect';
 import Icon from '../../Icon';
-import Heading from '../../Layout/Heading';
+import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './SubNavigation.scss';
+import type { NavItem } from '../NavItem';
 
-class SubNavigation extends Component {
-  static propTypes = {
-    item: PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      route: PropTypes.string.isRequired,
-      notifications: PropTypes.number,
-      items: PropTypes.arrayOf(
-        PropTypes.shape({
-          key: PropTypes.string.isRequired,
-          label: PropTypes.string.isRequired,
-          route: PropTypes.string.isRequired,
-        }),
-      ),
-    }),
-    locations: PropTypes.array,
-    onLocationChange: PropTypes.func,
-    logoutRoute: PropTypes.string.isRequired,
-    location: PropTypes.object,
-    locationValue: PropTypes.string,
-    loading: PropTypes.bool,
-  };
+type Option = { value: any, label: string };
 
+type Props = {
+  item: NavItem,
+  locations?: Option[],
+  onLocationChange?: Function,
+  logoutRoute: string,
+  location: Location,
+  locationValue?: string,
+  loading?: boolean,
+};
+
+class SubNavigation extends Component<Props> {
   static defaultProps = {
     loading: false,
   };
@@ -44,7 +35,7 @@ class SubNavigation extends Component {
   renderItems(items) {
     const { location } = this.props;
 
-    return items.map((item, index) => {
+    return items.map(item => {
       if (isAbsoluteUrl(item.route)) {
         return (
           <a target="_blank" href={item.route} className={style.item}>
@@ -54,12 +45,12 @@ class SubNavigation extends Component {
       }
       return (
         <NavLink
-          key={index}
+          key={item.key}
           className={classnames(style.item, {
             [style.selected]:
               matchPath(location.pathname + location.hash, {
                 path: item.route,
-                exact: true,
+                exact: item.exact || typeof item.exact === 'undefined', // Default to true
                 strict: false,
               }) !== null,
           })}
@@ -86,37 +77,45 @@ class SubNavigation extends Component {
     return (
       <div className={style.bar}>
         <div className={style.top}>
-          <Heading h1 className={style.heading}>
-            {loading ? '' : item.title}
-          </Heading>
-          <div className={style.controls}>
-            {!loading &&
-              locations &&
-              locations.length > 1 && (
-                <span className={style.control}>
+          {loading ? (
+            <div className={style.heading}>
+              <LoadingStrip className={style.loadingHeading} />
+            </div>
+          ) : (
+            <h2 className={style.heading}>{item.title}</h2>
+          )}
+          {(loading && (
+            <span className={style.control}>
+              <LoadingStrip className={style.loadingLocation} />
+            </span>
+          )) ||
+            (locations &&
+              ((locations.length > 1 && (
+                <span className={classnames(style.control, style.selector)}>
                   <SingleSelect
-                    className={style.locationSelector}
                     id="locationSelector"
                     name="location"
                     options={locations}
                     onChange={onLocationChange}
-                    style={{ paddingBottom: '0px' }}
                     value={locationValue}
+                    fill
                   />
                 </span>
-              )}
-            <span className={style.control}>
-              <NavLink
-                key="logout"
-                to={logoutRoute}
-                className={style.navLink}
-                title="Logout"
-                target="_self"
-              >
-                <Icon className={style.icon} name="Logout" />Logout
-              </NavLink>
-            </span>
-          </div>
+              )) ||
+                (locations.length === 1 && (
+                  <span className={style.control}>{locations[0].label}</span>
+                ))))}
+          <span className={classnames(style.control, style.logout)}>
+            <NavLink
+              key="logout"
+              to={logoutRoute}
+              className={style.navLink}
+              title="Logout"
+              target="_self"
+            >
+              <Icon className={style.icon} name="Logout" />Logout
+            </NavLink>
+          </span>
         </div>
         {!loading &&
           item.items &&

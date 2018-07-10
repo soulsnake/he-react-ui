@@ -1,10 +1,11 @@
 @import '../../../styles/base';
 
 $bucket-width: 76px;
+$bucket-small-width: 48px;
 $slider-width: 264px;
 
 .slider {
-  background-color: $blue_dark_60;
+  background-color: $special_case_grey_dark_40;
   display: flex;
   filter: brightness(65%);
   flex-direction: column;
@@ -17,6 +18,9 @@ $slider-width: 264px;
     &:nth-child(#{$i}) {
       .filler {
         height: $i * $bucket-width;
+        @include breakpoint(small) {
+          height: $i * $bucket-small-width;
+        }
       }
     }
   }
@@ -26,11 +30,24 @@ $slider-width: 264px;
     }
   }
   @include transition(left 0.4s ease-in-out, filter 0.4s ease-out);
+  @include breakpoint(small) {
+    left: -$slider-width + $bucket-small-width;
+  }
 }
 
 .bottom {
   .list {
     transform: translate(-40px, 20px) scale(0.6);
+  }
+}
+
+.sitename {
+  color: $white;
+  margin: 0 28px;
+  line-height: $bucket-width;
+  border-bottom: 1px solid $grey_1;
+  @include breakpoint(small) {
+    line-height: $bucket-small-width;
   }
 }
 
@@ -44,6 +61,9 @@ $slider-width: 264px;
     transform: none;
   }
   @include transition(left 0.4s ease-in-out);
+  @include breakpoint(small) {
+    left: $bucket-small-width;
+  }
 }
 
 .sliderRightMargin {

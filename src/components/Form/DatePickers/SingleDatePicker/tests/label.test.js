@@ -1,3 +1,4 @@
+// @flow
 import testFixture from '../../../../../../config/testFixture';
 import fixture from '../fixtures/label.fixture.js';
 

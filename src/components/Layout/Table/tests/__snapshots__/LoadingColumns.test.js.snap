@@ -13,7 +13,7 @@ exports[`<Table /> rendered correctly with LoadingColumns fixture 1`] = `
     >
       <div
         className="heading narrow"
-        key="0"
+        key="narrow"
       >
         <LoadingStrip>
           <div
@@ -27,7 +27,7 @@ exports[`<Table /> rendered correctly with LoadingColumns fixture 1`] = `
       </div>
       <div
         className="heading wide"
-        key="1"
+        key="wide"
       >
         <LoadingStrip>
           <div
@@ -41,7 +41,7 @@ exports[`<Table /> rendered correctly with LoadingColumns fixture 1`] = `
       </div>
       <div
         className="heading extraNarrow"
-        key="2"
+        key="extraNarrow"
       >
         <LoadingStrip>
           <div

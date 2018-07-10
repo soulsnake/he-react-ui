@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Table /> rendered correctly with Sortable fixture 1`] = `
+exports[`<Table /> rendered correctly with sortable fixture 1`] = `
 <Table
   body={
     Array [
@@ -76,7 +76,7 @@ exports[`<Table /> rendered correctly with Sortable fixture 1`] = `
     >
       <div
         className="heading sortable"
-        key="0"
+        key="Name"
         onClick={[Function]}
       >
         <span
@@ -87,7 +87,7 @@ exports[`<Table /> rendered correctly with Sortable fixture 1`] = `
       </div>
       <div
         className="heading sortable"
-        key="1"
+        key="Specialty"
         onClick={[Function]}
       >
         <span
@@ -98,7 +98,7 @@ exports[`<Table /> rendered correctly with Sortable fixture 1`] = `
       </div>
       <div
         className="heading narrow"
-        key="2"
+        key="Date of Birth"
         onClick={[Function]}
       >
         <span
@@ -109,7 +109,7 @@ exports[`<Table /> rendered correctly with Sortable fixture 1`] = `
       </div>
       <div
         className="heading extraNarrow sortable"
-        key="3"
+        key="Status"
         onClick={[Function]}
       >
         <span

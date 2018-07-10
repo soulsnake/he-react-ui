@@ -1,34 +1,39 @@
+// @flow
 /**
  *
  * InlineSelector
  *
  */
 
-import React from 'react';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import React from 'react';
 import Label from '../Label';
 import style from './InlineSelector.scss';
 
-class InlineSelector extends React.Component {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    label: PropTypes.string,
-    vertical: PropTypes.bool,
-    options: PropTypes.array,
-    onChange: PropTypes.func,
-    value: PropTypes.string,
-  };
+type Option = {
+  value?: any,
+  label?: string,
+};
 
+type Props = {
+  id: string,
+  name: string,
+  className?: string,
+  label?: string,
+  vertical?: boolean,
+  options: Option[],
+  onChange: Function,
+  value?: string,
+};
+
+class InlineSelector extends React.Component<Props> {
   static defaultProps = {
     vertical: false,
     options: [],
     onChange: () => null,
   };
 
-  handleClick = option => {
+  handleClick = (option: Option) => {
     const oldValue = this.props.value;
 
     if (oldValue !== option.value) {
@@ -50,10 +55,13 @@ class InlineSelector extends React.Component {
       vertical,
       ...restProps
     } = this.props;
-    const classes = classnames(style.outer, {
-      [style.vertical]: vertical,
-      [className]: className,
-    });
+    const classes = classnames(
+      style.outer,
+      {
+        [style.vertical]: vertical,
+      },
+      className,
+    );
 
     return (
       <div className={classes} id={id} {...restProps}>
@@ -63,9 +71,9 @@ class InlineSelector extends React.Component {
           </Label>
         )}
         <div className={style.options}>
-          {options.map((option, index) => (
+          {options.map(option => (
             <div
-              key={index}
+              key={option.label}
               className={classnames(style.option, {
                 [style.selected]: option.value === value,
               })}

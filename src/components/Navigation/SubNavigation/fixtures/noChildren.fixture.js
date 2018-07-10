@@ -1,3 +1,4 @@
+// @flow
 import SubNavigation from '../';
 
 export default {

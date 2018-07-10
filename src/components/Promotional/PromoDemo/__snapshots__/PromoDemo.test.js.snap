@@ -1,0 +1,875 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
+<PromoDemo>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#F5F7F8",
+      }
+    }
+  >
+    <Banner
+      title="Product Name"
+    >
+      <div
+        className="outer"
+      >
+        <h1
+          className="title"
+        >
+          Product Name
+        </h1>
+        <div
+          className="content"
+        >
+          <p>
+            This is a paragraph of text made to emulate a quick description of the item being promoted.
+          </p>
+          <Button
+            color="teal"
+            disabled={false}
+            icon=""
+            keyline={false}
+            large={true}
+            link={false}
+            onClick={[Function]}
+            squared={false}
+            submit={false}
+          >
+            <div
+              className="buttonContainer large"
+            >
+              <button
+                className="button teal"
+                onClick={[Function]}
+                type="button"
+              >
+                <div
+                  className="content"
+                >
+                  Activate now
+                </div>
+              </button>
+            </div>
+          </Button>
+          <Button
+            color="white"
+            disabled={false}
+            icon=""
+            keyline={true}
+            large={true}
+            link={false}
+            onClick={[Function]}
+            squared={false}
+            submit={false}
+          >
+            <div
+              className="buttonContainer large"
+            >
+              <button
+                className="button white keyline"
+                onClick={[Function]}
+                type="button"
+              >
+                <div
+                  className="content"
+                >
+                  Find out more
+                </div>
+              </button>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Banner>
+    <Section
+      white={false}
+    >
+      <div
+        className="outer"
+      >
+        <div
+          className="inner"
+        >
+          <Highlight
+            image={
+              Object {
+                "alt": "A bandage.",
+                "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+              }
+            }
+          >
+            <div
+              className="outer"
+            >
+              <div
+                className="imageWrapper"
+              >
+                <img
+                  alt="A bandage."
+                  className="image"
+                  src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                />
+              </div>
+              <div
+                className="description"
+              >
+                <p>
+                  What a great description of 
+                  <em>
+                    this product
+                  </em>
+                  . This is a paragraph of text made to emulate a more detailed description of the item being promoted.
+                </p>
+                <p>
+                  It is just so versatile!
+                </p>
+                <p>
+                  What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
+                </p>
+              </div>
+            </div>
+          </Highlight>
+          <h2>
+            Sweet benefits
+          </h2>
+          <BenefitList>
+            <div
+              className="outer"
+            >
+              <BenefitItem>
+                <div
+                  className="outer"
+                >
+                  <Icon
+                    className="tick"
+                    name="Tick"
+                  >
+                    <Tick
+                      className="icon tick"
+                    >
+                      <svg
+                        className="icon tick"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          transform="translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)"
+                        >
+                          <path
+                            d="M9.74204164,1.7591673 C9.74184193,1.20688259 10.1893953,0.759005475 10.74168,0.75880577 C11.2939647,0.758606065 11.7418418,1.20615939 11.7420415,1.75844411 L11.7461325,13.0721526 C11.7463323,13.6245785 11.2985585,14.0725142 10.7461326,14.0725142 L5.08518732,14.0725142 C4.53290257,14.0725142 4.08518732,13.624799 4.08518732,13.0725142 C4.08518732,12.5202295 4.53290257,12.0725142 5.08518732,12.0725142 L9.74577092,12.0725142 L9.74204164,1.7591673 Z"
+                          />
+                        </g>
+                      </svg>
+                    </Tick>
+                  </Icon>
+                  <div
+                    className="content"
+                  >
+                    <em>
+                      Really good for this
+                    </em>
+                     in some truly amazing ways
+                  </div>
+                </div>
+              </BenefitItem>
+              <BenefitItem>
+                <div
+                  className="outer"
+                >
+                  <Icon
+                    className="tick"
+                    name="Tick"
+                  >
+                    <Tick
+                      className="icon tick"
+                    >
+                      <svg
+                        className="icon tick"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          transform="translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)"
+                        >
+                          <path
+                            d="M9.74204164,1.7591673 C9.74184193,1.20688259 10.1893953,0.759005475 10.74168,0.75880577 C11.2939647,0.758606065 11.7418418,1.20615939 11.7420415,1.75844411 L11.7461325,13.0721526 C11.7463323,13.6245785 11.2985585,14.0725142 10.7461326,14.0725142 L5.08518732,14.0725142 C4.53290257,14.0725142 4.08518732,13.624799 4.08518732,13.0725142 C4.08518732,12.5202295 4.53290257,12.0725142 5.08518732,12.0725142 L9.74577092,12.0725142 L9.74204164,1.7591673 Z"
+                          />
+                        </g>
+                      </svg>
+                    </Tick>
+                  </Icon>
+                  <div
+                    className="content"
+                  >
+                    <em>
+                      Really good for this
+                    </em>
+                     in some truly amazing ways
+                  </div>
+                </div>
+              </BenefitItem>
+              <BenefitItem>
+                <div
+                  className="outer"
+                >
+                  <Icon
+                    className="tick"
+                    name="Tick"
+                  >
+                    <Tick
+                      className="icon tick"
+                    >
+                      <svg
+                        className="icon tick"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          transform="translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)"
+                        >
+                          <path
+                            d="M9.74204164,1.7591673 C9.74184193,1.20688259 10.1893953,0.759005475 10.74168,0.75880577 C11.2939647,0.758606065 11.7418418,1.20615939 11.7420415,1.75844411 L11.7461325,13.0721526 C11.7463323,13.6245785 11.2985585,14.0725142 10.7461326,14.0725142 L5.08518732,14.0725142 C4.53290257,14.0725142 4.08518732,13.624799 4.08518732,13.0725142 C4.08518732,12.5202295 4.53290257,12.0725142 5.08518732,12.0725142 L9.74577092,12.0725142 L9.74204164,1.7591673 Z"
+                          />
+                        </g>
+                      </svg>
+                    </Tick>
+                  </Icon>
+                  <div
+                    className="content"
+                  >
+                    <em>
+                      Really good for this
+                    </em>
+                     in some truly amazing ways
+                  </div>
+                </div>
+              </BenefitItem>
+              <BenefitItem>
+                <div
+                  className="outer"
+                >
+                  <Icon
+                    className="tick"
+                    name="Tick"
+                  >
+                    <Tick
+                      className="icon tick"
+                    >
+                      <svg
+                        className="icon tick"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          transform="translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)"
+                        >
+                          <path
+                            d="M9.74204164,1.7591673 C9.74184193,1.20688259 10.1893953,0.759005475 10.74168,0.75880577 C11.2939647,0.758606065 11.7418418,1.20615939 11.7420415,1.75844411 L11.7461325,13.0721526 C11.7463323,13.6245785 11.2985585,14.0725142 10.7461326,14.0725142 L5.08518732,14.0725142 C4.53290257,14.0725142 4.08518732,13.624799 4.08518732,13.0725142 C4.08518732,12.5202295 4.53290257,12.0725142 5.08518732,12.0725142 L9.74577092,12.0725142 L9.74204164,1.7591673 Z"
+                          />
+                        </g>
+                      </svg>
+                    </Tick>
+                  </Icon>
+                  <div
+                    className="content"
+                  >
+                    <em>
+                      Really good for this
+                    </em>
+                     in some truly amazing ways
+                  </div>
+                </div>
+              </BenefitItem>
+              <BenefitItem>
+                <div
+                  className="outer"
+                >
+                  <Icon
+                    className="tick"
+                    name="Tick"
+                  >
+                    <Tick
+                      className="icon tick"
+                    >
+                      <svg
+                        className="icon tick"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          transform="translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)"
+                        >
+                          <path
+                            d="M9.74204164,1.7591673 C9.74184193,1.20688259 10.1893953,0.759005475 10.74168,0.75880577 C11.2939647,0.758606065 11.7418418,1.20615939 11.7420415,1.75844411 L11.7461325,13.0721526 C11.7463323,13.6245785 11.2985585,14.0725142 10.7461326,14.0725142 L5.08518732,14.0725142 C4.53290257,14.0725142 4.08518732,13.624799 4.08518732,13.0725142 C4.08518732,12.5202295 4.53290257,12.0725142 5.08518732,12.0725142 L9.74577092,12.0725142 L9.74204164,1.7591673 Z"
+                          />
+                        </g>
+                      </svg>
+                    </Tick>
+                  </Icon>
+                  <div
+                    className="content"
+                  >
+                    <em>
+                      Really good for this
+                    </em>
+                     in some truly amazing ways
+                  </div>
+                </div>
+              </BenefitItem>
+              <BenefitItem>
+                <div
+                  className="outer"
+                >
+                  <Icon
+                    className="tick"
+                    name="Tick"
+                  >
+                    <Tick
+                      className="icon tick"
+                    >
+                      <svg
+                        className="icon tick"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          transform="translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)"
+                        >
+                          <path
+                            d="M9.74204164,1.7591673 C9.74184193,1.20688259 10.1893953,0.759005475 10.74168,0.75880577 C11.2939647,0.758606065 11.7418418,1.20615939 11.7420415,1.75844411 L11.7461325,13.0721526 C11.7463323,13.6245785 11.2985585,14.0725142 10.7461326,14.0725142 L5.08518732,14.0725142 C4.53290257,14.0725142 4.08518732,13.624799 4.08518732,13.0725142 C4.08518732,12.5202295 4.53290257,12.0725142 5.08518732,12.0725142 L9.74577092,12.0725142 L9.74204164,1.7591673 Z"
+                          />
+                        </g>
+                      </svg>
+                    </Tick>
+                  </Icon>
+                  <div
+                    className="content"
+                  >
+                    <em>
+                      Really good for this
+                    </em>
+                     in some truly amazing ways
+                  </div>
+                </div>
+              </BenefitItem>
+              <BenefitItem>
+                <div
+                  className="outer"
+                >
+                  <Icon
+                    className="tick"
+                    name="Tick"
+                  >
+                    <Tick
+                      className="icon tick"
+                    >
+                      <svg
+                        className="icon tick"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          transform="translate(4.000000, 3.000000) translate(7.915660, 7.415660) rotate(45.000000) translate(-7.915660, -7.415660)"
+                        >
+                          <path
+                            d="M9.74204164,1.7591673 C9.74184193,1.20688259 10.1893953,0.759005475 10.74168,0.75880577 C11.2939647,0.758606065 11.7418418,1.20615939 11.7420415,1.75844411 L11.7461325,13.0721526 C11.7463323,13.6245785 11.2985585,14.0725142 10.7461326,14.0725142 L5.08518732,14.0725142 C4.53290257,14.0725142 4.08518732,13.624799 4.08518732,13.0725142 C4.08518732,12.5202295 4.53290257,12.0725142 5.08518732,12.0725142 L9.74577092,12.0725142 L9.74204164,1.7591673 Z"
+                          />
+                        </g>
+                      </svg>
+                    </Tick>
+                  </Icon>
+                  <div
+                    className="content"
+                  >
+                    <em>
+                      Really good for this
+                    </em>
+                     in some truly amazing ways
+                  </div>
+                </div>
+              </BenefitItem>
+            </div>
+          </BenefitList>
+        </div>
+      </div>
+    </Section>
+    <Section
+      white={true}
+    >
+      <div
+        className="outer white"
+      >
+        <div
+          className="inner"
+        >
+          <h2>
+            Works well with
+          </h2>
+          <p>
+            What a great description of this product. This is a paragraph of text made to emulate a more detailed description of the item being promoted. It is really good if you take the time to check it out.
+          </p>
+          <SupportList>
+            <div
+              className="outer"
+            >
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+              <SupportItem
+                extra="Adhesive only"
+                image={
+                  Object {
+                    "alt": "A bandage.",
+                    "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+                  }
+                }
+                name="Medical Bandages"
+              >
+                <div
+                  className="outer"
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="A bandage."
+                      className="image"
+                      src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+                    />
+                  </div>
+                  <div
+                    className="name"
+                  >
+                    Medical Bandages
+                  </div>
+                  <div
+                    className="extra"
+                  >
+                    Adhesive only
+                  </div>
+                </div>
+              </SupportItem>
+            </div>
+          </SupportList>
+          <p>
+            And there is even more great stuff about this product.
+          </p>
+          <Button
+            color="teal"
+            disabled={false}
+            icon=""
+            keyline={false}
+            large={true}
+            link={false}
+            onClick={[Function]}
+            squared={false}
+            submit={false}
+          >
+            <div
+              className="buttonContainer large"
+            >
+              <button
+                className="button teal"
+                onClick={[Function]}
+                type="button"
+              >
+                <div
+                  className="content"
+                >
+                  Find out more
+                </div>
+              </button>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Section>
+    <Footer
+      header="Ready for this product?"
+    >
+      <div
+        className="outer"
+      >
+        <h2
+          className="header"
+        >
+          Ready for this product?
+        </h2>
+        <div
+          className="content"
+        >
+          <p>
+            This product will change everything.
+          </p>
+          <Button
+            color="teal"
+            disabled={false}
+            icon=""
+            keyline={false}
+            large={true}
+            link={false}
+            onClick={[Function]}
+            squared={false}
+            submit={false}
+          >
+            <div
+              className="buttonContainer large"
+            >
+              <button
+                className="button teal"
+                onClick={[Function]}
+                type="button"
+              >
+                <div
+                  className="content"
+                >
+                  Activate now
+                </div>
+              </button>
+            </div>
+          </Button>
+          <Button
+            color="white"
+            disabled={false}
+            icon=""
+            keyline={true}
+            large={true}
+            link={false}
+            onClick={[Function]}
+            squared={false}
+            submit={false}
+          >
+            <div
+              className="buttonContainer large"
+            >
+              <button
+                className="button white keyline"
+                onClick={[Function]}
+                type="button"
+              >
+                <div
+                  className="content"
+                >
+                  Find out more
+                </div>
+              </button>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Footer>
+  </div>
+</PromoDemo>
+`;

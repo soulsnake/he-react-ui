@@ -1,3 +1,4 @@
+// @flow
 import SingleDatePicker from '../';
 
 export default {

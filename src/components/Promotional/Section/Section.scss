@@ -1,0 +1,38 @@
+@import '../../../styles/_base';
+
+.outer {
+  color: $grey_1;
+  font-family: $font-stack;
+  width: 100%;
+}
+
+.white {
+  background-color: $white;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 96px;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    font-size: 32px;
+    font-weight: $regular;
+    color: $he_black;
+    margin: 0 auto 48px;
+    padding: 96px 16px 0;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 16px auto;
+    max-width: 720px;
+    padding: 0 16px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

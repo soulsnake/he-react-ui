@@ -1,3 +1,4 @@
+// @flow
 /**
  *
  * TextField
@@ -5,29 +6,28 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../../Icon';
 import style from './TextField.scss';
 
-class TextField extends React.Component {
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    label: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    description: PropTypes.string,
-    error: PropTypes.string,
-    inline: PropTypes.bool,
-    value: PropTypes.string,
-    disabled: PropTypes.bool,
-    marker: PropTypes.bool,
-    isValid: PropTypes.bool,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-  };
+type Props = {
+  id: string,
+  name: string,
+  className?: string,
+  label?: Object | string,
+  description?: string,
+  error?: string,
+  inline?: boolean,
+  value?: string,
+  disabled?: boolean,
+  marker?: boolean,
+  isValid?: boolean,
+  onBlur: Function,
+  onChange: Function,
+  onFocus: Function,
+};
 
+class TextField extends React.Component<Props, *> {
   static defaultProps = {
     label: 'Field',
     disabled: false,
@@ -40,19 +40,13 @@ class TextField extends React.Component {
     onFocus: () => {},
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      focused: false,
-    };
-    this.handleBlur = this.handleBlur.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleFocus = this.handleFocus.bind(this);
-  }
+  state = {
+    focused: false,
+  };
 
-  handleFocus = e => {
+  handleFocus = (e: SyntheticEvent<HTMLInputElement>) => {
     const event = {
-      value: e.target.value,
+      value: e.currentTarget.value,
       props: this.props,
     };
 
@@ -62,9 +56,9 @@ class TextField extends React.Component {
     this.props.onFocus(event);
   };
 
-  handleBlur = e => {
+  handleBlur = (e: SyntheticEvent<HTMLInputElement>) => {
     const event = {
-      value: e.target.value,
+      value: e.currentTarget.value,
       props: this.props,
     };
 
@@ -74,9 +68,9 @@ class TextField extends React.Component {
     this.props.onBlur(event);
   };
 
-  handleChange = e => {
+  handleChange = (e: SyntheticEvent<HTMLInputElement>) => {
     const event = {
-      value: e.target.value,
+      value: e.currentTarget.value,
       props: this.props,
     };
     this.props.onChange(event);
@@ -102,24 +96,21 @@ class TextField extends React.Component {
     } = this.props;
     const { focused } = this.state;
     const floating = focused || value !== '';
-    const classes = classnames(style.outer, {
-      [style.invalid]: !isValid,
-      [style.disabled]: disabled,
-      [style.inline]: inline,
-      [style.focused]: focused,
-      [style.hasMarker]: marker,
-      [className]: className,
-    });
+    const classes = classnames(
+      style.outer,
+      {
+        [style.invalid]: !isValid,
+        [style.disabled]: disabled,
+        [style.inline]: inline,
+        [style.focused]: focused,
+        [style.hasMarker]: marker,
+      },
+      className,
+    );
 
     return (
       <div className={classes} {...restProps}>
         <div className={style.block}>
-          <label
-            className={classnames(style.label, { [style.floating]: floating })}
-            htmlFor={id}
-          >
-            {label}
-          </label>
           <input
             className={style.input}
             id={id}
@@ -137,6 +128,12 @@ class TextField extends React.Component {
                 className={style.marker}
               />
             )}
+          <label
+            className={classnames(style.label, { [style.floating]: floating })}
+            htmlFor={id}
+          >
+            {label}
+          </label>
         </div>
         {(description || error) && (
           <label htmlFor={id} className={style.description}>

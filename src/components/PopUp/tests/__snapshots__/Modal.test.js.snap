@@ -23,14 +23,14 @@ exports[`<PopUp /> rendered correctly with Modal fixture 1`] = `
           <p
             className="paragraph"
           >
-            This modal popup can't be closed without a parent interfering.
+            This modal popup cannot be closed without a parent interfering.
           </p>
         </Paragraph>
         <Paragraph>
           <p
             className="paragraph"
           >
-            If only the 'showing' property were set to false.
+            If only the \`showing\` property were set to false.
           </p>
         </Paragraph>
       </div>

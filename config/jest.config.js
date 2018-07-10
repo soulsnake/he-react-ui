@@ -1,3 +1,5 @@
+// @flow
+
 /* eslint-disable global-require */
 import Enzyme, { mount, render, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -27,7 +29,7 @@ Object.assign = require('object-assign');
 // Hack, need to look for another solution
 window.matchMedia =
   window.matchMedia ||
-  function() {
+  function matchMedia() {
     return {
       matches: false,
       addListener() {},

@@ -1,22 +1,17 @@
-// Vendor
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+/* @flow */
+import React from 'react';
 import style from './Footer.scss';
 
-class Footer extends Component {
-  static propTypes = {
-    children: PropTypes.any,
-  };
+type Props = { children?: any };
 
-  render() {
-    const { children, ...restProps } = this.props;
+function Footer(props: Props) {
+  const { children, ...restProps } = props;
 
-    return (
-      <div className={style.footer} {...restProps}>
-        {children}
-      </div>
-    );
-  }
+  return (
+    <div className={style.footer} {...restProps}>
+      {children}
+    </div>
+  );
 }
 
 export default Footer;

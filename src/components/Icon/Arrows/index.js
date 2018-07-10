@@ -1,5 +1,8 @@
-export ArrowLeft from './ArrowLeft';
-export ArrowRight from './ArrowRight';
-export ArrowUp from './ArrowUp';
-export ArrowDown from './ArrowDown';
-export CurvedArrow from './CurvedArrow';
+// @flow
+
+import ArrowLeft from './ArrowLeft';
+import ArrowRight from './ArrowRight';
+import ArrowUp from './ArrowUp';
+import ArrowDown from './ArrowDown';
+
+export { ArrowLeft, ArrowRight, ArrowUp, ArrowDown };

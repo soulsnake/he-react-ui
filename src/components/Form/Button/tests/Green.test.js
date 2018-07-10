@@ -1,3 +1,4 @@
+// @flow
 import fixture from '../fixtures/Green.fixture';
 import testFixture from '../../../../../config/testFixture';
 

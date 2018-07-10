@@ -1,38 +1,38 @@
-/* 
- * Core colours 
+/*
+ * Core colours
  *
  */
 
 $white: #FFF;
- 
 
- /* Primary — Teal 
+
+ /* Primary — Teal
   *
-  * Use: Default call to action colour – used for buttons, links, or to draw 
-  * attention to actionable items. 
+  * Use: Default call to action colour – used for buttons, links, or to draw
+  * attention to actionable items.
   *
   * Recommendation: Use this colour sparingly to allow it to stand out best.
   */
- 
+
 $teal: #01A4B7;
- 
+
 $teal_dark_60: #004149;
 $teal_dark_40: #00626D;
 $teal_dark_20: #018392;
-$teal_light_80: #CCECF0; 
+$teal_light_80: #CCECF0;
 $teal_light_60: #99DAE2;
 $teal_light_40: #66C8D3;
 $teal_light_20: #33B6C5;
- 
- 
- /* Secondary — Blue 
+
+
+ /* Secondary — Blue
   *
   * Use: Secondary call to action colour – can also be used for buttons, links,
   * or to draw attention to actionable items that are of a lower priority.
  */
- 
+
 $blue: #008EC8;
-  
+
 $blue_dark_60: #003850;
 $blue_dark_40: #005578;
 $blue_dark_20: #0071A0;
@@ -40,16 +40,16 @@ $blue_light_80: #CCE8F4;
 $blue_light_60: #99D1E9;
 $blue_light_40: #66BBDE;
 $blue_light_20: #33A4D3;
- 
- 
- /* Grey Base / Grey 1 
+
+
+ /* Grey Base / Grey 1
   * Use: Default text colour _except_ for headers, titles, captions etc.
-  * In those instances, HE Black (#051E2A) should be the default colour. 
-  * Although, shades of grey can be used for those as well. 
+  * In those instances, HE Black (#051E2A) should be the default colour.
+  * Although, shades of grey can be used for those as well.
   *
   * HE Black and the greys can also be used as background colours.
  */
- 
+
 $grey_1: #2B4B5A;
 $grey_2: #5C7783;
 $grey_3: #9FB3BC;
@@ -57,23 +57,23 @@ $grey_4: #D3DDE1;
 $grey_5: #E3E8ED;
 $grey_6: #ECF0F2;
 $grey_7: #F5F7F8;
- 
- 
- 
- /* 
-  * Supporting colours / Accents 
+
+
+
+ /*
+  * Supporting colours / Accents
   *
   */
- 
- /* HE_Black 
+
+ /* HE_Black
   * Use: Headers, captions and bold text.
   */
- 
+
 $he_black: #051E2A;
- 
- 
+
+
  /* Green */
- 
+
 $green: #48B400;
 
 $green_light_80: #DFF2D2;
@@ -83,12 +83,12 @@ $green_light_20: #77CA3A;
 $green_dark_60: #1E5200;
 $green_dark_40: #317700;
 $green_dark_20: #419B00;
- 
- 
+
+
  /* Yellow/Amber */
- 
+
 $yellow: #FFB700;
- 
+
 $yellow_light_80: #FFF0CC;
 $yellow_light_60: #FFE299;
 $yellow_light_40: #FFD366;
@@ -96,15 +96,15 @@ $yellow_light_20: #FFC533;
 $yellow_dark_60: #664900;
 $yellow_dark_40: #996D00;
 $yellow_dark_20: #CC9200;
- 
- 
- /* Orange 
+
+
+ /* Orange
   *
   * Limit use in print. Process is dull compared to spot.
  */
- 
+
 $orange: #FF4D00;
- 
+
 $orange_light_80: #FFDBCC;
 $orange_light_60: #FFB799;
 $orange_light_40: #FF9466;
@@ -112,11 +112,11 @@ $orange_light_20: #FF7033;
 $orange_dark_60: #661E00;
 $orange_dark_40: #992E00;
 $orange_dark_20: #CC3D00;
- 
- 
+
+
  /* Red */
- 
-$red: #DF0E42; 
+
+$red: #DF0E42;
 $red_light_80: #F8CED9;
 $red_light_60: #F29EB3;
 $red_light_40: #EB6E8D;
@@ -124,12 +124,12 @@ $red_light_20: #E53E67;
 $red_dark_60: #59051A;
 $red_dark_40: #850827;
 $red_dark_20: #B20B34;
- 
- 
+
+
  /* Pink */
- 
+
 $pink: #E3166F;
- 
+
 $pink_light_80: #F9D0E2;
 $pink_light_60: #F3A1C5;
 $pink_light_40: #EE73A8;
@@ -137,15 +137,20 @@ $pink_light_20: #E8448B;
 $pink_dark_20: #B51158;
 $pink_dark_40: #880D42;
 $pink_dark_60: #5A082C;
- 
- 
- 
- /* 
-  * 
+
+
+/* Special case colours */
+
+$special_case_grey_dark_20: #223C48;
+$special_case_grey_dark_40: #192D36;
+
+
+ /*
+  *
   * Javascript export to make these available in code
-  * 
+  *
   */
- 
+
  :export {
    white: $white;
    teal: $teal;
@@ -212,5 +217,7 @@ $pink_dark_60: #5A082C;
    pink_dark_20: $pink_dark_20;
    pink_dark_40: $pink_dark_40;
    pink_dark_60: $pink_dark_60;
+   special_case_grey_dark_20: $special_case_grey_dark_20;
+   special_case_grey_dark_40: $special_case_grey_dark_40;
  }
 
