@@ -89,11 +89,13 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
                       name="HealthEngine"
                     >
                       <HealthEngine
-                        className="icon logo"
+                        className="logo"
                         inverted={true}
+                        name="HealthEngine"
                       >
                         <svg
-                          className="icon logo"
+                          className="logo"
+                          name="HealthEngine"
                           version="1.1"
                           viewBox="0 0 48 38"
                           xmlns="http://www.w3.org/2000/svg"

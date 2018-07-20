@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarouselIndicator /> rendered correctly with Default fixture 1`] = `
+<CarouselIndicator
+  current={1}
+  length={4}
+  showNext={true}
+>
+  <div
+    className="outer"
+  >
+    <ol
+      className="wrapper"
+    >
+      <li
+        className="item"
+        key="dot-1"
+      />
+      <li
+        className="item active"
+        key="dot-2"
+      />
+      <li
+        className="item"
+        key="dot-3"
+      />
+      <li
+        className="item"
+        key="dot-4"
+      />
+      <li
+        className="nextBtn"
+      >
+        Next
+      </li>
+    </ol>
+  </div>
+</CarouselIndicator>
+`;

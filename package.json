@@ -28,6 +28,9 @@
     "babel-preset-flow": "^6.23.0",
     "classnames": "^2.2.5",
     "coveralls": "^3.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "npm:enzyme-react-adapter-future",
+    "enzyme-to-json": "^3.3.4",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-he": "^0.2.0",
     "eslint-config-prettier": "^2.9.0",
@@ -53,7 +56,7 @@
     "react-cosmos-telescope": "^4.4.0",
     "react-cosmos-test": "^4.4.0",
     "react-dates": "^16.6.1",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.3.0",
     "react-loadable": "^5.3.1",
     "react-media": "^1.8.0",
     "react-onclickoutside": "^6.7.1",
@@ -78,9 +81,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "css-loader": "^0.28.9",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "enzyme-to-json": "^3.2.2",
     "eslint": "^4.18.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-config-standard-react": "^5.0.0",
@@ -107,10 +107,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "lines": 81.14,
-        "statements": 81.16,
-        "functions": 70.56,
-        "branches": 80.91
+        "lines": 85.81,
+        "statements": 85.81,
+        "functions": 75.61,
+        "branches": 81.98
       }
     },
     "coverageReporters": [

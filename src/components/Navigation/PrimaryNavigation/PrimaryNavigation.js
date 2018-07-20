@@ -55,6 +55,8 @@ type Props = {
   logoutRoute: string,
   loading?: boolean,
   children: any,
+  openKey?: ?string,
+  maskPage?: boolean,
 };
 
 class PrimaryNavigation extends Component<Props, *> {
@@ -72,11 +74,15 @@ class PrimaryNavigation extends Component<Props, *> {
     openKey: (null: ?string),
   };
 
+  getOpenKey() {
+    return 'openKey' in this.props ? this.props.openKey : this.state.openKey;
+  }
+
   closeBucket = () => {
     this.setState({ openKey: null });
   };
 
-  toggleBucket = key => {
+  toggleBucket = (key: string) => {
     const { openKey } = this.state;
 
     this.setState({ openKey: key === openKey ? null : key });
@@ -89,7 +95,7 @@ class PrimaryNavigation extends Component<Props, *> {
   renderSliders = () => {
     const { closeBucket } = this;
     const { bottomKeys, items, siteName } = this.props;
-    const { openKey } = this.state;
+    const openKey = this.getOpenKey();
     const topItems = items.filter(item => !bottomKeys.includes(item.key));
     const bottomItems = items.filter(item => bottomKeys.includes(item.key));
 
@@ -120,7 +126,7 @@ class PrimaryNavigation extends Component<Props, *> {
   renderBuckets = () => {
     const { closeBucket, toggleBucket } = this;
     const { bottomKeys, items, loading, logo } = this.props;
-    const { openKey } = this.state;
+    const openKey = this.getOpenKey();
     const topItems = items.filter(item => !bottomKeys.includes(item.key));
     const bottomItems = items.filter(item => bottomKeys.includes(item.key));
 
@@ -215,6 +221,7 @@ class PrimaryNavigation extends Component<Props, *> {
       locationValue,
       logoutRoute,
       children,
+      maskPage,
     } = this.props;
 
     return (
@@ -233,6 +240,7 @@ class PrimaryNavigation extends Component<Props, *> {
             logoutRoute,
           )}
           <div className={styles.children}>{children}</div>
+          {maskPage && <div className={styles.overlay} />}
         </div>
       </div>
     );

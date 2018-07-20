@@ -4,7 +4,13 @@ import React from 'react';
 import Add from './Add';
 import Alarm from './Alarm';
 import Alert from './Alert';
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp } from './Arrows';
+import {
+  ArrowLeft,
+  ArrowRight,
+  ArrowUp,
+  ArrowDown,
+  CurvedArrow,
+} from './Arrows';
 import Bookings from './Bookings';
 import Calendar from './Calendar';
 import CaretRight from './CaretRight';
@@ -23,6 +29,7 @@ import Edit from './Edit';
 import Ellipsis from './Ellipsis';
 import Engage from './Engage';
 import HealthEngine from './HealthEngine';
+import HealthEngineWithText from './HealthEngineWithText';
 import Help from './Help';
 import Home from './Home';
 import style from './Icon.scss';
@@ -87,7 +94,9 @@ export default function Icon(props: {
     case 'ChevronDown':
       return <ChevronDown {...childProps} />;
     case 'Clock':
-      return <Clock {...childProps} />;
+      return <Clock {...props} />;
+    case 'CurvedArrow':
+      return <CurvedArrow {...props} />;
     case 'Cross':
       return <Cross {...childProps} />;
     case 'Delete':
@@ -99,7 +108,9 @@ export default function Icon(props: {
     case 'Engage':
       return <Engage {...childProps} />;
     case 'HealthEngine':
-      return <HealthEngine {...childProps} />;
+      return <HealthEngine {...props} />;
+    case 'HealthEngineWithText':
+      return <HealthEngineWithText {...props} />;
     case 'Help':
       return <Help {...childProps} />;
     case 'Home':

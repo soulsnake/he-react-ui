@@ -1,0 +1,135 @@
+@import "../../styles/_base";
+
+.outer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  pointer-events: auto;
+  width: 50%;
+  height: 50%
+}
+
+.fadeIn {
+  opacity: 0;
+  transition: all .6s ease-in-out 0s;
+  &.mounted {
+    opacity: 1;
+  }
+}
+
+.popup {
+  background-color: $white;
+  border-radius: 4px;
+  color: $grey_1;
+  font-family: $font-stack;
+  top: 0;
+  left: 150px;
+  max-height: 399px;
+  max-width: 544px;
+  min-width: 320px;
+  overflow-y: auto;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  transform: scale(0.95);
+  @include breakpoint(small) {
+    max-width: 50%;
+    max-height: 50%;
+  }
+
+  &.popupCentered {
+    position: absolute;
+    top: 50%;
+    left: 50%
+  }
+}
+
+
+
+.popupWithPadding {
+  padding: 38px;
+  @include breakpoint(small) {
+    padding: 20px;
+  }
+}
+.tutorialHeader{
+  padding: 18px 30px 8px 30px; 
+}
+.tutorialIntroHeader{
+  padding: 18px 15px 8px 15px; 
+  .heLogoWithText {
+    width: 161px;
+    height: 32px;
+  }
+}
+.greyBackground{
+  background: $grey_7;
+}
+.tutorialIntroFooter{
+  margin-top: 38px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0 15px; 
+  .footerCell{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    div {
+      min-width: auto;
+    }
+    .leftElement{
+      margin: 0;
+      text-align: left;
+    }
+    .rightElement{
+      text-align: right;
+    }
+  }
+}
+.arrow {
+  width: 113px;
+  height: 43px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+.reversed{
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+.close {
+  border-radius: 32px;
+  cursor: pointer;
+  color: $he_black;
+  height: 24px;
+  padding: 8px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 24px;
+  @include breakpoint(small) {
+    padding: 4px;
+  }
+}
+
+.close:hover {
+  background: $grey_5;
+}
+
+
+.tutorialWrapper{
+  padding: 0 15px 0 15px;
+}
+.tutorialIndicator{
+  float: right;
+}

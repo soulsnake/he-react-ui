@@ -62,6 +62,7 @@ function Bucket(props: Props) {
   );
 
   const childProps = {
+    id: `BUCKET_${itemKey}`,
     key: itemKey,
     className: classnames(styles.bucket, {
       [styles.open]: open,
