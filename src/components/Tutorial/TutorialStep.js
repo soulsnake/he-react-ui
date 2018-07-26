@@ -138,12 +138,12 @@ export default withTutorial(
             top: ownDomElement.getBoundingClientRect().height - 75,
           };
         }
-        const wrapperStyle = {
-          position: 'absolute',
-          top: newTop,
-          left,
-          right: 'auto',
-        };
+        const wrapperStyle = centered
+          ? null
+          : {
+              top: newTop,
+              left,
+            };
 
         return (
           <div

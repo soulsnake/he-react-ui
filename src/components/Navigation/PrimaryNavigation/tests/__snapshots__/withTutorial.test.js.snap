@@ -307,14 +307,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
               <div
                 className="outer"
                 onClick={[Function]}
-                style={
-                  Object {
-                    "left": 76,
-                    "position": "absolute",
-                    "right": "auto",
-                    "top": 25,
-                  }
-                }
+                style={null}
               >
                 <FadeIn>
                   <div
