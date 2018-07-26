@@ -4,10 +4,10 @@ import classnames from 'classnames';
 import * as React from 'react';
 import onClickOutside from 'react-onclickoutside';
 import Icon from '../Icon';
-import CarouselIndicator from '../Layout/CarouselIndicator';
 import FadeIn from './FadeIn';
 import getCoordsForElementId from './getCoordsForElementId';
 import styles from './Tutorial.scss';
+import TutorialCarousel from './TutorialCarousel';
 import withTutorial from './withTutorial';
 
 function everyFrame(handler) {
@@ -35,7 +35,6 @@ type Props = {
   className?: ?string,
   centered?: boolean,
   tutorialSteps: string[],
-  onTutorialAdvance: Function,
   onTutorialDismiss: Function,
   tutorialIndex: number,
   attachTo?: string,
@@ -107,7 +106,6 @@ export default withTutorial(
 
       render() {
         const {
-          onTutorialAdvance,
           onTutorialDismiss,
           tutorialIndex,
           tutorialSteps,
@@ -167,12 +165,7 @@ export default withTutorial(
                   {children}
 
                   {showCarousel && (
-                    <CarouselIndicator
-                      className={styles.tutorialIndicator}
-                      length={tutorialSteps.length}
-                      current={tutorialIndex}
-                      nextStep={onTutorialAdvance}
-                    />
+                    <TutorialCarousel className={styles.tutorialIndicator} />
                   )}
                 </div>
               </div>
