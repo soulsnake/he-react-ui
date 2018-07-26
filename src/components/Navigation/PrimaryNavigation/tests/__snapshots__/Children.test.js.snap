@@ -2721,6 +2721,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Children 
             icon=""
             keyline={false}
             link={false}
+            newWindow={false}
             onClick={[Function]}
             squared={false}
             submit={false}
@@ -2731,6 +2732,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Children 
             >
               <InnerButton
                 className="button teal"
+                newWindow={false}
                 onClick={[Function]}
                 submit={false}
                 withRouter={false}

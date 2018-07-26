@@ -8,6 +8,7 @@ exports[`<Button /> rendered correctly with small fixture 1`] = `
   icon=""
   keyline={false}
   link={false}
+  newWindow={false}
   onClick={[Function]}
   small={true}
   squared={false}
@@ -20,6 +21,7 @@ exports[`<Button /> rendered correctly with small fixture 1`] = `
   >
     <InnerButton
       className="button teal"
+      newWindow={false}
       onClick={[Function]}
       submit={false}
       withRouter={false}

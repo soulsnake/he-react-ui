@@ -8,6 +8,7 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
   icon=""
   keyline={true}
   link={false}
+  newWindow={false}
   onClick={[Function]}
   squared={false}
   submit={false}
@@ -19,6 +20,7 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
   >
     <InnerButton
       className="button teal keyline"
+      newWindow={false}
       onClick={[Function]}
       submit={false}
       withRouter={false}
