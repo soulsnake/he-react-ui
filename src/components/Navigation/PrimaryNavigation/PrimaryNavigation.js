@@ -50,6 +50,7 @@ type Props = {
   logo: Logo,
   items: NavItem[],
   locations?: {}[], // TODO
+  onChangeOpenKey?: Function,
   onLocationChange?: Function,
   locationValue?: string,
   logoutRoute: string,
@@ -78,18 +79,26 @@ class PrimaryNavigation extends Component<Props, *> {
     return 'openKey' in this.props ? this.props.openKey : this.state.openKey;
   }
 
+  setOpenKey(openKey) {
+    if ('openKey' in this.props) {
+      if (this.props.onChangeOpenKey) this.props.onChangeOpenKey(openKey);
+    } else {
+      this.setState({ openKey });
+    }
+  }
+
   closeBucket = () => {
-    this.setState({ openKey: null });
+    this.setOpenKey(null);
   };
 
   toggleBucket = (key: string) => {
-    const { openKey } = this.state;
+    const openKey = this.getOpenKey();
 
-    this.setState({ openKey: key === openKey ? null : key });
+    this.setOpenKey(key === openKey ? null : key);
   };
 
   handleClickOutside = () => {
-    this.setState({ openKey: null });
+    this.setOpenKey(null);
   };
 
   renderSliders = () => {
