@@ -21,12 +21,14 @@ type Props = {
   style?: Object,
 };
 
+const noOp = () => null;
+
 class PopUp extends React.Component<Props, *> {
   static defaultProps = {
     modal: false,
     noPadding: false,
-    onClose: () => null,
-    onOpen: () => null,
+    onClose: noOp,
+    onOpen: noOp,
     showing: false,
   };
 
