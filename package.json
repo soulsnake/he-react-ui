@@ -14,7 +14,7 @@
     "lint-fix": "eslint . --fix --env jest",
     "cosmos": "cosmos",
     "precommit": "yarn verify",
-    "verify": "yarn && yarn concurrently --kill-others-on-fail --names='lint,flow,test' 'yarn lint' 'yarn flow' 'yarn coverage' && yarn jest-coverage-ratchet"
+    "verify": "yarn && yarn lint && yarn flow && yarn coverage && yarn jest-coverage-ratchet"
   },
   "keywords": [
     "HealthEngine",
@@ -109,8 +109,8 @@
     "coverageThreshold": {
       "global": {
         "lines": 86.68,
-        "statements": 86.54,
-        "functions": 76.4,
+        "statements": 86.7,
+        "functions": 76.8,
         "branches": 82.67
       }
     },
