@@ -1,6 +1,6 @@
 {
   "name": "he-react-ui",
-  "version": "0.1.56",
+  "version": "0.1.57",
   "description": "Common UI elements for HealthEngine",
   "main": "dist/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "lint-fix": "eslint . --fix --env jest",
     "cosmos": "cosmos",
     "precommit": "yarn verify",
-    "verify": "yarn && yarn concurrently --kill-others-on-fail --names='lint,flow,test' 'yarn lint' 'yarn flow' 'yarn coverage' && yarn jest-coverage-ratchet"
+    "verify": "yarn && yarn lint && yarn flow && yarn coverage && yarn jest-coverage-ratchet"
   },
   "keywords": [
     "HealthEngine",
@@ -108,10 +108,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "lines": 86.4,
-        "statements": 86.41,
-        "functions": 76.31,
-        "branches": 82.5
+        "lines": 86.94,
+        "statements": 86.82,
+        "functions": 77.11,
+        "branches": 82.67
       }
     },
     "coverageReporters": [

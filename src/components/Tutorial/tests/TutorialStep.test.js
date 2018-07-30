@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import TutorialOwner from '../TutorialOwner';
 import TutorialStep from '../TutorialStep';
+import TutorialSpy from './TutorialSpy';
 
 jest.mock('../getCoordsForElementId.js');
 
@@ -16,6 +17,8 @@ function makeHarness(attachTo = null) {
       <TutorialStep id="Z" showCarousel>
         <span id="inStepZ" />
       </TutorialStep>
+
+      <TutorialSpy />
     </TutorialOwner>,
   );
 }
@@ -50,6 +53,24 @@ describe('TutorialStep', () => {
 
     expect(stepShown('A')).toBeFalsy();
     expect(stepShown('Z')).toBeFalsy();
+
+    harness.unmount();
+  });
+
+  it('Should dismiss on click outside', () => {
+    const harness = makeHarness();
+
+    const stepShown = id => harness.find(`#inStep${id}`).exists();
+
+    expect(stepShown('A')).toBeTruthy();
+
+    harness
+      .find('TutorialStep')
+      .first()
+      .instance()
+      .handleClickOutside();
+
+    expect(harness.find('#tutorialIndex').text()).toBe('-1');
 
     harness.unmount();
   });
