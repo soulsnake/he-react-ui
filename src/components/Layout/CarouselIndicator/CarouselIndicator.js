@@ -12,23 +12,16 @@ import style from './CarouselIndicator.scss';
 type Props = {
   length: number,
   current: number,
-  showNext?: boolean,
   nextStep?: Function,
+  onDotClick?: Function,
   className?: string,
 };
 
 function CarouselIndicator(props: Props) {
-  const {
-    className,
-    length,
-    current,
-    showNext,
-    nextStep,
-    ...restProps
-  } = props;
+  const { className, length, current, nextStep, onDotClick } = props;
 
   return (
-    <div className={classnames(style.outer, className)} {...restProps}>
+    <div className={classnames(style.outer, className)}>
       <ol className={style.wrapper}>
         {Array(length)
           .fill(1)
@@ -38,6 +31,9 @@ function CarouselIndicator(props: Props) {
               className={classnames(style.item, {
                 [style.active]: current === index,
               })}
+              onClick={() => {
+                if (onDotClick) onDotClick(index);
+              }}
             />
           ))}
 
