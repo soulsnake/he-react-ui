@@ -20,8 +20,17 @@ function InnerButton(props: {
   children: any,
   className: string,
   onClick: ?Function,
+  newWindow?: boolean,
 }) {
-  const { to, withRouter, submit, children, className, onClick } = props;
+  const {
+    to,
+    withRouter,
+    submit,
+    children,
+    className,
+    onClick,
+    newWindow,
+  } = props;
   if (!to) {
     return (
       <button
@@ -34,12 +43,14 @@ function InnerButton(props: {
     );
   }
 
+  const targetProp = newWindow ? { target: '_blank' } : {};
+
   return withRouter ? (
-    <Link to={to} className={className}>
+    <Link to={to} className={className} {...targetProp}>
       {children}
     </Link>
   ) : (
-    <a href={to} className={className}>
+    <a href={to} className={className} {...targetProp}>
       {children}
     </a>
   );
@@ -65,6 +76,7 @@ type Props = {
   className?: string,
   to?: string,
   withRouter: boolean,
+  newWindow: boolean,
 };
 
 class Button extends React.Component<Props> {
@@ -78,6 +90,7 @@ class Button extends React.Component<Props> {
     squared: false,
     onClick: () => null,
     withRouter: false,
+    newWindow: false,
   };
 
   handleClick = (event: SyntheticEvent<*>) => {
@@ -106,6 +119,7 @@ class Button extends React.Component<Props> {
       done,
       to,
       withRouter,
+      newWindow,
     } = this.props;
 
     const buttonClasses = classnames(
@@ -149,6 +163,7 @@ class Button extends React.Component<Props> {
           to={to}
           withRouter={withRouter}
           onClick={this.handleClick}
+          newWindow={newWindow}
         >
           {statusIcon || (
             <Fragment>

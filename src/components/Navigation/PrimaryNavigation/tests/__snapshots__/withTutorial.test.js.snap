@@ -514,6 +514,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                           id="takeTourBtn"
                           keyline={false}
                           link={false}
+                          newWindow={false}
                           onClick={[Function]}
                           squared={false}
                           submit={false}
@@ -524,6 +525,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                           >
                             <InnerButton
                               className="button teal"
+                              newWindow={false}
                               onClick={[Function]}
                               submit={false}
                               withRouter={false}
@@ -549,6 +551,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                           icon=""
                           keyline={false}
                           link={true}
+                          newWindow={false}
                           onClick={[Function]}
                           squared={false}
                           submit={false}
@@ -559,6 +562,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                           >
                             <InnerButton
                               className="button teal link"
+                              newWindow={false}
                               onClick={[Function]}
                               submit={false}
                               withRouter={false}
@@ -596,6 +600,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                               key="cb1"
                               keyline={false}
                               link={true}
+                              newWindow={false}
                               onClick={[Function]}
                               squared={false}
                               submit={false}
@@ -606,6 +611,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                               >
                                 <InnerButton
                                   className="button teal link rightElement"
+                                  newWindow={false}
                                   onClick={[Function]}
                                   submit={false}
                                   withRouter={false}
@@ -642,6 +648,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                               icon=""
                               keyline={false}
                               link={true}
+                              newWindow={false}
                               onClick={[Function]}
                               squared={false}
                               submit={false}
@@ -652,6 +659,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                               >
                                 <InnerButton
                                   className="button teal link rightElement"
+                                  newWindow={false}
                                   onClick={[Function]}
                                   submit={false}
                                   withRouter={false}

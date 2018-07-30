@@ -12,6 +12,7 @@ exports[`<Button /> rendered correctly with submitting fixture 1`] = `
   }
   keyline={false}
   link={false}
+  newWindow={false}
   onClick={[Function]}
   squared={false}
   submit={false}
@@ -23,6 +24,7 @@ exports[`<Button /> rendered correctly with submitting fixture 1`] = `
   >
     <InnerButton
       className="button teal submitting"
+      newWindow={false}
       onClick={[Function]}
       submit={false}
       withRouter={false}

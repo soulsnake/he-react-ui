@@ -22,4 +22,14 @@ export default [
     children: 'I am a <Link /> tag',
     simulateSubmission: true,
   },
+
+  {
+    name: 'toNewWindowUrl',
+    component: Button,
+    props: {
+      to: '#this-works!',
+      newWindow: true,
+    },
+    children: 'I am an <a  target="_blank" /> tag',
+  },
 ];
