@@ -24,6 +24,10 @@
   max-width: 720px;
   padding: 0 20px;
 
+  @include ie {
+    width: 720px;
+  }
+
   p {
     margin-top: 16px;
   }
@@ -45,6 +49,11 @@
   margin-bottom: -32px;
   width: 100%;
   object-fit: contain;
+
+  @include ie {
+    width: 480px;
+    margin: auto;
+  }
 }
 
 .youtube {
