@@ -129,6 +129,7 @@ $slider-width: 264px;
   height: 100%;
   overflow-y: auto;
   overflow-x: auto;
+  position: relative;
 }
 
 .overlay {
@@ -140,4 +141,5 @@ $slider-width: 264px;
   top: 0;
   right: 0;
   @include transition(all 0.4s ease-in-out);
+  pointer-events: none;
 }

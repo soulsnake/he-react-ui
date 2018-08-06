@@ -63,6 +63,10 @@
   transition-property: flex-grow;
   transition-duration: 0.3s;
 
+  @include ie {
+    flex-basis: none;
+  }
+
   &.submitting {
     flex-grow: 0.01; // working around a chrome bug
     padding: 0;

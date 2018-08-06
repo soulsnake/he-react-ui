@@ -248,8 +248,10 @@ class PrimaryNavigation extends Component<Props, *> {
             locationValue,
             logoutRoute,
           )}
-          <div className={styles.children}>{children}</div>
-          {maskPage && <div className={styles.overlay} />}
+          <div className={styles.children}>
+            {children}
+            {maskPage && <div className={styles.overlay} />}
+          </div>
         </div>
       </div>
     );

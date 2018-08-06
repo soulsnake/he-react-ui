@@ -24,9 +24,14 @@
 .image {
   display: block;
   height: auto;
+  width: 216px;
   max-height: 128px;
   max-width: 100%;
-  width: 216px;
+  @include ie {
+    margin: auto;
+    height: auto;
+    width: 120px;
+  }
   object-fit: contain;
 }
 

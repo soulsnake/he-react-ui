@@ -4149,10 +4149,11 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                 </HashRoute>
                 <div
                   className="children"
-                />
-                <div
-                  className="overlay"
-                />
+                >
+                  <div
+                    className="overlay"
+                  />
+                </div>
               </div>
             </div>
           </PrimaryNavigation>
