@@ -21,6 +21,7 @@ type Props = {
   item: NavItem,
   locations?: Option[],
   onLocationChange?: Function,
+  onDisplayTabs?: Function,
   logoutRoute: string,
   location: Location,
   locationValue?: string,
@@ -32,8 +33,32 @@ class SubNavigation extends Component<Props> {
     loading: false,
   };
 
+  componentDidMount() {
+    this.notifyTabDisplayChange();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.item.items !== this.props.item.items) {
+      this.notifyTabDisplayChange();
+    }
+  }
+
+  notifyTabDisplayChange() {
+    const { onDisplayTabs } = this.props;
+    if (onDisplayTabs && this.shouldDisplayTabs()) {
+      onDisplayTabs();
+    }
+  }
+
+  shouldDisplayTabs() {
+    const { item, loading } = this.props;
+    return !loading && item.items && item.items.length > 0;
+  }
+
   renderItems(items) {
     const { location } = this.props;
+
+    if (!items) return [];
 
     return items.map(item => {
       if (isAbsoluteUrl(item.route)) {
@@ -73,6 +98,8 @@ class SubNavigation extends Component<Props> {
       locationValue,
       logoutRoute,
     } = this.props;
+
+    const displayTabs = this.shouldDisplayTabs();
 
     return (
       <div className={style.bar}>
@@ -117,11 +144,9 @@ class SubNavigation extends Component<Props> {
             </NavLink>
           </span>
         </div>
-        {!loading &&
-          item.items &&
-          item.items.length > 0 && (
-            <div className={style.items}>{this.renderItems(item.items)}</div>
-          )}
+        {displayTabs && (
+          <div className={style.items}>{this.renderItems(item.items)}</div>
+        )}
       </div>
     );
   }

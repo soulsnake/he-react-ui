@@ -7,7 +7,7 @@ import sharedProps from './sharedProps';
 
 export default {
   component: PrimaryNavigation,
-  url: '/',
+  url: '/notifications/second',
   children: (
     <Fragment>
       <Heading>Example content</Heading>
@@ -15,8 +15,6 @@ export default {
     </Fragment>
   ),
   props: {
-    siteName: 'Your Site',
-    logoutRoute: '/logout',
     ...sharedProps(),
   },
 };

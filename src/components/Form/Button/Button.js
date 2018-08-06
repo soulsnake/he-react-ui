@@ -15,8 +15,8 @@ import ButtonSpinner from './ButtonSpinner';
 
 function InnerButton(props: {
   to: ?string,
-  withRouter: boolean,
-  submit: boolean,
+  withRouter: ?boolean,
+  submit: ?boolean,
   children: any,
   className: string,
   onClick: ?Function,
@@ -57,14 +57,14 @@ function InnerButton(props: {
 }
 
 type Props = {
-  submit: boolean,
+  submit?: boolean,
   color?: 'teal' | 'blue' | 'green' | 'red' | 'white',
   link?: boolean,
   small?: boolean,
   large?: boolean,
   onClick: Function,
   keyline?: boolean,
-  children?: string | Array<any>,
+  children: any,
   disabled?: boolean,
   icon?: string,
   iconLeft?: any,
@@ -75,8 +75,8 @@ type Props = {
   done?: boolean,
   className?: string,
   to?: string,
-  withRouter: boolean,
-  newWindow: boolean,
+  withRouter?: boolean,
+  newWindow?: boolean,
 };
 
 class Button extends React.Component<Props> {
