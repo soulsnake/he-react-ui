@@ -195,6 +195,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
         },
       ],
       "logoutRoute": "/logout",
+      "siteName": "Your Site",
     }
   }
   steps={
@@ -1228,6 +1229,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
         ]
       }
       logoutRoute="/logout"
+      siteName="Your Site"
     >
       <Component
         bottomKeys={
@@ -1430,6 +1432,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
         onTutorialAdvance={[Function]}
         onTutorialDismiss={[Function]}
         onTutorialJump={[Function]}
+        siteName="Your Site"
         tutorialIndex={0}
         tutorialSteps={
           Array [
@@ -1653,6 +1656,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
           onTutorialJump={[Function]}
           outsideClickIgnoreClass="ignore-react-onclickoutside"
           preventDefault={false}
+          siteName="Your Site"
           stopPropagation={false}
         >
           <PrimaryNavigation
@@ -1878,7 +1882,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
             onTutorialJump={[Function]}
             outsideClickIgnoreClass="ignore-react-onclickoutside"
             preventDefault={false}
-            siteName="HealthEngine"
+            siteName="Your Site"
             stopPropagation={false}
           >
             <div
@@ -2924,7 +2928,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                     onSelect={[Function]}
                     open={false}
                     route="/"
-                    siteName="HealthEngine"
+                    siteName="Your Site"
                     title="Homepage"
                   >
                     <div
@@ -2937,7 +2941,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                         <div
                           className="sitename"
                         >
-                          HealthEngine
+                          Your Site
                         </div>
                       </div>
                       <List
@@ -3012,7 +3016,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                     label="Bucket 1"
                     onSelect={[Function]}
                     open={false}
-                    siteName="HealthEngine"
+                    siteName="Your Site"
                     title="Your first bucket"
                   >
                     <div
@@ -3025,7 +3029,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                         <div
                           className="sitename"
                         >
-                          HealthEngine
+                          Your Site
                         </div>
                       </div>
                       <List
@@ -3214,7 +3218,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                     label="Bucket 2"
                     onSelect={[Function]}
                     open={false}
-                    siteName="HealthEngine"
+                    siteName="Your Site"
                     title="Your second bucket"
                   >
                     <div
@@ -3227,7 +3231,7 @@ exports[`<PrimaryNavigation /> rendered correctly with tutorial fixture 1`] = `
                         <div
                           className="sitename"
                         >
-                          HealthEngine
+                          Your Site
                         </div>
                       </div>
                       <List

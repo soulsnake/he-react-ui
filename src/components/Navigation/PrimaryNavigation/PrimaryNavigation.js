@@ -23,6 +23,7 @@ function renderRoutes(
   onLocationChange,
   locationValue,
   logoutRoute,
+  onDisplayTabs,
 ) {
   return (
     <HashRoute
@@ -32,6 +33,7 @@ function renderRoutes(
       render={() => (
         <SubNavigation
           item={item}
+          onDisplayTabs={onDisplayTabs}
           logoutRoute={logoutRoute}
           locations={locations}
           onLocationChange={onLocationChange}
@@ -52,6 +54,7 @@ type Props = {
   locations?: {}[], // TODO
   onChangeOpenKey?: Function,
   onLocationChange?: Function,
+  onDisplayTabs?: Function,
   locationValue?: string,
   logoutRoute: string,
   loading?: boolean,
@@ -191,10 +194,16 @@ class PrimaryNavigation extends Component<Props, *> {
     locationValue,
     logoutRoute,
   ) => {
-    const { loading } = this.props;
+    const { loading, onDisplayTabs } = this.props;
 
     if (loading) {
-      return <SubNavigation loading logoutRoute={logoutRoute} />;
+      return (
+        <SubNavigation
+          loading
+          logoutRoute={logoutRoute}
+          onDisplayTabs={onDisplayTabs}
+        />
+      );
     }
 
     return items.map(item => {
@@ -206,6 +215,7 @@ class PrimaryNavigation extends Component<Props, *> {
             onLocationChange,
             locationValue,
             logoutRoute,
+            onDisplayTabs,
           ),
         );
       }
@@ -216,6 +226,7 @@ class PrimaryNavigation extends Component<Props, *> {
         onLocationChange,
         locationValue,
         logoutRoute,
+        onDisplayTabs,
       );
     });
   };
