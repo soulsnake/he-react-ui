@@ -39,17 +39,14 @@ window.matchMedia =
 
 // Cause console errors to fail tests
 
-let throwing = false;
+let accumulatedErrors = [];
 
 global.console.error = it => {
-  if (throwing) {
-    console.log(it); // eslint-disable-line
-  } else {
-    throwing = true;
-    process.nextTick(() => {
-      throwing = false;
-    });
-
-    expect(it).toBe('No react warnings');
-  }
+  accumulatedErrors.push(it);
 };
+
+afterEach(() => {
+  const consoleErrors = accumulatedErrors.join('\n');
+  accumulatedErrors = [];
+  expect(consoleErrors).toBe('');
+});
