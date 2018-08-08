@@ -74,6 +74,7 @@ type Props = {
   submitting?: boolean,
   done?: boolean,
   className?: string,
+  containerClassName?: string,
   to?: string,
   withRouter?: boolean,
   newWindow?: boolean,
@@ -104,6 +105,7 @@ class Button extends React.Component<Props> {
       children,
       className,
       color,
+      containerClassName,
       disabled,
       icon,
       iconLeft,
@@ -136,10 +138,14 @@ class Button extends React.Component<Props> {
       className,
     );
 
-    const containerClasses = classnames(styles.buttonContainer, {
-      [styles.small]: small,
-      [styles.large]: large,
-    });
+    const containerClasses = classnames(
+      styles.buttonContainer,
+      {
+        [styles.small]: small,
+        [styles.large]: large,
+      },
+      containerClassName,
+    );
 
     const submittingIcon = submitting ? (
       <div className={styles.iconCenter}>
