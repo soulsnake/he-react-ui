@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import PrimaryNavigation from '../';
 import Button from '../../../Form/Button';
 import Heading from '../../../Layout/Heading';
-import sharedProps from './sharedProps';
+import sharedProps from './sharedProps.fixture';
 
 export default {
   component: PrimaryNavigation,

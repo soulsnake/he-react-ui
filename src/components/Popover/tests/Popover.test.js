@@ -1,6 +1,6 @@
 // @flow
 import createTestContext from 'react-cosmos-test/enzyme';
-import fixtures from '../Popover.fixtures';
+import fixtures from '../Popover.fixture';
 
 const { mount, getWrapper } = createTestContext({ fixture: fixtures[0] });
 beforeEach(mount);

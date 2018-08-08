@@ -1,5 +1,5 @@
 // @flow
-import SubNavigation from './';
+import SubNavigation from '../';
 
 export default [
   {

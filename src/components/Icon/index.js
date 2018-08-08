@@ -94,9 +94,9 @@ export default function Icon(props: {
     case 'ChevronDown':
       return <ChevronDown {...childProps} />;
     case 'Clock':
-      return <Clock {...props} />;
+      return <Clock />;
     case 'CurvedArrow':
-      return <CurvedArrow {...props} />;
+      return <CurvedArrow />;
     case 'Cross':
       return <Cross {...childProps} />;
     case 'Delete':
@@ -108,9 +108,9 @@ export default function Icon(props: {
     case 'Engage':
       return <Engage {...childProps} />;
     case 'HealthEngine':
-      return <HealthEngine {...props} />;
+      return <HealthEngine {...restProps} />;
     case 'HealthEngineWithText':
-      return <HealthEngineWithText {...props} />;
+      return <HealthEngineWithText />;
     case 'Help':
       return <Help {...childProps} />;
     case 'Home':

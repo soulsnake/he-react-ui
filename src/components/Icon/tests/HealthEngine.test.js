@@ -1,5 +1,6 @@
 // @flow
-import fixture from '../fixtures/HealthEngine.fixture.js';
+import { normal, inverted } from '../fixtures/HealthEngine.fixture.js';
 import testFixture from '../../../../config/testFixture';
 
-testFixture(fixture, 'HealthEngine');
+testFixture(normal, 'HealthEngine');
+testFixture(inverted, 'HealthEngine-inverted');
