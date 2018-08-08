@@ -7,7 +7,7 @@
     "clean": "rm -rf ./dist",
     "build": "yarn run clean && webpack --config ./config/webpack.prod.js -p",
     "test": "NODE_ENV=test jest --env=jsdom",
-    "coverage": "SET NODE_ENV=test&&jest --env=jsdom --coverage",
+    "coverage": "NODE_ENV=test jest --env=jsdom --coverage",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "test:watch": "yarn test -- --watch",
     "lint": "eslint . --env jest",
