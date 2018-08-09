@@ -2,7 +2,7 @@
 import React from 'react';
 
 type Props = {
-  inverted?: boolean;
+  inverted?: boolean,
 };
 
 export default function HealthEngine(props: Props & SVGProps) {
