@@ -26,6 +26,7 @@
   "author": "HealthEngine",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-preset-flow": "^6.23.0",
     "classnames": "^2.2.5",
     "concurrently": "^3.6.1",
