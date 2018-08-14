@@ -6,6 +6,6 @@
     "stage-1"
   ],
   "plugins": [
-    "add-react-displayname"
+    "transform-react-display-name"
   ]
 }
