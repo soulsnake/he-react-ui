@@ -1,6 +1,6 @@
 {
   "name": "he-react-ui",
-  "version": "0.1.71",
+  "version": "0.1.72",
   "description": "Common UI elements for HealthEngine",
   "main": "dist/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "author": "HealthEngine",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-transform-react-display-name": "^6.25.0",
     "babel-preset-flow": "^6.23.0",
     "classnames": "^2.2.5",
     "concurrently": "^3.6.1",
