@@ -17,6 +17,8 @@ import SubNavigation from '../SubNavigation';
 import styles from './PrimaryNavigation.scss';
 import type { NavItem } from '../NavItem';
 
+const doNothing = () => {};
+
 function renderRoutes(
   item,
   locations,
@@ -25,9 +27,9 @@ function renderRoutes(
   logoutRoute,
   onDisplayTabs,
 ) {
-  return (
+  return item.route ? (
     <HashRoute
-      key={`Subnav_${item.key}`}
+      key={item.key && `Subnav_${item.key}`}
       exact={item.exact} // Slash will match anything so we need to be exact in that case.
       path={item.route}
       render={() => (
@@ -41,7 +43,7 @@ function renderRoutes(
         />
       )}
     />
-  );
+  ) : null;
 }
 
 type Logo = { icon: any, route: string };
@@ -74,6 +76,16 @@ class PrimaryNavigation extends Component<Props, *> {
       route: '/',
     },
     loading: false,
+
+    items: [],
+    locations: [],
+    onChangeOpenKey: doNothing,
+    onLocationChange: doNothing,
+    onDisplayTabs: doNothing,
+    locationValue: null,
+    logoutRoute: '/',
+    children: null,
+    maskPage: false,
   };
 
   state = {
@@ -167,22 +179,29 @@ class PrimaryNavigation extends Component<Props, *> {
             {topItems.map(item => (
               <Bucket
                 open={item.key === openKey}
-                onClickParent={() => toggleBucket(item.key)}
+                onClickParent={() => {
+                  if (item.key) toggleBucket(item.key);
+                }}
                 onClickRoute={closeBucket}
                 itemKey={item.key}
                 {...item}
               />
             ))}
             <div className={styles.bucketFiller} onClick={closeBucket} />
-            {bottomItems.map(item => (
-              <Bucket
-                open={item.key === openKey}
-                onClickParent={() => toggleBucket(item.key)}
-                onClickRoute={closeBucket}
-                itemKey={item.key}
-                {...item}
-              />
-            ))}
+            {bottomItems.map(
+              item =>
+                item ? (
+                  <Bucket
+                    open={item.key === openKey}
+                    onClickParent={() => {
+                      if (item.key) toggleBucket(item.key);
+                    }}
+                    onClickRoute={closeBucket}
+                    itemKey={item.key}
+                    {...item}
+                  />
+                ) : null,
+            )}
           </Fragment>
         )}
       </div>

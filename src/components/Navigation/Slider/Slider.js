@@ -13,11 +13,11 @@ import type { NavItem } from '../NavItem';
 
 type Props = {
   siteName?: string,
-  itemKey: string,
-  label: string,
-  icon: string,
+  itemKey?: string,
+  label?: string,
+  icon?: string,
   route?: string,
-  items: NavItem[],
+  items?: NavItem[],
   open?: boolean,
   bottom?: boolean,
   onSelect?: Function,

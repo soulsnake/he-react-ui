@@ -35,9 +35,9 @@ function renderBadge(item: NavItem) {
 }
 
 type Props = {
-  itemKey: string,
-  title: string,
-  items: NavItem[],
+  itemKey?: string,
+  title?: string,
+  items?: NavItem[],
   className?: string,
   onSelect?: Function,
 };
@@ -60,7 +60,7 @@ class List extends Component<Props> {
         className={classnames(styles.item, { [styles.current]: current })}
         activeClassName={styles.current}
         key={item.key}
-        id={`NAV_${item.key}`}
+        id={item.key && `NAV_${item.key}`}
         to={item.route}
         onClick={onSelect}
       >

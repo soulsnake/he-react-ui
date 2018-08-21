@@ -405,6 +405,7 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
       ]
     }
     loading={false}
+    locationValue={null}
     locations={
       Array [
         Object {
@@ -427,6 +428,10 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
       }
     }
     logoutRoute="/logout"
+    maskPage={false}
+    onChangeOpenKey={[Function]}
+    onDisplayTabs={[Function]}
+    onLocationChange={[Function]}
     outsideClickIgnoreClass="ignore-react-onclickoutside"
     preventDefault={false}
     siteName="Your Site"
@@ -2200,6 +2205,7 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                   "title": "Homepage",
                 }
               }
+              locationValue={null}
               locations={
                 Array [
                   Object {
@@ -2213,6 +2219,8 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                 ]
               }
               logoutRoute="/logout"
+              onDisplayTabs={[Function]}
+              onLocationChange={[Function]}
             >
               <Route
                 render={[Function]}
@@ -2271,6 +2279,7 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                       "state": undefined,
                     }
                   }
+                  locationValue={null}
                   locations={
                     Array [
                       Object {
@@ -2292,6 +2301,8 @@ exports[`<PrimaryNavigation /> rendered correctly with default fixture 1`] = `
                       "url": "/",
                     }
                   }
+                  onDisplayTabs={[Function]}
+                  onLocationChange={[Function]}
                 >
                   <div
                     className="bar"

@@ -15,16 +15,16 @@ import styles from './Bucket.scss';
 import type { NavItem } from '../NavItem';
 
 type Props = {
-  itemKey: string,
-  label: string,
-  icon: string,
+  itemKey?: string,
+  label?: string,
+  icon?: string,
   route?: string,
   items?: NavItem[],
   onSelect?: Function,
-  open: boolean,
-  location: Location,
-  onClickRoute: Function,
-  onClickParent: Function,
+  open?: boolean,
+  location?: Location,
+  onClickRoute?: Function,
+  onClickParent?: Function,
 };
 
 function Bucket(props: Props) {
@@ -43,6 +43,7 @@ function Bucket(props: Props) {
   const external = isExternal(route);
   const activeChild =
     items &&
+    location &&
     items.find(
       child =>
         matchPath(location.pathname + location.hash, {
@@ -62,7 +63,7 @@ function Bucket(props: Props) {
   );
 
   const childProps = {
-    id: `BUCKET_${itemKey}`,
+    id: itemKey && `BUCKET_${itemKey}`,
     key: itemKey,
     className: classnames(styles.bucket, {
       [styles.open]: open,
@@ -70,7 +71,7 @@ function Bucket(props: Props) {
       [styles.current]: activeChild,
     }),
     title: label,
-    onClick: () => (route ? onClickRoute() : onClickParent()),
+    onClick: route ? onClickRoute : onClickParent,
   };
 
   if (route) {

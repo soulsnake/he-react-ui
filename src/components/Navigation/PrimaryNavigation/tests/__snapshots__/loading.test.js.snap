@@ -29,6 +29,7 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
     }
     items={Array []}
     loading={true}
+    locationValue={null}
     locations={Array []}
     logo={
       Object {
@@ -40,6 +41,10 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
       }
     }
     logoutRoute="/logout"
+    maskPage={false}
+    onChangeOpenKey={[Function]}
+    onDisplayTabs={[Function]}
+    onLocationChange={[Function]}
     outsideClickIgnoreClass="ignore-react-onclickoutside"
     preventDefault={false}
     siteName="HealthEngine"
@@ -191,6 +196,7 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
         <withRouter(SubNavigation)
           loading={true}
           logoutRoute="/logout"
+          onDisplayTabs={[Function]}
         >
           <Route
             render={[Function]}
@@ -247,6 +253,7 @@ exports[`<PrimaryNavigation /> rendered correctly with loading fixture 1`] = `
                   "url": "/",
                 }
               }
+              onDisplayTabs={[Function]}
             >
               <div
                 className="bar"

@@ -1,11 +1,11 @@
 // @flow
 
 export type NavItem = {
-  key: string,
+  key?: string,
   label?: string,
-  title: string,
+  title?: string,
   icon?: string, // TODO: only required at top level
-  route: string,
+  route?: string,
   exact?: boolean,
   badge?: 'NEW' | 'FREE',
   notifications?: number,

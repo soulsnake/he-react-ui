@@ -22,8 +22,8 @@ type Props = {
   locations?: Option[],
   onLocationChange?: Function,
   onDisplayTabs?: Function,
-  logoutRoute: string,
-  location: Location,
+  logoutRoute?: string,
+  location?: Location,
   locationValue?: string,
   loading?: boolean,
 };
@@ -48,8 +48,10 @@ class SubNavigation extends Component<Props> {
 
   notifyTabDisplayChange() {
     const { onDisplayTabs } = this.props;
-    if (onDisplayTabs && this.shouldDisplayTabs()) {
-      onDisplayTabs();
+    if (onDisplayTabs) {
+      if (this.shouldDisplayTabs()) {
+        onDisplayTabs();
+      }
     }
   }
 
@@ -64,7 +66,7 @@ class SubNavigation extends Component<Props> {
     if (!items) return [];
 
     return items.map(item => {
-      if (isAbsoluteUrl(item.route)) {
+      if (item.route && isAbsoluteUrl(item.route)) {
         return (
           <a target="_blank" href={item.route} className={style.item}>
             <span>{item.label}</span>
@@ -72,22 +74,25 @@ class SubNavigation extends Component<Props> {
         );
       }
       return (
-        <NavLink
-          key={item.key}
-          className={classnames(style.item, {
-            [style.selected]:
-              matchPath(location.pathname + location.hash, {
-                path: item.route,
-                exact: item.exact || typeof item.exact === 'undefined', // Default to true
-                strict: false,
-              }) !== null,
-          })}
-          exact
-          to={item.route}
-          title={item.label}
-        >
-          <span>{item.label}</span>
-        </NavLink>
+        item.route && (
+          <NavLink
+            key={item.key}
+            className={classnames(style.item, {
+              [style.selected]:
+                location &&
+                matchPath(location.pathname + location.hash, {
+                  path: item.route,
+                  exact: item.exact || typeof item.exact === 'undefined', // Default to true
+                  strict: false,
+                }) !== null,
+            })}
+            exact
+            to={item.route}
+            title={item.label}
+          >
+            <span>{item.label}</span>
+          </NavLink>
+        )
       );
     });
   }
@@ -136,15 +141,17 @@ class SubNavigation extends Component<Props> {
                   <span className={style.control}>{locations[0].label}</span>
                 ))))}
           <span className={classnames(style.control, style.logout)}>
-            <NavLink
-              key="logout"
-              to={logoutRoute}
-              className={style.navLink}
-              title="Logout"
-              target="_self"
-            >
-              <Logout className={style.icon} />Logout
-            </NavLink>
+            {logoutRoute && (
+              <NavLink
+                key="logout"
+                to={logoutRoute}
+                className={style.navLink}
+                title="Logout"
+                target="_self"
+              >
+                <Logout className={style.icon} />Logout
+              </NavLink>
+            )}
           </span>
         </div>
         {displayTabs && (
