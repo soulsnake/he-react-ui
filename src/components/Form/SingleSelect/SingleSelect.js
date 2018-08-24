@@ -57,9 +57,9 @@ class SingleSelect extends React.Component<Props, *> {
     return forceTitle || option.label;
   };
 
-  handleChange = (data: Option) => {
+  handleChange = (data: ?Option) => {
     const oldValue = this.props.value;
-    if (oldValue !== data.value) {
+    if (data && oldValue !== data.value) {
       const event = {
         value: data.value,
         props: this.props,
