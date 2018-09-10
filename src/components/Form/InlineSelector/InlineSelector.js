@@ -7,6 +7,7 @@
 
 import classnames from 'classnames';
 import React from 'react';
+import { returnNull } from '../../../util';
 import Label from '../Label';
 import style from './InlineSelector.scss';
 
@@ -30,7 +31,7 @@ class InlineSelector extends React.Component<Props> {
   static defaultProps = {
     vertical: false,
     options: [],
-    onChange: null,
+    onChange: returnNull,
   };
 
   handleClick = (option: Option) => {
