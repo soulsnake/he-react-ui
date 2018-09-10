@@ -8,6 +8,7 @@
 import classnames from 'classnames';
 import React from 'react';
 import Select from 'react-select';
+import { returnNull } from '../../../util';
 import DropDown from '../../Icon/DropDown';
 import Label from '../Label';
 import style from './SingleSelect.scss';
@@ -42,7 +43,7 @@ class SingleSelect extends React.Component<Props, *> {
     error: '',
     inline: false,
     value: null,
-    onChange: () => {},
+    onChange: returnNull,
     onBeforeOpen: () => true,
     onClose: () => true,
   };

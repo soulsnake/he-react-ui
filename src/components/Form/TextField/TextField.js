@@ -5,10 +5,11 @@
  *
  */
 
-import React from 'react';
 import classnames from 'classnames';
-import Tick from '../../Icon/Tick';
+import React from 'react';
+import { returnNull } from '../../../util';
 import Cross from '../../Icon/Cross';
+import Tick from '../../Icon/Tick';
 import style from './TextField.scss';
 
 type Props = {
@@ -23,6 +24,8 @@ type Props = {
   disabled?: boolean,
   marker?: boolean,
   isValid?: boolean,
+  password?: boolean,
+  small?: boolean,
   onBlur: Function,
   onChange: Function,
   onFocus: Function,
@@ -30,15 +33,14 @@ type Props = {
 
 class TextField extends React.Component<Props, *> {
   static defaultProps = {
-    label: 'Field',
     disabled: false,
     inline: false,
     marker: false,
     value: '',
     isValid: true,
-    onBlur: () => {},
-    onChange: () => {},
-    onFocus: () => {},
+    onBlur: returnNull,
+    onChange: returnNull,
+    onFocus: returnNull,
   };
 
   state = {
@@ -93,11 +95,13 @@ class TextField extends React.Component<Props, *> {
       onChange,
       onFocus,
       isValid,
+      password,
+      small,
       ...restProps
     } = this.props;
     const { focused } = this.state;
     const floating = focused || value !== '';
-    const classes = classnames(
+    const wrapperClasses = classnames(
       style.outer,
       {
         [style.invalid]: !isValid,
@@ -105,15 +109,26 @@ class TextField extends React.Component<Props, *> {
         [style.inline]: inline,
         [style.focused]: focused,
         [style.hasMarker]: marker,
+        [style.small]: small,
       },
       className,
     );
 
+    const inputClasses = classnames(style.input, {
+      [style.small]: small,
+      [style.noLabel]: !label,
+    });
+
+    const labelClasses = classnames(style.label, {
+      [style.floating]: floating,
+      [style.small]: small,
+    });
+
     return (
-      <div className={classes} {...restProps}>
+      <div className={wrapperClasses} {...restProps}>
         <div className={style.block}>
           <input
-            className={style.input}
+            className={inputClasses}
             id={id}
             name={name}
             onFocus={this.handleFocus}
@@ -121,7 +136,9 @@ class TextField extends React.Component<Props, *> {
             onChange={this.handleChange}
             disabled={disabled}
             value={value}
+            type={password ? 'password' : 'text'}
           />
+
           {marker &&
             value !== '' &&
             (isValid ? (
@@ -129,13 +146,14 @@ class TextField extends React.Component<Props, *> {
             ) : (
               <Cross className={style.marker} />
             ))}
-          <label
-            className={classnames(style.label, { [style.floating]: floating })}
-            htmlFor={id}
-          >
-            {label}
-          </label>
+
+          {label && (
+            <label className={labelClasses} htmlFor={id}>
+              {label}
+            </label>
+          )}
         </div>
+
         {(description || error) && (
           <label htmlFor={id} className={style.description}>
             {error || description}

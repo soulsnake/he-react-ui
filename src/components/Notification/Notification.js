@@ -5,6 +5,7 @@ import Alert from '../Icon/Alert';
 import Cross from '../Icon/Cross';
 import Tick from '../Icon/Tick';
 import styles from './Notification.scss';
+import { returnNull } from '../../util';
 
 type Props = {
   canClose: boolean,
@@ -19,7 +20,7 @@ export default class Notification extends React.PureComponent<Props> {
   static defaultProps = {
     canClose: false,
     closed: false,
-    onClose: () => null,
+    onClose: returnNull,
     type: 'default',
   };
 

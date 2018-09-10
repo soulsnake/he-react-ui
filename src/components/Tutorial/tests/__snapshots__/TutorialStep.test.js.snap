@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`TutorialStep should follow its target element 1`] = `
-Object {
-  "left": 200,
-  "top": 175,
-}
-`;

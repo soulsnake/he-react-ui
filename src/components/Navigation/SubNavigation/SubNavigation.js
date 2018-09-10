@@ -68,7 +68,12 @@ class SubNavigation extends Component<Props> {
     return items.map(item => {
       if (item.route && isAbsoluteUrl(item.route)) {
         return (
-          <a target="_blank" href={item.route} className={style.item}>
+          <a
+            key={item.key}
+            target="_blank"
+            href={item.route}
+            className={style.item}
+          >
             <span>{item.label}</span>
           </a>
         );

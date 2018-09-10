@@ -12,9 +12,10 @@ import { SingleDatePicker as Picker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import Media from 'react-media';
-import ChevronRight from '../../../Icon/Chevrons/ChevronRight';
-import ChevronLeft from '../../../Icon/Chevrons/ChevronLeft';
+import { returnNull } from '../../../../util';
 import Calendar from '../../../Icon/Calendar';
+import ChevronLeft from '../../../Icon/Chevrons/ChevronLeft';
+import ChevronRight from '../../../Icon/Chevrons/ChevronRight';
 import Label from '../../Label';
 import styles from './SingleDatePicker.scss';
 
@@ -50,9 +51,9 @@ class SingleDatePicker extends React.Component<Props, *> {
     inline: false,
     placeholder: 'Date',
     readOnly: false,
-    onBlur: () => null,
-    onChange: () => null,
-    onFocus: () => null,
+    onBlur: returnNull,
+    onChange: returnNull,
+    onFocus: returnNull,
   };
 
   state = {

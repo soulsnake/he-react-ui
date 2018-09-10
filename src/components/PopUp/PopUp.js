@@ -6,6 +6,7 @@
  */
 import classnames from 'classnames';
 import React from 'react';
+import { returnNull } from '../../util';
 import Cross from '../Icon/Cross';
 import LoadingSpinner from '../Loading/LoadingSpinner';
 import styles from './PopUp.scss';
@@ -21,14 +22,12 @@ type Props = {
   style?: Object,
 };
 
-const noOp = () => null;
-
 class PopUp extends React.Component<Props, *> {
   static defaultProps = {
     modal: false,
     noPadding: false,
-    onClose: noOp,
-    onOpen: noOp,
+    onClose: returnNull,
+    onOpen: returnNull,
     showing: false,
   };
 

@@ -30,7 +30,7 @@ class InlineSelector extends React.Component<Props> {
   static defaultProps = {
     vertical: false,
     options: [],
-    onChange: () => null,
+    onChange: null,
   };
 
   handleClick = (option: Option) => {

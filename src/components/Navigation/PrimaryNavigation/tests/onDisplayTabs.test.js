@@ -1,7 +1,12 @@
 // @flow
 import createTestContext from 'react-cosmos-test/enzyme';
-import defaultFixture from '../fixtures/Default.fixture';
-import fixtureWithTabs from '../fixtures/withSubNav.fixture';
+import fixtures from '../fixtures/fixtures';
+
+const defaultFixture = fixtures.find(it => it.name === 'Default');
+const fixtureWithTabs = fixtures.find(it => it.name === 'withSubNav');
+
+if (!defaultFixture || !fixtureWithTabs)
+  throw new Error('Test requires a Default and withSubNav fixture');
 
 function mountWithCallback(fixture, onDisplayTabs) {
   const wrappedFixture = {

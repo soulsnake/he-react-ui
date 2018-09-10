@@ -1,6 +1,10 @@
 // @flow
 import createTestContext from 'react-cosmos-test/enzyme';
-import defaultFixture from '../fixtures/Default.fixture';
+import fixtures from '../fixtures/fixtures';
+
+const defaultFixture = fixtures.find(it => it.name === 'Default');
+
+if (!defaultFixture) throw new Error('Test requires a Default fixture');
 
 const onChangeOpenKey = jest.fn();
 

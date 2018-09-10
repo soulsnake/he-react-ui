@@ -5,11 +5,11 @@
  *
  */
 
-import React from 'react';
 import classnames from 'classnames';
-
-import RadioUnchecked from '../../Icon/CheckBoxes/RadioUnchecked';
+import React from 'react';
+import { returnNull } from '../../../util';
 import RadioChecked from '../../Icon/CheckBoxes/RadioChecked';
+import RadioUnchecked from '../../Icon/CheckBoxes/RadioUnchecked';
 import Label from '../Label';
 import style from './Radio.scss';
 
@@ -34,7 +34,7 @@ class Radio extends React.Component<Props> {
   static defaultProps = {
     error: '',
     inline: false,
-    onChange: () => {},
+    onChange: returnNull,
   };
 
   generateOptions = () => {
@@ -54,7 +54,7 @@ class Radio extends React.Component<Props> {
           type="radio"
           name={name}
           checked={value === option.value}
-          onChange={() => null}
+          onChange={returnNull}
         />
         <RadioUnchecked
           className={classnames(style.icon, style.empty)}

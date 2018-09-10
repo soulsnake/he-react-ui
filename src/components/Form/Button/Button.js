@@ -9,6 +9,7 @@
 import classnames from 'classnames';
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { returnNull } from '../../../util';
 import Icon from '../../Icon';
 import styles from './Button.scss';
 import ButtonSpinner from './ButtonSpinner';
@@ -89,7 +90,7 @@ class Button extends React.Component<Props> {
     keyline: false,
     disabled: false,
     squared: false,
-    onClick: () => null,
+    onClick: returnNull,
     withRouter: false,
     newWindow: false,
   };

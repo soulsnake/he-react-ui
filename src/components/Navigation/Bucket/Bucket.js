@@ -10,6 +10,7 @@ import isExternal from 'is-url-external';
 import React, { Fragment } from 'react';
 import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import { returnNull } from '../../../util';
 import Icon from '../../Icon';
 import styles from './Bucket.scss';
 import type { NavItem } from '../NavItem';
@@ -97,8 +98,8 @@ function Bucket(props: Props) {
 }
 
 Bucket.defaultProps = {
-  onClickRoute: () => null,
-  onClickParent: () => null,
+  onClickRoute: returnNull,
+  onClickParent: returnNull,
   open: false,
 };
 

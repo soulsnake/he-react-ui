@@ -8,6 +8,7 @@
 import React, { Component, Fragment } from 'react';
 import onClickOutside from 'react-onclickoutside';
 import { NavLink } from 'react-router-dom';
+import { returnNull } from '../../../util';
 import HashRoute from '../../HashRoute';
 import HealthEngine from '../../Icon/HealthEngine';
 import LoadingStrip from '../../Loading/LoadingStrip';
@@ -16,8 +17,6 @@ import Slider from '../Slider';
 import SubNavigation from '../SubNavigation';
 import styles from './PrimaryNavigation.scss';
 import type { NavItem } from '../NavItem';
-
-const doNothing = () => {};
 
 function renderRoutes(
   item,
@@ -79,9 +78,9 @@ class PrimaryNavigation extends Component<Props, *> {
 
     items: [],
     locations: [],
-    onChangeOpenKey: doNothing,
-    onLocationChange: doNothing,
-    onDisplayTabs: doNothing,
+    onChangeOpenKey: returnNull,
+    onLocationChange: returnNull,
+    onDisplayTabs: returnNull,
     locationValue: null,
     logoutRoute: '/',
     children: null,

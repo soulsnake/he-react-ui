@@ -5,10 +5,10 @@
  *
  */
 
-import React from 'react';
 import classnames from 'classnames';
+import React from 'react';
 import onClickOutside from 'react-onclickoutside';
-
+import { returnNull } from '../../../util';
 import Clock from '../../Icon/Clock';
 import Label from '../Label';
 import style from './TimeSelector.scss';
@@ -47,7 +47,7 @@ class TimeSelector extends React.Component<Props, *> {
     inline: false,
     required: false,
     hourly: false,
-    onChange: () => {},
+    onChange: returnNull,
     hours: (() =>
       [...Array(24).keys()].map(n => ({
         label: n.toString(),

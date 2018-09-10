@@ -8,6 +8,7 @@
 
 import classnames from 'classnames';
 import React from 'react';
+import { returnNull } from '../../../util';
 import Icon from '../../Icon';
 import style from './ActionIcon.scss';
 
@@ -25,7 +26,7 @@ class ActionIcon extends React.Component<Props> {
     className: '',
     color: 'teal',
     disabled: false,
-    onClick: () => null,
+    onClick: returnNull,
   };
 
   handleClick = (event: SyntheticEvent<*>) => {

@@ -9,5 +9,4 @@ export * from './Form';
 export * from './Layout';
 export * from './Loading';
 export * from './Promotional';
-export * from './Tutorial';
 export { Icon, PrimaryNavigation, Notification, Popover, PopUp };

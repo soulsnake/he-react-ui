@@ -7,6 +7,7 @@
 
 import classnames from 'classnames';
 import React from 'react';
+import { returnNull } from '../../../util';
 import List from '../List';
 import styles from './Slider.scss';
 import type { NavItem } from '../NavItem';
@@ -43,7 +44,7 @@ function Slider(props: Props) {
 }
 
 Slider.defaultProps = {
-  onSelect: () => null,
+  onSelect: returnNull,
   open: false,
   bottom: false,
 };

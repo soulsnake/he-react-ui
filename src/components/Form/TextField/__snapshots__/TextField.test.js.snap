@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> rendered correctly with Default fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with Error fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with Value fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with password fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with small fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="First Name"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  value="Oscar"
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Oscar"
+      />
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;

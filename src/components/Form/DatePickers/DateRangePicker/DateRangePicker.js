@@ -6,8 +6,9 @@ import { DateRangePicker as InnerDateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { SingleSelect } from '../../../';
-import ChevronRight from '../../../Icon/Chevrons/ChevronRight';
+import { returnNull } from '../../../../util';
 import ChevronLeft from '../../../Icon/Chevrons/ChevronLeft';
+import ChevronRight from '../../../Icon/Chevrons/ChevronRight';
 import style from './DateRangePicker.module.scss';
 
 const CUSTOM = 'CUSTOM';
@@ -71,7 +72,7 @@ export default class DateRangePicker extends React.Component<Props, *> {
     id: 'date-range-picker',
     fill: false,
     keepOpenOnDateSelect: false,
-    onChange: () => {},
+    onChange: returnNull,
     isOutsideRange: NEVER,
     value: null,
   };

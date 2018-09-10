@@ -39,6 +39,11 @@ export default [
             label: 'Secondary',
             route: '/parent/secondary',
           },
+          {
+            key: 'TERTIARY',
+            label: 'Google',
+            route: 'https://wwww.google.com/',
+          },
         ],
       },
       locations: [

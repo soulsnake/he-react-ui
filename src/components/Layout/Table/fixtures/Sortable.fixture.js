@@ -12,6 +12,7 @@ export default {
     ],
     body: [
       { content: ['Barry Fullerman', 'Chiropractor', '23/11/1991', 'Active'] },
+      { content: ['Barry Fullerman', 'Donkologist', '24/12/1992', 'Active'] },
       { content: ['Tom Ackerman', 'Psychologist', '05/04/1975', 'Active'] },
       { content: ['???', '???', '23/06/1021', 'Immortal'] },
       {

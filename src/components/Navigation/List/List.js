@@ -9,6 +9,7 @@ import classnames from 'classnames';
 import React, { Component, Fragment } from 'react';
 import { matchPath } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import { returnNull } from '../../../util';
 import styles from './List.scss';
 import type { NavItem } from '../NavItem';
 
@@ -45,7 +46,7 @@ type Props = {
 class List extends Component<Props> {
   static defaultProps = {
     className: '',
-    onSelect: () => null,
+    onSelect: returnNull,
   };
 
   renderItem = (item: NavItem) => {

@@ -11,6 +11,7 @@ import CheckBoxChecked from '../../Icon/CheckBoxes/CheckBoxChecked';
 import CheckBoxUnchecked from '../../Icon/CheckBoxes/CheckBoxUnchecked';
 import Alert from '../../Icon/Alert';
 import style from './CheckBox.scss';
+import { returnNull } from '../../../util';
 
 type Props = {
   id: string,
@@ -32,7 +33,7 @@ class CheckBox extends React.Component<Props> {
     disabled: false,
     error: '',
     special: false,
-    onChange: () => {},
+    onChange: returnNull,
   };
 
   handleClick = () => {
