@@ -61,32 +61,31 @@ class CheckBox extends React.Component<Props> {
       ...restProps
     } = this.props;
 
+    const outerClass = classnames(
+      style.outer,
+      {
+        [style.disabled]: disabled,
+      },
+      className,
+    );
+
+    const uncheckedClass = classnames(style.checkbox, style.empty, {
+      [style.special]: special,
+    });
+
+    const checkedClass = classnames(style.checkbox, style.full, {
+      [style.checked]: value,
+      [style.special]: special,
+    });
+
     return (
-      <div
-        className={classnames(
-          style.outer,
-          {
-            [style.disabled]: disabled,
-          },
-          className,
-        )}
-        id={id}
-        {...restProps}
-      >
+      <div className={outerClass} id={id} {...restProps}>
         <label className={style.label} htmlFor={id} onClick={handleClick}>
           <CheckBoxUnchecked
-            className={classnames(style.checkbox, style.empty, {
-              [style.special]: special,
-            })}
+            className={uncheckedClass}
             name="CheckBoxUnchecked"
           />
-          <CheckBoxChecked
-            className={classnames(style.checkbox, style.full, {
-              [style.checked]: value,
-              [style.special]: special,
-            })}
-            name="CheckBoxChecked"
-          />
+          <CheckBoxChecked className={checkedClass} name="CheckBoxChecked" />
           <span className={style.text}>{label}</span>
           {warning && <Alert className={style.warning} />}
         </label>

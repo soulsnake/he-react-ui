@@ -1,11 +1,11 @@
 // @flow
 import classnames from 'classnames';
 import React from 'react';
+import { returnNull } from '../../util';
 import Alert from '../Icon/Alert';
 import Cross from '../Icon/Cross';
 import Tick from '../Icon/Tick';
 import styles from './Notification.scss';
-import { returnNull } from '../../util';
 
 type Props = {
   canClose: boolean,
