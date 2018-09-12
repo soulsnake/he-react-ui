@@ -7,6 +7,7 @@ import Footer from './Footer';
 import FormSection from './FormSection';
 import Heading from './Heading';
 import Paragraph from './Paragraph';
+import Section from './Section';
 import Table from './Table';
 import TabView from './TabView';
 
@@ -21,4 +22,5 @@ export {
   Paragraph,
   Table,
   TabView,
+  Section,
 };
