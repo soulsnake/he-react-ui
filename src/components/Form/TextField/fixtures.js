@@ -1,6 +1,6 @@
 // @flow
-import Input from '.';
 import React from 'react';
+import Input from '.';
 
 export default [
   {
