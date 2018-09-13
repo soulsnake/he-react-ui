@@ -143,6 +143,23 @@
       }
     }
   }
+
+  &.large{
+    :global {
+      .Select-control{
+        height: 62px !important;
+      }
+      input[role=combobox] {
+        height: 62px;
+      }
+      .Select-value-label, .Select-placeholder {
+        line-height: 62px;
+      }
+    }
+    .caret{
+      top: 12px;
+    }
+  }
 }
 
 .select {

@@ -124,6 +124,7 @@ exports[`<Table /> rendered correctly with Inactive fixture 1`] = `
       <div
         className="row"
         key="0"
+        onClick={[Function]}
       >
         <div
           className="cell"
@@ -153,6 +154,7 @@ exports[`<Table /> rendered correctly with Inactive fixture 1`] = `
       <div
         className="row"
         key="1"
+        onClick={[Function]}
       >
         <div
           className="cell"
@@ -182,6 +184,7 @@ exports[`<Table /> rendered correctly with Inactive fixture 1`] = `
       <div
         className="row inactive"
         key="2"
+        onClick={[Function]}
       >
         <div
           className="cell"
@@ -211,6 +214,7 @@ exports[`<Table /> rendered correctly with Inactive fixture 1`] = `
       <div
         className="row inactive"
         key="3"
+        onClick={[Function]}
       >
         <div
           className="cell"
@@ -240,6 +244,7 @@ exports[`<Table /> rendered correctly with Inactive fixture 1`] = `
       <div
         className="row"
         key="4"
+        onClick={[Function]}
       >
         <div
           className="cell"

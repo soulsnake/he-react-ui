@@ -10,6 +10,8 @@ import React from 'react';
 import { returnNull } from '../../../util';
 import Cross from '../../Icon/Cross';
 import Tick from '../../Icon/Tick';
+import Help from '../../Icon/Help';
+import Popover from '../../Popover';
 import style from './TextField.scss';
 
 type Props = {
@@ -23,6 +25,7 @@ type Props = {
   value?: string,
   disabled?: boolean,
   marker?: boolean,
+  helper?: any,
   isValid?: boolean,
   password?: boolean,
   small?: boolean,
@@ -36,6 +39,7 @@ class TextField extends React.Component<Props, *> {
     disabled: false,
     inline: false,
     marker: false,
+    helper: null,
     value: '',
     isValid: true,
     onBlur: returnNull,
@@ -91,6 +95,7 @@ class TextField extends React.Component<Props, *> {
       error,
       inline,
       marker,
+      helper,
       onBlur,
       onChange,
       onFocus,
@@ -108,7 +113,7 @@ class TextField extends React.Component<Props, *> {
         [style.disabled]: disabled,
         [style.inline]: inline,
         [style.focused]: focused,
-        [style.hasMarker]: marker,
+        [style.hasMarker]: marker || helper,
         [style.small]: small,
       },
       className,
@@ -141,6 +146,7 @@ class TextField extends React.Component<Props, *> {
 
           {marker &&
             value !== '' &&
+            !helper &&
             (isValid ? (
               <Tick className={style.marker} />
             ) : (
@@ -158,6 +164,14 @@ class TextField extends React.Component<Props, *> {
           <label htmlFor={id} className={style.description}>
             {error || description}
           </label>
+        )}
+
+        {helper && (
+          <div className={style.helper}>
+            <Popover content={helper} light>
+              <Help className={style.helperIcon} />
+            </Popover>
+          </div>
         )}
       </div>
     );

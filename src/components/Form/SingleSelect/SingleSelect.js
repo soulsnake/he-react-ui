@@ -21,6 +21,7 @@ type Props = {
   className?: string,
   required?: boolean,
   disabled?: boolean,
+  large?: boolean,
   error?: string,
   inline?: boolean,
   label?: string,
@@ -86,6 +87,7 @@ class SingleSelect extends React.Component<Props, *> {
       name,
       className,
       required,
+      large,
       disabled,
       error,
       inline,
@@ -126,6 +128,7 @@ class SingleSelect extends React.Component<Props, *> {
               [style.disabled]: disabled,
               [style.error]: error,
               [style.fill]: fill,
+              [style.large]: large,
             })}
           >
             <Select

@@ -85,6 +85,7 @@
 .row {
   display: flex;
   padding: 0 44px;
+  cursor: pointer;
   &:hover {
     background-color: $grey_7;
     .cell {
@@ -123,7 +124,24 @@
 .extraNarrow {
   flex-grow: 0.25;
 }
-
+.rowleft{
+  align-items: flex-start;
+}
+.rowcenter{
+  align-items: center;
+}
+.rowright{
+  align-items: flex-end;
+}
+.headerleft{
+  justify-content: flex-start;
+}
+.headercenter{
+  justify-content: center;
+}
+.headerright{
+  justify-content: flex-end;
+}
 .bodyLoading {
   border-top: solid 1px $grey_5;
   height: 160px;

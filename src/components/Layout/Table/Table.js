@@ -23,11 +23,13 @@ function defaultSort(a, b) {
 }
 
 type Width = 'extraNarrow' | 'narrow' | 'wide' | 'extraWide';
+type Align = 'left' | 'center' | 'right';
 
 type Props = {
   columns: {
     title: string,
     width: Width,
+    align: Align,
     sortable: boolean,
     sortFunction: Function,
   }[],
@@ -36,6 +38,7 @@ type Props = {
     inactive: boolean,
     content: any[],
   }[],
+  onRowClick?: Function,
 };
 
 class Table extends Component<Props, *> {
@@ -71,7 +74,7 @@ class Table extends Component<Props, *> {
   };
 
   renderBody = () => {
-    const { columns } = this.props;
+    const { columns, onRowClick } = this.props;
     const { sortedBody } = this.state;
 
     if (columns && columns.length && sortedBody && sortedBody.length > 0) {
@@ -79,11 +82,14 @@ class Table extends Component<Props, *> {
         <div
           className={classnames(style.row, { [style.inactive]: row.inactive })}
           key={rowIndex} // eslint-disable-line react/no-array-index-key
+          onClick={() => (onRowClick ? onRowClick(row) : null)}
         >
           {row.content.map((cell, cellIndex) => (
             <div
               className={classnames(style.cell, {
                 [style[columns[cellIndex].width]]: columns[cellIndex].width,
+                [style[`row${columns[cellIndex].align}`]]:
+                  columns[cellIndex].align,
               })}
               key={cellIndex} // eslint-disable-line react/no-array-index-key
             >
@@ -108,6 +114,7 @@ class Table extends Component<Props, *> {
             <div
               className={classnames(style.heading, {
                 [style[column.width]]: column.width,
+                [style[`header${column.align}`]]: column.align,
                 [style.sortable]: column.sortable,
                 [style.ascending]: sortColumn === index && sortAscending,
                 [style.descending]: sortColumn === index && !sortAscending,

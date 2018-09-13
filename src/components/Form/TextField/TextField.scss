@@ -87,7 +87,7 @@
 
 .hasMarker {
     .input {
-        padding-right: 40px;
+        margin-right: 40px;
     }
 }
 
@@ -145,7 +145,17 @@
     right: 16px;
     top: 16px;
 }
-
+.helper{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 2;
+}
+.helperIcon {
+    color: $grey_3;
+    fill: currentColor;
+    cursor: pointer;
+}
 .description {
     color: $grey_2;
     cursor: pointer;

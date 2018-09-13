@@ -1,5 +1,6 @@
 // @flow
 import Input from '.';
+import React from 'react';
 
 export default [
   {
@@ -113,6 +114,17 @@ export default [
       name: 'demo',
       label: 'First Name',
       value: 'Oscar',
+    },
+  },
+
+  {
+    name: 'With helper',
+    component: Input,
+    props: {
+      id: 'demo',
+      name: 'demo',
+      label: 'First Name',
+      helper: <div>Test HTML</div>,
     },
   },
 ];
