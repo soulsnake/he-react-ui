@@ -8,6 +8,7 @@ exports[`<SingleDatePicker /> rendered correctly with label fixture 1`] = `
   id="demo"
   inline={false}
   label="Which day?"
+  large={false}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}

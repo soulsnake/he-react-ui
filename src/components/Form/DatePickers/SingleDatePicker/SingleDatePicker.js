@@ -28,6 +28,7 @@ type Props = {
   anchorDirection?: 'left' | 'right',
   className?: string,
   disabled?: boolean,
+  large?: boolean,
   displayFormat?: DisplayFormat,
   error?: string,
   horizontalMargin?: number,
@@ -47,6 +48,7 @@ class SingleDatePicker extends React.Component<Props, *> {
   static defaultProps = {
     anchorDirection: 'left',
     disabled: false,
+    large: false,
     displayFormat: 'DD/MM/YYYY',
     inline: false,
     placeholder: 'Date',
@@ -106,6 +108,7 @@ class SingleDatePicker extends React.Component<Props, *> {
       label,
       className,
       disabled,
+      large,
       style,
       anchorDirection,
       displayFormat,
@@ -118,6 +121,7 @@ class SingleDatePicker extends React.Component<Props, *> {
       {
         [styles.error]: error,
         [styles.disabled]: disabled,
+        [styles.large]: large,
         [styles.focused]: this.state.focused,
         [styles.inline]: inline,
       },

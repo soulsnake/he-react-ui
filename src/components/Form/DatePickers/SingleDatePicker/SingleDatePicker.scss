@@ -91,6 +91,26 @@
   }
 }
 
+.large {
+  .inner,
+  .inner:hover {
+    :global {
+      .DateInput_input {
+        height: 64px;
+      }
+      .DateInput_fang {
+        margin-top: 10px;
+      }
+      .DayPicker__withBorder{
+        margin-top: 9px;
+      }
+      .icon {
+        top: 16px;
+      }
+    }
+  }
+}
+
 .errorMessage {
   margin-top: 12px;
   margin-bottom: 0;
