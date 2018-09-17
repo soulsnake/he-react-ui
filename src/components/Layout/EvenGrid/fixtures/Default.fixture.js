@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import EvenGrid from '../';
+import EvenGrid from '..';
 import CheckBox from '../../../Form/CheckBox';
 
 const checkboxes: any[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => (

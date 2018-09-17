@@ -14,15 +14,7 @@ export default function PopoverDisplay(props: {
   const tooltipStyle = tooltip && styles.tooltip;
 
   return (
-    <div
-      role="tooltip"
-      className={classnames(
-        styles.popover,
-        tooltipStyle,
-        className,
-        light && styles.light,
-      )}
-    >
+    <div role="tooltip" className={classnames(styles.popover, tooltipStyle, className, light && styles.light)}>
       <div className={classnames(styles.content, tooltipStyle)}>{children}</div>
     </div>
   );

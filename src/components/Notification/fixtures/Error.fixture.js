@@ -1,6 +1,6 @@
 // @flow
 import React, { Fragment } from 'react';
-import Notification from '../';
+import Notification from '..';
 
 export default {
   component: Notification,
@@ -8,8 +8,8 @@ export default {
     canClose: false,
     children: (
       <Fragment>
-        Error text. Quis autem vel eum iure reprehenderit qui in ea voluptate
-        velit esse quam nihil molestiae consequatur.
+        Error text. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+        consequatur.
       </Fragment>
     ),
     closed: false,

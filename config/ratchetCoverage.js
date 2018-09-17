@@ -3,12 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const minCoveragePath = path.join(__dirname, '..', 'min-coverage.json');
-const outputCoveragePath = path.join(
-  __dirname,
-  '..',
-  'coverage',
-  'coverage-summary.json',
-);
+const outputCoveragePath = path.join(__dirname, '..', 'coverage', 'coverage-summary.json');
 
 const OK = 0;
 const ERROR = 1;
@@ -21,13 +16,9 @@ function print(text) {
 function checkCoverage() {
   let coverageSummary;
   try {
-    coverageSummary = JSON.parse(
-      fs.readFileSync(outputCoveragePath).toString(),
-    );
+    coverageSummary = JSON.parse(fs.readFileSync(outputCoveragePath).toString());
   } catch (err) {
-    print(
-      'Could not load a valid JSON summary from coverage/coverage-summary.json',
-    );
+    print('Could not load a valid JSON summary from coverage/coverage-summary.json');
     return ERROR;
   }
 

@@ -1,5 +1,5 @@
 // @flow
-import BackView from '../';
+import BackView from '..';
 
 export default {
   component: BackView,

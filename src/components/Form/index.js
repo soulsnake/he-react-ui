@@ -11,15 +11,4 @@ import TextField from './TextField';
 import TimeSelector from './TimeSelector';
 
 export * from './DatePickers';
-export {
-  ActionIcon,
-  ActionSet,
-  Button,
-  CheckBox,
-  InlineSelector,
-  Label,
-  Radio,
-  SingleSelect,
-  TextField,
-  TimeSelector,
-};
+export { ActionIcon, ActionSet, Button, CheckBox, InlineSelector, Label, Radio, SingleSelect, TextField, TimeSelector };

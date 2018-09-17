@@ -71,20 +71,8 @@ class ActionSet extends React.Component<Props, *> {
     );
 
     return (
-      <div
-        className={classes}
-        onMouseEnter={this.open}
-        onMouseLeave={this.close}
-        {...rest}
-      >
-        {expandable && (
-          <Ellipsis
-            className={style.ellipsis}
-            width={36}
-            height={36}
-            onClick={this.open}
-          />
-        )}
+      <div className={classes} onMouseEnter={this.open} onMouseLeave={this.close} {...rest}>
+        {expandable && <Ellipsis className={style.ellipsis} width={36} height={36} onClick={this.open} />}
         <div className={style.actions}>
           {React.Children.map(children, (child, i) => (
             <div key={i} className={style.action} onClick={this.close}>

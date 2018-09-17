@@ -29,17 +29,7 @@ type Props = {
 };
 
 function Bucket(props: Props) {
-  const {
-    itemKey,
-    icon,
-    items,
-    label,
-    route,
-    open,
-    onClickRoute,
-    onClickParent,
-    location,
-  } = props;
+  const { itemKey, icon, items, label, route, open, onClickRoute, onClickParent, location } = props;
 
   const external = isExternal(route);
   const activeChild =
@@ -51,9 +41,7 @@ function Bucket(props: Props) {
           path: child.route,
         }) !== null,
     );
-  const notificationChild =
-    items &&
-    items.find(child => child.notifications && child.notifications > 0);
+  const notificationChild = items && items.find(child => child.notifications && child.notifications > 0);
 
   const content = (
     <Fragment>
@@ -78,18 +66,13 @@ function Bucket(props: Props) {
   if (route) {
     if (external) {
       return (
-        <a target="_blank" href={route} {...childProps}>
+        <a target="_blank" rel="noopener noreferrer" href={route} {...childProps}>
           {content}
         </a>
       );
     }
     return (
-      <NavLink
-        exact
-        to={route}
-        activeClassName={styles.current}
-        {...childProps}
-      >
+      <NavLink exact to={route} activeClassName={styles.current} {...childProps}>
         {content}
       </NavLink>
     );

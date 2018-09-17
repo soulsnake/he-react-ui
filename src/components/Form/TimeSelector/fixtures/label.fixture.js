@@ -1,5 +1,5 @@
 // @flow
-import TimeSelector from '../';
+import TimeSelector from '..';
 
 export default {
   component: TimeSelector,

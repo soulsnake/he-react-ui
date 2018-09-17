@@ -1,5 +1,5 @@
 // @flow
-import CheckBox from '../';
+import CheckBox from '..';
 
 export default {
   component: CheckBox,

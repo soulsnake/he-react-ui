@@ -48,6 +48,7 @@ class TextField extends React.Component<Props, *> {
   };
 
   handleFocus = (e: SyntheticEvent<HTMLInputElement>) => {
+    const { onFocus } = this.props;
     const event = {
       value: e.currentTarget.value,
       props: this.props,
@@ -56,10 +57,11 @@ class TextField extends React.Component<Props, *> {
     this.setState({
       focused: true,
     });
-    this.props.onFocus(event);
+    onFocus(event);
   };
 
   handleBlur = (e: SyntheticEvent<HTMLInputElement>) => {
+    const { onBlur } = this.props;
     const event = {
       value: e.currentTarget.value,
       props: this.props,
@@ -68,15 +70,16 @@ class TextField extends React.Component<Props, *> {
     this.setState({
       focused: false,
     });
-    this.props.onBlur(event);
+    onBlur(event);
   };
 
   handleChange = (e: SyntheticEvent<HTMLInputElement>) => {
+    const { onChange } = this.props;
     const event = {
       value: e.currentTarget.value,
       props: this.props,
     };
-    this.props.onChange(event);
+    onChange(event);
   };
 
   render() {
@@ -139,13 +142,7 @@ class TextField extends React.Component<Props, *> {
             type={password ? 'password' : 'text'}
           />
 
-          {marker &&
-            value !== '' &&
-            (isValid ? (
-              <Tick className={style.marker} />
-            ) : (
-              <Cross className={style.marker} />
-            ))}
+          {marker && value !== '' && (isValid ? <Tick className={style.marker} /> : <Cross className={style.marker} />)}
 
           {label && (
             <label className={labelClasses} htmlFor={id}>

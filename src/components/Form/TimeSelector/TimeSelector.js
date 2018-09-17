@@ -67,14 +67,16 @@ class TimeSelector extends React.Component<Props, *> {
   };
 
   getDisplay = () => {
-    const { value } = this.props;
+    const { value, placeholder } = this.props;
 
-    return value || this.props.placeholder || '0:00';
+    return value || placeholder || '0:00';
   };
 
   toggleExpand = () => {
+    const { disabled } = this.props;
+    const { expanded } = this.state;
     this.setState({
-      expanded: this.props.disabled ? false : !this.state.expanded,
+      expanded: disabled ? false : !expanded,
     });
   };
 
@@ -117,9 +119,9 @@ class TimeSelector extends React.Component<Props, *> {
   };
 
   generateList = (options, selectOption) => {
-    const { hourly } = this.props;
+    const { hourly, value } = this.props;
     return options.map(option => {
-      const selected = this.props.value === option.value;
+      const selected = value === option.value;
       let ref = null;
       if (selected) {
         ref = item => {
@@ -173,10 +175,13 @@ class TimeSelector extends React.Component<Props, *> {
       enableOnClickOutside,
       ...restProps
     } = this.props;
+
+    const { expanded } = this.state;
+
     const classes = classnames(
       style.outer,
       {
-        [style.expanded]: this.state.expanded,
+        [style.expanded]: expanded,
         [style.inline]: inline,
         [style.hourly]: hourly,
       },
@@ -202,9 +207,7 @@ class TimeSelector extends React.Component<Props, *> {
           <Clock className={style.clock} />
           <div className={style.options}>
             <ul>{this.generateList(hours, this.selectHour)}</ul>
-            {!hourly && (
-              <ul>{this.generateList(minutes, this.selectMinute)}</ul>
-            )}
+            {!hourly && <ul>{this.generateList(minutes, this.selectMinute)}</ul>}
           </div>
         </div>
         {error && (

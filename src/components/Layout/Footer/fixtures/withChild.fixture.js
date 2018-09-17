@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import Footer from '../';
+import Footer from '..';
 import Button from '../../../Form/Button';
 
 export default {
@@ -8,9 +8,7 @@ export default {
   props: {},
   children: (
     <div>
-      <span style={{ float: 'left' }}>
-        {'The footer is useful for creating padding at the bottom of a view.'}
-      </span>
+      <span style={{ float: 'left' }}>The footer is useful for creating padding at the bottom of a view.</span>
       <div style={{ float: 'right' }}>
         <Button icon="ArrowRight" color="green">
           Next page

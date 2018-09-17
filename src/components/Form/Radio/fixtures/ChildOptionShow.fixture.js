@@ -1,17 +1,13 @@
 // @flow
 import React from 'react';
-import Radio from '../';
+import Radio from '..';
 import SingleSelect from '../../SingleSelect';
 
 const other = (
   <SingleSelect
     id="demo"
     name="demo"
-    options={[
-      { value: 'A', label: 'A' },
-      { value: 'B', label: 'B' },
-      { value: 'C', label: 'C' },
-    ]}
+    options={[{ value: 'A', label: 'A' }, { value: 'B', label: 'B' }, { value: 'C', label: 'C' }]}
   />
 );
 

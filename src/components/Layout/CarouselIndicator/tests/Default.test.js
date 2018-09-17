@@ -9,9 +9,7 @@ testFixture(fixture, 'Default');
 
 test('it handles clicking the dot', () => {
   const onDotClick = jest.fn();
-  const wrapper = mount(
-    <CarouselIndicator length={3} current={0} onDotClick={onDotClick} />,
-  );
+  const wrapper = mount(<CarouselIndicator length={3} current={0} onDotClick={onDotClick} />);
   wrapper
     .find('li')
     .at(1)

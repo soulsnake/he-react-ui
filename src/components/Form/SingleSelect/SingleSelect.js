@@ -59,25 +59,28 @@ class SingleSelect extends React.Component<Props, *> {
   };
 
   handleChange = (data: ?Option) => {
-    const oldValue = this.props.value;
+    const { value: oldValue, onChange } = this.props;
+
     if (data && oldValue !== data.value) {
       const event = {
         value: data.value,
         props: this.props,
       };
 
-      this.props.onChange(event);
+      onChange(event);
     }
   };
 
   handleOpen = () => {
-    this.props.onBeforeOpen();
+    const { onBeforeOpen } = this.props;
+    onBeforeOpen();
     this.setState({ expanded: true });
   };
 
   handleClose = () => {
+    const { onClose } = this.props;
     this.setState({ expanded: false });
-    this.props.onClose();
+    onClose();
   };
 
   render() {

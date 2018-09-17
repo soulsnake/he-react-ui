@@ -38,8 +38,9 @@ class SubNavigation extends Component<Props> {
   }
 
   componentDidUpdate(prevProps) {
+    const { item } = this.props;
     const prevItems = prevProps.item && prevProps.item.items;
-    const currentItems = this.props.item && this.props.item.items;
+    const currentItems = item && item.items;
 
     if (prevItems !== currentItems) {
       this.notifyTabDisplayChange();
@@ -68,12 +69,7 @@ class SubNavigation extends Component<Props> {
     return items.map(item => {
       if (item.route && isAbsoluteUrl(item.route)) {
         return (
-          <a
-            key={item.key}
-            target="_blank"
-            href={item.route}
-            className={style.item}
-          >
+          <a key={item.key} target="_blank" rel="noopener noreferrer" href={item.route} className={style.item}>
             <span>{item.label}</span>
           </a>
         );
@@ -103,14 +99,7 @@ class SubNavigation extends Component<Props> {
   }
 
   render() {
-    const {
-      item,
-      loading,
-      locations,
-      onLocationChange,
-      locationValue,
-      logoutRoute,
-    } = this.props;
+    const { item, loading, locations, onLocationChange, locationValue, logoutRoute } = this.props;
 
     const displayTabs = this.shouldDisplayTabs();
 
@@ -142,28 +131,17 @@ class SubNavigation extends Component<Props> {
                   />
                 </span>
               )) ||
-                (locations.length === 1 && (
-                  <span className={style.control}>{locations[0].label}</span>
-                ))))}
+                (locations.length === 1 && <span className={style.control}>{locations[0].label}</span>)))}
           <span className={classnames(style.control, style.logout)}>
             {logoutRoute && (
-              <NavLink
-                key="logout"
-                to={logoutRoute}
-                className={style.navLink}
-                title="Logout"
-                target="_self"
-              >
-                <Logout className={style.icon} />Logout
+              <NavLink key="logout" to={logoutRoute} className={style.navLink} title="Logout" target="_self">
+                <Logout className={style.icon} />
+                Logout
               </NavLink>
             )}
           </span>
         </div>
-        {displayTabs && (
-          <div className={style.items}>
-            {this.renderItems(item ? item.items : [])}
-          </div>
-        )}
+        {displayTabs && <div className={style.items}>{this.renderItems(item ? item.items : [])}</div>}
       </div>
     );
   }

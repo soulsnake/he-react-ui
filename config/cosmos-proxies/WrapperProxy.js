@@ -11,13 +11,7 @@ export default class WrapperProxy extends React.Component<Props> {
     const { nextProxy, fixture, ...nextProps } = this.props;
     const { wrapper } = fixture;
 
-    const child = (
-      <nextProxy.value
-        {...nextProps}
-        nextProxy={nextProxy.next()}
-        fixture={fixture}
-      />
-    );
+    const child = <nextProxy.value {...nextProps} nextProxy={nextProxy.next()} fixture={fixture} />;
 
     if (!wrapper) return child;
 

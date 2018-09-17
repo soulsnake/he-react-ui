@@ -1,7 +1,7 @@
 // @flow
 import { mount } from 'enzyme';
 import React from 'react';
-import Button from '../../Button';
+import Button from '..';
 
 describe('Button', () => {
   it('should handle being clicked with no handler', () => {

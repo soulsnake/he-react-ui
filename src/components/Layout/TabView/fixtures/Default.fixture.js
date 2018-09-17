@@ -1,5 +1,5 @@
 // @flow
-import TabView from '../';
+import TabView from '..';
 
 export default {
   component: TabView,

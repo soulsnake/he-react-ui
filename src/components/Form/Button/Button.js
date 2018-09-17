@@ -23,22 +23,14 @@ function InnerButton(props: {
   onClick: ?Function,
   newWindow?: boolean,
 }) {
-  const {
-    to,
-    withRouter,
-    submit,
-    children,
-    className,
-    onClick,
-    newWindow,
-  } = props;
+  const { to, withRouter, submit, children, className, onClick, newWindow } = props;
   if (!to) {
-    return (
-      <button
-        className={className}
-        onClick={onClick}
-        type={submit ? 'submit' : 'button'}
-      >
+    return submit ? (
+      <button className={className} onClick={onClick} type="submit">
+        {children}
+      </button>
+    ) : (
+      <button className={className} onClick={onClick} type="button">
         {children}
       </button>
     );
@@ -96,8 +88,9 @@ class Button extends React.Component<Props> {
   };
 
   handleClick = (event: SyntheticEvent<*>) => {
-    if (!this.props.disabled) {
-      this.props.onClick(event);
+    const { disabled, onClick } = this.props;
+    if (!disabled) {
+      onClick(event);
     }
   };
 

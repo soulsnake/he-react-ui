@@ -1,6 +1,6 @@
 // @flow
 import moment from 'moment';
-import SingleDatePicker from '../';
+import SingleDatePicker from '..';
 
 export default {
   component: SingleDatePicker,

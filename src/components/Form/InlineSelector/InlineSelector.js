@@ -35,10 +35,10 @@ class InlineSelector extends React.Component<Props> {
   };
 
   handleClick = (option: Option) => {
-    const oldValue = this.props.value;
+    const { value: oldValue, onChange } = this.props;
 
     if (oldValue !== option.value) {
-      this.props.onChange({
+      onChange({
         value: option.value,
         props: this.props,
       });
@@ -46,16 +46,7 @@ class InlineSelector extends React.Component<Props> {
   };
 
   render() {
-    const {
-      className,
-      id,
-      label,
-      onChange,
-      options,
-      value,
-      vertical,
-      ...restProps
-    } = this.props;
+    const { className, id, label, onChange, options, value, vertical, ...restProps } = this.props;
     const classes = classnames(
       style.outer,
       {

@@ -35,9 +35,7 @@ function Slider(props: Props) {
       })}
       key={itemKey}
     >
-      <div className={styles.filler}>
-        {siteName && <div className={styles.sitename}>{siteName}</div>}
-      </div>
+      <div className={styles.filler}>{siteName && <div className={styles.sitename}>{siteName}</div>}</div>
       <List title="" className={styles.list} itemKey={itemKey} {...restProps} />
     </div>
   );

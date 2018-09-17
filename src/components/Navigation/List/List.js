@@ -15,12 +15,9 @@ import type { NavItem } from '../NavItem';
 
 function renderBadge(item: NavItem) {
   if (item.notifications && item.notifications > 0) {
-    return (
-      <div className={classnames(styles.badge, styles.notification)}>
-        {item.notifications}
-      </div>
-    );
-  } else if (item.badge) {
+    return <div className={classnames(styles.badge, styles.notification)}>{item.notifications}</div>;
+  }
+  if (item.badge) {
     return (
       <div
         className={classnames(styles.badge, {

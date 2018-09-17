@@ -16,6 +16,11 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithCh
           "label": "Secondary",
           "route": "/parent/secondary",
         },
+        Object {
+          "key": "TERTIARY",
+          "label": "Google",
+          "route": "https://wwww.google.com/",
+        },
       ],
       "key": "PARENT",
       "label": "Parent",
@@ -28,10 +33,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithCh
       Object {
         "label": "Location A",
         "value": "Location A",
-      },
-      Object {
-        "label": "Location B",
-        "value": "Location B",
       },
     ]
   }
@@ -87,6 +88,11 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithCh
               "label": "Secondary",
               "route": "/parent/secondary",
             },
+            Object {
+              "key": "TERTIARY",
+              "label": "Google",
+              "route": "https://wwww.google.com/",
+            },
           ],
           "key": "PARENT",
           "label": "Parent",
@@ -109,10 +115,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithCh
           Object {
             "label": "Location A",
             "value": "Location A",
-          },
-          Object {
-            "label": "Location B",
-            "value": "Location B",
           },
         ]
       }
@@ -138,225 +140,9 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithCh
             Parent title
           </h2>
           <span
-            className="control selector"
+            className="control"
           >
-            <SingleSelect
-              disabled={false}
-              error=""
-              fill={true}
-              id="locationSelector"
-              inline={false}
-              name="location"
-              onBeforeOpen={[Function]}
-              onChange={[Function]}
-              onClose={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Location A",
-                    "value": "Location A",
-                  },
-                  Object {
-                    "label": "Location B",
-                    "value": "Location B",
-                  },
-                ]
-              }
-              value={null}
-            >
-              <div
-                className="outer fill"
-              >
-                <div
-                  className="relative"
-                >
-                  <div
-                    className="container fill"
-                  >
-                    <Select
-                      arrowRenderer={[Function]}
-                      autosize={true}
-                      backspaceRemoves={true}
-                      backspaceToRemoveMessage="Press backspace to remove {label}"
-                      className="select"
-                      clearAllText="Clear all"
-                      clearRenderer={[Function]}
-                      clearValueText="Clear value"
-                      clearable={true}
-                      closeOnSelect={true}
-                      deleteRemoves={true}
-                      delimiter=","
-                      disabled={false}
-                      escapeClearsValue={true}
-                      filterOptions={[Function]}
-                      id="locationSelector"
-                      ignoreAccents={true}
-                      ignoreCase={true}
-                      inputProps={Object {}}
-                      isLoading={false}
-                      joinValues={true}
-                      labelKey="label"
-                      matchPos="any"
-                      matchProp="any"
-                      menuBuffer={0}
-                      menuRenderer={[Function]}
-                      multi={false}
-                      name="location"
-                      noResultsText="No results found"
-                      onBlurResetsInput={true}
-                      onChange={[Function]}
-                      onClose={[Function]}
-                      onCloseResetsInput={true}
-                      onOpen={[Function]}
-                      onSelectResetsInput={true}
-                      openOnClick={true}
-                      optionComponent={[Function]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "Location A",
-                            "value": "Location A",
-                          },
-                          Object {
-                            "label": "Location B",
-                            "value": "Location B",
-                          },
-                        ]
-                      }
-                      pageSize={5}
-                      placeholder="Select..."
-                      removeSelected={true}
-                      required={false}
-                      rtl={false}
-                      scrollMenuIntoView={true}
-                      searchable={true}
-                      simpleValue={false}
-                      tabSelectsValue={true}
-                      trimFilter={true}
-                      value={null}
-                      valueComponent={[Function]}
-                      valueKey="value"
-                      valueRenderer={[Function]}
-                    >
-                      <div
-                        className="Select select is-clearable is-searchable Select--single"
-                      >
-                        <input
-                          disabled={false}
-                          name="location"
-                          type="hidden"
-                          value=""
-                        />
-                        <div
-                          className="Select-control"
-                          onKeyDown={[Function]}
-                          onMouseDown={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                          <span
-                            className="Select-multi-value-wrapper"
-                            id="react-select-3--value"
-                          >
-                            <div
-                              className="Select-placeholder"
-                            >
-                              Select...
-                            </div>
-                            <AutosizeInput
-                              aria-activedescendant="react-select-3--value"
-                              aria-expanded="false"
-                              aria-haspopup="false"
-                              aria-owns=""
-                              className="Select-input"
-                              id="locationSelector"
-                              injectStyles={true}
-                              minWidth="5"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              onFocus={[Function]}
-                              required={false}
-                              role="combobox"
-                              value=""
-                            >
-                              <div
-                                className="Select-input"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                  }
-                                }
-                              >
-                                <input
-                                  aria-activedescendant="react-select-3--value"
-                                  aria-expanded="false"
-                                  aria-haspopup="false"
-                                  aria-owns=""
-                                  id="locationSelector"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  required={false}
-                                  role="combobox"
-                                  style={
-                                    Object {
-                                      "boxSizing": "content-box",
-                                      "width": "5px",
-                                    }
-                                  }
-                                  value=""
-                                />
-                                <div
-                                  style={
-                                    Object {
-                                      "height": 0,
-                                      "left": 0,
-                                      "overflow": "scroll",
-                                      "position": "absolute",
-                                      "top": 0,
-                                      "visibility": "hidden",
-                                      "whiteSpace": "pre",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </AutosizeInput>
-                          </span>
-                          <span
-                            className="Select-arrow-zone"
-                            onMouseDown={[Function]}
-                          >
-                            <span
-                              className="Select-arrow"
-                              onMouseDown={[Function]}
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </Select>
-                    <DropDown
-                      className="caret"
-                      fill="currentColor"
-                      height={32}
-                      width={32}
-                    >
-                      <svg
-                        className="caret"
-                        fill="currentColor"
-                        height={32}
-                        viewBox="0 0 24 24"
-                        width={32}
-                      >
-                        <path
-                          d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                        />
-                      </svg>
-                    </DropDown>
-                  </div>
-                </div>
-              </div>
-            </SingleSelect>
+            Location A
           </span>
           <span
             className="control logout"
@@ -485,6 +271,17 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithCh
               </Link>
             </Route>
           </NavLink>
+          <a
+            className="item"
+            href="https://wwww.google.com/"
+            key="TERTIARY"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span>
+              Google
+            </span>
+          </a>
         </div>
       </div>
     </SubNavigation>
@@ -988,37 +785,14 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1
 <withRouter(SubNavigation)
   item={
     Object {
-      "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-      ],
-      "key": "PARENT",
-      "label": "Parent",
-      "route": "/parent",
-      "title": "Parent title",
+      "items": Array [],
+      "key": "placeholder",
+      "route": "#",
+      "title": "",
     }
   }
-  locations={
-    Array [
-      Object {
-        "label": "Location A",
-        "value": "Location A",
-      },
-      Object {
-        "label": "Location B",
-        "value": "Location B",
-      },
-    ]
-  }
+  loading={true}
+  locations={Array []}
   logoutRoute="/logout"
 >
   <Route
@@ -1059,26 +833,13 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1
       }
       item={
         Object {
-          "badge": "FREE",
-          "items": Array [
-            Object {
-              "key": "MAIN",
-              "label": "Main",
-              "route": "/parent",
-            },
-            Object {
-              "key": "SECONDARY",
-              "label": "Secondary",
-              "route": "/parent/secondary",
-            },
-          ],
-          "key": "PARENT",
-          "label": "Parent",
-          "route": "/parent",
-          "title": "Parent title",
+          "items": Array [],
+          "key": "placeholder",
+          "route": "#",
+          "title": "",
         }
       }
-      loading={false}
+      loading={true}
       location={
         Object {
           "hash": "",
@@ -1088,18 +849,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1
           "state": undefined,
         }
       }
-      locations={
-        Array [
-          Object {
-            "label": "Location A",
-            "value": "Location A",
-          },
-          Object {
-            "label": "Location B",
-            "value": "Location B",
-          },
-        ]
-      }
+      locations={Array []}
       logoutRoute="/logout"
       match={
         Object {
@@ -1116,231 +866,35 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1
         <div
           className="top"
         >
-          <h2
+          <div
             className="heading"
           >
-            Parent title
-          </h2>
-          <span
-            className="control selector"
-          >
-            <SingleSelect
-              disabled={false}
-              error=""
-              fill={true}
-              id="locationSelector"
-              inline={false}
-              name="location"
-              onBeforeOpen={[Function]}
-              onChange={[Function]}
-              onClose={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Location A",
-                    "value": "Location A",
-                  },
-                  Object {
-                    "label": "Location B",
-                    "value": "Location B",
-                  },
-                ]
-              }
-              value={null}
+            <LoadingStrip
+              className="loadingHeading"
             >
               <div
-                className="outer fill"
+                className="outer loadingHeading"
               >
                 <div
-                  className="relative"
-                >
-                  <div
-                    className="container fill"
-                  >
-                    <Select
-                      arrowRenderer={[Function]}
-                      autosize={true}
-                      backspaceRemoves={true}
-                      backspaceToRemoveMessage="Press backspace to remove {label}"
-                      className="select"
-                      clearAllText="Clear all"
-                      clearRenderer={[Function]}
-                      clearValueText="Clear value"
-                      clearable={true}
-                      closeOnSelect={true}
-                      deleteRemoves={true}
-                      delimiter=","
-                      disabled={false}
-                      escapeClearsValue={true}
-                      filterOptions={[Function]}
-                      id="locationSelector"
-                      ignoreAccents={true}
-                      ignoreCase={true}
-                      inputProps={Object {}}
-                      isLoading={false}
-                      joinValues={true}
-                      labelKey="label"
-                      matchPos="any"
-                      matchProp="any"
-                      menuBuffer={0}
-                      menuRenderer={[Function]}
-                      multi={false}
-                      name="location"
-                      noResultsText="No results found"
-                      onBlurResetsInput={true}
-                      onChange={[Function]}
-                      onClose={[Function]}
-                      onCloseResetsInput={true}
-                      onOpen={[Function]}
-                      onSelectResetsInput={true}
-                      openOnClick={true}
-                      optionComponent={[Function]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "Location A",
-                            "value": "Location A",
-                          },
-                          Object {
-                            "label": "Location B",
-                            "value": "Location B",
-                          },
-                        ]
-                      }
-                      pageSize={5}
-                      placeholder="Select..."
-                      removeSelected={true}
-                      required={false}
-                      rtl={false}
-                      scrollMenuIntoView={true}
-                      searchable={true}
-                      simpleValue={false}
-                      tabSelectsValue={true}
-                      trimFilter={true}
-                      value={null}
-                      valueComponent={[Function]}
-                      valueKey="value"
-                      valueRenderer={[Function]}
-                    >
-                      <div
-                        className="Select select is-clearable is-searchable Select--single"
-                      >
-                        <input
-                          disabled={false}
-                          name="location"
-                          type="hidden"
-                          value=""
-                        />
-                        <div
-                          className="Select-control"
-                          onKeyDown={[Function]}
-                          onMouseDown={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                          <span
-                            className="Select-multi-value-wrapper"
-                            id="react-select-3--value"
-                          >
-                            <div
-                              className="Select-placeholder"
-                            >
-                              Select...
-                            </div>
-                            <AutosizeInput
-                              aria-activedescendant="react-select-3--value"
-                              aria-expanded="false"
-                              aria-haspopup="false"
-                              aria-owns=""
-                              className="Select-input"
-                              id="locationSelector"
-                              injectStyles={true}
-                              minWidth="5"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              onFocus={[Function]}
-                              required={false}
-                              role="combobox"
-                              value=""
-                            >
-                              <div
-                                className="Select-input"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                  }
-                                }
-                              >
-                                <input
-                                  aria-activedescendant="react-select-3--value"
-                                  aria-expanded="false"
-                                  aria-haspopup="false"
-                                  aria-owns=""
-                                  id="locationSelector"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  required={false}
-                                  role="combobox"
-                                  style={
-                                    Object {
-                                      "boxSizing": "content-box",
-                                      "width": "5px",
-                                    }
-                                  }
-                                  value=""
-                                />
-                                <div
-                                  style={
-                                    Object {
-                                      "height": 0,
-                                      "left": 0,
-                                      "overflow": "scroll",
-                                      "position": "absolute",
-                                      "top": 0,
-                                      "visibility": "hidden",
-                                      "whiteSpace": "pre",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </AutosizeInput>
-                          </span>
-                          <span
-                            className="Select-arrow-zone"
-                            onMouseDown={[Function]}
-                          >
-                            <span
-                              className="Select-arrow"
-                              onMouseDown={[Function]}
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </Select>
-                    <DropDown
-                      className="caret"
-                      fill="currentColor"
-                      height={32}
-                      width={32}
-                    >
-                      <svg
-                        className="caret"
-                        fill="currentColor"
-                        height={32}
-                        viewBox="0 0 24 24"
-                        width={32}
-                      >
-                        <path
-                          d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                        />
-                      </svg>
-                    </DropDown>
-                  </div>
-                </div>
+                  className="inner"
+                />
               </div>
-            </SingleSelect>
+            </LoadingStrip>
+          </div>
+          <span
+            className="control"
+          >
+            <LoadingStrip
+              className="loadingLocation"
+            >
+              <div
+                className="outer loadingLocation"
+              >
+                <div
+                  className="inner"
+                />
+              </div>
+            </LoadingStrip>
           </span>
           <span
             className="control logout"
@@ -1397,78 +951,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1
               </Route>
             </NavLink>
           </span>
-        </div>
-        <div
-          className="items"
-        >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="MAIN"
-            title="Main"
-            to="/parent"
-          >
-            <Route
-              exact={true}
-              path="/parent"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Main"
-                to="/parent"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent"
-                  onClick={[Function]}
-                  title="Main"
-                >
-                  <span>
-                    Main
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="SECONDARY"
-            title="Secondary"
-            to="/parent/secondary"
-          >
-            <Route
-              exact={true}
-              path="/parent/secondary"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Secondary"
-                to="/parent/secondary"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent/secondary"
-                  onClick={[Function]}
-                  title="Secondary"
-                >
-                  <span>
-                    Secondary
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
         </div>
       </div>
     </SubNavigation>
@@ -1481,18 +963,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoCh
   item={
     Object {
       "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-      ],
+      "items": Array [],
       "key": "PARENT",
       "label": "Parent",
       "route": "/parent",
@@ -1552,18 +1023,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoCh
       item={
         Object {
           "badge": "FREE",
-          "items": Array [
-            Object {
-              "key": "MAIN",
-              "label": "Main",
-              "route": "/parent",
-            },
-            Object {
-              "key": "SECONDARY",
-              "label": "Secondary",
-              "route": "/parent/secondary",
-            },
-          ],
+          "items": Array [],
           "key": "PARENT",
           "label": "Parent",
           "route": "/parent",
@@ -1733,7 +1193,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoCh
                         >
                           <span
                             className="Select-multi-value-wrapper"
-                            id="react-select-3--value"
+                            id="react-select-2--value"
                           >
                             <div
                               className="Select-placeholder"
@@ -1741,7 +1201,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoCh
                               Select...
                             </div>
                             <AutosizeInput
-                              aria-activedescendant="react-select-3--value"
+                              aria-activedescendant="react-select-2--value"
                               aria-expanded="false"
                               aria-haspopup="false"
                               aria-owns=""
@@ -1765,7 +1225,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoCh
                                 }
                               >
                                 <input
-                                  aria-activedescendant="react-select-3--value"
+                                  aria-activedescendant="react-select-2--value"
                                   aria-expanded="false"
                                   aria-haspopup="false"
                                   aria-owns=""
@@ -1889,78 +1349,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoCh
               </Route>
             </NavLink>
           </span>
-        </div>
-        <div
-          className="items"
-        >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="MAIN"
-            title="Main"
-            to="/parent"
-          >
-            <Route
-              exact={true}
-              path="/parent"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Main"
-                to="/parent"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent"
-                  onClick={[Function]}
-                  title="Main"
-                >
-                  <span>
-                    Main
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="SECONDARY"
-            title="Secondary"
-            to="/parent/secondary"
-          >
-            <Route
-              exact={true}
-              path="/parent/secondary"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Secondary"
-                to="/parent/secondary"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent/secondary"
-                  onClick={[Function]}
-                  title="Secondary"
-                >
-                  <span>
-                    Secondary
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
         </div>
       </div>
     </SubNavigation>
@@ -1972,36 +1360,13 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
 <withRouter(SubNavigation)
   item={
     Object {
-      "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-      ],
-      "key": "PARENT",
-      "label": "Parent",
-      "route": "/parent",
-      "title": "Parent title",
+      "icon": "Home",
+      "items": Array [],
+      "key": "HOME",
+      "label": "Home",
+      "route": "/",
+      "title": "Welcome home",
     }
-  }
-  locations={
-    Array [
-      Object {
-        "label": "Location A",
-        "value": "Location A",
-      },
-      Object {
-        "label": "Location B",
-        "value": "Location B",
-      },
-    ]
   }
   logoutRoute="/logout"
 >
@@ -2019,7 +1384,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
             Object {
               "hash": "",
               "key": "mocked",
-              "pathname": "/feedback",
+              "pathname": "/",
               "search": "",
               "state": undefined,
             },
@@ -2033,7 +1398,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
           "location": Object {
             "hash": "",
             "key": "mocked",
-            "pathname": "/feedback",
+            "pathname": "/",
             "search": "",
             "state": undefined,
           },
@@ -2043,23 +1408,12 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
       }
       item={
         Object {
-          "badge": "FREE",
-          "items": Array [
-            Object {
-              "key": "MAIN",
-              "label": "Main",
-              "route": "/parent",
-            },
-            Object {
-              "key": "SECONDARY",
-              "label": "Secondary",
-              "route": "/parent/secondary",
-            },
-          ],
-          "key": "PARENT",
-          "label": "Parent",
-          "route": "/parent",
-          "title": "Parent title",
+          "icon": "Home",
+          "items": Array [],
+          "key": "HOME",
+          "label": "Home",
+          "route": "/",
+          "title": "Welcome home",
         }
       }
       loading={false}
@@ -2067,27 +1421,15 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
         Object {
           "hash": "",
           "key": "mocked",
-          "pathname": "/feedback",
+          "pathname": "/",
           "search": "",
           "state": undefined,
         }
       }
-      locations={
-        Array [
-          Object {
-            "label": "Location A",
-            "value": "Location A",
-          },
-          Object {
-            "label": "Location B",
-            "value": "Location B",
-          },
-        ]
-      }
       logoutRoute="/logout"
       match={
         Object {
-          "isExact": false,
+          "isExact": true,
           "params": Object {},
           "path": "/",
           "url": "/",
@@ -2103,229 +1445,8 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
           <h2
             className="heading"
           >
-            Parent title
+            Welcome home
           </h2>
-          <span
-            className="control selector"
-          >
-            <SingleSelect
-              disabled={false}
-              error=""
-              fill={true}
-              id="locationSelector"
-              inline={false}
-              name="location"
-              onBeforeOpen={[Function]}
-              onChange={[Function]}
-              onClose={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Location A",
-                    "value": "Location A",
-                  },
-                  Object {
-                    "label": "Location B",
-                    "value": "Location B",
-                  },
-                ]
-              }
-              value={null}
-            >
-              <div
-                className="outer fill"
-              >
-                <div
-                  className="relative"
-                >
-                  <div
-                    className="container fill"
-                  >
-                    <Select
-                      arrowRenderer={[Function]}
-                      autosize={true}
-                      backspaceRemoves={true}
-                      backspaceToRemoveMessage="Press backspace to remove {label}"
-                      className="select"
-                      clearAllText="Clear all"
-                      clearRenderer={[Function]}
-                      clearValueText="Clear value"
-                      clearable={true}
-                      closeOnSelect={true}
-                      deleteRemoves={true}
-                      delimiter=","
-                      disabled={false}
-                      escapeClearsValue={true}
-                      filterOptions={[Function]}
-                      id="locationSelector"
-                      ignoreAccents={true}
-                      ignoreCase={true}
-                      inputProps={Object {}}
-                      isLoading={false}
-                      joinValues={true}
-                      labelKey="label"
-                      matchPos="any"
-                      matchProp="any"
-                      menuBuffer={0}
-                      menuRenderer={[Function]}
-                      multi={false}
-                      name="location"
-                      noResultsText="No results found"
-                      onBlurResetsInput={true}
-                      onChange={[Function]}
-                      onClose={[Function]}
-                      onCloseResetsInput={true}
-                      onOpen={[Function]}
-                      onSelectResetsInput={true}
-                      openOnClick={true}
-                      optionComponent={[Function]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "Location A",
-                            "value": "Location A",
-                          },
-                          Object {
-                            "label": "Location B",
-                            "value": "Location B",
-                          },
-                        ]
-                      }
-                      pageSize={5}
-                      placeholder="Select..."
-                      removeSelected={true}
-                      required={false}
-                      rtl={false}
-                      scrollMenuIntoView={true}
-                      searchable={true}
-                      simpleValue={false}
-                      tabSelectsValue={true}
-                      trimFilter={true}
-                      value={null}
-                      valueComponent={[Function]}
-                      valueKey="value"
-                      valueRenderer={[Function]}
-                    >
-                      <div
-                        className="Select select is-clearable is-searchable Select--single"
-                      >
-                        <input
-                          disabled={false}
-                          name="location"
-                          type="hidden"
-                          value=""
-                        />
-                        <div
-                          className="Select-control"
-                          onKeyDown={[Function]}
-                          onMouseDown={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                          <span
-                            className="Select-multi-value-wrapper"
-                            id="react-select-3--value"
-                          >
-                            <div
-                              className="Select-placeholder"
-                            >
-                              Select...
-                            </div>
-                            <AutosizeInput
-                              aria-activedescendant="react-select-3--value"
-                              aria-expanded="false"
-                              aria-haspopup="false"
-                              aria-owns=""
-                              className="Select-input"
-                              id="locationSelector"
-                              injectStyles={true}
-                              minWidth="5"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              onFocus={[Function]}
-                              required={false}
-                              role="combobox"
-                              value=""
-                            >
-                              <div
-                                className="Select-input"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                  }
-                                }
-                              >
-                                <input
-                                  aria-activedescendant="react-select-3--value"
-                                  aria-expanded="false"
-                                  aria-haspopup="false"
-                                  aria-owns=""
-                                  id="locationSelector"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  required={false}
-                                  role="combobox"
-                                  style={
-                                    Object {
-                                      "boxSizing": "content-box",
-                                      "width": "5px",
-                                    }
-                                  }
-                                  value=""
-                                />
-                                <div
-                                  style={
-                                    Object {
-                                      "height": 0,
-                                      "left": 0,
-                                      "overflow": "scroll",
-                                      "position": "absolute",
-                                      "top": 0,
-                                      "visibility": "hidden",
-                                      "whiteSpace": "pre",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </AutosizeInput>
-                          </span>
-                          <span
-                            className="Select-arrow-zone"
-                            onMouseDown={[Function]}
-                          >
-                            <span
-                              className="Select-arrow"
-                              onMouseDown={[Function]}
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </Select>
-                    <DropDown
-                      className="caret"
-                      fill="currentColor"
-                      height={32}
-                      width={32}
-                    >
-                      <svg
-                        className="caret"
-                        fill="currentColor"
-                        height={32}
-                        viewBox="0 0 24 24"
-                        width={32}
-                      >
-                        <path
-                          d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                        />
-                      </svg>
-                    </DropDown>
-                  </div>
-                </div>
-              </div>
-            </SingleSelect>
-          </span>
           <span
             className="control logout"
           >
@@ -2381,78 +1502,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
               </Route>
             </NavLink>
           </span>
-        </div>
-        <div
-          className="items"
-        >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="MAIN"
-            title="Main"
-            to="/parent"
-          >
-            <Route
-              exact={true}
-              path="/parent"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Main"
-                to="/parent"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent"
-                  onClick={[Function]}
-                  title="Main"
-                >
-                  <span>
-                    Main
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="SECONDARY"
-            title="Secondary"
-            to="/parent/secondary"
-          >
-            <Route
-              exact={true}
-              path="/parent/secondary"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Secondary"
-                to="/parent/secondary"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent/secondary"
-                  onClick={[Function]}
-                  title="Secondary"
-                >
-                  <span>
-                    Secondary
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
         </div>
       </div>
     </SubNavigation>
@@ -2462,36 +1511,12 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
 
 exports[`<withRouter(SubNavigation) /> rendered correctly with noItem fixture 1`] = `
 <withRouter(SubNavigation)
-  item={
-    Object {
-      "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-      ],
-      "key": "PARENT",
-      "label": "Parent",
-      "route": "/parent",
-      "title": "Parent title",
-    }
-  }
+  item={null}
   locations={
     Array [
       Object {
         "label": "Location A",
         "value": "Location A",
-      },
-      Object {
-        "label": "Location B",
-        "value": "Location B",
       },
     ]
   }
@@ -2533,27 +1558,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noItem fixture 1`
           "replace": [Function],
         }
       }
-      item={
-        Object {
-          "badge": "FREE",
-          "items": Array [
-            Object {
-              "key": "MAIN",
-              "label": "Main",
-              "route": "/parent",
-            },
-            Object {
-              "key": "SECONDARY",
-              "label": "Secondary",
-              "route": "/parent/secondary",
-            },
-          ],
-          "key": "PARENT",
-          "label": "Parent",
-          "route": "/parent",
-          "title": "Parent title",
-        }
-      }
+      item={null}
       loading={false}
       location={
         Object {
@@ -2569,10 +1574,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noItem fixture 1`
           Object {
             "label": "Location A",
             "value": "Location A",
-          },
-          Object {
-            "label": "Location B",
-            "value": "Location B",
           },
         ]
       }
@@ -2594,229 +1595,11 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noItem fixture 1`
         >
           <h2
             className="heading"
-          >
-            Parent title
-          </h2>
+          />
           <span
-            className="control selector"
+            className="control"
           >
-            <SingleSelect
-              disabled={false}
-              error=""
-              fill={true}
-              id="locationSelector"
-              inline={false}
-              name="location"
-              onBeforeOpen={[Function]}
-              onChange={[Function]}
-              onClose={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Location A",
-                    "value": "Location A",
-                  },
-                  Object {
-                    "label": "Location B",
-                    "value": "Location B",
-                  },
-                ]
-              }
-              value={null}
-            >
-              <div
-                className="outer fill"
-              >
-                <div
-                  className="relative"
-                >
-                  <div
-                    className="container fill"
-                  >
-                    <Select
-                      arrowRenderer={[Function]}
-                      autosize={true}
-                      backspaceRemoves={true}
-                      backspaceToRemoveMessage="Press backspace to remove {label}"
-                      className="select"
-                      clearAllText="Clear all"
-                      clearRenderer={[Function]}
-                      clearValueText="Clear value"
-                      clearable={true}
-                      closeOnSelect={true}
-                      deleteRemoves={true}
-                      delimiter=","
-                      disabled={false}
-                      escapeClearsValue={true}
-                      filterOptions={[Function]}
-                      id="locationSelector"
-                      ignoreAccents={true}
-                      ignoreCase={true}
-                      inputProps={Object {}}
-                      isLoading={false}
-                      joinValues={true}
-                      labelKey="label"
-                      matchPos="any"
-                      matchProp="any"
-                      menuBuffer={0}
-                      menuRenderer={[Function]}
-                      multi={false}
-                      name="location"
-                      noResultsText="No results found"
-                      onBlurResetsInput={true}
-                      onChange={[Function]}
-                      onClose={[Function]}
-                      onCloseResetsInput={true}
-                      onOpen={[Function]}
-                      onSelectResetsInput={true}
-                      openOnClick={true}
-                      optionComponent={[Function]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "Location A",
-                            "value": "Location A",
-                          },
-                          Object {
-                            "label": "Location B",
-                            "value": "Location B",
-                          },
-                        ]
-                      }
-                      pageSize={5}
-                      placeholder="Select..."
-                      removeSelected={true}
-                      required={false}
-                      rtl={false}
-                      scrollMenuIntoView={true}
-                      searchable={true}
-                      simpleValue={false}
-                      tabSelectsValue={true}
-                      trimFilter={true}
-                      value={null}
-                      valueComponent={[Function]}
-                      valueKey="value"
-                      valueRenderer={[Function]}
-                    >
-                      <div
-                        className="Select select is-clearable is-searchable Select--single"
-                      >
-                        <input
-                          disabled={false}
-                          name="location"
-                          type="hidden"
-                          value=""
-                        />
-                        <div
-                          className="Select-control"
-                          onKeyDown={[Function]}
-                          onMouseDown={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                          <span
-                            className="Select-multi-value-wrapper"
-                            id="react-select-3--value"
-                          >
-                            <div
-                              className="Select-placeholder"
-                            >
-                              Select...
-                            </div>
-                            <AutosizeInput
-                              aria-activedescendant="react-select-3--value"
-                              aria-expanded="false"
-                              aria-haspopup="false"
-                              aria-owns=""
-                              className="Select-input"
-                              id="locationSelector"
-                              injectStyles={true}
-                              minWidth="5"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              onFocus={[Function]}
-                              required={false}
-                              role="combobox"
-                              value=""
-                            >
-                              <div
-                                className="Select-input"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                  }
-                                }
-                              >
-                                <input
-                                  aria-activedescendant="react-select-3--value"
-                                  aria-expanded="false"
-                                  aria-haspopup="false"
-                                  aria-owns=""
-                                  id="locationSelector"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  required={false}
-                                  role="combobox"
-                                  style={
-                                    Object {
-                                      "boxSizing": "content-box",
-                                      "width": "5px",
-                                    }
-                                  }
-                                  value=""
-                                />
-                                <div
-                                  style={
-                                    Object {
-                                      "height": 0,
-                                      "left": 0,
-                                      "overflow": "scroll",
-                                      "position": "absolute",
-                                      "top": 0,
-                                      "visibility": "hidden",
-                                      "whiteSpace": "pre",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </AutosizeInput>
-                          </span>
-                          <span
-                            className="Select-arrow-zone"
-                            onMouseDown={[Function]}
-                          >
-                            <span
-                              className="Select-arrow"
-                              onMouseDown={[Function]}
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </Select>
-                    <DropDown
-                      className="caret"
-                      fill="currentColor"
-                      height={32}
-                      width={32}
-                    >
-                      <svg
-                        className="caret"
-                        fill="currentColor"
-                        height={32}
-                        viewBox="0 0 24 24"
-                        width={32}
-                      >
-                        <path
-                          d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                        />
-                      </svg>
-                    </DropDown>
-                  </div>
-                </div>
-              </div>
-            </SingleSelect>
+            Location A
           </span>
           <span
             className="control logout"
@@ -2873,78 +1656,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noItem fixture 1`
               </Route>
             </NavLink>
           </span>
-        </div>
-        <div
-          className="items"
-        >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="MAIN"
-            title="Main"
-            to="/parent"
-          >
-            <Route
-              exact={true}
-              path="/parent"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Main"
-                to="/parent"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent"
-                  onClick={[Function]}
-                  title="Main"
-                >
-                  <span>
-                    Main
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="SECONDARY"
-            title="Secondary"
-            to="/parent/secondary"
-          >
-            <Route
-              exact={true}
-              path="/parent/secondary"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Secondary"
-                to="/parent/secondary"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent/secondary"
-                  onClick={[Function]}
-                  title="Secondary"
-                >
-                  <span>
-                    Secondary
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
         </div>
       </div>
     </SubNavigation>
@@ -2957,18 +1668,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with onePractice fixtu
   item={
     Object {
       "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-      ],
       "key": "PARENT",
       "label": "Parent",
       "route": "/parent",
@@ -2980,10 +1679,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with onePractice fixtu
       Object {
         "label": "Location A",
         "value": "Location A",
-      },
-      Object {
-        "label": "Location B",
-        "value": "Location B",
       },
     ]
   }
@@ -3028,18 +1723,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with onePractice fixtu
       item={
         Object {
           "badge": "FREE",
-          "items": Array [
-            Object {
-              "key": "MAIN",
-              "label": "Main",
-              "route": "/parent",
-            },
-            Object {
-              "key": "SECONDARY",
-              "label": "Secondary",
-              "route": "/parent/secondary",
-            },
-          ],
           "key": "PARENT",
           "label": "Parent",
           "route": "/parent",
@@ -3061,10 +1744,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with onePractice fixtu
           Object {
             "label": "Location A",
             "value": "Location A",
-          },
-          Object {
-            "label": "Location B",
-            "value": "Location B",
           },
         ]
       }
@@ -3090,225 +1769,9 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with onePractice fixtu
             Parent title
           </h2>
           <span
-            className="control selector"
+            className="control"
           >
-            <SingleSelect
-              disabled={false}
-              error=""
-              fill={true}
-              id="locationSelector"
-              inline={false}
-              name="location"
-              onBeforeOpen={[Function]}
-              onChange={[Function]}
-              onClose={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Location A",
-                    "value": "Location A",
-                  },
-                  Object {
-                    "label": "Location B",
-                    "value": "Location B",
-                  },
-                ]
-              }
-              value={null}
-            >
-              <div
-                className="outer fill"
-              >
-                <div
-                  className="relative"
-                >
-                  <div
-                    className="container fill"
-                  >
-                    <Select
-                      arrowRenderer={[Function]}
-                      autosize={true}
-                      backspaceRemoves={true}
-                      backspaceToRemoveMessage="Press backspace to remove {label}"
-                      className="select"
-                      clearAllText="Clear all"
-                      clearRenderer={[Function]}
-                      clearValueText="Clear value"
-                      clearable={true}
-                      closeOnSelect={true}
-                      deleteRemoves={true}
-                      delimiter=","
-                      disabled={false}
-                      escapeClearsValue={true}
-                      filterOptions={[Function]}
-                      id="locationSelector"
-                      ignoreAccents={true}
-                      ignoreCase={true}
-                      inputProps={Object {}}
-                      isLoading={false}
-                      joinValues={true}
-                      labelKey="label"
-                      matchPos="any"
-                      matchProp="any"
-                      menuBuffer={0}
-                      menuRenderer={[Function]}
-                      multi={false}
-                      name="location"
-                      noResultsText="No results found"
-                      onBlurResetsInput={true}
-                      onChange={[Function]}
-                      onClose={[Function]}
-                      onCloseResetsInput={true}
-                      onOpen={[Function]}
-                      onSelectResetsInput={true}
-                      openOnClick={true}
-                      optionComponent={[Function]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "Location A",
-                            "value": "Location A",
-                          },
-                          Object {
-                            "label": "Location B",
-                            "value": "Location B",
-                          },
-                        ]
-                      }
-                      pageSize={5}
-                      placeholder="Select..."
-                      removeSelected={true}
-                      required={false}
-                      rtl={false}
-                      scrollMenuIntoView={true}
-                      searchable={true}
-                      simpleValue={false}
-                      tabSelectsValue={true}
-                      trimFilter={true}
-                      value={null}
-                      valueComponent={[Function]}
-                      valueKey="value"
-                      valueRenderer={[Function]}
-                    >
-                      <div
-                        className="Select select is-clearable is-searchable Select--single"
-                      >
-                        <input
-                          disabled={false}
-                          name="location"
-                          type="hidden"
-                          value=""
-                        />
-                        <div
-                          className="Select-control"
-                          onKeyDown={[Function]}
-                          onMouseDown={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                          <span
-                            className="Select-multi-value-wrapper"
-                            id="react-select-3--value"
-                          >
-                            <div
-                              className="Select-placeholder"
-                            >
-                              Select...
-                            </div>
-                            <AutosizeInput
-                              aria-activedescendant="react-select-3--value"
-                              aria-expanded="false"
-                              aria-haspopup="false"
-                              aria-owns=""
-                              className="Select-input"
-                              id="locationSelector"
-                              injectStyles={true}
-                              minWidth="5"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              onFocus={[Function]}
-                              required={false}
-                              role="combobox"
-                              value=""
-                            >
-                              <div
-                                className="Select-input"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                  }
-                                }
-                              >
-                                <input
-                                  aria-activedescendant="react-select-3--value"
-                                  aria-expanded="false"
-                                  aria-haspopup="false"
-                                  aria-owns=""
-                                  id="locationSelector"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  required={false}
-                                  role="combobox"
-                                  style={
-                                    Object {
-                                      "boxSizing": "content-box",
-                                      "width": "5px",
-                                    }
-                                  }
-                                  value=""
-                                />
-                                <div
-                                  style={
-                                    Object {
-                                      "height": 0,
-                                      "left": 0,
-                                      "overflow": "scroll",
-                                      "position": "absolute",
-                                      "top": 0,
-                                      "visibility": "hidden",
-                                      "whiteSpace": "pre",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </AutosizeInput>
-                          </span>
-                          <span
-                            className="Select-arrow-zone"
-                            onMouseDown={[Function]}
-                          >
-                            <span
-                              className="Select-arrow"
-                              onMouseDown={[Function]}
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </Select>
-                    <DropDown
-                      className="caret"
-                      fill="currentColor"
-                      height={32}
-                      width={32}
-                    >
-                      <svg
-                        className="caret"
-                        fill="currentColor"
-                        height={32}
-                        viewBox="0 0 24 24"
-                        width={32}
-                      >
-                        <path
-                          d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                        />
-                      </svg>
-                    </DropDown>
-                  </div>
-                </div>
-              </div>
-            </SingleSelect>
+            Location A
           </span>
           <span
             className="control logout"
@@ -3365,78 +1828,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with onePractice fixtu
               </Route>
             </NavLink>
           </span>
-        </div>
-        <div
-          className="items"
-        >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="MAIN"
-            title="Main"
-            to="/parent"
-          >
-            <Route
-              exact={true}
-              path="/parent"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Main"
-                to="/parent"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent"
-                  onClick={[Function]}
-                  title="Main"
-                >
-                  <span>
-                    Main
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="item"
-            exact={true}
-            key="SECONDARY"
-            title="Secondary"
-            to="/parent/secondary"
-          >
-            <Route
-              exact={true}
-              path="/parent/secondary"
-            >
-              <Link
-                aria-current={false}
-                className="item"
-                replace={false}
-                title="Secondary"
-                to="/parent/secondary"
-              >
-                <a
-                  aria-current={false}
-                  className="item"
-                  href="/parent/secondary"
-                  onClick={[Function]}
-                  title="Secondary"
-                >
-                  <span>
-                    Secondary
-                  </span>
-                </a>
-              </Link>
-            </Route>
-          </NavLink>
         </div>
       </div>
     </SubNavigation>

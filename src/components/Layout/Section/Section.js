@@ -10,14 +10,7 @@ function Section(props: {
   loadingSkeleton?: any,
   transparent?: boolean,
 }) {
-  const {
-    children,
-    className,
-    loading,
-    loadingSkeleton,
-    transparent,
-    ...restProps
-  } = props;
+  const { children, className, loading, loadingSkeleton, transparent, ...restProps } = props;
   const classes = classnames(
     style.outer,
     {

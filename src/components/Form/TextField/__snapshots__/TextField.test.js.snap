@@ -12,7 +12,7 @@ exports[`<TextField /> rendered correctly with Default fixture 1`] = `
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  value=""
 >
   <div
     className="outer"
@@ -29,10 +29,10 @@ exports[`<TextField /> rendered correctly with Default fixture 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value=""
       />
       <label
-        className="label floating"
+        className="label"
         htmlFor="demo"
       >
         First Name
@@ -44,7 +44,7 @@ exports[`<TextField /> rendered correctly with Default fixture 1`] = `
 
 exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
 <TextField
-  disabled={false}
+  disabled={true}
   id="demo"
   inline={false}
   isValid={true}
@@ -54,27 +54,27 @@ exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  value=""
 >
   <div
-    className="outer"
+    className="outer disabled"
   >
     <div
       className="block"
     >
       <input
         className="input"
-        disabled={false}
+        disabled={true}
         id="demo"
         name="demo"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value=""
       />
       <label
-        className="label floating"
+        className="label"
         htmlFor="demo"
       >
         First Name
@@ -87,6 +87,7 @@ exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
 exports[`<TextField /> rendered correctly with Error fixture 1`] = `
 <TextField
   disabled={false}
+  error="Something isn't right"
   id="demo"
   inline={false}
   isValid={true}
@@ -96,7 +97,7 @@ exports[`<TextField /> rendered correctly with Error fixture 1`] = `
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  value=""
 >
   <div
     className="outer"
@@ -113,15 +114,21 @@ exports[`<TextField /> rendered correctly with Error fixture 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value=""
       />
       <label
-        className="label floating"
+        className="label"
         htmlFor="demo"
       >
         First Name
       </label>
     </div>
+    <label
+      className="description"
+      htmlFor="demo"
+    >
+      Something isn't right
+    </label>
   </div>
 </TextField>
 `;
@@ -129,19 +136,20 @@ exports[`<TextField /> rendered correctly with Error fixture 1`] = `
 exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
 <TextField
   disabled={false}
+  error="Something isn't right"
   id="demo"
   inline={false}
   isValid={true}
   label="First Name"
-  marker={false}
+  marker={true}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  value="Bruce"
 >
   <div
-    className="outer"
+    className="outer hasMarker"
   >
     <div
       className="block"
@@ -155,8 +163,26 @@ exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value="Bruce"
       />
+      <Tick
+        className="marker"
+        fill="currentColor"
+        height={32}
+        width={32}
+      >
+        <svg
+          className="marker"
+          fill="currentColor"
+          height={32}
+          viewBox="0 0 24 24"
+          width={32}
+        >
+          <path
+            d="M17.207 7.707a1 1 0 0 1 1.415 1.414l-7.998 8.003a1 1 0 0 1-1.414 0l-4.003-4.003a1 1 0 1 1 1.414-1.414l3.296 3.296 7.29-7.296z"
+          />
+        </svg>
+      </Tick>
       <label
         className="label floating"
         htmlFor="demo"
@@ -164,6 +190,12 @@ exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
         First Name
       </label>
     </div>
+    <label
+      className="description"
+      htmlFor="demo"
+    >
+      Something isn't right
+    </label>
   </div>
 </TextField>
 `;
@@ -175,15 +207,15 @@ exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
   inline={false}
   isValid={true}
   label="First Name"
-  marker={false}
+  marker={true}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  value="Bruce"
 >
   <div
-    className="outer"
+    className="outer hasMarker"
   >
     <div
       className="block"
@@ -197,8 +229,26 @@ exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value="Bruce"
       />
+      <Tick
+        className="marker"
+        fill="currentColor"
+        height={32}
+        width={32}
+      >
+        <svg
+          className="marker"
+          fill="currentColor"
+          height={32}
+          viewBox="0 0 24 24"
+          width={32}
+        >
+          <path
+            d="M17.207 7.707a1 1 0 0 1 1.415 1.414l-7.998 8.003a1 1 0 0 1-1.414 0l-4.003-4.003a1 1 0 1 1 1.414-1.414l3.296 3.296 7.29-7.296z"
+          />
+        </svg>
+      </Tick>
       <label
         className="label floating"
         htmlFor="demo"
@@ -258,13 +308,12 @@ exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
   id="demo"
   inline={false}
   isValid={true}
-  label="First Name"
   marker={false}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  value=""
 >
   <div
     className="outer"
@@ -273,7 +322,7 @@ exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
       className="block"
     >
       <input
-        className="input"
+        className="input noLabel"
         disabled={false}
         id="demo"
         name="demo"
@@ -281,14 +330,8 @@ exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value=""
       />
-      <label
-        className="label floating"
-        htmlFor="demo"
-      >
-        First Name
-      </label>
     </div>
   </div>
 </TextField>
@@ -300,13 +343,14 @@ exports[`<TextField /> rendered correctly with password fixture 1`] = `
   id="demo"
   inline={false}
   isValid={true}
-  label="First Name"
+  label="Password"
   marker={false}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  password={true}
+  value=""
 >
   <div
     className="outer"
@@ -322,14 +366,14 @@ exports[`<TextField /> rendered correctly with password fixture 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
-        type="text"
-        value="Oscar"
+        type="password"
+        value=""
       />
       <label
-        className="label floating"
+        className="label"
         htmlFor="demo"
       >
-        First Name
+        Password
       </label>
     </div>
   </div>
@@ -348,16 +392,17 @@ exports[`<TextField /> rendered correctly with small fixture 1`] = `
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  small={true}
+  value=""
 >
   <div
-    className="outer"
+    className="outer small"
   >
     <div
       className="block"
     >
       <input
-        className="input"
+        className="input small"
         disabled={false}
         id="demo"
         name="demo"
@@ -365,10 +410,10 @@ exports[`<TextField /> rendered correctly with small fixture 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value=""
       />
       <label
-        className="label floating"
+        className="label small"
         htmlFor="demo"
       >
         First Name
@@ -384,22 +429,22 @@ exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
   id="demo"
   inline={false}
   isValid={true}
-  label="First Name"
   marker={false}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}
   onFocus={[Function]}
-  value="Oscar"
+  small={true}
+  value=""
 >
   <div
-    className="outer"
+    className="outer small"
   >
     <div
       className="block"
     >
       <input
-        className="input"
+        className="input small noLabel"
         disabled={false}
         id="demo"
         name="demo"
@@ -407,14 +452,8 @@ exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="Oscar"
+        value=""
       />
-      <label
-        className="label floating"
-        htmlFor="demo"
-      >
-        First Name
-      </label>
     </div>
   </div>
 </TextField>

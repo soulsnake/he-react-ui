@@ -37,29 +37,20 @@ class CheckBox extends React.Component<Props> {
   };
 
   handleClick = () => {
-    if (this.props.disabled) {
+    const { disabled, value, onChange } = this.props;
+    if (disabled) {
       return;
     }
     const event = {
-      value: !this.props.value,
+      value: !value,
       props: this.props,
     };
-    this.props.onChange(event);
+    onChange(event);
   };
 
   render() {
     const { handleClick } = this;
-    const {
-      id,
-      className,
-      disabled,
-      label,
-      special,
-      value,
-      warning,
-      onChange,
-      ...restProps
-    } = this.props;
+    const { id, className, disabled, label, special, value, warning, onChange, ...restProps } = this.props;
 
     const outerClass = classnames(
       style.outer,
@@ -81,10 +72,7 @@ class CheckBox extends React.Component<Props> {
     return (
       <div className={outerClass} id={id} {...restProps}>
         <label className={style.label} htmlFor={id} onClick={handleClick}>
-          <CheckBoxUnchecked
-            className={uncheckedClass}
-            name="CheckBoxUnchecked"
-          />
+          <CheckBoxUnchecked className={uncheckedClass} name="CheckBoxUnchecked" />
           <CheckBoxChecked className={checkedClass} name="CheckBoxChecked" />
           <span className={style.text}>{label}</span>
           {warning && <Alert className={style.warning} />}

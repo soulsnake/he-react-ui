@@ -16,7 +16,8 @@ function defaultSort(a, b) {
 
   if (stringA < stringB) {
     return -1;
-  } else if (stringA > stringB) {
+  }
+  if (stringA > stringB) {
     return 1;
   }
   return 0;
@@ -42,7 +43,7 @@ class Table extends Component<Props, *> {
   state = {
     sortAscending: true,
     sortColumn: null,
-    sortedBody: this.props.body,
+    sortedBody: (this.props: *).body,
   };
 
   componentWillReceiveProps(nextProps: Props) {
@@ -112,10 +113,7 @@ class Table extends Component<Props, *> {
                 [style.ascending]: sortColumn === index && sortAscending,
                 [style.descending]: sortColumn === index && !sortAscending,
               })}
-              onClick={() =>
-                column.sortable &&
-                sortBody(index, column.sortFunction || defaultSort)
-              }
+              onClick={() => column.sortable && sortBody(index, column.sortFunction || defaultSort)}
               key={column.title}
             >
               <span className={style.title}>{column.title}</span>
@@ -128,10 +126,7 @@ class Table extends Component<Props, *> {
     return (
       <React.Fragment>
         {['narrow', 'wide', 'extraNarrow'].map(width => (
-          <div
-            key={width}
-            className={classnames(style.heading, { [style[width]]: width })}
-          >
+          <div key={width} className={classnames(style.heading, { [style[width]]: width })}>
             <LoadingStrip />
           </div>
         ))}

@@ -1,5 +1,5 @@
 // @flow
-import SingleSelect from '../';
+import SingleSelect from '..';
 
 export default {
   component: SingleSelect,
@@ -22,8 +22,7 @@ export default {
       { label: 'Ivy', value: '9' },
       { label: 'Jackfruit', value: '10' },
       {
-        label:
-          'Test long option a b c d e f c d e f g h i j k l m n o p q r s t u v w x y z',
+        label: 'Test long option a b c d e f c d e f g h i j k l m n o p q r s t u v w x y z',
         value: '11',
       },
     ],

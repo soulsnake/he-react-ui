@@ -58,13 +58,12 @@ class SingleDatePicker extends React.Component<Props, *> {
 
   state = {
     focused: false,
-    date: this.props.value,
+    date: (this.props: Props).value,
   };
 
-  componentWillReceiveProps(
-    nextProps: typeof SingleDatePicker.prototype.props,
-  ) {
-    if (nextProps.value !== this.state.date) {
+  componentWillReceiveProps(nextProps: typeof SingleDatePicker.prototype.props) {
+    const { date } = this.state;
+    if (nextProps.value !== date) {
       this.setState({
         date: nextProps.value,
       });
@@ -72,18 +71,20 @@ class SingleDatePicker extends React.Component<Props, *> {
   }
 
   handleDateChange = (date: moment) => {
-    const oldDate = this.state.date;
+    const { onChange } = this.props;
+    const { date: oldDate } = this.state;
     this.setState({ date });
     if ((oldDate && oldDate.toJSON()) !== (date && date.toJSON())) {
       const event = {
         value: date,
         props: this.props,
       };
-      this.props.onChange(event);
+      onChange(event);
     }
   };
 
   handleFocusChange = (change: FocusChange) => {
+    const { onFocus, onBlur } = this.props;
     const { focused } = change;
     this.setState({ focused });
     const event = {
@@ -91,9 +92,9 @@ class SingleDatePicker extends React.Component<Props, *> {
       props: this.props,
     };
     if (focused) {
-      this.props.onFocus(event);
+      onFocus(event);
     } else {
-      this.props.onBlur(event);
+      onBlur(event);
     }
   };
 
@@ -113,12 +114,15 @@ class SingleDatePicker extends React.Component<Props, *> {
       readOnly,
       placeholder,
     } = this.props;
+
+    const { focused, date } = this.state;
+
     const classes = classnames(
       styles.outer,
       {
         [styles.error]: error,
         [styles.disabled]: disabled,
-        [styles.focused]: this.state.focused,
+        [styles.focused]: focused,
         [styles.inline]: inline,
       },
       className,
@@ -131,14 +135,14 @@ class SingleDatePicker extends React.Component<Props, *> {
           <Media query={{ maxWidth: 767 }}>
             {matches => (
               <Picker
-                date={this.state.date}
+                date={date}
                 daySize={28}
                 disabled={disabled}
                 horizontalMargin={matches ? 0 : horizontalMargin}
                 id={id}
                 numberOfMonths={matches ? 1 : 2}
                 onDateChange={this.handleDateChange}
-                focused={this.state.focused}
+                focused={focused}
                 onFocusChange={this.handleFocusChange}
                 navNext={<ChevronRight />}
                 navPrev={<ChevronLeft />}

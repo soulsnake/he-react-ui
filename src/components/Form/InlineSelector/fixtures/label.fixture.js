@@ -1,5 +1,5 @@
 // @flow
-import InlineSelector from '../';
+import InlineSelector from '..';
 
 export default {
   component: InlineSelector,

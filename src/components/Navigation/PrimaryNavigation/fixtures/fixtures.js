@@ -1,6 +1,6 @@
 // @flow
 import React, { Fragment } from 'react';
-import PrimaryNavigation from '../';
+import PrimaryNavigation from '..';
 import Button from '../../../Form/Button';
 import Heading from '../../../Layout/Heading';
 import sharedProps from './sharedProps.fixtureData';

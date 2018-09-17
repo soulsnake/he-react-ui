@@ -5,10 +5,7 @@ import Button from '../../Form/Button/Button';
 
 const content = (
   <React.Fragment>
-    <p>
-      This is a paragraph of text made to emulate a quick description of the
-      item being promoted.
-    </p>
+    <p>This is a paragraph of text made to emulate a quick description of the item being promoted.</p>
     <Button large>Activate now</Button>
     <Button large color="white" keyline>
       Find out more

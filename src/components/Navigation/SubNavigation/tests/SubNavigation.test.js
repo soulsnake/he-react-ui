@@ -18,12 +18,7 @@ describe('Subnavigation', () => {
   it('should invoke a callback when it displays tabs', () => {
     const SubNavigationWithRouter = wrapRouter(SubNavigation);
     const onDisplayTabs = jest.fn();
-    const wrapper = mount(
-      <SubNavigationWithRouter
-        item={{ items: [{}] }}
-        onDisplayTabs={onDisplayTabs}
-      />,
-    );
+    const wrapper = mount(<SubNavigationWithRouter item={{ items: [{}] }} onDisplayTabs={onDisplayTabs} />);
     expect(onDisplayTabs).toHaveBeenCalled();
     wrapper.setProps({ item: { items: [{}, {}] } });
     wrapper.update();

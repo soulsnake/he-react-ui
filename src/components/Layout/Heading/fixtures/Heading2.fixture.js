@@ -1,5 +1,5 @@
 // @flow
-import Heading from '../';
+import Heading from '..';
 
 export default {
   component: Heading,

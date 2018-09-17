@@ -6,5 +6,4 @@ const { mount, getWrapper } = createTestContext({ fixture });
 
 beforeEach(mount);
 
-test('<Button /> rendered correctly with blue fixture', () =>
-  expect(getWrapper()).toMatchSnapshot());
+test('<Button /> rendered correctly with blue fixture', () => expect(getWrapper()).toMatchSnapshot());

@@ -1,5 +1,5 @@
 // @flow
-import LoadingStrip from '../';
+import LoadingStrip from '..';
 
 export default {
   component: LoadingStrip,

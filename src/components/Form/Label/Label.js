@@ -30,11 +30,7 @@ function Label(props: Props) {
   return (
     <div className={classes} {...restProps}>
       {error && <Alert className={style.icon} />}
-      {children ? (
-        <label {...htmlForProp}>{children}</label>
-      ) : (
-        <LoadingStrip className={style.loading} />
-      )}
+      {children ? <label {...htmlForProp}>{children}</label> : <LoadingStrip className={style.loading} />}
     </div>
   );
 }

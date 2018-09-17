@@ -1,5 +1,5 @@
 // @flow
-import SingleDatePicker from '../';
+import SingleDatePicker from '..';
 
 export default {
   component: SingleDatePicker,

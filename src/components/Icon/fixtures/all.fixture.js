@@ -2,22 +2,11 @@
 import Add from '../Add';
 import Alarm from '../Alarm';
 import Alert from '../Alert';
-import {
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowDown,
-  CurvedArrow,
-} from '../Arrows';
+import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown, CurvedArrow } from '../Arrows';
 import Bookings from '../Bookings';
 import Calendar from '../Calendar';
 import CaretRight from '../CaretRight';
-import {
-  CheckBoxChecked,
-  CheckBoxUnchecked,
-  RadioChecked,
-  RadioUnchecked,
-} from '../CheckBoxes';
+import { CheckBoxChecked, CheckBoxUnchecked, RadioChecked, RadioUnchecked } from '../CheckBoxes';
 import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from '../Chevrons';
 import Clock from '../Clock';
 import Cross from '../Cross';

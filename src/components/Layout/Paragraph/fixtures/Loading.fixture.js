@@ -1,5 +1,5 @@
 // @flow
-import Paragraph from '../';
+import Paragraph from '..';
 
 export default {
   component: Paragraph,

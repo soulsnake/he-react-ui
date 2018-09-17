@@ -5,11 +5,7 @@ import Heading from '../Heading';
 import Paragraph from '../Paragraph';
 import style from './FormSection.scss';
 
-function FormSection(props: {
-  children: any,
-  heading: string,
-  description: string,
-}) {
+function FormSection(props: { children: any, heading: string, description: string }) {
   const { children, description, heading, ...restProps } = props;
 
   return (
@@ -18,9 +14,7 @@ function FormSection(props: {
         <Heading h3>{heading}</Heading>
         <Paragraph>{description}</Paragraph>
       </div>
-      <div className={style.right}>
-        {children || <LoadingSpinner className={style.spinner} />}
-      </div>
+      <div className={style.right}>{children || <LoadingSpinner className={style.spinner} />}</div>
     </div>
   );
 }

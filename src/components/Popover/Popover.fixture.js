@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import Popover from '.';
-import { Icon } from '../';
+import { Icon } from '..';
 import styles from './index.scss';
 
 const trigger = <Icon name="Help" style={{ cursor: 'pointer' }} />;
@@ -82,9 +82,7 @@ export default [
 
           <div style={{ padding: 4 }}>
             <div>Web plugin currently inactive</div>
-            <div>
-              Find out more about Web plugin and how to activate the feature
-            </div>
+            <div>Find out more about Web plugin and how to activate the feature</div>
             <div style={{ fontWeight: 'bold', textAlign: 'right' }}>
               <a href="#activate" style={{ color: 'white' }}>
                 Activate Web plugin

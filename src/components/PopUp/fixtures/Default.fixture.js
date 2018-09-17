@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import PopUp from '../';
+import PopUp from '..';
 import { Button, Heading, Paragraph } from '../..';
 
 export default {

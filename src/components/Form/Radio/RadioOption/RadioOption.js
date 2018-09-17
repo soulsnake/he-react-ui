@@ -14,7 +14,9 @@ export default class RadioOption extends React.Component<{
   value?: string,
 }> {
   handleClick = () => {
-    this.props.onClick(this.props.option.value);
+    const { onClick, option } = this.props;
+
+    onClick(option.value);
   };
 
   render() {
@@ -40,9 +42,7 @@ export default class RadioOption extends React.Component<{
         <RadioChecked className={checkedClass} name="RadioChecked" />
         {option.label && <label className={style.tag}>{option.label}</label>}
         {option.child &&
-          (option.showChild || value === option.value) && (
-            <div className={style.child}>{option.child}</div>
-          )}
+          (option.showChild || value === option.value) && <div className={style.child}>{option.child}</div>}
       </div>
     );
   }

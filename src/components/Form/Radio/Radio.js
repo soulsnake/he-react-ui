@@ -33,7 +33,7 @@ class Radio extends React.Component<Props> {
   };
 
   handleClick = (value: string) => {
-    const oldValue = this.props.value;
+    const { value: oldValue, onChange } = this.props;
 
     if (oldValue !== value) {
       const event = {
@@ -41,23 +41,12 @@ class Radio extends React.Component<Props> {
         props: this.props,
       };
 
-      this.props.onChange(event);
+      onChange(event);
     }
   };
 
   render() {
-    const {
-      id,
-      className,
-      error,
-      inline,
-      label,
-      onChange,
-      value,
-      name,
-      options,
-      ...restProps
-    } = this.props;
+    const { id, className, error, inline, label, onChange, value, name, options, ...restProps } = this.props;
 
     const classes = classnames(
       style.outer,
@@ -77,13 +66,7 @@ class Radio extends React.Component<Props> {
 
         <div className={style.options}>
           {options.map(option => (
-            <RadioOption
-              onClick={this.handleClick}
-              key={option.value}
-              option={option}
-              name={name}
-              value={value}
-            />
+            <RadioOption onClick={this.handleClick} key={option.value} option={option} name={name} value={value} />
           ))}
         </div>
 

@@ -34,12 +34,6 @@ export default class FormWrapperProxy<T> extends React.Component<Props, *> {
         }
       : fixture;
 
-    return (
-      <nextProxy.value
-        {...nextProps}
-        nextProxy={nextProxy.next()}
-        fixture={wrappedFixture}
-      />
-    );
+    return <nextProxy.value {...nextProps} nextProxy={nextProxy.next()} fixture={wrappedFixture} />;
   }
 }

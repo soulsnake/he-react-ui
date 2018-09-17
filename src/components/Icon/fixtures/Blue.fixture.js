@@ -1,5 +1,5 @@
 // @flow
-import Icon from '../';
+import Icon from '..';
 
 export default {
   component: Icon,

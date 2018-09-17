@@ -1,5 +1,5 @@
 // @flow
-import FormSection from '../';
+import FormSection from '..';
 
 export default {
   component: FormSection,

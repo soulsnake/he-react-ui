@@ -1,5 +1,5 @@
 // @flow
-import CarouselIndicator from '../';
+import CarouselIndicator from '..';
 
 export default {
   component: CarouselIndicator,

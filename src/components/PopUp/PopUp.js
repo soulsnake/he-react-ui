@@ -32,45 +32,41 @@ class PopUp extends React.Component<Props, *> {
   };
 
   state = {
-    showing: this.props.showing,
+    showing: (this.props: *).showing,
   };
 
   componentWillReceiveProps(nextProps: Props) {
-    if (nextProps.showing !== this.state.showing) {
+    const { showing } = this.state;
+    const { onOpen } = this.props;
+    if (nextProps.showing !== showing) {
       this.setState({
         showing: nextProps.showing,
       });
-      if (nextProps.showing && this.props.onOpen) {
-        this.props.onOpen();
+      if (nextProps.showing && onOpen) {
+        onOpen();
       }
     }
   }
 
   handleClose = () => {
-    if (!this.props.modal) {
+    const { modal, onClose } = this.props;
+    if (!modal) {
       this.setState({
         showing: false,
       });
-      if (this.props.onClose) {
-        this.props.onClose();
+      if (onClose) {
+        onClose();
       }
     }
   };
 
   render() {
-    const {
-      children,
-      className,
-      modal,
-      onClose,
-      onOpen,
-      showing,
-      noPadding,
-      style,
-      ...restProps
-    } = this.props;
+    const { children, className, modal, onClose, onOpen, showing, noPadding, style, ...restProps } = this.props;
+
+    const { showing: stateShowing } = this.state;
+
     const classes = classnames(styles.outer, {
-      [styles.showing]: this.state.showing,
+      [styles.showing]: stateShowing,
     });
     const popupClasses = classnames(styles.popup, className, {
       [styles.popupWithPadding]: !noPadding,
@@ -80,9 +76,7 @@ class PopUp extends React.Component<Props, *> {
       <div className={classes} {...restProps}>
         <div className={styles.overlay} onClick={this.handleClose} />
         <div className={popupClasses} style={style}>
-          {!modal && (
-            <Cross className={styles.close} onClick={this.handleClose} />
-          )}
+          {!modal && <Cross className={styles.close} onClick={this.handleClose} />}
           {children || <LoadingSpinner />}
         </div>
       </div>

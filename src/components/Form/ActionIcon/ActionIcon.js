@@ -30,36 +30,18 @@ class ActionIcon extends React.Component<Props> {
   };
 
   handleClick = (event: SyntheticEvent<*>) => {
-    if (!this.props.disabled) {
-      this.props.onClick(event);
+    const { disabled, onClick } = this.props;
+    if (!disabled) {
+      onClick(event);
     }
   };
 
   render() {
-    const {
-      className,
-      color,
-      disabled,
-      icon,
-      onClick,
-      title,
-      ...rest
-    } = this.props;
-    const classes = classnames(
-      style.button,
-      color && style[color],
-      disabled && style.disabled,
-      className,
-    );
+    const { className, color, disabled, icon, onClick, title, ...rest } = this.props;
+    const classes = classnames(style.button, color && style[color], disabled && style.disabled, className);
 
     return (
-      <button
-        className={classes}
-        type="button"
-        onClick={this.handleClick}
-        title={title}
-        {...rest}
-      >
+      <button className={classes} type="button" onClick={this.handleClick} title={title} {...rest}>
         <Icon className={style.icon} name={icon} />
       </button>
     );

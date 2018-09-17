@@ -1,5 +1,5 @@
 // @flow
-import Footer from '../';
+import Footer from '..';
 
 export default {
   component: Footer,

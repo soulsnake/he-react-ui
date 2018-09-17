@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import Button from '../';
+import Button from '..';
 
 function Wrapper({ children }: { children: any }) {
   return (

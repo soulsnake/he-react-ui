@@ -26,31 +26,21 @@ export default class Popover extends React.Component<Props, *> {
   };
 
   render() {
-    const {
-      preferRight,
-      content,
-      children,
-      triggerOnClick,
-      tooltip,
-      className,
-      light,
-    } = this.props;
+    const { preferRight, content, children, triggerOnClick, tooltip, className, light } = this.props;
+
+    const { fullyMounted } = this.state;
 
     return (
       <React.Fragment>
         <Tippy
-          disabled={!this.state.fullyMounted}
+          disabled={!fullyMounted}
           interactive={!tooltip}
           delay={100}
           hideDelay={300}
           interactiveBorder={16}
           trigger={triggerOnClick ? 'click' : 'mouseenter'}
           html={
-            <PopoverDisplay
-              light={light}
-              className={className}
-              tooltip={tooltip}
-            >
+            <PopoverDisplay light={light} className={className} tooltip={tooltip}>
               {content}
             </PopoverDisplay>
           }
@@ -59,9 +49,7 @@ export default class Popover extends React.Component<Props, *> {
           {children}
         </Tippy>
 
-        {!this.state.fullyMounted && (
-          <span ref={this.notifyMount} className={style.hidden} />
-        )}
+        {!fullyMounted && <span ref={this.notifyMount} className={style.hidden} />}
       </React.Fragment>
     );
   }

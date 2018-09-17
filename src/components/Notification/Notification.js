@@ -25,7 +25,8 @@ export default class Notification extends React.PureComponent<Props> {
   };
 
   handleClose = (event: SyntheticEvent<>) => {
-    this.props.onClose(event);
+    const { onClose } = this.props;
+    onClose(event);
   };
 
   render() {
@@ -52,9 +53,7 @@ export default class Notification extends React.PureComponent<Props> {
         {type === 'warning' && <Alert className={iconClasses} />}
         {type === 'error' && <Cross className={iconClasses} />}
         <div className={messageClasses}>{children}</div>
-        {canClose && (
-          <Cross className={closeIconClasses} onClick={this.handleClose} />
-        )}
+        {canClose && <Cross className={closeIconClasses} onClick={this.handleClose} />}
       </div>
     );
   }

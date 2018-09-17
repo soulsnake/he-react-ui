@@ -1,5 +1,5 @@
 // @flow
-import LoadingSpinner from '../';
+import LoadingSpinner from '..';
 
 export default {
   component: LoadingSpinner,

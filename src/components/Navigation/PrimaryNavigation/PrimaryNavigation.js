@@ -18,14 +18,7 @@ import SubNavigation from '../SubNavigation';
 import styles from './PrimaryNavigation.scss';
 import type { NavItem } from '../NavItem';
 
-function renderRoutes(
-  item,
-  locations,
-  onLocationChange,
-  locationValue,
-  logoutRoute,
-  onDisplayTabs,
-) {
+function renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute, onDisplayTabs) {
   return item.route ? (
     <HashRoute
       key={item.key && `Subnav_${item.key}`}
@@ -92,12 +85,17 @@ class PrimaryNavigation extends Component<Props, *> {
   };
 
   getOpenKey() {
-    return 'openKey' in this.props ? this.props.openKey : this.state.openKey;
+    const { openKey: propsOpenKey } = this.props;
+    const { openKey: stateOpenKey } = this.state;
+    return 'openKey' in this.props ? propsOpenKey : stateOpenKey;
   }
 
   setOpenKey(openKey) {
+    const { onChangeOpenKey } = this.props;
     if ('openKey' in this.props) {
-      if (this.props.onChangeOpenKey) this.props.onChangeOpenKey(openKey);
+      if (onChangeOpenKey) {
+        onChangeOpenKey(openKey);
+      }
     } else {
       this.setState({ openKey });
     }
@@ -127,22 +125,10 @@ class PrimaryNavigation extends Component<Props, *> {
     return (
       <div className={styles.sliders}>
         {topItems.map(item => (
-          <Slider
-            open={openKey === item.key}
-            onSelect={closeBucket}
-            itemKey={item.key}
-            siteName={siteName}
-            {...item}
-          />
+          <Slider open={openKey === item.key} onSelect={closeBucket} itemKey={item.key} siteName={siteName} {...item} />
         ))}
         {bottomItems.map(item => (
-          <Slider
-            bottom
-            open={openKey === item.key}
-            onSelect={closeBucket}
-            itemKey={item.key}
-            {...item}
-          />
+          <Slider bottom open={openKey === item.key} onSelect={closeBucket} itemKey={item.key} {...item} />
         ))}
       </div>
     );
@@ -157,11 +143,7 @@ class PrimaryNavigation extends Component<Props, *> {
 
     return (
       <div className={styles.buckets}>
-        <NavLink
-          className={styles.logoBucket}
-          to={logo.route}
-          onClick={closeBucket}
-        >
+        <NavLink className={styles.logoBucket} to={logo.route} onClick={closeBucket}>
           <div className={styles.logo}>{logo.icon}</div>
         </NavLink>
         {loading ? (
@@ -207,62 +189,27 @@ class PrimaryNavigation extends Component<Props, *> {
     );
   };
 
-  renderSubNav = (
-    items,
-    locations,
-    onLocationChange,
-    locationValue,
-    logoutRoute,
-  ) => {
+  renderSubNav = (items, locations, onLocationChange, locationValue, logoutRoute) => {
     const { loading, onDisplayTabs } = this.props;
 
     if (loading) {
-      return (
-        <SubNavigation
-          loading
-          logoutRoute={logoutRoute}
-          onDisplayTabs={onDisplayTabs}
-        />
-      );
+      return <SubNavigation loading logoutRoute={logoutRoute} onDisplayTabs={onDisplayTabs} />;
     }
 
     return items.map(item => {
       if (item.items && item.items.length > 0) {
         return item.items.map(child =>
-          renderRoutes(
-            child,
-            locations,
-            onLocationChange,
-            locationValue,
-            logoutRoute,
-            onDisplayTabs,
-          ),
+          renderRoutes(child, locations, onLocationChange, locationValue, logoutRoute, onDisplayTabs),
         );
       }
 
-      return renderRoutes(
-        item,
-        locations,
-        onLocationChange,
-        locationValue,
-        logoutRoute,
-        onDisplayTabs,
-      );
+      return renderRoutes(item, locations, onLocationChange, locationValue, logoutRoute, onDisplayTabs);
     });
   };
 
   render() {
     const { closeBucket, renderBuckets, renderSliders, renderSubNav } = this;
-    const {
-      items,
-      loading,
-      locations,
-      onLocationChange,
-      locationValue,
-      logoutRoute,
-      children,
-      maskPage,
-    } = this.props;
+    const { items, loading, locations, onLocationChange, locationValue, logoutRoute, children, maskPage } = this.props;
 
     return (
       <div className={styles.outer}>
@@ -272,13 +219,7 @@ class PrimaryNavigation extends Component<Props, *> {
         </div>
         <div className={styles.spacer} />
         <div className={styles.content} onClick={closeBucket}>
-          {renderSubNav(
-            items,
-            locations,
-            onLocationChange,
-            locationValue,
-            logoutRoute,
-          )}
+          {renderSubNav(items, locations, onLocationChange, locationValue, logoutRoute)}
           <div className={styles.children}>
             {children}
             {maskPage && <div className={styles.overlay} />}

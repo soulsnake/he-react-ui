@@ -1,5 +1,5 @@
 // @flow
-import Button from '../';
+import Button from '..';
 
 export default [
   {

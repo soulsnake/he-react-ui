@@ -14,10 +14,7 @@ export default function HashRoute(props: Props) {
   const { render, path, exact, strict } = props;
   return (
     <Route
-      render={({ location }) =>
-        matchPath(location.pathname + location.hash, { path, exact, strict }) &&
-        render()
-      }
+      render={({ location }) => matchPath(location.pathname + location.hash, { path, exact, strict }) && render()}
     />
   );
 }

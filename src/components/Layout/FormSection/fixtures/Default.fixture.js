@@ -1,15 +1,14 @@
 // @flow
 import React from 'react';
-import FormSection from '../';
-import { SingleDatePicker } from '../../../';
+import FormSection from '..';
+import { SingleDatePicker } from '../../..';
 import Radio from '../../../Form/Radio';
 
 export default {
   component: FormSection,
   props: {
     heading: 'Section Heading',
-    description:
-      'This generally provides some further explanation about what the user can / should do.',
+    description: 'This generally provides some further explanation about what the user can / should do.',
   },
 
   children: (

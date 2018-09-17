@@ -37,12 +37,6 @@ export default class SimulateSubmissionProxy extends React.Component<Props, *> {
         }
       : fixture;
 
-    return (
-      <nextProxy.value
-        {...nextProps}
-        nextProxy={nextProxy.next()}
-        fixture={wrappedFixture}
-      />
-    );
+    return <nextProxy.value {...nextProps} nextProxy={nextProxy.next()} fixture={wrappedFixture} />;
   }
 }

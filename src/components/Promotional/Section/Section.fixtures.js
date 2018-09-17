@@ -6,14 +6,13 @@ const content = (
   <React.Fragment>
     <h2>Heading</h2>
     <p>
-      What a great description of this product. This is a paragraph of text made
-      to emulate a more detailed description of the item being promoted.
+      What a great description of this product. This is a paragraph of text made to emulate a more detailed description
+      of the item being promoted.
     </p>
     <p>It is just so versatile!</p>
     <p>
-      What a great description of this product. This is a paragraph of text made
-      to emulate a more detailed description of the item being promoted. It is
-      really good if you take the time to check it out.
+      What a great description of this product. This is a paragraph of text made to emulate a more detailed description
+      of the item being promoted. It is really good if you take the time to check it out.
     </p>
   </React.Fragment>
 );

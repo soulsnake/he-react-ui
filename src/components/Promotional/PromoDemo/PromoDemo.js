@@ -32,10 +32,7 @@ function PromoDemo() {
   return (
     <div style={{ backgroundColor: '#F5F7F8' }}>
       <Banner title="Product Name">
-        <p>
-          This is a paragraph of text made to emulate a quick description of the
-          item being promoted.
-        </p>
+        <p>This is a paragraph of text made to emulate a quick description of the item being promoted.</p>
         <Button large>Activate now</Button>
         <Button large color="white" keyline>
           Find out more
@@ -44,21 +41,18 @@ function PromoDemo() {
       <PromoSection>
         <PromoHighlight
           image={{
-            src:
-              'http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png',
+            src: 'http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png',
             alt: 'A bandage.',
           }}
         >
           <p>
-            What a great description of <em>this product</em>. This is a
-            paragraph of text made to emulate a more detailed description of the
-            item being promoted.
+            What a great description of <em>this product</em>. This is a paragraph of text made to emulate a more
+            detailed description of the item being promoted.
           </p>
           <p>It is just so versatile!</p>
           <p>
-            What a great description of this product. This is a paragraph of
-            text made to emulate a more detailed description of the item being
-            promoted. It is really good if you take the time to check it out.
+            What a great description of this product. This is a paragraph of text made to emulate a more detailed
+            description of the item being promoted. It is really good if you take the time to check it out.
           </p>
         </PromoHighlight>
         <h2>Sweet benefits</h2>
@@ -75,9 +69,8 @@ function PromoDemo() {
       <PromoSection white>
         <h2>Works well with</h2>
         <p>
-          What a great description of this product. This is a paragraph of text
-          made to emulate a more detailed description of the item being
-          promoted. It is really good if you take the time to check it out.
+          What a great description of this product. This is a paragraph of text made to emulate a more detailed
+          description of the item being promoted. It is really good if you take the time to check it out.
         </p>
         <SupportList>
           {support}
@@ -95,37 +88,21 @@ function PromoDemo() {
       <PromoSection>
         <VideoDisplay youtubeId="iYuXzohJUFE">
           <h2>Heading about the video</h2>
-          <p>
-            This is a paragraph of text made to emulate a quick description of
-            the item being promoted.
-          </p>
-          <p>
-            This is a paragraph of text made to emulate a quick description of
-            the item being promoted.
-          </p>
+          <p>This is a paragraph of text made to emulate a quick description of the item being promoted.</p>
+          <p>This is a paragraph of text made to emulate a quick description of the item being promoted.</p>
         </VideoDisplay>
       </PromoSection>
       <PromoSection white>
         <ImageDisplay
           image={{
-            src:
-              'http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png',
+            src: 'http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png',
             alt: 'A bandage.',
           }}
         >
           <h2>Heading about the image</h2>
-          <p>
-            This is a paragraph of text made to emulate a quick description of
-            the item being promoted.
-          </p>
-          <p>
-            This is a paragraph of text made to emulate a quick description of
-            the item being promoted.
-          </p>
-          <p>
-            This is a paragraph of text made to emulate a quick description of
-            the item being promoted.
-          </p>
+          <p>This is a paragraph of text made to emulate a quick description of the item being promoted.</p>
+          <p>This is a paragraph of text made to emulate a quick description of the item being promoted.</p>
+          <p>This is a paragraph of text made to emulate a quick description of the item being promoted.</p>
         </ImageDisplay>
       </PromoSection>
       <PromoFooter header="Ready for this product?">

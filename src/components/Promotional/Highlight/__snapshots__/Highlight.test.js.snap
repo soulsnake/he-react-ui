@@ -2,46 +2,24 @@
 
 exports[`<Highlight /> rendered correctly with Image fixture 1`] = `
 <Highlight
-  youtubeId="iYuXzohJUFE"
+  image={
+    Object {
+      "alt": "A bandage.",
+      "src": "http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png",
+    }
+  }
 >
   <div
     className="outer"
   >
     <div
-      className="videoWrapper"
+      className="imageWrapper"
     >
-      <YouTube
-        className="youtube"
-        containerClassName=""
-        id={null}
-        onEnd={[Function]}
-        onError={[Function]}
-        onPause={[Function]}
-        onPlay={[Function]}
-        onPlaybackQualityChange={[Function]}
-        onPlaybackRateChange={[Function]}
-        onReady={[Function]}
-        onStateChange={[Function]}
-        opts={
-          Object {
-            "playerVars": Object {
-              "color": "white",
-              "rel": 0,
-              "showinfo": 0,
-            },
-          }
-        }
-        videoId="iYuXzohJUFE"
-      >
-        <span
-          className=""
-        >
-          <div
-            className="youtube"
-            id={null}
-          />
-        </span>
-      </YouTube>
+      <img
+        alt="A bandage."
+        className="image"
+        src="http://res.publicdomainfiles.com/pdf_view/2/13491430814060.png"
+      />
     </div>
     <div
       className="description"

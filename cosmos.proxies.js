@@ -5,10 +5,4 @@ import ParentLayoutProxy from './config/cosmos-proxies/ParentLayoutProxy';
 import SimulateSubmissionProxy from './config/cosmos-proxies/SimulateSubmissionProxy';
 import WrapperProxy from './config/cosmos-proxies/WrapperProxy';
 
-export default [
-  FormWrapperProxy,
-  createRouterProxy(),
-  ParentLayoutProxy,
-  SimulateSubmissionProxy,
-  WrapperProxy,
-];
+export default [FormWrapperProxy, createRouterProxy(), ParentLayoutProxy, SimulateSubmissionProxy, WrapperProxy];
