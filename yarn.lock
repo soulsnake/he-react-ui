@@ -2825,9 +2825,9 @@ eslint-config-airbnb@^17.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-he@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-he/-/eslint-config-he-0.3.0.tgz#ae91e0681a022e9158092dcfb842602ceefbe5bd"
+eslint-config-he@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-he/-/eslint-config-he-0.4.0.tgz#c685bd44b61603d2c28c76e1fed88d99075ff782"
 
 eslint-config-prettier@^3.0.1:
   version "3.0.1"
