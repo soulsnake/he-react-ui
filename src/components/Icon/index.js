@@ -24,6 +24,7 @@ import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from './Chevrons';
 import Clock from './Clock';
 import Cross from './Cross';
 import Delete from './Delete';
+import DeleteProfile from './DeleteProfile';
 import DropDown from './DropDown';
 import Edit from './Edit';
 import Ellipsis from './Ellipsis';
@@ -36,11 +37,13 @@ import style from './Icon.scss';
 import Logout from './Logout';
 import Megaphone from './Megaphone';
 import Patients from './Patients';
+import Pencil from './Pencil';
 import Search from './Search';
 import Settings from './Settings';
 import Sync from './Sync';
 import Tick from './Tick';
 import View from './View';
+import UserShield from './UserShield';
 
 type Color = 'teal' | 'blue' | 'green' | 'red' | 'white';
 
@@ -101,6 +104,8 @@ function Icon(props: {
       return <Cross {...childProps} />;
     case 'Delete':
       return <Delete {...childProps} />;
+    case 'DeleteProfile':
+      return <DeleteProfile {...childProps} />;
     case 'DropDown':
       return <DropDown {...childProps} />;
     case 'Edit':
@@ -119,6 +124,8 @@ function Icon(props: {
       return <Megaphone {...childProps} />;
     case 'Patients':
       return <Patients {...childProps} />;
+    case 'Pencil':
+      return <Pencil {...childProps} />;
     case 'Ellipsis':
       return <Ellipsis {...childProps} />;
     case 'Logout':
@@ -133,6 +140,8 @@ function Icon(props: {
       return <Settings {...childProps} />;
     case 'Sync':
       return <Sync {...childProps} />;
+    case 'UserShield':
+      return <UserShield {...childProps} />;
     case 'Tick':
       return <Tick {...childProps} />;
     case 'View':
