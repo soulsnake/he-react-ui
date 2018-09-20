@@ -17,12 +17,12 @@ describe('TextField', () => {
         name="demo"
         label="Label"
         onChange={handleOnChange}
-        />,
+      />,
     );
 
-    harness.find('input').simulate('focus')
-    harness.find('input').simulate('blur')
-    harness.find('input').simulate('change')
+    harness.find('input').simulate('focus');
+    harness.find('input').simulate('blur');
+    harness.find('input').simulate('change');
     expect(harness).toMatchSnapshot();
   });
 });
