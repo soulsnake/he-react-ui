@@ -1506,3 +1506,72 @@ exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
   </div>
 </TextField>
 `;
+
+exports[`TextField test interaction 1`] = `
+<TextField
+  disabled={false}
+  helper={null}
+  id="demo"
+  inline={false}
+  isValid={true}
+  label="Label"
+  marker={false}
+  name="demo"
+  onBlur={[Function]}
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "props": Object {
+              "disabled": false,
+              "helper": null,
+              "id": "demo",
+              "inline": false,
+              "isValid": true,
+              "label": "Label",
+              "marker": false,
+              "name": "demo",
+              "onBlur": [Function],
+              "onChange": [MockFunction] {
+                "calls": [Circular],
+              },
+              "onFocus": [Function],
+              "value": "",
+            },
+            "value": "",
+          },
+        ],
+      ],
+    }
+  }
+  onFocus={[Function]}
+  value=""
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value=""
+      />
+      <label
+        className="label"
+        htmlFor="demo"
+      >
+        Label
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
