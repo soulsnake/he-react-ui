@@ -34,6 +34,7 @@ type Props = {
   eventTypes?: string | Array<string>,
   preventDefault?: boolean,
   stopPropagation?: boolean,
+  loadOptionsAsync?: Function,
   fill?: boolean,
   forceTitle?: ?string,
 };
@@ -66,7 +67,6 @@ class SingleSelect extends React.Component<Props, *> {
         value: data.value,
         props: this.props,
       };
-
       this.props.onChange(event);
     }
   };
@@ -103,11 +103,11 @@ class SingleSelect extends React.Component<Props, *> {
       onClose,
       forceTitle,
       fill,
+      loadOptionsAsync,
       ...restProps
     } = this.props;
     const { handleOpen, handleClose, handleChange } = this;
     const { expanded } = this.state;
-
     return (
       <div
         className={classnames(className, style.outer, {
@@ -131,26 +131,51 @@ class SingleSelect extends React.Component<Props, *> {
               [style.large]: large,
             })}
           >
-            <Select
-              joinValues
-              options={options}
-              className={classnames(style.select, {
-                [style.expanded]: expanded,
-                [style.disabled]: disabled,
-                [style.error]: error,
-                [style.forceTitle]: forceTitle,
-              })}
-              disabled={disabled}
-              value={value}
-              onChange={handleChange}
-              onOpen={handleOpen}
-              onClose={handleClose}
-              placeholder={forceTitle || placeholder}
-              valueRenderer={this.getDisplay}
-              id={id}
-              name={name}
-              required={required}
-            />
+            {loadOptionsAsync ? (
+              <Select.Async
+                joinValues
+                className={classnames(style.select, {
+                  [style.expanded]: expanded,
+                  [style.disabled]: disabled,
+                  [style.error]: error,
+                  [style.forceTitle]: forceTitle,
+                })}
+                disabled={disabled}
+                value={value}
+                onChange={handleChange}
+                onOpen={handleOpen}
+                onClose={handleClose}
+                placeholder={forceTitle || placeholder}
+                valueRenderer={this.getDisplay}
+                id={id}
+                name={name}
+                required={required}
+                autoLoad={false}
+                cache={false}
+                loadOptions={loadOptionsAsync}
+              />
+            ) : (
+              <Select
+                joinValues
+                options={options}
+                className={classnames(style.select, {
+                  [style.expanded]: expanded,
+                  [style.disabled]: disabled,
+                  [style.error]: error,
+                  [style.forceTitle]: forceTitle,
+                })}
+                disabled={disabled}
+                value={value}
+                onChange={handleChange}
+                onOpen={handleOpen}
+                onClose={handleClose}
+                placeholder={forceTitle || placeholder}
+                valueRenderer={this.getDisplay}
+                id={id}
+                name={name}
+                required={required}
+              />
+            )}
             <DropDown className={style.caret} />
           </div>
         </div>
