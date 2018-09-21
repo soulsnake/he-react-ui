@@ -116,21 +116,22 @@ class SubNavigation extends Component<Props> {
     } = this.props;
 
     const displayTabs = this.shouldDisplayTabs();
-
     return (
       <div className={style.bar}>
         <div className={style.top}>
-          {backRoute && (
-            <NavLink exact className={style.navBack} to={backRoute}>
-              <ArrowLeft className={style.arrow} />
-            </NavLink>
-          )}
           {loading ? (
             <div className={style.heading}>
               <LoadingStrip className={style.loadingHeading} />
             </div>
           ) : (
-            <h2 className={style.heading}>{item ? item.title : ''}</h2>
+            <div className={style.heading}>
+              {backRoute && (
+                <NavLink exact className={style.navBack} to={backRoute}>
+                  <ArrowLeft className={style.arrow} />
+                </NavLink>
+              )}
+              <h2 className={style.heading}>{item ? item.title : ''}</h2>
+            </div>
           )}
           {(loading && (
             <span className={style.control}>

@@ -2358,11 +2358,15 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
                     <div
                       className="top"
                     >
-                      <h2
+                      <div
                         className="heading"
                       >
-                        Notifications
-                      </h2>
+                        <h2
+                          className="heading"
+                        >
+                          Notifications
+                        </h2>
+                      </div>
                       <span
                         className="control selector"
                       >
@@ -5225,11 +5229,15 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Loading f
                     <div
                       className="top"
                     >
-                      <h2
+                      <div
                         className="heading"
                       >
-                        Notifications
-                      </h2>
+                        <h2
+                          className="heading"
+                        >
+                          Notifications
+                        </h2>
+                      </div>
                       <span
                         className="control selector"
                       >
@@ -8092,11 +8100,15 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with maskPage 
                     <div
                       className="top"
                     >
-                      <h2
+                      <div
                         className="heading"
                       >
-                        Notifications
-                      </h2>
+                        <h2
+                          className="heading"
+                        >
+                          Notifications
+                        </h2>
+                      </div>
                       <span
                         className="control selector"
                       >
@@ -10959,11 +10971,15 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with withSubNa
                     <div
                       className="top"
                     >
-                      <h2
+                      <div
                         className="heading"
                       >
-                        Notifications
-                      </h2>
+                        <h2
+                          className="heading"
+                        >
+                          Notifications
+                        </h2>
+                      </div>
                       <span
                         className="control selector"
                       >

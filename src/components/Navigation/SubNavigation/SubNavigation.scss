@@ -57,8 +57,8 @@
 }
 
 .top {
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -74,6 +74,7 @@
     margin: 0;
     font-weight: $regular;
     font-size: 20px;
+    flex: 1 0;
     @include breakpoint(small) {
       margin-bottom: 8px;
     }

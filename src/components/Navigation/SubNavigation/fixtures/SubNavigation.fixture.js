@@ -171,4 +171,43 @@ export default [
       logoutRoute: '/logout',
     },
   },
+  {
+    name: 'Has back button',
+    component: SubNavigation,
+    url: '/feedback',
+    props: {
+      item: {
+        key: 'PARENT',
+        title: 'Parent title',
+        label: 'Parent',
+        route: '/parent',
+        badge: 'FREE',
+        items: [
+          {
+            key: 'MAIN',
+            label: 'Main',
+            route: '/parent',
+          },
+          {
+            key: 'SECONDARY',
+            label: 'Secondary',
+            route: '/parent/secondary',
+          },
+          {
+            key: 'TERTIARY',
+            label: 'Google',
+            route: 'https://wwww.google.com/',
+          },
+        ],
+      },
+      backRoute: '/feedback',
+      locations: [
+        {
+          value: 'Location A',
+          label: 'Location A',
+        },
+      ],
+      logoutRoute: '/logout',
+    },
+  },
 ];

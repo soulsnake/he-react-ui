@@ -80,7 +80,10 @@ class Table extends Component<Props, *> {
     if (columns && columns.length && sortedBody && sortedBody.length > 0) {
       return sortedBody.map((row, rowIndex) => (
         <div
-          className={classnames(style.row, { [style.inactive]: row.inactive })}
+          className={classnames(style.row, {
+            [style.inactive]: row.inactive,
+            [style.clickable]: onRowClick,
+          })}
           key={rowIndex} // eslint-disable-line react/no-array-index-key
           onClick={() => (onRowClick ? onRowClick(row) : null)}
         >

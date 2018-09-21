@@ -85,7 +85,9 @@
 .row {
   display: flex;
   padding: 0 44px;
-  cursor: pointer;
+  &.clickable {
+    cursor: pointer;
+  }
   &:hover {
     background-color: $grey_7;
     .cell {
