@@ -8,6 +8,7 @@ exports[`<SingleDatePicker /> rendered correctly with error fixture 1`] = `
   error="That wasn't the best choice"
   id="demo"
   inline={false}
+  large={false}
   name="demo"
   onBlur={[Function]}
   onChange={[Function]}

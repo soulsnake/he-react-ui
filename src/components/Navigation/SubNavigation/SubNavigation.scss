@@ -21,6 +21,13 @@
   }
 }
 
+.navBack {
+  color: $grey_2;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
 .item {
   color: $grey_2;
   cursor: pointer;
@@ -51,9 +58,9 @@
 
 .top {
   justify-content: space-between;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   box-sizing: border-box;
   min-height: 76px;
   @include breakpoint(small) {

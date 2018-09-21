@@ -61,6 +61,8 @@ exports[`<CurvedArrow /> rendered correctly with CurvedArrow fixture 1`] = `null
 
 exports[`<Delete /> rendered correctly with Delete fixture 1`] = `null`;
 
+exports[`<DeleteProfile /> rendered correctly with DeleteProfile fixture 1`] = `null`;
+
 exports[`<DropDown /> rendered correctly with DropDown fixture 1`] = `null`;
 
 exports[`<Edit /> rendered correctly with Edit fixture 1`] = `null`;
@@ -83,6 +85,8 @@ exports[`<Megaphone /> rendered correctly with Megaphone fixture 1`] = `null`;
 
 exports[`<Patients /> rendered correctly with Patients fixture 1`] = `null`;
 
+exports[`<Pencil /> rendered correctly with Pencil fixture 1`] = `null`;
+
 exports[`<RadioChecked /> rendered correctly with RadioChecked fixture 1`] = `null`;
 
 exports[`<RadioUnchecked /> rendered correctly with RadioUnchecked fixture 1`] = `null`;
@@ -94,5 +98,7 @@ exports[`<Settings /> rendered correctly with Settings fixture 1`] = `null`;
 exports[`<Sync /> rendered correctly with Sync fixture 1`] = `null`;
 
 exports[`<Tick /> rendered correctly with Tick fixture 1`] = `null`;
+
+exports[`<UserShield /> rendered correctly with UserShield fixture 1`] = `null`;
 
 exports[`<View /> rendered correctly with View fixture 1`] = `null`;

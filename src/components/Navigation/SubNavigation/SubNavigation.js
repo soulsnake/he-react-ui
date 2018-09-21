@@ -11,6 +11,7 @@ import { matchPath, withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import SingleSelect from '../../Form/SingleSelect';
 import Logout from '../../Icon/Logout';
+import ArrowLeft from '../../Icon/Arrows/ArrowLeft';
 import LoadingStrip from '../../Loading/LoadingStrip';
 import style from './SubNavigation.scss';
 import type { NavItem } from '../NavItem';
@@ -20,6 +21,7 @@ type Option = { value: any, label: string };
 type Props = {
   item?: NavItem,
   locations?: Option[],
+  backRoute?: any,
   onLocationChange?: Function,
   onDisplayTabs?: Function,
   logoutRoute?: string,
@@ -110,10 +112,10 @@ class SubNavigation extends Component<Props> {
       onLocationChange,
       locationValue,
       logoutRoute,
+      backRoute,
     } = this.props;
 
     const displayTabs = this.shouldDisplayTabs();
-
     return (
       <div className={style.bar}>
         <div className={style.top}>
@@ -122,7 +124,14 @@ class SubNavigation extends Component<Props> {
               <LoadingStrip className={style.loadingHeading} />
             </div>
           ) : (
-            <h2 className={style.heading}>{item ? item.title : ''}</h2>
+            <div className={style.heading}>
+              {backRoute && (
+                <NavLink exact className={style.navBack} to={backRoute}>
+                  <ArrowLeft className={style.arrow} />
+                </NavLink>
+              )}
+              <h2 className={style.heading}>{item ? item.title : ''}</h2>
+            </div>
           )}
           {(loading && (
             <span className={style.control}>
@@ -145,8 +154,8 @@ class SubNavigation extends Component<Props> {
                 (locations.length === 1 && (
                   <span className={style.control}>{locations[0].label}</span>
                 ))))}
-          <span className={classnames(style.control, style.logout)}>
-            {logoutRoute && (
+          {logoutRoute && (
+            <span className={classnames(style.control, style.logout)}>
               <NavLink
                 key="logout"
                 to={logoutRoute}
@@ -156,8 +165,8 @@ class SubNavigation extends Component<Props> {
               >
                 <Logout className={style.icon} />Logout
               </NavLink>
-            )}
-          </span>
+            </span>
+          )}
         </div>
         {displayTabs && (
           <div className={style.items}>

@@ -58,4 +58,7 @@ export default [
   { name: 'ArrowLeft', component: Icon, props: { name: 'ArrowLeft' } },
   { name: 'ArrowRight', component: Icon, props: { name: 'ArrowRight' } },
   { name: 'ArrowUp', component: Icon, props: { name: 'ArrowUp' } },
+  { name: 'DeleteProfile', component: Icon, props: { name: 'DeleteProfile' } },
+  { name: 'UserShield', component: Icon, props: { name: 'UserShield' } },
+  { name: 'Pencil', component: Icon, props: { name: 'Pencil' } },
 ];

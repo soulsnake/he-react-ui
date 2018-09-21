@@ -38,6 +38,9 @@ import Settings from '../Settings';
 import Sync from '../Sync';
 import Tick from '../Tick';
 import View from '../View';
+import DeleteProfile from '../DeleteProfile';
+import UserShield from '../UserShield';
+import Pencil from '../Pencil';
 
 export default [
   { name: 'Add', component: Add, props: {} },
@@ -52,6 +55,7 @@ export default [
   { name: 'CurvedArrow', component: CurvedArrow, props: {} },
   { name: 'Cross', component: Cross, props: {} },
   { name: 'Delete', component: Delete, props: {} },
+  { name: 'DeleteProfile', component: DeleteProfile, props: {} },
   { name: 'DropDown', component: DropDown, props: {} },
   { name: 'Edit', component: Edit, props: {} },
   { name: 'Ellipsis', component: Ellipsis, props: {} },
@@ -67,8 +71,10 @@ export default [
   { name: 'Logout', component: Logout, props: {} },
   { name: 'Megaphone', component: Megaphone, props: {} },
   { name: 'Patients', component: Patients, props: {} },
+  { name: 'Pencil', component: Pencil, props: {} },
   { name: 'Search', component: Search, props: {} },
   { name: 'Settings', component: Settings, props: {} },
+  { name: 'UserShield', component: UserShield, props: {} },
   { name: 'Sync', component: Sync, props: {} },
   { name: 'Tick', component: Tick, props: {} },
   { name: 'View', component: View, props: {} },
