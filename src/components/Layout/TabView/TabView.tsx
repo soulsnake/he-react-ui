@@ -10,12 +10,10 @@ type Tab = {
   strict?: boolean;
 };
 
-class TabView extends Component<any> {
-  props: {
-    heading: string;
-    tabs: Tab[];
-  };
-
+class TabView extends Component<{
+  heading: string;
+  tabs: Tab[];
+}> {
   renderTabs = (tabs: Tab[]) => (
     <React.Fragment>
       {tabs.map(tab => (
