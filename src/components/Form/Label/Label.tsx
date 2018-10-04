@@ -17,7 +17,7 @@ type Props = {
   children: any;
 };
 
-function Label(props: Props) {
+const Label: React.SFC<Props> = function Label(props) {
   const { children, className, error, htmlFor, ...restProps } = props;
   const classes = classnames(style.label, {
     [style.error]: error,
@@ -36,7 +36,7 @@ function Label(props: Props) {
       )}
     </div>
   );
-}
+};
 
 Label.defaultProps = {
   error: false,

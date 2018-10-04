@@ -23,7 +23,7 @@ type Props = {
   onSelect?: Function;
 };
 
-function Slider(props: Props) {
+const Slider: React.SFC<Props> = props => {
   const { bottom, itemKey, open, siteName, ...restProps } = props;
 
   return (
@@ -40,7 +40,7 @@ function Slider(props: Props) {
       <List title="" className={styles.list} itemKey={itemKey} {...restProps} />
     </div>
   );
-}
+};
 
 Slider.defaultProps = {
   onSelect: returnNull,

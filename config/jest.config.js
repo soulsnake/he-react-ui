@@ -1,11 +1,11 @@
 /* eslint-disable global-require */
-import Enzyme, { mount, render, shallow } from 'enzyme';
-import Adapter from 'enzyme-react-adapter-future';
-import 'raf/polyfill';
+const Enzyme = require('enzyme');
+const Adapter = require('enzyme-react-adapter-future');
 
-global.shallow = shallow;
-global.render = render;
-global.mount = mount;
+const { mount, render, shallow } = Enzyme;
+
+require('raf/polyfill');
+
 global.requestAnimationFrame = handler => setTimeout(handler, 10);
 
 // React 16 Enzyme adapter

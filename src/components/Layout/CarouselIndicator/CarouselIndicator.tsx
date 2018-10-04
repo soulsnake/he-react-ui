@@ -24,7 +24,7 @@ const CarouselIndicator: React.SFC<Props> = props => {
       <ol className={style.wrapper}>
         {Array(length)
           .fill(1)
-          .map((child, index) => (
+          .map((_, index) => (
             <li
               key={`dot-${index + 1}`}
               className={classnames(style.item, {

@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import testFixture from '../../../../config/testFixture';
-import fixture from '../fixtures/Default.fixture.js';
+import fixture from '../fixtures/Default.fixture';
 import PopUp from '../PopUp.js';
 
 testFixture(fixture, 'Default');

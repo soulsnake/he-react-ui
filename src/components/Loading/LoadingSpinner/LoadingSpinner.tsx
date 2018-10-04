@@ -11,7 +11,7 @@ type Props = {
   ringColor?: Color;
 };
 
-function LoadingSpinner(props: Props) {
+const LoadingSpinner: React.SFC<Props> = props => {
   const { className, color, fidget, ringColor, ...restProps } = props;
   const classes = classnames(style.outer, color && style[color], className);
   const ringClasses = classnames(style.ring, ringColor && style[ringColor]);
@@ -58,7 +58,7 @@ function LoadingSpinner(props: Props) {
       </svg>
     </div>
   );
-}
+};
 
 LoadingSpinner.defaultProps = {
   color: 'teal',

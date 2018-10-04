@@ -1,4 +1,4 @@
-import fixture from '../fixtures/disabled.fixture.js';
+import fixture from '../fixtures/disabled.fixture';
 import testFixture from '../../../../../config/testFixture';
 
 testFixture(fixture, 'disabled');

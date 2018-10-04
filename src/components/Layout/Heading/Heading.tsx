@@ -14,7 +14,7 @@ type Props = {
   className?: string;
 };
 
-function Heading(props: Props) {
+const Heading: React.SFC<Props> = props => {
   const { className, children, h1, h2, h3, h4, nav, ...restProps } = props;
   const classes = classnames(
     style.heading,
@@ -55,7 +55,7 @@ function Heading(props: Props) {
       {content}
     </h1>
   );
-}
+};
 
 Heading.defaultProps = {
   h1: false,

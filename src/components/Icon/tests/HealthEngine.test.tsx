@@ -1,4 +1,4 @@
-import HealthEngine from '../fixtures/HealthEngine.fixture.js';
+import HealthEngine from '../fixtures/HealthEngine.fixture';
 import testFixture from '../../../../config/testFixture';
 
 testFixture(HealthEngine, 'HealthEngine');

@@ -1,4 +1,4 @@
-import fixture from '../fixtures/error.fixture.js';
+import fixture from '../fixtures/error.fixture';
 import testFixture from '../../../../../config/testFixture';
 
 testFixture(fixture, 'error');

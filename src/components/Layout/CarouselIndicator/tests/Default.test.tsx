@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import * as React from 'react';
 import testFixture from '../../../../../config/testFixture';
 import CarouselIndicator from '../CarouselIndicator.js';
-import fixture from '../fixtures/Default.fixture.js';
+import fixture from '../fixtures/Default.fixture';
 
 testFixture(fixture, 'Default');
 
