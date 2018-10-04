@@ -7,7 +7,7 @@ const fixtureWithTabs = fixtures.find(it => it.name === 'withSubNav');
 if (!defaultFixture || !fixtureWithTabs)
   throw new Error('Test requires a Default and withSubNav fixture');
 
-function mountWithCallback(fixture, onDisplayTabs) {
+function mountWithCallback(fixture: any, onDisplayTabs: any) {
   const wrappedFixture = {
     ...fixture,
     props: {

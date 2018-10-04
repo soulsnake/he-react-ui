@@ -9,7 +9,7 @@ import DropDown from '../../Icon/DropDown';
 import { LoadingSpinner, LoadingStrip } from '../../Loading';
 import style from './Table.scss';
 
-function defaultSort(a, b) {
+function defaultSort(a: any, b: any) {
   const stringA = String(a).toLowerCase();
   const stringB = String(b).toLowerCase();
 

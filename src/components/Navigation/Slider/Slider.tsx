@@ -20,7 +20,7 @@ type Props = {
   items?: NavItem[];
   open?: boolean;
   bottom?: boolean;
-  onSelect?: Function;
+  onSelect?: () => void;
 };
 
 const Slider: React.SFC<Props> = props => {

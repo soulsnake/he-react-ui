@@ -5,7 +5,7 @@ import { matchPath } from 'react-router';
 type Props = {
   render: Function;
   path: string;
-  exact?: boolean | void;
+  exact?: boolean | undefined;
   strict?: boolean;
 };
 

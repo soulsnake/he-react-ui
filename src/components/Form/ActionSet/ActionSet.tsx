@@ -95,4 +95,4 @@ class ActionSet extends React.Component<Props, any> {
   }
 }
 
-export default onClickOutside(ActionSet);
+export default onClickOutside(ActionSet as any);

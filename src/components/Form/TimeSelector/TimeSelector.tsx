@@ -85,14 +85,14 @@ class TimeSelector extends React.Component<Props, any> {
     this.hideExpand();
   };
 
-  generateOptions = options =>
-    options.map(option => (
+  generateOptions = (options: any) =>
+    options.map((option: any) => (
       <option key={option.value} value={option.value}>
         {option.label}
       </option>
     ));
 
-  selectTime = (hour, minute) => {
+  selectTime = (hour: any, minute: any) => {
     const { onChange, hourly } = this.props;
     this.setState({
       hour,
@@ -105,23 +105,23 @@ class TimeSelector extends React.Component<Props, any> {
     });
   };
 
-  selectMinute = option => {
+  selectMinute = (option: any) => {
     const { hour } = this.state;
     this.selectTime(hour, option.value);
   };
 
-  selectHour = option => {
+  selectHour = (option: any) => {
     const { minute } = this.state;
     this.selectTime(option.value, minute);
   };
 
-  generateList = (options, selectOption) => {
+  generateList = (options: any, selectOption: any) => {
     const { hourly } = this.props;
-    return options.map(option => {
+    return options.map((option: any) => {
       const selected = this.props.value === option.value;
       let ref: any = null;
       if (selected) {
-        ref = item => {
+        ref = (item: any) => {
           if (item) {
             setTimeout(() => {
               if (!item.parentNode) return;
@@ -216,4 +216,4 @@ class TimeSelector extends React.Component<Props, any> {
   }
 }
 
-export default onClickOutside(TimeSelector);
+export default onClickOutside(TimeSelector as any);

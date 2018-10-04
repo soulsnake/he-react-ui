@@ -18,12 +18,12 @@ import styles from './PrimaryNavigation.scss';
 import { NavItem } from '../NavItem';
 
 function renderRoutes(
-  item,
-  locations,
-  onLocationChange,
-  locationValue,
-  logoutRoute,
-  onDisplayTabs,
+  item: any,
+  locations: any,
+  onLocationChange: any,
+  locationValue: any,
+  logoutRoute: any,
+  onDisplayTabs: any,
 ) {
   return item.route ? (
     <HashRoute
@@ -94,7 +94,7 @@ class PrimaryNavigation extends Component<Props, any> {
     return 'openKey' in this.props ? this.props.openKey : this.state.openKey;
   }
 
-  setOpenKey(openKey) {
+  setOpenKey(openKey: any) {
     if ('openKey' in this.props) {
       if (this.props.onChangeOpenKey) this.props.onChangeOpenKey(openKey);
     } else {
@@ -211,11 +211,11 @@ class PrimaryNavigation extends Component<Props, any> {
   };
 
   renderSubNav = (
-    items,
-    locations,
-    onLocationChange,
-    locationValue,
-    logoutRoute,
+    items: any,
+    locations: any,
+    onLocationChange: any,
+    locationValue: any,
+    logoutRoute: any,
   ) => {
     const { loading, onDisplayTabs } = this.props;
 
@@ -229,7 +229,7 @@ class PrimaryNavigation extends Component<Props, any> {
       );
     }
 
-    return items.map(item => {
+    return items.map((item: NavItem) => {
       if (item.items && item.items.length > 0) {
         return item.items.map(child =>
           renderRoutes(
@@ -292,4 +292,4 @@ class PrimaryNavigation extends Component<Props, any> {
   }
 }
 
-export default onClickOutside(PrimaryNavigation);
+export default onClickOutside(PrimaryNavigation as any);

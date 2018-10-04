@@ -6,7 +6,7 @@
 
 import classnames from 'classnames';
 import React from 'react';
-import Select from 'react-select';
+import Select, { Async } from 'react-select';
 import { returnNull } from '../../../util';
 import DropDown from '../../Icon/DropDown';
 import Label from '../Label';
@@ -131,7 +131,7 @@ class SingleSelect extends React.Component<Props, any> {
             })}
           >
             {loadOptionsAsync ? (
-              <Select.Async
+              <Async
                 joinValues
                 className={classnames(style.select, {
                   [style.expanded]: expanded,
@@ -140,18 +140,17 @@ class SingleSelect extends React.Component<Props, any> {
                   [style.forceTitle]: forceTitle,
                 })}
                 disabled={disabled}
-                value={value}
-                onChange={handleChange}
+                value={value || undefined}
+                onChange={handleChange as any}
                 onOpen={handleOpen}
                 onClose={handleClose}
                 placeholder={forceTitle || placeholder}
-                valueRenderer={this.getDisplay}
+                valueRenderer={this.getDisplay as any}
                 id={id}
                 name={name}
                 required={required}
-                autoLoad={false}
                 cache={false}
-                loadOptions={loadOptionsAsync}
+                loadOptions={loadOptionsAsync as any}
               />
             ) : (
               <Select
@@ -164,12 +163,12 @@ class SingleSelect extends React.Component<Props, any> {
                   [style.forceTitle]: forceTitle,
                 })}
                 disabled={disabled}
-                value={value}
-                onChange={handleChange}
+                value={value as any}
+                onChange={handleChange as any}
                 onOpen={handleOpen}
                 onClose={handleClose}
                 placeholder={forceTitle || placeholder}
-                valueRenderer={this.getDisplay}
+                valueRenderer={this.getDisplay as any}
                 id={id}
                 name={name}
                 required={required}

@@ -1,7 +1,8 @@
 /* @flow */
 import React from 'react';
 
-const sleep = time => new Promise(resolve => setTimeout(resolve, time));
+const sleep = (time: number) =>
+  new Promise(resolve => setTimeout(resolve, time));
 
 type Props = {
   nextProxy: any;

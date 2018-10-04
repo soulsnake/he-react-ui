@@ -40,7 +40,8 @@ const Bucket: React.SFC<Props> = props => {
     location,
   } = props;
 
-  const external = isExternal(route);
+  const external = route && isExternal(route);
+
   const activeChild =
     items &&
     location &&
@@ -104,4 +105,4 @@ Bucket.defaultProps = {
   open: false,
 };
 
-export default withRouter(Bucket);
+export default withRouter(Bucket as any) as any;

@@ -38,7 +38,7 @@ class SubNavigation extends Component<Props> {
     this.notifyTabDisplayChange();
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps: Props) {
     const prevItems = prevProps.item && prevProps.item.items;
     const currentItems = this.props.item && this.props.item.items;
 
@@ -61,12 +61,12 @@ class SubNavigation extends Component<Props> {
     return !loading && item && item.items && item.items.length > 0;
   }
 
-  renderItems(items) {
+  renderItems(items: any) {
     const { location } = this.props;
 
     if (!items) return [];
 
-    return items.map(item => {
+    return items.map((item: NavItem) => {
       if (item.route && isAbsoluteUrl(item.route)) {
         return (
           <a
@@ -177,4 +177,4 @@ class SubNavigation extends Component<Props> {
   }
 }
 
-export default withRouter(SubNavigation);
+export default withRouter(SubNavigation as any) as any;

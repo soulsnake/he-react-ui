@@ -14,7 +14,7 @@ type Props = {
 
 function VideoDisplay(props: Props) {
   const { children, youtubeId } = props;
-  const opts = {
+  const opts: any = {
     playerVars: {
       color: 'white',
       rel: 0,

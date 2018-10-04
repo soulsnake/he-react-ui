@@ -4,7 +4,8 @@ import Adapter from 'enzyme-react-adapter-future';
 
 require('raf/polyfill');
 
-(global as any).requestAnimationFrame = handler => setTimeout(handler, 10);
+(global as any).requestAnimationFrame = (handler: Function) =>
+  setTimeout(handler, 10);
 
 // React 16 Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() });
@@ -31,7 +32,7 @@ Object.assign = require('object-assign');
 
 let accumulatedErrors: any[] = [];
 
-global.console.error = it => {
+global.console.error = (it: any) => {
   accumulatedErrors.push(it);
 };
 

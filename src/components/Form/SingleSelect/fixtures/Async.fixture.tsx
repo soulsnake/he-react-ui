@@ -8,7 +8,7 @@ const getUsers = (input: string) => {
   return fetch(`https://api.github.com/search/users?q=${input}`)
     .then(response => response.json())
     .then(json => ({
-      options: json.items.map(hit => ({
+      options: json.items.map((hit: any) => ({
         label: hit.login,
         value: hit.id,
       })),

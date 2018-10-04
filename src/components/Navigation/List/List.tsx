@@ -39,7 +39,7 @@ type Props = {
   title?: string;
   items?: NavItem[];
   className?: string;
-  onSelect?: Function;
+  onSelect?: () => void;
 };
 
 class List extends Component<Props> {
@@ -61,7 +61,7 @@ class List extends Component<Props> {
         activeClassName={styles.current}
         key={item.key}
         id={item.key && `NAV_${item.key}`}
-        to={item.route}
+        to={item.route as any}
         onClick={onSelect}
       >
         {item.label}

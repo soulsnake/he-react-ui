@@ -7,7 +7,7 @@ import SubNavigation from '../SubNavigation';
 
 testFixtures(fixtures);
 
-const wrapRouter = Component => props => (
+const wrapRouter = (Component: any) => (props: any) => (
   <MemoryRouter>
     <Component {...props} />
   </MemoryRouter>

@@ -15,11 +15,14 @@ const DAY_FORMAT = 'D MMM YYYY';
 const MONTH_FORMAT = 'MMM YYYY';
 const NEVER = () => false;
 
-function sameDay(firstMoment, secondMoment) {
+function sameDay(firstMoment: Moment, secondMoment: Moment) {
   return firstMoment && secondMoment && firstMoment.isSame(secondMoment, 'd');
 }
 
-function formatRange(startDate, endDate) {
+function formatRange(
+  startDate: void | null | Moment,
+  endDate: void | null | Moment,
+) {
   // If a start-date is the start of the month, we just list the month and year.
   // Ditto if an end-date is at the end of the month.
   // If the start-date and end-date would render the same string, we just return that string
@@ -182,7 +185,7 @@ export default class DateRangePicker extends React.Component<Props, any> {
         <SingleSelect
           id={`${id}-select-id`}
           value={selectValue}
-          forceTitle={shouldForceTitle ? placeholder : null}
+          forceTitle={shouldForceTitle ? placeholder : undefined}
           label={label}
           error={error}
           disabled={disabled}
@@ -198,20 +201,19 @@ export default class DateRangePicker extends React.Component<Props, any> {
         <div className={style.inner}>
           <InnerDateRangePicker
             startDateId={`${id}-start`}
-            customArrowIcon={null}
             minimumNights={0}
             endDateId={`${id}-end`}
             startDate={startDate}
             endDate={endDate}
             daySize={28}
             disabled={disabled}
-            onDatesChange={this.handleDatesChange}
-            onFocusChange={this.handleFocusChange}
+            onDatesChange={this.handleDatesChange as any}
+            onFocusChange={this.handleFocusChange as any}
             navNext={<ChevronRight />}
             navPrev={<ChevronLeft />}
             focusedInput={focusedInput}
             isDayBlocked={NEVER}
-            isOutsideRange={isOutsideRange}
+            isOutsideRange={isOutsideRange as any}
             keepOpenOnDateSelect={keepOpenOnDateSelect}
           />
         </div>

@@ -32,7 +32,6 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
         className="container"
       >
         <Async
-          autoLoad={false}
           autoload={true}
           cache={false}
           className="select"
@@ -58,12 +57,10 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
           onOpen={[Function]}
           options={Array []}
           searchPromptText="Type to search"
-          value={null}
           valueRenderer={[Function]}
         >
           <Select
             arrowRenderer={[Function]}
-            autoLoad={false}
             autoload={true}
             autosize={true}
             backspaceRemoves={true}
@@ -126,7 +123,6 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
             simpleValue={false}
             tabSelectsValue={true}
             trimFilter={true}
-            value={null}
             valueComponent={[Function]}
             valueKey="value"
             valueRenderer={[Function]}

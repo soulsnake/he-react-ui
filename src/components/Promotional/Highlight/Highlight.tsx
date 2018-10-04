@@ -20,7 +20,7 @@ type Props = {
 
 function Highlight(props: Props) {
   const { children, image, youtubeId } = props;
-  const opts = {
+  const opts: any = {
     playerVars: {
       color: 'white',
       rel: 0,

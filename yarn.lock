@@ -49,6 +49,16 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
+"@types/history@*":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.0.tgz#2fac51050c68f7d6f96c5aafc631132522f4aa3f"
+  integrity sha512-1A/RUAX4VtmGzNTGLSfmiPxQ3XwUSe/1YN4lW9GRa+j307oFK6MPjhlvw6jEHDodUBIvSvrA7/iHDchr5LS+0Q==
+
+"@types/is-absolute-url@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@types/is-absolute-url/-/is-absolute-url-2.1.0.tgz#b47a60f60448177910443b4e1f4e4f7797bf9690"
+  integrity sha1-tHpg9gRIF3kQRDtOH05Pd5e/lpA=
+
 "@types/jest@^23.3.3":
   version "23.3.3"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.3.tgz#246ebcc52771d2327bb8e37aa971b412d9dc4237"
@@ -70,6 +80,52 @@
   version "15.5.6"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
+
+"@types/react-dates@^17.1.2":
+  version "17.1.2"
+  resolved "https://registry.yarnpkg.com/@types/react-dates/-/react-dates-17.1.2.tgz#f4851c8e572bb9a36e26e301ce2cc335f6f7a668"
+  integrity sha512-uyTYbPtdTFLOqH1Vx3vuC3NjZP4YlpHXQs4IqAEnLsqMbRpnneZsFwF1Y8jaeCazGVZL/JnRcLxZtCyu4kx+mA==
+  dependencies:
+    "@types/react" "*"
+    moment ">=2.17.1"
+
+"@types/react-onclickoutside@^6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react-onclickoutside/-/react-onclickoutside-6.0.4.tgz#72cd692e1d518fd0f9ea28b6984207444cda87c1"
+  integrity sha512-XzH5lwNF9BxWAZzZ/ZieO5bBSsFzdT4/mZcfGS6oz++BPoqSBJA88IRkeJQMWp8Hj/jnToRWepvxVoWLt/jy2A==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-router-dom@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.3.1.tgz#71fe2918f8f60474a891520def40a63997dafe04"
+  integrity sha512-GbztJAScOmQ/7RsQfO4cd55RuH1W4g6V1gDW3j4riLlt+8yxYLqqsiMzmyuXBLzdFmDtX/uU2Bpcm0cmudv44A==
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
+
+"@types/react-router@*", "@types/react-router@^4.0.31":
+  version "4.0.31"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.31.tgz#416bac49d746800810886c7b8582a622ed9604fc"
+  integrity sha512-57Tqu1EDMgDzHhmIEjjQZHrc/N7/+GGv6CtH1wRTLmMIy3UMxX69vQoeEz0AmK0/zkf5ecfEW1ZX8DLVQ6Gl7Q==
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+
+"@types/react-select@^1.2.1":
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-1.3.4.tgz#e3cd29b0e4b8a782ddfe76e5500f08d3476370ce"
+  integrity sha512-0BwjswNzKBszG5O4xq72W54NrrbmOZvJfaM/Dwru3F6DhvFO9nihMP1IRzXSOJ1qGRCS3VCu9FnBYJ+25lSldw==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-youtube@^7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@types/react-youtube/-/react-youtube-7.4.2.tgz#878dfa39d436bc4da6f70ecc0207810690d3396f"
+  integrity sha512-FvKcB+sLXAuWpXG0QFUzXvcjQzkeejD5C2i3pAlDPfPsmLhVB+9tcVXzsMsRp1ZsfPc9vgJs3wtrxlLMuRSHbA==
+  dependencies:
+    "@types/react" "*"
 
 "@types/react@*", "@types/react@^16.4.14":
   version "16.4.14"
@@ -7061,7 +7117,7 @@ mkdirp@0.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdir
   dependencies:
     minimist "0.0.8"
 
-moment@*:
+moment@*, moment@>=2.17.1:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=

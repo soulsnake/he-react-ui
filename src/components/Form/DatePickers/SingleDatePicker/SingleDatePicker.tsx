@@ -132,22 +132,22 @@ class SingleDatePicker extends React.Component<Props, any> {
         {label && <Label className={styles.label}>{label}</Label>}
         <div className={styles.inner}>
           <Media query={{ maxWidth: 767 }}>
-            {matches => (
+            {(matches: boolean) => (
               <Picker
-                date={this.state.date}
+                date={this.state.date || null}
                 daySize={28}
                 disabled={disabled}
                 horizontalMargin={matches ? 0 : horizontalMargin}
                 id={id}
                 numberOfMonths={matches ? 1 : 2}
-                onDateChange={this.handleDateChange}
+                onDateChange={this.handleDateChange as any}
                 focused={this.state.focused}
-                onFocusChange={this.handleFocusChange}
+                onFocusChange={this.handleFocusChange as any}
                 navNext={<ChevronRight />}
                 navPrev={<ChevronLeft />}
                 anchorDirection={anchorDirection}
-                displayFormat={displayFormat}
-                isOutsideRange={isOutsideRange}
+                displayFormat={displayFormat as any}
+                isOutsideRange={isOutsideRange as any}
                 readOnly={readOnly}
                 placeholder={placeholder}
               />
