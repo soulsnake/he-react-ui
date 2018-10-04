@@ -1,5 +1,3 @@
-// @flow
-
 /* eslint-disable global-require */
 import Enzyme, { mount, render, shallow } from 'enzyme';
 import Adapter from 'enzyme-react-adapter-future';
