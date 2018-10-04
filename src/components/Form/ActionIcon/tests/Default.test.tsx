@@ -1,4 +1,3 @@
-
 import createTestContext from 'react-cosmos-test/enzyme';
 import fixture from '../fixtures/Default.fixture';
 

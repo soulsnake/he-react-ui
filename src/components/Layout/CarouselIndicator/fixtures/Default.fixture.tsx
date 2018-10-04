@@ -1,4 +1,5 @@
 import CarouselIndicator from '../';
+
 const fixture = {
   component: CarouselIndicator,
   url: '/',
@@ -8,5 +9,5 @@ const fixture = {
     current: 1,
     showNext: true,
   },
-}
+};
 export default fixture;

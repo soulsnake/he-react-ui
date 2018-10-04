@@ -6,7 +6,6 @@ type Fixture = {
   name?: string;
 };
 
-
 function testOneFixture(fixture: Fixture, variant: string = 'a') {
   const { mount, getWrapper } = createTestContext({ fixture });
   const { component } = fixture;
@@ -18,10 +17,7 @@ function testOneFixture(fixture: Fixture, variant: string = 'a') {
 
 // TODO: use real type guard functions to discriminate one fixture vs an array of them
 
-export default function testAllFixtures(
-  fixtures: any,
-  variant?: string,
-) {
+export default function testAllFixtures(fixtures: any, variant?: string) {
   if (!('forEach' in fixtures)) {
     testOneFixture(fixtures as Fixture, variant);
   } else if (typeof fixtures.forEach === 'function') {
