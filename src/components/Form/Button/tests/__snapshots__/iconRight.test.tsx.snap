@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> rendered correctly with done fixture 1`] = `
+exports[`<Button /> rendered correctly with fixture 1`] = `
 <Button
   color="teal"
   disabled={false}
-  done={true}
+  done={false}
   icon=""
-  iconLeft={
-    <Icon
-      name="Settings"
+  iconRight={
+    <mockConstructor
+      name="ArrowRight"
     />
   }
   keyline={false}
@@ -17,30 +17,36 @@ exports[`<Button /> rendered correctly with done fixture 1`] = `
   onClick={[Function]}
   squared={false}
   submit={false}
+  submitting={false}
   withRouter={false}
 >
   <div
     className="buttonContainer"
   >
     <InnerButton
-      className="button done"
+      className="button teal"
       newWindow={false}
       onClick={[Function]}
       submit={false}
       withRouter={false}
     >
       <button
-        className="button done"
+        className="button teal"
         onClick={[Function]}
         type="button"
       >
         <div
-          className="iconCenter"
+          className="content"
         >
-          <Icon
-            name="Tick"
+          Button
+        </div>
+        <div
+          className="iconRight"
+        >
+          <mockConstructor
+            name="ArrowRight"
           >
-            <Tick
+            <ArrowRight
               className="icon"
               fill="currentColor"
               height={32}
@@ -54,11 +60,11 @@ exports[`<Button /> rendered correctly with done fixture 1`] = `
                 width={32}
               >
                 <path
-                  d="M17.207 7.707a1 1 0 0 1 1.415 1.414l-7.998 8.003a1 1 0 0 1-1.414 0l-4.003-4.003a1 1 0 1 1 1.414-1.414l3.296 3.296 7.29-7.296z"
+                  d="M18.586 13H3a1 1 0 1 1 0-2h15.586l-4.293-4.293a1 1 0 1 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L18.586 13z"
                 />
               </svg>
-            </Tick>
-          </Icon>
+            </ArrowRight>
+          </mockConstructor>
         </div>
       </button>
     </InnerButton>

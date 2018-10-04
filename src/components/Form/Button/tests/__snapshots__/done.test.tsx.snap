@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> rendered correctly with fixture 1`] = `
+exports[`<Button /> rendered correctly with done fixture 1`] = `
 <Button
   color="teal"
   disabled={false}
-  done={false}
+  done={true}
   icon=""
-  iconRight={
-    <Icon
-      name="ArrowRight"
+  iconLeft={
+    <mockConstructor
+      name="Settings"
     />
   }
   keyline={false}
@@ -17,36 +17,30 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
   onClick={[Function]}
   squared={false}
   submit={false}
-  submitting={false}
   withRouter={false}
 >
   <div
     className="buttonContainer"
   >
     <InnerButton
-      className="button teal"
+      className="button done"
       newWindow={false}
       onClick={[Function]}
       submit={false}
       withRouter={false}
     >
       <button
-        className="button teal"
+        className="button done"
         onClick={[Function]}
         type="button"
       >
         <div
-          className="content"
-        >
-          Button
-        </div>
-        <div
-          className="iconRight"
+          className="iconCenter"
         >
           <Icon
-            name="ArrowRight"
+            name="Tick"
           >
-            <ArrowRight
+            <Tick
               className="icon"
               fill="currentColor"
               height={32}
@@ -60,10 +54,10 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
                 width={32}
               >
                 <path
-                  d="M18.586 13H3a1 1 0 1 1 0-2h15.586l-4.293-4.293a1 1 0 1 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L18.586 13z"
+                  d="M17.207 7.707a1 1 0 0 1 1.415 1.414l-7.998 8.003a1 1 0 0 1-1.414 0l-4.003-4.003a1 1 0 1 1 1.414-1.414l3.296 3.296 7.29-7.296z"
                 />
               </svg>
-            </ArrowRight>
+            </Tick>
           </Icon>
         </div>
       </button>

@@ -1,6 +1,5 @@
 import CarouselIndicator from '../';
-
-export default {
+const fixture = {
   component: CarouselIndicator,
   url: '/',
   parentLayout: { marginTop: 40 },
@@ -9,4 +8,5 @@ export default {
     current: 1,
     showNext: true,
   },
-};
+}
+export default fixture;

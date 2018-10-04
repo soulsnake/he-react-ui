@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> rendered correctly with iconLeft fixture 1`] = `
+exports[`<Button /> rendered correctly with long-title fixture 1`] = `
 <Button
   color="teal"
   disabled={false}
   done={false}
   icon=""
   iconLeft={
-    <Icon
+    <mockConstructor
       name="Settings"
     />
   }
@@ -38,7 +38,7 @@ exports[`<Button /> rendered correctly with iconLeft fixture 1`] = `
         <div
           className="iconLeft"
         >
-          <Icon
+          <mockConstructor
             name="Settings"
           >
             <Settings
@@ -59,12 +59,12 @@ exports[`<Button /> rendered correctly with iconLeft fixture 1`] = `
                 />
               </svg>
             </Settings>
-          </Icon>
+          </mockConstructor>
         </div>
         <div
           className="content"
         >
-          Button
+          Button with Antidisestablishmentarianism
         </div>
       </button>
     </InnerButton>

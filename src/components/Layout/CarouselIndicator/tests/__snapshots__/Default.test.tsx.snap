@@ -4,6 +4,7 @@ exports[`<CarouselIndicator /> rendered correctly with Default fixture 1`] = `
 <CarouselIndicator
   current={1}
   length={4}
+  nextStep={[Function]}
   showNext={true}
 >
   <div
@@ -34,6 +35,7 @@ exports[`<CarouselIndicator /> rendered correctly with Default fixture 1`] = `
       />
       <li
         className="nextBtn"
+        onClick={[Function]}
       >
         Next
       </li>

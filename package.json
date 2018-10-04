@@ -116,7 +116,7 @@
       "text",
       "json-summary"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/config/jest.config.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest.config.tsx",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
       "<rootDir>/src/**/?(*.)(test).ts?(x)"

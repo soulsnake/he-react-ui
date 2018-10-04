@@ -6,7 +6,7 @@ exports[`<Button /> rendered correctly with submitting fixture 1`] = `
   disabled={false}
   icon=""
   iconLeft={
-    <Icon
+    <mockConstructor
       name="Settings"
     />
   }

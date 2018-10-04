@@ -1,14 +1,13 @@
 import * as React from 'react';
 import createTestContext from 'react-cosmos-test/enzyme';
 
-type Fixture<T> = {
-  component: React.ComponentType<T>;
+type Fixture = {
+  component: React.ComponentType<any>;
   name?: string;
 };
 
-type FixtureList<T> = Fixture<T>[];
 
-function testOneFixture<T>(fixture: Fixture<T>, variant: string = 'a') {
+function testOneFixture(fixture: Fixture, variant: string = 'a') {
   const { mount, getWrapper } = createTestContext({ fixture });
   const { component } = fixture;
   const { displayName, name } = component as any;
@@ -19,13 +18,13 @@ function testOneFixture<T>(fixture: Fixture<T>, variant: string = 'a') {
 
 // TODO: use real type guard functions to discriminate one fixture vs an array of them
 
-export default function testAllFixtures<T>(
-  fixtures: Fixture<T> | FixtureList<T>,
+export default function testAllFixtures(
+  fixtures: any,
   variant?: string,
 ) {
   if (!('forEach' in fixtures)) {
-    testOneFixture(fixtures as any, variant);
+    testOneFixture(fixtures as Fixture, variant);
   } else if (typeof fixtures.forEach === 'function') {
-    fixtures.forEach(it => testOneFixture(it as any));
+    (fixtures as Fixture[]).forEach(it => testOneFixture(it));
   }
 }
