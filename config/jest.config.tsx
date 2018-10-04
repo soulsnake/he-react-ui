@@ -1,8 +1,6 @@
 /* eslint-disable global-require */
-const Enzyme = require('enzyme');
-const Adapter = require('enzyme-react-adapter-future');
-
-const { mount, render, shallow } = Enzyme;
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-react-adapter-future';
 
 require('raf/polyfill');
 
@@ -31,7 +29,7 @@ Object.assign = require('object-assign');
 
 // Cause console errors to fail tests
 
-let accumulatedErrors = [];
+let accumulatedErrors: any[] = [];
 
 global.console.error = it => {
   accumulatedErrors.push(it);

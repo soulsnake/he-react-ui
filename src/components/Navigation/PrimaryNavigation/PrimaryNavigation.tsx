@@ -87,7 +87,7 @@ class PrimaryNavigation extends Component<Props, any> {
   };
 
   state = {
-    openKey: null as string | void,
+    openKey: null as string | null | void,
   };
 
   getOpenKey() {
@@ -120,8 +120,12 @@ class PrimaryNavigation extends Component<Props, any> {
     const { closeBucket } = this;
     const { bottomKeys, items, siteName } = this.props;
     const openKey = this.getOpenKey();
-    const topItems = items.filter(item => !bottomKeys.includes(item.key));
-    const bottomItems = items.filter(item => bottomKeys.includes(item.key));
+    const topItems: NavItem[] = items.filter(
+      item => !bottomKeys.includes(item.key),
+    );
+    const bottomItems: NavItem[] = items.filter(item =>
+      bottomKeys.includes(item.key),
+    );
 
     return (
       <div className={styles.sliders}>
@@ -134,7 +138,7 @@ class PrimaryNavigation extends Component<Props, any> {
             {...item}
           />
         ))}
-        {bottomItems.map(item => (
+        {bottomItems.map((item: NavItem) => (
           <Slider
             bottom
             open={openKey === item.key}

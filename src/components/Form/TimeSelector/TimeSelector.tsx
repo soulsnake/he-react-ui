@@ -119,7 +119,7 @@ class TimeSelector extends React.Component<Props, any> {
     const { hourly } = this.props;
     return options.map(option => {
       const selected = this.props.value === option.value;
-      let ref = null;
+      let ref: any = null;
       if (selected) {
         ref = item => {
           if (item) {

@@ -1,5 +1,5 @@
 export type NavItem = {
-  key?: string;
+  key: string;
   label?: string;
   title?: string;
   icon?: string; // TODO: only required at top level

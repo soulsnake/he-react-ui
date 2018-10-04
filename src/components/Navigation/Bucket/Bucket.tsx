@@ -52,11 +52,13 @@ const Bucket: React.SFC<Props> = props => {
     );
   const notificationChild =
     items &&
-    items.find(child => child.notifications && child.notifications > 0);
+    items.find(
+      child => child.notifications !== undefined && child.notifications > 0,
+    );
 
   const content = (
     <Fragment>
-      <Icon className={styles.icon} name={icon} />
+      {icon && <Icon className={styles.icon} name={icon} />}
       <span className={styles.label}>{label}</span>
       {notificationChild && <div className={styles.notification} />}
     </Fragment>

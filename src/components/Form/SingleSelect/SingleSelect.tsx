@@ -26,7 +26,7 @@ type Props = {
   label?: string;
   placeholder?: string;
   options: Option[];
-  value?: string | void;
+  value?: string | null | void;
   onChange: Function;
   onBeforeOpen: Function;
   onClose: Function;
