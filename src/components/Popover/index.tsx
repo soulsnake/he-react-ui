@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import { Tooltip as Tippy } from 'react-tippy';
 import style from './index.scss';
