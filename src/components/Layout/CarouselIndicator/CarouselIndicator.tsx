@@ -7,6 +7,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import style from './CarouselIndicator.scss';
+import { returnNull } from '../../../util';
 
 type Props = {
   length: number;
@@ -48,6 +49,6 @@ const CarouselIndicator: React.SFC<Props> = props => {
 CarouselIndicator.defaultProps = {
   current: 0,
   length: 0,
-  nextStep: () => {},
+  nextStep: returnNull,
 };
 export default CarouselIndicator;

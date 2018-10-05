@@ -56,7 +56,7 @@ const InnerButton: React.SFC<{
 };
 
 InnerButton.defaultProps = {
-  onClick: () => {},
+  onClick: returnNull,
 };
 
 type Props = {
