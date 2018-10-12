@@ -1,15 +1,14 @@
-// @flow
 /* eslint-disable import/no-extraneous-dependencies */
 
 const autoprefixer = require('autoprefixer');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const postcssFlexboxFixes = require('postcss-flexbugs-fixes');
 
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  mode: 'development',
+  entry: './src/index.tsx',
 
   output: {
     filename: 'index.js',
@@ -17,9 +16,17 @@ module.exports = {
     libraryTarget: 'umd',
   },
 
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx'],
+  },
+
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.css$/,
         use: [
@@ -81,7 +88,6 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('style.css', { allChunks: true }),
     new HtmlWebpackPlugin({
       title: 'React Cosmos',
     }),

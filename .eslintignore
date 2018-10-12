@@ -5,4 +5,3 @@ dist/*
 src/styles/*
 cosmos-export/*
 coverage/*
-flow-typed/

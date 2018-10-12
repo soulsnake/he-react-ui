@@ -1,0 +1,96 @@
+/**
+ *
+ * CheckBox
+ *
+ */
+
+import classnames from 'classnames';
+import React from 'react';
+import CheckBoxChecked from '../../Icon/CheckBoxes/CheckBoxChecked';
+import CheckBoxUnchecked from '../../Icon/CheckBoxes/CheckBoxUnchecked';
+import Alert from '../../Icon/Alert';
+import style from './CheckBox.scss';
+import { returnNull } from '../../../util';
+
+type Props = {
+  id: string;
+  name: string;
+  className?: string;
+  disabled?: boolean;
+  label?: string;
+  special?: boolean;
+  value?: boolean;
+  warning?: boolean;
+  onChange: Function;
+  checked?: boolean;
+  error?: string;
+};
+
+class CheckBox extends React.Component<Props> {
+  static defaultProps = {
+    checked: false,
+    disabled: false,
+    error: '',
+    special: false,
+    onChange: returnNull,
+  };
+
+  handleClick = () => {
+    if (this.props.disabled) {
+      return;
+    }
+    const event = {
+      value: !this.props.value,
+      props: this.props,
+    };
+    this.props.onChange(event);
+  };
+
+  render() {
+    const { handleClick } = this;
+    const {
+      id,
+      className,
+      disabled,
+      label,
+      special,
+      value,
+      warning,
+      onChange,
+      ...restProps
+    } = this.props;
+
+    const outerClass = classnames(
+      style.outer,
+      {
+        [style.disabled]: disabled,
+      },
+      className,
+    );
+
+    const uncheckedClass = classnames(style.checkbox, style.empty, {
+      [style.special]: special,
+    });
+
+    const checkedClass = classnames(style.checkbox, style.full, {
+      [style.checked]: value,
+      [style.special]: special,
+    });
+
+    return (
+      <div className={outerClass} id={id} {...restProps}>
+        <label className={style.label} htmlFor={id} onClick={handleClick}>
+          <CheckBoxUnchecked
+            className={uncheckedClass}
+            name="CheckBoxUnchecked"
+          />
+          <CheckBoxChecked className={checkedClass} name="CheckBoxChecked" />
+          <span className={style.text}>{label}</span>
+          {warning && <Alert className={style.warning} />}
+        </label>
+      </div>
+    );
+  }
+}
+
+export default CheckBox;
