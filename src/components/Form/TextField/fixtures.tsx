@@ -1,5 +1,8 @@
-import React from 'react';
+// @flow
+import React, { Fragment } from 'react';
 import Input from '.';
+import { Heading, Paragraph, Icon } from '../../../';
+import style from './TextField.scss';
 
 export default [
   {
@@ -77,6 +80,7 @@ export default [
       name: 'demo',
       label: 'First Name',
       error: "Something isn't right",
+      isValid: false,
     },
   },
 
@@ -88,8 +92,9 @@ export default [
       name: 'demo',
       label: 'First Name',
       error: "Something isn't right",
-      marker: true,
+      marker: 'tick-cross',
       value: 'Bruce',
+      isValid: false,
     },
   },
 
@@ -100,7 +105,7 @@ export default [
       id: 'demo',
       name: 'demo',
       label: 'First Name',
-      marker: true,
+      marker: 'tick-cross',
       value: 'Bruce',
     },
   },
@@ -117,13 +122,48 @@ export default [
   },
 
   {
-    name: 'With helper',
+    name: 'Info tooltip',
     component: Input,
     props: {
       id: 'demo',
       name: 'demo',
       label: 'First Name',
-      helper: <div>Test HTML</div>,
+      marker: 'info',
+      markerTooltip: <div>Test HTML</div>,
+    },
+  },
+
+  {
+    name: 'Verified status',
+    component: Input,
+    props: {
+      id: 'demo',
+      name: 'demo',
+      label: 'Mobile',
+      marker: 'verify',
+    },
+  },
+
+  {
+    name: 'UnVerified status',
+    component: Input,
+    props: {
+      id: 'demo',
+      name: 'demo',
+      label: 'Mobile',
+      marker: 'verify',
+      isVerified: false,
+      markerTooltip: (
+        <Fragment>
+          <Icon key="icon" name="Edit" className={style.editIcon} />
+          <Heading key="h3" h3>
+            Sample Popup
+          </Heading>
+          <Paragraph key="paragraph" className={style.paragraph}>
+            Sample content
+          </Paragraph>
+        </Fragment>
+      ),
     },
   },
 ];

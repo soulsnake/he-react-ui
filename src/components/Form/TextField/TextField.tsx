@@ -8,42 +8,54 @@ import classnames from 'classnames';
 import React from 'react';
 import { returnNull } from '../../../util';
 import Cross from '../../Icon/Cross';
-import Tick from '../../Icon/Tick';
 import Help from '../../Icon/Help';
+import Tick from '../../Icon/Tick';
 import Popover from '../../Popover';
 import style from './TextField.scss';
 
+enum Markers {
+  none = 'none',
+  tickCross = 'tick-cross',
+  info = 'info',
+  verify = 'verify',
+}
+
 type Props = {
-  id: string;
-  name: string;
   className?: string;
-  label?: Object | string;
   description?: string;
-  error?: string;
-  inline?: boolean;
-  value?: string;
   disabled?: boolean;
-  marker?: boolean;
+  error?: string;
   helper?: any;
+  id: string;
+  inline?: boolean;
   isValid?: boolean;
-  password?: boolean;
-  small?: boolean;
+  isVerified?: boolean;
+  label?: Object | string;
+  marker?: Markers;
+  markerTooltip?: any;
+  name: string;
   onBlur: Function;
   onChange: Function;
   onFocus: Function;
+  password?: boolean;
+  small?: boolean;
+  onMarkerClick: () => any;
+  value?: string;
 };
 
 class TextField extends React.Component<Props, any> {
   static defaultProps = {
     disabled: false,
     inline: false,
-    marker: false,
-    helper: null,
+    marker: 'none',
+    markerTooltip: null,
     value: '',
     isValid: true,
+    isVerified: false,
     onBlur: returnNull,
     onChange: returnNull,
     onFocus: returnNull,
+    onMarkerClick: returnNull,
   };
 
   state = {
@@ -82,6 +94,64 @@ class TextField extends React.Component<Props, any> {
     this.props.onChange(event);
   };
 
+  renderMarker = () => {
+    const {
+      value,
+      marker,
+      markerTooltip,
+      isVerified,
+      isValid,
+      onMarkerClick,
+    } = this.props;
+    let markerIcon = null;
+
+    switch (marker) {
+      case 'tick-cross': {
+        markerIcon =
+          value !== '' &&
+          (isValid ? (
+            <Tick className={style.marker} onClick={onMarkerClick} />
+          ) : (
+            <Cross className={style.marker} onClick={onMarkerClick} />
+          ));
+        break;
+      }
+      case 'info': {
+        markerIcon = (
+          <div className={style.helper} onClick={onMarkerClick}>
+            <Help className={style.helperIcon} />
+          </div>
+        );
+
+        break;
+      }
+      case 'verify': {
+        markerIcon = (
+          <div
+            className={classnames(
+              style.verifiedTag,
+              isVerified ? style.verified : style.unVerified,
+            )}
+            onClick={onMarkerClick}
+          >
+            {isVerified ? 'Verified' : 'Verify'}
+          </div>
+        );
+        break;
+      }
+      default: {
+        markerIcon = null;
+      }
+    }
+
+    return markerTooltip ? (
+      <Popover content={markerTooltip} tooltip light preferRight>
+        {markerIcon}
+      </Popover>
+    ) : (
+      markerIcon
+    );
+  };
   render() {
     const {
       className,
@@ -94,13 +164,15 @@ class TextField extends React.Component<Props, any> {
       error,
       inline,
       marker,
-      helper,
+      markerTooltip,
       onBlur,
       onChange,
       onFocus,
       isValid,
+      isVerified,
       password,
       small,
+      onMarkerClick,
       ...restProps
     } = this.props;
     const { focused } = this.state;
@@ -112,7 +184,7 @@ class TextField extends React.Component<Props, any> {
         [style.disabled]: disabled,
         [style.inline]: inline,
         [style.focused]: focused,
-        [style.hasMarker]: marker || helper,
+        [style.hasMarker]: marker !== 'none',
         [style.small]: small,
       },
       className,
@@ -143,14 +215,7 @@ class TextField extends React.Component<Props, any> {
             type={password ? 'password' : 'text'}
           />
 
-          {marker &&
-            value !== '' &&
-            !helper &&
-            (isValid ? (
-              <Tick className={style.marker} />
-            ) : (
-              <Cross className={style.marker} />
-            ))}
+          {this.renderMarker()}
 
           {label && (
             <label className={labelClasses} htmlFor={id}>
@@ -163,14 +228,6 @@ class TextField extends React.Component<Props, any> {
           <label htmlFor={id} className={style.description}>
             {error || description}
           </label>
-        )}
-
-        {helper && (
-          <div className={style.helper}>
-            <Popover content={helper} light>
-              <Help className={style.helperIcon} />
-            </Popover>
-          </div>
         )}
       </div>
     );

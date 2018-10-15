@@ -14,8 +14,8 @@ type Props = {
   children: any;
   className?: string;
   modal?: boolean;
-  onClose?: Function;
-  onOpen?: Function;
+  onClose?: () => any;
+  onOpen?: () => any;
   showing?: boolean;
   noPadding?: boolean;
   style?: Object;
