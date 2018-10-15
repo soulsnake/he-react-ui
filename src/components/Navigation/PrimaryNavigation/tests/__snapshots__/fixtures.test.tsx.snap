@@ -2829,6 +2829,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
             </h1>
           </Heading>
           <Button
+            buttonProps={Object {}}
             color="teal"
             disabled={false}
             icon=""
@@ -2844,6 +2845,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Default f
               className="buttonContainer"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button teal"
                 newWindow={false}
                 onClick={[Function]}
@@ -5700,6 +5702,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Loading f
             </h1>
           </Heading>
           <Button
+            buttonProps={Object {}}
             color="teal"
             disabled={false}
             icon=""
@@ -5715,6 +5718,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with Loading f
               className="buttonContainer"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button teal"
                 newWindow={false}
                 onClick={[Function]}
@@ -8571,6 +8575,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with maskPage 
             </h1>
           </Heading>
           <Button
+            buttonProps={Object {}}
             color="teal"
             disabled={false}
             icon=""
@@ -8586,6 +8591,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with maskPage 
               className="buttonContainer"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button teal"
                 newWindow={false}
                 onClick={[Function]}
@@ -11442,6 +11448,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with withSubNa
             </h1>
           </Heading>
           <Button
+            buttonProps={Object {}}
             color="teal"
             disabled={false}
             icon=""
@@ -11457,6 +11464,7 @@ exports[`<OnClickOutside(PrimaryNavigation) /> rendered correctly with withSubNa
               className="buttonContainer"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button teal"
                 newWindow={false}
                 onClick={[Function]}

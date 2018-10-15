@@ -67,6 +67,7 @@ exports[`<PopUp /> rendered correctly with Default fixture 1`] = `
           </p>
         </Paragraph>
         <Button
+          buttonProps={Object {}}
           color="teal"
           disabled={false}
           icon=""
@@ -82,6 +83,7 @@ exports[`<PopUp /> rendered correctly with Default fixture 1`] = `
             className="buttonContainer"
           >
             <InnerButton
+              buttonProps={Object {}}
               className="button teal"
               newWindow={false}
               onClick={[Function]}

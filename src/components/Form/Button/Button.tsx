@@ -6,58 +6,11 @@
 
 import classnames from 'classnames';
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { returnNull } from '../../../util';
 import Icon from '../../Icon';
 import styles from './Button.scss';
 import ButtonSpinner from './ButtonSpinner';
-
-const InnerButton: React.SFC<{
-  to: string | void;
-  withRouter: boolean | void;
-  submit: boolean | void;
-  children: any;
-  className: string;
-  onClick: () => void;
-  newWindow?: boolean;
-}> = props => {
-  const {
-    to,
-    withRouter,
-    submit,
-    children,
-    className,
-    onClick,
-    newWindow,
-  } = props;
-  if (!to) {
-    return (
-      <button
-        className={className}
-        onClick={onClick}
-        type={submit ? 'submit' : 'button'}
-      >
-        {children}
-      </button>
-    );
-  }
-
-  const targetProp = newWindow ? { target: '_blank' } : {};
-
-  return withRouter ? (
-    <Link to={to} className={className} {...targetProp}>
-      {children}
-    </Link>
-  ) : (
-    <a href={to} className={className} {...targetProp}>
-      {children}
-    </a>
-  );
-};
-
-InnerButton.defaultProps = {
-  onClick: returnNull,
-};
+import InnerButton from './InnerButton';
 
 type Props = {
   submit?: boolean;
@@ -81,6 +34,7 @@ type Props = {
   to?: string;
   withRouter?: boolean;
   newWindow?: boolean;
+  buttonProps: object;
 };
 
 class Button extends React.Component<Props> {
@@ -95,6 +49,7 @@ class Button extends React.Component<Props> {
     onClick: returnNull,
     withRouter: false,
     newWindow: false,
+    buttonProps: {},
   };
 
   handleClick = (event: React.SyntheticEvent<any>) => {
@@ -125,6 +80,7 @@ class Button extends React.Component<Props> {
       to,
       withRouter,
       newWindow,
+      buttonProps,
     } = this.props;
 
     const buttonClasses = classnames(
@@ -173,6 +129,7 @@ class Button extends React.Component<Props> {
           withRouter={withRouter}
           onClick={this.handleClick as any}
           newWindow={newWindow}
+          buttonProps={buttonProps}
         >
           {statusIcon || (
             <Fragment>

@@ -2,6 +2,7 @@
 
 exports[`<Button /> rendered correctly with style fixture 1`] = `
 <Button
+  buttonProps={Object {}}
   color="teal"
   disabled={false}
   icon=""
@@ -33,6 +34,7 @@ exports[`<Button /> rendered correctly with style fixture 1`] = `
     }
   >
     <InnerButton
+      buttonProps={Object {}}
       className="button teal"
       newWindow={false}
       onClick={[Function]}

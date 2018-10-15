@@ -27,6 +27,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
             This is a paragraph of text made to emulate a quick description of the item being promoted.
           </p>
           <Button
+            buttonProps={Object {}}
             color="teal"
             disabled={false}
             icon=""
@@ -43,6 +44,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
               className="buttonContainer large"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button teal"
                 newWindow={false}
                 onClick={[Function]}
@@ -64,6 +66,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
             </div>
           </Button>
           <Button
+            buttonProps={Object {}}
             color="white"
             disabled={false}
             icon=""
@@ -80,6 +83,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
               className="buttonContainer large"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button white keyline"
                 newWindow={false}
                 onClick={[Function]}
@@ -888,6 +892,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
             This product will change everything.
           </p>
           <Button
+            buttonProps={Object {}}
             color="teal"
             disabled={false}
             icon=""
@@ -904,6 +909,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
               className="buttonContainer large"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button teal"
                 newWindow={false}
                 onClick={[Function]}
@@ -925,6 +931,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
             </div>
           </Button>
           <Button
+            buttonProps={Object {}}
             color="white"
             disabled={false}
             icon=""
@@ -941,6 +948,7 @@ exports[`<PromoDemo /> rendered correctly with a fixture 1`] = `
               className="buttonContainer large"
             >
               <InnerButton
+                buttonProps={Object {}}
                 className="button white keyline"
                 newWindow={false}
                 onClick={[Function]}

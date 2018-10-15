@@ -2,6 +2,7 @@
 
 exports[`<Button /> rendered correctly with fixture 1`] = `
 <Button
+  buttonProps={Object {}}
   color="teal"
   disabled={false}
   icon=""
@@ -17,6 +18,7 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
     className="buttonContainer"
   >
     <InnerButton
+      buttonProps={Object {}}
       className="button teal link"
       newWindow={false}
       onClick={[Function]}
