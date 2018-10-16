@@ -29,6 +29,7 @@ import HealthEngine from '../HealthEngine';
 import HealthEngineWithText from '../HealthEngineWithText';
 import Help from '../Help';
 import Home from '../Home';
+import Language from '../Language';
 import Logout from '../Logout';
 import Megaphone from '../Megaphone';
 import Patients from '../Patients';
@@ -67,6 +68,7 @@ export default [
   },
   { name: 'Help', component: Help, props: {} },
   { name: 'Home', component: Home, props: {} },
+  { name: 'Language', component: Language, props: {} },
   { name: 'Logout', component: Logout, props: {} },
   { name: 'Megaphone', component: Megaphone, props: {} },
   { name: 'Patients', component: Patients, props: {} },
