@@ -79,6 +79,8 @@ exports[`<Help /> rendered correctly with Help fixture 1`] = `null`;
 
 exports[`<Help /> rendered correctly with Home fixture 1`] = `null`;
 
+exports[`<Language /> rendered correctly with Language fixture 1`] = `null`;
+
 exports[`<Logout /> rendered correctly with Logout fixture 1`] = `null`;
 
 exports[`<Megaphone /> rendered correctly with Megaphone fixture 1`] = `null`;

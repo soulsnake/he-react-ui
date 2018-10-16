@@ -33,6 +33,7 @@ import HealthEngineWithText from './HealthEngineWithText';
 import Help from './Help';
 import Home from './Home';
 import style from './Icon.scss';
+import Language from './Language';
 import Logout from './Logout';
 import Megaphone from './Megaphone';
 import Patients from './Patients';
@@ -41,8 +42,8 @@ import Search from './Search';
 import Settings from './Settings';
 import Sync from './Sync';
 import Tick from './Tick';
-import View from './View';
 import UserShield from './UserShield';
+import View from './View';
 
 type Color = 'teal' | 'blue' | 'green' | 'red' | 'white';
 
@@ -110,6 +111,8 @@ const Icon: React.SFC<{
       return <DropDown {...childProps} />;
     case 'Edit':
       return <Edit {...childProps} />;
+    case 'Ellipsis':
+      return <Ellipsis {...childProps} />;
     case 'Engage':
       return <Engage {...childProps} />;
     case 'HealthEngine':
@@ -120,16 +123,16 @@ const Icon: React.SFC<{
       return <Help {...childProps} />;
     case 'Home':
       return <Home {...childProps} />;
+    case 'Language':
+      return <Language {...childProps} />;
+    case 'Logout':
+      return <Logout {...childProps} />;
     case 'Megaphone':
       return <Megaphone {...childProps} />;
     case 'Patients':
       return <Patients {...childProps} />;
     case 'Pencil':
       return <Pencil {...childProps} />;
-    case 'Ellipsis':
-      return <Ellipsis {...childProps} />;
-    case 'Logout':
-      return <Logout {...childProps} />;
     case 'RadioChecked':
       return <RadioChecked {...childProps} />;
     case 'RadioUnchecked':
@@ -140,10 +143,10 @@ const Icon: React.SFC<{
       return <Settings {...childProps} />;
     case 'Sync':
       return <Sync {...childProps} />;
-    case 'UserShield':
-      return <UserShield {...childProps} />;
     case 'Tick':
       return <Tick {...childProps} />;
+    case 'UserShield':
+      return <UserShield {...childProps} />;
     case 'View':
       return <View {...childProps} />;
     default:
