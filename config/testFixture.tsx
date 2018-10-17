@@ -1,5 +1,6 @@
 import * as React from 'react';
 import createTestContext from 'react-cosmos-test/enzyme';
+import toJSON from 'enzyme-to-json';
 
 interface Fixture {
   component: React.ComponentType<any>;
@@ -15,8 +16,6 @@ interface EnzymeElement {
   };
   children: null | (EnzymeElement | null)[];
 }
-
-const toJSON = require('enzyme-to-json').default;
 
 function sanitiseSubtree(
   element: EnzymeElement | null,
@@ -45,7 +44,7 @@ function sanitiseSubtree(
 }
 
 function shallowSerialise(enzymeTree: any): EnzymeElement | null {
-  return sanitiseSubtree(toJSON(enzymeTree), false);
+  return sanitiseSubtree((toJSON(enzymeTree) as any) as EnzymeElement, false);
 }
 
 function testOneFixture(fixture: Fixture, variant: string = 'a') {
