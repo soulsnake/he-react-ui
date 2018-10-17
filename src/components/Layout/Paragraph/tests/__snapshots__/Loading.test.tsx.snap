@@ -5,37 +5,13 @@ exports[`<Paragraph /> rendered correctly with Loading fixture 1`] = `
   <div>
     <LoadingStrip
       className="loading"
-    >
-      <div
-        className="outer loading"
-      >
-        <div
-          className="inner"
-        />
-      </div>
-    </LoadingStrip>
+    />
     <LoadingStrip
       className="loading"
-    >
-      <div
-        className="outer loading"
-      >
-        <div
-          className="inner"
-        />
-      </div>
-    </LoadingStrip>
+    />
     <LoadingStrip
       className="loading"
-    >
-      <div
-        className="outer loading"
-      >
-        <div
-          className="inner"
-        />
-      </div>
-    </LoadingStrip>
+    />
   </div>
 </Paragraph>
 `;

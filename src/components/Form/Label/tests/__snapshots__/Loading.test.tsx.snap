@@ -10,15 +10,7 @@ exports[`<Label /> rendered correctly with Loading fixture 1`] = `
   >
     <LoadingStrip
       className="loading"
-    >
-      <div
-        className="outer loading"
-      >
-        <div
-          className="inner"
-        />
-      </div>
-    </LoadingStrip>
+    />
   </div>
 </Label>
 `;

@@ -32,16 +32,7 @@ exports[`<Highlight /> rendered correctly with Image fixture 1`] = `
           }
         }
         videoId="iYuXzohJUFE"
-      >
-        <span
-          className=""
-        >
-          <div
-            className="youtube"
-            id={null}
-          />
-        </span>
-      </YouTube>
+      />
     </div>
     <div
       className="description"
@@ -98,16 +89,7 @@ exports[`<Highlight /> rendered correctly with YouTube fixture 1`] = `
           }
         }
         videoId="iYuXzohJUFE"
-      >
-        <span
-          className=""
-        >
-          <div
-            className="youtube"
-            id={null}
-          />
-        </span>
-      </YouTube>
+      />
     </div>
     <div
       className="description"

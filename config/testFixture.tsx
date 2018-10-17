@@ -1,10 +1,52 @@
 import * as React from 'react';
 import createTestContext from 'react-cosmos-test/enzyme';
 
-type Fixture = {
+interface Fixture {
   component: React.ComponentType<any>;
   name?: string;
-};
+}
+
+interface EnzymeElement {
+  node: {
+    nodeType: string;
+    props: {
+      children?: null;
+    };
+  };
+  children: null | (EnzymeElement | null)[];
+}
+
+const toJSON = require('enzyme-to-json').default;
+
+function sanitiseSubtree(
+  element: EnzymeElement | null,
+  compositeSeenPreviously: boolean,
+): EnzymeElement | null {
+  if (!element) return element;
+  const { node, children } = element;
+  if (!node) return element;
+  const { nodeType, props } = node;
+  const isComposite = nodeType !== 'host';
+  const hasChildrenProp = Boolean(props.children);
+  const shouldIncludeChildren =
+    !isComposite || !compositeSeenPreviously || hasChildrenProp;
+  const compositeSeen = compositeSeenPreviously || isComposite;
+  const cleanedChildren: (EnzymeElement | null)[] | null = shouldIncludeChildren
+    ? children &&
+      children.map((it: EnzymeElement | null) =>
+        sanitiseSubtree(it, compositeSeen),
+      )
+    : [];
+
+  return {
+    ...element,
+    children: cleanedChildren,
+  };
+}
+
+function shallowSerialise(enzymeTree: any): EnzymeElement | null {
+  return sanitiseSubtree(toJSON(enzymeTree), false);
+}
 
 function testOneFixture(fixture: Fixture, variant: string = 'a') {
   const { mount, getWrapper } = createTestContext({ fixture });
@@ -12,7 +54,8 @@ function testOneFixture(fixture: Fixture, variant: string = 'a') {
   const { displayName, name } = component as any;
   mount();
   test(`<${displayName || name} /> rendered correctly with ${fixture.name ||
-    variant} fixture`, () => expect(getWrapper()).toMatchSnapshot());
+    variant} fixture`, () =>
+    expect(shallowSerialise(getWrapper())).toMatchSnapshot());
 }
 
 // TODO: use real type guard functions to discriminate one fixture vs an array of them

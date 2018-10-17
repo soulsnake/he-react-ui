@@ -168,49 +168,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
                     required={false}
                     role="combobox"
                     value=""
-                  >
-                    <div
-                      className="Select-input"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                        }
-                      }
-                    >
-                      <input
-                        aria-activedescendant="react-select-2--value"
-                        aria-expanded="false"
-                        aria-haspopup="false"
-                        aria-owns=""
-                        id="demo"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        required={false}
-                        role="combobox"
-                        style={
-                          Object {
-                            "boxSizing": "content-box",
-                            "width": "5px",
-                          }
-                        }
-                        value=""
-                      />
-                      <div
-                        style={
-                          Object {
-                            "height": 0,
-                            "left": 0,
-                            "overflow": "scroll",
-                            "position": "absolute",
-                            "top": 0,
-                            "visibility": "hidden",
-                            "whiteSpace": "pre",
-                          }
-                        }
-                      />
-                    </div>
-                  </AutosizeInput>
+                  />
                 </span>
                 <span
                   className="Select-arrow-zone"
@@ -230,19 +188,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
           fill="currentColor"
           height={32}
           width={32}
-        >
-          <svg
-            className="caret"
-            fill="currentColor"
-            height={32}
-            viewBox="0 0 24 24"
-            width={32}
-          >
-            <path
-              d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-            />
-          </svg>
-        </DropDown>
+        />
       </div>
     </div>
   </div>
