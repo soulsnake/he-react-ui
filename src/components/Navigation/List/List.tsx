@@ -60,6 +60,7 @@ class List extends Component<Props> {
         className={classnames(styles.item, { [styles.current]: current })}
         activeClassName={styles.current}
         key={item.key}
+        exact={item.exact}
         id={item.key && `NAV_${item.key}`}
         to={item.route as any}
         onClick={onSelect}

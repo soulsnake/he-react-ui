@@ -130,6 +130,27 @@ export default [
           ],
         },
         {
+          key: 'BUCKET3',
+          label: 'Bucket 3',
+          icon: 'Language',
+          title: 'Your third bucket',
+          items: [
+            {
+              key: 'PARENT',
+              title: 'Bucket 3',
+              label: 'Parent item',
+              route: '/parent',
+              exact: true,
+            },
+            {
+              key: 'SUB',
+              title: 'Bucket 3',
+              label: 'Sub item',
+              route: '/parent/sub',
+            },
+          ],
+        },
+        {
           key: 'HELP',
           label: 'Help',
           title: 'Help',
