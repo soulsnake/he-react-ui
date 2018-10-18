@@ -9,48 +9,7 @@ exports[`<Icon /> rendered correctly with Add fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -63,48 +22,7 @@ exports[`<Icon /> rendered correctly with Alarm fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -117,48 +35,7 @@ exports[`<Icon /> rendered correctly with Alert fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -171,48 +48,7 @@ exports[`<Icon /> rendered correctly with Arr fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -225,48 +61,7 @@ exports[`<Icon /> rendered correctly with ArrowDown fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -279,48 +74,7 @@ exports[`<Icon /> rendered correctly with ArrowLeft fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -333,48 +87,7 @@ exports[`<Icon /> rendered correctly with ArrowLeft fixture 2`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -387,48 +100,7 @@ exports[`<Icon /> rendered correctly with ArrowRight fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -441,48 +113,7 @@ exports[`<Icon /> rendered correctly with ArrowUp fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -495,48 +126,7 @@ exports[`<Icon /> rendered correctly with Bookings fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -549,48 +139,7 @@ exports[`<Icon /> rendered correctly with Calendar fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -603,48 +152,7 @@ exports[`<Icon /> rendered correctly with CaretRight fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -657,48 +165,7 @@ exports[`<Icon /> rendered correctly with CheckBoxChecked fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -711,48 +178,7 @@ exports[`<Icon /> rendered correctly with CheckBoxUnchecked fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -765,48 +191,7 @@ exports[`<Icon /> rendered correctly with ChevronDown fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -819,48 +204,7 @@ exports[`<Icon /> rendered correctly with ChevronLeft fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -873,48 +217,7 @@ exports[`<Icon /> rendered correctly with ChevronRight fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -927,48 +230,7 @@ exports[`<Icon /> rendered correctly with ChevronUp fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -981,48 +243,7 @@ exports[`<Icon /> rendered correctly with Clock fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1035,48 +256,7 @@ exports[`<Icon /> rendered correctly with Cross fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1089,48 +269,7 @@ exports[`<Icon /> rendered correctly with CurvedArrow fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1143,48 +282,7 @@ exports[`<Icon /> rendered correctly with Delete fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1197,48 +295,7 @@ exports[`<Icon /> rendered correctly with DeleteProfile fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1251,48 +308,7 @@ exports[`<Icon /> rendered correctly with DropDown fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1305,48 +321,7 @@ exports[`<Icon /> rendered correctly with Edit fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1359,48 +334,7 @@ exports[`<Icon /> rendered correctly with Ellipsis fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1413,48 +347,7 @@ exports[`<Icon /> rendered correctly with Engage fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1467,48 +360,7 @@ exports[`<Icon /> rendered correctly with HealthEngine fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1521,48 +373,7 @@ exports[`<Icon /> rendered correctly with HealthEngineWithText fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1575,48 +386,7 @@ exports[`<Icon /> rendered correctly with Help fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1629,48 +399,7 @@ exports[`<Icon /> rendered correctly with Home fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1683,48 +412,7 @@ exports[`<Icon /> rendered correctly with Language fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1737,48 +425,7 @@ exports[`<Icon /> rendered correctly with Logout fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1791,48 +438,7 @@ exports[`<Icon /> rendered correctly with Megaphone fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1845,48 +451,7 @@ exports[`<Icon /> rendered correctly with Patients fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1899,48 +464,7 @@ exports[`<Icon /> rendered correctly with Pencil fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -1953,48 +477,7 @@ exports[`<Icon /> rendered correctly with RadioChecked fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -2007,48 +490,7 @@ exports[`<Icon /> rendered correctly with RadioUnchecked fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -2061,48 +503,7 @@ exports[`<Icon /> rendered correctly with Search fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -2115,48 +516,7 @@ exports[`<Icon /> rendered correctly with Settings fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -2169,48 +529,7 @@ exports[`<Icon /> rendered correctly with Sync fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -2223,48 +542,7 @@ exports[`<Icon /> rendered correctly with Tick fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -2277,48 +555,7 @@ exports[`<Icon /> rendered correctly with UserShield fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
 
@@ -2331,47 +568,6 @@ exports[`<Icon /> rendered correctly with View fixture 1`] = `
     fill="currentColor"
     height={32}
     width={32}
-  >
-    <svg
-      className="icon"
-      fill="currentColor"
-      height={32}
-      viewBox="0 0 44 44"
-      width={32}
-    >
-      <g
-        fill="none"
-        fillRule="nonzero"
-      >
-        <path
-          d="M-2-3h48v48H-2z"
-        />
-        <path
-          d="M5.463 42.083L4.38 39l-3.083-1.083-.66 3.666a1 1 0 0 0 1.16 1.161l3.666-.661z"
-          fill="#051E2A"
-        />
-        <path
-          d="M13.087 40.707l-1.77-8.645-8.644-1.769-1.376 7.624 4.166 4.166z"
-          fill="#FFF0CC"
-        />
-        <path
-          d="M43.087 9.293l-9-9a1 1 0 0 0-1.414 0l-6 6 10.414 10.414 6-6a1 1 0 0 0 0-1.414z"
-          fill="#FF7033"
-        />
-        <path
-          d="M26.673 6.293l-24 24L8.63 36.25 32.59 12.208z"
-          fill="#FFD366"
-        />
-        <path
-          d="M7.88 35.5l24-24 5.207 5.208-24 24z"
-          fill="#FFB700"
-        />
-        <path
-          d="M25.967 7l1.414-1.415L37.795 16l-1.414 1.414z"
-          fill="#CC3D00"
-        />
-      </g>
-    </svg>
-  </Pencil>
+  />
 </Icon>
 `;
