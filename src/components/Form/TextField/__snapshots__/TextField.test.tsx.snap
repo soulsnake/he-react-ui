@@ -55,113 +55,117 @@ exports[`<TextField /> rendered correctly with Default fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -228,113 +232,117 @@ exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -401,113 +409,117 @@ exports[`<TextField /> rendered correctly with Error fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -574,113 +586,117 @@ exports[`<TextField /> rendered correctly with Info tooltip fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -747,113 +763,117 @@ exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -920,113 +940,117 @@ exports[`<TextField /> rendered correctly with UnVerified status fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -1093,113 +1117,117 @@ exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -1266,113 +1294,117 @@ exports[`<TextField /> rendered correctly with Value fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -1439,113 +1471,117 @@ exports[`<TextField /> rendered correctly with Verified status fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -1612,113 +1648,117 @@ exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -1785,113 +1825,117 @@ exports[`<TextField /> rendered correctly with password fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -1958,113 +2002,117 @@ exports[`<TextField /> rendered correctly with small fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -2131,113 +2179,117 @@ exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
         type="text"
         value=""
       />
-      <Popover
-        content={
-          <UNDEFINED>
-            <mockConstructor
-              className="editIcon"
-              name="Edit"
-            />
-            <mockConstructor
-              h1={false}
-              h2={false}
-              h3={true}
-              h4={false}
-              nav={false}
-            >
-              Sample Popup
-            </mockConstructor>
-            <Paragraph
-              className="paragraph"
-            >
-              Sample content
-            </Paragraph>
-          </UNDEFINED>
-        }
-        light={true}
-        preferRight={true}
-        tooltip={true}
+      <div
+        className="helper"
       >
-        <Tooltip
-          animateFill={true}
-          animation="shift"
-          arrow={false}
-          arrowSize="regular"
-          className=""
-          delay={100}
-          disabled={false}
-          distance={10}
-          duration={375}
-          followCursor={false}
-          hideDelay={300}
-          hideDuration={375}
-          hideOnClick={true}
-          html={
-            <PopoverDisplay
-              className={undefined}
-              light={true}
-              tooltip={true}
-            >
-              <UNDEFINED>
-                <mockConstructor
-                  className="editIcon"
-                  name="Edit"
-                />
-                <mockConstructor
-                  h1={false}
-                  h2={false}
-                  h3={true}
-                  h4={false}
-                  nav={false}
-                >
-                  Sample Popup
-                </mockConstructor>
-                <Paragraph
-                  className="paragraph"
-                >
-                  Sample content
-                </Paragraph>
-              </UNDEFINED>
-            </PopoverDisplay>
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
           }
-          inertia={false}
-          interactive={false}
-          interactiveBorder={16}
-          multiple={false}
-          offset={0}
-          onHidden={[Function]}
-          onHide={[Function]}
-          onRequestClose={[Function]}
-          onShow={[Function]}
-          onShown={[Function]}
-          popperOptions={Object {}}
-          position="bottom-end"
-          size="regular"
-          sticky={false}
-          stickyDuration={200}
-          style={Object {}}
-          theme="dark"
-          touchHold={false}
-          trigger="mouseenter"
-          unmountHTMLWhenHide={false}
+          light={true}
+          preferRight={true}
+          tooltip={true}
         >
-          <div
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
             className=""
-            style={
-              Object {
-                "display": "inline",
-              }
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={true}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
             }
+            inertia={false}
+            interactive={false}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
           >
             <div
-              className="verifiedTag unVerified"
-              onClick={[Function]}
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
             >
-              Verify
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
             </div>
-          </div>
-        </Tooltip>
-      </Popover>
+          </Tooltip>
+        </Popover>
+      </div>
       <label
         className="label"
         htmlFor="demo"
@@ -2310,6 +2362,9 @@ exports[`TextField test interaction 1`] = `
         onFocus={[Function]}
         type="text"
         value=""
+      />
+      <div
+        className="helper"
       />
       <label
         className="label"
