@@ -118,9 +118,7 @@ class TextField extends React.Component<Props, any> {
       }
       case 'info': {
         markerIcon = (
-          <div className={style.helper} onClick={onMarkerClick}>
-            <Help className={style.helperIcon} />
-          </div>
+          <Help className={classnames(style.marker, style.helperIcon)} />
         );
 
         break;
@@ -144,12 +142,16 @@ class TextField extends React.Component<Props, any> {
       }
     }
 
-    return markerTooltip ? (
-      <Popover content={markerTooltip} tooltip light preferRight>
-        {markerIcon}
-      </Popover>
-    ) : (
-      markerIcon
+    return (
+      <div className={style.helper}>
+        {markerTooltip ? (
+          <Popover content={markerTooltip} tooltip light preferRight>
+            {markerIcon}
+          </Popover>
+        ) : (
+          markerIcon
+        )}
+      </div>
     );
   };
   render() {
