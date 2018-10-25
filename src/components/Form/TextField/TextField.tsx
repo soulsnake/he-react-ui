@@ -117,9 +117,7 @@ class TextField extends React.Component<Props, any> {
         break;
       }
       case 'info': {
-        markerIcon = (
-          <Help className={classnames(style.marker, style.helperIcon)} />
-        );
+        markerIcon = <Help className={classnames(style.helperIcon)} />;
 
         break;
       }
