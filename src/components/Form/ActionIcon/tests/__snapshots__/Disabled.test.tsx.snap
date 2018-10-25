@@ -18,6 +18,7 @@ exports[`<ActionIcon /> rendered correctly with Disabled fixture 1`] = `
     <Icon
       className="icon"
       name="Delete"
+      shadow={false}
     />
   </button>
 </ActionIcon>

@@ -14,7 +14,7 @@
     "lint-fix": "eslint . --fix --env jest",
     "cosmos": "cosmos",
     "cosmos-export": "cross-env COSMOS_PUBLIC_URL='./' cosmos-export",
-    "precommit": "yarn verify",
+    "precommit": "yarn && yarn lint --fix && yarn coverage && yarn ratchet-coverage",
     "ratchet-coverage": "node config/ratchetCoverage.js",
     "verify": "yarn && yarn lint && yarn coverage && yarn ratchet-coverage"
   },

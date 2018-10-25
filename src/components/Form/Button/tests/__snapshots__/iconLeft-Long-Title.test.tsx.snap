@@ -10,6 +10,7 @@ exports[`<Button /> rendered correctly with long-title fixture 1`] = `
   iconLeft={
     <mockConstructor
       name="Settings"
+      shadow={false}
     />
   }
   keyline={false}
@@ -42,6 +43,7 @@ exports[`<Button /> rendered correctly with long-title fixture 1`] = `
         >
           <mockConstructor
             name="Settings"
+            shadow={false}
           >
             <Settings
               className="icon"

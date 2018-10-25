@@ -10,6 +10,7 @@ exports[`<Button /> rendered correctly with done fixture 1`] = `
   iconLeft={
     <mockConstructor
       name="Settings"
+      shadow={false}
     />
   }
   keyline={false}
@@ -41,6 +42,7 @@ exports[`<Button /> rendered correctly with done fixture 1`] = `
         >
           <Icon
             name="Tick"
+            shadow={false}
           >
             <Tick
               className="icon"

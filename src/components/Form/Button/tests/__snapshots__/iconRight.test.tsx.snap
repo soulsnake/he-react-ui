@@ -10,6 +10,7 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
   iconRight={
     <mockConstructor
       name="ArrowRight"
+      shadow={false}
     />
   }
   keyline={false}
@@ -47,6 +48,7 @@ exports[`<Button /> rendered correctly with fixture 1`] = `
         >
           <mockConstructor
             name="ArrowRight"
+            shadow={false}
           >
             <ArrowRight
               className="icon"

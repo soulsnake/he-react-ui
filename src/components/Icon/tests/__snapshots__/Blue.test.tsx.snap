@@ -4,6 +4,7 @@ exports[`<Icon /> rendered correctly with Blue fixture 1`] = `
 <Icon
   color="blue"
   name="Cross"
+  shadow={false}
 >
   <Cross
     className="icon blue"

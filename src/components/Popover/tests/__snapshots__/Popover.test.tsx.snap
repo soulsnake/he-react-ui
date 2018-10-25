@@ -58,6 +58,7 @@ exports[`<Popover /> rendered correctly with base fixture 1`] = `
     >
       <Icon
         name="Help"
+        shadow={false}
         style={
           Object {
             "cursor": "pointer",

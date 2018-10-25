@@ -58,6 +58,7 @@ exports[`<Footer /> rendered correctly with withChild fixture 1`] = `
                   <Icon
                     className="legacyIcon"
                     name="ArrowRight"
+                    shadow={false}
                   />
                 </div>
               </button>
