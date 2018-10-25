@@ -41,6 +41,7 @@ import Pencil from './Pencil';
 import Search from './Search';
 import Settings from './Settings';
 import Sync from './Sync';
+import Thumb from './Thumb';
 import Tick from './Tick';
 import UserShield from './UserShield';
 import View from './View';
@@ -51,12 +52,18 @@ const Icon: React.SFC<{
   width?: number;
   height?: number;
   color?: Color;
+  shadow?: boolean;
   className?: string;
   name: string;
   style?: {};
 }> = props => {
-  const { width, height, color, className, name, ...restProps } = props;
-  const classes = classnames(style.icon, color && style[color], className);
+  const { width, height, color, className, name, shadow, ...restProps } = props;
+  const classes = classnames(
+    style.icon,
+    color && style[color],
+    shadow && style.shadow,
+    className,
+  );
   const childProps = {
     width,
     height,
@@ -143,6 +150,8 @@ const Icon: React.SFC<{
       return <Settings {...childProps} />;
     case 'Sync':
       return <Sync {...childProps} />;
+    case 'Thumb':
+      return <Thumb {...childProps} />;
     case 'Tick':
       return <Tick {...childProps} />;
     case 'UserShield':
@@ -156,6 +165,7 @@ const Icon: React.SFC<{
 
 Icon.defaultProps = {
   name: 'Cross',
+  shadow: false,
 };
 
 export default Icon;

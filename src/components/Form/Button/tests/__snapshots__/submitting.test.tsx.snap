@@ -9,6 +9,7 @@ exports[`<Button /> rendered correctly with submitting fixture 1`] = `
   iconLeft={
     <mockConstructor
       name="Settings"
+      shadow={false}
     />
   }
   keyline={false}

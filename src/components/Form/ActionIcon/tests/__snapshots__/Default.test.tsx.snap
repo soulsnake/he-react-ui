@@ -18,6 +18,7 @@ exports[`<ActionIcon /> rendered correctly with default fixture 1`] = `
     <Icon
       className="icon"
       name="Edit"
+      shadow={false}
     >
       <Edit
         className="icon icon"

@@ -14,6 +14,7 @@ exports[`<TextField /> rendered correctly with Default fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -64,6 +65,7 @@ exports[`<TextField /> rendered correctly with Default fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -109,6 +111,7 @@ exports[`<TextField /> rendered correctly with Default fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -191,6 +194,7 @@ exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -241,6 +245,7 @@ exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -286,6 +291,7 @@ exports[`<TextField /> rendered correctly with Disabled fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -368,6 +374,7 @@ exports[`<TextField /> rendered correctly with Error fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -418,6 +425,7 @@ exports[`<TextField /> rendered correctly with Error fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -463,6 +471,7 @@ exports[`<TextField /> rendered correctly with Error fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -545,6 +554,7 @@ exports[`<TextField /> rendered correctly with Info tooltip fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -595,6 +605,7 @@ exports[`<TextField /> rendered correctly with Info tooltip fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -640,6 +651,7 @@ exports[`<TextField /> rendered correctly with Info tooltip fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -722,6 +734,7 @@ exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -772,6 +785,7 @@ exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -817,6 +831,7 @@ exports[`<TextField /> rendered correctly with InvalidMarker fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -899,6 +914,7 @@ exports[`<TextField /> rendered correctly with UnVerified status fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -949,6 +965,7 @@ exports[`<TextField /> rendered correctly with UnVerified status fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -994,6 +1011,7 @@ exports[`<TextField /> rendered correctly with UnVerified status fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -1076,6 +1094,7 @@ exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -1126,6 +1145,7 @@ exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -1171,6 +1191,7 @@ exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -1253,6 +1274,7 @@ exports[`<TextField /> rendered correctly with Value fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -1303,6 +1325,7 @@ exports[`<TextField /> rendered correctly with Value fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -1348,6 +1371,7 @@ exports[`<TextField /> rendered correctly with Value fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -1430,6 +1454,7 @@ exports[`<TextField /> rendered correctly with Verified status fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -1480,6 +1505,7 @@ exports[`<TextField /> rendered correctly with Verified status fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -1525,6 +1551,7 @@ exports[`<TextField /> rendered correctly with Verified status fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -1607,6 +1634,7 @@ exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -1657,6 +1685,7 @@ exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -1702,6 +1731,7 @@ exports[`<TextField /> rendered correctly with noLabel fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -1784,6 +1814,7 @@ exports[`<TextField /> rendered correctly with password fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -1834,6 +1865,7 @@ exports[`<TextField /> rendered correctly with password fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -1879,6 +1911,7 @@ exports[`<TextField /> rendered correctly with password fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -1961,6 +1994,7 @@ exports[`<TextField /> rendered correctly with small fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -2011,6 +2045,7 @@ exports[`<TextField /> rendered correctly with small fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -2056,6 +2091,7 @@ exports[`<TextField /> rendered correctly with small fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}
@@ -2138,6 +2174,7 @@ exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
       <mockConstructor
         className="editIcon"
         name="Edit"
+        shadow={false}
       />
       <mockConstructor
         h1={false}
@@ -2188,6 +2225,7 @@ exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
               <mockConstructor
                 className="editIcon"
                 name="Edit"
+                shadow={false}
               />
               <mockConstructor
                 h1={false}
@@ -2233,6 +2271,7 @@ exports[`<TextField /> rendered correctly with smallNoLabel fixture 1`] = `
                   <mockConstructor
                     className="editIcon"
                     name="Edit"
+                    shadow={false}
                   />
                   <mockConstructor
                     h1={false}

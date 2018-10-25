@@ -39,6 +39,7 @@ exports[`<Button /> rendered correctly with legacy icon fixture 1`] = `
           <Icon
             className="legacyIcon"
             name="Sync"
+            shadow={false}
           >
             <Sync
               className="icon legacyIcon"

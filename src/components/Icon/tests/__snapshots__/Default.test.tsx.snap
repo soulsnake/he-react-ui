@@ -3,6 +3,7 @@
 exports[`<Icon /> rendered correctly with Default fixture 1`] = `
 <Icon
   name="Cross"
+  shadow={false}
 >
   <Cross
     className="icon"
