@@ -8,6 +8,7 @@ declare const _default: {
         id: string;
         name: string;
         label: string;
+        large: boolean;
         options: {
             label: string;
             value: string;
