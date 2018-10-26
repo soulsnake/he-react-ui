@@ -123,13 +123,18 @@ class SingleDatePicker extends React.Component<Props, any> {
         [styles.large]: large,
         [styles.focused]: this.state.focused,
         [styles.inline]: inline,
+        [styles.noLabel]: !label,
       },
       className,
     );
-
+    const floating = this.state.focused || this.state.date;
+    const labelClasses = large ? classnames(styles.innerlabel, {
+      [styles.floating]: floating,
+    }) : styles.label;
+    const placeHolderText = (large ? (label ? '' : label) : placeholder)
     return (
       <div className={classes} style={style}>
-        {label && <Label className={styles.label}>{label}</Label>}
+        {label && <Label className={labelClasses}>{label}</Label>}
         <div className={styles.inner}>
           <Media query={{ maxWidth: 767 }}>
             {(matches: boolean) => (
@@ -149,7 +154,7 @@ class SingleDatePicker extends React.Component<Props, any> {
                 displayFormat={displayFormat as any}
                 isOutsideRange={isOutsideRange as any}
                 readOnly={readOnly}
-                placeholder={placeholder}
+                placeholder={placeHolderText}
               />
             )}
           </Media>

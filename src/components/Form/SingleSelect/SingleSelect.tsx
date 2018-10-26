@@ -107,6 +107,13 @@ class SingleSelect extends React.Component<Props, any> {
     } = this.props;
     const { handleOpen, handleClose, handleChange } = this;
     const { expanded } = this.state;
+    const floating = expanded || value;
+
+    const labelClasses = classnames(style.innerlabel, {
+      [style.floating]: floating,
+    });
+    
+    const placeHolderText = (large ? (label ? '' : label) : placeholder)
     return (
       <div
         className={classnames(className, style.outer, {
@@ -115,7 +122,7 @@ class SingleSelect extends React.Component<Props, any> {
         })}
         {...restProps}
       >
-        {label && (
+        {!large && label && (
           <Label className={style.label} htmlFor={id}>
             {label}
           </Label>
@@ -128,8 +135,14 @@ class SingleSelect extends React.Component<Props, any> {
               [style.error]: error,
               [style.fill]: fill,
               [style.large]: large,
+              [style.noLabel]: !label,
             })}
           >
+            {large && label && (
+              <Label className={labelClasses} htmlFor={id}>
+                {label}
+              </Label>
+            )}
             {loadOptionsAsync ? (
               <Async
                 joinValues
@@ -144,7 +157,7 @@ class SingleSelect extends React.Component<Props, any> {
                 onChange={handleChange as any}
                 onOpen={handleOpen}
                 onClose={handleClose}
-                placeholder={forceTitle || placeholder}
+                placeholder={forceTitle || placeHolderText}
                 valueRenderer={this.getDisplay as any}
                 id={id}
                 name={name}
@@ -167,7 +180,7 @@ class SingleSelect extends React.Component<Props, any> {
                 onChange={handleChange as any}
                 onOpen={handleOpen}
                 onClose={handleClose}
-                placeholder={forceTitle || placeholder}
+                placeholder={forceTitle || placeHolderText}
                 valueRenderer={this.getDisplay as any}
                 id={id}
                 name={name}

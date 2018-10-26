@@ -4,6 +4,39 @@
   margin-bottom: 12px;
 }
 
+.innerlabel {
+  left: 16px;
+  position: absolute;
+  font-size: 16px;
+  top: 22px;
+  
+  transition: transform 250ms ease;
+  transform: scale(1) translate(0px, 0px);
+  transform-origin: left top 0px;
+  pointer-events: none;
+  user-select: none;
+  color: $grey_2;
+  z-index: 1;
+
+  &.small {
+    top: 16px;
+  }
+
+  &.floating {
+      position: absolute;
+      top: 32px;
+      
+      transform: scale(0.875) translate(0px, -25px);
+      transform-origin: left top 0px;
+      pointer-events: none;
+      z-index: 2;
+
+      &.small {
+        top: 24px;
+      }
+  }
+}
+
 .outer {
   margin-bottom: 12px; // Form auto spacing. Should split out into another componenet eventually.
   width: 280px;
@@ -40,6 +73,9 @@
     .caret {
       color: $teal;
       transform: rotate(180deg);
+    }
+    .label {
+      color: $teal;
     }
   }
   width: 100%;
@@ -81,9 +117,6 @@
     .Select-menu-outer {
       position: static;
     }
-    .Select-input {
-      padding: 0px;
-    }
     input[role=combobox] {
       padding: 0px;
     }
@@ -101,6 +134,7 @@
     }
     .Select-input {
       height: 46px;
+      padding: 0px;
     }
     .Select-option, .Select-noresults {
       background-color: $white;
@@ -152,12 +186,26 @@
       input[role=combobox] {
         height: 62px;
       }
-      .Select-value-label, .Select-placeholder {
+      .Select-placeholder {
         line-height: 62px;
+      }
+      .Select-value-label {
+        padding: 30px 0px 10px;
+        line-height: normal;
       }
     }
     .caret{
       top: 12px;
+    }
+    &:not(.noLabel) {
+      :global {
+        .Select-input {
+          input{
+            padding: 30px 0px 10px;
+            box-sizing: border-box !important;
+          }
+        }
+      }
     }
   }
 }

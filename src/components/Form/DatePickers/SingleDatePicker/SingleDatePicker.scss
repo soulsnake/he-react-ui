@@ -109,9 +109,52 @@
       top: 16px;
     }
   }
+  &:not(.noLabel) {
+    .inner,
+    .inner:hover {
+      :global {
+        .DateInput_input {
+          padding: 30px 16px 10px;
+        }
+      }
+    }
+  }
 }
 
 .errorMessage {
   margin-top: 12px;
   margin-bottom: 0;
+}
+
+.innerlabel {
+  left: 16px;
+  position: absolute;
+  font-size: 16px;
+  top: 22px;
+  
+  transition: transform 250ms ease;
+  transform: scale(1) translate(0px, 0px);
+  transform-origin: left top 0px;
+  pointer-events: none;
+  user-select: none;
+  color: $grey_2;
+  z-index: 1;
+
+  &.small {
+    top: 16px;
+  }
+
+  &.floating {
+      position: absolute;
+      top: 32px;
+      
+      transform: scale(0.875) translate(0px, -25px);
+      transform-origin: left top 0px;
+      pointer-events: none;
+      z-index: 2;
+
+      &.small {
+        top: 24px;
+      }
+  }
 }
