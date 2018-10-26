@@ -23,6 +23,7 @@ type Props = {
   backRoute?: any;
   onLocationChange?: Function;
   onDisplayTabs?: Function;
+  className?: string;
   logoutRoute?: string;
   location?: Location;
   locationValue?: string;
@@ -105,6 +106,7 @@ class SubNavigation extends Component<Props> {
 
   render() {
     const {
+      className,
       item,
       loading,
       locations,
@@ -116,7 +118,7 @@ class SubNavigation extends Component<Props> {
 
     const displayTabs = this.shouldDisplayTabs();
     return (
-      <div className={style.bar}>
+      <div className={classnames(style.bar, className)}>
         <div className={style.top}>
           {loading ? (
             <div className={style.heading}>
