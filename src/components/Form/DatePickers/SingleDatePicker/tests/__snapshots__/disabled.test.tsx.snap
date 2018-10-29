@@ -16,7 +16,7 @@ exports[`<SingleDatePicker /> rendered correctly with disabled fixture 1`] = `
   readOnly={false}
 >
   <div
-    className="outer disabled"
+    className="outer disabled noLabel"
   >
     <div
       className="inner"

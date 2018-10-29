@@ -36,7 +36,7 @@ exports[`<SingleSelect /> rendered correctly with error fixture 1`] = `
       className="relative"
     >
       <div
-        className="container error"
+        className="container error noLabel"
       >
         <Select
           arrowRenderer={[Function]}

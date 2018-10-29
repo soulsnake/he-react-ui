@@ -35,7 +35,7 @@ exports[`<SingleSelect /> rendered correctly with label fixture 1`] = `
       className="relative"
     >
       <div
-        className="container expanded"
+        className="container expanded noLabel"
       >
         <Select
           arrowRenderer={[Function]}

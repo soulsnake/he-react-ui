@@ -29,7 +29,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
       className="relative"
     >
       <div
-        className="container"
+        className="container noLabel"
       >
         <Async
           autoload={true}

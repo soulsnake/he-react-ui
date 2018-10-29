@@ -36,7 +36,7 @@ exports[`<SingleSelect /> rendered correctly with placeholder fixture 1`] = `
       className="relative"
     >
       <div
-        className="container"
+        className="container noLabel"
       >
         <Select
           arrowRenderer={[Function]}
