@@ -112,8 +112,8 @@ class SingleSelect extends React.Component<Props, any> {
     const labelClasses = classnames(style.innerlabel, {
       [style.floating]: floating,
     });
-
-    const placeHolderText = large ? (label ? '' : label) : placeholder;
+    const labelText = label ? '' : label;
+    const placeHolderText = large ? labelText : placeholder;
     return (
       <div
         className={classnames(className, style.outer, {

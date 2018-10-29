@@ -133,7 +133,8 @@ class SingleDatePicker extends React.Component<Props, any> {
           [styles.floating]: floating,
         })
       : styles.label;
-    const placeHolderText = large ? (label ? '' : label) : placeholder;
+    const labelText = label ? '' : label;
+    const placeHolderText = large ? labelText : placeholder;
     return (
       <div className={classes} style={style}>
         {label && <Label className={labelClasses}>{label}</Label>}
