@@ -112,8 +112,8 @@ class SingleSelect extends React.Component<Props, any> {
     const labelClasses = classnames(style.innerlabel, {
       [style.floating]: floating,
     });
-    
-    const placeHolderText = (large ? (label ? '' : label) : placeholder)
+
+    const placeHolderText = large ? (label ? '' : label) : placeholder;
     return (
       <div
         className={classnames(className, style.outer, {
@@ -122,11 +122,12 @@ class SingleSelect extends React.Component<Props, any> {
         })}
         {...restProps}
       >
-        {!large && label && (
-          <Label className={style.label} htmlFor={id}>
-            {label}
-          </Label>
-        )}
+        {!large &&
+          label && (
+            <Label className={style.label} htmlFor={id}>
+              {label}
+            </Label>
+          )}
         <div className={classnames(className, style.relative)}>
           <div
             className={classnames(style.container, {
@@ -138,11 +139,12 @@ class SingleSelect extends React.Component<Props, any> {
               [style.noLabel]: !label,
             })}
           >
-            {large && label && (
-              <Label className={labelClasses} htmlFor={id}>
-                {label}
-              </Label>
-            )}
+            {large &&
+              label && (
+                <Label className={labelClasses} htmlFor={id}>
+                  {label}
+                </Label>
+              )}
             {loadOptionsAsync ? (
               <Async
                 joinValues

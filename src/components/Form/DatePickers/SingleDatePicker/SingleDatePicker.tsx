@@ -128,10 +128,12 @@ class SingleDatePicker extends React.Component<Props, any> {
       className,
     );
     const floating = this.state.focused || this.state.date;
-    const labelClasses = large ? classnames(styles.innerlabel, {
-      [styles.floating]: floating,
-    }) : styles.label;
-    const placeHolderText = (large ? (label ? '' : label) : placeholder)
+    const labelClasses = large
+      ? classnames(styles.innerlabel, {
+          [styles.floating]: floating,
+        })
+      : styles.label;
+    const placeHolderText = large ? (label ? '' : label) : placeholder;
     return (
       <div className={classes} style={style}>
         {label && <Label className={labelClasses}>{label}</Label>}
