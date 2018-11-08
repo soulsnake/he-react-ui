@@ -1,6 +1,7 @@
 import React from 'react';
 import ActionSet from '..';
 import ActionIcon from '../../ActionIcon';
+import parentLayout from './parentLayout';
 
 const actions = [
   <ActionIcon icon="Delete" title="Delete" color="red" />,
@@ -9,6 +10,7 @@ const actions = [
 ];
 
 export default {
+  parentLayout,
   component: ActionSet,
   props: {
     expanded: true,

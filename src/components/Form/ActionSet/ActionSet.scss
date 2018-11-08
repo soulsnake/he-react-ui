@@ -2,7 +2,6 @@
 
 .outer {
   height: 36px;
-  margin: auto;
   position: relative;
   user-select: none;
   width: fit-content;
@@ -59,7 +58,7 @@
 }
 
 .actions {
-  display: inline-flex;
+  display: flex;
   position: relative;
 }
 
