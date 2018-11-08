@@ -63,6 +63,11 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   min-height: 76px;
+
+  @include ie {
+    height: 76px;
+  }
+
   @include breakpoint(small) {
     display: inline-block;
     min-height: 64px;

@@ -1,6 +1,6 @@
 {
   "name": "he-react-ui",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Common UI elements for HealthEngine",
   "main": "dist/index.js",
   "scripts": {
@@ -52,7 +52,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-typescript": "^0.12.0",
-    "event-source-polyfill": "^0.0.12",
+    "event-source-polyfill": "^1.0.3",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
     "is-absolute-url": "^2.1.0",
@@ -62,7 +62,7 @@
     "nwsapi": "^2.0.4",
     "object-assign": "^4.1.1",
     "prettier": "^1.13.2",
-    "promise": "^8.0.1",
+    "promise": "^8.0.2",
     "psl": "^1.1.28",
     "raf": "^3.4.0",
     "react": "^16.3.0",
@@ -84,6 +84,7 @@
     "ts-loader": "^5.2.1",
     "typescript": "3.0.1",
     "typescript-eslint-parser": "^19.0.2",
+    "unfetch": "^4.0.1",
     "url-loader": "^1.0.1",
     "webpack": "^4.20.2",
     "whatwg-fetch": "^2.0.4"
@@ -100,7 +101,7 @@
     "eslint-plugin-react": "^7.6.1",
     "eslint-plugin-standard": "^3.0.1",
     "identity-obj-proxy": "^3.0.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.10.0",
     "postcss-flexbugs-fixes": "^3.3.0",
     "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.6",
