@@ -352,6 +352,17 @@ exports[`<Icon /> rendered correctly with Language fixture 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> rendered correctly with Lock fixture 1`] = `
+<Icon
+  name="ArrowUp"
+>
+  <Icon
+    name="ArrowUp"
+    shadow={false}
+  />
+</Icon>
+`;
+
 exports[`<Icon /> rendered correctly with Logout fixture 1`] = `
 <Icon
   name="ArrowUp"
