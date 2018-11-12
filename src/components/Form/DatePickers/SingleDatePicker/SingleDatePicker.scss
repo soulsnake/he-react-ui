@@ -141,7 +141,6 @@
   pointer-events: none;
   user-select: none;
   color: $grey_2;
-  z-index: 1;
 
   &.small {
     top: 16px;
@@ -154,7 +153,6 @@
       transform: scale(0.875) translate(0px, -25px);
       transform-origin: left top 0px;
       pointer-events: none;
-      z-index: 2;
 
       &.small {
         top: 24px;
