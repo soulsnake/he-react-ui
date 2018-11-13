@@ -448,6 +448,20 @@ exports[`<Icon /> rendered correctly with Language fixture 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> rendered correctly with Lock fixture 1`] = `
+<Icon
+  name="Pencil"
+  shadow={false}
+>
+  <Pencil
+    className="icon"
+    fill="currentColor"
+    height={32}
+    width={32}
+  />
+</Icon>
+`;
+
 exports[`<Icon /> rendered correctly with Logout fixture 1`] = `
 <Icon
   name="Pencil"

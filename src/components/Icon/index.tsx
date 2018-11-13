@@ -34,6 +34,7 @@ import Help from './Help';
 import Home from './Home';
 import style from './Icon.scss';
 import Language from './Language';
+import Lock from './Lock';
 import Logout from './Logout';
 import Megaphone from './Megaphone';
 import Patients from './Patients';
@@ -132,6 +133,8 @@ const Icon: React.SFC<{
       return <Home {...childProps} />;
     case 'Language':
       return <Language {...childProps} />;
+    case 'Lock':
+      return <Lock {...childProps} />;
     case 'Logout':
       return <Logout {...childProps} />;
     case 'Megaphone':

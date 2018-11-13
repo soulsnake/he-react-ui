@@ -26,6 +26,7 @@ export default [
   { name: 'Help', component: Icon, props: { name: 'Help' } },
   { name: 'Home', component: Icon, props: { name: 'Home' } },
   { name: 'Language', component: Icon, props: { name: 'Language' } },
+  { name: 'Lock', component: Icon, props: { name: 'Lock' } },
   { name: 'Logout', component: Icon, props: { name: 'Logout' } },
   { name: 'Megaphone', component: Icon, props: { name: 'Megaphone' } },
   { name: 'Patients', component: Icon, props: { name: 'Patients' } },
