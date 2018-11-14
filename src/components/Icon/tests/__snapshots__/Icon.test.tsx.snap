@@ -616,6 +616,20 @@ exports[`<Icon /> rendered correctly with UserShield fixture 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> rendered correctly with UserShieldPrivacy fixture 1`] = `
+<Icon
+  name="Pencil"
+  shadow={false}
+>
+  <Pencil
+    className="icon"
+    fill="currentColor"
+    height={32}
+    width={32}
+  />
+</Icon>
+`;
+
 exports[`<Icon /> rendered correctly with View fixture 1`] = `
 <Icon
   name="Pencil"
