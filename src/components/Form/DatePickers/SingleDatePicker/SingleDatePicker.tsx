@@ -136,7 +136,6 @@ class SingleDatePicker extends React.Component<Props, any> {
     const labelText = label ? '' : label;
     const placeHolderText = large ? labelText : placeholder;
     return (
-      <div>
       <div className={classes} style={style}>
         {label && <Label className={labelClasses}>{label}</Label>}
         <div className={styles.inner}>
@@ -169,40 +168,6 @@ class SingleDatePicker extends React.Component<Props, any> {
             {error}
           </Label>
         )}
-      </div>
-      <div className={classes} style={style}>
-        {label && <Label className={styles.innerlabel}>{label}</Label>}
-        <div className={styles.inner}>
-          <Media query={{ maxWidth: 767 }}>
-            {(matches: boolean) => (
-              <Picker
-                date={this.state.date || null}
-                daySize={28}
-                disabled={disabled}
-                horizontalMargin={matches ? 0 : horizontalMargin}
-                id={id}
-                numberOfMonths={matches ? 1 : 2}
-                onDateChange={this.handleDateChange as any}
-                focused={false}
-                onFocusChange={this.handleFocusChange as any}
-                navNext={<ChevronRight />}
-                navPrev={<ChevronLeft />}
-                anchorDirection={anchorDirection}
-                displayFormat={displayFormat as any}
-                isOutsideRange={isOutsideRange as any}
-                readOnly={readOnly}
-                placeholder={placeHolderText}
-              />
-            )}
-          </Media>
-          <Calendar className={styles.icon} />
-        </div>
-        {error && (
-          <Label className={styles.errorMessage} htmlFor={id} error>
-            {error}
-          </Label>
-        )}
-      </div>
       </div>
     );
   }
