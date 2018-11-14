@@ -45,6 +45,7 @@ import Sync from './Sync';
 import Thumb from './Thumb';
 import Tick from './Tick';
 import UserShield from './UserShield';
+import UserShieldPrivacy from './UserShieldPrivacy';
 import View from './View';
 
 type Color = 'teal' | 'blue' | 'green' | 'red' | 'white';
@@ -159,6 +160,8 @@ const Icon: React.SFC<{
       return <Tick {...childProps} />;
     case 'UserShield':
       return <UserShield {...childProps} />;
+    case 'UserShieldPrivacy':
+      return <UserShieldPrivacy {...childProps} />;
     case 'View':
       return <View {...childProps} />;
     default:

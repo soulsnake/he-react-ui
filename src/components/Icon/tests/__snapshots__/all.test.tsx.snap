@@ -528,6 +528,17 @@ exports[`<Icon /> rendered correctly with UserShield fixture 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> rendered correctly with UserShieldPrivacy fixture 1`] = `
+<Icon
+  name="ArrowUp"
+>
+  <Icon
+    name="ArrowUp"
+    shadow={false}
+  />
+</Icon>
+`;
+
 exports[`<Icon /> rendered correctly with View fixture 1`] = `
 <Icon
   name="ArrowUp"

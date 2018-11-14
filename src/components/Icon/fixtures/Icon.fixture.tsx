@@ -61,5 +61,10 @@ export default [
   { name: 'ArrowUp', component: Icon, props: { name: 'ArrowUp' } },
   { name: 'DeleteProfile', component: Icon, props: { name: 'DeleteProfile' } },
   { name: 'UserShield', component: Icon, props: { name: 'UserShield' } },
+  {
+    name: 'UserShieldPrivacy',
+    component: Icon,
+    props: { name: 'UserShieldPrivacy' },
+  },
   { name: 'Pencil', component: Icon, props: { name: 'Pencil' } },
 ];

@@ -38,6 +38,11 @@ export default [
   { name: 'Search', component: Icon, props: { name: 'Search' } },
   { name: 'Settings', component: Icon, props: { name: 'Settings' } },
   { name: 'UserShield', component: Icon, props: { name: 'UserShield' } },
+  {
+    name: 'UserShieldPrivacy',
+    component: Icon,
+    props: { name: 'UserShieldPrivacy' },
+  },
   { name: 'Sync', component: Icon, props: { name: 'Sync' } },
   { name: 'Tick', component: Icon, props: { name: 'Tick' } },
   { name: 'Thumb', component: Icon, props: { name: 'Thumb' } },
