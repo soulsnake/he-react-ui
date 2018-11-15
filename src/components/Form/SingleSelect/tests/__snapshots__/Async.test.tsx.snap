@@ -13,10 +13,6 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
           "",
           [Function],
         ],
-        Array [
-          "",
-          [Function],
-        ],
       ],
     }
   }
@@ -26,210 +22,71 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
   onClose={[Function]}
   value={null}
 >
-  <div>
+  <div
+    className="outer"
+  >
     <div
-      className="outer"
+      className="relative"
     >
       <div
-        className="relative"
+        className="container noLabel"
       >
-        <div
-          className="container expanded noLabel"
-        >
-          <Async
-            autoload={true}
-            cache={false}
-            className="select expanded"
-            disabled={false}
-            id="demo"
-            ignoreAccents={true}
-            ignoreCase={true}
-            joinValues={true}
-            loadOptions={
-              [MockFunction] {
-                "calls": Array [
-                  Array [
-                    "",
-                    [Function],
-                  ],
-                  Array [
-                    "",
-                    [Function],
-                  ],
+        <Async
+          autoload={true}
+          cache={false}
+          className="select"
+          disabled={false}
+          id="demo"
+          ignoreAccents={true}
+          ignoreCase={true}
+          joinValues={true}
+          loadOptions={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  "",
+                  [Function],
                 ],
-              }
+              ],
             }
-            loadingPlaceholder="Loading..."
-            name="demo"
-            onChange={[Function]}
-            onClose={[Function]}
-            onOpen={[Function]}
-            options={Array []}
-            searchPromptText="Type to search"
-            valueRenderer={[Function]}
-          >
-            <Select
-              arrowRenderer={[Function]}
-              autoload={true}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              cache={false}
-              className="select expanded"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="demo"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              loadOptions={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "",
-                      [Function],
-                    ],
-                    Array [
-                      "",
-                      [Function],
-                    ],
-                  ],
-                }
-              }
-              loadingPlaceholder="Loading..."
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="demo"
-              noResultsText="Type to search"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onInputChange={[Function]}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={Array []}
-              pageSize={5}
-              placeholder="Select..."
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchPromptText="Type to search"
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
-            >
-              <div
-                className="Select select expanded is-clearable is-searchable Select--single"
-              >
-                <input
-                  disabled={false}
-                  name="demo"
-                  type="hidden"
-                  value=""
-                />
-                <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-2--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      Select...
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-2--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="demo"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    />
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
-                    onMouseDown={[Function]}
-                  >
-                    <span
-                      className="Select-arrow"
-                      onMouseDown={[Function]}
-                    />
-                  </span>
-                </div>
-              </div>
-            </Select>
-          </Async>
-          <DropDown
-            className="caret"
-            fill="currentColor"
-            height={32}
-            width={32}
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="outer"
-    >
-      <div
-        className="relative"
-      >
-        <div
-          className="container noLabel"
+          }
+          loadingPlaceholder="Loading..."
+          name="demo"
+          onChange={[Function]}
+          onClose={[Function]}
+          onOpen={[Function]}
+          options={Array []}
+          searchPromptText="Type to search"
+          valueRenderer={[Function]}
         >
-          <Async
+          <Select
+            arrowRenderer={[Function]}
             autoload={true}
+            autosize={true}
+            backspaceRemoves={true}
+            backspaceToRemoveMessage="Press backspace to remove {label}"
             cache={false}
             className="select"
+            clearAllText="Clear all"
+            clearRenderer={[Function]}
+            clearValueText="Clear value"
+            clearable={true}
+            closeOnSelect={true}
+            deleteRemoves={true}
+            delimiter=","
             disabled={false}
+            escapeClearsValue={true}
+            filterOptions={[Function]}
             id="demo"
             ignoreAccents={true}
             ignoreCase={true}
+            inputProps={Object {}}
+            isLoading={false}
             joinValues={true}
+            labelKey="label"
             loadOptions={
               [MockFunction] {
                 "calls": Array [
-                  Array [
-                    "",
-                    [Function],
-                  ],
                   Array [
                     "",
                     [Function],
@@ -238,163 +95,101 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
               }
             }
             loadingPlaceholder="Loading..."
+            matchPos="any"
+            matchProp="any"
+            menuBuffer={0}
+            menuRenderer={[Function]}
+            multi={false}
             name="demo"
+            noResultsText="Type to search"
+            onBlurResetsInput={true}
             onChange={[Function]}
             onClose={[Function]}
+            onCloseResetsInput={true}
+            onInputChange={[Function]}
             onOpen={[Function]}
+            onSelectResetsInput={true}
+            openOnClick={true}
+            optionComponent={[Function]}
             options={Array []}
+            pageSize={5}
+            placeholder="Select..."
+            removeSelected={true}
+            required={false}
+            rtl={false}
+            scrollMenuIntoView={true}
             searchPromptText="Type to search"
+            searchable={true}
+            simpleValue={false}
+            tabSelectsValue={true}
+            trimFilter={true}
+            valueComponent={[Function]}
+            valueKey="value"
             valueRenderer={[Function]}
           >
-            <Select
-              arrowRenderer={[Function]}
-              autoload={true}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              cache={false}
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="demo"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              loadOptions={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "",
-                      [Function],
-                    ],
-                    Array [
-                      "",
-                      [Function],
-                    ],
-                  ],
-                }
-              }
-              loadingPlaceholder="Loading..."
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="demo"
-              noResultsText="Type to search"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onInputChange={[Function]}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={Array []}
-              pageSize={5}
-              placeholder="Select..."
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchPromptText="Type to search"
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="Select select is-clearable is-searchable Select--single"
             >
+              <input
+                disabled={false}
+                name="demo"
+                type="hidden"
+                value=""
+              />
               <div
-                className="Select select is-clearable is-searchable Select--single"
+                className="Select-control"
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="demo"
-                  type="hidden"
-                  value=""
-                />
-                <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
+                <span
+                  className="Select-multi-value-wrapper"
+                  id="react-select-2--value"
+                >
+                  <div
+                    className="Select-placeholder"
+                  >
+                    Select...
+                  </div>
+                  <AutosizeInput
+                    aria-activedescendant="react-select-2--value"
+                    aria-expanded="false"
+                    aria-haspopup="false"
+                    aria-owns=""
+                    className="Select-input"
+                    id="demo"
+                    injectStyles={true}
+                    minWidth="5"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    role="combobox"
+                    value=""
+                  />
+                </span>
+                <span
+                  className="Select-arrow-zone"
                   onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
                 >
                   <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-3--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      Select...
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-3--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="demo"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    />
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                    className="Select-arrow"
                     onMouseDown={[Function]}
-                  >
-                    <span
-                      className="Select-arrow"
-                      onMouseDown={[Function]}
-                    />
-                  </span>
-                </div>
+                  />
+                </span>
               </div>
-            </Select>
-          </Async>
-          <DropDown
-            className="caret"
-            fill="currentColor"
-            height={32}
-            width={32}
-          />
-        </div>
+            </div>
+          </Select>
+        </Async>
+        <DropDown
+          className="caret"
+          fill="currentColor"
+          height={32}
+          width={32}
+        />
       </div>
-    </div>
-    <div>
-      <CheckBox
-        checked={false}
-        disabled={false}
-        error=""
-        id="test"
-        key="test"
-        label="testset long labels"
-        name="test"
-        onChange={[Function]}
-        special={false}
-      />
     </div>
   </div>
 </SingleSelect>
