@@ -67,6 +67,7 @@
     }
   }
   &.expanded {
+    z-index: 2;
     .caret {
       color: $teal;
       transform: rotate(180deg);
