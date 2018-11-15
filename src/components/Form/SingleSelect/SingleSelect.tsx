@@ -9,7 +9,6 @@ import React from 'react';
 import Select, { Async } from 'react-select';
 import { returnNull } from '../../../util';
 import DropDown from '../../Icon/DropDown';
-import CheckBox from '../CheckBox';
 import Label from '../Label';
 import style from './SingleSelect.scss';
 
@@ -116,85 +115,6 @@ class SingleSelect extends React.Component<Props, any> {
     const labelText = label ? '' : label;
     const placeHolderText = large ? labelText : placeholder;
     return (
-      <div>
-      <div
-        className={classnames(className, style.outer, {
-          [style.fill]: fill,
-          [style.inline]: inline,
-        })}
-        {...restProps}
-      >
-        {!large &&
-          label && (
-            <Label className={style.label} htmlFor={id}>
-              {label}
-            </Label>
-          )}
-        <div className={classnames(className, style.relative)}>
-          <div
-            className={classnames(style.container, {
-              [style.expanded]: !expanded,
-              [style.disabled]: disabled,
-              [style.error]: error,
-              [style.fill]: fill,
-              [style.large]: large,
-              [style.noLabel]: !label,
-            })}
-          >
-            {large &&
-              label && (
-                <Label className={labelClasses} htmlFor={id}>
-                  {label}
-                </Label>
-              )}
-            {loadOptionsAsync ? (
-              <Async
-                joinValues
-                className={classnames(style.select, {
-                  [style.expanded]: !expanded,
-                  [style.disabled]: disabled,
-                  [style.error]: error,
-                  [style.forceTitle]: forceTitle,
-                })}
-                disabled={disabled}
-                value={value || undefined}
-                onChange={handleChange as any}
-                onOpen={handleOpen}
-                onClose={handleClose}
-                placeholder={forceTitle || placeHolderText}
-                valueRenderer={this.getDisplay as any}
-                id={id}
-                name={name}
-                required={required}
-                cache={false}
-                loadOptions={loadOptionsAsync as any}
-              />
-            ) : (
-              <Select
-                joinValues
-                options={options}
-                className={classnames(style.select, {
-                  [style.expanded]: !expanded,
-                  [style.disabled]: disabled,
-                  [style.error]: error,
-                  [style.forceTitle]: forceTitle,
-                })}
-                disabled={disabled}
-                value={value as any}
-                onChange={handleChange as any}
-                onOpen={handleOpen}
-                onClose={handleClose}
-                placeholder={forceTitle || placeHolderText}
-                valueRenderer={this.getDisplay as any}
-                id={id}
-                name={name}
-                required={required}
-              />
-            )}
-            <DropDown className={style.caret} />
-          </div>
-        </div>
-      </div>
       <div
         className={classnames(className, style.outer, {
           [style.fill]: fill,
@@ -272,16 +192,6 @@ class SingleSelect extends React.Component<Props, any> {
             <DropDown className={style.caret} />
           </div>
         </div>
-      </div>
-      <div>
-      <CheckBox
-          key={'test'}
-          id="test"
-          name="test"
-          label="testset long labels"
-        />
-      </div>
-
       </div>
     );
   }
