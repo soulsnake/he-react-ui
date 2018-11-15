@@ -67,7 +67,6 @@
     }
   }
   &.expanded {
-    z-index: 1;
     .caret {
       color: $teal;
       transform: rotate(180deg);
@@ -218,7 +217,6 @@
   font-size: $input-size;
   font-weight: $regular;
   overflow: hidden;
-  z-index: 3;
   &:hover {
     border-color: $teal;
   }
