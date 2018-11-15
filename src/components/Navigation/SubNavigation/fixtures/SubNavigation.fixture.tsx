@@ -30,8 +30,18 @@ export default [
         items: [
           {
             key: 'MAIN',
-            label: 'Main',
+            label: 'My account',
             route: '/parent',
+          },
+          {
+            key: 'MAIN 2',
+            label: 'Data & privacy',
+            route: '/parent2',
+          },
+          {
+            key: 'MAIN 3',
+            label: 'Change password',
+            route: '/parent3',
           },
           {
             key: 'SECONDARY',

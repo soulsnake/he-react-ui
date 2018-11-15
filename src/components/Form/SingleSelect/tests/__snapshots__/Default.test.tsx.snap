@@ -60,123 +60,257 @@ exports[`<SingleSelect /> rendered correctly with Default fixture 1`] = `
   }
   value={null}
 >
-  <div
-    className="outer"
-  >
+  <div>
     <div
-      className="relative"
+      className="outer"
     >
       <div
-        className="container noLabel"
+        className="relative"
       >
-        <Select
-          arrowRenderer={[Function]}
-          autosize={true}
-          backspaceRemoves={true}
-          backspaceToRemoveMessage="Press backspace to remove {label}"
-          className="select"
-          clearAllText="Clear all"
-          clearRenderer={[Function]}
-          clearValueText="Clear value"
-          clearable={true}
-          closeOnSelect={true}
-          deleteRemoves={true}
-          delimiter=","
-          disabled={false}
-          escapeClearsValue={true}
-          filterOptions={[Function]}
-          id="demo"
-          ignoreAccents={true}
-          ignoreCase={true}
-          inputProps={Object {}}
-          isLoading={false}
-          joinValues={true}
-          labelKey="label"
-          matchPos="any"
-          matchProp="any"
-          menuBuffer={0}
-          menuRenderer={[Function]}
-          multi={false}
-          name="demo"
-          noResultsText="No results found"
-          onBlurResetsInput={true}
-          onChange={[Function]}
-          onClose={[Function]}
-          onCloseResetsInput={true}
-          onOpen={[Function]}
-          onSelectResetsInput={true}
-          openOnClick={true}
-          optionComponent={[Function]}
-          options={
-            Array [
-              Object {
-                "label": "Apple",
-                "value": "1",
-              },
-              Object {
-                "label": "Banana",
-                "value": "2",
-              },
-              Object {
-                "label": "Cabbage",
-                "value": "3",
-              },
-              Object {
-                "label": "Date",
-                "value": "4",
-              },
-              Object {
-                "label": "Elephant ear",
-                "value": "5",
-              },
-              Object {
-                "label": "Fig",
-                "value": "6",
-              },
-              Object {
-                "label": "Grape",
-                "value": "7",
-              },
-              Object {
-                "label": "Hive (bee)",
-                "value": "8",
-              },
-              Object {
-                "label": "Ivy",
-                "value": "9",
-              },
-              Object {
-                "label": "Jackfruit",
-                "value": "10",
-              },
-              Object {
-                "label": "Test long option a b c d e f c d e f g h i j k l m n o p q r s t u v w x y z",
-                "value": "11",
-              },
-            ]
-          }
-          pageSize={5}
-          placeholder="Select..."
-          removeSelected={true}
-          required={false}
-          rtl={false}
-          scrollMenuIntoView={true}
-          searchable={true}
-          simpleValue={false}
-          tabSelectsValue={true}
-          trimFilter={true}
-          value={null}
-          valueComponent={[Function]}
-          valueKey="value"
-          valueRenderer={[Function]}
-        />
-        <DropDown
-          className="caret"
-          fill="currentColor"
-          height={32}
-          width={32}
-        />
+        <div
+          className="container expanded noLabel"
+        >
+          <Select
+            arrowRenderer={[Function]}
+            autosize={true}
+            backspaceRemoves={true}
+            backspaceToRemoveMessage="Press backspace to remove {label}"
+            className="select expanded"
+            clearAllText="Clear all"
+            clearRenderer={[Function]}
+            clearValueText="Clear value"
+            clearable={true}
+            closeOnSelect={true}
+            deleteRemoves={true}
+            delimiter=","
+            disabled={false}
+            escapeClearsValue={true}
+            filterOptions={[Function]}
+            id="demo"
+            ignoreAccents={true}
+            ignoreCase={true}
+            inputProps={Object {}}
+            isLoading={false}
+            joinValues={true}
+            labelKey="label"
+            matchPos="any"
+            matchProp="any"
+            menuBuffer={0}
+            menuRenderer={[Function]}
+            multi={false}
+            name="demo"
+            noResultsText="No results found"
+            onBlurResetsInput={true}
+            onChange={[Function]}
+            onClose={[Function]}
+            onCloseResetsInput={true}
+            onOpen={[Function]}
+            onSelectResetsInput={true}
+            openOnClick={true}
+            optionComponent={[Function]}
+            options={
+              Array [
+                Object {
+                  "label": "Apple",
+                  "value": "1",
+                },
+                Object {
+                  "label": "Banana",
+                  "value": "2",
+                },
+                Object {
+                  "label": "Cabbage",
+                  "value": "3",
+                },
+                Object {
+                  "label": "Date",
+                  "value": "4",
+                },
+                Object {
+                  "label": "Elephant ear",
+                  "value": "5",
+                },
+                Object {
+                  "label": "Fig",
+                  "value": "6",
+                },
+                Object {
+                  "label": "Grape",
+                  "value": "7",
+                },
+                Object {
+                  "label": "Hive (bee)",
+                  "value": "8",
+                },
+                Object {
+                  "label": "Ivy",
+                  "value": "9",
+                },
+                Object {
+                  "label": "Jackfruit",
+                  "value": "10",
+                },
+                Object {
+                  "label": "Test long option a b c d e f c d e f g h i j k l m n o p q r s t u v w x y z",
+                  "value": "11",
+                },
+              ]
+            }
+            pageSize={5}
+            placeholder="Select..."
+            removeSelected={true}
+            required={false}
+            rtl={false}
+            scrollMenuIntoView={true}
+            searchable={true}
+            simpleValue={false}
+            tabSelectsValue={true}
+            trimFilter={true}
+            value={null}
+            valueComponent={[Function]}
+            valueKey="value"
+            valueRenderer={[Function]}
+          />
+          <DropDown
+            className="caret"
+            fill="currentColor"
+            height={32}
+            width={32}
+          />
+        </div>
       </div>
+    </div>
+    <div
+      className="outer"
+    >
+      <div
+        className="relative"
+      >
+        <div
+          className="container noLabel"
+        >
+          <Select
+            arrowRenderer={[Function]}
+            autosize={true}
+            backspaceRemoves={true}
+            backspaceToRemoveMessage="Press backspace to remove {label}"
+            className="select"
+            clearAllText="Clear all"
+            clearRenderer={[Function]}
+            clearValueText="Clear value"
+            clearable={true}
+            closeOnSelect={true}
+            deleteRemoves={true}
+            delimiter=","
+            disabled={false}
+            escapeClearsValue={true}
+            filterOptions={[Function]}
+            id="demo"
+            ignoreAccents={true}
+            ignoreCase={true}
+            inputProps={Object {}}
+            isLoading={false}
+            joinValues={true}
+            labelKey="label"
+            matchPos="any"
+            matchProp="any"
+            menuBuffer={0}
+            menuRenderer={[Function]}
+            multi={false}
+            name="demo"
+            noResultsText="No results found"
+            onBlurResetsInput={true}
+            onChange={[Function]}
+            onClose={[Function]}
+            onCloseResetsInput={true}
+            onOpen={[Function]}
+            onSelectResetsInput={true}
+            openOnClick={true}
+            optionComponent={[Function]}
+            options={
+              Array [
+                Object {
+                  "label": "Apple",
+                  "value": "1",
+                },
+                Object {
+                  "label": "Banana",
+                  "value": "2",
+                },
+                Object {
+                  "label": "Cabbage",
+                  "value": "3",
+                },
+                Object {
+                  "label": "Date",
+                  "value": "4",
+                },
+                Object {
+                  "label": "Elephant ear",
+                  "value": "5",
+                },
+                Object {
+                  "label": "Fig",
+                  "value": "6",
+                },
+                Object {
+                  "label": "Grape",
+                  "value": "7",
+                },
+                Object {
+                  "label": "Hive (bee)",
+                  "value": "8",
+                },
+                Object {
+                  "label": "Ivy",
+                  "value": "9",
+                },
+                Object {
+                  "label": "Jackfruit",
+                  "value": "10",
+                },
+                Object {
+                  "label": "Test long option a b c d e f c d e f g h i j k l m n o p q r s t u v w x y z",
+                  "value": "11",
+                },
+              ]
+            }
+            pageSize={5}
+            placeholder="Select..."
+            removeSelected={true}
+            required={false}
+            rtl={false}
+            scrollMenuIntoView={true}
+            searchable={true}
+            simpleValue={false}
+            tabSelectsValue={true}
+            trimFilter={true}
+            value={null}
+            valueComponent={[Function]}
+            valueKey="value"
+            valueRenderer={[Function]}
+          />
+          <DropDown
+            className="caret"
+            fill="currentColor"
+            height={32}
+            width={32}
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <CheckBox
+        checked={false}
+        disabled={false}
+        error=""
+        id="test"
+        key="test"
+        label="testset long labels"
+        name="test"
+        onChange={[Function]}
+        special={false}
+      />
     </div>
   </div>
 </SingleSelect>

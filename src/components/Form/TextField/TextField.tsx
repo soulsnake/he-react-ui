@@ -143,7 +143,7 @@ class TextField extends React.Component<Props, any> {
     return (
       <div className={style.helper}>
         {markerTooltip ? (
-          <Popover content={markerTooltip} tooltip light preferRight>
+          <Popover content={markerTooltip} light preferRight>
             {markerIcon}
           </Popover>
         ) : (

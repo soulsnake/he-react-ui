@@ -36,192 +36,455 @@ exports[`<DateRangePicker /> rendered correctly with customOnly fixture 1`] = `
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
@@ -1633,192 +1896,455 @@ exports[`<DateRangePicker /> rendered correctly with customPlaceholder fixture 1
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
@@ -3230,192 +3756,455 @@ exports[`<DateRangePicker /> rendered correctly with disallowFuture fixture 1`] 
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
@@ -4827,192 +5616,455 @@ exports[`<DateRangePicker /> rendered correctly with fill fixture 1`] = `
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
@@ -6424,192 +7476,455 @@ exports[`<DateRangePicker /> rendered correctly with keepOpenOnDateSelect fixtur
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
@@ -8021,192 +9336,455 @@ exports[`<DateRangePicker /> rendered correctly with noInitialValue fixture 1`] 
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
@@ -9618,192 +11196,455 @@ exports[`<DateRangePicker /> rendered correctly with presetsOnly fixture 1`] = `
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
@@ -11215,192 +13056,455 @@ exports[`<DateRangePicker /> rendered correctly with withChoices fixture 1`] = `
       placeholder="When will you be traveling?"
       value={null}
     >
-      <div
-        className="outer"
-      >
+      <div>
         <div
-          className="relative"
+          className="outer"
         >
           <div
-            className="container noLabel"
+            className="relative"
           >
-            <Select
-              arrowRenderer={[Function]}
-              autosize={true}
-              backspaceRemoves={true}
-              backspaceToRemoveMessage="Press backspace to remove {label}"
-              className="select"
-              clearAllText="Clear all"
-              clearRenderer={[Function]}
-              clearValueText="Clear value"
-              clearable={true}
-              closeOnSelect={true}
-              deleteRemoves={true}
-              delimiter=","
-              disabled={false}
-              escapeClearsValue={true}
-              filterOptions={[Function]}
-              id="date-range-picker-select-id"
-              ignoreAccents={true}
-              ignoreCase={true}
-              inputProps={Object {}}
-              isLoading={false}
-              joinValues={true}
-              labelKey="label"
-              matchPos="any"
-              matchProp="any"
-              menuBuffer={0}
-              menuRenderer={[Function]}
-              multi={false}
-              name="date-range-picker-select-name"
-              noResultsText="No results found"
-              onBlurResetsInput={true}
-              onChange={[Function]}
-              onClose={[Function]}
-              onCloseResetsInput={true}
-              onOpen={[Function]}
-              onSelectResetsInput={true}
-              openOnClick={true}
-              optionComponent={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "Custom",
-                    "value": "CUSTOM",
-                  },
-                ]
-              }
-              pageSize={5}
-              placeholder="When will you be traveling?"
-              removeSelected={true}
-              required={false}
-              rtl={false}
-              scrollMenuIntoView={true}
-              searchable={true}
-              simpleValue={false}
-              tabSelectsValue={true}
-              trimFilter={true}
-              value={null}
-              valueComponent={[Function]}
-              valueKey="value"
-              valueRenderer={[Function]}
+            <div
+              className="container expanded noLabel"
             >
-              <div
-                className="Select select is-clearable is-searchable Select--single"
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select expanded"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
               >
-                <input
-                  disabled={false}
-                  name="date-range-picker-select-name"
-                  type="hidden"
-                  value=""
-                />
                 <div
-                  className="Select-control"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
+                  className="Select select expanded is-clearable is-searchable Select--single"
                 >
-                  <span
-                    className="Select-multi-value-wrapper"
-                    id="react-select-9--value"
-                  >
-                    <div
-                      className="Select-placeholder"
-                    >
-                      When will you be traveling?
-                    </div>
-                    <AutosizeInput
-                      aria-activedescendant="react-select-9--value"
-                      aria-expanded="false"
-                      aria-haspopup="false"
-                      aria-owns=""
-                      className="Select-input"
-                      id="date-range-picker-select-id"
-                      injectStyles={true}
-                      minWidth="5"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      role="combobox"
-                      value=""
-                    >
-                      <div
-                        className="Select-input"
-                        style={
-                          Object {
-                            "display": "inline-block",
-                          }
-                        }
-                      >
-                        <input
-                          aria-activedescendant="react-select-9--value"
-                          aria-expanded="false"
-                          aria-haspopup="false"
-                          aria-owns=""
-                          id="date-range-picker-select-id"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          required={false}
-                          role="combobox"
-                          style={
-                            Object {
-                              "boxSizing": "content-box",
-                              "width": "5px",
-                            }
-                          }
-                          value=""
-                        />
-                        <div
-                          style={
-                            Object {
-                              "height": 0,
-                              "left": 0,
-                              "overflow": "scroll",
-                              "position": "absolute",
-                              "top": 0,
-                              "visibility": "hidden",
-                              "whiteSpace": "pre",
-                            }
-                          }
-                        />
-                      </div>
-                    </AutosizeInput>
-                  </span>
-                  <span
-                    className="Select-arrow-zone"
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
                     onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <span
-                      className="Select-arrow"
+                      className="Select-multi-value-wrapper"
+                      id="react-select-16--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-16--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-16--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
                       onMouseDown={[Function]}
-                    />
-                  </span>
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Select>
-            <DropDown
-              className="caret"
-              fill="currentColor"
-              height={32}
-              width={32}
-            >
-              <svg
+              </Select>
+              <DropDown
                 className="caret"
                 fill="currentColor"
                 height={32}
-                viewBox="0 0 24 24"
                 width={32}
               >
-                <path
-                  d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
-                />
-              </svg>
-            </DropDown>
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
           </div>
+        </div>
+        <div
+          className="outer"
+        >
+          <div
+            className="relative"
+          >
+            <div
+              className="container noLabel"
+            >
+              <Select
+                arrowRenderer={[Function]}
+                autosize={true}
+                backspaceRemoves={true}
+                backspaceToRemoveMessage="Press backspace to remove {label}"
+                className="select"
+                clearAllText="Clear all"
+                clearRenderer={[Function]}
+                clearValueText="Clear value"
+                clearable={true}
+                closeOnSelect={true}
+                deleteRemoves={true}
+                delimiter=","
+                disabled={false}
+                escapeClearsValue={true}
+                filterOptions={[Function]}
+                id="date-range-picker-select-id"
+                ignoreAccents={true}
+                ignoreCase={true}
+                inputProps={Object {}}
+                isLoading={false}
+                joinValues={true}
+                labelKey="label"
+                matchPos="any"
+                matchProp="any"
+                menuBuffer={0}
+                menuRenderer={[Function]}
+                multi={false}
+                name="date-range-picker-select-name"
+                noResultsText="No results found"
+                onBlurResetsInput={true}
+                onChange={[Function]}
+                onClose={[Function]}
+                onCloseResetsInput={true}
+                onOpen={[Function]}
+                onSelectResetsInput={true}
+                openOnClick={true}
+                optionComponent={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "label": "Custom",
+                      "value": "CUSTOM",
+                    },
+                  ]
+                }
+                pageSize={5}
+                placeholder="When will you be traveling?"
+                removeSelected={true}
+                required={false}
+                rtl={false}
+                scrollMenuIntoView={true}
+                searchable={true}
+                simpleValue={false}
+                tabSelectsValue={true}
+                trimFilter={true}
+                value={null}
+                valueComponent={[Function]}
+                valueKey="value"
+                valueRenderer={[Function]}
+              >
+                <div
+                  className="Select select is-clearable is-searchable Select--single"
+                >
+                  <input
+                    disabled={false}
+                    name="date-range-picker-select-name"
+                    type="hidden"
+                    value=""
+                  />
+                  <div
+                    className="Select-control"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <span
+                      className="Select-multi-value-wrapper"
+                      id="react-select-17--value"
+                    >
+                      <div
+                        className="Select-placeholder"
+                      >
+                        When will you be traveling?
+                      </div>
+                      <AutosizeInput
+                        aria-activedescendant="react-select-17--value"
+                        aria-expanded="false"
+                        aria-haspopup="false"
+                        aria-owns=""
+                        className="Select-input"
+                        id="date-range-picker-select-id"
+                        injectStyles={true}
+                        minWidth="5"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={false}
+                        role="combobox"
+                        value=""
+                      >
+                        <div
+                          className="Select-input"
+                          style={
+                            Object {
+                              "display": "inline-block",
+                            }
+                          }
+                        >
+                          <input
+                            aria-activedescendant="react-select-17--value"
+                            aria-expanded="false"
+                            aria-haspopup="false"
+                            aria-owns=""
+                            id="date-range-picker-select-id"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            required={false}
+                            role="combobox"
+                            style={
+                              Object {
+                                "boxSizing": "content-box",
+                                "width": "5px",
+                              }
+                            }
+                            value=""
+                          />
+                          <div
+                            style={
+                              Object {
+                                "height": 0,
+                                "left": 0,
+                                "overflow": "scroll",
+                                "position": "absolute",
+                                "top": 0,
+                                "visibility": "hidden",
+                                "whiteSpace": "pre",
+                              }
+                            }
+                          />
+                        </div>
+                      </AutosizeInput>
+                    </span>
+                    <span
+                      className="Select-arrow-zone"
+                      onMouseDown={[Function]}
+                    >
+                      <span
+                        className="Select-arrow"
+                        onMouseDown={[Function]}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </Select>
+              <DropDown
+                className="caret"
+                fill="currentColor"
+                height={32}
+                width={32}
+              >
+                <svg
+                  className="caret"
+                  fill="currentColor"
+                  height={32}
+                  viewBox="0 0 24 24"
+                  width={32}
+                >
+                  <path
+                    d="M8.068 9h7.864a.5.5 0 0 1 .385.82l-3.933 4.72a.5.5 0 0 1-.768 0L7.683 9.82A.5.5 0 0 1 8.068 9z"
+                  />
+                </svg>
+              </DropDown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CheckBox
+            checked={false}
+            disabled={false}
+            error=""
+            id="test"
+            key="test"
+            label="testset long labels"
+            name="test"
+            onChange={[Function]}
+            special={false}
+          >
+            <div
+              checked={false}
+              className="outer"
+              error=""
+              id="test"
+              name="test"
+            >
+              <label
+                className="label"
+                htmlFor="test"
+                onClick={[Function]}
+              >
+                <CheckBoxUnchecked
+                  className="checkbox empty"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxUnchecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox empty"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxUnchecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM2.55 2.03l-.08.02-.08.03-.07.03-.07.05-.06.05-.05.06-.05.07-.03.07-.03.08-.02.08v14.86l.02.08.03.08.03.07.05.07.05.06.06.05.07.05.07.03.08.03.08.02h14.9l.08-.02.08-.03.07-.03.07-.05.06-.05.05-.06.05-.07.03-.07.03-.08.02-.08V2.57l-.02-.08-.03-.08-.03-.07-.05-.07-.05-.06-.06-.05-.07-.05-.07-.03-.08-.03-.08-.02H2.55z"
+                    />
+                  </svg>
+                </CheckBoxUnchecked>
+                <CheckBoxChecked
+                  className="checkbox full"
+                  fill="currentColor"
+                  height={32}
+                  name="CheckBoxChecked"
+                  width={32}
+                >
+                  <svg
+                    className="checkbox full"
+                    fill="currentColor"
+                    height={32}
+                    name="CheckBoxChecked"
+                    viewBox="0 0 20 20"
+                    width={32}
+                  >
+                    <path
+                      d="M18.5.04l.22.04.2.06.19.08.17.1.15.12.13.13.12.15.1.17.08.19.06.2.04.22.03.24L20 2v16l-.01.26-.03.24-.04.22-.06.2-.08.19-.1.17-.12.15-.13.13-.15.12-.17.1-.19.08-.2.06-.22.04-.24.03L18 20H2l-.26-.01-.24-.03-.22-.04-.2-.06-.19-.08-.17-.1-.15-.12-.13-.13-.12-.15-.1-.17-.08-.19-.06-.2-.04-.22-.03-.24L0 18V2l.01-.26.03-.24.04-.22.06-.2.08-.19.1-.17.12-.15.13-.13.15-.12.17-.1.19-.08.2-.06.22-.04.24-.03L2 0h16l.26.01.24.03zM5.91 8.73L4 10.64l4.64 4.63L16 7.91 14.09 6l-5.45 5.45-2.73-2.72z"
+                    />
+                  </svg>
+                </CheckBoxChecked>
+                <span
+                  className="text"
+                >
+                  testset long labels
+                </span>
+              </label>
+            </div>
+          </CheckBox>
         </div>
       </div>
     </SingleSelect>
