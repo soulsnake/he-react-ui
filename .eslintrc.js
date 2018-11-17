@@ -91,7 +91,9 @@ const base = {
     "no-undef": 0, // handled by typescript
     "no-unused-vars": 0, // handled by typescript
     "no-restricted-globals": 0, // conflicts with typescript type declaration
-    "react/prop-types": 0 // handled by typescript
+    "react/prop-types": 0, // handled by typescript
+
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 };
 
