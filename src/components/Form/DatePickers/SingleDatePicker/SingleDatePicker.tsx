@@ -73,7 +73,7 @@ class SingleDatePicker extends React.Component<Props, any> {
     }
   }
 
-  handleDateChange = (date: any) => {
+  handleDateChange = (date: moment.Moment) => {
     const oldDate = this.state.date;
     this.setState({ date });
     if ((oldDate && oldDate.toJSON()) !== (date && date.toJSON())) {
@@ -98,8 +98,8 @@ class SingleDatePicker extends React.Component<Props, any> {
       this.props.onBlur(event);
     }
   };
-  handleInputChange = (e: any) => {
-    this.setState({ inputText: e.target.value });
+  handleInputChange = (e: React.SyntheticEvent<HTMLDivElement>) => {
+    this.setState({ inputText: (e.target as any).value });
   }
   render() {
     const {
