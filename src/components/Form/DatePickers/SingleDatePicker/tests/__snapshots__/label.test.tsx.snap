@@ -33,6 +33,7 @@ exports[`<SingleDatePicker /> rendered correctly with label fixture 1`] = `
     </Label>
     <div
       className="inner"
+      onChange={[Function]}
     >
       <Media
         defaultMatches={true}

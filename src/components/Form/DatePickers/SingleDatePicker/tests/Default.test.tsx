@@ -11,4 +11,5 @@ test('<SingleDatePicker /> rendered correctly with default fixture', () => {
   const component = wrapper.instance();
   expect(wrapper).toMatchSnapshot();
   component.handleDateChange(moment());
+  component.handleInputChange({target: { value: '11/11/11' }});
 });

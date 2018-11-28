@@ -20,6 +20,7 @@ exports[`<SingleDatePicker /> rendered correctly with default fixture 1`] = `
   >
     <div
       className="inner"
+      onChange={[Function]}
     >
       <Media
         defaultMatches={true}
