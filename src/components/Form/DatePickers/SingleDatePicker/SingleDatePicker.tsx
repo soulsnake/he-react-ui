@@ -100,7 +100,7 @@ class SingleDatePicker extends React.Component<Props, any> {
   };
   handleInputChange = (e: React.SyntheticEvent<HTMLDivElement>) => {
     this.setState({ inputText: (e.target as any).value });
-  }
+  };
   render() {
     const {
       id,
@@ -130,7 +130,8 @@ class SingleDatePicker extends React.Component<Props, any> {
       },
       className,
     );
-    const floating = this.state.focused || this.state.date || this.state.inputText;
+    const floating =
+      this.state.focused || this.state.date || this.state.inputText;
     const labelClasses = large
       ? classnames(styles.innerlabel, {
           [styles.floating]: floating,
