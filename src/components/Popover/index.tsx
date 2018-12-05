@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip as Tippy } from 'react-tippy';
+import { Tooltip as Tippy, TooltipProps } from 'react-tippy';
 import style from './index.scss';
 import PopoverDisplay from './PopoverDisplay';
 
@@ -13,7 +13,10 @@ type Props = {
   className?: string;
 };
 
-export default class Popover extends React.Component<Props, any> {
+export default class Popover extends React.Component<
+  Props & TooltipProps,
+  any
+> {
   state = {
     fullyMounted: false,
   };
@@ -33,6 +36,9 @@ export default class Popover extends React.Component<Props, any> {
       tooltip,
       className,
       light,
+      position,
+      trigger,
+      ...restProps
     } = this.props;
 
     return (
@@ -43,7 +49,7 @@ export default class Popover extends React.Component<Props, any> {
           delay={100}
           hideDelay={300}
           interactiveBorder={16}
-          trigger={triggerOnClick ? 'click' : 'mouseenter'}
+          trigger={trigger || (triggerOnClick ? 'click' : 'mouseenter')}
           html={
             <PopoverDisplay
               light={light}
@@ -53,7 +59,8 @@ export default class Popover extends React.Component<Props, any> {
               {content}
             </PopoverDisplay>
           }
-          position={preferRight ? 'bottom-end' : 'bottom-start'}
+          position={position || (preferRight ? 'bottom-end' : 'bottom-start')}
+          {...restProps}
         >
           {children}
         </Tippy>
