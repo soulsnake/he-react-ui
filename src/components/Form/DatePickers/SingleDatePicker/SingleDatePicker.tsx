@@ -60,6 +60,7 @@ class SingleDatePicker extends React.Component<Props, any> {
   state = {
     focused: false,
     date: this.props.value,
+    inputText: '',
   };
 
   componentWillReceiveProps(
@@ -97,7 +98,9 @@ class SingleDatePicker extends React.Component<Props, any> {
       this.props.onBlur(event);
     }
   };
-
+  handleInputChange = (e: React.SyntheticEvent<HTMLDivElement>) => {
+    this.setState({ inputText: (e.target as any).value });
+  };
   render() {
     const {
       id,
@@ -127,7 +130,8 @@ class SingleDatePicker extends React.Component<Props, any> {
       },
       className,
     );
-    const floating = this.state.focused || this.state.date;
+    const floating =
+      this.state.focused || this.state.date || this.state.inputText;
     const labelClasses = large
       ? classnames(styles.innerlabel, {
           [styles.floating]: floating,
@@ -138,7 +142,7 @@ class SingleDatePicker extends React.Component<Props, any> {
     return (
       <div className={classes} style={style}>
         {label && <Label className={labelClasses}>{label}</Label>}
-        <div className={styles.inner}>
+        <div className={styles.inner} onChange={this.handleInputChange}>
           <Media query={{ maxWidth: 767 }}>
             {(matches: boolean) => (
               <Picker
