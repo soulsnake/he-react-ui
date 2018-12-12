@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField test interaction 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  isVerified={false}
+  label="Label"
+  marker="none"
+  markerTooltip={null}
+  name="demo"
+  onBlur={[Function]}
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "props": Object {
+              "disabled": false,
+              "id": "demo",
+              "inline": false,
+              "isValid": true,
+              "isVerified": false,
+              "label": "Label",
+              "marker": "none",
+              "markerTooltip": null,
+              "name": "demo",
+              "onBlur": [Function],
+              "onChange": [MockFunction] {
+                "calls": [Circular],
+              },
+              "onFocus": [Function],
+              "onMarkerClick": [Function],
+              "value": "",
+            },
+            "value": "",
+          },
+        ],
+      ],
+    }
+  }
+  onFocus={[Function]}
+  onMarkerClick={[Function]}
+  value=""
+>
+  <div
+    className="outer"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value=""
+      />
+      <div
+        className="helper"
+      />
+      <label
+        className="label"
+        htmlFor="demo"
+      >
+        Label
+      </label>
+    </div>
+  </div>
+</TextField>
+`;

@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> rendered correctly with UnVerifiedStatus fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  isVerified={false}
+  label="Mobile"
+  marker="verify"
+  markerTooltip={
+    <UNDEFINED>
+      <mockConstructor
+        className="editIcon"
+        name="Edit"
+        shadow={false}
+      />
+      <mockConstructor
+        h1={false}
+        h2={false}
+        h3={true}
+        h4={false}
+        nav={false}
+      >
+        Sample Popup
+      </mockConstructor>
+      <Paragraph
+        className="paragraph"
+      >
+        Sample content
+      </Paragraph>
+    </UNDEFINED>
+  }
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMarkerClick={[Function]}
+  value=""
+>
+  <div
+    className="outer hasMarker"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value=""
+      />
+      <div
+        className="helper"
+      >
+        <Popover
+          content={
+            <UNDEFINED>
+              <mockConstructor
+                className="editIcon"
+                name="Edit"
+                shadow={false}
+              />
+              <mockConstructor
+                h1={false}
+                h2={false}
+                h3={true}
+                h4={false}
+                nav={false}
+              >
+                Sample Popup
+              </mockConstructor>
+              <Paragraph
+                className="paragraph"
+              >
+                Sample content
+              </Paragraph>
+            </UNDEFINED>
+          }
+          light={true}
+          preferRight={true}
+        >
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
+            className=""
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={undefined}
+              >
+                <UNDEFINED>
+                  <mockConstructor
+                    className="editIcon"
+                    name="Edit"
+                    shadow={false}
+                  />
+                  <mockConstructor
+                    h1={false}
+                    h2={false}
+                    h3={true}
+                    h4={false}
+                    nav={false}
+                  >
+                    Sample Popup
+                  </mockConstructor>
+                  <Paragraph
+                    className="paragraph"
+                  >
+                    Sample content
+                  </Paragraph>
+                </UNDEFINED>
+              </PopoverDisplay>
+            }
+            inertia={false}
+            interactive={true}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              <div
+                className="verifiedTag unVerified"
+                onClick={[Function]}
+              >
+                Verify
+              </div>
+            </div>
+          </Tooltip>
+        </Popover>
+      </div>
+      <label
+        className="label"
+        htmlFor="demo"
+      >
+        Mobile
+      </label>
+    </div>
+  </div>
+</TextField>
+`;

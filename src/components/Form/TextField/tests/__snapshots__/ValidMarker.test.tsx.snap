@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> rendered correctly with ValidMarker fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  isVerified={false}
+  label="First Name"
+  marker="tick-cross"
+  markerTooltip={null}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMarkerClick={[Function]}
+  value="Bruce"
+>
+  <div
+    className="outer hasMarker"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Bruce"
+      />
+      <div
+        className="helper"
+      >
+        <Tick
+          className="marker"
+          fill="currentColor"
+          height={32}
+          onClick={[Function]}
+          width={32}
+        />
+      </div>
+      <label
+        className="label floating"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;

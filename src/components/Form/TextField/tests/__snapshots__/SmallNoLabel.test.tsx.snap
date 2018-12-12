@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> rendered correctly with SmallNoLabel fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  isVerified={false}
+  marker="none"
+  markerTooltip={null}
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMarkerClick={[Function]}
+  small={true}
+  value=""
+>
+  <div
+    className="outer small"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input small noLabel"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value=""
+      />
+      <div
+        className="helper"
+      />
+    </div>
+  </div>
+</TextField>
+`;

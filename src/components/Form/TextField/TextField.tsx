@@ -41,6 +41,7 @@ type Props = {
   small?: boolean;
   onMarkerClick: () => any;
   value?: string;
+  autoComplete?: string;
 };
 
 class TextField extends React.Component<Props, any> {
@@ -173,6 +174,7 @@ class TextField extends React.Component<Props, any> {
       password,
       small,
       onMarkerClick,
+      autoComplete,
       ...restProps
     } = this.props;
     const { focused } = this.state;
@@ -213,6 +215,7 @@ class TextField extends React.Component<Props, any> {
             disabled={disabled}
             value={value}
             type={password ? 'password' : 'text'}
+            autoComplete={autoComplete ? autoComplete : undefined}
           />
 
           {this.renderMarker()}

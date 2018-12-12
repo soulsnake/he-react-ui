@@ -1,11 +1,6 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import TextField from './';
-import fixtures from './fixtures';
-
-import testFixture from '../../../../config/testFixture';
-
-fixtures.forEach(it => testFixture(it));
+import TextField from '../';
 
 describe('TextField', () => {
   it('test interaction', () => {

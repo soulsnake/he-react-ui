@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> rendered correctly with InfoTooltip fixture 1`] = `
+<TextField
+  disabled={false}
+  id="demo"
+  inline={false}
+  isValid={true}
+  isVerified={false}
+  label="First Name"
+  marker="info"
+  markerTooltip={
+    <div>
+      Test HTML
+    </div>
+  }
+  name="demo"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMarkerClick={[Function]}
+  value=""
+>
+  <div
+    className="outer hasMarker"
+  >
+    <div
+      className="block"
+    >
+      <input
+        className="input"
+        disabled={false}
+        id="demo"
+        name="demo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value=""
+      />
+      <div
+        className="helper"
+      >
+        <Popover
+          content={
+            <div>
+              Test HTML
+            </div>
+          }
+          light={true}
+          preferRight={true}
+        >
+          <Tooltip
+            animateFill={true}
+            animation="shift"
+            arrow={false}
+            arrowSize="regular"
+            className=""
+            delay={100}
+            disabled={false}
+            distance={10}
+            duration={375}
+            followCursor={false}
+            hideDelay={300}
+            hideDuration={375}
+            hideOnClick={true}
+            html={
+              <PopoverDisplay
+                className={undefined}
+                light={true}
+                tooltip={undefined}
+              >
+                <div>
+                  Test HTML
+                </div>
+              </PopoverDisplay>
+            }
+            inertia={false}
+            interactive={true}
+            interactiveBorder={16}
+            multiple={false}
+            offset={0}
+            onHidden={[Function]}
+            onHide={[Function]}
+            onRequestClose={[Function]}
+            onShow={[Function]}
+            onShown={[Function]}
+            popperOptions={Object {}}
+            position="bottom-end"
+            size="regular"
+            sticky={false}
+            stickyDuration={200}
+            style={Object {}}
+            theme="dark"
+            touchHold={false}
+            trigger="mouseenter"
+            unmountHTMLWhenHide={false}
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              <Help
+                className="helperIcon"
+                fill="currentColor"
+                height={32}
+                width={32}
+              />
+            </div>
+          </Tooltip>
+        </Popover>
+      </div>
+      <label
+        className="label"
+        htmlFor="demo"
+      >
+        First Name
+      </label>
+    </div>
+  </div>
+</TextField>
+`;
