@@ -48,15 +48,17 @@ exports[`<Button /> rendered correctly with toRouterUrl fixture 1`] = `
   buttonProps={Object {}}
   color="teal"
   disabled={false}
+  done={false}
   icon=""
   keyline={false}
   link={false}
-  newWindow={true}
+  newWindow={false}
   onClick={[Function]}
   squared={false}
   submit={false}
+  submitting={false}
   to="#this-works!"
-  withRouter={false}
+  withRouter={true}
 >
   <div
     className="buttonContainer"
@@ -64,23 +66,29 @@ exports[`<Button /> rendered correctly with toRouterUrl fixture 1`] = `
     <InnerButton
       buttonProps={Object {}}
       className="button teal"
-      newWindow={true}
+      newWindow={false}
       onClick={[Function]}
       submit={false}
       to="#this-works!"
-      withRouter={false}
+      withRouter={true}
     >
-      <a
+      <Link
         className="button teal"
-        href="#this-works!"
-        target="_blank"
+        replace={false}
+        to="#this-works!"
       >
-        <div
-          className="content"
+        <a
+          className="button teal"
+          href="#this-works!"
+          onClick={[Function]}
         >
-          I am an &lt;a  target="_blank" /&gt; tag
-        </div>
-      </a>
+          <div
+            className="content"
+          >
+            I am a &lt;Link /&gt; tag
+          </div>
+        </a>
+      </Link>
     </InnerButton>
   </div>
 </Button>
@@ -94,7 +102,7 @@ exports[`<Button /> rendered correctly with toUrl fixture 1`] = `
   icon=""
   keyline={false}
   link={false}
-  newWindow={true}
+  newWindow={false}
   onClick={[Function]}
   squared={false}
   submit={false}
@@ -107,7 +115,7 @@ exports[`<Button /> rendered correctly with toUrl fixture 1`] = `
     <InnerButton
       buttonProps={Object {}}
       className="button teal"
-      newWindow={true}
+      newWindow={false}
       onClick={[Function]}
       submit={false}
       to="#this-works!"
@@ -116,12 +124,11 @@ exports[`<Button /> rendered correctly with toUrl fixture 1`] = `
       <a
         className="button teal"
         href="#this-works!"
-        target="_blank"
       >
         <div
           className="content"
         >
-          I am an &lt;a  target="_blank" /&gt; tag
+          I am an &lt;a /&gt; tag
         </div>
       </a>
     </InnerButton>

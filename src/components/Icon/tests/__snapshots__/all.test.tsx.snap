@@ -2,10 +2,10 @@
 
 exports[`<Icon /> rendered correctly with Add fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Add"
 >
   <Icon
-    name="ArrowUp"
+    name="Add"
     shadow={false}
   />
 </Icon>
@@ -13,10 +13,10 @@ exports[`<Icon /> rendered correctly with Add fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Alarm fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Alarm"
 >
   <Icon
-    name="ArrowUp"
+    name="Alarm"
     shadow={false}
   />
 </Icon>
@@ -24,10 +24,10 @@ exports[`<Icon /> rendered correctly with Alarm fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Alert fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Alert"
 >
   <Icon
-    name="ArrowUp"
+    name="Alert"
     shadow={false}
   />
 </Icon>
@@ -35,10 +35,10 @@ exports[`<Icon /> rendered correctly with Alert fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowDown fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="ArrowDown"
 >
   <Icon
-    name="ArrowUp"
+    name="ArrowDown"
     shadow={false}
   />
 </Icon>
@@ -46,10 +46,10 @@ exports[`<Icon /> rendered correctly with ArrowDown fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowLeft fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="ArrowLeft"
 >
   <Icon
-    name="ArrowUp"
+    name="ArrowLeft"
     shadow={false}
   />
 </Icon>
@@ -57,10 +57,10 @@ exports[`<Icon /> rendered correctly with ArrowLeft fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowLeft fixture 2`] = `
 <Icon
-  name="ArrowUp"
+  name="ArrowLeft"
 >
   <Icon
-    name="ArrowUp"
+    name="ArrowLeft"
     shadow={false}
   />
 </Icon>
@@ -68,10 +68,10 @@ exports[`<Icon /> rendered correctly with ArrowLeft fixture 2`] = `
 
 exports[`<Icon /> rendered correctly with ArrowRight fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="ArrowRight"
 >
   <Icon
-    name="ArrowUp"
+    name="ArrowRight"
     shadow={false}
   />
 </Icon>
@@ -79,10 +79,10 @@ exports[`<Icon /> rendered correctly with ArrowRight fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowRight fixture 2`] = `
 <Icon
-  name="ArrowUp"
+  name="ArrowRight"
 >
   <Icon
-    name="ArrowUp"
+    name="ArrowRight"
     shadow={false}
   />
 </Icon>
@@ -101,10 +101,10 @@ exports[`<Icon /> rendered correctly with ArrowUp fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Bookings fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Bookings"
 >
   <Icon
-    name="ArrowUp"
+    name="Bookings"
     shadow={false}
   />
 </Icon>
@@ -112,10 +112,10 @@ exports[`<Icon /> rendered correctly with Bookings fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Calendar fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Calendar"
 >
   <Icon
-    name="ArrowUp"
+    name="Calendar"
     shadow={false}
   />
 </Icon>
@@ -123,10 +123,10 @@ exports[`<Icon /> rendered correctly with Calendar fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CaretRight fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="CaretRight"
 >
   <Icon
-    name="ArrowUp"
+    name="CaretRight"
     shadow={false}
   />
 </Icon>
@@ -134,10 +134,10 @@ exports[`<Icon /> rendered correctly with CaretRight fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CheckBoxChecked fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="CheckBoxChecked"
 >
   <Icon
-    name="ArrowUp"
+    name="CheckBoxChecked"
     shadow={false}
   />
 </Icon>
@@ -145,10 +145,10 @@ exports[`<Icon /> rendered correctly with CheckBoxChecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CheckBoxUnchecked fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="CheckBoxUnchecked"
 >
   <Icon
-    name="ArrowUp"
+    name="CheckBoxUnchecked"
     shadow={false}
   />
 </Icon>
@@ -156,10 +156,10 @@ exports[`<Icon /> rendered correctly with CheckBoxUnchecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronDown fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="ChevronDown"
 >
   <Icon
-    name="ArrowUp"
+    name="ChevronDown"
     shadow={false}
   />
 </Icon>
@@ -167,10 +167,10 @@ exports[`<Icon /> rendered correctly with ChevronDown fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronLeft fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="ChevronLeft"
 >
   <Icon
-    name="ArrowUp"
+    name="ChevronLeft"
     shadow={false}
   />
 </Icon>
@@ -178,10 +178,10 @@ exports[`<Icon /> rendered correctly with ChevronLeft fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronRight fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="ChevronRight"
 >
   <Icon
-    name="ArrowUp"
+    name="ChevronRight"
     shadow={false}
   />
 </Icon>
@@ -189,10 +189,10 @@ exports[`<Icon /> rendered correctly with ChevronRight fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronUp fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="ChevronUp"
 >
   <Icon
-    name="ArrowUp"
+    name="ChevronUp"
     shadow={false}
   />
 </Icon>
@@ -200,10 +200,10 @@ exports[`<Icon /> rendered correctly with ChevronUp fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Clock fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Clock"
 >
   <Icon
-    name="ArrowUp"
+    name="Clock"
     shadow={false}
   />
 </Icon>
@@ -211,10 +211,10 @@ exports[`<Icon /> rendered correctly with Clock fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Cross fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Cross"
 >
   <Icon
-    name="ArrowUp"
+    name="Cross"
     shadow={false}
   />
 </Icon>
@@ -222,10 +222,10 @@ exports[`<Icon /> rendered correctly with Cross fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CurvedArrow fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="CurvedArrow"
 >
   <Icon
-    name="ArrowUp"
+    name="CurvedArrow"
     shadow={false}
   />
 </Icon>
@@ -233,10 +233,10 @@ exports[`<Icon /> rendered correctly with CurvedArrow fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Delete fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Delete"
 >
   <Icon
-    name="ArrowUp"
+    name="Delete"
     shadow={false}
   />
 </Icon>
@@ -244,10 +244,10 @@ exports[`<Icon /> rendered correctly with Delete fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with DeleteProfile fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="DeleteProfile"
 >
   <Icon
-    name="ArrowUp"
+    name="DeleteProfile"
     shadow={false}
   />
 </Icon>
@@ -255,10 +255,10 @@ exports[`<Icon /> rendered correctly with DeleteProfile fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with DropDown fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="DropDown"
 >
   <Icon
-    name="ArrowUp"
+    name="DropDown"
     shadow={false}
   />
 </Icon>
@@ -266,10 +266,10 @@ exports[`<Icon /> rendered correctly with DropDown fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Edit fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Edit"
 >
   <Icon
-    name="ArrowUp"
+    name="Edit"
     shadow={false}
   />
 </Icon>
@@ -277,10 +277,10 @@ exports[`<Icon /> rendered correctly with Edit fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Ellipsis fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Ellipsis"
 >
   <Icon
-    name="ArrowUp"
+    name="Ellipsis"
     shadow={false}
   />
 </Icon>
@@ -288,10 +288,10 @@ exports[`<Icon /> rendered correctly with Ellipsis fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Engage fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Engage"
 >
   <Icon
-    name="ArrowUp"
+    name="Engage"
     shadow={false}
   />
 </Icon>
@@ -299,10 +299,10 @@ exports[`<Icon /> rendered correctly with Engage fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with HealthEngine fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="HealthEngine"
 >
   <Icon
-    name="ArrowUp"
+    name="HealthEngine"
     shadow={false}
   />
 </Icon>
@@ -310,10 +310,10 @@ exports[`<Icon /> rendered correctly with HealthEngine fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with HealthEngineWithText fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="HealthEngineWithText"
 >
   <Icon
-    name="ArrowUp"
+    name="HealthEngineWithText"
     shadow={false}
   />
 </Icon>
@@ -321,10 +321,10 @@ exports[`<Icon /> rendered correctly with HealthEngineWithText fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Help fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Help"
 >
   <Icon
-    name="ArrowUp"
+    name="Help"
     shadow={false}
   />
 </Icon>
@@ -332,10 +332,10 @@ exports[`<Icon /> rendered correctly with Help fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Home fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Home"
 >
   <Icon
-    name="ArrowUp"
+    name="Home"
     shadow={false}
   />
 </Icon>
@@ -343,10 +343,10 @@ exports[`<Icon /> rendered correctly with Home fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Language fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Language"
 >
   <Icon
-    name="ArrowUp"
+    name="Language"
     shadow={false}
   />
 </Icon>
@@ -354,10 +354,10 @@ exports[`<Icon /> rendered correctly with Language fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Lock fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Lock"
 >
   <Icon
-    name="ArrowUp"
+    name="Lock"
     shadow={false}
   />
 </Icon>
@@ -365,10 +365,10 @@ exports[`<Icon /> rendered correctly with Lock fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Logout fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Logout"
 >
   <Icon
-    name="ArrowUp"
+    name="Logout"
     shadow={false}
   />
 </Icon>
@@ -376,10 +376,10 @@ exports[`<Icon /> rendered correctly with Logout fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Megaphone fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Megaphone"
 >
   <Icon
-    name="ArrowUp"
+    name="Megaphone"
     shadow={false}
   />
 </Icon>
@@ -387,10 +387,10 @@ exports[`<Icon /> rendered correctly with Megaphone fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Patients fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Patients"
 >
   <Icon
-    name="ArrowUp"
+    name="Patients"
     shadow={false}
   />
 </Icon>
@@ -398,10 +398,10 @@ exports[`<Icon /> rendered correctly with Patients fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Pencil fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Pencil"
 >
   <Icon
-    name="ArrowUp"
+    name="Pencil"
     shadow={false}
   />
 </Icon>
@@ -409,10 +409,10 @@ exports[`<Icon /> rendered correctly with Pencil fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with RadioChecked fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="RadioChecked"
 >
   <Icon
-    name="ArrowUp"
+    name="RadioChecked"
     shadow={false}
   />
 </Icon>
@@ -420,10 +420,10 @@ exports[`<Icon /> rendered correctly with RadioChecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with RadioUnchecked fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="RadioUnchecked"
 >
   <Icon
-    name="ArrowUp"
+    name="RadioUnchecked"
     shadow={false}
   />
 </Icon>
@@ -431,10 +431,10 @@ exports[`<Icon /> rendered correctly with RadioUnchecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Search fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Search"
 >
   <Icon
-    name="ArrowUp"
+    name="Search"
     shadow={false}
   />
 </Icon>
@@ -442,10 +442,10 @@ exports[`<Icon /> rendered correctly with Search fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Settings fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Settings"
 >
   <Icon
-    name="ArrowUp"
+    name="Settings"
     shadow={false}
   />
 </Icon>
@@ -453,10 +453,10 @@ exports[`<Icon /> rendered correctly with Settings fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Sync fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Sync"
 >
   <Icon
-    name="ArrowUp"
+    name="Sync"
     shadow={false}
   />
 </Icon>
@@ -464,10 +464,10 @@ exports[`<Icon /> rendered correctly with Sync fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Thumb fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Thumb"
 >
   <Icon
-    name="ArrowUp"
+    name="Thumb"
     shadow={false}
   />
 </Icon>
@@ -475,10 +475,12 @@ exports[`<Icon /> rendered correctly with Thumb fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ThumbDark fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  dark={true}
+  name="Thumb"
 >
   <Icon
-    name="ArrowUp"
+    dark={true}
+    name="Thumb"
     shadow={false}
   />
 </Icon>
@@ -486,10 +488,12 @@ exports[`<Icon /> rendered correctly with ThumbDark fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ThumbDown fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  down={true}
+  name="Thumb"
 >
   <Icon
-    name="ArrowUp"
+    down={true}
+    name="Thumb"
     shadow={false}
   />
 </Icon>
@@ -497,21 +501,22 @@ exports[`<Icon /> rendered correctly with ThumbDown fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ThumbShadow fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Thumb"
+  shadow={true}
 >
   <Icon
-    name="ArrowUp"
-    shadow={false}
+    name="Thumb"
+    shadow={true}
   />
 </Icon>
 `;
 
 exports[`<Icon /> rendered correctly with Tick fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="Tick"
 >
   <Icon
-    name="ArrowUp"
+    name="Tick"
     shadow={false}
   />
 </Icon>
@@ -519,10 +524,10 @@ exports[`<Icon /> rendered correctly with Tick fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with UserShield fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="UserShield"
 >
   <Icon
-    name="ArrowUp"
+    name="UserShield"
     shadow={false}
   />
 </Icon>
@@ -530,10 +535,10 @@ exports[`<Icon /> rendered correctly with UserShield fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with UserShieldPrivacy fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="UserShieldPrivacy"
 >
   <Icon
-    name="ArrowUp"
+    name="UserShieldPrivacy"
     shadow={false}
   />
 </Icon>
@@ -541,10 +546,10 @@ exports[`<Icon /> rendered correctly with UserShieldPrivacy fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with View fixture 1`] = `
 <Icon
-  name="ArrowUp"
+  name="View"
 >
   <Icon
-    name="ArrowUp"
+    name="View"
     shadow={false}
   />
 </Icon>

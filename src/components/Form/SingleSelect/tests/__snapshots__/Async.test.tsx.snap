@@ -81,7 +81,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
             ignoreAccents={true}
             ignoreCase={true}
             inputProps={Object {}}
-            isLoading={false}
+            isLoading={true}
             joinValues={true}
             labelKey="label"
             loadOptions={
@@ -101,7 +101,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
             menuRenderer={[Function]}
             multi={false}
             name="demo"
-            noResultsText="Type to search"
+            noResultsText="Loading..."
             onBlurResetsInput={true}
             onChange={[Function]}
             onClose={[Function]}
@@ -113,7 +113,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
             optionComponent={[Function]}
             options={Array []}
             pageSize={5}
-            placeholder="Select..."
+            placeholder="Loading..."
             removeSelected={true}
             required={false}
             rtl={false}
@@ -128,7 +128,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
             valueRenderer={[Function]}
           >
             <div
-              className="Select select is-clearable is-searchable Select--single"
+              className="Select select is-clearable is-loading is-searchable Select--single"
             >
               <input
                 disabled={false}
@@ -151,7 +151,7 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
                   <div
                     className="Select-placeholder"
                   >
-                    Select...
+                    Loading...
                   </div>
                   <AutosizeInput
                     aria-activedescendant="react-select-2--value"
@@ -168,6 +168,14 @@ exports[`<SingleSelect /> rendered correctly with Async fixture 1`] = `
                     required={false}
                     role="combobox"
                     value=""
+                  />
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="Select-loading-zone"
+                >
+                  <span
+                    className="Select-loading"
                   />
                 </span>
                 <span

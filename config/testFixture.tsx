@@ -48,13 +48,19 @@ function shallowSerialise(enzymeTree: any): EnzymeElement | null {
 }
 
 function testOneFixture(fixture: Fixture, variant: string = 'a') {
-  const { mount, getWrapper } = createTestContext({ fixture });
+  const { mount, unmount, getWrapper } = createTestContext({ fixture });
   const { component } = fixture;
   const { displayName, name } = component as any;
-  mount();
+
   test(`<${displayName || name} /> rendered correctly with ${fixture.name ||
-    variant} fixture`, () =>
-    expect(shallowSerialise(getWrapper())).toMatchSnapshot());
+    variant} fixture`, () => {
+    mount();
+    try {
+      expect(shallowSerialise(getWrapper())).toMatchSnapshot();
+    } finally {
+      unmount();
+    }
+  });
 }
 
 // TODO: use real type guard functions to discriminate one fixture vs an array of them

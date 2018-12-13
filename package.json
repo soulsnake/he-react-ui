@@ -11,7 +11,7 @@
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "test:watch": "yarn test -- --watch",
     "lint": "eslint . --env jest --ext js,ts,tsx",
-    "lint-fix": "eslint . --fix --env jest",
+    "lint-fix": "eslint . --fix --env jest --ext js,ts,tsx",
     "cosmos": "cosmos",
     "cosmos-export": "cross-env COSMOS_PUBLIC_URL='./' cosmos-export",
     "precommit": "yarn && yarn lint --fix && yarn coverage && yarn ratchet-coverage",

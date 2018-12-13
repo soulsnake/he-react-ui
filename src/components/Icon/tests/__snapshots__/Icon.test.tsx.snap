@@ -2,10 +2,10 @@
 
 exports[`<Icon /> rendered correctly with Add fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Add"
   shadow={false}
 >
-  <Pencil
+  <Add
     className="icon"
     fill="currentColor"
     height={32}
@@ -16,10 +16,10 @@ exports[`<Icon /> rendered correctly with Add fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Alarm fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Alarm"
   shadow={false}
 >
-  <Pencil
+  <Alarm
     className="icon"
     fill="currentColor"
     height={32}
@@ -30,10 +30,10 @@ exports[`<Icon /> rendered correctly with Alarm fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Alert fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Alert"
   shadow={false}
 >
-  <Pencil
+  <Alert
     className="icon"
     fill="currentColor"
     height={32}
@@ -44,10 +44,10 @@ exports[`<Icon /> rendered correctly with Alert fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Arr fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Arr"
   shadow={false}
 >
-  <Pencil
+  <Cross
     className="icon"
     fill="currentColor"
     height={32}
@@ -58,10 +58,10 @@ exports[`<Icon /> rendered correctly with Arr fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowDown fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ArrowDown"
   shadow={false}
 >
-  <Pencil
+  <ArrowDown
     className="icon"
     fill="currentColor"
     height={32}
@@ -72,10 +72,10 @@ exports[`<Icon /> rendered correctly with ArrowDown fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowLeft fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ArrowLeft"
   shadow={false}
 >
-  <Pencil
+  <ArrowLeft
     className="icon"
     fill="currentColor"
     height={32}
@@ -86,10 +86,10 @@ exports[`<Icon /> rendered correctly with ArrowLeft fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowLeft fixture 2`] = `
 <Icon
-  name="Pencil"
+  name="ArrowLeft"
   shadow={false}
 >
-  <Pencil
+  <ArrowLeft
     className="icon"
     fill="currentColor"
     height={32}
@@ -100,10 +100,10 @@ exports[`<Icon /> rendered correctly with ArrowLeft fixture 2`] = `
 
 exports[`<Icon /> rendered correctly with ArrowRight fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ArrowRight"
   shadow={false}
 >
-  <Pencil
+  <ArrowRight
     className="icon"
     fill="currentColor"
     height={32}
@@ -114,10 +114,10 @@ exports[`<Icon /> rendered correctly with ArrowRight fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ArrowUp fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ArrowUp"
   shadow={false}
 >
-  <Pencil
+  <ArrowUp
     className="icon"
     fill="currentColor"
     height={32}
@@ -128,10 +128,10 @@ exports[`<Icon /> rendered correctly with ArrowUp fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Bookings fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Bookings"
   shadow={false}
 >
-  <Pencil
+  <Bookings
     className="icon"
     fill="currentColor"
     height={32}
@@ -142,10 +142,10 @@ exports[`<Icon /> rendered correctly with Bookings fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Calendar fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Calendar"
   shadow={false}
 >
-  <Pencil
+  <Calendar
     className="icon"
     fill="currentColor"
     height={32}
@@ -156,10 +156,10 @@ exports[`<Icon /> rendered correctly with Calendar fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CaretRight fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="CaretRight"
   shadow={false}
 >
-  <Pencil
+  <CaretRight
     className="icon"
     fill="currentColor"
     height={32}
@@ -170,10 +170,10 @@ exports[`<Icon /> rendered correctly with CaretRight fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CheckBoxChecked fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="CheckBoxChecked"
   shadow={false}
 >
-  <Pencil
+  <CheckBoxChecked
     className="icon"
     fill="currentColor"
     height={32}
@@ -184,10 +184,10 @@ exports[`<Icon /> rendered correctly with CheckBoxChecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CheckBoxUnchecked fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="CheckBoxUnchecked"
   shadow={false}
 >
-  <Pencil
+  <CheckBoxUnchecked
     className="icon"
     fill="currentColor"
     height={32}
@@ -198,10 +198,10 @@ exports[`<Icon /> rendered correctly with CheckBoxUnchecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronDown fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ChevronDown"
   shadow={false}
 >
-  <Pencil
+  <ChevronDown
     className="icon"
     fill="currentColor"
     height={32}
@@ -212,10 +212,10 @@ exports[`<Icon /> rendered correctly with ChevronDown fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronLeft fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ChevronLeft"
   shadow={false}
 >
-  <Pencil
+  <ChevronLeft
     className="icon"
     fill="currentColor"
     height={32}
@@ -226,10 +226,10 @@ exports[`<Icon /> rendered correctly with ChevronLeft fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronRight fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ChevronRight"
   shadow={false}
 >
-  <Pencil
+  <ChevronRight
     className="icon"
     fill="currentColor"
     height={32}
@@ -240,10 +240,10 @@ exports[`<Icon /> rendered correctly with ChevronRight fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with ChevronUp fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="ChevronUp"
   shadow={false}
 >
-  <Pencil
+  <ChevronUp
     className="icon"
     fill="currentColor"
     height={32}
@@ -254,11 +254,10 @@ exports[`<Icon /> rendered correctly with ChevronUp fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Clock fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Clock"
   shadow={false}
 >
-  <Pencil
-    className="icon"
+  <Clock
     fill="currentColor"
     height={32}
     width={32}
@@ -268,10 +267,10 @@ exports[`<Icon /> rendered correctly with Clock fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Cross fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Cross"
   shadow={false}
 >
-  <Pencil
+  <Cross
     className="icon"
     fill="currentColor"
     height={32}
@@ -282,11 +281,10 @@ exports[`<Icon /> rendered correctly with Cross fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with CurvedArrow fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="CurvedArrow"
   shadow={false}
 >
-  <Pencil
-    className="icon"
+  <CurvedArrow
     fill="currentColor"
     height={32}
     width={32}
@@ -296,10 +294,10 @@ exports[`<Icon /> rendered correctly with CurvedArrow fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Delete fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Delete"
   shadow={false}
 >
-  <Pencil
+  <Delete
     className="icon"
     fill="currentColor"
     height={32}
@@ -310,10 +308,10 @@ exports[`<Icon /> rendered correctly with Delete fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with DeleteProfile fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="DeleteProfile"
   shadow={false}
 >
-  <Pencil
+  <DeleteProfile
     className="icon"
     fill="currentColor"
     height={32}
@@ -324,10 +322,10 @@ exports[`<Icon /> rendered correctly with DeleteProfile fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with DropDown fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="DropDown"
   shadow={false}
 >
-  <Pencil
+  <DropDown
     className="icon"
     fill="currentColor"
     height={32}
@@ -338,10 +336,10 @@ exports[`<Icon /> rendered correctly with DropDown fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Edit fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Edit"
   shadow={false}
 >
-  <Pencil
+  <Edit
     className="icon"
     fill="currentColor"
     height={32}
@@ -352,10 +350,10 @@ exports[`<Icon /> rendered correctly with Edit fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Ellipsis fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Ellipsis"
   shadow={false}
 >
-  <Pencil
+  <Ellipsis
     className="icon"
     fill="currentColor"
     height={32}
@@ -366,10 +364,10 @@ exports[`<Icon /> rendered correctly with Ellipsis fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Engage fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Engage"
   shadow={false}
 >
-  <Pencil
+  <Engage
     className="icon"
     fill="currentColor"
     height={32}
@@ -380,38 +378,28 @@ exports[`<Icon /> rendered correctly with Engage fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with HealthEngine fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="HealthEngine"
   shadow={false}
 >
-  <Pencil
-    className="icon"
-    fill="currentColor"
-    height={32}
-    width={32}
-  />
+  <HealthEngine />
 </Icon>
 `;
 
 exports[`<Icon /> rendered correctly with HealthEngineWithText fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="HealthEngineWithText"
   shadow={false}
 >
-  <Pencil
-    className="icon"
-    fill="currentColor"
-    height={32}
-    width={32}
-  />
+  <HealthEngineWithText />
 </Icon>
 `;
 
 exports[`<Icon /> rendered correctly with Help fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Help"
   shadow={false}
 >
-  <Pencil
+  <Help
     className="icon"
     fill="currentColor"
     height={32}
@@ -422,10 +410,10 @@ exports[`<Icon /> rendered correctly with Help fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Home fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Home"
   shadow={false}
 >
-  <Pencil
+  <Help
     className="icon"
     fill="currentColor"
     height={32}
@@ -436,10 +424,10 @@ exports[`<Icon /> rendered correctly with Home fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Language fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Language"
   shadow={false}
 >
-  <Pencil
+  <Language
     className="icon"
     fill="currentColor"
     height={32}
@@ -450,10 +438,10 @@ exports[`<Icon /> rendered correctly with Language fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Lock fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Lock"
   shadow={false}
 >
-  <Pencil
+  <Lock
     className="icon"
     fill="currentColor"
     height={32}
@@ -464,10 +452,10 @@ exports[`<Icon /> rendered correctly with Lock fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Logout fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Logout"
   shadow={false}
 >
-  <Pencil
+  <Logout
     className="icon"
     fill="currentColor"
     height={32}
@@ -478,10 +466,10 @@ exports[`<Icon /> rendered correctly with Logout fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Megaphone fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Megaphone"
   shadow={false}
 >
-  <Pencil
+  <Megaphone
     className="icon"
     fill="currentColor"
     height={32}
@@ -492,10 +480,10 @@ exports[`<Icon /> rendered correctly with Megaphone fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Patients fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Patients"
   shadow={false}
 >
-  <Pencil
+  <Patients
     className="icon"
     fill="currentColor"
     height={32}
@@ -520,10 +508,10 @@ exports[`<Icon /> rendered correctly with Pencil fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with RadioChecked fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="RadioChecked"
   shadow={false}
 >
-  <Pencil
+  <RadioChecked
     className="icon"
     fill="currentColor"
     height={32}
@@ -534,10 +522,10 @@ exports[`<Icon /> rendered correctly with RadioChecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with RadioUnchecked fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="RadioUnchecked"
   shadow={false}
 >
-  <Pencil
+  <RadioUnchecked
     className="icon"
     fill="currentColor"
     height={32}
@@ -548,10 +536,10 @@ exports[`<Icon /> rendered correctly with RadioUnchecked fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Search fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Search"
   shadow={false}
 >
-  <Pencil
+  <Search
     className="icon"
     fill="currentColor"
     height={32}
@@ -562,10 +550,10 @@ exports[`<Icon /> rendered correctly with Search fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Settings fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Settings"
   shadow={false}
 >
-  <Pencil
+  <Settings
     className="icon"
     fill="currentColor"
     height={32}
@@ -576,10 +564,10 @@ exports[`<Icon /> rendered correctly with Settings fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Sync fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Sync"
   shadow={false}
 >
-  <Pencil
+  <Sync
     className="icon"
     fill="currentColor"
     height={32}
@@ -590,10 +578,10 @@ exports[`<Icon /> rendered correctly with Sync fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with Tick fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="Tick"
   shadow={false}
 >
-  <Pencil
+  <Tick
     className="icon"
     fill="currentColor"
     height={32}
@@ -604,10 +592,10 @@ exports[`<Icon /> rendered correctly with Tick fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with UserShield fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="UserShield"
   shadow={false}
 >
-  <Pencil
+  <UserShield
     className="icon"
     fill="currentColor"
     height={32}
@@ -618,10 +606,10 @@ exports[`<Icon /> rendered correctly with UserShield fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with UserShieldPrivacy fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="UserShieldPrivacy"
   shadow={false}
 >
-  <Pencil
+  <UserShieldPrivacy
     className="icon"
     fill="currentColor"
     height={32}
@@ -632,10 +620,10 @@ exports[`<Icon /> rendered correctly with UserShieldPrivacy fixture 1`] = `
 
 exports[`<Icon /> rendered correctly with View fixture 1`] = `
 <Icon
-  name="Pencil"
+  name="View"
   shadow={false}
 >
-  <Pencil
+  <View
     className="icon"
     fill="currentColor"
     height={32}

@@ -1,17 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PopoverDisplay /> rendered correctly with base fixture 1`] = `
-<PopoverDisplay
-  tooltip={true}
->
+<PopoverDisplay>
   <div
-    className="popover tooltip"
+    className="popover"
     role="tooltip"
   >
     <div
-      className="content tooltip"
+      className="content"
     >
-      I am a single-line tooltip
+      <div>
+        <b>
+          I can contain any content you desire
+        </b>
+        <p>
+          Just watch me
+        </p>
+      </div>
     </div>
   </div>
 </PopoverDisplay>
@@ -19,16 +24,23 @@ exports[`<PopoverDisplay /> rendered correctly with base fixture 1`] = `
 
 exports[`<PopoverDisplay /> rendered correctly with light fixture 1`] = `
 <PopoverDisplay
-  tooltip={true}
+  light={true}
 >
   <div
-    className="popover tooltip"
+    className="popover light"
     role="tooltip"
   >
     <div
-      className="content tooltip"
+      className="content"
     >
-      I am a single-line tooltip
+      <div>
+        <b>
+          I can contain any content you desire
+        </b>
+        <p>
+          Just watch me
+        </p>
+      </div>
     </div>
   </div>
 </PopoverDisplay>

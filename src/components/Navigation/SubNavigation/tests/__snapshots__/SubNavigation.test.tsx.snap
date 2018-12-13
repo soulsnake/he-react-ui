@@ -47,15 +47,24 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with Has back button f
 
 exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithChildren fixture 1`] = `
 <withRouter(SubNavigation)
-  backRoute="/feedback"
   item={
     Object {
       "badge": "FREE",
       "items": Array [
         Object {
           "key": "MAIN",
-          "label": "Main",
+          "label": "My account",
           "route": "/parent",
+        },
+        Object {
+          "key": "MAIN 2",
+          "label": "Data & privacy",
+          "route": "/parent2",
+        },
+        Object {
+          "key": "MAIN 3",
+          "label": "Change password",
+          "route": "/parent3",
         },
         Object {
           "key": "SECONDARY",
@@ -92,7 +101,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with OnePracticeWithCh
 
 exports[`<withRouter(SubNavigation) /> rendered correctly with default fixture 1`] = `
 <withRouter(SubNavigation)
-  backRoute="/feedback"
   item={
     Object {
       "badge": "FREE",
@@ -107,11 +115,6 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with default fixture 1
           "label": "Secondary",
           "route": "/parent/secondary",
         },
-        Object {
-          "key": "TERTIARY",
-          "label": "Google",
-          "route": "https://wwww.google.com/",
-        },
       ],
       "key": "PARENT",
       "label": "Parent",
@@ -124,6 +127,10 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with default fixture 1
       Object {
         "label": "Location A",
         "value": "Location A",
+      },
+      Object {
+        "label": "Location B",
+        "value": "Location B",
       },
     ]
   }
@@ -137,27 +144,30 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with default fixture 1
 
 exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1`] = `
 <withRouter(SubNavigation)
-  backRoute="/feedback"
+  item={
+    Object {
+      "items": Array [],
+      "key": "placeholder",
+      "route": "#",
+      "title": "",
+    }
+  }
+  loading={true}
+  locations={Array []}
+  logoutRoute="/logout"
+>
+  <Route
+    render={[Function]}
+  />
+</withRouter(SubNavigation)>
+`;
+
+exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoChildren fixture 1`] = `
+<withRouter(SubNavigation)
   item={
     Object {
       "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-        Object {
-          "key": "TERTIARY",
-          "label": "Google",
-          "route": "https://wwww.google.com/",
-        },
-      ],
+      "items": Array [],
       "key": "PARENT",
       "label": "Parent",
       "route": "/parent",
@@ -170,50 +180,9 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with loading fixture 1
         "label": "Location A",
         "value": "Location A",
       },
-    ]
-  }
-  logoutRoute="/logout"
->
-  <Route
-    render={[Function]}
-  />
-</withRouter(SubNavigation)>
-`;
-
-exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoChildren fixture 1`] = `
-<withRouter(SubNavigation)
-  backRoute="/feedback"
-  item={
-    Object {
-      "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-        Object {
-          "key": "TERTIARY",
-          "label": "Google",
-          "route": "https://wwww.google.com/",
-        },
-      ],
-      "key": "PARENT",
-      "label": "Parent",
-      "route": "/parent",
-      "title": "Parent title",
-    }
-  }
-  locations={
-    Array [
       Object {
-        "label": "Location A",
-        "value": "Location A",
+        "label": "Location B",
+        "value": "Location B",
       },
     ]
   }
@@ -227,40 +196,15 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with multiPracticeNoCh
 
 exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixture 1`] = `
 <withRouter(SubNavigation)
-  backRoute="/feedback"
   item={
     Object {
-      "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-        Object {
-          "key": "TERTIARY",
-          "label": "Google",
-          "route": "https://wwww.google.com/",
-        },
-      ],
-      "key": "PARENT",
-      "label": "Parent",
-      "route": "/parent",
-      "title": "Parent title",
+      "icon": "Home",
+      "items": Array [],
+      "key": "HOME",
+      "label": "Home",
+      "route": "/",
+      "title": "Welcome home",
     }
-  }
-  locations={
-    Array [
-      Object {
-        "label": "Location A",
-        "value": "Location A",
-      },
-    ]
   }
   logoutRoute="/logout"
 >
@@ -272,33 +216,7 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noChildren fixtur
 
 exports[`<withRouter(SubNavigation) /> rendered correctly with noItem fixture 1`] = `
 <withRouter(SubNavigation)
-  backRoute="/feedback"
-  item={
-    Object {
-      "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-        Object {
-          "key": "TERTIARY",
-          "label": "Google",
-          "route": "https://wwww.google.com/",
-        },
-      ],
-      "key": "PARENT",
-      "label": "Parent",
-      "route": "/parent",
-      "title": "Parent title",
-    }
-  }
+  item={null}
   locations={
     Array [
       Object {
@@ -317,27 +235,9 @@ exports[`<withRouter(SubNavigation) /> rendered correctly with noItem fixture 1`
 
 exports[`<withRouter(SubNavigation) /> rendered correctly with onePractice fixture 1`] = `
 <withRouter(SubNavigation)
-  backRoute="/feedback"
   item={
     Object {
       "badge": "FREE",
-      "items": Array [
-        Object {
-          "key": "MAIN",
-          "label": "Main",
-          "route": "/parent",
-        },
-        Object {
-          "key": "SECONDARY",
-          "label": "Secondary",
-          "route": "/parent/secondary",
-        },
-        Object {
-          "key": "TERTIARY",
-          "label": "Google",
-          "route": "https://wwww.google.com/",
-        },
-      ],
       "key": "PARENT",
       "label": "Parent",
       "route": "/parent",

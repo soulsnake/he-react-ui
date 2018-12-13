@@ -2,10 +2,10 @@
 
 exports[`<Section /> rendered correctly with Default fixture 1`] = `
 <Section
-  white={true}
+  white={false}
 >
   <div
-    className="outer white"
+    className="outer"
   >
     <div
       className="inner"

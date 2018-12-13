@@ -215,7 +215,7 @@ class TextField extends React.Component<Props, any> {
             disabled={disabled}
             value={value}
             type={password ? 'password' : 'text'}
-            autoComplete={autoComplete ? autoComplete : undefined}
+            autoComplete={autoComplete || undefined}
           />
 
           {this.renderMarker()}
